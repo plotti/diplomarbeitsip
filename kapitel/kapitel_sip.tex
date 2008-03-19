@@ -38,18 +38,115 @@ Da die einzelnen IP-Pakete auf einer Verbindung zwischen IP-Telefonen in der Reg
 Die Verluste von IP-Paketen mit Sprache während der Übermittlung mindern die Qualität ebenso. Die Anzahl der Paketverluste in einer bestimmten Zeitperiode wird mit dem Parameter Paketverlustrate angegeben. Paketverluste können durch überlastete Router im IP-Netz oder auch durch einen "`schlecht"'  dimensionierten Jitter-Ausgleichspuffer entstehen. Im Gegensatz zu reinen Datenanwendungen, ist der Verlust eines IP-Pakets bei der Sprachübertragung nciht besonders tragisch. Zu viele Paketverluste jedoch machen sich in einem Telefongespräch allerdings sehr störend als Unterbrechungen bemerkbar. 
 
 \section{Session Initiation Protocol (SIP)}
+Das \textit{Session Initiation Protocol} wurde zuerst im Jahr 1999 als RFC 2543 eingeführt und im Jahr 2002 in den RFCs 3262-3265 weiter spezifiziert. Das SIP Protokoll ermöglicht es zwischen kommunizierenden Rechner über ein IP-Netz eine \textit{Session (Sitzung)} für die Übermittlung von Echtzeitmedien aufzubauen. Die Session stellt einen logischen Kanal dar, über den die Echtzeitmedien mit Hilfe des RTP Protokolls transportiert werden. SIP bisher weitgehend nur als \textit{Signalisierungsprotokoll} in VoIP Systemen benutzt. Sip definiert bestimmte Nachrichten für den Auf- und Abbau von Sessions. SIP ist einfach konzipiert und für Menschen leicht lesbar, da es in Anlehnung an das erfolgreiche Internet Protokoll HTTP entwickelt worden ist. 
+
 \subsection{Aufbau}
-\subsection{Dialoge, Transaktionen und Vorgänge}
-\subsection{Registrierung}
+Die SIP-Nachrichten werden textbasiert aufgebaut. Jede nachricht setzt sich aus einer Start-Zeile, einem \textit{Message Header} und einem \textit{Message Body} zusammen, wobei der \textit{Message Body} optional ist. Eine SIP-Nachricht stellt entweder einen Request(eine Anforderugn) von einem Initiator der Kommunikation oder einen Response(eine Antwort) von Partner an den Initaitor dar. Somit gibt es nur zwei Arten 
+
+von SIP Nachrichten:
+\begin{itemize}
+	\item \textit{Request}
+	\item \textit{Response}
+\end{itemize}
+
+Sowohl \textit{SIP-Responses} als auch \textit{SIP-Requests} sind ähnlich aufgebaut und haben die folgende Struktur:
+
+% Bild vom SIP Message
+
+Die Start-Zeile (\textit{Status-Line}) besteht bei den Requests aus einer Angabe des Request-Typs z.B. INVITE, einer Request-URI als Ziel-Adresse und der SIP-Version. Bei einem Response enthält die \textit{Status-Line} die SIP-Version und einen \textit{Status-Code} der den Typ definiert der Nachricht definiert. Beide Typen von Nachrichten enthalten mehrere Header-Felder von den folgende besonders hervorzuheben sind:
+\begin{itemize}
+	\item From:Dieses Feld enthäalt einen Namen und eine URL, die den Absender eindeutig identifizieren soll. 
+	\item To: Der To-Header identifiziert den logischen Empfänger der Anfrage und sollte beim entspricht der URL in der Anfragezeile. Diese Headerzeile ist ähnlich der des From-Headers aufgebaut.
+	\item Contact: Contact gibt eine SIP-URI an, unter der die Gegenstelle für weitere
+Anfragen erreicht werden kann. Das Format entspricht dem der To- und From-
+Header. Ein Parameter für diese Headerzeile ist \textit{expires}, der die Zeit in Sekunden angibt, bis der Kontakt nicht mehr verfügbar ist.
+	\item Call-ID: Diese Identifiziert den Anruf. Jeder Anruf enthält eine ID die sich aus siner Zufallszahl und dem Namen des Anrufenden enthält. 
+	\item 
+\end{itemize}
+
+Der Message Body enthält die Besonderheiten der RTP-Session, die durch das SDP (Session Description Protocol) festgelegt wird. Der Message Body setzt sich aus der Spezifikation der RTP-Session, der Zeitbeschreibung und der Medienbeschreibung zusammen. 
+
+% Bild der SDP message
+
+Die Beschreibung der RTP-Session wird mit den folgenden Parametern definiert:
+\begin{itemize}
+	\item v: Die Zeile gibt die verwendete RTP Version an.
+	\item o: Die Zeile enthält den Initiator der Nachricht an:
+	\subitem $\left\langle username \right\rangle$: den Namen des Initiators der Session
+	\subitem $\left\langle session id \right\rangle$: die Identifikation der Session, meistens der NTP-Stempel.
+	\subitem $\left\langle network type \right\rangle$: der Netztyp
+	\subitem $\left\langle address type \right\rangle$: der Typ der Quell-IP-Adresse
+	\subitem $\left\langle adress \right\rangle$: die Quell-IP-Adresse
+	\item s: Die Zeile gibt eine genauere Bezeichnung der Session an z.B. den Namen
+	\item t: Die Zeile gibt die Start und Endzeit der Session an. 
+	\item m: In der Media Zeile wird angegeben:
+	\subitem $\left\langle media \right\rangle$: Hier wird die Medienart (z.B. Audio) definiert.
+	\subitem $\left\langle port \right\rangle$: Die Portnummer über den das Medium empfangen wird.
+	\subitem $\left\langle transport \right\rangle$: Das verwendete Transportprotokoll
+	\subitem $\left\langle fmt list \right\rangle$: Eine List der zulässigen Formate des Mediums. 
+	\item a: Hier wird angegeben welches Format des Mediums empfangen werden kann. 
+\end{itemize}
+
+\subsubsection{Request Typen}
+In der Spezifikation RFC 3261 werden sechs Request-Typen definiert, die jedoch inzwischen um weitere Request Typen erweitert wurden:
+\begin{itemize}
+	\item INVITE: Mit INVITE initiiert ein IP-Telefon einen neuen Anruf. Eine INVITE nachricht enthält die SIP-Adresse von beiden Teilnehmern, einen Subject (Grund) und dessen Priorität.
+	\item BYE: Mit BYE wird der Abbau der bestehenden VoIP-Verbindung zwischen zwei Teilnehmern initiiert.
+	\item ACK: ACK dient als "`positive"' Bestätigung mit der die Annahme eines ankommenden Anrufes bestätigt wird.
+	\item OPTIONS: Mit dieser Nachricht kann man die Fähigkeiten eines Teilnehmers befragen (\textit{Media Capabilities}), die aussagen welche Arten von Medien empfangen werden können und welche Verfahren zu COdierung dieser Medien unterstützt werden.
+	\item CANCEL: Mit CANCEL kann eine bereits initierte VoIP-Verbindung abgebrochen werden und vorzeitig beendet werden. 
+	\item REGISTER: Mit REGISTER werdem dem sog. \textit{Registrar} Informationen über die Lokation des Teilnehmers mitgeteilt. 
+\end{itemize}
+
+Ausgewählte erweiterte Request-Typen:
+\begin{itemize}
+	\item MESSAGE :Mit MESSAGE nachrichten kann Inhalt in der form von requests MIME(\textit{Multimedia Internet Message Extensions} Nachrichten übertragen werden.  MESSAGE Nachrichten initieren keinen SIP Dialog und werden üblicherweise wie normale Kurznachrichten verstanden. 
+	\item SUBSCRIBE und NOTIFY: SIP kann verwendet werden, um bestimmt Ereignisse zu übermitteln. Hierfür sind die Nachrichten SUBSCRIBE und NOTIFY eingeführt worden. So kann z.B. die Anwesenheit eines Teilnehmers von weiteren Teilnehmern mit einer SUBSCRIBE Nachricht abonniert werden. Geht dieser Teilnehmer online so benachrichtigt er alle anderen Teilnehmer mit einer NOTIFY Nachricht die seine Anwesenheit abonnieren. 
+\end{itemize}
+
+\subsubsection{Response Typen}
+Im RFC 3261 werden ebenfalls sechs Response Typen spezifiziert, bei denen dem Absender des Requests eine Response signalisiert wird.
+\begin{itemize}
+	\item \textit{Informational}: Eine 1xx Nachricht wird teilt mit dass der Request weiter bearbeitet wird.
+	\subitem 100: Trying - der Empfänger ist dabei die Empfangene Nachricht zu verarbeiten und eine endgültige Antwort steht noch aus.
+	\subitem 180: Ringing - dem Anrufenden wird mitgeteilt dass der eingehende Anruf über einen Klingelton signalisiert wird.
+	\item \textit{Success}: Eine 2xx Nachricht teilt mit dass der Request erfolgreich empfangen und akzeptiert wurde. Der Response besteht nur aus der 200 OK Nachricht
+	\item \textit{Redirection}: Eine 3xx Nachricht signalisiert dem Absender eines Requests, dass weitere Aktionen bei der Bearbeitung des Requests nötig sind und enthält folgende Subtypen:
+	\subitem 301 Moved Permanently 
+	\subitem 302 Moved Temporarily 
+	\item \textit{Client Error:} Eine 4xx Nachricht teilt mit dass der Request eine falsche Synax hat oder nicht ausgeführt werden kann. 
+	\subitem 400 Bad Request
+	\subitem 401 Unauthorized - Der 
+	\subitem 403 Forbidden - Der Anruf ist nicht zulässig.
+	\subitem 404 Not Found - Der Benutzer ist nicht erreichbar oder kann nicht gefunden
+	werden.
+	\subitem   486 Busy Here - Indiziert dass der Angerufene gerade in einem Gespräch ist und den Anruf nicht annehmen kann.
+	\item \textit{Server Error}: Eine 5xx Nachricht teilt mit dass der Server nicht in der Lage war den Request auszuführen. Einige Beispiele sind:
+	\subitem 500 Internal Server Error
+	\subitem 505 SIP Version not supported
+	\item \textit{Global Failure}: Eine 6xx Nachricht teilt mit dass der Request auf keinem der Server des Netzes ausgeführt werden konnte. 
+\end{itemize}
+
 \subsection{Rufaufbau, Verbindung, Rufabbau}
-\subsection{Forking}
+
+% Grafik über Ruffaufbau
+
+Teilnehmer A möchte zu Teilnehmer B eine Verbindung herstellen. Dazu sendet er eine SIP-Nachricht INVITE an Teilnehmer B. Die Nachricht enthält die Beschreibung der RTP-Session nach dem SDP Protokoll und alle notwendigen Angaben, wie z.B. die Sprachkodierung, damit Teilnehmer B Prüfen kann ob eine Session hergestellt werden kann. 
+Falls Teilnehmer B die Verbindung annehmen kann, klingelt das angerufene IP-Telefon von Teilnehmer B, dies wird mit der SIP-Response 180 Ringing signalisiert. 
+Hat nun Teilnehmer B den Hörer abgehöben, sendet er einen SIP-Response 200 OK der vom Teilnehmer A mit der Nachricht ACK bestätigt wird. Mit dem Empfang der ACT Nachricht von Teilnehmer B, ist die logische Verbindung abgeschlossen. Nun kann eine Verbindung nach dem Prtokoll RTP verlaufen und es besteht eine Session zwischen den Teilnehmern. 
+Die bestehende RTP-Session kann von beiden Seiten beendet werden. Beendet Teilnehmer B durch das Absenden der SIP Nachricht BYE die Session, bestätigt Teilnehmer A den Empfang der Nachricht mit der SIP-Response 200OK. Mit dem Empfang von 200 OK beim IP Telefon des Teilnehmers B wird die Session beendet. 
+
+
+\subsection{Registrierung der Lokation von Teilnehmern}
+
 \section{Session Description Protokoll}
 \subsection{Aufbau}
 \subsection{Aushandeln der Sitzungsparameter}
+
 \section{Real-Time Transport Protokoll}
 Speziell für die Übermittlung von Sprache, Audio und Video über IP-Netze wurde RTP(Real-time Transport Protocol) bei der IETF entwickelt (2003 RFC 2550). Einerseits stellt RTP ein Transportprotokoll für die Echtzeitmedien dar anderseits kann es als eine Anwendungsart oberhalb des verbindungslosen Protokolls UDP angesehen werden. 
 
---grafik s151
+%--grafik s151
 
 Die Wichtigsten Besonderheiten von RTP sind:
 
@@ -62,7 +159,7 @@ Die Wichtigsten Besonderheiten von RTP sind:
 
 \subsection{Aufbau von RTP-Paketen}
 RTP übermittelt ein Echtzeitmedium als Folge von RTP Paketen , die mit einem vorangestellten UDP-Header in den IP-Paketen transportiert werden. Jedes RTP-Paket enthält einen RTP-Header und einen Payload-Teil. Die Wesentlichen angaben im RTP-Header sind:
--- grafik  S153
+%-- grafik  S153
 
 \begin{itemize}
 	\item PT: Payload Type: Es wird angegeben, um welches Format es sich beim transportierten Medium handelt, dh. nach welchem Verfahren codiert wurde. Die Möglichen Codierungsarten sind in RFC 3551 festgelegt. 

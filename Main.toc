@@ -1,9 +1,9 @@
 \select@language {english}
 \select@language {ngerman}
-\contentsline {chapter}{Stichwortverzeichnis}{iii}
-\contentsline {chapter}{Abbildungsverzeichnis}{iv}
-\contentsline {chapter}{Tabellenverzeichnis}{v}
-\contentsline {chapter}{Abk\"{u}rzungsverzeichnis}{vi}
+\contentsline {chapter}{Stichwortverzeichnis}{v}
+\contentsline {chapter}{Abbildungsverzeichnis}{vi}
+\contentsline {chapter}{Tabellenverzeichnis}{vii}
+\contentsline {chapter}{Abk\"{u}rzungsverzeichnis}{viii}
 \contentsline {chapter}{\numberline {1}Einleitung}{1}
 \contentsline {section}{\numberline {1.1}Ziel der Arbeit}{2}
 \contentsline {section}{\numberline {1.2}Aufbau der Arbeit}{3}
@@ -49,33 +49,34 @@
 \contentsline {section}{\numberline {3.1}Aufbau eines VoIP Systems}{21}
 \contentsline {subsection}{\numberline {3.1.1}Protokolle zur Echtzeitkommunikation}{21}
 \contentsline {subsection}{\numberline {3.1.2}Einflussfaktoren auf die VoIP-Qualit\"at}{23}
-\contentsline {section}{\numberline {3.2}Session Initiation Protocol (SIP)}{25}
+\contentsline {section}{\numberline {3.2}Session Initiation Protocol (SIP)}{24}
 \contentsline {subsection}{\numberline {3.2.1}Aufbau}{25}
-\contentsline {subsection}{\numberline {3.2.2}Dialoge, Transaktionen und Vorg\"ange}{25}
-\contentsline {subsection}{\numberline {3.2.3}Registrierung}{25}
-\contentsline {subsection}{\numberline {3.2.4}Rufaufbau, Verbindung, Rufabbau}{25}
-\contentsline {subsection}{\numberline {3.2.5}Forking}{25}
-\contentsline {section}{\numberline {3.3}Session Description Protokoll}{25}
-\contentsline {subsection}{\numberline {3.3.1}Aufbau}{25}
-\contentsline {subsection}{\numberline {3.3.2}Aushandeln der Sitzungsparameter}{25}
-\contentsline {section}{\numberline {3.4}Real-Time Transport Protokoll}{25}
-\contentsline {subsection}{\numberline {3.4.1}Aufbau von RTP-Paketen}{26}
-\contentsline {subsection}{\numberline {3.4.2}Payload-Typen}{27}
-\contentsline {subsection}{\numberline {3.4.3}RTP Control Protokoll}{27}
-\contentsline {subsubsection}{Typen und Struktur der RTCP-Pakete}{27}
-\contentsline {section}{\numberline {3.5}VoIP-relevante Sprachcodierungsverfahren}{28}
-\contentsline {section}{\numberline {3.6}STUN}{29}
-\contentsline {section}{\numberline {3.7}Konferenzschaltungen}{29}
-\contentsline {section}{\numberline {3.8}Skype}{29}
-\contentsline {subsection}{\numberline {3.8.1}Registrierung und Login}{29}
-\contentsline {subsection}{\numberline {3.8.2}Rufsignalisierung und Sprach\"ubertragung}{29}
-\contentsline {subsection}{\numberline {3.8.3}Technologie von Skype}{29}
-\contentsline {subsubsection}{Verbindungsstruktur}{29}
-\contentsline {subsubsection}{Sicherheit}{29}
-\contentsline {subsubsection}{Konferenzen}{29}
-\contentsline {chapter}{\numberline {4}Summary, Conclusions, and Further Work}{30}
+\contentsline {subsubsection}{Request Typen}{26}
+\contentsline {subsubsection}{Response Typen}{27}
+\contentsline {subsection}{\numberline {3.2.2}Rufaufbau, Verbindung, Rufabbau}{29}
+\contentsline {subsection}{\numberline {3.2.3}Registrierung}{29}
+\contentsline {section}{\numberline {3.3}Session Description Protokoll}{29}
+\contentsline {subsection}{\numberline {3.3.1}Aufbau}{29}
+\contentsline {subsection}{\numberline {3.3.2}Aushandeln der Sitzungsparameter}{29}
+\contentsline {section}{\numberline {3.4}Real-Time Transport Protokoll}{29}
+\contentsline {subsection}{\numberline {3.4.1}Aufbau von RTP-Paketen}{30}
+\contentsline {subsection}{\numberline {3.4.2}Payload-Typen}{30}
+\contentsline {subsection}{\numberline {3.4.3}RTP Control Protokoll}{31}
+\contentsline {subsubsection}{Typen und Struktur der RTCP-Pakete}{31}
+\contentsline {section}{\numberline {3.5}VoIP-relevante Sprachcodierungsverfahren}{32}
+\contentsline {section}{\numberline {3.6}STUN}{33}
+\contentsline {section}{\numberline {3.7}Konferenzschaltungen}{33}
+\contentsline {section}{\numberline {3.8}Skype}{33}
+\contentsline {subsection}{\numberline {3.8.1}Registrierung und Login}{33}
+\contentsline {subsection}{\numberline {3.8.2}Rufsignalisierung und Sprach\"ubertragung}{33}
+\contentsline {subsection}{\numberline {3.8.3}Technologie von Skype}{33}
+\contentsline {subsubsection}{Verbindungsstruktur}{33}
+\contentsline {subsubsection}{Sicherheit}{33}
+\contentsline {subsubsection}{Konferenzen}{33}
+\contentsline {chapter}{\numberline {4}Summary, Conclusions, and Further Work}{34}
 \select@language {english}
-\contentsline {section}{\numberline {4.1}Summary}{30}
-\contentsline {section}{\numberline {4.2}Conclusions}{31}
-\contentsline {section}{\numberline {4.3}Further Work}{32}
+\contentsline {section}{\numberline {4.1}Summary}{34}
+\contentsline {section}{\numberline {4.2}Conclusions}{35}
+\contentsline {section}{\numberline {4.3}Further Work}{36}
 \select@language {ngerman}
+\contentsline {chapter}{Literaturverzeichnis}{37}
