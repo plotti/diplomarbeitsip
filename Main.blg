@@ -1,0 +1,32 @@
+This is BibTeX, Version 0.99cThe top-level auxiliary file: C:\Dokumente und Einstellungen\plotti\Eigene Dateien\Diplomarbeit\Main.aux
+A level-1 auxiliary file: kapitel/titel.aux
+A level-1 auxiliary file: kapitel/stichwortverzeichnis.aux
+A level-1 auxiliary file: kapitel/abkuerzungen.aux
+A level-1 auxiliary file: kapitel/einleitung.aux
+A level-1 auxiliary file: kapitel/kapitel_kommunikation.aux
+White space in argument---line 16 of file kapitel/kapitel_kommunikation.aux
+ : \citation{Shannon
+ :                   Weaver}
+I'm skipping whatever remains of this command
+White space in argument---line 25 of file kapitel/kapitel_kommunikation.aux
+ : \citation{Turkle
+ :                  and Reid}
+I'm skipping whatever remains of this command
+A level-1 auxiliary file: kapitel/kapitel_sip.aux
+A level-1 auxiliary file: kapitel/fazit.aux
+The style file: literatur/natdin.bst
+A level-1 auxiliary file: kapitel/erklaerung.aux
+Database file #1: literatur/da.bib
+I was expecting a `,' or a `}'---line 2 of file literatur/da.bib
+ : P.T. 
+ :      Brady, A model for generating on-off speech patterns in two-way conversation, Bell Syst. Tech. J. (Sept. 1969) 2445- 2472.
+I'm skipping whatever remains of this entry
+Warning--I didn't find a database entry for "printout1"
+Warning--I didn't find a database entry for "triggerhappybuch"
+Warning--I didn't find a database entry for "Allwood"
+Warning--I didn't find a database entry for "Shannon"
+Warning--I didn't find a database entry for "Tannenbaum"
+Warning--I didn't find a database entry for "Jensen"
+Warning--I didn't find a database entry for "riva"
+Warning--I didn't find a database entry for "needed"
+(There were 3 error messages)

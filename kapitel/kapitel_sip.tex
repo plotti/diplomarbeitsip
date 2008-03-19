@@ -1,0 +1,129 @@
+\chapter{VoIP und SIP}
+\section{Aufbau eines VoIP Systems}
+Der einfache Aufbau eines funktionierenden VoIP Systems kann prinzipiell mit einer bestehenden IP-Infrastruktur und Softphones, die auf Rechners ausgeführt werden, funktionieren. Die Teilnehmer müssen jedoch bei einer solchen Konfiguration die IP-Adressen der gewünschten Gesprächspartner kennen um einen direkten Call auszuführen. Bei einer Adressänderung der IP Adresse eines Gesprächspartners, müssten jedoch alle Einträge der Gesprächspartner entsprechend abgeändert werden, weil sich die Teilnehmer sonst nicht mehr erreichen könnten. Der gleiche Aufwand müsste auch beim Hinzufügen weiterer Teilnehmer erfolgen. Ein solcher Aufbau wird daher als unflexibel angesehen. 
+Im SIP-Protokoll wird dieses Problem von Proxys übernommen, die die Aufgabe einer Vermittlungsstelle einnehmen. Ein Proxy kann einen Location Service enthalten, der ankommende SIP-Pakete an das Telefon des angerufenen Teilnehmers weiterleitet oder an einen anderen Proxy weiterleitet, falls sich der Benuutzer außerhalb des eigenen Adressbereichs befindet. Zusätzlich können Konferencen, Voice-Mail und Anrufweiterleitungen zentral verwaltet werden. 
+Da die klassische Telefonie weiterhin neben VoIP Bestand hat, wird versucht mit zusätzlichen Komponenten, den Gateways, eine Verbindung zwischen den beiden Telefonsystemen herzustellen. 
+
+\subsection{Protokolle zur Echtzeitkommunikation}
+Voice-over-IP beinhaltet unterschiedliche Protokolle. Zur reinen Signalisierung werden hauptsächlich das SessionInitiation Protocol (SIP) \cite{needed} bzw. Protokolle aus der H.323-Protokollfamilie verwendet. Bei VoIP sing generell folgende Klassen der Protokolle zu unterscheiden:
+\begin{itemize}
+	\item Protokolle für die Sprachübermittlung: Da die Sprachkommunikation in Echtzeit verläuft, sind spezielle Protokolle für die Übermittlung der Sprache über IP-Netze nötig.
+	\item Signalisierungsprotokolle: Es handelt sich hier um Protokolle für den Auf- und Abbau von Verbindungen zwischen zwei IP-Telefonen.
+	\item Diese Protokolle sind nötig, um die klassischen TK-Systeme und -Netze, wie z.B. das ISDN mit den IP-Netzen mit Hilfe von verschiedenen Gateways zu integrieren. 
+\end{itemize}
+
+Vorgänge wie die Vermittlung von Gesprächen, der Rufaufbau oder -abbau sowie die Aushandlung von Parametern, z.B. die Verwendung eines gemeinsamen Codecs, der entsprechenden Bitrate oder der maximal zulässigen Bandbreite werden in diesen Protokollen kontrolliert. Speziell für diese zwecke wurde das Session Description Protocol (SDP) \cite{needed} entwickelt um den Medienstrom zu kontrollieren. SIP basiert auf den gleichen Prinzipien, die man beim HTTP(HyperText Transfer Protocol) nutzt. 
+
+Für die Sprachübertragung wird das Real-time Transport Protocol (RTP) \cite{needed} verwendet, das dem Empfänger der Pakete erlaubt, trotz unzuverlässiger Übertragung über UDP \cite{needed}, einen Paketverlust festzustellen und die ursprüngliche Reihenfolge der Daten wiederherzustellen. RTP ist ein Transprotokoll, ist also nicht nur für Sprache, sondern für alle Echtzeitmedien, wie Video verwendbar. Da RTP keine Bestätigungen verwendet, kann der Empfänger dem Sender nicht mitteilen, ob überhaupt btw. wie die Sprache in Form von IP-Paketen bei ihm ankommt. Das RTCP Protokoll gleicht diesen Nachteil aus: Mit Hilfe des RTP Control Protocols (RTCP) können zusätzlich zu den reinen Mediendaten auch Kontrollinformationen wie die Anzahl der verlorenen Pakete oder der gemessene Jitter \cite {needed} der RTP-Verbindung übertragen werden und so Übertragungsparameter angepasst werden. 
+
+Neben den bisher erwähnten Protokollen zur Hauptfunktionalität gibt es noch noch weitere, die sich mit allen angrenzenden Bereichen von VoIP beschäftigen. So wird mit Hilfe des STUN (Simple Traversal of User Datagram Protocol Through Network Address Translators) ermöglicht seine IP-Adresse zu ermitteln, falls man sich hinter einem NAT Router befindet und die interne IP-Adresse nicht der externen entspricht. Dies ist vor allem notwendig, da die IP-Kontaktinformationen in SIP und SDP in der Anwendungsschicht übertragen werden und somit ein Client ohne Kentniss richtigen Adresse falsche Informationen liefern würde. Ein weiteres Protokoll mit dem Ziel der Überbrückung eines NATs ist TURN(Traversal Using Relay NAT) \cite{needed}. Bei TURN bekommt ein Client von einem TURN-Server eine öffentlich erreichbares IP-Adressen- und Port-Paar zugewiesen und leitet alle an diese öffentliche Adresse ankommenden Pakete an den Client weiter. 
+
+Für die Ansteuerung von VoIP-Gateways stehen die Protokolle MGCP(Media Gateway Control Protocol) nund Megaco(Media Gateway Control) zur Verfügung, werden im Rahmen der Arbeit nicht weiter erläutert. 
+
+Dieses Kapitel soll zunächst den Aufbau eines VoIP Systems beschreiben um anschließend die Protokolle SIP/SDP, RTP und RTCP zu behandeln. Da SIP die ältere H.323 Protokollfamilie in langfristig verdrängen wird, wird auf diese Protokollfamilie nicht behandelt. Im Abschluss wird ein Überblick über das propriätere Protokoll von Skype gegeben, dessen Funktionsweise und Details zwar nicht offen sind, es jedoch eine Alternative zu den offenen Protokollen bietet. Da ein Reverse-Engineering dieses Protokolls außerhalb des Aufgabenbereichs der Arbeit liegt.
+
+\subsection{Einflussfaktoren auf die VoIP-Qualität}
+Die wichtigsten QoS-Anforderungen, die VoIP an IP-Netze stellt, betreffen:
+\begin{itemize}
+	\item die Bandbreite von virtuellen Verbindungen zwischen IP-Telefonen,
+	\item die Ende-zu-Ende-Verzögerung des Sprachsignals (Delay),
+	\item die Schankung der Übermittlungszeit (Jitter) und
+	\item die Paketverlustrade (Packet Loss Rate)
+\end{itemize}
+
+Da bei VoIP die Sprache zuerst digitalisiert und dann enstsprechend codiert wird, ist dabei die Qualität des übertragenen codierten Sprachsignals abhängig von der Bandbreite für die virtuelle Verbindung zwischen den IP-Telefonen. Ein wichtiger Faktor ist auch die Ende-zu-Ende-Verzögerung des Sprachsignals. Darunter versteht man die Zeitspanne, die ein Sprachsignal vom Mund eines Sprechers bis zum Ohr eines Hörers benötigt. Die Ende-Zu-Ende-Verzögerung entsteht vor allem durch die Zwischenspeicherung der IP-Pakete in den Routern, die sie auf ihren Wegen durch das Netz zu durchalufen haben. Jeder Router benötigt Zeit, um den Header im IP-Paket zu interpretieren und die entsprechende Routing-Entscheidung zu treffen. Trifft ein Paket unterwegs auf einen überlasteten Route, muss es einige Zeit in der Warteschlnage vor der Leitung verbringen und wird im Extremfall sogar ganz verworfen. Eine große Ende-zu-Ende-Verzögerung beinträchtigt den Charakter eines Telefongespräches stark. 
+
+Da die einzelnen IP-Pakete auf einer Verbindung zwischen IP-Telefonen in der Regel auf unterschiedlichen Wegen übermittelt werden, kann ihre Übermittlungszeit recht unterschiedlich sein. Die Schwankungen der Übermittlungszeit werden Jitter genannt. Die Synchronität bei VoIP lässt jedoch kein Jitter zu. Um die Schwankungen auszugleichen, wird beim Empfänger ein spezieller Puffer implementiert. Man bezeichnet einen derartigen Puffer als Jitter-Ausgleichspuffer(Playout Buffer)
+
+Die Verluste von IP-Paketen mit Sprache während der Übermittlung mindern die Qualität ebenso. Die Anzahl der Paketverluste in einer bestimmten Zeitperiode wird mit dem Parameter Paketverlustrate angegeben. Paketverluste können durch überlastete Router im IP-Netz oder auch durch einen "`schlecht"'  dimensionierten Jitter-Ausgleichspuffer entstehen. Im Gegensatz zu reinen Datenanwendungen, ist der Verlust eines IP-Pakets bei der Sprachübertragung nciht besonders tragisch. Zu viele Paketverluste jedoch machen sich in einem Telefongespräch allerdings sehr störend als Unterbrechungen bemerkbar. 
+
+\section{Session Initiation Protocol (SIP)}
+\subsection{Aufbau}
+\subsection{Dialoge, Transaktionen und Vorgänge}
+\subsection{Registrierung}
+\subsection{Rufaufbau, Verbindung, Rufabbau}
+\subsection{Forking}
+\section{Session Description Protokoll}
+\subsection{Aufbau}
+\subsection{Aushandeln der Sitzungsparameter}
+\section{Real-Time Transport Protokoll}
+Speziell für die Übermittlung von Sprache, Audio und Video über IP-Netze wurde RTP(Real-time Transport Protocol) bei der IETF entwickelt (2003 RFC 2550). Einerseits stellt RTP ein Transportprotokoll für die Echtzeitmedien dar anderseits kann es als eine Anwendungsart oberhalb des verbindungslosen Protokolls UDP angesehen werden. 
+
+--grafik s151
+
+Die Wichtigsten Besonderheiten von RTP sind:
+
+\begin{itemize}
+	\item Übermittlung von Echtzeitmedien in RTP-Paketen: Echtzeitmedien werden in RTP als eine zusammenhängende Folge von RTP-Paketen über eine RTP-Session übermittelt. 
+	\item Garantie der Reihenfolge von RTP-Paketen: RTP nummeriert die übertragenen Pakete mit Echtzeitmedien, sodass ihre richtige Reihenfolge am Ziel wiederhergestellt werden kann, falls sie durhc den Transport über das IP-Netz veränert wurde. 
+	\item Grantie der Synchronität: RTP verfibt den übertragenen Paketen einen Zeitstempel, sodass die gleichen Zeitabstände am Ziel wiederhergestellt werden können, die beim Absender bestanden. 
+	\item Transport unterschiedlicher Formate: Es können unterschiedliche Formate wie Audio, Sprache und Video übertragen werden, die in unterschiedlichen Proflies genau bezeichnet werden. 
+\end{itemize}
+
+\subsection{Aufbau von RTP-Paketen}
+RTP übermittelt ein Echtzeitmedium als Folge von RTP Paketen , die mit einem vorangestellten UDP-Header in den IP-Paketen transportiert werden. Jedes RTP-Paket enthält einen RTP-Header und einen Payload-Teil. Die Wesentlichen angaben im RTP-Header sind:
+-- grafik  S153
+
+\begin{itemize}
+	\item PT: Payload Type: Es wird angegeben, um welches Format es sich beim transportierten Medium handelt, dh. nach welchem Verfahren codiert wurde. Die Möglichen Codierungsarten sind in RFC 3551 festgelegt. 
+	\item Timestamp: Der Zeitstempel dient dazu, den Zeitpunkt der Generierung von Payload zu markieren. Der Zeitstempel ist nötig, um die Schwankungen der Übertragungszeit (Jitter) von RTP-Paketen beim Empfänger auszugleichen. 
+	\item Sequence Number: Jedes RTP-Paket wird mit einer Sequenznummer versehen, die es dem Emfpänger erlaubt, den Verlust von Paketen festzustellen, bzw. die Reihenfolge wiederherzustellen, falls sie in einer falschen Reihenfolge angekommen sind. 
+	\item SSRC: Zur Identifikation der Quelle(Mikrofon, Kamera) dient der SSRC, so müssen zwei verschiedene Quellen unterschiedliche SSRCs haben, um für den Empfänger unterscheidbar zu sein. 
+	\item CSRC: Wird optional verwendet un enthält die "`Orginal"'-Quellen der Bitströme falls der SSRC von einem Mixer verändert wurde.
+\end{itemize}
+
+\subsection{Payload-Typen}
+Die PT Nummern dienen zur Identifikation der einzelnen Audio- und Video-Formate. Da der Nummernraum nicht komplett belegt ist können wietere nummern vergeben werden (dynamische PT-Nummern). Bei der Verwendung von dynamischen PT-Nummern wird die Kompatibilität zwischen Emfpänger und Sender mit Hilfe des SDP Protokolls vereinbart. 
+
+-- payload tabelle
+
+\subsection{RTP Control Protokoll}
+RTP wird mit RTCP so ergänzt, dass INformation über den Verlauf der Kommunikation zwischen Sender und Empfänger, insbesondere über die Qualität der Übertragung, ausgetauscht werden können. 
+
+Die wichtigsten Aufgaben von RTCP sind ide Überwachung der Übertragungsqualität: Hierfür werden zwischen Sender und Emfpänger laufend Informationen über die Qualität der Übertragung mittels Sender- und Receiverreports ausgetauscht. Dies Ermöglicht es dem Sender, den von ihm generierten Bitstrom an die Netzbedingungen anzupassen und so Fehler einzugrenzen. 
+
+\subsubsection{Typen und Struktur der RTCP-Pakete}
+Beim RTCP werden folgende RTCP-Pakete als Nachrichten verwendet. 
+\begin{itemize}
+	\item Sender Report (SR)
+	\item Receiver Report(RR)
+	\item Source Description (SDES)
+	\item Abmeldung (BYE)
+	\item Applikationsspezifisches Paket (APP)
+\end{itemize}
+RTCP Pakete beginnen mit einem Header und können unabhängig von anderen bearbeitet werden. Die Reihenfolge der Pakete in einem IP-Paket kann beliebig sein. 
+Das SR Paket enthält einen Zeitstempel gemäß der NTP (Network Time Prococol) und beschreibt die Qualität der Übermittlung aus Sicht des Senders. So kann z.B. dem Empfänger die Sende-Datenrate mitgeteilt werden, damit dieser sich im Voraus auf die ankommende Datenmenge einstellen kann. 
+In einem Sender Report sind immer enthalten:
+\begin{itemize}
+	\item NTP-Zeitstempel: Ein Zeitstempel gemäß der NTP Uhrzeit. 
+	\item RTP-Zeitstempel: Die NTP-Zeit in Zeiteinheiten der RTP Session, die primär dazu dient um verschiedene Quellen zu synchronisieren.
+	\item Gesendete Pakete: Die Anzahl der gesendeten Pakete sowie Bytes.
+\end{itemize}
+
+Bei RR Paket werden Werte wie Jitter, Round-Trip-Delay (Hin-und-Zürück-Verzögerung)  oder Paketverlust aus Sicht des Emfpängers berechnet und abgeschätzt. 
+In einem Receiver Report sind unter anderm folgende Informationen enthalten:
+\begin{enumerate}
+	\item Paketverlust: Der Anteil der verlorenen Pakete seit dem letzten Report, als auch die Gesamtanzahl der verlorenen Pakete.
+	\item Jitter: Der Jitter wird geschätzt als die Varianz der Ankunftszeitdifferenzen der Pakete. 
+	\item Letzter Report: Die verstrichene Zeit seid dem Empfang des letzten Reports.
+\end{enumerate}
+
+Die SDES Pakete ermöglichen es, die Quallen mit Namen zu kennzeichnen. Diese Kennzeichnung wird vom Empfänger dazu verwendet mehrere Bitströme einer Quelle, die in getrennten RTP-Sessions übertragen werden wieder zusammenzuführen. Das BYE Paket dient dazu das Ende der Teilnahme an einer Kommunikation anzuzeigen. 
+
+\section{VoIP-relevante Sprachcodierungsverfahren}
+Es gibt mehrere Sprachcodierungsverfahren, die bei VoIP verwendet werden können. Man unterscheided zwischen Abtastwert-orientierten Codierungsverfahren die zwar gute Sprachqualität garantieren aber Bitraten haben die größer als 16kbit/s sind und Segment-orientierten Codierungsverfahren die zwar geringe Bitraten haben aber dafür nure einer schlecht bis guten Sprachqualität bieten. 
+Obwohl die Qualität quantitativ durch Parameter wie die Laufzeit der IP-Pakete(Delay), die Laufzeitunterschiede(Jitter) und die Verlustrate von IP-Paketen im Netz beinflusst wird, sagen diese Parameter nichts über die eigentliche Sprachqualität aus. Die eigentliche Sprachqualität wird nach der MOS (Mean Opinion Score) - Skala  gemessen. Diese unterscheidet Aspekte wie Verständlichkeit der Sprache, Akzeptanz der Lautstärke sowie die Akzeptanz der Laufzeitschwankungen und Echos. 
+
+%TODO TABELLE ÜBER MOSS S147
+
+Eine Analoge Sprachübertragung kommt auf einen MOS-Wert von 3.5 bis 4. Hochwertige VoIP-Implementierungen bieten eine Sprachqualität zwischen 3.8 und 4.4 je nach verwendeter Sprachcodierung. Dabei bieten VoIP-Systeme mindestens die Qualität eines herkömmlichen analogen Telefonnetzes. 
+
+\section{STUN}
+\section{Konferenzschaltungen}
+\section{Skype}
+\subsection{Registrierung und Login}
+\subsection{Rufsignalisierung und Sprachübertragung}
+\subsection{Technologie von Skype}
+\subsubsection{Verbindungsstruktur}
+\subsubsection{Sicherheit}
+\subsubsection{Konferenzen}
