@@ -1,0 +1,82 @@
+% ---------------------------------------
+%
+%    Beispieldiplomarbeit
+%
+%    - text kann gel{\"o}scht, und mit eigenen 
+%    Inhalten gef{\"u}llt werden.
+%
+% ---------------------------------------
+
+\documentclass[
+    smallheadings,  % kleinere {\"U}berschriften
+    oneside,        % einseitig, nur rechte seiten
+    liststotoc,     % listen in inhaltsverzeichnis aufnehmen
+    bibtotoc,       % literaturverzeichnis in inhltsvz. aufnehmen
+    headsepline,     % trennlinie unter kopfzeile
+    12pt
+    ]{scrbook}
+
+\usepackage{a4}  %a4 Seitenformat benutzen
+\usepackage[ngerman,english]{babel} %Verwende deutsche, bzw. amerikanische Silbentrennung
+%\usepackage[utf8]{inputenc} %damit k{\"o}nnen Umlaute ganz normal geschrieben werden. 
+\usepackage[ansinew]{inputenc}
+
+\usepackage{subfigure} %f{\"u}r mehrteilige Grafiken
+\usepackage{epsfig}    %damit funktioniert das einbinden von grafiken {\"u}ber epsfig.
+\usepackage{graphicx}     % zum einbinden von grafiken
+\graphicspath{{grafiken}{../}{kapitel}} %da sind m{\"o}gliche bilder fuer den includegraphics-Befehl zu finden (man muss dann nicht den ganzen Pfad bei includegraphics angeben. 
+
+\usepackage{multirow}     %fuer kompliziertere Tabellen
+\usepackage{framed}
+\usepackage{scrpage2}     % paket f{\"u}r kopf- und fu{\ss}zeilen
+\pagestyle{scrheadings}   % kopzeilenseitenstil
+\usepackage{natbib}       % Literaturverzeichnis
+\usepackage{setspace}
+\usepackage{url}          % fuer urls: schreibweise ist z.B. \url{http://www.uni-mannheim.de}
+
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}\medskipamount % besser als explizite Angabe in pt
+
+\onehalfspacing
+
+
+% kapitel{\"u}berschriften in schriftart mit serifen
+\setkomafont{sectioning}{\normalfont\normalcolor\bfseries}
+
+% gestaltung der kopfzeilen
+\ohead{\pagemark}
+\cfoot{}
+\cohead{}
+\ihead{\headmark}
+\setkomafont{pagehead}{\normalfont\bfseries}
+\setkomafont{pagenumber}{\normalfont\bfseries}
+\automark{section}
+
+% ----- ende der pr{\"a}ambel ----------------------------------
+
+\begin{document}  % dokument f{\"a}ngt an
+\selectlanguage{ngerman} %deutsche Silbentrennung
+\frontmatter      % vorspann, kapitel r{\"o}misch nummeriert
+
+\include{kapitel/titel}     % titelseite einbinden
+\tableofcontents            % inhaltsverzeichnis
+\include{kapitel/stichwortverzeichnis}  % Stichwortverzeichnis
+\listoffigures              % abbildungsverzeichnis
+\listoftables               % tabellenverzeichnis
+\include{kapitel/abkuerzungen}  % beispiel eines handerstellten
+                                %verzeichnisses
+\mainmatter       % hauptteil, kapitel lateinisch nummeriert
+\include{kapitel/einleitung}
+\include{kapitel/kapitel_kommunikation}
+\include{kapitel/kapitel_sip}
+\include{kapitel/fazit}
+
+%\selectlanguage{ngerman} % jetzt sprechen wir wieder deutsch.
+
+\backmatter
+\bibliographystyle{literatur/natdin}
+\bibliography{literatur/da}
+\include{kapitel/erklaerung}
+
+\end{document}

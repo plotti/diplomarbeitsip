@@ -1,0 +1,29 @@
+\chapter{Einleitung}
+\label{chap:einleitung}
+
+Computerspiele entwickelten sich in circa 50 Jahren von eher technischen Versuchen an Universitäten zu einer der einflussreichsten Freizeitgestaltungsformen des 21. Jahrhunderts und sind heute zu einem Medium geworden, in dem sich tausende von Menschen aus der ganzen Welt treffen und miteinander spielen. Der Umsatz der weltweiten Computerspielbranche kletterte 2003 nach Angaben mehrerer Marktforschungsunternehmen wie JISC auf den Rekordwert von 19,2 Mrd. Euro und erreichte damit fast das Niveau der Filmindustrie. \cite{printout1}
+
+Eine Kommunikation in solchen Spielen war zunächst nicht vorhanden, doch mit dem Aufkommen des Mehrspieler-Spiels entstand die erste Stufe der Kommunikation(der Chat). Datenkommunikation Beim "Chatten" werden lediglich Textnachrichten zwischen einem oder mehreren Mitspielern ausgetauscht. Oft wurden Mehrspieler-Spiele auch nur innerhalb eines LANs gespielt, so dass immer noch eine direkte Sprachkommunikation zwischen den Mitspielern möglich war, weil sie sich z.B. immer noch im gleichen Raum oder Gebäude befanden. 
+
+Mit dem Aufkommen von Mehrspieler-Spielen wurde es auch zum ersten Mal nötig die Spielezustände der Mitspieler miteinander auszutauschen. Dies führte zur Einführung der Client- und Server-Architektur, in der ein zentraler Server die Spielelogik verwaltete und an Clients verteilte. Da man sich in LANs befand, musste ein solcher Server die Daten von 2 bis zu 1000 Spielern verwalten. 
+
+Doch mit dem Aufkommen der MMORPGs (Massive(ly) Multiplayer Online Role-Playing Games), bei denen Mitspieler nun durch das Internet miteinander spielen und kommunizieren, kam es zu neuen Herausforderungen: 
+Einerseits wurde eine lokale Sprachkommunikation unmöglich, da sich Spieler des gleichen Spiels auf verschiedenen Kontinenten befinden und andererseits mussten die zentralen Spieleserver nun Daten von bis zu 10 Millionen Spielern verwalten und verteilen. 
+
+
+\section{Ziel der Arbeit}
+
+In dieser Diplomarbeit sollen ein P2P basiertes Verfahren zur Sprachkommunikation für Spiele entwickelt werden. Statt propriäteren Lösungen wie Skype, soll ein offenes und bereits etabliertes Protokoll genutzt werden. Dabei sollen und Probleme und Chancen des Einsatzes eines solchen Protokolls zu erörtert und Lösungsvorschläge erarbeitet werden. Zum Einsatz soll das SIP Protokoll kommen, das bisher im Bereich des VoIP zu einem offenen Standard entwickelt hat, der auf Software- und Hardware-Ebene seit mehreren Jahren genutzt wird. Obwohl es sich im Ansatz um ein Client-Server-rotokoll handelt, bietet SIP zahlreiche Möglichkeiten es auch im P2P Modus zu betreiben, und es finden sich viele Anätze das Protokoll komplett dezentral einzusetzen.  
+Bisher ist der Einsatz von SIP im Bereich von Multispieler-Spielen noch nicht tiefgehend erforscht. Es soll  untersucht werden wie das SIP-Protokoll sinnvoll für eine standardisierte P2P-Schnittstelle zwischen Clients eingesetzt werden kann. Ebenfalls soll der zukünftige Einsatz von P2PSIP soll untersucht werden...TODO.
+Es soll eine Spiele-Implementierung entwickelt werden, die mit dem SIP Protokoll, den Datenaustausch zwischen Spielern ermöglicht. Dieser soll mit Hilfe des SIP-SIMPLE-Protokolls implementiert werden.Die Mehrspieler-Kommunikation, die bisher mit propriäterer Software gelöst wird und nicht mit der Spielelogik verzahnt ist, soll im Rahmen der Diplomarbeit in das Spiel integriert werden. So sollen zwischen Mitspielern dynamisch Konferenzen aufgebaut werden, falls sich diese in einer zu definierten "Hörnähe" befinden. Falls sich ein Mitspieler außerhalb der Hörnähe befindet, sollen entsprechende Konferenzen abgebaut werden, wobei zu überlegen ist, aber verschiedene Verbindungsstufen aufrechtzuerhalten. Zur Abblidung von Lokalen Audioereignissen soll eine weiteren Audiorendering-Engine in das Spiel integriert werden, die es ermöglichen kann  lokale Soundquellen zu positionieren und Audiodaten, die nicht über das Netzwerk zu übertragen sind, lokal zu verwalten. Die Implementierung soll mit Skype und Multicast-Sockets Netzwerklayern verglichen werden, es soll untersucht werden inwiefern die verschiedenen zugrunde liegenden Systeme miteinander vergleichbar sind. Unter diesem Aspekt soll analysiert werden, wie sich die Performace dieser Systeme in einem direkten Benchmark miteinander verhält.
+
+
+\section{Aufbau der Arbeit}
+\label{sec:aufbau-der-arbeit}
+
+Hier den Aufbau der Arbeit erl{\"a}utern.
+
+%%% Local Variables: 
+%%% mode: latex
+%%% TeX-master: "..\\da-beispiel"
+%%% End: 
