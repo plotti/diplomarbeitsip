@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592-1.40.7 (MiKTeX 2.7) (preloaded format=latex 2008.3.12)  19 MAR 2008 11:04
+This is pdfTeX, Version 3.141592-1.40.7 (MiKTeX 2.7) (preloaded format=latex 2008.3.12)  19 MAR 2008 11:26
 entering extended mode
 **Main.tex
 (Main.tex
@@ -206,10 +206,7 @@ Class scrbook Info: You've told me to redefine the font selection of the
 Class scrbook Warning: `pagehead' and `pagefoot' are aliases for the same
 (scrbook)              font element, changed on input line 52.
 
-(Main.aux (kapitel/titel.aux) (kapitel/stichwortverzeichnis.aux)
-(kapitel/abkuerzungen.aux) (kapitel/einleitung.aux)
-(kapitel/kapitel_kommunikation.aux) (kapitel/kapitel_sip.aux)
-(kapitel/fazit.aux) (kapitel/erklaerung.aux))
+No file Main.aux.
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 58.
 LaTeX Font Info:    ... okay on input line 58.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 58.
@@ -222,7 +219,6 @@ LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 58.
 LaTeX Font Info:    ... okay on input line 58.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 58.
 LaTeX Font Info:    ... okay on input line 58.
-
 
 Package scrpage2 Warning: seems you are using a very small headheight.
 (scrpage2)                If you get overfull \vbox warnings at almost every
@@ -245,56 +241,27 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 
 
 
-]) (Main.toc
-Class scrbook Info: You've told me to use the font selection of the element
-(scrbook)           `sectioning' that is an alias of element `disposition'
-(scrbook)            on input line 3.
-Class scrbook Info: You've told me to use the font selection of the element
-(scrbook)           `sectioning' that is an alias of element `disposition'
-(scrbook)            on input line 4.
-Class scrbook Info: You've told me to use the font selection of the element
-(scrbook)           `sectioning' that is an alias of element `disposition'
-(scrbook)            on input line 5.
-Class scrbook Info: You've told me to use the font selection of the element
-(scrbook)           `sectioning' that is an alias of element `disposition'
-(scrbook)            on input line 6.
-Class scrbook Info: You've told me to use the font selection of the element
-(scrbook)           `sectioning' that is an alias of element `disposition'
-(scrbook)            on input line 7.
-Class scrbook Info: You've told me to use the font selection of the element
-(scrbook)           `sectioning' that is an alias of element `disposition'
-(scrbook)            on input line 10.
- [2
-
-
-]
-Class scrbook Info: You've told me to use the font selection of the element
-(scrbook)           `sectioning' that is an alias of element `disposition'
-(scrbook)            on input line 48.
-Class scrbook Info: You've told me to use the font selection of the element
-(scrbook)           `sectioning' that is an alias of element `disposition'
-(scrbook)            on input line 76.
- [3]
-Class scrbook Info: You've told me to use the font selection of the element
-(scrbook)           `sectioning' that is an alias of element `disposition'
-(scrbook)            on input line 82.
-)
+])
+No file Main.toc.
 \tf@toc=\write3
- [4]
-(kapitel/stichwortverzeichnis.tex) [5
+[2
 
 
-] (Main.lof)
-\tf@lof=\write4
- [6
+] (kapitel/stichwortverzeichnis.tex) [3
 
-
-] (Main.lot)
-\tf@lot=\write5
- [7
 
 ]
-(kapitel/abkuerzungen.tex) [8
+No file Main.lof.
+\tf@lof=\write4
+[4
+
+
+]
+No file Main.lot.
+\tf@lot=\write5
+[5
+
+] (kapitel/abkuerzungen.tex) [6
 
 
 ] (kapitel/einleitung.tex
@@ -450,21 +417,21 @@ ungs-ver-fah-ren die zwar
 [28]) [29] (kapitel/fazit.tex
 Kapitel 4.
 
+LaTeX Warning: Reference `chap:einleitung' on page 30 undefined on input line 1
+1.
+
+
 LaTeX Warning: Reference `cha:grafiken' on page 30 undefined on input line 13.
 
 [30
 
 
 
-] [31]) [32] (Main.bbl
-
-Package natbib Warning: Empty `thebibliography' environment on input line 12.
-
-) [33
+] [31]) [32]
+No file Main.bbl.
+(kapitel/erklaerung.tex) [33
 
 
-
-] (kapitel/erklaerung.tex) [34
 
 
 ]
@@ -478,14 +445,17 @@ Package natbib Warning: There were undefined citations.
 
 LaTeX Warning: There were undefined references.
 
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
  ) 
 Here is how much of TeX's memory you used:
- 2714 strings out of 95338
- 36518 string characters out of 1184228
- 113566 words of memory out of 1500000
- 5819 multiletter control sequences out of 110000
+ 2675 strings out of 95338
+ 35807 string characters out of 1184228
+ 112313 words of memory out of 1500000
+ 5806 multiletter control sequences out of 110000
  8068 words of font info for 29 fonts, out of 1200000 for 2000
  14 hyphenation exceptions out of 8191
- 36i,10n,37p,3023b,358s stack positions out of 5000i,500n,10000p,200000b,5000s
+ 36i,10n,37p,3023b,310s stack positions out of 5000i,500n,10000p,200000b,5000s
 
-Output written on Main.dvi (42 pages, 116100 bytes).
+Output written on Main.dvi (39 pages, 100396 bytes).

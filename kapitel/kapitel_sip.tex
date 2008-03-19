@@ -91,8 +91,12 @@ Beim RTCP werden folgende RTCP-Pakete als Nachrichten verwendet.
 	\item Abmeldung (BYE)
 	\item Applikationsspezifisches Paket (APP)
 \end{itemize}
+
 RTCP Pakete beginnen mit einem Header und können unabhängig von anderen bearbeitet werden. Die Reihenfolge der Pakete in einem IP-Paket kann beliebig sein. 
 Das SR Paket enthält einen Zeitstempel gemäß der NTP (Network Time Prococol) und beschreibt die Qualität der Übermittlung aus Sicht des Senders. So kann z.B. dem Empfänger die Sende-Datenrate mitgeteilt werden, damit dieser sich im Voraus auf die ankommende Datenmenge einstellen kann. 
+
+% Grafik eines RTCP Pakets
+
 In einem Sender Report sind immer enthalten:
 \begin{itemize}
 	\item NTP-Zeitstempel: Ein Zeitstempel gemäß der NTP Uhrzeit. 
@@ -118,7 +122,7 @@ Obwohl die Qualität quantitativ durch Parameter wie die Laufzeit der IP-Pakete(D
 
 Eine Analoge Sprachübertragung kommt auf einen MOS-Wert von 3.5 bis 4. Hochwertige VoIP-Implementierungen bieten eine Sprachqualität zwischen 3.8 und 4.4 je nach verwendeter Sprachcodierung. Dabei bieten VoIP-Systeme mindestens die Qualität eines herkömmlichen analogen Telefonnetzes. 
 
-\section{STUN}
+\section{STUN} 
 \section{Konferenzschaltungen}
 \section{Skype}
 \subsection{Registrierung und Login}
