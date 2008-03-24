@@ -8,37 +8,35 @@
 \contentsline {section}{\numberline {1.1}Ziel der Arbeit}{2}
 \contentsline {section}{\numberline {1.2}Aufbau der Arbeit}{3}
 \contentsline {chapter}{\numberline {2}Computerspiele}{4}
-\contentsline {section}{\numberline {2.1}Marktrelevanz}{4}
-\contentsline {section}{\numberline {2.2}Von Tennis for Two bis zum MMORPG}{5}
-\contentsline {section}{\numberline {2.3}Kategorien der Kommunikation }{6}
-\contentsline {subsection}{\numberline {2.3.1}Definition von Kommunikation}{6}
-\contentsline {subsection}{\numberline {2.3.2}Interaktion}{6}
-\contentsline {subsection}{\numberline {2.3.3}Interpersonelle vs. Massenkommunikation}{7}
-\contentsline {subsection}{\numberline {2.3.4}Problemkategorien bei der Kommunikation}{7}
-\contentsline {subsection}{\numberline {2.3.5}Verz\"ogerungen bei der Kommunikation}{8}
-\contentsline {subsection}{\numberline {2.3.6}Formen der Interaktivit\"at und Lebhaftigkeit}{8}
-\contentsline {section}{\numberline {2.4}Kommunikation in Computerspielen}{9}
+\contentsline {section}{\numberline {2.1}Zwei schnell wachsende M\"arkte: VoIP und Computerspiele}{4}
+\contentsline {section}{\numberline {2.2}Von "`Tennis for Two"' bis zur Kommunikationsplattform}{5}
+\contentsline {section}{\numberline {2.3}Kommunikation }{6}
+\contentsline {subsection}{\numberline {2.3.1}Modell der Kommunikation}{6}
+\contentsline {subsection}{\numberline {2.3.2}Interpersonelle vs. Massenkommunikation}{7}
+\contentsline {subsection}{\numberline {2.3.3}Interaktivit\"at und Lebhaftigkeit}{8}
+\contentsline {subsection}{\numberline {2.3.4}Nonverbale Kommunikation}{9}
+\contentsline {section}{\numberline {2.4}Kommunikation in Computerspielen}{10}
 \contentsline {subsection}{\numberline {2.4.1}Spielegenre}{10}
 \contentsline {subsection}{\numberline {2.4.2}Textkommunikation in Spielen}{11}
-\contentsline {subsection}{\numberline {2.4.3}Sprachkommunikation in Spielen}{11}
-\contentsline {subsection}{\numberline {2.4.4}Non-verbale Kommunikation in Spielen}{12}
+\contentsline {subsection}{\numberline {2.4.3}Non-verbale Kommunikation in Spielen}{11}
+\contentsline {subsection}{\numberline {2.4.4}Sprachkommunikation in Spielen}{12}
 \contentsline {section}{\numberline {2.5}Vor und Nachteile der Text-Kommunikation}{12}
-\contentsline {section}{\numberline {2.6}Vor und Nachteile der Nonverbalen-Kommunikation}{13}
+\contentsline {section}{\numberline {2.6}Vor und Nachteile der Nonverbalen-Kommunikation}{14}
 \contentsline {section}{\numberline {2.7}Vor und Nachteile der Sprachkommunikation}{14}
-\contentsline {subsection}{\numberline {2.7.1}Potenzielle Alleinstellungsmerkmale der Sprachkommunikation}{16}
-\contentsline {subsubsection}{Integration von Sprachkommunikation in das Computerspiel}{16}
-\contentsline {subsubsection}{Erh\"ohung der Lebendigkeit}{16}
+\contentsline {subsection}{\numberline {2.7.1}Potenzielle Alleinstellungsmerkmale der Sprachkommunikation}{17}
+\contentsline {subsubsection}{Integration von Sprachkommunikation in das Computerspiel}{17}
+\contentsline {subsubsection}{Erh\"ohung der Lebendigkeit}{17}
 \contentsline {subsubsection}{Schnellere Reaktion}{17}
 \contentsline {subsubsection}{Spiel als Kommunikationsplattform}{17}
-\contentsline {subsubsection}{Keine H\"ande}{17}
-\contentsline {subsubsection}{Erh\"ohter Realismus}{17}
+\contentsline {subsubsection}{Keine H\"ande}{18}
+\contentsline {subsubsection}{Erh\"ohter Realismus}{18}
 \contentsline {subsubsection}{Mobile Einsatzbereiche}{18}
-\contentsline {subsubsection}{Talking with People from All Over}{18}
-\contentsline {subsubsection}{Kein Hin- und Her-Schalten zwischen Applikationen}{18}
+\contentsline {subsubsection}{Talking with People from All Over}{19}
+\contentsline {subsubsection}{Kein Hin- und Her-Schalten zwischen Applikationen}{19}
 \contentsline {subsubsection}{Einfache Koordination}{19}
-\contentsline {subsubsection}{Stimmverfremdungen}{19}
-\contentsline {subsubsection}{Standardisierung}{19}
-\contentsline {subsubsection}{Sprache als Vergleichendes Kriterium}{19}
+\contentsline {subsubsection}{Stimmverfremdungen}{20}
+\contentsline {subsubsection}{Standardisierung}{20}
+\contentsline {subsubsection}{Sprache als Vergleichendes Kriterium}{20}
 \contentsline {subsubsection}{Vertrauen}{20}
 \contentsline {subsection}{\numberline {2.7.2}Nachteile von Audiokommunikation}{20}
 \contentsline {subsection}{\numberline {2.7.3}\"Ubertragung}{20}
