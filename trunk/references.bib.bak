@@ -1,0 +1,287 @@
+This file was created with JabRef 2.2.
+Encoding: Cp1252
+
+@INPROCEEDINGS{conf/iwec/GibbsHW04,
+  author = {Martin R. Gibbs and Kevin Hew and Greg Wadley},
+  title = {Social Translucence of the Xbox Live Voice Channel.},
+  booktitle = {ICEC},
+  year = {2004},
+  editor = {Matthias Rauterberg},
+  volume = {3166},
+  series = {Lecture Notes in Computer Science},
+  pages = {377-385},
+  publisher = {Springer},
+  biburl = {http://www.bibsonomy.org/bibtex/222c40a9d2f7087c3d49027c5aac837ff/dblp},
+  crossref = {conf/iwec/2004},
+  date = {2004-08-27},
+  description = {dblp},
+  ee = {http://springerlink.metapress.com/openurl.asp?genre=article&issn=0302-9743&volume=3166&spage=377},
+  isbn = {3-540-22947-7},
+  keywords = {dblp },
+  pdf = {J:\Diplomarbeit Dokumente\Papers\ICEC04_Gibbs_Social_Trans_Xbox.pdf},
+  url = {http://dblp.uni-trier.de/db/conf/iwec/icec2004.html#GibbsHW04}
+}
+
+@TECHREPORT{allwood76linguistic,
+  author = {Jens Allwood},
+  title = {Linguistic Communication in Action and Co-Operation: {A} Study in
+	Pragmatics},
+  year = {1976},
+  number = {2},
+  address = {Gothenberg},
+  pdf = {J:\Diplomarbeit Dokumente\Secondary Literature\allwood76linguistic.pdf},
+  publisher = {Department of Linguistics, University of Gothenberg, Gothenberg Monographs
+	in Linguistics},
+  url = {citeseer.ist.psu.edu/allwood76linguistic.html}
+}
+
+@ARTICLE{bartle03,
+  author = {Richard Bartle},
+  title = {Not yet, you Fools! Voice Chat in MMOGs.},
+  journal = {http:\\www.gamegirladvance.com\archives\2003\07\28\not_yet_you_fools.html},
+  year = {2003},
+  pages = {3},
+  owner = {Administrator},
+  timestamp = {2008.03.24}
+}
+
+@ARTICLE{wow2.2,
+  author = {BlizzardEntertainment},
+  title = {World Of Warcraft Communication Basics},
+  journal = {http://worldofwarcraft.com/info/basics/voicechat.html },
+  year = {2008}
+}
+
+@BOOK{brady69,
+  title = {A model for generating on-off speech patterns in two-way conversation},
+  publisher = {Bell Syst. Tech.},
+  year = {1969},
+  author = {P.T. Brady},
+  owner = {Administrator},
+  timestamp = {2008.03.24}
+}
+
+@ARTICLE{E-Business:08,
+  author = {European Commission},
+  title = {The European e-Business Report 2006/07},
+  journal = {http://www.ebusiness-watch.org/studies/},
+  year = {2007}
+}
+
+@ARTICLE{Pwc:07,
+  author = {Pricewater House Coopers},
+  title = {German Entertainment and Media Outlook: 2007-2011},
+  journal = {http://www.pwc.de/portal/pub/!ut/p/kcxml},
+  year = {2007}
+}
+
+@ARTICLE{uo08,
+  author = {ElectronicArts},
+  title = {Ultima Online, Electronic Arts},
+  journal = {http://www.uo.com},
+  year = {2008}
+}
+
+@ARTICLE{ErnstYoung:07,
+  author = {Ernst\&Young},
+  title = {Digitale Spiele in Deutschland},
+  journal = {http://www.ey.com/global/content.nsf/Germany/Publikationen\_-\_Studien\_\-\_2007},
+  year = {2007}
+}
+
+@BOOK{maletzke98,
+  title = {Kommunikationswissenschaft im Überblick},
+  publisher = {VS VERLAG},
+  year = {1998},
+  author = {Maletzke Gerhard},
+  owner = {Administrator},
+  timestamp = {2008.03.24}
+}
+
+@INPROCEEDINGS{,
+  author = {Martin Gibbs and Kevin Hew and Greg Wadley},
+  title = {Usability and Sociability of the Xbox Live Voice Channel.},
+  booktitle = {Australian Workshop on Interactive Entertainment},
+  year = {2004},
+  publisher = {Creative and Cognitive Studios Press},
+  owner = {Administrator},
+  pdf = {J:\Diplomarbeit Dokumente\Papers\Usability and sociability of the Xbox Live Voice Channel.pdf},
+  timestamp = {2008.03.24}
+}
+
+@INPROCEEDINGS{1231909,
+  author = {Martin Gibbs and Greg Wadley and Peter Benda},
+  title = {Proximity-based chat in a first person shooter: using a novel voice
+	communication system for online play},
+  booktitle = {IE '06: Procedings of the 3rd Australasian conference on Interactive
+	entertainment},
+  year = {2006},
+  pages = {96--102},
+  address = {Murdoch University, Australia, Australia},
+  publisher = {Murdoch University},
+  isbn = {86905-902-5},
+  location = {Perth, Australia},
+  pdf = {J:\Diplomarbeit Dokumente\Papers\ACIE2006-GibbsWadleyBenda.pdf}
+}
+
+@INPROCEEDINGS{1109215,
+  author = {Martin R. Gibbs and Greg Wadley ands and Peter Benda},
+  title = {Towards a framework for designing speech-based player interaction
+	in multiplayer online games},
+  booktitle = {IE2005: Proceedings of the second Australasian conference on Interactive
+	entertainment},
+  year = {2005},
+  pages = {223--226},
+  address = {Sydney, Australia, Australia},
+  publisher = {Creativity \& Cognition Studios Press},
+  isbn = {0-9751533-2-3},
+  location = {Sydney, Australia},
+  pdf = {J:\Diplomarbeit Dokumente\Papers\Towards a framework for designing speech-based player interaction in multiplayer online games.pdf}
+}
+
+@BOOK{hall05,
+  title = {Nonverbal Communication in Human Interaction},
+  publisher = {Wadsworth Publishing; 6 edition (March 8, 2005)},
+  year = {2005},
+  author = {Judith A. Hall and Mark L. Knapp},
+  owner = {Administrator},
+  timestamp = {2008.03.24}
+}
+
+@PROCEEDINGS{halloran04,
+  title = {Does it matter if you don’t know who’s talking? Multiplayer gaming
+	with voiceover IP},
+  year = {2004},
+  author = {Halloran J., Rogers Y., Fitzpatrick G.},
+  booktitle = {Proc. CHI’2004},
+  pages = {1215--1218},
+  pdf = {J:\Diplomarbeit Dokumente\Papers\Does it matter if you dont know whos talking.pdf},
+  url = {http://www.cogs.susx.ac.uk/interact/papers/pdfs/CHI'04.pdf}
+}
+
+@PROCEEDINGS{halloran03,
+  title = {From text to talk: multiplayer games and voiceover IP},
+  year = {2003},
+  author = {Halloran J., Rogers Y., Fitzpatrick G.},
+  booktitle = {Proc. Level Up: 1st International Digital Games Research Conference},
+  pages = {130--142},
+  pdf = {J:\Diplomarbeit Dokumente\Papers\From text to talk multiplayer games and voiceover ip.pdf}
+}
+
+@ARTICLE{Ipoque:2007,
+  author = {Ipoque},
+  title = {Internet Studie 2007},
+  journal = {http://www.ipoque.com/news\_\&\_events/internet\_studies/internet\_study\_2007},
+  year = {2007}
+}
+
+@INPROCEEDINGS{jensen98,
+  author = {Jens F. Jensen},
+  title = {Interactivity: tracking a new concept in media and communication
+	studies},
+  year = {1998},
+  volume = {Nordicom Review, 19(1), 185-204},
+  owner = {Administrator},
+  timestamp = {2008.03.24}
+}
+
+@ARTICLE{CHM,
+  author = {Computer History Museum},
+  title = {Comuter History Museum, PDP-1},
+  journal = {http://www.computerhistory.org/pdp-1/index.php?f=theme\&s=4\&ss=3},
+  year = {2008}
+}
+
+@BOOK{rice92,
+  title = {Task Analyzability, Use of New Media and Effectiveness: A Multi-site
+	Exploration of Media Richness},
+  publisher = {Organization Science, 3 (4): 475-500.},
+  year = {1992},
+  author = {Rice R.},
+  owner = {Administrator},
+  timestamp = {2008.03.24}
+}
+
+@BOOK{reichswald98,
+  title = {Telekooperation - Verteilte- Arbeits und Organisationsformen.},
+  publisher = {Springer},
+  year = {1998},
+  author = {Reichswald R. and Möslein K. and Sachenbacher K. and Engelberger
+	H.},
+  owner = {Administrator},
+  timestamp = {2008.03.24}
+}
+
+@INPROCEEDINGS{1079754,
+  author = {Farzad Safaei},
+  title = {DICE: Internet Delivery of Immersive Voice Communication for Crowded
+	Virtual Spaces},
+  booktitle = {VR '05: Proceedings of the 2005 IEEE Conference 2005 on Virtual Reality},
+  year = {2005},
+  pages = {35--41},
+  address = {Washington, DC, USA},
+  publisher = {IEEE Computer Society},
+  doi = {http://dx.doi.org/10.1109/VR.2005.29},
+  isbn = {0-7803-8929-8},
+  pdf = {J:\Diplomarbeit Dokumente\Papers\DICE.pdf}
+}
+
+@INPROCEEDINGS{1005854,
+  author = {Farzad Safaei and Paul Boustead},
+  title = {Comparison of delivery architectures for immersive audio in crowded
+	networked games},
+  booktitle = {NOSSDAV '04: Proceedings of the 14th international workshop on Network
+	and operating systems support for digital audio and video},
+  year = {2004},
+  pages = {22--27},
+  address = {New York, NY, USA},
+  publisher = {ACM},
+  doi = {http://doi.acm.org/10.1145/1005847.1005854},
+  isbn = {1-58113-801-6},
+  location = {Cork, Ireland},
+  pdf = {J:\Diplomarbeit Dokumente\Papers\p22-boustead.pdf}
+}
+
+@INPROCEEDINGS{1326274,
+  author = {Farzad Safaei and Paul Boustead and Ying Peng Que},
+  title = {An immersive voice over IP service to wireless gaming: user study
+	and impact of virtual world mobility},
+  booktitle = {NetGames '07: Proceedings of the 6th ACM SIGCOMM workshop on Network
+	and system support for games},
+  year = {2007},
+  pages = {93--98},
+  address = {New York, NY, USA},
+  publisher = {ACM},
+  doi = {http://doi.acm.org/10.1145/1326257.1326274},
+  isbn = {978-0-9804460-0-5},
+  location = {Melbourne, Australia},
+  pdf = {J:\Diplomarbeit Dokumente\Papers\An Immersive Voice OVer IP Service to Wireless Gaming User Study and Impact of Virtual World Mobility.pdf}
+}
+
+@BOOK{shannon48,
+  title = {A Mathematical Theory of Communication},
+  publisher = {University of Illinois Press},
+  year = {1963},
+  author = {Claude E. Shannon and Warren Weaver},
+  address = {Champaign, IL, USA},
+  isbn = {0252725484},
+  pdf = {J:\Diplomarbeit Dokumente\Secondary Literature\shannon1948.pdf}
+}
+
+@BOOK{schramm54,
+  title = {The Process and Effects of Mass Communication},
+  publisher = {University of Illinois Press},
+  year = {1954},
+  author = {Schramm Wilbur},
+  owner = {Administrator},
+  timestamp = {2008.03.24}
+}
+
+@comment{jabref-meta: selector_publisher:}
+
+@comment{jabref-meta: selector_author:}
+
+@comment{jabref-meta: selector_journal:}
+
+@comment{jabref-meta: selector_keywords:}
+
