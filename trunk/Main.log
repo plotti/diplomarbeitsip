@@ -1,7 +1,7 @@
-This is pdfTeX, Version 3.141592-1.40.4 (MiKTeX 2.7 Beta 5) (preloaded format=latex 2008.3.16)  21 MAR 2008 20:23
+This is pdfTeX, Version 3.141592-1.40.4 (MiKTeX 2.7 Beta 5) (preloaded format=pdflatex 2008.3.16)  24 MAR 2008 20:27
 entering extended mode
-**Main.tex
-(Main.tex
+**J:/Diplomarbeit/Main.tex
+(J:/Diplomarbeit/Main.tex
 LaTeX2e <2005/12/01>
 Babel <v3.8h> and hyphenation patterns for english, dumylang, nohyphenation, ge
 rman, ngerman, french, loaded.
@@ -158,10 +158,11 @@ Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
 ("D:\Programme\MiKTeX 2.7\tex\latex\00miktex\graphics.cfg"
 File: graphics.cfg 2007/01/18 v1.5 graphics configuration of teTeX/TeXLive
 )
-Package graphics Info: Driver file: dvips.def on input line 90.
+Package graphics Info: Driver file: pdftex.def on input line 90.
 
-("D:\Programme\MiKTeX 2.7\tex\latex\graphics\dvips.def"
-File: dvips.def 1999/02/16 v3.0i Driver-dependant file (DPC,SPQR)
+("D:\Programme\MiKTeX 2.7\tex\latex\graphics\pdftex.def"
+File: pdftex.def 2007/06/12 v0.04h Graphics/color for pdfTeX
+\Gread@gobject=\count94
 ))
 \Gin@req@height=\dimen106
 \Gin@req@width=\dimen107
@@ -186,7 +187,7 @@ Package: natbib 2007/10/30 8.1 (PWD)
 \bibhang=\skip53
 \bibsep=\skip54
 LaTeX Info: Redefining \cite on input line 602.
-\c@NAT@ctr=\count94
+\c@NAT@ctr=\count95
 )
 ("D:\Programme\MiKTeX 2.7\tex\latex\setspace\setspace.sty"
 Package: setspace 2000/12/01 6.7 Contributed and Supported LaTeX2e package
@@ -221,6 +222,18 @@ LaTeX Font Info:    ... okay on input line 58.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 58.
 LaTeX Font Info:    ... okay on input line 58.
 
+("D:\Programme\MiKTeX 2.7\tex\context\base\supp-pdf.tex"
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count96
+\scratchdimen=\dimen113
+\scratchbox=\box27
+\nofMPsegments=\count97
+\nofMParguments=\count98
+\MPscratchCnt=\count99
+\MPscratchDim=\dimen114
+\MPnumerator=\count100
+\everyMPtoPDFconversion=\toks17
+)
 
 Package scrpage2 Warning: seems you are using a very small headheight.
 (scrpage2)                If you get overfull \vbox warnings at almost every
@@ -229,9 +242,10 @@ Package scrpage2 Warning: seems you are using a very small headheight.
 (scrpage2)                into the preamble of your document.
 (scrpage2)                A better solution would be to use typearea package.
 
-(kapitel/titel.tex
-File: grafiken/unilogo.eps Graphic file (type eps)
- <grafiken/unilogo.eps>
+(kapitel/titel.tex <grafiken/unilogo.pdf, id=1, 208.78pt x 40.15pt>
+File: grafiken/unilogo.pdf Graphic file (type pdf)
+
+<use grafiken/unilogo.pdf>
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <12> on input line 33.
 LaTeX Font Info:    External font `cmex10' loaded for size
@@ -243,7 +257,8 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 
 
 
-]) (Main.toc
+{D:/Dokumente und Einstellungen/All Users/Anwendungsdaten/MiKTeX/2.7/pdftex/con
+fig/pdftex.map} <grafiken/unilogo.pdf>]) (Main.toc
 Class scrbook Info: You've told me to use the font selection of the element
 (scrbook)           `sectioning' that is an alias of element `disposition'
 (scrbook)            on input line 3.
@@ -262,24 +277,22 @@ Class scrbook Info: You've told me to use the font selection of the element
 Class scrbook Info: You've told me to use the font selection of the element
 (scrbook)           `sectioning' that is an alias of element `disposition'
 (scrbook)            on input line 10.
- [2
+[2
 
 
 ]
 Class scrbook Info: You've told me to use the font selection of the element
 (scrbook)           `sectioning' that is an alias of element `disposition'
-(scrbook)            on input line 48.
+(scrbook)            on input line 46.
 Class scrbook Info: You've told me to use the font selection of the element
 (scrbook)           `sectioning' that is an alias of element `disposition'
-(scrbook)            on input line 79.
- [3]
+(scrbook)            on input line 77.
 Class scrbook Info: You've told me to use the font selection of the element
 (scrbook)           `sectioning' that is an alias of element `disposition'
-(scrbook)            on input line 85.
-)
+(scrbook)            on input line 83.
+ [3])
 \tf@toc=\write3
- [4]
-(kapitel/stichwortverzeichnis.tex) [5
+ [4] (kapitel/stichwortverzeichnis.tex) [5
 
 
 ] (Main.lof)
@@ -289,10 +302,10 @@ Class scrbook Info: You've told me to use the font selection of the element
 
 ] (Main.lot)
 \tf@lot=\write5
- [7
 
-]
-(kapitel/abkuerzungen.tex) [8
+[7
+
+] (kapitel/abkuerzungen.tex) [8
 
 
 ] (kapitel/einleitung.tex
@@ -308,77 +321,41 @@ Package natbib Warning: Citation `printout1' on page 1 undefined on input line
 
 ]) [2] [3] (kapitel/kapitel_kommunikation.tex
 Kapitel 2.
-
-Overfull \hbox (6.80006pt too wide) in paragraph at lines 7--8
-[][]\OT1/cmr/m/n/12 Eine wei-te-re Stu-die von Pri-ce-Wa-ter-hou-se-Coo-pers (P
-wC) er-war-tet, dass in Deutsch-
- []
-
-
-Package natbib Warning: Citation `triggerhappybuch' on page 4 undefined on inpu
-t line 15.
-
 [4
 
 
 
-] [5]
+]
 
-Package natbib Warning: Citation `Allwood' on page 6 undefined on input line 22
-.
+Package natbib Warning: Citation `triggerhappybuch' on page 5 undefined on inpu
+t line 13.
 
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 29.
-("D:\Programme\MiKTeX 2.7\tex\latex\base\omscmr.fd"
+[5]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 23.
+ ("D:\Programme\MiKTeX 2.7\tex\latex\base\omscmr.fd"
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 29.
- [6]
-
-Package natbib Warning: Citation `Shannon' on page 7 undefined on input line 44
-.
-
-[7]
-
-Package natbib Warning: Citation `Tannenbaum' on page 8 undefined on input line
- 55.
-
-
-Package natbib Warning: Citation `Shannon Weaver' on page 8 undefined on input 
-line 57.
-
-
-Package natbib Warning: Citation `Jensen' on page 8 undefined on input line 62.
-
-
-[8]
-
-Package natbib Warning: Citation `riva' on page 9 undefined on input line 68.
-
-
-Overfull \hbox (7.48883pt too wide) in paragraph at lines 68--69
-\OT1/cmr/m/n/12 schied er-ken-nen. W[]ahrend text-ba-sier-te Kom-mu-ni-ka-ti-on
- auf-grund Ein-schr[]ankungen
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 23.
+ [6] [7] [8] [9]
+[10] [11]
+Overfull \hbox (3.34581pt too wide) in paragraph at lines 108--109
+\OT1/cmr/m/n/12 Untersucht man die Text-kom-mu-ni-ka-ti-on bez[]uglich ih-rer I
+n-ter-ak-ti-onsm[]oglichkeiten
  []
 
-[9] [10] [11]
+[12]
 
-Package natbib Warning: Citation `Turkle and Reid' on page 12 undefined on inpu
-t line 105.
+Package natbib Warning: Citation `Turkle and Reid' on page 13 undefined on inpu
+t line 110.
 
-
-Overfull \hbox (3.34581pt too wide) in paragraph at lines 105--106
-[]\OT1/cmr/m/n/12 Untersucht man die Text-kom-mu-ni-ka-ti-on bez[]uglich ih-rer
- In-ter-ak-ti-onsm[]oglichkeiten
+[13] [14] [15] [16] [17] [18] [19]
+Overfull \hbox (35.42743pt too wide) in paragraph at lines 170--171
+\OT1/cmr/m/n/12 Obwohl die In-ter-ak-ti-on in ei-nem Com-pu-ter-spiel im Rah-me
+n der ge-ge-be-nen M[]oglichkeiten
  []
 
-[12] [13] [14] [15] [16] [17] [18]
-Overfull \hbox (35.42743pt too wide) in paragraph at lines 165--166
-[]\OT1/cmr/m/n/12 Obwohl die In-ter-ak-ti-on in ei-nem Com-pu-ter-spiel im Rah-
-men der ge-ge-be-nen M[]oglichkeiten
- []
-
-) [19] [20] (kapitel/kapitel_sip.tex
+) [20] (kapitel/kapitel_sip.tex
 Kapitel 3.
 
 Package natbib Warning: Citation `needed' on page 21 undefined on input line 8.
@@ -417,8 +394,8 @@ Package natbib Warning: Citation `needed' on page 22 undefined on input line 19
 
 [22] [23]
 Overfull \hbox (10.84723pt too wide) in paragraph at lines 41--43
-[]\OT1/cmr/m/n/12 Es gibt meh-re-re Sprach-co-die-rungs-ver-fah-ren, die bei Vo
-IP ver-wen-det wer-den k[]onnen.
+\OT1/cmr/m/n/12 Es gibt meh-re-re Sprach-co-die-rungs-ver-fah-ren, die bei VoIP
+ ver-wen-det wer-den k[]onnen.
  []
 
 
@@ -435,26 +412,26 @@ x-ten-si-ons \OT1/cmr/m/n/12 Nach-rich-ten []ubertragen
 
 [28] [29]
 Overfull \hbox (0.49585pt too wide) in paragraph at lines 160--161
-[]\OT1/cmr/m/n/12 Als In-stant Mes-sa-ging wird im all-ge-mei-nen ein Dienst zu
-r so-for-ti-gen []Ubermittlung
+\OT1/cmr/m/n/12 Als In-stant Mes-sa-ging wird im all-ge-mei-nen ein Dienst zur 
+so-for-ti-gen []Ubermittlung
  []
 
 [30] [31] [32] [33]
 Overfull \hbox (15.69305pt too wide) in paragraph at lines 219--220
-[][]\OT1/cmr/m/n/12 Garantie der Rei-hen-fol-ge von RTP-Paketen: RTP num-me-rie
-rt die []ubertragenen
+[]\OT1/cmr/m/n/12 Garantie der Rei-hen-fol-ge von RTP-Paketen: RTP num-me-riert
+ die []ubertragenen
  []
 
 [34]
 Overfull \hbox (21.84018pt too wide) in paragraph at lines 244--245
-[][]\OT1/cmr/m/n/12 Die wich-tigs-ten Auf-ga-ben von RT-CP sind ide []Uberwachu
-ng der []Ubertragungsqualit[]at:
+[]\OT1/cmr/m/n/12 Die wich-tigs-ten Auf-ga-ben von RT-CP sind ide []Uberwachung
+ der []Ubertragungsqualit[]at:
  []
 
 [35]
 Overfull \hbox (5.35982pt too wide) in paragraph at lines 264--265
-[][]\OT1/cmr/m/n/12 RTP-Zeitstempel: Die NTP-Zeit in Zeit-ein-hei-ten der RTP S
-es-si-on, die prim[]ar
+[]\OT1/cmr/m/n/12 RTP-Zeitstempel: Die NTP-Zeit in Zeit-ein-hei-ten der RTP Ses
+-si-on, die prim[]ar
  []
 
 [36]) [37] [38] (kapitel/fazit.tex
@@ -467,14 +444,35 @@ LaTeX Warning: Reference `cha:grafiken' on page 39 undefined on input line 13.
 
 
 ] [40]) [41] (Main.bbl
+Underfull \hbox (badness 10000) in paragraph at lines 28--33
+\OT1/cmr/m/sc/12 Ernst&Young\OT1/cmr/m/n/12 :  Di-gi-ta-le Spie-le in Deutsch-l
+and.  In:
+ []
 
-Package natbib Warning: Empty `thebibliography' environment on input line 12.
 
-) [42
+Underfull \hbox (badness 10000) in paragraph at lines 28--33
+\OT1/cmr/m/it/12 http://www.ey.com/global/content.nsf/Germany/Publikationen[]-[
+]Studien[]-
+ []
+
+
+Overfull \hbox (161.29332pt too wide) in paragraph at lines 52--57
+\OT1/cmr/m/sc/12 Ipoque\OT1/cmr/m/n/12 :  In-ter-net Stu-die 2007.  In: \OT1/cm
+r/m/it/12 http://www.ipoque.com/news[]&[]events/internet[]studies/internet[]stu
+dy[]2007
+ []
+
+[42
 
 
 
-] (kapitel/erklaerung.tex) [43
+]
+Underfull \hbox (badness 3590) in paragraph at lines 64--69
+\OT1/cmr/m/sc/12 Museum\OT1/cmr/m/n/12 , Com-pu-ter H.:  Co-mu-ter His-to-ry Mu
+-se-um, PDP-1.  In:
+ []
+
+) [43] (kapitel/erklaerung.tex) [44
 
 
 ]
@@ -488,17 +486,26 @@ Package natbib Warning: There were undefined citations.
 
 LaTeX Warning: There were undefined references.
 
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
  ) 
 Here is how much of TeX's memory you used:
- 2709 strings out of 95351
- 36434 string characters out of 1184568
- 113356 words of memory out of 1500000
- 5812 multiletter control sequences out of 110000
+ 3068 strings out of 95350
+ 41169 string characters out of 1184541
+ 118829 words of memory out of 1500000
+ 6163 multiletter control sequences out of 110000
  8415 words of font info for 30 fonts, out of 1200000 for 2000
  14 hyphenation exceptions out of 8191
- 36i,10n,37p,3023b,358s stack positions out of 5000i,500n,10000p,200000b,5000s
+ 36i,10n,37p,2353b,358s stack positions out of 5000i,500n,10000p,200000b,5000s
+<D:/Programme/MiKTeX 2.7/fonts/type1/bluesky/cm/cmbx12.pfb><D:/Programme/MiKT
+eX 2.7/fonts/type1/bluesky/cm/cmcsc10.pfb><D:/Programme/MiKTeX 2.7/fonts/type1/
+bluesky/cm/cmex10.pfb><D:/Programme/MiKTeX 2.7/fonts/type1/bluesky/cm/cmmi12.pf
+b><D:/Programme/MiKTeX 2.7/fonts/type1/bluesky/cm/cmmi6.pfb><D:/Programme/MiKTe
+X 2.7/fonts/type1/bluesky/cm/cmmi8.pfb><D:/Programme/MiKTeX 2.7/fonts/type1/blu
+esky/cm/cmr12.pfb><D:/Programme/MiKTeX 2.7/fonts/type1/bluesky/cm/cmsy10.pfb><D
+:/Programme/MiKTeX 2.7/fonts/type1/bluesky/cm/cmti12.pfb><D:/Programme/MiKTeX 2
+.7/fonts/type1/bluesky/cm/cmtt12.pfb>
+Output written on Main.pdf (52 pages, 192275 bytes).
+PDF statistics:
+ 217 PDF objects out of 1000 (max. 8388607)
+ 0 named destinations out of 1000 (max. 131072)
+ 6 words of extra memory for PDF output out of 10000 (max. 10000000)
 
-Output written on Main.dvi (51 pages, 146904 bytes).

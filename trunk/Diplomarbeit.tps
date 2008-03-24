@@ -3,15 +3,15 @@ Type=TeXnicCenterProjectSessionInformation
 Version=2
 
 [SessionInfo]
-ActiveTab=0
-FrameCount=3
-ActiveFrame=0
+ActiveTab=3
+FrameCount=4
+ActiveFrame=3
 
 [Frame0]
 Columns=1
 Rows=1
-Flags=2
-ShowCmd=3
+Flags=0
+ShowCmd=1
 MinPos.x=-1
 MinPos.y=-1
 MaxPos.x=-4
@@ -24,17 +24,17 @@ Class=CLatexEdit
 Document=kapitel\kapitel_sip.tex
 
 [Frame0_Row0]
-cyCur=601
+cyCur=410
 cyMin=10
 
 [Frame0_Col0]
-cxCur=938
+cxCur=730
 cxMin=10
 
 [Frame0_View0,0]
 Cursor.row=63
 Cursor.column=439
-TopSubLine=122
+TopSubLine=150
 
 [Frame1]
 Columns=1
@@ -92,5 +92,34 @@ cxMin=10
 [Frame2_View0,0]
 Cursor.row=0
 Cursor.column=0
+TopSubLine=0
+
+[Frame3]
+Columns=1
+Rows=1
+Flags=2
+ShowCmd=3
+MinPos.x=-1
+MinPos.y=-1
+MaxPos.x=-4
+MaxPos.y=-30
+NormalPos.left=66
+NormalPos.top=87
+NormalPos.right=871
+NormalPos.bottom=506
+Class=CLatexEdit
+Document=literatur\da.bib
+
+[Frame3_Row0]
+cyCur=784
+cyMin=10
+
+[Frame3_Col0]
+cxCur=938
+cxMin=10
+
+[Frame3_View0,0]
+Cursor.row=9
+Cursor.column=79
 TopSubLine=0
 

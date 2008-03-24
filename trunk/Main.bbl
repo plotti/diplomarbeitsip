@@ -1,4 +1,4 @@
-\begin{thebibliography}{0}
+\begin{thebibliography}{14}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \makeatletter
@@ -8,5 +8,87 @@
 \expandafter\ifx\csname urlstyle\endcsname\relax
   \providecommand{\doi}[1]{doi: #1}\else
   \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Arts(2008)]{uo08}
+\dinatlabel{Arts 2008}\\ \textsc{Arts}, Electronic:
+\newblock Ultima Online, Electronic Arts.
+\newblock {In: }\emph{http://www.uo.com}  (2008)
+
+\bibitem[Commission(2007)]{E-Business:08}
+\dinatlabel{Commission 2007}\\ \textsc{Commission}, European:
+\newblock The European e-Business Report 2006/07.
+\newblock {In: }\emph{http://www.ebusiness-watch.org/studies/}  (2007)
+
+\bibitem[Coopers(2007)]{pwc:07}
+\dinatlabel{Coopers 2007}\\ \textsc{Coopers}, Pricewater~H.:
+\newblock German Entertainment and Media Outlook: 2007-2011.
+\newblock {In: }\emph{http://www.pwc.de/portal/pub/!ut/p/kcxml}  (2007)
+
+\bibitem[Ernst\&Young(2007)]{ErnstYoung:07}
+\dinatlabel{Ernst\&Young 2007}\\ \textsc{Ernst\&Young}:
+\newblock Digitale Spiele in Deutschland.
+\newblock {In:
+  }\emph{http://www.ey.com/global/content.nsf/Germany/Publikationen\_-\_Studie%
+n\_\-\_2007}  (2007)
+
+\bibitem[Etertainment(2008)]{wow2.2}
+\dinatlabel{Etertainment 2008}\\ \textsc{Etertainment}, Blizzard:
+\newblock World Of Warcraft Communication Basics.
+\newblock {In: }\emph{http://worldofwarcraft.com/info/basics/voicechat.html}
+  (2008)
+
+\bibitem[Gerhard(1998)]{maletzke98}
+\dinatlabel{Gerhard 1998}\\ \textsc{Gerhard}, Maletzke:
+\newblock \emph{Kommunikationswissenschaft im Überblick}.
+\newblock VS VERLAG, 1998
+
+\bibitem[Hall u. Knapp(2005)]{hall05}
+\dinatlabel{Hall u. Knapp 2005}\\ \textsc{Hall}, Judith~A. ; \textsc{Knapp},
+  Mark~L.:
+\newblock \emph{Nonverbal Communication in Human Interaction}.
+\newblock Wadsworth Publishing; 6 edition (March 8, 2005), 2005
+
+\bibitem[Ipoque(2007)]{ipoque:2007}
+\dinatlabel{Ipoque 2007}\\ \textsc{Ipoque}:
+\newblock Internet Studie 2007.
+\newblock {In:
+  }\emph{http://www.ipoque.com/news\_\&\_events/internet\_studies/internet\_st%
+udy\_2007}  (2007)
+
+\bibitem[Jensen(1998)]{jensen98}
+\dinatlabel{Jensen 1998}\\ \textsc{Jensen}, Jens~F.:
+\newblock Interactivity: tracking a new concept in media and communication
+  studies, 1998
+
+\bibitem[Museum(2008)]{CHM}
+\dinatlabel{Museum 2008}\\ \textsc{Museum}, Computer~H.:
+\newblock Comuter History Museum, PDP-1.
+\newblock {In:
+  }\emph{http://www.computerhistory.org/pdp-1/index.php?f=theme\&s=4\&ss=3}
+  (2008)
+
+\bibitem[R. et~al.(1998)R., K., K., u. H.]{reichswald98}
+\dinatlabel{R. et~al. 1998}\\ \textsc{R.}, Reichswald ; \textsc{K.}, Möslein ;
+  \textsc{K.}, Sachenbacher  ; \textsc{H.}, Engelberger:
+\newblock \emph{Telekooperation - Verteilte- Arbeits und Organisationsformen.}
+\newblock Springer, 1998
+
+\bibitem[R.(1992)]{rice92}
+\dinatlabel{R. 1992}\\ \textsc{R.}, Rice:
+\newblock \emph{Task Analyzability, Use of New Media and Effectiveness: A
+  Multi-site Exploration of Media Richness}.
+\newblock Organization Science, 3 (4): 475-500., 1992
+
+\bibitem[Shannon u. Weaver(1963)]{shannon48}
+\dinatlabel{Shannon u. Weaver 1963}\\ \textsc{Shannon}, Claude~E. ;
+  \textsc{Weaver}, Warren:
+\newblock \emph{A Mathematical Theory of Communication}.
+\newblock Champaign, IL, USA : University of Illinois Press, 1963. --
+\newblock ISBN 0252725484
+
+\bibitem[Wilbur(1954)]{schramm54}
+\dinatlabel{Wilbur 1954}\\ \textsc{Wilbur}, Schramm:
+\newblock \emph{The Process and Effects of Mass Communication}.
+\newblock University of Illinois Press, 1954
 
 \end{thebibliography}
