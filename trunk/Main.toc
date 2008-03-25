@@ -20,64 +20,64 @@
 \contentsline {subsection}{\numberline {2.4.2}Textkommunikation in Spielen}{11}
 \contentsline {subsection}{\numberline {2.4.3}Non-verbale Kommunikation in Spielen}{11}
 \contentsline {subsection}{\numberline {2.4.4}Sprachkommunikation in Spielen}{12}
-\contentsline {section}{\numberline {2.5}Vor und Nachteile der Text-Kommunikation}{12}
-\contentsline {section}{\numberline {2.6}Vor und Nachteile der Nonverbalen-Kommunikation}{14}
-\contentsline {section}{\numberline {2.7}Vor und Nachteile der Sprachkommunikation}{14}
-\contentsline {subsection}{\numberline {2.7.1}Potenzielle Alleinstellungsmerkmale der Sprachkommunikation}{17}
-\contentsline {subsubsection}{Integration von Sprachkommunikation in das Computerspiel}{17}
-\contentsline {subsubsection}{Erh\"ohung der Lebendigkeit}{17}
-\contentsline {subsubsection}{Schnellere Reaktion}{17}
-\contentsline {subsubsection}{Spiel als Kommunikationsplattform}{17}
-\contentsline {subsubsection}{Keine H\"ande}{18}
-\contentsline {subsubsection}{Erh\"ohter Realismus}{18}
-\contentsline {subsubsection}{Mobile Einsatzbereiche}{18}
-\contentsline {subsubsection}{Talking with People from All Over}{19}
-\contentsline {subsubsection}{Kein Hin- und Her-Schalten zwischen Applikationen}{19}
-\contentsline {subsubsection}{Einfache Koordination}{19}
-\contentsline {subsubsection}{Stimmverfremdungen}{20}
-\contentsline {subsubsection}{Standardisierung}{20}
-\contentsline {subsubsection}{Sprache als Vergleichendes Kriterium}{20}
-\contentsline {subsubsection}{Vertrauen}{20}
-\contentsline {subsection}{\numberline {2.7.2}Nachteile von Audiokommunikation}{20}
-\contentsline {subsection}{\numberline {2.7.3}\"Ubertragung}{20}
-\contentsline {subsection}{\numberline {2.7.4}Reichhaltigkeit}{20}
-\contentsline {subsection}{\numberline {2.7.5}Verwandte Arbeiten}{20}
-\contentsline {subsubsection}{XBox Live und Konsolen}{20}
-\contentsline {chapter}{\numberline {3}VoIP und SIP}{21}
-\contentsline {section}{\numberline {3.1}VoIP Systeme}{21}
-\contentsline {subsection}{\numberline {3.1.1}Protokolle zur Echtzeitkommunikation}{21}
-\contentsline {subsection}{\numberline {3.1.2}Einflussfaktoren auf die VoIP-Qualit\"at}{23}
-\contentsline {subsection}{\numberline {3.1.3}VoIP-relevante Sprachcodierungsverfahren}{24}
-\contentsline {section}{\numberline {3.2}Session Initiation Protokoll (SIP)}{25}
-\contentsline {subsection}{\numberline {3.2.1}SIP Building Blocks}{25}
-\contentsline {subsection}{\numberline {3.2.2}Aufbau}{26}
-\contentsline {subsubsection}{Request Typen}{27}
-\contentsline {subsubsection}{Response Typen}{28}
-\contentsline {subsection}{\numberline {3.2.3}Rufaufbau, Verbindung, Rufabbau}{29}
-\contentsline {subsection}{\numberline {3.2.4}Registrierung der Lokation von Teilnehmern}{30}
-\contentsline {subsection}{\numberline {3.2.5}Konferenzschaltungen}{31}
-\contentsline {subsection}{\numberline {3.2.6}Instant Messaging zwischen Teilnehmern}{31}
-\contentsline {subsection}{\numberline {3.2.7}Pr\"asenzfunktion von Teilnehmern}{31}
-\contentsline {section}{\numberline {3.3}Session Description Protokoll}{32}
-\contentsline {subsection}{\numberline {3.3.1}Aufbau}{32}
-\contentsline {subsection}{\numberline {3.3.2}Aushandeln der Sitzungsparameter}{33}
-\contentsline {section}{\numberline {3.4}Real-Time Transport Protokoll}{33}
-\contentsline {subsection}{\numberline {3.4.1}Aufbau von RTP-Paketen}{34}
-\contentsline {subsection}{\numberline {3.4.2}Payload-Typen}{35}
-\contentsline {subsection}{\numberline {3.4.3}RTP Control Protokoll}{35}
-\contentsline {subsubsection}{Typen und Struktur der RTCP-Pakete}{35}
-\contentsline {section}{\numberline {3.5}STUN Protokoll}{37}
-\contentsline {section}{\numberline {3.6}Skype}{38}
-\contentsline {subsection}{\numberline {3.6.1}Registrierung und Login}{38}
-\contentsline {subsection}{\numberline {3.6.2}Rufsignalisierung und Sprach\"ubertragung}{38}
-\contentsline {subsection}{\numberline {3.6.3}Technologie von Skype}{38}
-\contentsline {subsubsection}{Verbindungsstruktur}{38}
-\contentsline {subsubsection}{Sicherheit}{38}
-\contentsline {subsubsection}{Konferenzen}{38}
-\contentsline {chapter}{\numberline {4}Summary, Conclusions, and Further Work}{39}
+\contentsline {section}{\numberline {2.5}Text-Kommunikation}{12}
+\contentsline {section}{\numberline {2.6}Vor und Nachteile der Nonverbalen-Kommunikation}{15}
+\contentsline {section}{\numberline {2.7}Vor und Nachteile der Sprachkommunikation}{16}
+\contentsline {subsection}{\numberline {2.7.1}Potenzielle Alleinstellungsmerkmale der Sprachkommunikation}{18}
+\contentsline {subsubsection}{Integration von Sprachkommunikation in das Computerspiel}{18}
+\contentsline {subsubsection}{Erh\"ohung der Lebendigkeit}{18}
+\contentsline {subsubsection}{Schnellere Reaktion}{19}
+\contentsline {subsubsection}{Spiel als Kommunikationsplattform}{19}
+\contentsline {subsubsection}{Keine H\"ande}{19}
+\contentsline {subsubsection}{Erh\"ohter Realismus}{19}
+\contentsline {subsubsection}{Mobile Einsatzbereiche}{20}
+\contentsline {subsubsection}{Talking with People from All Over}{20}
+\contentsline {subsubsection}{Kein Hin- und Her-Schalten zwischen Applikationen}{20}
+\contentsline {subsubsection}{Einfache Koordination}{21}
+\contentsline {subsubsection}{Stimmverfremdungen}{21}
+\contentsline {subsubsection}{Standardisierung}{21}
+\contentsline {subsubsection}{Sprache als Vergleichendes Kriterium}{21}
+\contentsline {subsubsection}{Vertrauen}{22}
+\contentsline {subsection}{\numberline {2.7.2}Nachteile von Audiokommunikation}{22}
+\contentsline {subsection}{\numberline {2.7.3}\"Ubertragung}{22}
+\contentsline {subsection}{\numberline {2.7.4}Reichhaltigkeit}{22}
+\contentsline {subsection}{\numberline {2.7.5}Verwandte Arbeiten}{22}
+\contentsline {subsubsection}{XBox Live und Konsolen}{22}
+\contentsline {chapter}{\numberline {3}VoIP und SIP}{23}
+\contentsline {section}{\numberline {3.1}VoIP Systeme}{23}
+\contentsline {subsection}{\numberline {3.1.1}Protokolle zur Echtzeitkommunikation}{23}
+\contentsline {subsection}{\numberline {3.1.2}Einflussfaktoren auf die VoIP-Qualit\"at}{25}
+\contentsline {subsection}{\numberline {3.1.3}VoIP-relevante Sprachcodierungsverfahren}{26}
+\contentsline {section}{\numberline {3.2}Session Initiation Protokoll (SIP)}{27}
+\contentsline {subsection}{\numberline {3.2.1}SIP Building Blocks}{27}
+\contentsline {subsection}{\numberline {3.2.2}Aufbau}{28}
+\contentsline {subsubsection}{Request Typen}{29}
+\contentsline {subsubsection}{Response Typen}{30}
+\contentsline {subsection}{\numberline {3.2.3}Rufaufbau, Verbindung, Rufabbau}{31}
+\contentsline {subsection}{\numberline {3.2.4}Registrierung der Lokation von Teilnehmern}{32}
+\contentsline {subsection}{\numberline {3.2.5}Konferenzschaltungen}{33}
+\contentsline {subsection}{\numberline {3.2.6}Instant Messaging zwischen Teilnehmern}{33}
+\contentsline {subsection}{\numberline {3.2.7}Pr\"asenzfunktion von Teilnehmern}{33}
+\contentsline {section}{\numberline {3.3}Session Description Protokoll}{34}
+\contentsline {subsection}{\numberline {3.3.1}Aufbau}{34}
+\contentsline {subsection}{\numberline {3.3.2}Aushandeln der Sitzungsparameter}{35}
+\contentsline {section}{\numberline {3.4}Real-Time Transport Protokoll}{35}
+\contentsline {subsection}{\numberline {3.4.1}Aufbau von RTP-Paketen}{36}
+\contentsline {subsection}{\numberline {3.4.2}Payload-Typen}{37}
+\contentsline {subsection}{\numberline {3.4.3}RTP Control Protokoll}{37}
+\contentsline {subsubsection}{Typen und Struktur der RTCP-Pakete}{37}
+\contentsline {section}{\numberline {3.5}STUN Protokoll}{39}
+\contentsline {section}{\numberline {3.6}Skype}{40}
+\contentsline {subsection}{\numberline {3.6.1}Registrierung und Login}{40}
+\contentsline {subsection}{\numberline {3.6.2}Rufsignalisierung und Sprach\"ubertragung}{40}
+\contentsline {subsection}{\numberline {3.6.3}Technologie von Skype}{40}
+\contentsline {subsubsection}{Verbindungsstruktur}{40}
+\contentsline {subsubsection}{Sicherheit}{40}
+\contentsline {subsubsection}{Konferenzen}{40}
+\contentsline {chapter}{\numberline {4}Summary, Conclusions, and Further Work}{41}
 \select@language {english}
-\contentsline {section}{\numberline {4.1}Summary}{39}
-\contentsline {section}{\numberline {4.2}Conclusions}{40}
-\contentsline {section}{\numberline {4.3}Further Work}{41}
+\contentsline {section}{\numberline {4.1}Summary}{41}
+\contentsline {section}{\numberline {4.2}Conclusions}{42}
+\contentsline {section}{\numberline {4.3}Further Work}{43}
 \select@language {ngerman}
-\contentsline {chapter}{Literaturverzeichnis}{42}
+\contentsline {chapter}{Literaturverzeichnis}{44}

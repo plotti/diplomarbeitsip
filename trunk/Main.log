@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592-1.40.4 (MiKTeX 2.7 Beta 5) (preloaded format=pdflatex 2008.3.16)  24 MAR 2008 20:27
+This is pdfTeX, Version 3.141592-1.40.4 (MiKTeX 2.7 Beta 5) (preloaded format=pdflatex 2008.3.16)  26 MAR 2008 00:12
 entering extended mode
 **J:/Diplomarbeit/Main.tex
 (J:/Diplomarbeit/Main.tex
@@ -339,47 +339,101 @@ LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 23.
  [6] [7] [8] [9]
 [10] [11]
-Overfull \hbox (3.34581pt too wide) in paragraph at lines 108--109
-\OT1/cmr/m/n/12 Untersucht man die Text-kom-mu-ni-ka-ti-on bez[]uglich ih-rer I
-n-ter-ak-ti-onsm[]oglichkeiten
- []
 
-[12]
+Package natbib Warning: Citation `walther02' on page 12 undefined on input line
+ 108.
 
-Package natbib Warning: Citation `Turkle and Reid' on page 13 undefined on inpu
-t line 110.
 
-[13] [14] [15] [16] [17] [18] [19]
-Overfull \hbox (35.42743pt too wide) in paragraph at lines 170--171
+Package natbib Warning: Citation `kiesler97' on page 12 undefined on input line
+ 108.
+
+
+Package natbib Warning: Citation `wright02' on page 12 undefined on input line 
+108.
+
+
+Package natbib Warning: Citation `walther02' on page 12 undefined on input line
+ 109.
+
+
+Package natbib Warning: Citation `pena04' on page 12 undefined on input line 11
+0.
+
+
+Package natbib Warning: Citation `bales50' on page 12 undefined on input line 1
+10.
+
+
+Package natbib Warning: Citation `thon06' on page 12 undefined on input line 11
+0.
+
+[12] [13]
+
+Package natbib Warning: Citation `Turkle and Reid' on page 14 undefined on inpu
+t line 114.
+
+[14]
+! Misplaced alignment tab character &.
+l.120 with avatars (Bailenson, Beall, &
+                                        Blascovich, 2002; Krikorian, Lee, Ch...
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced alignment tab character &.
+l.120 ...lascovich, 2002; Krikorian, Lee, Chock, &
+                                                   Harms,
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced alignment tab character &.
+l.123 spaces (Bailenson, Blascovich, Beall, &
+                                              Loomis, 2001). Future research...
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+[15] [16] [17] [18] [19] [20]
+Overfull \hbox (35.42743pt too wide) in paragraph at lines 186--187
 \OT1/cmr/m/n/12 Obwohl die In-ter-ak-ti-on in ei-nem Com-pu-ter-spiel im Rah-me
 n der ge-ge-be-nen M[]oglichkeiten
  []
 
-) [20] (kapitel/kapitel_sip.tex
+) [21] [22] (kapitel/kapitel_sip.tex
 Kapitel 3.
 
-Package natbib Warning: Citation `needed' on page 21 undefined on input line 8.
+Package natbib Warning: Citation `needed' on page 23 undefined on input line 8.
 
 
-[21
+[23
 
 
 
 ]
 
-Package natbib Warning: Citation `needed' on page 22 undefined on input line 15
+Package natbib Warning: Citation `needed' on page 24 undefined on input line 15
 .
 
 
-Package natbib Warning: Citation `needed' on page 22 undefined on input line 17
+Package natbib Warning: Citation `needed' on page 24 undefined on input line 17
 .
 
 
-Package natbib Warning: Citation `needed' on page 22 undefined on input line 17
+Package natbib Warning: Citation `needed' on page 24 undefined on input line 17
 .
 
 
-Package natbib Warning: Citation `needed' on page 22 undefined on input line 17
+Package natbib Warning: Citation `needed' on page 24 undefined on input line 17
 .
 
 
@@ -389,10 +443,10 @@ Overfull \hbox (4.06387pt too wide) in paragraph at lines 17--18
  []
 
 
-Package natbib Warning: Citation `needed' on page 22 undefined on input line 19
+Package natbib Warning: Citation `needed' on page 24 undefined on input line 19
 .
 
-[22] [23]
+[24] [25]
 Overfull \hbox (10.84723pt too wide) in paragraph at lines 41--43
 \OT1/cmr/m/n/12 Es gibt meh-re-re Sprach-co-die-rungs-ver-fah-ren, die bei VoIP
  ver-wen-det wer-den k[]onnen.
@@ -404,46 +458,46 @@ Overfull \hbox (6.41383pt too wide) in paragraph at lines 41--43
 ungs-ver-fah-ren die zwar
  []
 
-[24] [25] [26] [27]
+[26] [27] [28] [29]
 Overfull \hbox (18.53458pt too wide) in paragraph at lines 108--109
 \OT1/cmr/m/n/12 quests MI-ME(\OT1/cmr/m/it/12 Multimedia In-ter-net Mes-sa-ge E
 x-ten-si-ons \OT1/cmr/m/n/12 Nach-rich-ten []ubertragen
  []
 
-[28] [29]
+[30] [31]
 Overfull \hbox (0.49585pt too wide) in paragraph at lines 160--161
 \OT1/cmr/m/n/12 Als In-stant Mes-sa-ging wird im all-ge-mei-nen ein Dienst zur 
 so-for-ti-gen []Ubermittlung
  []
 
-[30] [31] [32] [33]
+[32] [33] [34] [35]
 Overfull \hbox (15.69305pt too wide) in paragraph at lines 219--220
 []\OT1/cmr/m/n/12 Garantie der Rei-hen-fol-ge von RTP-Paketen: RTP num-me-riert
  die []ubertragenen
  []
 
-[34]
+[36]
 Overfull \hbox (21.84018pt too wide) in paragraph at lines 244--245
 []\OT1/cmr/m/n/12 Die wich-tigs-ten Auf-ga-ben von RT-CP sind ide []Uberwachung
  der []Ubertragungsqualit[]at:
  []
 
-[35]
+[37]
 Overfull \hbox (5.35982pt too wide) in paragraph at lines 264--265
 []\OT1/cmr/m/n/12 RTP-Zeitstempel: Die NTP-Zeit in Zeit-ein-hei-ten der RTP Ses
 -si-on, die prim[]ar
  []
 
-[36]) [37] [38] (kapitel/fazit.tex
+[38]) [39] [40] (kapitel/fazit.tex
 Kapitel 4.
 
-LaTeX Warning: Reference `cha:grafiken' on page 39 undefined on input line 13.
+LaTeX Warning: Reference `cha:grafiken' on page 41 undefined on input line 13.
 
-[39
+[41
 
 
 
-] [40]) [41] (Main.bbl
+] [42]) [43] (Main.bbl
 Underfull \hbox (badness 10000) in paragraph at lines 28--33
 \OT1/cmr/m/sc/12 Ernst&Young\OT1/cmr/m/n/12 :  Di-gi-ta-le Spie-le in Deutsch-l
 and.  In:
@@ -462,7 +516,7 @@ r/m/it/12 http://www.ipoque.com/news[]&[]events/internet[]studies/internet[]stu
 dy[]2007
  []
 
-[42
+[44
 
 
 
@@ -472,7 +526,7 @@ Underfull \hbox (badness 3590) in paragraph at lines 64--69
 -se-um, PDP-1.  In:
  []
 
-) [43] (kapitel/erklaerung.tex) [44
+) [45] (kapitel/erklaerung.tex) [46
 
 
 ]
@@ -486,15 +540,18 @@ Package natbib Warning: There were undefined citations.
 
 LaTeX Warning: There were undefined references.
 
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
  ) 
 Here is how much of TeX's memory you used:
- 3068 strings out of 95350
- 41169 string characters out of 1184541
+ 3074 strings out of 95350
+ 41226 string characters out of 1184541
  118829 words of memory out of 1500000
- 6163 multiletter control sequences out of 110000
+ 6169 multiletter control sequences out of 110000
  8415 words of font info for 30 fonts, out of 1200000 for 2000
  14 hyphenation exceptions out of 8191
- 36i,10n,37p,2353b,358s stack positions out of 5000i,500n,10000p,200000b,5000s
+ 36i,10n,37p,2425b,358s stack positions out of 5000i,500n,10000p,200000b,5000s
 <D:/Programme/MiKTeX 2.7/fonts/type1/bluesky/cm/cmbx12.pfb><D:/Programme/MiKT
 eX 2.7/fonts/type1/bluesky/cm/cmcsc10.pfb><D:/Programme/MiKTeX 2.7/fonts/type1/
 bluesky/cm/cmex10.pfb><D:/Programme/MiKTeX 2.7/fonts/type1/bluesky/cm/cmmi12.pf
@@ -503,9 +560,9 @@ X 2.7/fonts/type1/bluesky/cm/cmmi8.pfb><D:/Programme/MiKTeX 2.7/fonts/type1/blu
 esky/cm/cmr12.pfb><D:/Programme/MiKTeX 2.7/fonts/type1/bluesky/cm/cmsy10.pfb><D
 :/Programme/MiKTeX 2.7/fonts/type1/bluesky/cm/cmti12.pfb><D:/Programme/MiKTeX 2
 .7/fonts/type1/bluesky/cm/cmtt12.pfb>
-Output written on Main.pdf (52 pages, 192275 bytes).
+Output written on Main.pdf (54 pages, 196695 bytes).
 PDF statistics:
- 217 PDF objects out of 1000 (max. 8388607)
+ 223 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 131072)
  6 words of extra memory for PDF output out of 10000 (max. 10000000)
 
