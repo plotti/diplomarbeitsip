@@ -90,9 +90,9 @@ cxCur=938
 cxMin=10
 
 [Frame2_View0,0]
-Cursor.row=107
-Cursor.column=14
-TopSubLine=236
+Cursor.row=109
+Cursor.column=1443
+TopSubLine=246
 
 [Frame3]
 Columns=1
@@ -121,5 +121,5 @@ cxMin=10
 [Frame3_View0,0]
 Cursor.row=250
 Cursor.column=0
-TopSubLine=236
+TopSubLine=241
 
