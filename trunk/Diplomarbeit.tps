@@ -5,7 +5,7 @@ Version=2
 [SessionInfo]
 ActiveTab=3
 FrameCount=4
-ActiveFrame=3
+ActiveFrame=2
 
 [Frame0]
 Columns=1
@@ -32,9 +32,9 @@ cxCur=730
 cxMin=10
 
 [Frame0_View0,0]
-Cursor.row=63
-Cursor.column=439
-TopSubLine=150
+Cursor.row=7
+Cursor.column=143
+TopSubLine=23
 
 [Frame1]
 Columns=1
@@ -68,8 +68,8 @@ TopSubLine=0
 [Frame2]
 Columns=1
 Rows=1
-Flags=0
-ShowCmd=1
+Flags=2
+ShowCmd=3
 MinPos.x=-1
 MinPos.y=-1
 MaxPos.x=-4
@@ -82,23 +82,23 @@ Class=CLatexEdit
 Document=kapitel\kapitel_kommunikation.tex
 
 [Frame2_Row0]
-cyCur=364
+cyCur=601
 cyMin=10
 
 [Frame2_Col0]
-cxCur=776
+cxCur=938
 cxMin=10
 
 [Frame2_View0,0]
-Cursor.row=0
-Cursor.column=0
-TopSubLine=0
+Cursor.row=107
+Cursor.column=14
+TopSubLine=236
 
 [Frame3]
 Columns=1
 Rows=1
-Flags=2
-ShowCmd=3
+Flags=0
+ShowCmd=1
 MinPos.x=-1
 MinPos.y=-1
 MaxPos.x=-4
@@ -111,15 +111,15 @@ Class=CLatexEdit
 Document=literatur\da.bib
 
 [Frame3_Row0]
-cyCur=784
+cyCur=364
 cyMin=10
 
 [Frame3_Col0]
-cxCur=938
+cxCur=776
 cxMin=10
 
 [Frame3_View0,0]
-Cursor.row=9
-Cursor.column=79
-TopSubLine=0
+Cursor.row=250
+Cursor.column=0
+TopSubLine=236
 
