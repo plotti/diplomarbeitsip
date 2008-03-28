@@ -1,4 +1,4 @@
-\begin{thebibliography}{14}
+\begin{thebibliography}{44}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \makeatletter
@@ -9,10 +9,64 @@
   \providecommand{\doi}[1]{doi: #1}\else
   \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
 
-\bibitem[Arts(2008)]{uo08}
-\dinatlabel{Arts 2008}\\ \textsc{Arts}, Electronic:
-\newblock Ultima Online, Electronic Arts.
-\newblock {In: }\emph{http://www.uo.com}  (2008)
+\bibitem[hal(2003)]{halloran03}
+\dinatlabel{hal 2003}\\ \emph{From text to talk: multiplayer games and
+  voiceover IP}.
+\newblock 2003 . --
+\newblock  130--142 S
+
+\bibitem[hal(2004)]{halloran04}
+\dinatlabel{hal 2004}\\ \emph{Does it matter if you don’t know who’s talking?
+  Multiplayer gaming with voiceover IP} . --
+\newblock  1215--1218 S
+
+\bibitem[Aarseth et~al.(2003)Aarseth, Smedstad, u.
+  Sunnan{\~o}]{aarseth_multi-dimensional_2003}
+\dinatlabel{Aarseth et~al. 2003}\\ \textsc{Aarseth}, Espen ; \textsc{Smedstad},
+  Solveig~M.  ; \textsc{Sunnan{\~o}}, Lise:
+\newblock A Multi-Dimensional Typology of Games.
+\newblock {In: }\emph{Level Up}  (2003), S. 48--53
+
+\bibitem[Bailenson et~al.(2002)Bailenson, Beall, u. Blascovich]{bailenson02}
+\dinatlabel{Bailenson et~al. 2002}\\ \textsc{Bailenson}, J.~N. ;
+  \textsc{Beall}, A.C.  ; \textsc{Blascovich}, J.:
+\newblock Gaze and task performance in shared virtual environments.
+\newblock {In: }\emph{The Journal of Visualization and Computer Animation} 13
+  (2002), S. 313--320
+
+\bibitem[Bailenson et~al.(2001)Bailenson, Blascovich, Beal, u.
+  Loomis]{bailenson01}
+\dinatlabel{Bailenson et~al. 2001}\\ \textsc{Bailenson}, J.~N. ;
+  \textsc{Blascovich}, J. ; \textsc{Beal}, A.C.  ; \textsc{Loomis}, J.M.:
+\newblock Equilibrium theory revisited: Mutual gaze and personal space in
+  virtual environments.
+\newblock {In: }\emph{Presence} 10 (2001), S. 583--598
+
+\bibitem[Bales(1950)]{bales50}
+\dinatlabel{Bales 1950}\\ \textsc{Bales}, R.F. ; \textsc{Press}, Addison-Wesley
+  (Hrsg.):
+\newblock \emph{Interaction process analysis: A method for the study of small
+  groups.}
+\newblock Interaction process analysis: A method for the study of small
+  groups., 1950
+
+\bibitem[BlizzardEntertainment(2008)]{wow2.2}
+\dinatlabel{BlizzardEntertainment 2008}\\ \textsc{BlizzardEntertainment}:
+\newblock World Of Warcraft Communication Basics.
+\newblock {In: }\emph{http://worldofwarcraft.com/info/basics/voicechat.html}
+  (2008)
+
+\bibitem[Bradner u. Mark(2002)]{bradner02}
+\dinatlabel{Bradner u. Mark 2002}\\ \textsc{Bradner}, E. ; \textsc{Mark}, G.:
+\newblock Why distance matters: effects on cooperation persuasion and
+  deception.
+\newblock {In: }\emph{Proceedings CSCW}  (2002), S. 226--296
+
+\bibitem[Carter(2003)]{carter03}
+\dinatlabel{Carter 2003}\\ \textsc{Carter}, K.~A.:
+\newblock Type me how you feel: Quasi-nonverbal cues in computer-mediated
+  communication.
+\newblock {In: }\emph{ETC} 60 (2003), S. 29--39
 
 \bibitem[Commission(2007)]{E-Business:08}
 \dinatlabel{Commission 2007}\\ \textsc{Commission}, European:
@@ -24,6 +78,11 @@
 \newblock German Entertainment and Media Outlook: 2007-2011.
 \newblock {In: }\emph{http://www.pwc.de/portal/pub/!ut/p/kcxml}  (2007)
 
+\bibitem[ElectronicArts(2008)]{uo08}
+\dinatlabel{ElectronicArts 2008}\\ \textsc{ElectronicArts}:
+\newblock Ultima Online, Electronic Arts.
+\newblock {In: }\emph{http://www.uo.com}  (2008)
+
 \bibitem[Ernst\&Young(2007)]{ErnstYoung:07}
 \dinatlabel{Ernst\&Young 2007}\\ \textsc{Ernst\&Young}:
 \newblock Digitale Spiele in Deutschland.
@@ -31,16 +90,48 @@
   }\emph{http://www.ey.com/global/content.nsf/Germany/Publikationen\_-\_Studie%
 n\_\-\_2007}  (2007)
 
-\bibitem[Etertainment(2008)]{wow2.2}
-\dinatlabel{Etertainment 2008}\\ \textsc{Etertainment}, Blizzard:
-\newblock World Of Warcraft Communication Basics.
-\newblock {In: }\emph{http://worldofwarcraft.com/info/basics/voicechat.html}
-  (2008)
+\bibitem[FlagshipIndustriesInc(2008)]{ventrillo08}
+\dinatlabel{FlagshipIndustriesInc 2008}\\ \textsc{FlagshipIndustriesInc}:
+\newblock Ventrillo.
+\newblock {In: }\emph{http://www.ventrilo.com/}  (2008)
 
 \bibitem[Gerhard(1998)]{maletzke98}
 \dinatlabel{Gerhard 1998}\\ \textsc{Gerhard}, Maletzke:
 \newblock \emph{Kommunikationswissenschaft im Überblick}.
 \newblock VS VERLAG, 1998
+
+\bibitem[Gibbs et~al.(2003)Gibbs, Wadley, Hew, u. Graham]{gibbs03}
+\dinatlabel{Gibbs et~al. 2003}\\ \textsc{Gibbs}, M. ; \textsc{Wadley}, Greg ;
+  \textsc{Hew}, Kevin  ; \textsc{Graham}, C.:
+\newblock Computer supported cooperative play 'third places' and online
+  videogames.
+\newblock {In: }\emph{OzCHI}  (2003), S. 238--241
+
+\bibitem[Gibbs et~al.(2004{\natexlab{a}})Gibbs, Hew, u. Wadley]{gibbs04}
+\dinatlabel{Gibbs et~al. 2004{\natexlab{a}}}\\ \textsc{Gibbs}, Martin ;
+  \textsc{Hew}, Kevin  ; \textsc{Wadley}, Greg:
+\newblock Usability and Sociability of the Xbox Live Voice Channel.
+\newblock {In: }\emph{Australian Workshop on Interactive Entertainment},
+  Creative and Cognitive Studios Press, 2004
+
+\bibitem[Gibbs et~al.(2005)Gibbs, ands, u. Benda]{gibbs05}
+\dinatlabel{Gibbs et~al. 2005}\\ \textsc{Gibbs}, Martin~R. ; \textsc{ands},
+  Greg~W.  ; \textsc{Benda}, Peter:
+\newblock Towards a framework for designing speech-based player interaction in
+  multiplayer online games.
+\newblock {In: }\emph{IE2005: Proceedings of the second Australasian conference
+  on Interactive entertainment}.
+\newblock Sydney, Australia, Australia : Creativity \& Cognition Studios Press,
+  2005. --
+\newblock ISBN 0--9751533--2--3, S. 223--226
+
+\bibitem[Gibbs et~al.(2004{\natexlab{b}})Gibbs, Hew, u. Wadley]{Gibbs04a}
+\dinatlabel{Gibbs et~al. 2004{\natexlab{b}}}\\ \textsc{Gibbs}, Martin~R. ;
+  \textsc{Hew}, Kevin  ; \textsc{Wadley}, Greg:
+\newblock Social Translucence of the Xbox Live Voice Channel.
+\newblock {In: }\textsc{Rauterberg}, Matthias (Hrsg.): \emph{ICEC} Bd. 3166,
+  Springer. --
+\newblock ISBN 3--540--22947--7, 377-385
 
 \bibitem[Hall u. Knapp(2005)]{hall05}
 \dinatlabel{Hall u. Knapp 2005}\\ \textsc{Hall}, Judith~A. ; \textsc{Knapp},
@@ -60,6 +151,30 @@ udy\_2007}  (2007)
 \newblock Interactivity: tracking a new concept in media and communication
   studies, 1998
 
+\bibitem[Kiesler(1997)]{kiesler97}
+\dinatlabel{Kiesler 1997}\\ \textsc{Kiesler}, Sara:
+\newblock \emph{Culture of the Internet}.
+\newblock Lawrence Erlbaum Associates, 1997
+
+\bibitem[Manninen u. Kujanpää(2003)]{manninen03}
+\dinatlabel{Manninen u. Kujanpää 2003}\\ \textsc{Manninen}, Tony ;
+  \textsc{Kujanpää}, Tomi:
+\newblock Supporting visual elements of non-verbal communication in computer
+  game avatars.
+\newblock   (2003).
+\newblock
+  \url{http://dblp.uni-trier.de/db/conf/digra/digra2003.html#KujanpaaM03}
+
+\bibitem[Microsoft(2008)]{xbox08}
+\dinatlabel{Microsoft 2008}\\ \textsc{Microsoft}:
+\newblock Xbox Live.
+\newblock {In: }\emph{http://www.xbox.com/de-DE/live/}  (2008)
+
+\bibitem[Morrisk(2006)]{morris06}
+\dinatlabel{Morrisk 2006}\\ \textsc{Morrisk}, S.:
+\newblock WADs, Bots and Mods: Multiplayer FPS Games as Co-Creative Media.
+\newblock {In: }\emph{Level Up Conference Proceedings} 3 (2006)
+
 \bibitem[Museum(2008)]{CHM}
 \dinatlabel{Museum 2008}\\ \textsc{Museum}, Computer~H.:
 \newblock Comuter History Museum, PDP-1.
@@ -67,17 +182,58 @@ udy\_2007}  (2007)
   }\emph{http://www.computerhistory.org/pdp-1/index.php?f=theme\&s=4\&ss=3}
   (2008)
 
-\bibitem[R. et~al.(1998)R., K., K., u. H.]{reichswald98}
-\dinatlabel{R. et~al. 1998}\\ \textsc{R.}, Reichswald ; \textsc{K.}, Möslein ;
-  \textsc{K.}, Sachenbacher  ; \textsc{H.}, Engelberger:
+\bibitem[Pena-Herborn u. Hancock(2004)]{pena04}
+\dinatlabel{Pena-Herborn u. Hancock 2004}\\ \textsc{Pena-Herborn}, Jorge ;
+  \textsc{Hancock}, Jeffrey~T.:
+\newblock An interaction process analysis of text-based communication in an
+  online multiplayer videogame.
+\newblock {In: }\emph{International Communication Association}  (2004), S.~80
+
+\bibitem[Preece u. Maloney-Krichmar(2003)]{pearce03}
+\dinatlabel{Preece u. Maloney-Krichmar 2003}\\ \textsc{Preece}, Jenny ;
+  \textsc{Maloney-Krichmar}, Diane:
+\newblock Online communities: focusing on sociability and usability.
+\newblock   (2003), S. 596--620.
+\newblock ISBN 0--8058--3838--4
+
+\bibitem[Reichswald et~al.(1998)Reichswald, Möslein, Sachenbacherand, u.
+  H.Engelberger]{reichswald98}
+\dinatlabel{Reichswald et~al. 1998}\\ \textsc{Reichswald}, R. ;
+  \textsc{Möslein}, K. ; \textsc{Sachenbacherand}, K.  ;
+  \textsc{H.Engelberger}:
 \newblock \emph{Telekooperation - Verteilte- Arbeits und Organisationsformen.}
 \newblock Springer, 1998
 
-\bibitem[R.(1992)]{rice92}
-\dinatlabel{R. 1992}\\ \textsc{R.}, Rice:
+\bibitem[Reid(1995)]{reid95}
+\dinatlabel{Reid 1995}\\ \textsc{Reid}, E.:
+\newblock Virtual worlds: Culture and imagination.
+\newblock {In: }\emph{Cybersociety: Computer-mediated communication and
+  community} 24 (1995), S. 164--83
+
+\bibitem[ResoundingTechnologyInc(2008)]{wilco08}
+\dinatlabel{ResoundingTechnologyInc 2008}\\ \textsc{ResoundingTechnologyInc}:
+\newblock Roger Wilco.
+\newblock {In: }\emph{http://rogerwilco.gamespy.com/}  (2008)
+
+\bibitem[Rice(1992)]{rice92}
+\dinatlabel{Rice 1992}\\ \textsc{Rice}, R.:
 \newblock \emph{Task Analyzability, Use of New Media and Effectiveness: A
   Multi-site Exploration of Media Richness}.
 \newblock Organization Science, 3 (4): 475-500., 1992
+
+\bibitem[Riva u. Galimberti(2001)]{riva01}
+\dinatlabel{Riva u. Galimberti 2001}\\ \textsc{Riva}, G. ; \textsc{Galimberti},
+  C.:
+\newblock Actors, artifacts and inter-actions: Outline for a social psychology
+  of cyberspace.
+\newblock {In: }\emph{Towards CyberPsychology}  (2001), S. 3--18
+
+\bibitem[Schulze(1999)]{schulze99}
+\dinatlabel{Schulze 1999}\\ \textsc{Schulze}, M.:
+\newblock Substitution of paraverbal and nonverbal cues in the written medium
+  of IRC.
+\newblock {In: }\emph{Dialogue analysis and the mass media: Proceedings of the
+  international conference in Erlangen} 2 (1999), S. 65--82
 
 \bibitem[Shannon u. Weaver(1963)]{shannon48}
 \dinatlabel{Shannon u. Weaver 1963}\\ \textsc{Shannon}, Claude~E. ;
@@ -86,9 +242,57 @@ udy\_2007}  (2007)
 \newblock Champaign, IL, USA : University of Illinois Press, 1963. --
 \newblock ISBN 0252725484
 
+\bibitem[SonyEntertainment(2008)]{home08}
+\dinatlabel{SonyEntertainment 2008}\\ \textsc{SonyEntertainment}:
+\newblock PlayStation Home.
+\newblock {In: }\emph{http://en.wikipedia.org/wiki/PlayStation_Home}  (2008)
+
+\bibitem[TeamSpeakSystemsGmbH(2008)]{teamspeak08}
+\dinatlabel{TeamSpeakSystemsGmbH 2008}\\ \textsc{TeamSpeakSystemsGmbH}:
+\newblock Teamspeak.
+\newblock {In: }\emph{http://www.goteamspeak.com/}  (2008)
+
+\bibitem[Thon(2006)]{thon06}
+\dinatlabel{Thon 2006}\\ \textsc{Thon}, Jan~N.:
+\newblock Communication and Interaction in Multiplayer First Person Shooter
+  Games.
+\newblock {In: }\emph{From Communication to Presence} 9 (2006).
+\newblock  \url{http://www.vepsy.com/communication/volume9.html}. --
+\newblock http://www.vepsy.com/communication/volume9.html
+
+\bibitem[Turkle(1995)]{turkle95}
+\dinatlabel{Turkle 1995}\\ \textsc{Turkle}, S.:
+\newblock Life on the Screen: Identity in the Age of the Internet.
+\newblock {In: }\emph{Touchstone} 3 (1995)
+
+\bibitem[Walther(2002)]{walther02}
+\dinatlabel{Walther 2002}\\ \textsc{Walther}, J.B.:
+\newblock \emph{Cues filtered out, cues filtered in: Computermediated
+  communication and relationships.}
+\newblock Thousand Oaks, 2002 (Handbook of interpersonal communication 3rd.
+  Edition). --
+\newblock  pp. 529--563 S
+
+\bibitem[Wang et~al.(2007)Wang, Emmi, u. Faloutsos]{wang07}
+\dinatlabel{Wang et~al. 2007}\\ \textsc{Wang}, Alice ; \textsc{Emmi}, Michael
+  ; \textsc{Faloutsos}, Petros:
+\newblock Assembling an expressive facial animation system.
+\newblock   (2007), S. 21--26.
+\newblock  \url{http://dx.doi.org/http://doi.acm.org/10.1145/1274940.1274947}.
+  --
+\newblock DOI http://doi.acm.org/10.1145/1274940.1274947.
+\newblock ISBN 978--1--59593--749--0
+
 \bibitem[Wilbur(1954)]{schramm54}
 \dinatlabel{Wilbur 1954}\\ \textsc{Wilbur}, Schramm:
 \newblock \emph{The Process and Effects of Mass Communication}.
 \newblock University of Illinois Press, 1954
+
+\bibitem[Wright et~al.(2002)Wright, Breidenbach, u. Boria]{wright02}
+\dinatlabel{Wright et~al. 2002}\\ \textsc{Wright}, Talmadge ;
+  \textsc{Breidenbach}, Paul  ; \textsc{Boria}, Eric:
+\newblock Creative Player Actions in FPS Online Video Games.
+\newblock {In: }\emph{Game Studies: The International Journal of Computer Game
+  Research} 2 (2002)
 
 \end{thebibliography}
