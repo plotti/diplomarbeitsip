@@ -5,26 +5,25 @@ A level-1 auxiliary file: kapitel/abkuerzungen.aux
 A level-1 auxiliary file: kapitel/einleitung.aux
 A level-1 auxiliary file: kapitel/kapitel_kommunikation.aux
 A level-1 auxiliary file: kapitel/kapitel_sip.aux
+A level-1 auxiliary file: kapitel/kapitel_recentwork.aux
 A level-1 auxiliary file: kapitel/fazit.aux
 The style file: literatur/natdin.bst
 A level-1 auxiliary file: kapitel/erklaerung.aux
 Database file #1: literatur/da.bib
+A bad cross reference---entry "manninen03"
+refers to entry "conf/digra/2003", which doesn't exist
+A bad cross reference---entry "Gibbs04a"
+refers to entry "conf/iwec/2004", which doesn't exist
 Warning--I didn't find a database entry for "printout1"
 Warning--I didn't find a database entry for "triggerhappybuch"
-Warning--I didn't find a database entry for "walther02"
-Warning--I didn't find a database entry for "kiesler97"
-Warning--I didn't find a database entry for "wright02"
-Warning--I didn't find a database entry for "carter03"
-Warning--I didn't find a database entry for "pena04"
-Warning--I didn't find a database entry for "bales50"
-Warning--I didn't find a database entry for "thon06"
-Warning--I didn't find a database entry for "schulze99"
-Warning--I didn't find a database entry for "riva01"
-Warning--I didn't find a database entry for "morris06"
-Warning--I didn't find a database entry for "reid95"
-Warning--I didn't find a database entry for "bailenson01"
-Warning--I didn't find a database entry for "bailenson02"
-Warning--I didn't find a database entry for "wang07"
+Warning--I didn't find a database entry for "porter00"
 Warning--I didn't find a database entry for "needed"
+Warning--I didn't find a database entry for "conf/iwec/2004"
+Warning--I didn't find a database entry for "conf/digra/2003"
+Warning--to sort, need editor, organization, or key in halloran03
+Warning--to sort, need editor, organization, or key in halloran04
+Warning--empty organization and editor in halloran03
+Warning--empty organization and editor in halloran04
+Warning--empty publisher in halloran04
 Warning--empty booktitle in jensen98
-(There were 18 warnings)
+(There were 2 error messages)

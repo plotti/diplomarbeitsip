@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592-1.40.7 (MiKTeX 2.7) (preloaded format=pdflatex 2008.3.12)  26 MAR 2008 16:13
+This is pdfTeX, Version 3.141592-1.40.7 (MiKTeX 2.7) (preloaded format=pdflatex 2008.3.12)  28 MAR 2008 16:13
 entering extended mode
 **C:/Dokumente*und*Einstellungen/plotti/Eigene*Dateien/Diplom/Main.tex
 ("C:/Dokumente und Einstellungen/plotti/Eigene Dateien/Diplom/Main.tex"
@@ -210,7 +210,7 @@ Class scrbook Warning: `pagehead' and `pagefoot' are aliases for the same
 (Main.aux (kapitel/titel.aux) (kapitel/stichwortverzeichnis.aux)
 (kapitel/abkuerzungen.aux) (kapitel/einleitung.aux)
 (kapitel/kapitel_kommunikation.aux) (kapitel/kapitel_sip.aux)
-(kapitel/fazit.aux) (kapitel/erklaerung.aux))
+(kapitel/kapitel_recentwork.aux) (kapitel/fazit.aux) (kapitel/erklaerung.aux))
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 58.
 LaTeX Font Info:    ... okay on input line 58.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 58.
@@ -280,20 +280,24 @@ Class scrbook Info: You've told me to use the font selection of the element
 Class scrbook Info: You've told me to use the font selection of the element
 (scrbook)           `sectioning' that is an alias of element `disposition'
 (scrbook)            on input line 10.
+Class scrbook Info: You've told me to use the font selection of the element
+(scrbook)           `sectioning' that is an alias of element `disposition'
+(scrbook)            on input line 39.
 [2
 
 
 ]
 Class scrbook Info: You've told me to use the font selection of the element
 (scrbook)           `sectioning' that is an alias of element `disposition'
-(scrbook)            on input line 46.
+(scrbook)            on input line 70.
+ [3]
 Class scrbook Info: You've told me to use the font selection of the element
 (scrbook)           `sectioning' that is an alias of element `disposition'
-(scrbook)            on input line 77.
+(scrbook)            on input line 80.
 Class scrbook Info: You've told me to use the font selection of the element
 (scrbook)           `sectioning' that is an alias of element `disposition'
-(scrbook)            on input line 83.
- [3])
+(scrbook)            on input line 86.
+)
 \tf@toc=\write3
  [4] (kapitel/stichwortverzeichnis.tex) [5
 
@@ -341,100 +345,177 @@ File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 23.
  [6] [7] [8] [9]
-[10] [11]
 
-Package natbib Warning: Citation `walther02' on page 12 undefined on input line
- 108.
+Package natbib Warning: Citation `aarseth_multi-dimensional_2003' on page 10 un
+defined on input line 80.
 
+[10]
 
-Package natbib Warning: Citation `kiesler97' on page 12 undefined on input line
- 108.
+Package natbib Warning: Citation `gibbs05' on page 11 undefined on input line 9
+6.
 
+[11]
 
-Package natbib Warning: Citation `wright02' on page 12 undefined on input line 
-108.
+Package natbib Warning: Citation `porter00' on page 12 undefined on input line 
+102.
 
+[12]
 
-Package natbib Warning: Citation `walther02' on page 12 undefined on input line
- 109.
-
-
-Package natbib Warning: Citation `carter03' on page 12 undefined on input line 
-110.
-
-
-Package natbib Warning: Citation `pena04' on page 12 undefined on input line 11
-1.
-
-
-Package natbib Warning: Citation `bales50' on page 12 undefined on input line 1
-11.
-
-
-Package natbib Warning: Citation `thon06' on page 12 undefined on input line 11
-1.
-
-
-Package natbib Warning: Citation `schulze99' on page 12 undefined on input line
+Package natbib Warning: Citation `walther02' on page 13 undefined on input line
  111.
 
 
-Package natbib Warning: Citation `riva01' on page 12 undefined on input line 11
-1.
-
-[12] [13]
-
-Package natbib Warning: Citation `morris06' on page 14 undefined on input line 
-114.
+Package natbib Warning: Citation `kiesler97' on page 13 undefined on input line
+ 111.
 
 
-Package natbib Warning: Citation `reid95' on page 14 undefined on input line 11
-6.
+Package natbib Warning: Citation `wright02' on page 13 undefined on input line 
+111.
 
-[14]
+
+Package natbib Warning: Citation `walther02' on page 13 undefined on input line
+ 112.
+
+
+Package natbib Warning: Citation `carter03' on page 13 undefined on input line 
+113.
+
+
+Package natbib Warning: Citation `pena04' on page 13 undefined on input line 11
+4.
+
+
+Package natbib Warning: Citation `bales50' on page 13 undefined on input line 1
+14.
+
+
+Package natbib Warning: Citation `thon06' on page 13 undefined on input line 11
+4.
+
+
+Package natbib Warning: Citation `schulze99' on page 13 undefined on input line
+ 114.
+
+
+Package natbib Warning: Citation `riva01' on page 13 undefined on input line 11
+4.
+
+[13] [14]
+
+Package natbib Warning: Citation `morris06' on page 15 undefined on input line 
+117.
+
+
+Package natbib Warning: Citation `reid95' on page 15 undefined on input line 11
+9.
+
+
+Package natbib Warning: Citation `turkle95' on page 15 undefined on input line 
+119.
+
+
+Package natbib Warning: Citation `manninen03' on page 15 undefined on input lin
+e 122.
+
 
 Package natbib Warning: Citation `bailenson01' on page 15 undefined on input li
-ne 119.
+ne 123.
 
 
 Package natbib Warning: Citation `bailenson02' on page 15 undefined on input li
-ne 121.
+ne 124.
 
 
 Package natbib Warning: Citation `wang07' on page 15 undefined on input line 12
-1.
+4.
 
-[15] [16] [17] [18] [19] [20]
-Overfull \hbox (35.42743pt too wide) in paragraph at lines 180--181
+
+Package natbib Warning: Citation `manninen03' on page 15 undefined on input lin
+e 125.
+
+[15] [16]
+
+Package natbib Warning: Citation `wilco08' on page 17 undefined on input line 1
+29.
+
+
+Package natbib Warning: Citation `ventrillo08' on page 17 undefined on input li
+ne 129.
+
+
+Package natbib Warning: Citation `teamspeak08' on page 17 undefined on input li
+ne 129.
+
+
+Package natbib Warning: Citation `bradner02' on page 17 undefined on input line
+ 129.
+
+
+Package natbib Warning: Citation `xbox08' on page 17 undefined on input line 12
+9.
+
+
+Package natbib Warning: Citation `gibbs04' on page 17 undefined on input line 1
+32.
+
+
+Package natbib Warning: Citation `Gibbs04a' on page 17 undefined on input line 
+132.
+
+
+Package natbib Warning: Citation `pearce03' on page 17 undefined on input line 
+132.
+
+[17] [18] [19]
+
+Package natbib Warning: Citation `gibbs05' on page 20 undefined on input line 1
+45.
+
+[20]
+
+Package natbib Warning: Citation `home08' on page 21 undefined on input line 15
+6.
+
+
+Package natbib Warning: Citation `gibbs05' on page 21 undefined on input line 1
+56.
+
+[21]
+
+Package natbib Warning: Citation `gibbs03' on page 22 undefined on input line 1
+68.
+
+[22])
+Overfull \hbox (35.42743pt too wide) in paragraph at lines 186--71
 \OT1/cmr/m/n/12 Obwohl die In-ter-ak-ti-on in ei-nem Com-pu-ter-spiel im Rah-me
 n der ge-ge-be-nen M[]oglichkeiten
  []
 
-[21]) [22] (kapitel/kapitel_sip.tex
+[23] [24] (kapitel/kapitel_sip.tex
 Kapitel 3.
 
-Package natbib Warning: Citation `needed' on page 23 undefined on input line 8.
+Package natbib Warning: Citation `needed' on page 25 undefined on input line 8.
 
 
-[23
+[25
 
 
 
 ]
 
-Package natbib Warning: Citation `needed' on page 24 undefined on input line 15
+Package natbib Warning: Citation `needed' on page 26 undefined on input line 15
 .
 
 
-Package natbib Warning: Citation `needed' on page 24 undefined on input line 17
+Package natbib Warning: Citation `needed' on page 26 undefined on input line 17
 .
 
 
-Package natbib Warning: Citation `needed' on page 24 undefined on input line 17
+Package natbib Warning: Citation `needed' on page 26 undefined on input line 17
 .
 
 
-Package natbib Warning: Citation `needed' on page 24 undefined on input line 17
+Package natbib Warning: Citation `needed' on page 26 undefined on input line 17
 .
 
 
@@ -444,10 +525,10 @@ Overfull \hbox (4.06387pt too wide) in paragraph at lines 17--18
  []
 
 
-Package natbib Warning: Citation `needed' on page 24 undefined on input line 19
+Package natbib Warning: Citation `needed' on page 26 undefined on input line 19
 .
 
-[24] [25]
+[26] [27]
 Overfull \hbox (10.84723pt too wide) in paragraph at lines 41--43
 \OT1/cmr/m/n/12 Es gibt meh-re-re Sprach-co-die-rungs-ver-fah-ren, die bei VoIP
  ver-wen-det wer-den k[]onnen.
@@ -459,75 +540,81 @@ Overfull \hbox (6.41383pt too wide) in paragraph at lines 41--43
 ungs-ver-fah-ren die zwar
  []
 
-[26] [27] [28] [29]
+[28] [29] [30] [31]
 Overfull \hbox (18.53458pt too wide) in paragraph at lines 108--109
 \OT1/cmr/m/n/12 quests MI-ME(\OT1/cmr/m/it/12 Multimedia In-ter-net Mes-sa-ge E
 x-ten-si-ons \OT1/cmr/m/n/12 Nach-rich-ten []ubertragen
  []
 
-[30] [31]
+[32] [33]
 Overfull \hbox (0.49585pt too wide) in paragraph at lines 160--161
 \OT1/cmr/m/n/12 Als In-stant Mes-sa-ging wird im all-ge-mei-nen ein Dienst zur 
 so-for-ti-gen []Ubermittlung
  []
 
-[32] [33] [34] [35]
+[34] [35] [36] [37]
 Overfull \hbox (15.69305pt too wide) in paragraph at lines 219--220
 []\OT1/cmr/m/n/12 Garantie der Rei-hen-fol-ge von RTP-Paketen: RTP num-me-riert
  die []ubertragenen
  []
 
-[36]
+[38]
 Overfull \hbox (21.84018pt too wide) in paragraph at lines 244--245
 []\OT1/cmr/m/n/12 Die wich-tigs-ten Auf-ga-ben von RT-CP sind ide []Uberwachung
  der []Ubertragungsqualit[]at:
  []
 
-[37]
+[39]
 Overfull \hbox (5.35982pt too wide) in paragraph at lines 264--265
 []\OT1/cmr/m/n/12 RTP-Zeitstempel: Die NTP-Zeit in Zeit-ein-hei-ten der RTP Ses
 -si-on, die prim[]ar
  []
 
-[38]) [39] [40] (kapitel/fazit.tex
+[40]) [41] [42] (kapitel/kapitel_recentwork.tex
 Kapitel 4.
-
-LaTeX Warning: Reference `cha:grafiken' on page 41 undefined on input line 13.
-
-[41
+) [43
 
 
 
-] [42]) [43] (Main.bbl
-Underfull \hbox (badness 10000) in paragraph at lines 28--33
+] [44] (kapitel/fazit.tex
+Kapitel 5.
+
+LaTeX Warning: Reference `cha:grafiken' on page 45 undefined on input line 13.
+
+[45
+
+
+
+] [46]) [47] (Main.bbl
+Underfull \hbox (badness 10000) in paragraph at lines 39--44
 \OT1/cmr/m/sc/12 Ernst&Young\OT1/cmr/m/n/12 :  Di-gi-ta-le Spie-le in Deutsch-l
 and.  In:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 28--33
+Underfull \hbox (badness 10000) in paragraph at lines 39--44
 \OT1/cmr/m/it/12 http://www.ey.com/global/content.nsf/Germany/Publikationen[]-[
 ]Studien[]-
  []
 
+[48
 
-Overfull \hbox (161.29332pt too wide) in paragraph at lines 52--57
+
+
+]
+Overfull \hbox (161.29332pt too wide) in paragraph at lines 63--68
 \OT1/cmr/m/sc/12 Ipoque\OT1/cmr/m/n/12 :  In-ter-net Stu-die 2007.  In: \OT1/cm
 r/m/it/12 http://www.ipoque.com/news[]&[]events/internet[]studies/internet[]stu
 dy[]2007
  []
 
-[44
 
-
-
-]
-Underfull \hbox (badness 3590) in paragraph at lines 64--69
+Underfull \hbox (badness 3590) in paragraph at lines 75--80
 \OT1/cmr/m/sc/12 Museum\OT1/cmr/m/n/12 , Com-pu-ter H.:  Co-mu-ter His-to-ry Mu
 -se-um, PDP-1.  In:
  []
 
-) [45] (kapitel/erklaerung.tex) [46
+) [49] (kapitel/erklaerung.tex) [50
 
 
 ]
@@ -537,19 +624,22 @@ Package natbib Warning: There were undefined citations.
 (Main.aux (kapitel/titel.aux) (kapitel/stichwortverzeichnis.aux)
 (kapitel/abkuerzungen.aux) (kapitel/einleitung.aux)
 (kapitel/kapitel_kommunikation.aux) (kapitel/kapitel_sip.aux)
-(kapitel/fazit.aux) (kapitel/erklaerung.aux))
+(kapitel/kapitel_recentwork.aux) (kapitel/fazit.aux) (kapitel/erklaerung.aux))
 
 LaTeX Warning: There were undefined references.
 
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
  ) 
 Here is how much of TeX's memory you used:
- 3095 strings out of 95337
- 41636 string characters out of 1184201
- 122097 words of memory out of 1500000
- 6191 multiletter control sequences out of 110000
+ 3123 strings out of 95337
+ 42172 string characters out of 1184201
+ 126468 words of memory out of 1500000
+ 6212 multiletter control sequences out of 110000
  8415 words of font info for 30 fonts, out of 1200000 for 2000
  14 hyphenation exceptions out of 8191
- 36i,10n,37p,2760b,358s stack positions out of 5000i,500n,10000p,200000b,5000s
+ 36i,10n,37p,3137b,362s stack positions out of 5000i,500n,10000p,200000b,5000s
 <C:/Programme/MiKTeX 2.7/fonts/type1/bluesky/cm/cmbx12.pfb><C:/Programme/MiKT
 eX 2.7/fonts/type1/bluesky/cm/cmcsc10.pfb><C:/Programme/MiKTeX 2.7/fonts/type1/
 bluesky/cm/cmex10.pfb><C:/Programme/MiKTeX 2.7/fonts/type1/bluesky/cm/cmmi12.pf
@@ -558,9 +648,9 @@ X 2.7/fonts/type1/bluesky/cm/cmmi8.pfb><C:/Programme/MiKTeX 2.7/fonts/type1/blu
 esky/cm/cmr12.pfb><C:/Programme/MiKTeX 2.7/fonts/type1/bluesky/cm/cmsy10.pfb><C
 :/Programme/MiKTeX 2.7/fonts/type1/bluesky/cm/cmti12.pfb><C:/Programme/MiKTeX 2
 .7/fonts/type1/bluesky/cm/cmtt12.pfb>
-Output written on Main.pdf (54 pages, 197786 bytes).
+Output written on Main.pdf (58 pages, 207272 bytes).
 PDF statistics:
- 223 PDF objects out of 1000 (max. 8388607)
+ 236 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 131072)
  6 words of extra memory for PDF output out of 10000 (max. 10000000)
 
