@@ -1,13 +1,9 @@
-This is BibTeX, Version 0.99cThe top-level auxiliary file: J:\Diplomarbeit\Main.aux
+This is BibTeX, Version 0.99cThe top-level auxiliary file: C:\Dokumente und Einstellungen\plotti\Eigene Dateien\Diplom\Main.aux
 A level-1 auxiliary file: kapitel/titel.aux
 A level-1 auxiliary file: kapitel/stichwortverzeichnis.aux
 A level-1 auxiliary file: kapitel/abkuerzungen.aux
 A level-1 auxiliary file: kapitel/einleitung.aux
 A level-1 auxiliary file: kapitel/kapitel_kommunikation.aux
-White space in argument---line 40 of file kapitel/kapitel_kommunikation.aux
- : \citation{Turkle
- :                  and Reid}
-I'm skipping whatever remains of this command
 A level-1 auxiliary file: kapitel/kapitel_sip.aux
 A level-1 auxiliary file: kapitel/fazit.aux
 The style file: literatur/natdin.bst
@@ -18,9 +14,17 @@ Warning--I didn't find a database entry for "triggerhappybuch"
 Warning--I didn't find a database entry for "walther02"
 Warning--I didn't find a database entry for "kiesler97"
 Warning--I didn't find a database entry for "wright02"
+Warning--I didn't find a database entry for "carter03"
 Warning--I didn't find a database entry for "pena04"
 Warning--I didn't find a database entry for "bales50"
 Warning--I didn't find a database entry for "thon06"
+Warning--I didn't find a database entry for "schulze99"
+Warning--I didn't find a database entry for "riva01"
+Warning--I didn't find a database entry for "morris06"
+Warning--I didn't find a database entry for "reid95"
+Warning--I didn't find a database entry for "bailenson01"
+Warning--I didn't find a database entry for "bailenson02"
+Warning--I didn't find a database entry for "wang07"
 Warning--I didn't find a database entry for "needed"
 Warning--empty booktitle in jensen98
-(There was 1 error message)
+(There were 18 warnings)
