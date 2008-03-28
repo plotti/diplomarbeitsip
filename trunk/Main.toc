@@ -21,22 +21,22 @@
 \contentsline {subsection}{\numberline {2.4.3}Non-verbale Kommunikation in Spielen}{11}
 \contentsline {subsection}{\numberline {2.4.4}Sprachkommunikation in Spielen}{12}
 \contentsline {section}{\numberline {2.5}Text-Kommunikation}{12}
-\contentsline {section}{\numberline {2.6}Vor und Nachteile der Nonverbalen-Kommunikation}{15}
+\contentsline {section}{\numberline {2.6}Nonverbale-Kommunikation}{15}
 \contentsline {section}{\numberline {2.7}Vor und Nachteile der Sprachkommunikation}{16}
 \contentsline {subsection}{\numberline {2.7.1}Potenzielle Alleinstellungsmerkmale der Sprachkommunikation}{18}
 \contentsline {subsubsection}{Integration von Sprachkommunikation in das Computerspiel}{18}
-\contentsline {subsubsection}{Erh\"ohung der Lebendigkeit}{18}
+\contentsline {subsubsection}{Erh\"ohung der Lebendigkeit}{19}
 \contentsline {subsubsection}{Schnellere Reaktion}{19}
 \contentsline {subsubsection}{Spiel als Kommunikationsplattform}{19}
 \contentsline {subsubsection}{Keine H\"ande}{19}
-\contentsline {subsubsection}{Erh\"ohter Realismus}{19}
+\contentsline {subsubsection}{Erh\"ohter Realismus}{20}
 \contentsline {subsubsection}{Mobile Einsatzbereiche}{20}
 \contentsline {subsubsection}{Talking with People from All Over}{20}
 \contentsline {subsubsection}{Kein Hin- und Her-Schalten zwischen Applikationen}{20}
 \contentsline {subsubsection}{Einfache Koordination}{21}
 \contentsline {subsubsection}{Stimmverfremdungen}{21}
 \contentsline {subsubsection}{Standardisierung}{21}
-\contentsline {subsubsection}{Sprache als Vergleichendes Kriterium}{21}
+\contentsline {subsubsection}{Sprache als Vergleichendes Kriterium}{22}
 \contentsline {subsubsection}{Vertrauen}{22}
 \contentsline {subsection}{\numberline {2.7.2}Nachteile von Audiokommunikation}{22}
 \contentsline {subsection}{\numberline {2.7.3}\"Ubertragung}{22}
