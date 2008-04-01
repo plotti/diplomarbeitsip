@@ -23,6 +23,16 @@
   url = {http://dblp.uni-trier.de/db/conf/iwec/icec2004.html#GibbsHW04}
 }
 
+@ARTICLE{Keller03,
+  author = {Joaqu\'{\i}n Keller and Gwendal Simon},
+  title = {Solipsis: A Massively Multi-Participant Virtual World},
+  year = {2003},
+  pages = {262-268},
+  bibsource = {DBLP, http://dblp.uni-trier.de},
+  booktitle = {PDPTA},
+  crossref = {DBLP:conf/pdpta/2003-1}
+}
+
 @ARTICLE{manninen03,
   author = {Tony Manninen and Tomi Kujanp‰‰},
   title = {Supporting visual elements of non-verbal communication in computer
@@ -73,6 +83,32 @@
   url = {citeseer.ist.psu.edu/allwood76linguistic.html}
 }
 
+@ARTICLE{krause07,
+  author = {Helge Backhaus and Stephan Krause},
+  title = {{Voronoi-based Adaptive Scalable Transfer revisited}},
+  year = {2007},
+  pages = {49--54},
+  month = Sep,
+  abstract = {{We present and evaluate an implementation of VAST (Voronoi- based
+	Adaptive Scalable Transfer) as proposed by Shun-Yun Hu and Guan-Ming
+	Liao in Scalable Peer-to-Peer Networked Virtual Environment [4].
+	VAST is a fully-distributed peer-to-peer protocol, designed to handle
+	event messages in MMOGs (Massively Multiplayer Online Games) and
+	virtual worlds. VAST relies on voronoi diagrams and AOI (Areas Of
+	Interest) for neighbor discovery. Benefits and problems of using
+	voronoi diagrams in peer-to-peerbased MMOGs and virtual worlds are
+	discussed, by looking at bandwidth usage, scalability and consistency
+	of VAST and comparing it to other approaches. We point out certain
+	issues regarding VASTs consistency and propose some changes to VASTs
+	architecture aiming at enhancing its consistency. Finally we have
+	a look at future extensions like group management and adaptive areas
+	of interest per peer, in order to reduce bandwidth requirements and
+	further increase VASTs consistency.}},
+  booktitle = {{In proceedings of: 6th Annual Workshop on Network and Systems Support
+	for Games (Netgames 2007)}},
+  url = {http://doc.tm.uka.de/2007/krause-vast-revisited-negames-2007.pdf}
+}
+
 @ARTICLE{bailenson02,
   author = {J. N. Bailenson and A.C. Beall and J. Blascovich},
   title = {Gaze and task performance in shared virtual environments},
@@ -116,6 +152,15 @@
   pages = {3},
   owner = {Administrator},
   timestamp = {2008.03.24}
+}
+
+@ARTICLE{wow08,
+  author = {BlizzardEntertainment},
+  title = {World of Warcraft User Statistics},
+  journal = {http://blizzard.co.uk/press/080122.shtml},
+  year = {2008},
+  owner = {plotti},
+  timestamp = {2008.04.01}
 }
 
 @ARTICLE{wow2.2,
@@ -223,6 +268,27 @@
   title = {German Entertainment and Media Outlook: 2007-2011},
   journal = {http://www.pwc.de/portal/pub/!ut/p/kcxml},
   year = {2007}
+}
+
+@ARTICLE{diot99,
+  author = {C. Diot and L. Gautier},
+  title = {A distributed architecture for multiplayer interactive applications
+	on the internet},
+  year = {1999},
+  text = {C. Diot and L. Gautier, A distributed architecture for multiplayer
+	interactive applications on the internet, IEEE Networks magazine,
+	vol. 13, no. 4, July/August 1999.},
+  url = {citeseer.ist.psu.edu/diot99distributed.html}
+}
+
+@ARTICLE{douglas05,
+  author = {Scott Douglas and Egmen Tanin and Aaron Harwood and Shanika Karunasekera},
+  title = {Enabling Massively Multi-Player Online Gaming Applications on a P2P
+	Architecture},
+  journal = {Information and Automation},
+  year = {2005},
+  owner = {plotti},
+  timestamp = {2008.04.01}
 }
 
 @ARTICLE{uo08,
@@ -372,6 +438,35 @@
   pdf = {J:\Diplomarbeit Dokumente\Papers\From text to talk multiplayer games and voiceover ip.pdf}
 }
 
+@ARTICLE{hu04,
+  author = {Shun-Yun Hu and Guan-Ming Liao},
+  title = {Scalable peer-to-peer networked virtual environment},
+  year = {2004},
+  pages = {129--133},
+  address = {New York, NY, USA},
+  booktitle = {NetGames '04: Proceedings of 3rd ACM SIGCOMM workshop on Network
+	and system support for games},
+  doi = {http://doi.acm.org/10.1145/1016540.1016552},
+  isbn = {1-58113-942-X},
+  location = {Portland, Oregon, USA},
+  publisher = {ACM}
+}
+
+@ARTICLE{Iimura04,
+  author = {Takuji Iimura and Hiroaki Hazeyama and Youki Kadobayashi},
+  title = {Zoned federation of game servers: a peer-to-peer approach to scalable
+	multi-player online games},
+  year = {2004},
+  pages = {116--120},
+  address = {New York, NY, USA},
+  booktitle = {NetGames '04: Proceedings of 3rd ACM SIGCOMM workshop on Network
+	and system support for games},
+  doi = {http://doi.acm.org/10.1145/1016540.1016549},
+  isbn = {1-58113-942-X},
+  location = {Portland, Oregon, USA},
+  publisher = {ACM}
+}
+
 @ARTICLE{Ipoque:2007,
   author = {Ipoque},
   title = {Internet Studie 2007},
@@ -389,6 +484,19 @@
   timestamp = {2008.03.24}
 }
 
+@ARTICLE{kawahara02,
+  author = {Y. Kawahara and H. Morikawa and T. Aoyama},
+  title = {A peer-to-peer message exchange scheme for large scale networked
+	virtual environments},
+  year = {2002},
+  pages = {957--961},
+  address = {Washington, DC, USA},
+  booktitle = {ICCS '02: Proceedings of the The 8th International Conference on
+	Communication Systems},
+  isbn = {0-7803-7510-6},
+  publisher = {IEEE Computer Society}
+}
+
 @BOOK{kiesler97,
   title = {Culture of the Internet},
   publisher = {Lawrence Erlbaum Associates},
@@ -398,7 +506,7 @@
   timestamp = {2008.03.25}
 }
 
-@ARTICLE{knutsson04peertopeer,
+@ARTICLE{knutsson04,
   author = {B. Knutsson and H. Lu and W. Xu and B. Hopkins},
   title = {Peer-to-peer support for massively multiplayer games},
   year = {2004},
@@ -421,8 +529,8 @@
   publisher = {ACM}
 }
 
-@ARTICLE{lua05,
-  author = {Lua, Keong and Crowcroft, J. and Pias, M. and Sharma, R. and Lim,
+@ARTICLE{lau05w,
+  author = {Lau, Keong and Crowcroft, J. and Pias, M. and Sharma, R. and Lim,
 	S.},
   title = {A survey and comparison of peer-to-peer overlay network schemes},
   journal = {Communications Surveys \& Tutorials, IEEE},
@@ -451,6 +559,33 @@
   url = {http://ieeexplore.ieee.org/xpls/abs\_all.jsp?arnumber=1528337}
 }
 
+@ARTICLE{lau06,
+  author = {William Lau and Sieteng Soh and Steven Daniel Webb},
+  title = {NGS: an application layer network game simulator},
+  year = {2006},
+  pages = {15--22},
+  address = {Murdoch University, Australia, Australia},
+  booktitle = {IE '06: Procedings of the 3rd Australasian conference on Interactive
+	entertainment},
+  isbn = {86905-902-5},
+  location = {Perth, Australia},
+  publisher = {Murdoch University}
+}
+
+@ARTICLE{lau05b,
+  author = {William Lau and Swee Ann Tan and Allan Loh},
+  title = {Networked game mobility model for first-person-shooter games},
+  year = {2005},
+  pages = {1--9},
+  address = {New York, NY, USA},
+  booktitle = {NetGames '05: Proceedings of 4th ACM SIGCOMM workshop on Network
+	and system support for games},
+  doi = {http://doi.acm.org/10.1145/1103599.1103601},
+  isbn = {1-59593-156-2},
+  location = {Hawthorne, NY},
+  publisher = {ACM}
+}
+
 @ARTICLE{xbox08,
   author = {Microsoft},
   title = {Xbox Live},
@@ -468,6 +603,15 @@
   volume = {3},
   owner = {plotti},
   timestamp = {2008.03.26}
+}
+
+@ARTICLE{morse96,
+  author = {Katherine L. Morse},
+  title = {Interest Management in Large-Scale Distributed Simulations},
+  year = {1996},
+  pages = {17},
+  number = {ICS-TR-96-27},
+  url = {citeseer.ist.psu.edu/morse96interest.html}
 }
 
 @ARTICLE{CHM,
@@ -538,6 +682,21 @@
   publisher = {ACM}
 }
 
+@ARTICLE{Ratnasamy01,
+  author = {Sylvia Ratnasamy and Paul Francis and Mark Handley and Richard Karp
+	and Scott Schenker},
+  title = {A scalable content-addressable network},
+  year = {2001},
+  pages = {161--172},
+  address = {New York, NY, USA},
+  booktitle = {SIGCOMM '01: Proceedings of the 2001 conference on Applications,
+	technologies, architectures, and protocols for computer communications},
+  doi = {http://doi.acm.org/10.1145/383059.383072},
+  isbn = {1-58113-411-8},
+  location = {San Diego, California, United States},
+  publisher = {ACM}
+}
+
 @BOOK{reichswald98,
   title = {Telekooperation - Verteilte- Arbeits und Organisationsformen.},
   publisher = {Springer},
@@ -586,6 +745,32 @@
   pages = {3-18},
   owner = {plotti},
   timestamp = {2008.03.26}
+}
+
+@ARTICLE{rooney04,
+  author = {Rooney, S. and Bauer, D. and Deydier, R.},
+  title = {A federated peer-to-peer network game architecture},
+  journal = {Communications Magazine, IEEE},
+  year = {May 2004},
+  volume = {42},
+  pages = { 114-122},
+  number = {5},
+  doi = {10.1109/MCOM.2004.1299353},
+  issn = {0163-6804},
+  keywords = { IP networks, computer games, multicast communication, transport protocols
+	central server architecture, federated peer-to-peer game, multiplayer
+	network games, network game architecture}
+}
+
+@ARTICLE{Rowstron01,
+  author = {Antony Rowstron and Peter Druschel},
+  title = {Pastry: Scalable, Decentralized Object Location, and Routing for
+	Large-Scale Peer-to-Peer Systems},
+  journal = {Lecture Notes in Computer Science},
+  year = {2001},
+  volume = {2218},
+  pages = {329--??},
+  url = {citeseer.ist.psu.edu/rowstron01pastry.html}
 }
 
 @INPROCEEDINGS{safei05,
@@ -754,6 +939,30 @@
   timestamp = {2008.03.28}
 }
 
+@ARTICLE{Stoica01,
+  author = {Ion Stoica and Robert Morris and David Karger and Frans Kaashoek
+	and Hari Balakrishnan},
+  title = {Chord: {A} Scalable {Peer-To-Peer} Lookup Service for Internet Applications},
+  year = {2001},
+  pages = {149--160},
+  booktitle = {Proceedings of the 2001 ACM SIGCOMM Conference},
+  url = {citeseer.ist.psu.edu/stoica01chord.html}
+}
+
+@ARTICLE{stutzbach05b,
+  author = {Daniel Stutzbach and Reza Rejaie and Subhabrata Sen},
+  title = {Characterizing unstructured overlay topologies in modern P2P file-sharing
+	systems},
+  year = {2005},
+  pages = {1--14},
+  address = {New York, NY, USA},
+  booktitle = {IMC '05: Proceedings of the 5th ACM SIGCOMM conference on Internet
+	measurement},
+  doi = {http://doi.acm.org/10.1145/1330107.1330114},
+  location = {Berkeley, California},
+  publisher = {ACM}
+}
+
 @ARTICLE{teamspeak08,
   author = {TeamSpeakSystemsGmbH},
   title = {Teamspeak},
@@ -830,19 +1039,6 @@
   publisher = {ACM}
 }
 
-@ARTICLE{webb06,
-  author = {Steven Daniel Webb and William Lau and Sieteng Soh},
-  title = {NGS: an application layer network game simulator},
-  year = {2006},
-  pages = {15--22},
-  address = {Murdoch University, Australia, Australia},
-  booktitle = {IE '06: Procedings of the 3rd Australasian conference on Interactive
-	entertainment},
-  isbn = {86905-902-5},
-  location = {Perth, Australia},
-  publisher = {Murdoch University}
-}
-
 @BOOK{schramm54,
   title = {The Process and Effects of Mass Communication},
   publisher = {University of Illinois Press},
@@ -863,6 +1059,32 @@
   owner = {Administrator},
   pdf = {J:\Diplomarbeit Dokumente\Papers\WRIGHT - Creative Player Actions in FPS Online Video Games.PDF},
   timestamp = {2008.03.25}
+}
+
+@ARTICLE{yu05,
+  author = {Anthony (Peiqun) Yu and Son T. Vuong},
+  title = {MOPAR: a mobile peer-to-peer overlay rrchitecture for interest management
+	of massively multiplayer online games},
+  year = {2005},
+  pages = {99--104},
+  address = {New York, NY, USA},
+  booktitle = {NOSSDAV '05: Proceedings of the international workshop on Network
+	and operating systems support for digital audio and video},
+  doi = {http://doi.acm.org/10.1145/1065983.1066007},
+  isbn = {1-58113-987-X},
+  location = {Stevenson, Washington, USA},
+  publisher = {ACM}
+}
+
+@ARTICLE{zaho01,
+  author = {B. Y. Zhao and J. D. Kubiatowicz and A. D. Joseph},
+  title = {Tapestry: An Infrastructure for Fault-tolerant Wide-area Location
+	and Routing},
+  year = {2001},
+  number = {UCB/CSD-01-1141},
+  month = apr,
+  institution = {UC Berkeley},
+  url = {citeseer.ist.psu.edu/zhao01tapestry.html}
 }
 
 @comment{jabref-meta: selector_publisher:}
