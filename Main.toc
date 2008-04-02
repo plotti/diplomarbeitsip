@@ -78,21 +78,21 @@
 \contentsline {subsection}{\numberline {4.5.3}Work of Bolot }{43}
 \contentsline {subsection}{\numberline {4.5.4}Work of Radenkovic}{43}
 \contentsline {chapter}{\numberline {5}Netzwerkarchitekturen in Spielen}{45}
-\contentsline {section}{\numberline {5.1}Client - Server in Netzwerkspielen}{45}
-\contentsline {section}{\numberline {5.2}Peer-to-Peer}{46}
-\contentsline {subsection}{\numberline {5.2.1}Distributed Hash Tables}{46}
-\contentsline {subsection}{\numberline {5.2.2}Peer-to-Peer in Netzwerkspielen}{47}
-\contentsline {subsection}{\numberline {5.2.3}Nachbarbasierte Systeme}{47}
-\contentsline {subsubsection}{Voronoi Based}{47}
-\contentsline {subsection}{\numberline {5.2.4}Regionsbasierte Systeme}{47}
-\contentsline {subsection}{\numberline {5.2.5}Hybride Systeme}{48}
-\contentsline {section}{\numberline {5.3}Peer-to-Peer SIP}{49}
-\contentsline {subsection}{\numberline {5.3.1}Struktur}{49}
-\contentsline {subsection}{\numberline {5.3.2}Funktionsweise}{49}
-\contentsline {chapter}{\numberline {6}Summary, Conclusions, and Further Work}{50}
+\contentsline {section}{\numberline {5.1}Client - Server in Netzwerkspielen}{46}
+\contentsline {section}{\numberline {5.2}Peer-to-Peer}{47}
+\contentsline {subsection}{\numberline {5.2.1}Distributed Hash Tables}{47}
+\contentsline {subsection}{\numberline {5.2.2}Peer-to-Peer in Netzwerkspielen}{48}
+\contentsline {subsection}{\numberline {5.2.3}Nachbarbasierte Systeme}{48}
+\contentsline {subsubsection}{Voronoi Based}{49}
+\contentsline {subsection}{\numberline {5.2.4}Regionsbasierte Systeme}{49}
+\contentsline {subsection}{\numberline {5.2.5}Hybride Systeme}{50}
+\contentsline {section}{\numberline {5.3}Peer-to-Peer SIP}{51}
+\contentsline {subsection}{\numberline {5.3.1}Struktur}{51}
+\contentsline {subsection}{\numberline {5.3.2}Funktionsweise}{51}
+\contentsline {chapter}{\numberline {6}Summary, Conclusions, and Further Work}{52}
 \select@language {english}
-\contentsline {section}{\numberline {6.1}Summary}{50}
-\contentsline {section}{\numberline {6.2}Conclusions}{51}
-\contentsline {section}{\numberline {6.3}Further Work}{52}
+\contentsline {section}{\numberline {6.1}Summary}{52}
+\contentsline {section}{\numberline {6.2}Conclusions}{53}
+\contentsline {section}{\numberline {6.3}Further Work}{54}
 \select@language {ngerman}
-\contentsline {chapter}{Literaturverzeichnis}{53}
+\contentsline {chapter}{Literaturverzeichnis}{55}
