@@ -5,8 +5,8 @@ A level-1 auxiliary file: kapitel/abkuerzungen.aux
 A level-1 auxiliary file: kapitel/einleitung.aux
 A level-1 auxiliary file: kapitel/kapitel_kommunikation.aux
 A level-1 auxiliary file: kapitel/kapitel_sip.aux
-A level-1 auxiliary file: kapitel/kapitel_recentwork.aux
 A level-1 auxiliary file: kapitel/kapitel_network.aux
+A level-1 auxiliary file: kapitel/kapitel_recentwork.aux
 A level-1 auxiliary file: kapitel/fazit.aux
 The style file: literatur/natdin.bst
 A level-1 auxiliary file: kapitel/erklaerung.aux
@@ -35,6 +35,7 @@ Warning--I didn't find a database entry for "Stoica01"
 Warning--I didn't find a database entry for "Rowstron01"
 Warning--I didn't find a database entry for "zaho01"
 Warning--I didn't find a database entry for "diot99"
+Warning--I didn't find a database entry for "lau05w"
 Warning--I didn't find a database entry for "douglas05"
 Warning--I didn't find a database entry for "Keller03"
 Warning--I didn't find a database entry for "kawahara02"
