@@ -4,8 +4,8 @@ Version=2
 
 [SessionInfo]
 ActiveTab=2
-FrameCount=3
-ActiveFrame=2
+FrameCount=4
+ActiveFrame=3
 
 [Frame0]
 Columns=1
@@ -61,15 +61,15 @@ cxCur=756
 cxMin=10
 
 [Frame1_View0,0]
-Cursor.row=73
+Cursor.row=72
 Cursor.column=33
-TopSubLine=61
+TopSubLine=56
 
 [Frame2]
 Columns=1
 Rows=1
-Flags=2
-ShowCmd=3
+Flags=0
+ShowCmd=1
 MinPos.x=-1
 MinPos.y=-1
 MaxPos.x=-4
@@ -82,15 +82,44 @@ Class=CLatexEdit
 Document=kapitel\kapitel_recentwork.tex
 
 [Frame2_Row0]
-cyCur=601
+cyCur=364
 cyMin=10
 
 [Frame2_Col0]
-cxCur=918
+cxCur=756
 cxMin=10
 
 [Frame2_View0,0]
-Cursor.row=0
-Cursor.column=0
+Cursor.row=14
+Cursor.column=15
 TopSubLine=0
+
+[Frame3]
+Columns=1
+Rows=1
+Flags=2
+ShowCmd=3
+MinPos.x=-1
+MinPos.y=-1
+MaxPos.x=-4
+MaxPos.y=-30
+NormalPos.left=66
+NormalPos.top=87
+NormalPos.right=851
+NormalPos.bottom=506
+Class=CLatexEdit
+Document=kapitel\kapitel_network.tex
+
+[Frame3_Row0]
+cyCur=601
+cyMin=10
+
+[Frame3_Col0]
+cxCur=918
+cxMin=10
+
+[Frame3_View0,0]
+Cursor.row=90
+Cursor.column=170
+TopSubLine=260
 

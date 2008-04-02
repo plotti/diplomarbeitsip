@@ -231,7 +231,7 @@
   journal = {Queue}
 }
 
-@ARTICLE{bryan05,
+@ARTICLE{bryan05s,
   author = {Bryan, D.A. and Lowekamp, B.B. and Jennings, C.},
   title = {SOSIMPLE: A Serverless, Standards-based, P2P SIP Communication System},
   journal = {Advanced Architectures and Algorithms for Internet Delivery and Applications,
@@ -415,6 +415,15 @@
   isbn = {1-59593-044-2},
   location = {Hilton, Singapore},
   publisher = {ACM}
+}
+
+@BOOK{guha06experimental,
+  title = {An experimental study of the Skype peer-to-peer VoIP system},
+  year = {2006},
+  author = {S. Guha and N. Daswani and R. Jain},
+  text = {S. Guha, N. Daswani, and R. Jain. An experimental study of the Skype
+	peer-to-peer VoIP system. In IPTPS, 2006.},
+  url = {citeseer.ist.psu.edu/guha06experimental.html}
 }
 
 @BOOK{hall05,
@@ -938,6 +947,20 @@
   doi = {http://dx.doi.org/10.1002/dac.v19:4},
   issn = {1074-5351},
   publisher = {John Wiley and Sons Ltd.}
+}
+
+@ARTICLE{1065999,
+  author = {Kundan Singh and Henning Schulzrinne},
+  title = {Peer-to-peer internet telephony using SIP},
+  year = {2005},
+  pages = {63--68},
+  address = {New York, NY, USA},
+  booktitle = {NOSSDAV '05: Proceedings of the international workshop on Network
+	and operating systems support for digital audio and video},
+  doi = {http://doi.acm.org/10.1145/1065983.1065999},
+  isbn = {1-58113-987-X},
+  location = {Stevenson, Washington, USA},
+  publisher = {ACM}
 }
 
 @BOOK{singhal99,
