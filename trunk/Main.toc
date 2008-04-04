@@ -60,41 +60,69 @@
 \contentsline {subsection}{\numberline {3.4.3}RTP Control Protokoll}{39}
 \contentsline {subsubsection}{Typen und Struktur der RTCP-Pakete}{39}
 \contentsline {section}{\numberline {3.5}STUN Protokoll}{41}
-\contentsline {section}{\numberline {3.6}Skype}{42}
-\contentsline {subsection}{\numberline {3.6.1}Registrierung und Login}{42}
-\contentsline {subsection}{\numberline {3.6.2}Rufsignalisierung und Sprach\"ubertragung}{42}
-\contentsline {subsection}{\numberline {3.6.3}Technologie von Skype}{42}
-\contentsline {subsubsection}{Verbindungsstruktur}{42}
-\contentsline {subsubsection}{Sicherheit}{42}
-\contentsline {subsubsection}{Konferenzen}{42}
-\contentsline {chapter}{\numberline {4}Netzwerkarchitekturen in Spielen}{43}
-\contentsline {section}{\numberline {4.1}Client - Server in Netzwerkspielen}{44}
-\contentsline {section}{\numberline {4.2}Peer-to-Peer}{45}
-\contentsline {subsection}{\numberline {4.2.1}Distributed Hash Tables}{46}
-\contentsline {subsection}{\numberline {4.2.2}Peer-to-Peer in Netzwerkspielen}{46}
-\contentsline {subsection}{\numberline {4.2.3}Nachbarbasierte P2P-Systeme}{47}
-\contentsline {subsubsection}{Voronoibasierte P2P Systeme}{47}
-\contentsline {subsection}{\numberline {4.2.4}Regionsbasierte P2P-Systeme}{47}
-\contentsline {subsection}{\numberline {4.2.5}Hybride P2P-Systeme}{48}
-\contentsline {section}{\numberline {4.3}Hybride Systeme}{49}
-\contentsline {section}{\numberline {4.4}Peer-to-Peer SIP}{49}
-\contentsline {subsection}{\numberline {4.4.1}Motivation f\"ur Peer-to-Peer SIP}{49}
-\contentsline {subsection}{\numberline {4.4.2}Struktur}{50}
-\contentsline {subsection}{\numberline {4.4.3}Funktionsweise}{50}
-\contentsline {chapter}{\numberline {5}Verwandte Arbeiten}{52}
-\contentsline {section}{\numberline {5.1}Work of Farzad Safei and Paul Boustead}{52}
-\contentsline {section}{\numberline {5.2}Work of Kevin Hew, Martin Gibbs, Greg Wadley}{52}
-\contentsline {section}{\numberline {5.3}Work of Aameek Singh -- SIP for Games}{52}
-\contentsline {section}{\numberline {5.4}Work of Tonio Triebel -- Skype for Games }{52}
-\contentsline {section}{\numberline {5.5}Minor Contributions}{52}
-\contentsline {subsection}{\numberline {5.5.1}Work of Xiaohui Gu }{52}
-\contentsline {subsection}{\numberline {5.5.2}Work of Schulzrinne }{52}
-\contentsline {subsection}{\numberline {5.5.3}Work of Bolot }{52}
-\contentsline {subsection}{\numberline {5.5.4}Work of Radenkovic}{52}
-\contentsline {chapter}{\numberline {6}Summary, Conclusions, and Further Work}{54}
+\contentsline {section}{\numberline {3.6}SIP Konferenzen}{42}
+\contentsline {subsection}{\numberline {3.6.1}Multicast}{42}
+\contentsline {subsection}{\numberline {3.6.2}Mixing}{42}
+\contentsline {subsection}{\numberline {3.6.3}Full-Mesh}{43}
+\contentsline {section}{\numberline {3.7}Skype}{44}
+\contentsline {subsection}{\numberline {3.7.1}Registrierung und Login}{44}
+\contentsline {subsection}{\numberline {3.7.2}Rufsignalisierung und Sprach\"ubertragung}{44}
+\contentsline {subsection}{\numberline {3.7.3}Technologie von Skype}{44}
+\contentsline {subsubsection}{Verbindungsstruktur}{44}
+\contentsline {subsubsection}{Sicherheit}{44}
+\contentsline {subsubsection}{Konferenzen}{44}
+\contentsline {chapter}{\numberline {4}Netzwerkarchitekturen in Spielen}{45}
+\contentsline {section}{\numberline {4.1}Client - Server in Netzwerkspielen}{46}
+\contentsline {section}{\numberline {4.2}Peer-to-Peer}{47}
+\contentsline {subsection}{\numberline {4.2.1}Distributed Hash Tables}{48}
+\contentsline {subsection}{\numberline {4.2.2}Peer-to-Peer in Netzwerkspielen}{48}
+\contentsline {subsection}{\numberline {4.2.3}Nachbarbasierte P2P-Systeme}{49}
+\contentsline {subsubsection}{Voronoibasierte P2P Systeme}{49}
+\contentsline {subsection}{\numberline {4.2.4}Regionsbasierte P2P-Systeme}{50}
+\contentsline {subsection}{\numberline {4.2.5}Hybride P2P-Systeme}{51}
+\contentsline {section}{\numberline {4.3}Hybride Systeme}{51}
+\contentsline {section}{\numberline {4.4}Peer-to-Peer SIP}{52}
+\contentsline {subsection}{\numberline {4.4.1}Motivation f\"ur Peer-to-Peer SIP}{52}
+\contentsline {subsection}{\numberline {4.4.2}Funktionsweise}{53}
+\contentsline {section}{\numberline {4.5}Architektur Variationen}{54}
+\contentsline {chapter}{\numberline {5}Verwandte Arbeiten}{55}
+\contentsline {section}{\numberline {5.1}Work of Farzad Safei and Paul Boustead}{55}
+\contentsline {section}{\numberline {5.2}Work of Kevin Hew, Martin Gibbs, Greg Wadley}{55}
+\contentsline {section}{\numberline {5.3}Work of Aameek Singh -- SIP for Games}{55}
+\contentsline {section}{\numberline {5.4}Work of Schulzrinne -- Full mesh conferencing}{55}
+\contentsline {section}{\numberline {5.5}Minor Contributions}{55}
+\contentsline {subsection}{\numberline {5.5.1}Work of Tonio Triebel -- Skype for Games }{55}
+\contentsline {subsection}{\numberline {5.5.2}Work of Xiaohui Gu }{55}
+\contentsline {subsection}{\numberline {5.5.3}Work of Bolot }{56}
+\contentsline {subsection}{\numberline {5.5.4}Work of Radenkovic}{56}
+\contentsline {subsection}{\numberline {5.5.5}Work of Stadler and Miladinovic}{56}
+\contentsline {chapter}{\numberline {6}Entwurf}{58}
+\contentsline {section}{\numberline {6.1}Wahl der Spieleumgebung}{58}
+\contentsline {subsection}{\numberline {6.1.1}Wahl der Programiersprache}{58}
+\contentsline {section}{\numberline {6.2}Kommunikationsaspekte}{58}
+\contentsline {subsection}{\numberline {6.2.1}Sprache vs. Nonverbal vs. Text}{58}
+\contentsline {subsection}{\numberline {6.2.2}Interpersonelle vs. Massenkommunikation}{59}
+\contentsline {subsection}{\numberline {6.2.3}...}{59}
+\contentsline {section}{\numberline {6.3}Wahl des VoiP Standards}{59}
+\contentsline {subsection}{\numberline {6.3.1}Skype}{59}
+\contentsline {subsection}{\numberline {6.3.2}SIP}{59}
+\contentsline {subsubsection}{PJSIP}{59}
+\contentsline {subsubsection}{WengoPhone}{59}
+\contentsline {subsubsection}{others}{59}
+\contentsline {section}{\numberline {6.4}Wahl der Netzwerk Architektur}{59}
+\contentsline {subsection}{\numberline {6.4.1}Client Server}{59}
+\contentsline {subsubsection}{Netmeeting}{59}
+\contentsline {subsubsection}{Ventrillo}{59}
+\contentsline {subsubsection}{Teamspeak}{59}
+\contentsline {subsubsection}{Battlecom}{59}
+\contentsline {subsection}{\numberline {6.4.2}Reine Peer-to-Peer Modelle}{59}
+\contentsline {subsection}{\numberline {6.4.3}Problems}{59}
+\contentsline {subsection}{\numberline {6.4.4}Hybrid Model}{59}
+\contentsline {subsubsection}{Design alternatives}{59}
+\contentsline {chapter}{\numberline {7}Summary, Conclusions, and Further Work}{61}
 \select@language {english}
-\contentsline {section}{\numberline {6.1}Summary}{54}
-\contentsline {section}{\numberline {6.2}Conclusions}{55}
-\contentsline {section}{\numberline {6.3}Further Work}{56}
+\contentsline {section}{\numberline {7.1}Summary}{61}
+\contentsline {section}{\numberline {7.2}Conclusions}{62}
+\contentsline {section}{\numberline {7.3}Further Work}{63}
 \select@language {ngerman}
-\contentsline {chapter}{Literaturverzeichnis}{57}
+\contentsline {chapter}{Literaturverzeichnis}{64}
