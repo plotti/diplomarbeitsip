@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592-1.40.7 (MiKTeX 2.7) (preloaded format=pdflatex 2008.3.12)  2 APR 2008 15:49
+This is pdfTeX, Version 3.141592-1.40.7 (MiKTeX 2.7) (preloaded format=pdflatex 2008.3.12)  4 APR 2008 16:20
 entering extended mode
 **C:/Dokumente*und*Einstellungen/plotti/Eigene*Dateien/Diplom/Main.tex
 ("C:/Dokumente und Einstellungen/plotti/Eigene Dateien/Diplom/Main.tex"
@@ -210,7 +210,7 @@ Class scrbook Warning: `pagehead' and `pagefoot' are aliases for the same
 (Main.aux (kapitel/titel.aux) (kapitel/stichwortverzeichnis.aux)
 (kapitel/abkuerzungen.aux) (kapitel/einleitung.aux)
 (kapitel/kapitel_kommunikation.aux) (kapitel/kapitel_sip.aux)
-(kapitel/kapitel_recentwork.aux) (kapitel/kapitel_network.aux)
+(kapitel/kapitel_network.aux) (kapitel/kapitel_recentwork.aux)
 (kapitel/fazit.aux) (kapitel/erklaerung.aux))
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 58.
 LaTeX Font Info:    ... okay on input line 58.
@@ -290,17 +290,17 @@ Class scrbook Info: You've told me to use the font selection of the element
 ]
 Class scrbook Info: You've told me to use the font selection of the element
 (scrbook)           `sectioning' that is an alias of element `disposition'
-(scrbook)            on input line 70.
+(scrbook)            on input line 74.
  [3]
 Class scrbook Info: You've told me to use the font selection of the element
 (scrbook)           `sectioning' that is an alias of element `disposition'
-(scrbook)            on input line 80.
+(scrbook)            on input line 89.
 Class scrbook Info: You've told me to use the font selection of the element
 (scrbook)           `sectioning' that is an alias of element `disposition'
-(scrbook)            on input line 92.
+(scrbook)            on input line 100.
 Class scrbook Info: You've told me to use the font selection of the element
 (scrbook)           `sectioning' that is an alias of element `disposition'
-(scrbook)            on input line 98.
+(scrbook)            on input line 106.
 )
 \tf@toc=\write3
  [4] (kapitel/stichwortverzeichnis.tex) [5
@@ -323,6 +323,10 @@ Class scrbook Info: You've told me to use the font selection of the element
 Kapitel 1.
 
 Package natbib Warning: Citation `printout1' on page 1 undefined on input line 
+4.
+
+
+Package natbib Warning: Citation `wadley08' on page 1 undefined on input line 1
 4.
 
 [1
@@ -439,7 +443,22 @@ Overfull \hbox (5.35982pt too wide) in paragraph at lines 264--265
 -si-on, die prim[]ar
  []
 
-[40]) [41] [42] (kapitel/kapitel_network.tex
+[40]
+
+Package natbib Warning: Citation `rosenberg02' on page 41 undefined on input li
+ne 288.
+
+[41] [42]
+Overfull \hbox (10.48326pt too wide) in paragraph at lines 300--301
+[]\OT1/cmr/m/n/12 Dieses Mo-dell hat je-doch ei-ni-ge Nach-tei-le: Die Exis-ten
+z ei-ner Kon-fe-renz ist abh[]angig
+ []
+
+
+Package natbib Warning: Citation `schulzrinne05' on page 43 undefined on input 
+line 318.
+
+[43]) [44] (kapitel/kapitel_network.tex
 Kapitel 4.
 
 Overfull \hbox (5.76108pt too wide) in paragraph at lines 15--16
@@ -448,331 +467,303 @@ Overfull \hbox (5.76108pt too wide) in paragraph at lines 15--16
  []
 
 
-Package natbib Warning: Citation `morse96' on page 43 undefined on input line 1
+Package natbib Warning: Citation `morse96' on page 45 undefined on input line 1
 7.
 
-[43
+[45
 
 
 
 ]
 
-Package natbib Warning: Citation `lau06' on page 44 undefined on input line 22.
+Package natbib Warning: Citation `lau06' on page 46 undefined on input line 22.
 
 
 
-Package natbib Warning: Citation `lau05b' on page 44 undefined on input line 22
+Package natbib Warning: Citation `lau05b' on page 46 undefined on input line 22
 .
 
 
-Package natbib Warning: Citation `feng03' on page 44 undefined on input line 22
+Package natbib Warning: Citation `feng03' on page 46 undefined on input line 22
 .
 
 
-Package natbib Warning: Citation `singhal99' on page 44 undefined on input line
+Package natbib Warning: Citation `singhal99' on page 46 undefined on input line
  28.
 
 
-Package natbib Warning: Citation `lau06' on page 44 undefined on input line 29.
+Package natbib Warning: Citation `lau06' on page 46 undefined on input line 29.
 
 
 
-Package natbib Warning: Citation `thor03' on page 44 undefined on input line 29
+Package natbib Warning: Citation `thor03' on page 46 undefined on input line 29
 .
 
 
-Package natbib Warning: Citation `brandt05' on page 44 undefined on input line 
+Package natbib Warning: Citation `brandt05' on page 46 undefined on input line 
 31.
 
 
-Package natbib Warning: Citation `wow08' on page 44 undefined on input line 31.
+Package natbib Warning: Citation `wow08' on page 46 undefined on input line 31.
 
-
-[44]
-
-Package natbib Warning: Citation `brandt05' on page 45 undefined on input line 
-33.
-
-
-Package natbib Warning: Citation `lau06' on page 45 undefined on input line 33.
-
-
-
-Package natbib Warning: Citation `yu05' on page 45 undefined on input line 35.
-
-
-Package natbib Warning: Citation `lua05' on page 45 undefined on input line 38.
-
-
-
-Package natbib Warning: Citation `stutzbach05' on page 45 undefined on input li
-ne 38.
-
-
-Package natbib Warning: Citation `Ratnasamy01' on page 45 undefined on input li
-ne 42.
-
-
-Package natbib Warning: Citation `Stoica01' on page 45 undefined on input line 
-42.
-
-
-Package natbib Warning: Citation `Rowstron01' on page 45 undefined on input lin
-e 42.
-
-
-Package natbib Warning: Citation `zaho01' on page 45 undefined on input line 42
-.
-
-[45]
-
-Package natbib Warning: Citation `diot99' on page 46 undefined on input line 45
-.
-
-
-Package natbib Warning: Citation `lau05w' on page 46 undefined on input line 45
-.
-
-
-Package natbib Warning: Citation `douglas05' on page 46 undefined on input line
- 46.
 
 [46]
 
-Package natbib Warning: Citation `Keller03' on page 47 undefined on input line 
-49.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.50 ...ße der ausgetauschten Nachrichten mit O(n^
-                                                  {2}), wobei n die Anzahl d...
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
+Package natbib Warning: Citation `brandt05' on page 47 undefined on input line 
+33.
 
 
-! LaTeX Error: Command \bfseries invalid in math mode.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.50 ...l der Nachbarn darstellt \cite{kawahara02}
-                                                  . Dadurch dass nur unmitte...
-
-Please use the math alphabet \mathbf instead of the \bfseries command. 
+Package natbib Warning: Citation `lau06' on page 47 undefined on input line 33.
 
 
-Package natbib Warning: Citation `kawahara02' on page 47 undefined on input lin
-e 50.
+
+Package natbib Warning: Citation `yu05' on page 47 undefined on input line 35.
 
 
-LaTeX Warning: Command \" invalid in math mode on input line 50.
-
-! Please use \mathaccent for accents in math mode.
-<recently read> \accent 
-                        
-l.50 ...e Nachbarn Nachrichten austauschen kann fü
-                                                  r isolierte Gruppen die si...
-I'm changing \accent to \mathaccent here; wish me luck.
-(Accents are not the same in formulas as they are in text.)
-
-! Missing { inserted.
-<to be read again> 
-                   \fontdimen 
-l.50 ...e Nachbarn Nachrichten austauschen kann fü
-                                                  r isolierte Gruppen die si...
-A left brace was mandatory here, so I've put one in.
-You might want to delete and/or insert some corrections
-so that I will find a matching right brace soon.
-(If you're confused by all this, try typing `I}' now.)
+Package natbib Warning: Citation `lua05' on page 47 undefined on input line 38.
 
 
-LaTeX Warning: Command \" invalid in math mode on input line 52.
 
-! Please use \mathaccent for accents in math mode.
-<recently read> \accent 
-                        
-l.52 ...t andere Teilnehmer, wenn neue Nachbarn fü
-                                                  r ihn entdeckt wurden. Im ...
-I'm changing \accent to \mathaccent here; wish me luck.
-(Accents are not the same in formulas as they are in text.)
-
-! Missing { inserted.
-<to be read again> 
-                   \fontdimen 
-l.52 ...t andere Teilnehmer, wenn neue Nachbarn fü
-                                                  r ihn entdeckt wurden. Im ...
-A left brace was mandatory here, so I've put one in.
-You might want to delete and/or insert some corrections
-so that I will find a matching right brace soon.
-(If you're confused by all this, try typing `I}' now.)
+Package natbib Warning: Citation `stutzbach05' on page 47 undefined on input li
+ne 38.
 
 
-LaTeX Warning: Command \" invalid in math mode on input line 52.
-
-! Please use \mathaccent for accents in math mode.
-<recently read> \accent 
-                        
-l.52 ...r Teilnehmer nicht unbedingt mit seinen nä
-                                                  chsten Nachbarn
-I'm changing \accent to \mathaccent here; wish me luck.
-(Accents are not the same in formulas as they are in text.)
-
-! Missing { inserted.
-<to be read again> 
-                   \fontdimen 
-l.52 ...r Teilnehmer nicht unbedingt mit seinen nä
-                                                  chsten Nachbarn
-A left brace was mandatory here, so I've put one in.
-You might want to delete and/or insert some corrections
-so that I will find a matching right brace soon.
-(If you're confused by all this, try typing `I}' now.)
+Package natbib Warning: Citation `Ratnasamy01' on page 47 undefined on input li
+ne 42.
 
 
-! LaTeX Error: Command \bfseries invalid in math mode.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.53 \cite{Keller03}
-                    .
-Please use the math alphabet \mathbf instead of the \bfseries command. 
+Package natbib Warning: Citation `Stoica01' on page 47 undefined on input line 
+42.
 
 
-Package natbib Warning: Citation `Keller03' on page 47 undefined on input line 
-53.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.54 
-     
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.54 
-     
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.54 
-     
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.54 
-     
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
+Package natbib Warning: Citation `Rowstron01' on page 47 undefined on input lin
+e 42.
 
 
-Overfull \hbox (2677.84534pt too wide) in paragraph at lines 49--54
-\OT1/cmr/m/n/12 Gr[]oe der aus-ge-tausch-ten Nach-rich-ten mit O(n$[])\OML/cmm
-/m/it/12 ; wobeindieAnzahlderNachbarndarstellt[]:DadurchdassnurunmittelbareNach
-barnNachrichtenaustauschenkannf[]$ 
- []
-
-
-Package natbib Warning: Citation `hu04' on page 47 undefined on input line 57.
-
-
-Package natbib Warning: Citation `knutsson04' on page 47 undefined on input lin
-e 62.
-
-
-Package natbib Warning: Citation `Iimura04' on page 47 undefined on input line 
-64.
+Package natbib Warning: Citation `zaho01' on page 47 undefined on input line 42
+.
 
 [47]
 
-Package natbib Warning: Citation `yu05' on page 48 undefined on input line 67.
+Package natbib Warning: Citation `diot99' on page 48 undefined on input line 45
+.
 
-[48] [49] [50]) [51] (kapitel/kapitel_recentwork.tex
+
+Package natbib Warning: Citation `lau05w' on page 48 undefined on input line 45
+.
+
+
+Package natbib Warning: Citation `douglas05' on page 48 undefined on input line
+ 46.
+
+[48]
+
+Package natbib Warning: Citation `Keller03' on page 49 undefined on input line 
+49.
+
+
+Package natbib Warning: Citation `kawahara02' on page 49 undefined on input lin
+e 50.
+
+
+Package natbib Warning: Citation `Keller03' on page 49 undefined on input line 
+53.
+
+
+Package natbib Warning: Citation `hu04' on page 49 undefined on input line 57.
+
+
+Package natbib Warning: Citation `knutsson04' on page 49 undefined on input lin
+e 62.
+
+
+Package natbib Warning: Citation `Iimura04' on page 49 undefined on input line 
+64.
+
+[49]
+
+Package natbib Warning: Citation `yu05' on page 50 undefined on input line 67.
+
+[50]
+
+Package natbib Warning: Citation `rosenberg02' on page 51 undefined on input li
+ne 77.
+
+[51] [52]
+
+Package natbib Warning: Citation `bryan05s' on page 53 undefined on input line 
+94.
+
+[53]
+
+Package natbib Warning: Citation `schulzrinne05' on page 54 undefined on input 
+line 96.
+
+) [54] (kapitel/kapitel_recentwork.tex
 Kapitel 5.
-) [52
+
+Package natbib Warning: Citation `safei04' on page 55 undefined on input line 4
+.
 
 
-
-] [53] (kapitel/fazit.tex
-Kapitel 6.
-
-LaTeX Warning: Reference `cha:grafiken' on page 54 undefined on input line 13.
-
-[54
+Package natbib Warning: Citation `safei04b' on page 55 undefined on input line 
+5.
 
 
+Package natbib Warning: Citation `safei06b' on page 55 undefined on input line 
+6.
 
-] [55]) [56] (Main.bbl [57
+
+Package natbib Warning: Citation `safei05' on page 55 undefined on input line 7
+.
+
+
+Package natbib Warning: Citation `safei06' on page 55 undefined on input line 8
+.
+
+
+Package natbib Warning: Citation `safei07' on page 55 undefined on input line 9
+.
+
+
+Package natbib Warning: Citation `gibbs06' on page 55 undefined on input line 1
+2.
+
+
+Package natbib Warning: Citation `singh04' on page 55 undefined on input line 1
+7.
+
+
+Package natbib Warning: Citation `singh05' on page 55 undefined on input line 1
+8.
+
+
+Package natbib Warning: Citation `singh06' on page 55 undefined on input line 1
+9.
+
+
+Package natbib Warning: Citation `schulzrinne02' on page 55 undefined on input 
+line 22.
+
+
+Package natbib Warning: Citation `schulzrinne03' on page 55 undefined on input 
+line 23.
+
+
+Package natbib Warning: Citation `schulzrinne05' on page 55 undefined on input 
+line 24.
+
+
+Package natbib Warning: Citation `triebel07' on page 55 undefined on input line
+ 28.
+
+
+Package natbib Warning: Citation `gu05' on page 55 undefined on input line 30.
+
+
+Package natbib Warning: Citation `bolot98' on page 55 undefined on input line 3
+2.
+
+[55
 
 
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 87--92
+
+Package natbib Warning: Citation `radenkovic02' on page 56 undefined on input l
+ine 34.
+
+
+Package natbib Warning: Citation `miladinovic-multiparty' on page 56 undefined 
+on input line 37.
+
+) [56] [57] (kapitel/kapitel_entwurf.tex
+Kapitel 6.
+! Undefined control sequence.
+l.7 \subssection
+                {Proximität}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+[58
+
+
+
+]
+Runaway argument?
+{Replicate registrations vs. search on call setup} Durch die serverba\ETC.
+! Paragraph ended before \scr@sect was complete.
+<to be read again> 
+                   \par 
+l.39 
+     
+I suspect you've forgotten a `}', causing me to apply this
+control sequence to too much text. How can we recover?
+My plan is to forget the whole thing and hope for the best.
+
+[59]) [60] (kapitel/fazit.tex
+Kapitel 7.
+
+LaTeX Warning: Reference `cha:grafiken' on page 61 undefined on input line 13.
+
+[61
+
+
+
+] [62]) [63] (Main.bbl [64
+
+
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 97--102
 \OT1/cmr/m/sc/12 Ernst&Young\OT1/cmr/m/n/12 :  Di-gi-ta-le Spie-le in Deutsch-l
 and.  In:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 87--92
+Underfull \hbox (badness 10000) in paragraph at lines 97--102
 \OT1/cmr/m/it/12 http://www.ey.com/global/content.nsf/Germany/Publikationen[]-[
 ]Studien[]-
  []
 
-[58]
-Overfull \hbox (161.29332pt too wide) in paragraph at lines 143--148
+[65]
+Overfull \hbox (161.29332pt too wide) in paragraph at lines 153--158
 \OT1/cmr/m/sc/12 Ipoque\OT1/cmr/m/n/12 :  In-ter-net Stu-die 2007.  In: \OT1/cm
 r/m/it/12 http://www.ipoque.com/news[]&[]events/internet[]studies/internet[]stu
 dy[]2007
  []
 
-[59]
-Underfull \hbox (badness 3590) in paragraph at lines 179--184
+[66]
+Underfull \hbox (badness 3590) in paragraph at lines 189--194
 \OT1/cmr/m/sc/12 Museum\OT1/cmr/m/n/12 , Com-pu-ter H.:  Co-mu-ter His-to-ry Mu
 -se-um, PDP-1.  In:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 201--206
+Underfull \hbox (badness 10000) in paragraph at lines 211--216
 \OT1/cmr/m/sc/12 Reichswald\OT1/cmr/m/n/12 , R. ; \OT1/cmr/m/sc/12 M[]oslein\OT
 1/cmr/m/n/12 , K. ; \OT1/cmr/m/sc/12 Sa-chen-ba-che-rand\OT1/cmr/m/n/12 , K. ;
  []
 
 
-Underfull \hbox (badness 1281) in paragraph at lines 201--206
+Underfull \hbox (badness 1281) in paragraph at lines 211--216
 \OT1/cmr/m/sc/12 H.Engelberger\OT1/cmr/m/n/12 :  \OT1/cmr/m/it/12 Te-le-ko-ope-
 ra-ti-on - Verteilte- Ar-beits und Or-ga-ni-sa-ti-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 214--217
+Underfull \hbox (badness 10000) in paragraph at lines 224--227
 \OT1/cmr/m/sc/12 ResoundingTechnologyInc\OT1/cmr/m/n/12 :  Ro-ger Wil-co.  In:
  []
 
-[60]
+[67]
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.248 ...//en.wikipedia.org/wiki/PlayStation_Home}
+l.258 ...//en.wikipedia.org/wiki/PlayStation_Home}
                                                     (2008)
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -780,7 +771,7 @@ you left one out. Proceed, with fingers crossed.
 ! Extra }, or forgotten $.
 <recently read> \egroup 
                         
-l.248 ...//en.wikipedia.org/wiki/PlayStation_Home}
+l.258 ...//en.wikipedia.org/wiki/PlayStation_Home}
                                                     (2008)
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -791,7 +782,7 @@ deleted material, e.g., by typing `I$}'.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.249 
+l.259 
       
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -799,7 +790,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing } inserted.
 <inserted text> 
                 }
-l.249 
+l.259 
       
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -808,49 +799,49 @@ really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 246--249
+Underfull \hbox (badness 10000) in paragraph at lines 256--259
 \OT1/cmr/m/sc/12 SonyEntertainment\OT1/cmr/m/n/12 :  Play-Sta-ti-on Ho-me.  In:
 
  []
 
 
-Underfull \hbox (badness 1527) in paragraph at lines 256--262
+Underfull \hbox (badness 1527) in paragraph at lines 266--272
 \OT1/cmr/m/sc/12 Thon\OT1/cmr/m/n/12 , Jan N.:  Com-mu-ni-ca-ti-on and In-ter-a
 c-ti-on in Mul-ti-player First
  []
 
 
-Underfull \hbox (badness 5288) in paragraph at lines 256--262
+Underfull \hbox (badness 5288) in paragraph at lines 266--272
 \OT1/cmr/m/n/12 Per-son Shoo-ter Ga-mes.  In: \OT1/cmr/m/it/12 From Com-mu-ni-c
 a-ti-on to Pre-sence \OT1/cmr/m/n/12 9
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 256--262
+Underfull \hbox (badness 10000) in paragraph at lines 266--272
 \OT1/cmr/m/n/12 (2006).  $\OT1/cmtt/m/n/12 http : / / www . vepsy . com / commu
 nication / volume9 . html$\OT1/cmr/m/n/12 . --
  []
 
-
-Underfull \hbox (badness 3758) in paragraph at lines 277--285
+[68]
+Underfull \hbox (badness 3758) in paragraph at lines 287--295
 \OT1/cmr/m/sc/12 Wang\OT1/cmr/m/n/12 , Ali-ce ; \OT1/cmr/m/sc/12 Em-mi\OT1/cmr/
 m/n/12 , Mi-cha-el ; \OT1/cmr/m/sc/12 Fa-lout-sos\OT1/cmr/m/n/12 , Pe-tros:  As
 -semb-ling
  []
 
 
-Underfull \hbox (badness 3449) in paragraph at lines 277--285
+Underfull \hbox (badness 3449) in paragraph at lines 287--295
 \OT1/cmr/m/n/12 an ex-pres-si-ve fa-ci-al ani-ma-ti-on sys-tem.  (2007), S. 21-
 -26.  $\OT1/cmtt/m/n/12 http :
  []
 
 
-Underfull \hbox (badness 1675) in paragraph at lines 277--285
+Underfull \hbox (badness 1675) in paragraph at lines 287--295
 \OT1/cmtt/m/n/12 / / dx . doi . org / http : / / doi . acm . org / 10 . 1145 / 
 1274940 . 1274947$\OT1/cmr/m/n/12 . --  DOI
  []
 
-[61]) [62] (kapitel/erklaerung.tex) [63
+) [69] (kapitel/erklaerung.tex) [70
 
 
 ]
@@ -861,7 +852,7 @@ Package natbib Warning: There were undefined citations.
 (kapitel/abkuerzungen.aux) (kapitel/einleitung.aux)
 (kapitel/kapitel_kommunikation.aux) (kapitel/kapitel_sip.aux)
 (kapitel/kapitel_network.aux) (kapitel/kapitel_recentwork.aux)
-(kapitel/fazit.aux) (kapitel/erklaerung.aux))
+(kapitel/kapitel_entwurf.aux) (kapitel/fazit.aux) (kapitel/erklaerung.aux))
 
 LaTeX Warning: There were undefined references.
 
@@ -870,13 +861,13 @@ LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
  ) 
 Here is how much of TeX's memory you used:
- 3157 strings out of 95337
- 42692 string characters out of 1184201
- 128037 words of memory out of 1500000
- 6239 multiletter control sequences out of 110000
+ 3187 strings out of 95337
+ 43161 string characters out of 1184201
+ 128074 words of memory out of 1500000
+ 6264 multiletter control sequences out of 110000
  8415 words of font info for 30 fonts, out of 1200000 for 2000
  14 hyphenation exceptions out of 8191
- 36i,10n,37p,3135b,387s stack positions out of 5000i,500n,10000p,200000b,5000s
+ 36i,10n,37p,3135b,385s stack positions out of 5000i,500n,10000p,200000b,5000s
 <C:/Programme/MiKTeX 2.7/fonts/type1/bluesky/cm/cmbx12.pfb><C:/Programme/MiKT
 eX 2.7/fonts/type1/bluesky/cm/cmcsc10.pfb><C:/Programme/MiKTeX 2.7/fonts/type1/
 bluesky/cm/cmex10.pfb><C:/Programme/MiKTeX 2.7/fonts/type1/bluesky/cm/cmmi12.pf
@@ -884,11 +875,11 @@ b><C:/Programme/MiKTeX 2.7/fonts/type1/bluesky/cm/cmmi6.pfb><C:/Programme/MiKTe
 X 2.7/fonts/type1/bluesky/cm/cmmi8.pfb><C:/Programme/MiKTeX 2.7/fonts/type1/blu
 esky/cm/cmr12.pfb><C:/Programme/MiKTeX 2.7/fonts/type1/bluesky/cm/cmr8.pfb><C:/
 Programme/MiKTeX 2.7/fonts/type1/bluesky/cm/cmsy10.pfb><C:/Programme/MiKTeX 2.7
-/fonts/type1/bluesky/cm/cmsy8.pfb><C:/Programme/MiKTeX 2.7/fonts/type1/bluesky/
-cm/cmti12.pfb><C:/Programme/MiKTeX 2.7/fonts/type1/bluesky/cm/cmtt12.pfb>
-Output written on Main.pdf (71 pages, 252610 bytes).
+/fonts/type1/bluesky/cm/cmti12.pfb><C:/Programme/MiKTeX 2.7/fonts/type1/bluesky
+/cm/cmtt12.pfb>
+Output written on Main.pdf (78 pages, 260591 bytes).
 PDF statistics:
- 285 PDF objects out of 1000 (max. 8388607)
+ 304 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 131072)
  6 words of extra memory for PDF output out of 10000 (max. 10000000)
 

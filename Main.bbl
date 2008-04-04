@@ -1,4 +1,4 @@
-\begin{thebibliography}{44}
+\begin{thebibliography}{59}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \makeatletter
@@ -56,11 +56,32 @@
 \newblock {In: }\emph{http://worldofwarcraft.com/info/basics/voicechat.html}
   (2008)
 
+\bibitem[Bolot u. Fosse-Parisis(29 M)]{bolot98}
+\dinatlabel{Bolot u. Fosse-Parisis 29 M}\\ \textsc{Bolot}, J.-C. ;
+  \textsc{Fosse-Parisis}, S.:
+\newblock Adding voice to distributed games on the Internet.
+\newblock {In: }\emph{INFOCOM '98. Seventeenth Annual Joint Conference of the
+  IEEE Computer and Communications Societies. Proceedings. IEEE} 2 (29 Mar-2
+  Apr 1998), S. 480--487 vol.2.
+\newblock  \url{http://dx.doi.org/10.1109/INFCOM.1998.665065}. --
+\newblock DOI 10.1109/INFCOM.1998.665065. --
+\newblock ISSN 0743--166X
+
 \bibitem[Bradner u. Mark(2002)]{bradner02}
 \dinatlabel{Bradner u. Mark 2002}\\ \textsc{Bradner}, E. ; \textsc{Mark}, G.:
 \newblock Why distance matters: effects on cooperation persuasion and
   deception.
 \newblock {In: }\emph{Proceedings CSCW}  (2002), S. 226--296
+
+\bibitem[Bryan u. Lowekamp(2007)]{bryan07}
+\dinatlabel{Bryan u. Lowekamp 2007}\\ \textsc{Bryan}, David~A. ;
+  \textsc{Lowekamp}, Bruce~B.:
+\newblock \emph{Decentralizing SIP}.
+\newblock New York, NY, USA : ACM, 2007. --
+\newblock  34--41 S.
+\newblock  \url{http://dx.doi.org/http://doi.acm.org/10.1145/1229899.1229910}.
+\newblock  \url{http://dx.doi.org/http://doi.acm.org/10.1145/1229899.1229910}.
+\newblock ISSN 1542--7730
 
 \bibitem[Carter(2003)]{carter03}
 \dinatlabel{Carter 2003}\\ \textsc{Carter}, K.~A.:
@@ -114,6 +135,17 @@ n\_\-\_2007}  (2007)
 \newblock {In: }\emph{Australian Workshop on Interactive Entertainment},
   Creative and Cognitive Studios Press, 2004
 
+\bibitem[Gibbs et~al.(2006)Gibbs, Wadley, u. Benda]{gibbs06}
+\dinatlabel{Gibbs et~al. 2006}\\ \textsc{Gibbs}, Martin ; \textsc{Wadley}, Greg
+   ; \textsc{Benda}, Peter:
+\newblock Proximity-based chat in a first person shooter: using a novel voice
+  communication system for online play.
+\newblock {In: }\emph{IE '06: Procedings of the 3rd Australasian conference on
+  Interactive entertainment}.
+\newblock Murdoch University, Australia, Australia : Murdoch University, 2006.
+  --
+\newblock ISBN 86905--902--5, S. 96--102
+
 \bibitem[Gibbs et~al.(2005)Gibbs, ands, u. Benda]{gibbs05}
 \dinatlabel{Gibbs et~al. 2005}\\ \textsc{Gibbs}, Martin~R. ; \textsc{ands},
   Greg~W.  ; \textsc{Benda}, Peter:
@@ -132,6 +164,17 @@ n\_\-\_2007}  (2007)
 \newblock {In: }\textsc{Rauterberg}, Matthias (Hrsg.): \emph{ICEC} Bd. 3166,
   Springer. --
 \newblock ISBN 3--540--22947--7, 377-385
+
+\bibitem[Gu et~al.(2005)Gu, Wen, Yu, u. Shae]{gu05}
+\dinatlabel{Gu et~al. 2005}\\ \textsc{Gu}, Xiaohui ; \textsc{Wen}, Zhen ;
+  \textsc{Yu}, Philip~S.  ; \textsc{Shae}, Zon-Yin:
+\newblock Supporting multi-party voice-over-IP services with peer-to-peer
+  stream processing.
+\newblock   (2005), S. 303--306.
+\newblock  \url{http://dx.doi.org/http://doi.acm.org/10.1145/1101149.1101210}.
+  --
+\newblock DOI http://doi.acm.org/10.1145/1101149.1101210.
+\newblock ISBN 1--59593--044--2
 
 \bibitem[Hall u. Knapp(2005)]{hall05}
 \dinatlabel{Hall u. Knapp 2005}\\ \textsc{Hall}, Judith~A. ; \textsc{Knapp},
@@ -155,6 +198,16 @@ udy\_2007}  (2007)
 \dinatlabel{Kiesler 1997}\\ \textsc{Kiesler}, Sara:
 \newblock \emph{Culture of the Internet}.
 \newblock Lawrence Erlbaum Associates, 1997
+
+\bibitem[Koskelainen et~al.(2002)Koskelainen, Schulzrinne, u.
+  Wu]{schulzrinne02}
+\dinatlabel{Koskelainen et~al. 2002}\\ \textsc{Koskelainen}, Petri ;
+  \textsc{Schulzrinne}, Henning  ; \textsc{Wu}, Xiaotao:
+\newblock A SIP-based conference control framework.
+\newblock   (2002), S. 53--61.
+\newblock  \url{http://dx.doi.org/http://doi.acm.org/10.1145/507670.507679}. --
+\newblock DOI http://doi.acm.org/10.1145/507670.507679.
+\newblock ISBN 1--58113--512--2
 
 \bibitem[Manninen u. Kujanpää(2003)]{manninen03}
 \dinatlabel{Manninen u. Kujanpää 2003}\\ \textsc{Manninen}, Tony ;
@@ -196,6 +249,16 @@ udy\_2007}  (2007)
 \newblock   (2003), S. 596--620.
 \newblock ISBN 0--8058--3838--4
 
+\bibitem[Radenkovic et~al.(2002)Radenkovic, Greenhalgh, u.
+  Benford]{radenkovic02}
+\dinatlabel{Radenkovic et~al. 2002}\\ \textsc{Radenkovic}, Milena ;
+  \textsc{Greenhalgh}, Chris  ; \textsc{Benford}, Steve:
+\newblock Deployment issues for multi-user audio support in CVEs.
+\newblock   (2002), S. 179--185.
+\newblock  \url{http://dx.doi.org/http://doi.acm.org/10.1145/585740.585770}. --
+\newblock DOI http://doi.acm.org/10.1145/585740.585770.
+\newblock ISBN 1--58113--530--0
+
 \bibitem[Reichswald et~al.(1998)Reichswald, Möslein, Sachenbacherand, u.
   H.Engelberger]{reichswald98}
 \dinatlabel{Reichswald et~al. 1998}\\ \textsc{Reichswald}, R. ;
@@ -228,6 +291,66 @@ udy\_2007}  (2007)
   of cyberspace.
 \newblock {In: }\emph{Towards CyberPsychology}  (2001), S. 3--18
 
+\bibitem[Safaei et~al.(28 J)Safaei, Nguyen, u. Platt]{safei04b}
+\dinatlabel{Safaei et~al. 28 J}\\ \textsc{Safaei}, F. ; \textsc{Nguyen},
+  Cong~D.  ; \textsc{Platt}, D.:
+\newblock On the provision of immersive audio communication to massively
+  multi-player online games.
+\newblock {In: }\emph{Computers and Communications, 2004. Proceedings. ISCC
+  2004. Ninth International Symposium on} 2 (28 June-1 July 2004), S.
+  1000--1005 Vol.2
+
+\bibitem[Safaei et~al.(8 10)Safaei, Que, u. Boustead]{safei06b}
+\dinatlabel{Safaei et~al. 8 10}\\ \textsc{Safaei}, F. ; \textsc{Que}, Y.P.  ;
+  \textsc{Boustead}, P.~a.:
+\newblock Minimising the computational cost of providing a mobile immersive
+  communication environment (MICE).
+\newblock {In: }\emph{Consumer Communications and Networking Conference, 2006.
+  CCNC 2006. 3rd IEEE} 2 (8-10 Jan. 2006), S. 1163--1167.
+\newblock  \url{http://dx.doi.org/10.1109/CCNC.2006.1593221}. --
+\newblock DOI 10.1109/CCNC.2006.1593221
+
+\bibitem[Safaei(2005)]{safei05}
+\dinatlabel{Safaei 2005}\\ \textsc{Safaei}, Farzad:
+\newblock DICE: Internet Delivery of Immersive Voice Communication for Crowded
+  Virtual Spaces.
+\newblock {In: }\emph{VR '05: Proceedings of the 2005 IEEE Conference 2005 on
+  Virtual Reality}.
+\newblock Washington, DC, USA : IEEE Computer Society, 2005. --
+\newblock ISBN 0--7803--8929--8, S. 35--41
+
+\bibitem[Safaei u. Boustead(2004)]{safei04}
+\dinatlabel{Safaei u. Boustead 2004}\\ \textsc{Safaei}, Farzad ;
+  \textsc{Boustead}, Paul:
+\newblock Comparison of delivery architectures for immersive audio in crowded
+  networked games.
+\newblock {In: }\emph{NOSSDAV '04: Proceedings of the 14th international
+  workshop on Network and operating systems support for digital audio and
+  video}.
+\newblock New York, NY, USA : ACM, 2004. --
+\newblock ISBN 1--58113--801--6, S. 22--27
+
+\bibitem[Safaei et~al.(2007)Safaei, Boustead, u. Que]{safei07}
+\dinatlabel{Safaei et~al. 2007}\\ \textsc{Safaei}, Farzad ; \textsc{Boustead},
+  Paul  ; \textsc{Que}, Ying~P.:
+\newblock An immersive voice over IP service to wireless gaming: user study and
+  impact of virtual world mobility.
+\newblock {In: }\emph{NetGames '07: Proceedings of the 6th ACM SIGCOMM workshop
+  on Network and system support for games}.
+\newblock New York, NY, USA : ACM, 2007. --
+\newblock ISBN 978--0--9804460--0--5, S. 93--98
+
+\bibitem[Safaei et~al.(2006)Safaei, Que, u. Boustead]{safei06}
+\dinatlabel{Safaei et~al. 2006}\\ \textsc{Safaei}, Farzad ; \textsc{Que},
+  Ying~P.  ; \textsc{Boustead}, Paul:
+\newblock Trading off computation for error in providing immersive voice
+  communications for mobile gaming.
+\newblock   (2006), S.~31.
+\newblock  \url{http://dx.doi.org/http://doi.acm.org/10.1145/1230040.1230041}.
+  --
+\newblock DOI http://doi.acm.org/10.1145/1230040.1230041.
+\newblock ISBN 1--59593--589--4
+
 \bibitem[Schulze(1999)]{schulze99}
 \dinatlabel{Schulze 1999}\\ \textsc{Schulze}, M.:
 \newblock Substitution of paraverbal and nonverbal cues in the written medium
@@ -241,6 +364,37 @@ udy\_2007}  (2007)
 \newblock \emph{A Mathematical Theory of Communication}.
 \newblock Champaign, IL, USA : University of Illinois Press, 1963. --
 \newblock ISBN 0252725484
+
+\bibitem[Singh u. Acharya(2004)]{singh04}
+\dinatlabel{Singh u. Acharya 2004}\\ \textsc{Singh}, Aameek ; \textsc{Acharya},
+  Arup:
+\newblock Using session initiation protocol to build context-aware VoIP support
+  for multiplayer networked games.
+\newblock   (2004), S. 98--105.
+\newblock  \url{http://dx.doi.org/http://doi.acm.org/10.1145/1016540.1016546}.
+  --
+\newblock DOI http://doi.acm.org/10.1145/1016540.1016546.
+\newblock ISBN 1--58113--942--X
+
+\bibitem[Singh u. Acharya(2005)]{singh05}
+\dinatlabel{Singh u. Acharya 2005}\\ \textsc{Singh}, Aameek ; \textsc{Acharya},
+  Arup:
+\newblock Multiplayer networked gaming with the session initiation protocol.
+\newblock {In: }\emph{Comput. Netw.} 49 (2005), Nr. 1, S. 38--51.
+\newblock
+  \url{http://dx.doi.org/http://dx.doi.org/10.1016/j.comnet.2005.04.005}. --
+\newblock DOI http://dx.doi.org/10.1016/j.comnet.2005.04.005. --
+\newblock ISSN 1389--1286
+
+\bibitem[Singh et~al.(2006)Singh, Acharya, Mahadevan, u. Shae]{singh06}
+\dinatlabel{Singh et~al. 2006}\\ \textsc{Singh}, Aameek ; \textsc{Acharya},
+  Arup ; \textsc{Mahadevan}, Priya  ; \textsc{Shae}, Zon-Yin:
+\newblock SPLAT: a unified SIP services platform for VoIP applications:
+  Research Articles.
+\newblock {In: }\emph{Int. J. Commun. Syst.} 19 (2006), Nr. 4, S. 425--444.
+\newblock  \url{http://dx.doi.org/http://dx.doi.org/10.1002/dac.v19:4}. --
+\newblock DOI http://dx.doi.org/10.1002/dac.v19:4. --
+\newblock ISSN 1074--5351
 
 \bibitem[SonyEntertainment(2008)]{home08}
 \dinatlabel{SonyEntertainment 2008}\\ \textsc{SonyEntertainment}:

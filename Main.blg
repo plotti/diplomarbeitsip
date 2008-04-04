@@ -7,6 +7,7 @@ A level-1 auxiliary file: kapitel/kapitel_kommunikation.aux
 A level-1 auxiliary file: kapitel/kapitel_sip.aux
 A level-1 auxiliary file: kapitel/kapitel_network.aux
 A level-1 auxiliary file: kapitel/kapitel_recentwork.aux
+A level-1 auxiliary file: kapitel/kapitel_entwurf.aux
 A level-1 auxiliary file: kapitel/fazit.aux
 The style file: literatur/natdin.bst
 A level-1 auxiliary file: kapitel/erklaerung.aux
@@ -16,9 +17,12 @@ refers to entry "conf/digra/2003", which doesn't exist
 A bad cross reference---entry "Gibbs04a"
 refers to entry "conf/iwec/2004", which doesn't exist
 Warning--I didn't find a database entry for "printout1"
+Warning--I didn't find a database entry for "wadley08"
 Warning--I didn't find a database entry for "triggerhappybuch"
 Warning--I didn't find a database entry for "porter00"
 Warning--I didn't find a database entry for "needed"
+Warning--I didn't find a database entry for "rosenberg02"
+Warning--I didn't find a database entry for "schulzrinne05"
 Warning--I didn't find a database entry for "morse96"
 Warning--I didn't find a database entry for "lau06"
 Warning--I didn't find a database entry for "lau05b"
@@ -42,6 +46,10 @@ Warning--I didn't find a database entry for "kawahara02"
 Warning--I didn't find a database entry for "hu04"
 Warning--I didn't find a database entry for "knutsson04"
 Warning--I didn't find a database entry for "Iimura04"
+Warning--I didn't find a database entry for "bryan05s"
+Warning--I didn't find a database entry for "schulzrinne03"
+Warning--I didn't find a database entry for "triebel07"
+Warning--I didn't find a database entry for "miladinovic-multiparty"
 Warning--I didn't find a database entry for "conf/iwec/2004"
 Warning--I didn't find a database entry for "conf/digra/2003"
 Warning--to sort, need editor, organization, or key in halloran03
