@@ -1,5 +1,5 @@
-This file was created with JabRef 2.2.
-Encoding: Cp1252
+% This file was created with JabRef 2.3.1.
+% Encoding: Cp1252
 
 @INPROCEEDINGS{Gibbs04a,
   author = {Martin R. Gibbs and Kevin Hew and Greg Wadley},
@@ -169,6 +169,17 @@ Encoding: Cp1252
   timestamp = {2008.03.24}
 }
 
+@ARTICLE{4146965,
+  author = {Baset, S. A. and Schulzrinne, H. G.t},
+  title = {An Analysis of the Skype Peer-to-Peer Internet Telephony Protocol},
+  journal = {INFOCOM 2006. 25th IEEE International Conference on Computer Communications.
+	Proceedings},
+  year = {April 2006},
+  pages = {1-11},
+  doi = {10.1109/INFOCOM.2006.312},
+  issn = {0743-166X}
+}
+
 @ARTICLE{bergault94,
   author = {Durand R. Begault},
   title = {3-D sound for virtual reality and multimedia},
@@ -176,6 +187,34 @@ Encoding: Cp1252
   address = {San Diego, CA, USA},
   isbn = {0-12-084735-3},
   publisher = {Academic Press Professional, Inc.}
+}
+
+@ARTICLE{1015507,
+  author = {Ashwin R. Bharambe and Mukesh Agrawal and Srinivasan Seshan},
+  title = {Mercury: supporting scalable multi-attribute range queries},
+  journal = {SIGCOMM Comput. Commun. Rev.},
+  year = {2004},
+  volume = {34},
+  pages = {353--366},
+  number = {4},
+  address = {New York, NY, USA},
+  doi = {http://doi.acm.org/10.1145/1030194.1015507},
+  issn = {0146-4833},
+  publisher = {ACM}
+}
+
+@ARTICLE{566501,
+  author = {Ashwin R. Bharambe and Sanjay Rao and Srinivasan Seshan},
+  title = {Mercury: a scalable publish-subscribe system for internet games},
+  year = {2002},
+  pages = {3--9},
+  address = {New York, NY, USA},
+  booktitle = {NetGames '02: Proceedings of the 1st workshop on Network and system
+	support for games},
+  doi = {http://doi.acm.org/10.1145/566500.566501},
+  isbn = {1-58113-493-2},
+  location = {Bruanschweig, Germany},
+  publisher = {ACM}
 }
 
 @ARTICLE{wow08,
@@ -671,6 +710,9 @@ Encoding: Cp1252
   author = {I. Miladinovic and J. Stadler},
   title = {Multiparty Conference Signalling using the Session Initiation Protocol
 	(SIP)},
+  journal = {International Network Conference},
+  year = {2002},
+  pages = {191-198},
   url = {citeseer.ist.psu.edu/miladinovic02multiparty.html}
 }
 

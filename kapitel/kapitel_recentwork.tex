@@ -1,13 +1,9 @@
 \chapter{Verwandte Arbeiten}
 
 \section{Historische Ansätze}
-%TODO
-DIVE \cite{carlsson93}
-Im SPLINE System von \cite{anderson95} verbinden sich die Clients mit einem zentralen Server der dann für jeden Spieler eines gemischtes Audiostream sendet. %More needed.
-
-Als eines der ersten Ansätze findet sich MiMaze Spiel \cite{diot99} bei dem die Kommunikation zwischen Spieler und Server nativ Mittels TCP statt und zwischen den Spielern untereinander mittels UDP und Multicast Gruppen statt. Dabei wird die Spielewelt auf dem Server verwaltet, jegliche Aktionen im Spiel werden mittels UDP und Multicast zwischen den Spielern ausgetauscht. 
+Als eines der ersten Ansätze findet sich MiMaze Spiel \cite{diot99} bei dem die Kommunikation zwischen Spieler und Server nativ Mittels TCP statt und zwischen den Spielern untereinander mittels UDP und Multicast Gruppen statt. Dabei wird die Spielewelt auf dem Server verwaltet, jegliche Aktionen im Spiel werden mittels UDP und Multicast zwischen den Spielern ausgetauscht.
+In den SPLINE \cite{carlsson93} und DIVER \cite{anderson95} Systemen ist zwar vorgesehen, dass Clients sich mit einem zentralen Server verbinden um Spielerpositionen auszutauschen und einen gemischtes Audiostream der Szene zu erhalten es ist jedoch keine Sprachkommunikation zwischen den Spielern möglich.  
 Bolot und Fosse-Parisis versuchen in \cite{bolot98} in einem Entwurf die bestehende Architektur des MiMaze Spiels um die Sprachkommunikation zu erweitern. Dazu schlagen sie vor das das RTP und RTCP Protokoll einzusetzen und die empfangenen Audioströme auf den Clients zu lokalisieren. Aufgrund der schwierigen Koordination der Audioströme und deren Synchronisation mit der Spielewelt bleibt der Einsatz von Sprachkommunikation in Computerspielen zunächst ein Entwurf. 
-
 
 \section{Serverbasierte Ansätze}
 
@@ -45,15 +41,12 @@ In einem anderen zentralisierten Ansatz \cite{schulzrinne02} schlagen Schukzrinn
 
 In \cite{schulzrinne03} \cite{schulzrinne99} schlagen Schulzrinne et. Al ein verteiltes dezentralisiertes Protokoll vor in dem alle Teilnehmer ein komplett verbundenes Netz bilden in dem jeder Teilnehmer mit jedem anderen Teilnehmer verbunden ist. Dazu überträgt jeder Teilnehmer seinen Adudiostream an alle anderen Teilnehmer, die dann lokal das Abmischen vornehmen. Um den Ansatz zu testen, simulieren sie ein solches Netz in verschiedenen Szeniarien in denen Teilnehmer das Konferenzen betreten, verlassen oder andere Teilnehmer zu Konferenzen einladen. Die Teilnehmer selbst haben keinerlei Information über die Topologie des Netzes und so können nur durch das rekursive Eiladen von Teilnehmern ein komplettes Netz gebildet werden. Das Hauptproblem dabei ist, dass dadurch eine Vielzahl an Ereignismöglichkeiten existiert die eintreten können. Schon bei vier Teilnehmern evaluieren sind über 50 Möglichkeiten einzig aus den genannten Permutationen möglich. 
 
-Radenkovic, Grennhalgh und Benford diskutieren  in \cite{radenkovic02} den Einsatz des DPM (Distributed Partial Mixing) dass sich vom zentralsierten Antzansatz des Mischens indem abhebt, dass hier mehrere dedizierte Mixer nur die Audiostreams abmischen, die tatsächlich auch vom Teilnehmer benutzt werden. Dies soll mit einerseits Ermöglichen eine Vielzahl an Audioströmen zu verwalten und andereseits die Überlastung Netzwerks zu vermeiden. Dazu werden im Netzwerk dedizierte Mixer eingesetzt die zunächst die Audioströme der Clients entgegennehmen. Diese selbst sind alle miteinander in einer Baumstruktur verbunden. Je nach Konnektivität und Bandbreite der Mixer untereinander entscheiden diese ob ein Zusammenmischen der Audioströme notwendig ist, oder alle Audioströme ungemischt weitergeleitet werden können. Da der Ansatz auf Multicast Gruppen basiert ist zwar in LANs umsetzbar im Internet jedoch aufgrund der Fehlenden Multicast Unterstützung nur bedingt einsetzbar. 
+Radenkovic, Grennhalgh und Benford diskutieren  in \cite{radenkovic02} den Einsatz eines DPM (Distributed Partial Mixing) das sich vom zentralsierten Antzansatz des Mischens dadurch abhebt, dass hier mehrere dedizierte Mixer nur solche Audiostreams abmischen, die tatsächlich auch vom Teilnehmer benutzt werden. Dies soll mit einerseits Ermöglichen eine Vielzahl an Audioströmen zu verwalten und andereseits die Überlastung Netzwerks zu vermeiden. Dazu werden im Netzwerk dedizierte Mixer eingesetzt die zunächst die Audioströme der Clients entgegennehmen. Diese selbst sind alle miteinander in einer Baumstruktur verbunden. Je nach Konnektivität und Bandbreite der Mixer untereinander entscheiden diese ob ein Zusammenmischen der Audioströme notwendig ist, oder alle Audioströme ungemischt weitergeleitet werden können. Da der Ansatz auf Multicast Gruppen basiert ist zwar in LANs umsetzbar im Internet jedoch aufgrund der Fehlenden Multicast Unterstützung nur bedingt einsetzbar. 
 
 Gu, Yu und Shae schlagen ein dezentrales System vor \cite{gu05} in dem sie die Verarbeitung des Audiostreams in zwei Phasen der Aggregation und Distribution aufteilen. Dabei verstehen sie unter Aggregation das zusamenmischen der Audioströme und unter Distribution die Verteilung der gemischten Audioströme auf die einzelnen Clients. Dazu existiert zuächst ein initialer Mischknoten der das Abmischen vornimmt, falls er jedoch überlastet ist zusätzliche Kinder Mischknoten ernennen kann, die Arbeit übernehmen. Dabei können Mischknoten falls sie unterlastet sind ihre Aufgabe an den Vaterknoten wieder abgeben. Hauptnachteil dieser Methode ist dass jederzeit alle Knoten über die Topologie des Netzes informiert sein müssen und jederzeit den den optimalen Mixer Knoten der Multicast Gruppe kennen der die kürzesten Wege im Netz besitzt außerdem die Verteilung des Audiostreams nicht gelöst wird. 
 
 
-\subsection{Work of Tonio Triebel -- Skype for Games }
-	\cite{triebel07}
+In \cite{miladinovic-multiparty} diskutieren Stadler and Miladinovic sowohl den serverbasierten als auch eine dezentralen Einsatz von SIP für Konferenzen vor. Dazu führen sie einen SIP Nachrichtentyp CONF ein der vom Server an alle Teilnehmer der Konferenz verschickt wird und alle Namen und den Status aller Konferenzteilnehmer enthält. Im serverbasierten Ansatz werden die Audioströme auf dem Konferenzserver gemischt und an die Teilnehmer versendet, im dezentralen Ansatz wird zwischen den Teilnehmern eine full-mesh Topologie aufgebaut. Problematisch bei diesem Ansatz ist jedoch dass Clients nur Teilnehmer einer Konferenz sein können und auch ein nahtloser Wechsel zwischen Konferenzen nicht möglich ist. 
 
-\subsection{Work of Stadler and Miladinovic}
-	%unpublished
-	\cite{miladinovic-multiparty} 
+	
 	
