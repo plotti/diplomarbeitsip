@@ -1,50 +1,19 @@
-\documentstyle{article}
-\begin{document}  
-  
-\section{Recent Work}
-\subsection {Analyse der bestehenden Architekturen für Audioübertragung}
-
-In einer Studie vergleichen Safei und Boustead Architekturen für sinnstimulierende (immersive) Audio Kommunikation in Mehrspieler Netzwerk Spielen. Dabei ist unter sinnstimuliernd zu verstehen dass jeder Spieler eine eine Mischung aus Stimmen und Geräuschen hören soll die speziell auf seine Position im Spiel angepasst ist und nicht nur die Lautstärke als auch die Position der Geräusche im Klangbild spezifiziert wird. 
-
-In einer Peer-to peer Architektur wird die Audioszene lokal erzeugt, nachdem man sämtliche Sprachquellen der der anderen Spieler erhalten hat. Der Hauptvorteil dieser Architektur liegt darin dass ein niedriger Delay auftritt, da die im optimalen Fall die Verbindung immer die kürzesten Wege zwischen den einzelnen Spielern etabliert wird. Zusätzlich nutzt man die freie Rechenleistung in den Knoten um das Abmischen der Audioszene vorzunehmen und man verfügt potenziell über eine Architektur die keinen single Point of Failure besitzt.  Der Hauptnachteil ist dass die Bandbreite der einzelnen Knoten im Peer-to-Peer die Anzahl der möglichen Verbindungen limitiert. 
-%BILD
-
-
-In einer Zentralisierten Lösungen wird der Audiostrom von jedem der Teilnehmer an einen zentralen Server gesendet. Mithilfe der Positionsdaten der Spieler wird die Audioszene zentral erzeugt. Diese wird danach an die jeweiligen Spieler gesendet. Die Hauptvorteile sind eine bessere Skalierbarkeit dadurch dass jeder Knoten auch mit beschränkter Bandbreite in der Lage ist teilzuhemen. Der Nachteil jedoch beim einsatz eines Zentralen servers ist dass für die Teilnehmer große Delays auftreten können wenn sie physikalisch weit vom Server entfernt sind. Zusätzlich ist die Kapazität des zentralen Servers Flaschenhals die sich im Grad von $O(N^2)$ erschöpft ein Flaschenhals. 
-% BILD
-
-In einer Proxy Lösung exitieren Server die sich weltweit verteilt immer eine geringe Entfernung zum Teilnehmer ermöglichen sollen. Diese Emfpangen die Audioströme, mischen diese ab und schicken sie zuürck an die jeweiligen Spieler. Die Proxys untereinader können ebenfalls Audioströme an weitere Proxys weiterleiten, falls diese benötigt werden. Im Gegensatz zur Peer-To-Peer Architektur können durch den Einsatz von dedizierten Proxys mit guter Anbindung Bandbreitenprobleme minimiert werden. Der Nachteil ist jedoch dass keine Korelation zur Position der Spieler in der Welt und den genutzten Proxys existiert, so dass nur Spieler die sich den gleichen Proxy benutzen und im Spiel ebenfalls Teil der gleichen Audioumgebung sind davon profitieren können. 
-
-In einer verteilten Server Lösung ist jeder zentrale Server nur für einen Teil der Spielewelt verantwortlich. So nutzen Spieler die sich in der gleichen virtuellen Umgebung den gleichen Server, der Ihre Audiodaten abmischt. Dieser Ansatz kann die Auftretenden Bandbreite einer zentralisierten Lösung zwar reduzieren, in dem die Last auf mehrere Server verteilt wird, bringt aber neue Probleme beim Übergang von einem Server zum anderen: Wenn Teilnehmer während dem Spiel die Spielzone wechseln und die Audioszene nun von einem anderen Server abgemischt werden soll. 
-
-Im Ansatz einer Hybrid Architektur senden die Teilnehmer ihre Audioströme zwar an einen zentralisierten Server, können aber bei Bedarf ihre Audioströme direkt austauschen, wenn die indirekte Route über den Server zu zu hohen Verzögerungen führen würde. 
-
-
-Safei und Boustead führen in einer Vergleichenden Studien \cite{safei04} \cite{safei04b} den Begriff des Interaktiven Delays ein, und die Parameter der Korrelation zwischen der physischen und virtuellen Welt sowie der Dichte und Verteilung von Avataren ein. 
-
-Als interaktiver Delay wird der mittlere Delay zwischen der Audioquelle und allen Zuhörern verstanden. 
-
-	\[	
-	\frac{\sum ^{N}_{i=1} d(m,n_{i})} {\sum ^{N}_{i=1} n_{i}}
-\]
-
-Die Korrelation zwischen der physischen und virtuellen Welt, zwischen 0 und 1, gibt an wie hoch die Wahrscheinlichkeit ist dass Spieler sowohl physikalisch als auch virtuell sich in der Nähe befinden. Eine Korrelation von 0 bedeutet dass die Avatare in der virtuellen Welt nicht mit der Lokation der Spieler in der physischen Welt korreliert ist. 
-
-Die Dichte der Avatare gibt an wie viele Avatare sich in der Hörnähe des Spielers befinden. 
-
-Die Verteilung der Avatare kann entweder uniform sein, bei der die Spieler zufällig gelichmäßig in der virtuellen Welt verteilt sind oder auch einzelne Ballungszentren besitzen. Dabei werden zuällig Ballungszentren verteilt und um diese mit hoher Dichte zum Ballungszentrum Avatare zuällig verteilt.
-
-In Simulationen \cite{safei04} der oben genannten der Architekturen wurden der Einfluss der Parameter der Korrelation und Dichte auf das interaktive Delay und die Netzwerklast untersucht. Die Resultate der Simulation zeigten, das bei einem zentralisiertem Modell die Korrelation der Avatare keinen Einfluss auf den interaktiven Delay hatte. In einer verteilten Server Lösung war mit zunehmender Korelation eine Reduzierung des Delays erzielt worden. Die Peer-to-Peer Architektur dominierte alle anderen Lösungen mit dem geringsten Delay, der unabhängig von der Korrelation immer konstant klein verblieb. 
-Die Zunehmende Dichte der Avatare bei zentralisierten Lösungen hatte keinen signifikanten Einfluss auf die Netzwerkalast. Bei Peer-to-Peer Architekturen stieg diese zwar zuerst exponentiell an, konvergierte jedoch schnell gegen einen Mittelwert, da nicht die Anzahl der Teilnehmer erhöht wurde sondern nur die Dichte. Die geringste Netzwerklast zeigte die verteilte Server Lösung wobei die Simulation die Dichte speziell in den entsprechenden Zonen erhöhte. 
+\chapter{Verwandte Arbeiten}
 
 \section{Historische Ansätze}
+%TODO
+DIVE \cite{carlsson93}
+Im SPLINE System von \cite{anderson95} verbinden sich die Clients mit einem zentralen Server der dann für jeden Spieler eines gemischtes Audiostream sendet. %More needed.
+
 Als eines der ersten Ansätze findet sich MiMaze Spiel \cite{diot99} bei dem die Kommunikation zwischen Spieler und Server nativ Mittels TCP statt und zwischen den Spielern untereinander mittels UDP und Multicast Gruppen statt. Dabei wird die Spielewelt auf dem Server verwaltet, jegliche Aktionen im Spiel werden mittels UDP und Multicast zwischen den Spielern ausgetauscht. 
 Bolot und Fosse-Parisis versuchen in \cite{bolot98} in einem Entwurf die bestehende Architektur des MiMaze Spiels um die Sprachkommunikation zu erweitern. Dazu schlagen sie vor das das RTP und RTCP Protokoll einzusetzen und die empfangenen Audioströme auf den Clients zu lokalisieren. Aufgrund der schwierigen Koordination der Audioströme und deren Synchronisation mit der Spielewelt bleibt der Einsatz von Sprachkommunikation in Computerspielen zunächst ein Entwurf. 
 
 
-\section{DICE: Internet Delivery of Immersive Voice Communication for Crowded Virtual Spaces}
+\section{Serverbasierte Ansätze}
 
-Im DICE System \cite{safei05} schlagen Safei und Boustead einen Entwurf einer serverbasierten Architektur für die Sprachkommunikation für Mehrspiler Spiele im Internet vor. Dabei soll jeder Spieler  eine eine Mischung aus Stimmen und Geräuschen hören soll die speziell auf seine Position im Spiel angepasst ist und nicht nur die Lautstärke als auch die Position der Geräusche im Klangbild spezifiziert wird. 
+\subsection{DICE: Internet Delivery of Immersive Voice Communication for Crowded Virtual Spaces}
+
+Im DICE System \cite{safei05} schlagen Safei und Boustead einen Entwurf einer serverbasierten Architektur für die Sprachkommunikation für Mehrspieler Spiele im Internet vor. Dabei soll jeder Spieler  eine eine Mischung aus Stimmen und Geräuschen hören soll die speziell auf seine Position im Spiel angepasst ist und nicht nur die Lautstärke als auch die Position der Geräusche im Klangbild spezifiziert wird. 
 Dabei bauen sie auf ihren vorhergehenden Studien auf und folgern, dass ein solches System auf einem verteiltem Server System aufbauen muss \cite{safei04} um die Delay Anfoderungen zu erfüllen. 
 
 Die Elemente des Systems bestehen aus einem Audio Client der seinen mono Audiostream an den Scene Creation Server schickt, und Audiostreams von diesem empfängt, die er Anhand der Postionen der Avatare im Spiel räumlich positioniert.  Dabei wird das räumliche Umfeld jedes Spielers in Cluster eingeteilt, die Spieler beinhalten deren Entfernung und Winkel zum Spieler ähnlich sind. 
@@ -53,12 +22,12 @@ Die Rolle des Scene Creation Servers besteht aus dem zusammenmischen aller einge
 
 Der Scene Creation Server wird dabei vom drunterliegenden Control Server kontrolliert, der darüber entscheidet welche Audiostreams an den Audio Client geschickt werden sollen, damit dieser in der Lage ist die Aduioszene zu erzeugen. Um den Algorithmus zu verbessern erlauben sie einen maximalen Distanz und Winkelfehler der zwar die Qualität der exakten Positionierung vermindert, aber es erlaubt mehrere Spieler in das gleiche Cluster zu mischen. 
 
-\section{MICE: Mobile Immersice Communication Environment}
+\subsection{MICE: Mobile Immersice Communication Environment}
 
 Das MICE System \cite{safei06b} von Safei und Boustead zielt auf den Entwurf einer serverbasierten Sprachkommunikation für Mehrspieler Spiele die auf mobilen Endgeräten zum Einsatz kommen, die über eine geringe Bandbreite und Rechenleistung verfügen.  Dabei ist der Ansatz ähnlich dem DICE System, da auch jeder Spieler seine Monoquelle an den Server sendet. Der Unterschied zum DICE System besteht daraus, dass die Erzeugung der Audioszene komplett auf dem Server geschieht und nur das fertige Resultat als stereo Aduiostream an den Client übertragen wird. 
 Dazu wird Mittels HRTF (Head Related Transfer Function) \cite{bergault94}, einer Technik die es erlaubt Klänge im dreidimensionalen Raum zu positionieren eine Audioszene erzeugt. Für das rechte und linke Ohr werden jeweils zwei verschiedene Signale erzeugt, aus deren Unterschied das menschliche Ohr die Quelle im Raum positionieren kann. Für die Erzeugung einer Audioszene für einen Spieler, benötigt man für die Berechnung der HRTF Funktion die Richtungsvektoren aller Quellen. Ähnlich wie im DICE Ansatz schlagen Safei und Boustead vor ein Clustering vorzunehmen und für Spieler mit ähnlicher Position und Richtungsvektor einen Gesammtrichtungsvektor zu benutzen. Dadurch entsteht auch wie beim DICE System ein Distanz- und Winkelfehler den sie jedoch mit Hilfe eines Linearen Optimierungsproblems unter einen expermimentell festgelegten Schwellwert minimieren. Dieser Schwellwert wird für Audioquellen niedriger gesetzt als für Quellen die weit entfernt sind da Untersuchungen gezeigt haben dass in Abhäniggkeit von der Enfernung ein verschieden großer Fehler von Probanten akzeptiert wird \cite{safei06} \cite{safei07}. Dabei wurden 27 die Ergebnisse Probanten Anhand des Standardisierten Mean Opition Score \cite{mtu96} analysiert und festgestellt das Unterschiede bis zu 35 $\circ$ Grad akzeptiert. In einer weiteren Studie schlagen Safaei und Downlatshahi vor die zentralisierte Server Architektur durch eine Anzahl an lokalen Proxies zu ersetzen, die selbst in einem Multicast Overlay verbunden sind \cite{safaei06}. 
 
-\section{Session Initiation Protocol for Multiplayer Networked Games}
+\subsection{Session Initiation Protocol for Multiplayer Networked Games}
 
 Singh und Acharya schlagen ein auf dem Session Initiation Protocoll  basiertes System vor um VoiP in Mehrspieler Spielen zu realisieren \cite{singh04}. Dazu führen sie einen Konferenz Server ein, der eng mit dem Spieleserver zusammenarbeitet. Der Konferenzserver kontrolliert und initiert die Sitzungen für alle Spielteilnehmer und verwaltet ebenfalls die Mixerkomponente des Systems die zuständig ist für das dedizierte mischen der Verschiedenen Audioströme. Dabei wird die Konferenz zwischen den Clients und dem Konferenzserver initiert, der Datenstrom selbst jedoch fließt zwischen dem Mixer und den Clients. 
 In einem zentralisierten Ansatz schlagen vor das Spielfeld in mehrere Zonen aufzuteilen für die im Konferenzserver Konferenzen reserviert werden. Die Spielelogik auf dem Spieleserver sorgt dafür dass Spieler diese Konferenzen in Abhängigkeit ihrer Position auf dem Spielfeld betreten. 
@@ -68,23 +37,26 @@ Im dynamischen Ansatz wird in Abhängigkeit der Position des Spielers vom Gameser
 
 In einer fortführenden Studien \cite{singh05} \cite{singh06} diskutieren Singh und Archaya eine Erweiterungen des SIP Ansatzes, für interpersonelle Konferenzen. Sie schlagen vor ihr bestehendes System so zu erweitern, dass jeder Spieler seine eigene Konferenz auf dem Server besitzt die speziell nur für Ihn alle Stimmen in seiner Hörnähe enthält und eine weitere Konferenz die seine Stimme für andere Spieler enthält. Wichtig hierbei ist dass der Spieler zwar sein Audiosignal an die zweite Konferenz sendet, dieses aber nicht hören will da es sich nur um seine eigene Stimme handelt. Das gewünschte Verhalten für die zweite Konferenz ähnelt einer Ein-Weg-Konferenz. Da SDP jedoch keine Ein-Weg-Konferenzen erlaubt, wäre erst in einem Erweiterten SIP Standard dieses Szenario vorstellbar. Ebenso schlagen sie vor, dass die Lautstärke des Audiostreams von Spielern in der Hörnähe in Abhängigkeit von ihrer Distanz variert werden soll. Ein ungelöstes Probleme bei diesem Ansatz bleibt jedoch die Komponente des Mixers der in der Lage sein müsste Distanzvektoren in den Mischvorgang einzubeziehen. 
 
+\subsection{SIP und SOAP basiertes Konferenzframework}
+In einem anderen zentralisierten Ansatz \cite{schulzrinne02} schlagen Schukzrinne und Koskelainen ein Framework zur Kontrolle von Konferenzen vor das auf den SIP und SOAP( Simple Object Access Protocol) Standards basiert. Während SOAP für die Kontrolle der Konferenzen verwendet wird findet der Aufbau der einzelnen Sitzungen im SIP Protokoll statt. 
+
+
 \section{Dezentralisierte Ansätze}
 
 In \cite{schulzrinne03} \cite{schulzrinne99} schlagen Schulzrinne et. Al ein verteiltes dezentralisiertes Protokoll vor in dem alle Teilnehmer ein komplett verbundenes Netz bilden in dem jeder Teilnehmer mit jedem anderen Teilnehmer verbunden ist. Dazu überträgt jeder Teilnehmer seinen Adudiostream an alle anderen Teilnehmer, die dann lokal das Abmischen vornehmen. Um den Ansatz zu testen, simulieren sie ein solches Netz in verschiedenen Szeniarien in denen Teilnehmer das Konferenzen betreten, verlassen oder andere Teilnehmer zu Konferenzen einladen. Die Teilnehmer selbst haben keinerlei Information über die Topologie des Netzes und so können nur durch das rekursive Eiladen von Teilnehmern ein komplettes Netz gebildet werden. Das Hauptproblem dabei ist, dass dadurch eine Vielzahl an Ereignismöglichkeiten existiert die eintreten können. Schon bei vier Teilnehmern evaluieren sind über 50 Möglichkeiten einzig aus den genannten Permutationen möglich. 
 
-
 Radenkovic, Grennhalgh und Benford diskutieren  in \cite{radenkovic02} den Einsatz des DPM (Distributed Partial Mixing) dass sich vom zentralsierten Antzansatz des Mischens indem abhebt, dass hier mehrere dedizierte Mixer nur die Audiostreams abmischen, die tatsächlich auch vom Teilnehmer benutzt werden. Dies soll mit einerseits Ermöglichen eine Vielzahl an Audioströmen zu verwalten und andereseits die Überlastung Netzwerks zu vermeiden. Dazu werden im Netzwerk dedizierte Mixer eingesetzt die zunächst die Audioströme der Clients entgegennehmen. Diese selbst sind alle miteinander in einer Baumstruktur verbunden. Je nach Konnektivität und Bandbreite der Mixer untereinander entscheiden diese ob ein Zusammenmischen der Audioströme notwendig ist, oder alle Audioströme ungemischt weitergeleitet werden können. Da der Ansatz auf Multicast Gruppen basiert ist zwar in LANs umsetzbar im Internet jedoch aufgrund der Fehlenden Multicast Unterstützung nur bedingt einsetzbar. 
-
 
 Gu, Yu und Shae schlagen ein dezentrales System vor \cite{gu05} in dem sie die Verarbeitung des Audiostreams in zwei Phasen der Aggregation und Distribution aufteilen. Dabei verstehen sie unter Aggregation das zusamenmischen der Audioströme und unter Distribution die Verteilung der gemischten Audioströme auf die einzelnen Clients. Dazu existiert zuächst ein initialer Mischknoten der das Abmischen vornimmt, falls er jedoch überlastet ist zusätzliche Kinder Mischknoten ernennen kann, die Arbeit übernehmen. Dabei können Mischknoten falls sie unterlastet sind ihre Aufgabe an den Vaterknoten wieder abgeben. Hauptnachteil dieser Methode ist dass jederzeit alle Knoten über die Topologie des Netzes informiert sein müssen und jederzeit den den optimalen Mixer Knoten der Multicast Gruppe kennen der die kürzesten Wege im Netz besitzt außerdem die Verteilung des Audiostreams nicht gelöst wird. 
 
 
+\subsection{Work of Tonio Triebel -- Skype for Games }
+	\cite{triebel07}
 
-\section{Minor Contributions}
-In einem anderen zentralisierten Ansatz \cite{schulzrinne02} schlagen Schukzrinne und Koskelainen ein Framework zur Kontrolle von Konferenzen vor das auf den SIP und SOAP( Simple Object Access Protocol) Standards basiert. Während SOAP für die Kontrolle der Konferenzen verwendet wird findet der Aufbau der einzelnen Sitzungen im SIP Protokoll statt. 
-
-
+\subsection{Work of Stadler and Miladinovic}
+	%unpublished
+	\cite{miladinovic-multiparty} 
+	
+	
 \end{document}
 
-My focus:
-Audio management that restricts the use of the audio channel, including explicit and implicit floor control , and control actions like push to talk. 

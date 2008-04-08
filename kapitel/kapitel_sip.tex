@@ -37,6 +37,14 @@ Da die einzelnen IP-Pakete auf einer Verbindung zwischen IP-Telefonen in der Reg
 
 Die Verluste von IP-Paketen mit Sprache während der Übermittlung mindern die Qualität ebenso. Die Anzahl der Paketverluste in einer bestimmten Zeitperiode wird mit dem Parameter Paketverlustrate angegeben. Paketverluste können durch überlastete Router im IP-Netz oder auch durch einen "`schlecht"'  dimensionierten Jitter-Ausgleichspuffer entstehen. Im Gegensatz zu reinen Datenanwendungen, ist der Verlust eines IP-Pakets bei der Sprachübertragung nciht besonders tragisch. Zu viele Paketverluste jedoch machen sich in einem Telefongespräch allerdings sehr störend als Unterbrechungen bemerkbar. 
 
+Da die Sprachkommunikation in Echtzeit verläuft, gilt die Wiedergabe eines Sprachsignals am Ziel asl qualitativ schlecht, wenn sie einem zu großen Zeitverzug erfolgt. Für die Ende-zu-Ende-Verzögerung $T_{EE}$(End-to-End-Delay) des Sprachsignals werden daher Grenzwerte gesetzt. Nach dem ITU-T-Dokument G.114 wird die VoIP-Qualität wie flogt klassifiziert:
+\begin{itemize}
+	\item $T_{EE}$ kleiner als 150ms: akzeptabel für alle Benutzer,
+	\item $T_{EE}$ zwischen 150ms und 300ms: akzeptabel, aber mit Einschränkungen (nicht für empfindliche Benutzer), 
+	\item $T_{EE}$ größer als 300ms: nicht akzeptabel. 
+\end{itemize}
+
+
 \subsection{VoIP-relevante Sprachcodierungsverfahren}
 Es gibt mehrere Sprachcodierungsverfahren, die bei VoIP verwendet werden können. Man unterscheided zwischen Abtastwert-orientierten Codierungsverfahren die zwar gute Sprachqualität garantieren aber Bitraten haben die größer als 16kbit/s sind und Segment-orientierten Codierungsverfahren die zwar geringe Bitraten haben aber dafür nure einer schlecht bis guten Sprachqualität bieten. 
 Obwohl die Qualität quantitativ durch Parameter wie die Laufzeit der IP-Pakete(Delay), die Laufzeitunterschiede(Jitter) und die Verlustrate von IP-Paketen im Netz beinflusst wird, sagen diese Parameter nichts über die eigentliche Sprachqualität aus. Die eigentliche Sprachqualität wird nach der MOS (Mean Opinion Score) - Skala  gemessen. Diese unterscheidet Aspekte wie Verständlichkeit der Sprache, Akzeptanz der Lautstärke sowie die Akzeptanz der Laufzeitschwankungen und Echos. 
