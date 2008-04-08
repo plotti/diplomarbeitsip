@@ -1,47 +1,59 @@
 \chapter{Verwandte Arbeiten}
 
-\section{Work of Farzad Safei and Paul Boustead}
-	\cite{safei04}
-	\cite{safei04b}
-	\cite{safei06b}
-	\cite{safei05}
-	\cite{safei06}
-	\cite{safei07}
+\section{Historische Ansätze}
+%TODO
+DIVE \cite{carlsson93}
+Im SPLINE System von \cite{anderson95} verbinden sich die Clients mit einem zentralen Server der dann für jeden Spieler eines gemischtes Audiostream sendet. %More needed.
 
-\section{Work of Kevin Hew, Martin Gibbs, Greg Wadley}
-	\cite{gibbs06}
-	\cite{Gibbs04a}
-	\cite{gibbs04}
-	
-\section{Work of Aameek Singh -- SIP for Games}
-	\cite{singh04}
-	\cite{singh05}
-	\cite{singh06}
-	
-\section{Work of Schulzrinne -- Full mesh conferencing}
-	\cite{schulzrinne02}
-	\cite{schulzrinne03}
-	\cite{schulzrinne05}
-			
-\section{Minor Contributions}
+Als eines der ersten Ansätze findet sich MiMaze Spiel \cite{diot99} bei dem die Kommunikation zwischen Spieler und Server nativ Mittels TCP statt und zwischen den Spielern untereinander mittels UDP und Multicast Gruppen statt. Dabei wird die Spielewelt auf dem Server verwaltet, jegliche Aktionen im Spiel werden mittels UDP und Multicast zwischen den Spielern ausgetauscht. 
+Bolot und Fosse-Parisis versuchen in \cite{bolot98} in einem Entwurf die bestehende Architektur des MiMaze Spiels um die Sprachkommunikation zu erweitern. Dazu schlagen sie vor das das RTP und RTCP Protokoll einzusetzen und die empfangenen Audioströme auf den Clients zu lokalisieren. Aufgrund der schwierigen Koordination der Audioströme und deren Synchronisation mit der Spielewelt bleibt der Einsatz von Sprachkommunikation in Computerspielen zunächst ein Entwurf. 
+
+
+\section{Serverbasierte Ansätze}
+
+\subsection{DICE: Internet Delivery of Immersive Voice Communication for Crowded Virtual Spaces}
+
+Im DICE System \cite{safei05} schlagen Safei und Boustead einen Entwurf einer serverbasierten Architektur für die Sprachkommunikation für Mehrspieler Spiele im Internet vor. Dabei soll jeder Spieler  eine eine Mischung aus Stimmen und Geräuschen hören soll die speziell auf seine Position im Spiel angepasst ist und nicht nur die Lautstärke als auch die Position der Geräusche im Klangbild spezifiziert wird. 
+Dabei bauen sie auf ihren vorhergehenden Studien auf und folgern, dass ein solches System auf einem verteiltem Server System aufbauen muss \cite{safei04} um die Delay Anfoderungen zu erfüllen. 
+
+Die Elemente des Systems bestehen aus einem Audio Client der seinen mono Audiostream an den Scene Creation Server schickt, und Audiostreams von diesem empfängt, die er Anhand der Postionen der Avatare im Spiel räumlich positioniert.  Dabei wird das räumliche Umfeld jedes Spielers in Cluster eingeteilt, die Spieler beinhalten deren Entfernung und Winkel zum Spieler ähnlich sind. 
+
+Die Rolle des Scene Creation Servers besteht aus dem zusammenmischen aller eingehenden Streams eines Clusters und dem weiterleiten von diesem an den ensprechenden Audioclient inklusive der Positionsinformationen dieses Clusters. 
+
+Der Scene Creation Server wird dabei vom drunterliegenden Control Server kontrolliert, der darüber entscheidet welche Audiostreams an den Audio Client geschickt werden sollen, damit dieser in der Lage ist die Aduioszene zu erzeugen. Um den Algorithmus zu verbessern erlauben sie einen maximalen Distanz und Winkelfehler der zwar die Qualität der exakten Positionierung vermindert, aber es erlaubt mehrere Spieler in das gleiche Cluster zu mischen. 
+
+\subsection{MICE: Mobile Immersice Communication Environment}
+
+Das MICE System \cite{safei06b} von Safei und Boustead zielt auf den Entwurf einer serverbasierten Sprachkommunikation für Mehrspieler Spiele die auf mobilen Endgeräten zum Einsatz kommen, die über eine geringe Bandbreite und Rechenleistung verfügen.  Dabei ist der Ansatz ähnlich dem DICE System, da auch jeder Spieler seine Monoquelle an den Server sendet. Der Unterschied zum DICE System besteht daraus, dass die Erzeugung der Audioszene komplett auf dem Server geschieht und nur das fertige Resultat als stereo Aduiostream an den Client übertragen wird. 
+Dazu wird Mittels HRTF (Head Related Transfer Function) \cite{bergault94}, einer Technik die es erlaubt Klänge im dreidimensionalen Raum zu positionieren eine Audioszene erzeugt. Für das rechte und linke Ohr werden jeweils zwei verschiedene Signale erzeugt, aus deren Unterschied das menschliche Ohr die Quelle im Raum positionieren kann. Für die Erzeugung einer Audioszene für einen Spieler, benötigt man für die Berechnung der HRTF Funktion die Richtungsvektoren aller Quellen. Ähnlich wie im DICE Ansatz schlagen Safei und Boustead vor ein Clustering vorzunehmen und für Spieler mit ähnlicher Position und Richtungsvektor einen Gesammtrichtungsvektor zu benutzen. Dadurch entsteht auch wie beim DICE System ein Distanz- und Winkelfehler den sie jedoch mit Hilfe eines Linearen Optimierungsproblems unter einen expermimentell festgelegten Schwellwert minimieren. Dieser Schwellwert wird für Audioquellen niedriger gesetzt als für Quellen die weit entfernt sind da Untersuchungen gezeigt haben dass in Abhäniggkeit von der Enfernung ein verschieden großer Fehler von Probanten akzeptiert wird \cite{safei06} \cite{safei07}. Dabei wurden 27 die Ergebnisse Probanten Anhand des Standardisierten Mean Opition Score \cite{mtu96} analysiert und festgestellt das Unterschiede bis zu 35 $\circ$ Grad akzeptiert. In einer weiteren Studie schlagen Safaei und Downlatshahi vor die zentralisierte Server Architektur durch eine Anzahl an lokalen Proxies zu ersetzen, die selbst in einem Multicast Overlay verbunden sind \cite{safaei06}. 
+
+\subsection{Session Initiation Protocol for Multiplayer Networked Games}
+
+Singh und Acharya schlagen ein auf dem Session Initiation Protocoll  basiertes System vor um VoiP in Mehrspieler Spielen zu realisieren \cite{singh04}. Dazu führen sie einen Konferenz Server ein, der eng mit dem Spieleserver zusammenarbeitet. Der Konferenzserver kontrolliert und initiert die Sitzungen für alle Spielteilnehmer und verwaltet ebenfalls die Mixerkomponente des Systems die zuständig ist für das dedizierte mischen der Verschiedenen Audioströme. Dabei wird die Konferenz zwischen den Clients und dem Konferenzserver initiert, der Datenstrom selbst jedoch fließt zwischen dem Mixer und den Clients. 
+In einem zentralisierten Ansatz schlagen vor das Spielfeld in mehrere Zonen aufzuteilen für die im Konferenzserver Konferenzen reserviert werden. Die Spielelogik auf dem Spieleserver sorgt dafür dass Spieler diese Konferenzen in Abhängigkeit ihrer Position auf dem Spielfeld betreten. 
+In einem Dezentralisierten Ansatz enthalten die Clients die Spielelogik die sie veranlasst entsprechend mit dem Konferenzserver Konferenzen zu initiieren. 
+In beiden Fällen wird zwischen einem statischen und dynamischen Ansatz unterschieden. Im statischen Ansatz existiert eine Konferenz für jedes Team, die vom ersten Teilnehmer der Konferenz initiiert wird und während der gesamten Spielzeit aufrechterhalten wird. 
+Im dynamischen Ansatz wird in Abhängigkeit der Position des Spielers vom Gameserver der Konferenzserver veranlasst den Spieler in eine entsprechende Konferenz zu verbinden. So können für verschiedene Räume oder Orte verschiedene Konferenzen existieren. Dabei findet der Übergang von einer Konferenz zur anderen für den Spieler selbst nahtlos statt, da die Signalisierung nur zwischen Gameserver und Konferenzserver bzw. Mixer stattfindet. 
+
+In einer fortführenden Studien \cite{singh05} \cite{singh06} diskutieren Singh und Archaya eine Erweiterungen des SIP Ansatzes, für interpersonelle Konferenzen. Sie schlagen vor ihr bestehendes System so zu erweitern, dass jeder Spieler seine eigene Konferenz auf dem Server besitzt die speziell nur für Ihn alle Stimmen in seiner Hörnähe enthält und eine weitere Konferenz die seine Stimme für andere Spieler enthält. Wichtig hierbei ist dass der Spieler zwar sein Audiosignal an die zweite Konferenz sendet, dieses aber nicht hören will da es sich nur um seine eigene Stimme handelt. Das gewünschte Verhalten für die zweite Konferenz ähnelt einer Ein-Weg-Konferenz. Da SDP jedoch keine Ein-Weg-Konferenzen erlaubt, wäre erst in einem Erweiterten SIP Standard dieses Szenario vorstellbar. Ebenso schlagen sie vor, dass die Lautstärke des Audiostreams von Spielern in der Hörnähe in Abhängigkeit von ihrer Distanz variert werden soll. Ein ungelöstes Probleme bei diesem Ansatz bleibt jedoch die Komponente des Mixers der in der Lage sein müsste Distanzvektoren in den Mischvorgang einzubeziehen. 
+
+\subsection{SIP und SOAP basiertes Konferenzframework}
+In einem anderen zentralisierten Ansatz \cite{schulzrinne02} schlagen Schukzrinne und Koskelainen ein Framework zur Kontrolle von Konferenzen vor das auf den SIP und SOAP( Simple Object Access Protocol) Standards basiert. Während SOAP für die Kontrolle der Konferenzen verwendet wird findet der Aufbau der einzelnen Sitzungen im SIP Protokoll statt. 
+
+
+\section{Dezentralisierte Ansätze}
+
+In \cite{schulzrinne03} \cite{schulzrinne99} schlagen Schulzrinne et. Al ein verteiltes dezentralisiertes Protokoll vor in dem alle Teilnehmer ein komplett verbundenes Netz bilden in dem jeder Teilnehmer mit jedem anderen Teilnehmer verbunden ist. Dazu überträgt jeder Teilnehmer seinen Adudiostream an alle anderen Teilnehmer, die dann lokal das Abmischen vornehmen. Um den Ansatz zu testen, simulieren sie ein solches Netz in verschiedenen Szeniarien in denen Teilnehmer das Konferenzen betreten, verlassen oder andere Teilnehmer zu Konferenzen einladen. Die Teilnehmer selbst haben keinerlei Information über die Topologie des Netzes und so können nur durch das rekursive Eiladen von Teilnehmern ein komplettes Netz gebildet werden. Das Hauptproblem dabei ist, dass dadurch eine Vielzahl an Ereignismöglichkeiten existiert die eintreten können. Schon bei vier Teilnehmern evaluieren sind über 50 Möglichkeiten einzig aus den genannten Permutationen möglich. 
+
+Radenkovic, Grennhalgh und Benford diskutieren  in \cite{radenkovic02} den Einsatz des DPM (Distributed Partial Mixing) dass sich vom zentralsierten Antzansatz des Mischens indem abhebt, dass hier mehrere dedizierte Mixer nur die Audiostreams abmischen, die tatsächlich auch vom Teilnehmer benutzt werden. Dies soll mit einerseits Ermöglichen eine Vielzahl an Audioströmen zu verwalten und andereseits die Überlastung Netzwerks zu vermeiden. Dazu werden im Netzwerk dedizierte Mixer eingesetzt die zunächst die Audioströme der Clients entgegennehmen. Diese selbst sind alle miteinander in einer Baumstruktur verbunden. Je nach Konnektivität und Bandbreite der Mixer untereinander entscheiden diese ob ein Zusammenmischen der Audioströme notwendig ist, oder alle Audioströme ungemischt weitergeleitet werden können. Da der Ansatz auf Multicast Gruppen basiert ist zwar in LANs umsetzbar im Internet jedoch aufgrund der Fehlenden Multicast Unterstützung nur bedingt einsetzbar. 
+
+Gu, Yu und Shae schlagen ein dezentrales System vor \cite{gu05} in dem sie die Verarbeitung des Audiostreams in zwei Phasen der Aggregation und Distribution aufteilen. Dabei verstehen sie unter Aggregation das zusamenmischen der Audioströme und unter Distribution die Verteilung der gemischten Audioströme auf die einzelnen Clients. Dazu existiert zuächst ein initialer Mischknoten der das Abmischen vornimmt, falls er jedoch überlastet ist zusätzliche Kinder Mischknoten ernennen kann, die Arbeit übernehmen. Dabei können Mischknoten falls sie unterlastet sind ihre Aufgabe an den Vaterknoten wieder abgeben. Hauptnachteil dieser Methode ist dass jederzeit alle Knoten über die Topologie des Netzes informiert sein müssen und jederzeit den den optimalen Mixer Knoten der Multicast Gruppe kennen der die kürzesten Wege im Netz besitzt außerdem die Verteilung des Audiostreams nicht gelöst wird. 
+
+
 \subsection{Work of Tonio Triebel -- Skype for Games }
 	\cite{triebel07}
-\subsection{Work of Xiaohui Gu }
-	\cite{gu05}
-\subsection{Work of Bolot }
-	\cite{bolot98}
-\subsection{Work of Radenkovic}
-	\cite{radenkovic02}
+
 \subsection{Work of Stadler and Miladinovic}
 	%unpublished
 	\cite{miladinovic-multiparty} 
-
-
-Da die Sprachkommunikation in Echtzeit verläuft, gilt die Wiedergabe eines Sprachsignals am Ziel asl qualitativ schlecht, wenn sie einem zu großen Zeitverzug erfolgt. Für die Ende-zu-Ende-Verzögerung $T_{EE}$(End-to-End-Delay) des Sprachsignals werden daher Grenzwerte gesetzt. Nach dem ITU-T-Dokument G.114 wird die VoIP-Qualität wie flogt klassifiziert:
-\begin{itemize}
-	\item $T_{EE}$ kleiner als 150ms: akzeptabel für alle Benutzer,
-	\item $T_{EE}$ zwischen 150ms und 300ms: akzeptabel, aber mit Einschränkungen (nicht für empfindliche Benutzer), 
-	\item $T_{EE}$ größer als 300ms: nicht akzeptabel. 
-\end{itemize}
-
-Zwar ist bei der Textkommunikation der Zeitverzug weitaus höher, schon bedingt durch den limitierenden Einfluss der persönlichen Schreibgeschwindigkeit der Gesprächspartner, trotzdem werden diese Antwortzeiten nicht als Hinderniss wahrgenommen. Im Gegensatz zur Sprachkommunikation findet hier eine abstrahierte asynchrone Kommnunikation statt, während bei der Sprachkommnuikation jegliche Asynchronität als eine Unterbrechnung des Kommunikationsflusses gesehen wird. Bei den Kenngrößen der Interaktivität dominiert die Sprachkommunikation jedoch durch die direkte intuitive Rückkanalmöglichkeit die vergleichenen Kommunikationsarten. Die Lebhaftigkeit von gesprochener Kommunikation wird weithin als hoch angesehen und so wird einzig die Video-Kommunikation und ein "`Face-to-Face"' Gespräch als noch lebhafter wahrgenommen. Da der Spieler mittels der Sprachkommunikation noch tiefer in das Spielgeschehen eintaucht wird das erlebte noch lebhafter wahrgenommen. Trotz ihrer technischen Einschränkungen vor allem in Bezug auf die interpersonelle Kommunikation in Spielen ist die Sprachkommunikation in weiten Bereichen den anderen Kommunikationsarten stark überlegen. Da Sprache auch unsere Kommunikation im Alltag bestimmt, liegt es Nahe, dass dieses Medium auch die vorherrschende Kommunikationsmethode in Computerspielen werden kann. Darüber hinaus bietet sie im Vergleich zur reinen Textkommunikation noch weitere Vorteile die ihr als Alleinstellungsmerkmal dienen:
+	
