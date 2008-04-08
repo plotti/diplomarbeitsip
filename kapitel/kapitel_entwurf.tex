@@ -1,0 +1,58 @@
+\chapter{Entwurf}
+\section{Wahl der Spieleumgebung}
+\subsection{Wahl der Programiersprache}
+
+\section{Kommunikationsaspekte}
+\subsection{Sprache vs. Nonverbal vs. Text}
+\subssection{Proximität}
+\subsection{Interpersonelle vs. Massenkommunikation}
+\subsection{...}
+
+
+\section{Wahl des VoiP Standards}
+\subsection{Skype}
+\subsection{SIP}
+\subsubsection{PJSIP}
+\subsubsection{WengoPhone}
+\subsubsection{others}
+
+
+\section{Wahl der Netzwerk Architektur}
+\subsection{Client Server}
+\subsubsection{Netmeeting}
+\subsubsection{Ventrillo}
+\subsubsection{Teamspeak}
+\subsubsection{Battlecom}
+
+\subsection{Reine Peer-to-Peer Modelle}
+\subsection{Problems}
+
+Client Server O(1) Lookup Latency vs. Chord O(logN) lookup!
+Security Issues 
+
+
+\subsection{Hybrid Model}
+
+\subsubsection{Design alternatives}
+\subsubsection[{Replicate registrations vs. search on call setup}
+Durch die serverbasierte Architektur kann der server schnell ein Flaschenhals sowohl für die Bandbreite als auch für die Verfügbarkeit werden. Eine Möglichkeit ist der einsatz mehrerer Redundanter Server. Dabei bestehen zwei Alternativen.
+
+\begin{itemize}
+	\item Die Benutzer Lokationsinformations auf allen Servern zu replizieren.
+	\item Die Suche nach dem korrekten Server der die Lokation des Benutzers enthält auf allen Servern auszuführen, während die Registrierung nur auf einem Server geschieht.
+\end{itemize}
+
+% BILD see \cite{schulzrinne05}
+
+Im ersten Fall könnte durch Datenbanken Replikation Sichergestellt werden dass die Benutzereinträge zwischen verschiedenen Servern konsistent gehalten werden. Im zweiten Fall kann entweder der Benutzer alle Server kontaktieren oder der erste kontaktiere Server die Anfrage weiterleiten. 
+
+Der Nachteil des ersten Ansatzes ist das eine Synchronisation für jede Registrierung erforderlich ist. Es besteht die Möglichkeit dass Einträge veraltet sind bevor eine Synchronisation zwischen den Servern ausgeführt wird. Mit einer wachsenden Anzahl and Benutzern könnte diese Architektur der zusätzliche Netzwerkverkehr zwischen den Servern zu einem Flaschenhals werden. 
+
+Im Anderen Fall ist die Verbindungslatenz höher da erst eine Reihe von Schritten durchlaufen werden muss. Eine parallele Suche erhöht zudem die benötigte Bandbreite.  
+
+Beide Ansätze können fehlschlagen wenn die Anzahl an Benutzern sehr groß wird.
+
+%TODO Analysis of Ansatz 1
+%\cite{schulzrinne07}
+
+
