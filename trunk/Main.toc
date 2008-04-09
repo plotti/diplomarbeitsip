@@ -1,127 +1,144 @@
 \select@language {english}
 \select@language {ngerman}
-\contentsline {chapter}{Stichwortverzeichnis}{vi}
-\contentsline {chapter}{Abbildungsverzeichnis}{vii}
-\contentsline {chapter}{Tabellenverzeichnis}{viii}
-\contentsline {chapter}{Abk\"{u}rzungsverzeichnis}{ix}
+\contentsline {chapter}{Stichwortverzeichnis}{v}
+\contentsline {chapter}{Abbildungsverzeichnis}{vi}
+\contentsline {chapter}{Tabellenverzeichnis}{vii}
+\contentsline {chapter}{Abk\"{u}rzungsverzeichnis}{viii}
 \contentsline {chapter}{\numberline {1}Einleitung}{1}
-\contentsline {section}{\numberline {1.1}Ziel der Arbeit}{2}
-\contentsline {section}{\numberline {1.2}Aufbau der Arbeit}{3}
-\contentsline {chapter}{\numberline {2}Computerspiele}{4}
-\contentsline {section}{\numberline {2.1}Zwei schnell wachsende M\"arkte: VoIP und Computerspiele}{4}
-\contentsline {section}{\numberline {2.2}Von "`Tennis for Two"' bis zur Kommunikationsplattform}{5}
-\contentsline {section}{\numberline {2.3}Kommunikation }{6}
-\contentsline {subsection}{\numberline {2.3.1}Modell der Kommunikation}{6}
-\contentsline {subsection}{\numberline {2.3.2}Interpersonelle vs. Massenkommunikation}{7}
-\contentsline {subsection}{\numberline {2.3.3}Interaktivit\"at und Lebhaftigkeit}{8}
-\contentsline {subsection}{\numberline {2.3.4}Nonverbale Kommunikation}{9}
-\contentsline {section}{\numberline {2.4}Kommunikation in Computerspielen}{10}
-\contentsline {subsection}{\numberline {2.4.1}Spielegenre}{10}
-\contentsline {subsection}{\numberline {2.4.2}Textkommunikation in Spielen}{12}
-\contentsline {subsection}{\numberline {2.4.3}Non-verbale Kommunikation in Spielen}{12}
-\contentsline {subsection}{\numberline {2.4.4}Sprachkommunikation in Spielen}{12}
-\contentsline {section}{\numberline {2.5}Text-Kommunikation}{13}
-\contentsline {section}{\numberline {2.6}Nonverbale-Kommunikation}{16}
-\contentsline {section}{\numberline {2.7}Sprachkommunikation}{17}
-\contentsline {subsection}{\numberline {2.7.1}Zusammenfassung der Vorteile der Sprachkommunikation}{20}
-\contentsline {subsubsection}{Erh\"ohung der Lebendigkeit}{20}
-\contentsline {subsubsection}{Schnellere Reaktion}{21}
-\contentsline {subsubsection}{Spiel als Kommunikationsplattform}{21}
-\contentsline {subsubsection}{Keine H\"ande}{21}
-\contentsline {subsubsection}{Erh\"ohter Realismus}{22}
-\contentsline {subsubsection}{Mobile Einsatzbereiche}{22}
-\contentsline {subsubsection}{Talking with People from All Over}{22}
-\contentsline {subsubsection}{Kein Hin- und Her-Schalten zwischen Applikationen}{22}
-\contentsline {subsubsection}{Einfache Koordination}{23}
-\contentsline {subsubsection}{Stimmverfremdungen}{23}
-\contentsline {subsubsection}{Standardisierung}{23}
-\contentsline {subsubsection}{Sprache als Vergleichendes Kriterium}{24}
-\contentsline {chapter}{\numberline {3}VoIP und SIP}{25}
-\contentsline {section}{\numberline {3.1}VoIP Systeme}{25}
-\contentsline {subsection}{\numberline {3.1.1}Protokolle zur Echtzeitkommunikation}{25}
-\contentsline {subsection}{\numberline {3.1.2}Einflussfaktoren auf die VoIP-Qualit\"at}{27}
-\contentsline {subsection}{\numberline {3.1.3}VoIP-relevante Sprachcodierungsverfahren}{28}
-\contentsline {section}{\numberline {3.2}Session Initiation Protokoll (SIP)}{29}
-\contentsline {subsection}{\numberline {3.2.1}SIP Building Blocks}{29}
-\contentsline {subsection}{\numberline {3.2.2}Aufbau}{30}
-\contentsline {subsubsection}{Request Typen}{31}
-\contentsline {subsubsection}{Response Typen}{33}
-\contentsline {subsection}{\numberline {3.2.3}Rufaufbau, Verbindung, Rufabbau}{34}
-\contentsline {subsection}{\numberline {3.2.4}Registrierung der Lokation von Teilnehmern}{34}
-\contentsline {subsection}{\numberline {3.2.5}Konferenzschaltungen}{35}
-\contentsline {subsection}{\numberline {3.2.6}Instant Messaging zwischen Teilnehmern}{35}
-\contentsline {subsection}{\numberline {3.2.7}Pr\"asenzfunktion von Teilnehmern}{35}
-\contentsline {section}{\numberline {3.3}Session Description Protokoll}{36}
-\contentsline {subsection}{\numberline {3.3.1}Aufbau}{36}
-\contentsline {subsection}{\numberline {3.3.2}Aushandeln der Sitzungsparameter}{37}
-\contentsline {section}{\numberline {3.4}Real-Time Transport Protokoll}{38}
-\contentsline {subsection}{\numberline {3.4.1}Aufbau von RTP-Paketen}{38}
-\contentsline {subsection}{\numberline {3.4.2}Payload-Typen}{39}
-\contentsline {subsection}{\numberline {3.4.3}RTP Control Protokoll}{39}
-\contentsline {subsubsection}{Typen und Struktur der RTCP-Pakete}{40}
-\contentsline {section}{\numberline {3.5}STUN Protokoll}{41}
-\contentsline {section}{\numberline {3.6}SIP Konferenzen}{42}
-\contentsline {subsection}{\numberline {3.6.1}Multicast}{42}
-\contentsline {subsection}{\numberline {3.6.2}Mixing}{43}
-\contentsline {subsection}{\numberline {3.6.3}Full-Mesh}{43}
-\contentsline {section}{\numberline {3.7}Skype}{44}
-\contentsline {subsection}{\numberline {3.7.1}Registrierung und Login}{44}
-\contentsline {subsection}{\numberline {3.7.2}Rufsignalisierung und Sprach\"ubertragung}{44}
-\contentsline {subsection}{\numberline {3.7.3}Technologie von Skype}{44}
-\contentsline {subsubsection}{Verbindungsstruktur}{44}
-\contentsline {subsubsection}{Sicherheit}{44}
-\contentsline {subsubsection}{Konferenzen}{44}
-\contentsline {chapter}{\numberline {4}Netzwerkarchitekturen in Spielen}{45}
-\contentsline {section}{\numberline {4.1}Client - Server in Netzwerkspielen}{46}
-\contentsline {section}{\numberline {4.2}Peer-to-Peer}{47}
-\contentsline {subsection}{\numberline {4.2.1}Distributed Hash Tables}{48}
-\contentsline {subsection}{\numberline {4.2.2}Peer-to-Peer in Netzwerkspielen}{48}
-\contentsline {subsection}{\numberline {4.2.3}Nachbarbasierte P2P-Systeme}{49}
-\contentsline {subsubsection}{Voronoibasierte P2P Systeme}{49}
-\contentsline {subsection}{\numberline {4.2.4}Regionsbasierte P2P-Systeme}{50}
-\contentsline {subsection}{\numberline {4.2.5}Hybride P2P-Systeme}{51}
-\contentsline {section}{\numberline {4.3}Hybride Systeme}{51}
-\contentsline {section}{\numberline {4.4}Peer-to-Peer SIP}{52}
-\contentsline {subsection}{\numberline {4.4.1}Motivation f\"ur Peer-to-Peer SIP}{52}
-\contentsline {subsection}{\numberline {4.4.2}Funktionsweise}{53}
-\contentsline {section}{\numberline {4.5}Architektur Variationen}{54}
-\contentsline {chapter}{\numberline {5}Verwandte Arbeiten}{55}
-\contentsline {section}{\numberline {5.1}Historische Ans\"atze}{55}
-\contentsline {section}{\numberline {5.2}Serverbasierte Ans\"atze}{55}
-\contentsline {subsection}{\numberline {5.2.1}DICE: Internet Delivery of Immersive Voice Communication for Crowded Virtual Spaces}{55}
-\contentsline {subsection}{\numberline {5.2.2}MICE: Mobile Immersice Communication Environment}{56}
-\contentsline {subsection}{\numberline {5.2.3}Session Initiation Protocol for Multiplayer Networked Games}{57}
-\contentsline {subsection}{\numberline {5.2.4}SIP und SOAP basiertes Konferenzframework}{58}
-\contentsline {section}{\numberline {5.3}Dezentralisierte Ans\"atze}{58}
-\contentsline {chapter}{\numberline {6}Entwurf}{61}
-\contentsline {section}{\numberline {6.1}Wahl der Spieleumgebung}{61}
-\contentsline {subsection}{\numberline {6.1.1}Wahl der Programiersprache}{61}
-\contentsline {section}{\numberline {6.2}Conferencing vs. Ingame Communication}{61}
-\contentsline {section}{\numberline {6.3}Kommunikationsaspekte}{61}
-\contentsline {subsection}{\numberline {6.3.1}Sprache vs. Nonverbal vs. Text}{61}
-\contentsline {subsection}{\numberline {6.3.2}Interpersonelle vs. Massenkommunikation}{61}
-\contentsline {subsection}{\numberline {6.3.3}...}{61}
-\contentsline {section}{\numberline {6.4}Wahl des VoiP Standards}{62}
-\contentsline {subsection}{\numberline {6.4.1}Skype}{62}
-\contentsline {subsection}{\numberline {6.4.2}SIP}{62}
-\contentsline {subsubsection}{PJSIP}{62}
-\contentsline {subsubsection}{WengoPhone}{62}
-\contentsline {subsubsection}{others}{62}
-\contentsline {section}{\numberline {6.5}Wahl der Netzwerk Architektur}{62}
-\contentsline {subsection}{\numberline {6.5.1}Analyse der bestehenden Architekturen f\"ur Audio\"ubertragung}{62}
-\contentsline {subsection}{\numberline {6.5.2}Client Server}{65}
-\contentsline {subsubsection}{Netmeeting}{65}
-\contentsline {subsubsection}{Ventrillo}{65}
-\contentsline {subsubsection}{Teamspeak}{65}
-\contentsline {subsubsection}{Battlecom}{65}
-\contentsline {subsection}{\numberline {6.5.3}Reine Peer-to-Peer Modelle}{65}
-\contentsline {subsection}{\numberline {6.5.4}Problems}{65}
-\contentsline {subsection}{\numberline {6.5.5}Hybrid Model}{65}
-\contentsline {subsubsection}{Design alternatives}{65}
-\contentsline {chapter}{\numberline {7}Summary, Conclusions, and Further Work}{67}
+\contentsline {section}{\numberline {1.1}Ziel der Arbeit}{1}
+\contentsline {section}{\numberline {1.2}Aufbau der Arbeit}{2}
+\contentsline {chapter}{\numberline {2}Kommunikation in Computerspielen}{3}
+\contentsline {section}{\numberline {2.1}Zwei schnell wachsende M\"arkte: VoIP und Computerspiele}{3}
+\contentsline {section}{\numberline {2.2}Von "`Tennis for Two"' bis zur Kommunikationsplattform}{3}
+\contentsline {section}{\numberline {2.3}Kommunikation }{4}
+\contentsline {subsection}{\numberline {2.3.1}Modell der Kommunikation}{4}
+\contentsline {subsection}{\numberline {2.3.2}Interpersonelle vs. Massenkommunikation}{6}
+\contentsline {subsection}{\numberline {2.3.3}Interaktivit\"at und Lebhaftigkeit}{6}
+\contentsline {subsection}{\numberline {2.3.4}Nonverbale Kommunikation}{7}
+\contentsline {section}{\numberline {2.4}Kommunikation in Computerspielen}{8}
+\contentsline {subsection}{\numberline {2.4.1}Spielegenre}{8}
+\contentsline {subsection}{\numberline {2.4.2}Textkommunikation in Spielen}{9}
+\contentsline {subsection}{\numberline {2.4.3}Non-verbale Kommunikation in Spielen}{9}
+\contentsline {subsection}{\numberline {2.4.4}Sprachkommunikation in Spielen}{10}
+\contentsline {section}{\numberline {2.5}Text-Kommunikation}{10}
+\contentsline {subsection}{\numberline {2.5.1}Computer Mediated Communication}{10}
+\contentsline {subsection}{\numberline {2.5.2}Soziale Aspekte der Textkommunikation}{11}
+\contentsline {subsection}{\numberline {2.5.3}Das Handicap der Textkommunikation}{11}
+\contentsline {subsection}{\numberline {2.5.4}Interpersonelle Textkommunikation}{12}
+\contentsline {subsection}{\numberline {2.5.5}Mediarichness und Textkommunikation}{12}
+\contentsline {subsection}{\numberline {2.5.6}Ist Textkommunikation ein Medium der Vergangenheit?}{13}
+\contentsline {section}{\numberline {2.6}Nonverbale-Kommunikation}{13}
+\contentsline {section}{\numberline {2.7}Sprachkommunikation}{14}
+\contentsline {subsection}{\numberline {2.7.1}Zusammenfassung der Vorteile der Sprachkommunikation}{17}
+\contentsline {subsubsection}{Erh\"ohung der Lebendigkeit}{17}
+\contentsline {subsubsection}{Schnellere Reaktion}{17}
+\contentsline {subsubsection}{Spiel als Kommunikationsplattform}{17}
+\contentsline {subsubsection}{Keine H\"ande}{17}
+\contentsline {subsubsection}{Erh\"ohter Realismus}{18}
+\contentsline {subsubsection}{Mobile Einsatzbereiche}{18}
+\contentsline {subsubsection}{Talking with People from All Over}{18}
+\contentsline {subsubsection}{Kein Hin- und Her-Schalten zwischen Applikationen}{18}
+\contentsline {subsubsection}{Einfache Koordination}{19}
+\contentsline {subsubsection}{Stimmverfremdungen}{19}
+\contentsline {subsubsection}{Standardisierung}{19}
+\contentsline {subsubsection}{Sprache als Vergleichendes Kriterium}{19}
+\contentsline {chapter}{\numberline {3}VoIP und SIP}{20}
+\contentsline {section}{\numberline {3.1}VoIP Systeme}{20}
+\contentsline {subsection}{\numberline {3.1.1}Protokolle zur Echtzeitkommunikation}{20}
+\contentsline {subsection}{\numberline {3.1.2}Einflussfaktoren auf die VoIP-Qualit\"at}{22}
+\contentsline {subsection}{\numberline {3.1.3}VoIP-relevante Sprachcodierungsverfahren}{23}
+\contentsline {section}{\numberline {3.2}Session Initiation Protokoll (SIP)}{23}
+\contentsline {subsection}{\numberline {3.2.1}SIP Building Blocks}{24}
+\contentsline {subsection}{\numberline {3.2.2}Aufbau}{24}
+\contentsline {subsubsection}{Request Typen}{25}
+\contentsline {subsubsection}{Response Typen}{26}
+\contentsline {subsection}{\numberline {3.2.3}Rufaufbau, Verbindung, Rufabbau}{27}
+\contentsline {subsection}{\numberline {3.2.4}Registrierung der Lokation von Teilnehmern}{28}
+\contentsline {subsection}{\numberline {3.2.5}Konferenzschaltungen}{28}
+\contentsline {subsection}{\numberline {3.2.6}Instant Messaging zwischen Teilnehmern}{28}
+\contentsline {subsection}{\numberline {3.2.7}Pr\"asenzfunktion von Teilnehmern}{28}
+\contentsline {section}{\numberline {3.3}Session Description Protokoll}{29}
+\contentsline {subsection}{\numberline {3.3.1}Aufbau}{29}
+\contentsline {subsection}{\numberline {3.3.2}Aushandeln der Sitzungsparameter}{30}
+\contentsline {section}{\numberline {3.4}Real-Time Transport Protokoll}{30}
+\contentsline {subsection}{\numberline {3.4.1}Aufbau von RTP-Paketen}{31}
+\contentsline {subsection}{\numberline {3.4.2}Payload-Typen}{32}
+\contentsline {subsection}{\numberline {3.4.3}RTP Control Protokoll}{32}
+\contentsline {subsubsection}{Typen und Struktur der RTCP-Pakete}{32}
+\contentsline {section}{\numberline {3.5}STUN Protokoll}{33}
+\contentsline {section}{\numberline {3.6}SIP Konferenzen}{34}
+\contentsline {subsection}{\numberline {3.6.1}Multicast}{34}
+\contentsline {subsection}{\numberline {3.6.2}Mixing}{35}
+\contentsline {subsection}{\numberline {3.6.3}Full-Mesh}{35}
+\contentsline {section}{\numberline {3.7}Skype}{36}
+\contentsline {subsection}{\numberline {3.7.1}Registrierung und Login}{36}
+\contentsline {subsection}{\numberline {3.7.2}Rufsignalisierung und Sprach\"ubertragung}{36}
+\contentsline {subsection}{\numberline {3.7.3}Technologie von Skype}{36}
+\contentsline {subsubsection}{Verbindungsstruktur}{36}
+\contentsline {subsubsection}{Sicherheit}{36}
+\contentsline {subsubsection}{Konferenzen}{36}
+\contentsline {chapter}{\numberline {4}Netzwerkarchitekturen in Spielen}{37}
+\contentsline {section}{\numberline {4.1}Client - Server in Netzwerkspielen}{38}
+\contentsline {section}{\numberline {4.2}Peer-to-Peer}{39}
+\contentsline {subsection}{\numberline {4.2.1}Distributed Hash Tables}{39}
+\contentsline {subsection}{\numberline {4.2.2}Peer-to-Peer in Netzwerkspielen}{39}
+\contentsline {subsection}{\numberline {4.2.3}Nachbarbasierte P2P-Systeme}{40}
+\contentsline {subsubsection}{Voronoibasierte P2P Systeme}{40}
+\contentsline {subsection}{\numberline {4.2.4}Regionsbasierte P2P-Systeme}{41}
+\contentsline {subsection}{\numberline {4.2.5}Hybride P2P-Systeme}{42}
+\contentsline {section}{\numberline {4.3}Hybride Systeme}{42}
+\contentsline {section}{\numberline {4.4}Analyse der bestehenden Architekturen f\"ur Audio\"ubertragung}{43}
+\contentsline {section}{\numberline {4.5}Peer-to-Peer SIP}{44}
+\contentsline {subsection}{\numberline {4.5.1}Motivation f\"ur Peer-to-Peer SIP}{44}
+\contentsline {subsection}{\numberline {4.5.2}Funktionsweise}{45}
+\contentsline {section}{\numberline {4.6}Architektur Variationen}{46}
+\contentsline {chapter}{\numberline {5}Verwandte Arbeiten}{47}
+\contentsline {section}{\numberline {5.1}Historische Ans\"atze}{47}
+\contentsline {section}{\numberline {5.2}Conferencing vs. Ingame Communication}{47}
+\contentsline {section}{\numberline {5.3}Serverbasierte Ans\"atze}{47}
+\contentsline {subsection}{\numberline {5.3.1}DICE: Internet Delivery of Immersive Voice Communication for Crowded Virtual Spaces}{47}
+\contentsline {subsection}{\numberline {5.3.2}MICE: Mobile Immersice Communication Environment}{48}
+\contentsline {subsection}{\numberline {5.3.3}Session Initiation Protocol for Multiplayer Networked Games}{49}
+\contentsline {subsection}{\numberline {5.3.4}SIP und SOAP basiertes Konferenzframework}{50}
+\contentsline {section}{\numberline {5.4}Dezentralisierte Ans\"atze}{50}
+\contentsline {chapter}{\numberline {6}Entwurf}{52}
+\contentsline {section}{\numberline {6.1}Soll - Kommunikationsaspekte}{52}
+\contentsline {subsection}{\numberline {6.1.1}Kommunikationsmodell}{52}
+\contentsline {subsection}{\numberline {6.1.2}Interpersonelle vs. Massenkommunikation}{52}
+\contentsline {subsection}{\numberline {6.1.3}Interaktivit\"at und Lebhaftigkeit}{53}
+\contentsline {subsection}{\numberline {6.1.4}Proxemik in der Kommunikation}{53}
+\contentsline {subsection}{\numberline {6.1.5}Positionierung des Prototyps}{54}
+\contentsline {subsection}{\numberline {6.1.6}Folgerungen aus den Studien der Textkommunikation}{55}
+\contentsline {subsection}{\numberline {6.1.7}Folgerungen aus den Studien der Nonverbalen Kommunikation}{55}
+\contentsline {subsection}{\numberline {6.1.8}Sprachkommunikation}{56}
+\contentsline {subsubsection}{Probleme der Sprachkommunikation}{56}
+\contentsline {subsubsection}{Anforderungen an den Prototypen}{56}
+\contentsline {subsection}{\numberline {6.1.9}...}{57}
+\contentsline {section}{\numberline {6.2}Wahl der Grafik und Audio Engine}{57}
+\contentsline {subsection}{\numberline {6.2.1}3D Spieleengines}{57}
+\contentsline {subsection}{\numberline {6.2.2}3D Engines}{58}
+\contentsline {subsubsection}{Irrlicht}{58}
+\contentsline {subsubsection}{Irrklang}{58}
+\contentsline {section}{\numberline {6.3}Wahl des VoiP Standards}{58}
+\contentsline {subsection}{\numberline {6.3.1}Skype}{58}
+\contentsline {subsection}{\numberline {6.3.2}SIP}{58}
+\contentsline {subsubsection}{PJSIP}{59}
+\contentsline {subsubsection}{WengoPhone}{59}
+\contentsline {subsubsection}{others}{59}
+\contentsline {section}{\numberline {6.4}Wahl der Netzwerk Architektur}{59}
+\contentsline {subsection}{\numberline {6.4.1}Client Server}{60}
+\contentsline {subsubsection}{Netmeeting}{60}
+\contentsline {subsubsection}{Ventrillo}{60}
+\contentsline {subsubsection}{Teamspeak}{60}
+\contentsline {subsubsection}{Battlecom}{60}
+\contentsline {subsection}{\numberline {6.4.2}Reine Peer-to-Peer Modelle}{60}
+\contentsline {subsection}{\numberline {6.4.3}Problems}{60}
+\contentsline {subsection}{\numberline {6.4.4}Hybrid Model}{60}
+\contentsline {subsubsection}{Design alternatives}{60}
+\contentsline {chapter}{\numberline {7}Summary, Conclusions, and Further Work}{61}
 \select@language {english}
-\contentsline {section}{\numberline {7.1}Summary}{67}
-\contentsline {section}{\numberline {7.2}Conclusions}{68}
-\contentsline {section}{\numberline {7.3}Further Work}{69}
+\contentsline {section}{\numberline {7.1}Summary}{61}
+\contentsline {section}{\numberline {7.2}Conclusions}{61}
+\contentsline {section}{\numberline {7.3}Further Work}{63}
 \select@language {ngerman}
-\contentsline {chapter}{Literaturverzeichnis}{70}
+\contentsline {chapter}{Literaturverzeichnis}{64}

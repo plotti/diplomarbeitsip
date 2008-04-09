@@ -1,9 +1,16 @@
 \chapter{Verwandte Arbeiten}
 
+
 \section{Historische Ansätze}
 Als eines der ersten Ansätze findet sich MiMaze Spiel \cite{diot99} bei dem die Kommunikation zwischen Spieler und Server nativ Mittels TCP statt und zwischen den Spielern untereinander mittels UDP und Multicast Gruppen statt. Dabei wird die Spielewelt auf dem Server verwaltet, jegliche Aktionen im Spiel werden mittels UDP und Multicast zwischen den Spielern ausgetauscht.
 In den SPLINE \cite{carlsson93} und DIVER \cite{anderson95} Systemen ist zwar vorgesehen, dass Clients sich mit einem zentralen Server verbinden um Spielerpositionen auszutauschen und einen gemischtes Audiostream der Szene zu erhalten es ist jedoch keine Sprachkommunikation zwischen den Spielern möglich.  
 Bolot und Fosse-Parisis versuchen in \cite{bolot98} in einem Entwurf die bestehende Architektur des MiMaze Spiels um die Sprachkommunikation zu erweitern. Dazu schlagen sie vor das das RTP und RTCP Protokoll einzusetzen und die empfangenen Audioströme auf den Clients zu lokalisieren. Aufgrund der schwierigen Koordination der Audioströme und deren Synchronisation mit der Spielewelt bleibt der Einsatz von Sprachkommunikation in Computerspielen zunächst ein Entwurf. 
+
+\section{Conferencing vs. Ingame Communication}
+%TODO
+dh. Was ich nicht mache!
+Problems related to conference control have been studied extensively over the years. 
+Literature from "`A SIP-Based Conference Control Framework"'. However most of the earlier work discusses only the floor control aspects of conference control. Furthermore some papers focus on multicast conferences. In the absence of a widely available internet multicast service we will focus on the corrently more common ....
 
 \section{Serverbasierte Ansätze}
 

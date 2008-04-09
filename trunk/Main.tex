@@ -31,6 +31,7 @@
 \usepackage{scrpage2}     % paket f{\"u}r kopf- und fu{\ss}zeilen
 \pagestyle{scrheadings}   % kopzeilenseitenstil
 \usepackage{natbib}       % Literaturverzeichnis
+\citestyle{plain} 
 \usepackage{setspace}
 \usepackage{url}          % fuer urls: schreibweise ist z.B. \url{http://www.uni-mannheim.de}
 
@@ -38,7 +39,7 @@
 \setlength{\parindent}{0pt}
 \setlength{\parskip}\medskipamount % besser als explizite Angabe in pt
 
-\onehalfspacing
+%\onehalfspacing
 
 
 % kapitel{\"u}berschriften in schriftart mit serifen
@@ -78,6 +79,7 @@
 %\selectlanguage{ngerman} % jetzt sprechen wir wieder deutsch.
 
 \backmatter
+%\bibliographystyle{literatur/nnplain}
 \bibliographystyle{literatur/natdin}
 \bibliography{literatur/da}
 \include{kapitel/erklaerung}

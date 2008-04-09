@@ -1,30 +1,111 @@
 \chapter{Entwurf}
-\section{Wahl der Spieleumgebung}
-\subsection{Wahl der Programiersprache}
---> C++ 3D 
---> C++ Audio
---> Alternativen?
 
 
-\section{Conferencing vs. Ingame Communication}
-Problems related to conference control have been studied extensively over the years. 
-Literature from "`A SIP-Based Conference Control Framework"'. However most of the earlier work discusses only the floor control aspects of conference control. Furthermore some papers focus on multicast conferences. In the absence of a widely available internet multicast service we will focus on the corrently more common ....
+My focus:
+Audio management that restricts the use of the audio channel, including explicit and implicit floor control , and control actions like push to talk. 
 
 
-\section{Kommunikationsaspekte}
-\subsection{Sprache vs. Nonverbal vs. Text}
-\subssection{Proximität}
+\section{Soll - Kommunikationsaspekte}
+
+\subsection{Kommunikationsmodell}
+
+Was bedeutet das Kommunikationsmodell für unseren Entwurf?
+Da der Hauptaspekt der Arbeit die Herstellung einer Sprachkommunikation besteht, sollte diese auch entsprechend der Modelierung im Ersten Kapitel erfolgen. Was dabei relevant ist, ist das das klassische Kommmunikationsmodell von Shannon und Weaver \cite{shannon48} um die kritische Komponente des Feedbacks \cite{schramm54} unbedingt zu erweitern ist. So soll die Modellierung der Sprachkommunikation darauf ausgerichtet sein, dass auftretende Probleme entsprechend des Modells minimiert werden können. Es muss gewährleistet werden dass das technische Problem der KOmmunikation gelöst wird und das Semantische und Effiktivitätsproblem minimiert werden. Im Konkreten bedeutet es, dass die Kommunikation über ein verlässtliches Netzwerk stattfinden muss und der Teilnehmer in der Lage sein muss zu entscheiden an mit wem seine Kommunikation stattfindet als auch in der Lage sein muss jederzeit auf Ereignisse spontan zu reagieren. Im erweiterten Modell soll der Teilnehmer in der Lage sein die Komponente des des Feedbacks zu kontrollieren, in dem er bei der Kommunikation jederzeit in der Lage ist ein Feedback zu geben und zu wissen an wen er das Feedback gerade gibt. Dabei soll zusätzlich die Verzögerung zwischen der Nachricht und Feedback minimiert werden. 
+
 \subsection{Interpersonelle vs. Massenkommunikation}
+Da wor Kommunikationen ermöglichen wollen bei denen mindestens zwei Kommunizierende beabsichtigt miteinander kommunizieren können, aber auch ermöglichen wollen dass ein Sprecher an mehrere Empfänger kommunizieren kann, bedeutet es im theoretischen Ansatz, dass wir sowohl die interpersonelle Kommnikation als auch die Massenkommunikation ermöglichen wollen. Obwohl diese Soll-Forderung trivial erscheint verfügen wenige der existierenden Sprachkommunikationslösungen über beide Ansätze. So ist es entweder möglich, dass alle Teilnehmer der Kommunikation auf einem gemeinsamen Kanal kommunizieren, das einer Massenkommunikation gleichkommt, was eine interpersonelle Kommunikation auf diesem Kanal ausschließt oder es ist möglich dass zwei Partner in einem interpersonellen Telefongespräch miteinander Kommunizieren, welches sie jedoch die Kommunikation auf genau diese zwei Teilnehmer begrenzt. 
+%TODO BILD DER Interpersonellen und Massenkommunikation
+
+\subsection{Interaktivität und Lebhaftigkeit}
+
+Wenn wir von Interaktivität und Lebhaftigkeit sprechen meinen wir, dass wir bestimte Anforderungen an die Sprachkommunikation stellen, so soll wie schon oben formuliert das Feedback möglichst unmittelbar geschehen, die Kommunikation sowohl persönlich als auch mit mehreren Teilnehmern möglich sein und das gewählte Medium unsere Bemühungen möglichst gut unterstützen. Im Media Richness Modell \cite{reichswald98} bedeutet es dass wir eine komplexe Telekooperationsaufgabe lösen wollen, nämlich mit einer vielzahl an Teilnehmern ein Spiel mit komplexen Anforderungen in Bezug auf die Gruppendynamik und das Timing zu spielen. Dieses erfordert ein Medium dass in der Lage ist diese Aufgaben zu lösen während wir jedoch die Spieler selbst mit zu vielfältigen Möglichkeiten vor einer Überkomplizierung durch das Medium schützen wollen. Was es konkret bedeutet ist dass wir die Verwendung des Mediums so gestalten wollen, dass es einerseits ein Werkzeug ist, das den Teilnehmern eine bessere Koordination ermöglicht. 
+%TODO BIld einer "`klassischen Sprachkommunikation mit Konfigurationen"'
+
+\subsection{Proxemik in der Kommunikation}
+Da wir die nonverbale Kommunikation als essentiellen Teil der Kommunikation verstehen, und der Meinung sind dass eine Sprachkommunikation gerade durch ihren nonverbalen Anteil erst ihre volle Semantik entfalten kann sollen diese Aspekte direkt in den Ansatz einer Sprachkommunikation integriert werden. Speziell bedeuetet es für uns dass im Spiel selbst der Raum in drei Distanzzonen eingeteilt werden sollte in denen verschiedene Ausprägungen der Sprachkommunikation möglich sein sollen. 
+Wir schlagen angelehnt an die Forschung von \cite{hall05} vor den Raum ebenfalls in drei Distanzzonen zu unterteilen:
+\begin{itemize}
+	\item Intime Distanz: Hier sollen die Spieler in der Lage sein frei miteinader interpersonell zu kommunizieren. Vorstellbar sind zwei Alternativen indem eine Kommunikation auf dieser Distanzzone entweder nur zwischen 2 Personen möglich ist und von anderen nicht mitgehört werden kann, oder auch eine relaxierte Version in der die die Lautstärke der Kommunikation in dieser Distanzzone konstant gut hörbar bleibt.
+	\item Soziale Distanz: Hier sollen die Spieler in der Lage sein sich gegenseitig zu hören, dabei soll die direkte Enfernung untereinander Einfluss auf die wahrgenommene Lautstärke haben. 
+	So sollen Spieler die sich näher befinden Lauter sein, während Spieler die sich weiter entfernt befinden leiser sein. Dabei soll die Lautstärke linear abnehmen bis Spieler die öffentliche Distanz errreichen.
+	\item Öffentliche Distanz: In der Öffentlichen Distanz ist zunächst keine weitere Sprachkommunikation möglich. Das einzige Mittel der Kommunikation bleibt hier die Textkommunikation die jederzeit und an jeden Spieler übertragen wird, deshalb auch einen öffentlichen Charakter besitzt. Trotzdem soll in der öffentlichen Zone der unmittelbare übergang zur Sozialen Zone störungsfrei ablaufen und keine Verzögerungen aufweisen. Hier wird die Sprachkommunikation bereits vorbereitet, da der ein stetiger Wechsel zwischen der öffentlichen zur sozialen Zone vermutet wird. 
+\end{itemize}
+%TODO BILD DER ZONEN
+
+\subsection{Positionierung des Prototyps}
+
+Eine in Kapitel 1 vorgestellte klassische Unterteilung von Spielen in Spielegenre zeigt, dass in Abhängigkeit vom Genre des Spiels der Kommunikationsaspekt unterschiedlich stark ausgeprägt ist. So besitzen Actionspiele und Rollenspiele meist den größten Bedarf nach einer ausgeprägten Sprachkommunikation, da stets mehrere Spieler miteinander konkurrieren oder kollaborieren.
+Beide Genre haben gemeinsam dass der Spieler in detaillierten realistischen virtuellen 3D Welten mittels einer Spielfigur navigieren, die mit anderen Spielfiguren in Interaktion treten kann.
+Dabei entsteht der Spielspaß gerade in der Interaktion welche entweder als Zusammenarbeit oder Kampf verstanden werden kann. In Actionspielen wird durch dem Beschuss mit Projektilen eine Interaktion ausgeübt, die zu einer Konkurenz führt in der der schnellste und geschickteste Spieler das Spiel gewinnt. Finden sich die Spieler in Spielergruppen zusammen so entscheidet nicht mehr die Leistung des einzelen Über den Sieg des Teams. Ein ähnliches Phänomen lässt sich in Rollenspielen beobachten in denen Spieler mittels Zaubersprüchen oder anderen Artefakten miteinander interagieren. Hier entscheidet oft nur die Kollaboration der Spieler der gleichen Spielergruppe über den Spielausgang. Können Mitspieler ihre Aktionen besonders gut aufeinander abstimmen um Vor und Nachteile der einzelenen Spieler zu kompensieren sind sie oft von Erfolg gekrönt. Beide Genre Bedürfen einer ausgeklügelten Kommunikation und Interaktion zwischen den einezelnen Teilnehmern. 
+ Angehnt an das System das Gibs, Wadley und Benda im ersten Kapitel vorstellen wollen wir den Prototypen im einem Viereck aus Spielerlebniss, Spielsimulation, erzählerischem Aspekt und der Spielerinteraktion einordnen. Die oben genannten Vertreter der Actionspiele Genre sowie der Rollenspielegenre unterscheiden sich zwar im erzählerischen Aspekt, der bei Rollenspielen dominierend ist, während bei Actionspielen das Spielerelbniss domiert, haben aber beide eine hohe Spielerinteraktion und Simulationstiefe.   
+	Obwohl der Prototyp weder ein ausgereiftes Action oder Rollenspiel ist, da diese die Zielvorgaben der Arbeit sprengen würde, soll er deren gemeinsamen Aspekt der Spielerinteraktion betonen. 
+ 
+ %BILD der Einordnung des Spiels.
+ %BILD der Einordnung eines Actionspiels
+ %Bild der Einordnung eines Rollenspiels
+
+Dabei sollen Aspekte des Spielererlebniss, und des erzählerischen Aspekts vernachlässigt werden, jedoch Aspekte der Simulation und Spielerinteraktion betont werden. 
+
+\subsection{Folgerungen aus den Studien der Textkommunikation}
+Studien der Textkommunikation aus Kapitel 1 lassen uns folgende Schlüsse in Bezug auf den Prototypen ziehen. 
+Textkommunikation enthält außer der ursprünglichen Nachricht viele Akronyme und Emoticons die nur unzulänglich die soziale Komponente einer Kommunikation widerspiegeln können und ist für durch die Nutzung von eines einzigen gemeinsamen öffentliche Kommunikationskanäle einfach nicht für eine interpersonelle Kommunikation tauglich. Zusätzlich wird durch den Einsatz von Abkürzungen, fehlerhafter Gramatik und Semantik, soziale Kommunikation erschwert. Dabei besteht gerade für diese überproportionaler Bedarf wie Studien festgestellt haben. Die Vermutung liegt nahe, dass die Spieler die Handicaps der Textkommunikation zwar teilweise erfolgreich durch verschiedene Methoden behoben haben, trotzdem der Wunsch nach einem Medium, das besser ohne Einschränkungen in der Lage ist Nachrichten sozialer Natur zu übertragen nach wie vor vorhanden ist.
+Dies lässt die Schlussfolgerung zu dass Textkommunikation in Spielen nur teilweise effizient einsetzbar ist und bestätigt die Bemühungen nach einem kommunikations Prototypen, der in der Lage ist oben genannte Misstände zu kompensieren.
+
+\subsection{Folgerungen aus den Studien der Nonverbalen Kommunikation}
+Studien der Nonverbalen Kommunikation aus Kapitel 1 lassen uns folgende Schlüsse in Bezug auf den Prototypen ziehen.
+Ist man in der Lage eine Nonverbale Kommunikation zuzulassen so ergeben sich viele Vorteile die direkten Einfluss auf die Effektivität der Kommunikation zulassen. So kann einzig die Entfernung der Teilnehmer voneinander entscheiden ob eine interpersonelle oder Massenkommunikation wünscht. Durch einfaches Kopfnicken lassen sich Verständniss oder Unverständniss des gerade gehörten in der einfachsten Form signalisieren. Nonverbale kommunikation trägt nicht nur zur Erhöhung der Interaktivität und Lebhaftigkeit bei sondern bildet die einfachste und intuitivste Form der Verwaltung einer Konferenz. Obwohl die Steuerung von Konferenzen seit Jahren erforscht wird existieren bisher wenige Intuitive Methoden. Für unseren Prototyp bedeutet es dass unsere Position in einer 3D Welt Teilnehmers völlig intuitiv den Fluss der Kommunikation steuert. 
+
+\subsection{Sprachkommunikation}
+Aus der psychologischen Sicht sind die Studien zur Sprachkommunikation ein zentraler Ansatzpunkt für die Entwicklung des Prototypen. 
+Was zunächst festzuhalten ist, ist der Fakt das eine Sprachkommunikation in allen Ausprägungen die Lebhaftigkeit  und die soziale Erfahrung beim Spielen steigert. Jedoch zeigen die Studien dass Sprachkommunikation in Computerspielen sich nicht so einfach umsetzen lässt wie sie von uns im realen Leben eingesetzt wird. Es lassen sich mehrere Probemkategorien ableiten:
+
+\subsubsection{Probleme der Sprachkommunikation}
+
+\begin{itemize}
+
+	\item Limitierter Kanal: Vor allem durch die Beschränkte Nutzung eines einzigen Kanals der durch alle Spieler genutzt wurde, nutzten Teilnehmer diesen Kanal zur reinen Aufgabenorientieren koordinierung des Teams. Der gewünschte soziale Aspekt der Kommunikation dagegen blieb üver weite Strecken vollständig aus. 
+	
+	\item Geringe Audioqualität: Durch eine geringe Audioqualität, hohe Stö
+rgeräusche und Latenzen waren Spieler nicht in der Lage erfolgreich miteinander zu kommunizieren.
+Eine mögliche Lösung wäre wenn der Spieler in der Lage IST problematische Audioquellen, die mit Störungen behaftet sind zu meiden. 
+
+	\item Keine Kontrolle über Empfänger der Nachricht: Studien haben festgestellt dass das triviale Problem mit wem man gerade spricht bisher nicht sauber gelöst wurde. Dadurch dass Spieler sich einen Kanal teilen ist eine direkte Adressierung nicht möglich. 
+	
+	\item Keine Kontrolle über Empfang der Nachrichten: Analog dazu waren Spieler genauso wenig in der Lage zu Kontrollieren, welche Sprachnachrichten sie empfangen möchten. Oft führte dies dazu dass ein Großteil der Sprachkommunikation auf den Kanälen als Lärm Emfpunden wird. 
+\end{itemize}
+
+\subsubsection{Anforderungen an den Prototypen}
+Viele der oben genannten Probleme beruhen auf dem Prinzip der Verwendung von Kanälen zur Kommunikation, die von mehreren Spielern geteilt werden müssen. Für den Prototypen bedeutet es, dass wir statt eines Einkanal Systems eine Kommunikationslösung anbieten wollen, die in der Lage ist mehrere Gespräche gleichzeitig zu führen ohne dass sie Spieler gegenseitig bei ihren Übertragungen stören. Zusätzlich soll nicht nur mehrere 1:1 Verbindungen möglich sein, sondern immernoch eine 1:N Adressierung existieren. 
+Prinzipiell erfordert die Einführung von mehreren Kanälen ein ensprechend kompliziertes Management dieser, da Spieler in der Lage sein sollen zu entscheiden was sie hören wollen und was nicht. Die Lösung beseht aus der Relaxierung des Problems zu einem Nachbarschaftsproblem indem Spieler durch ihre Distanz zueinander entscheiden können welche Kanäle sie hören möchten und welche nicht. Dieses Thema birgt zunächst ein Problem, dass ein Spieler nicht alle Kanäle abonieren kann die er möchte, da dies Bedeuten würde dass sich diese Personen immer in seiner Umgebung befinden müssten. Doch was auf den ersten Blick als Nachteil erscheint, kann auch als signifikanter Vorteil gesehen werden. Da bereits festgestellt wurde, dass durch eine Überlagerung mehrere Sprecher auf einem Kanal dieses vom Spieler als Lärm wahrgenommen wird, ist eine mögliche Lösung die Limitierung der Teilnahme an mehreren Kanälen. 
+
+
 \subsection{...}
-THE WHY: Work of Kevin Hew, Martin Gibbs, Greg Wadley
+	THE WHY: Work of Kevin Hew, Martin Gibbs, Greg Wadley
 	\cite{gibbs06}
 	\cite{Gibbs04a}
 	\cite{gibbs04}
+ 	Übertragung von Sprache nach Modellen der Proxemik - (Distance Zones)
+ 	Übertragung von Animationen, Übertragung von Text
+ 	Anlegen eines Sprachmodells mit Telefon/ Luftübertragung
+
+\section{Wahl der Grafik und Audio Engine}
+
+\subsection{3D Spieleengines}
+Die Entwicklung eines realistisches Spieles geht weit über das Thema der Arbeit hinaus, da diese Aufgabe normalerweise von ganzen Teams über mehrere Monate oder Jahre bewältigt wird. Deswegen fiel die Entscheidung auf eine bestehendes SpieleFramework. Ziel des Prototyps war es einen Avatar in einer 3D möglichst realistischen Umgebung zu steuern. 
+Viele der bestehenden Spiele Frameworks für 3D orientierte Spiele existieren meist auf der Enwicklungsgrundlage großer Softwarestudios wie Idsoftware\cite{idsof08} oder Epic Games \cite{unreal2008} die proprietäre Standards setzten indem sie, die den Quellcode ihrer erfolgreichsten Titel wie z.B. Quake II, Quake III sowie Unreal I Spieleframeworks offen anboten. Da es meist zum Ursus großer Entwicklerstudios gehöhrt, dass meist mit dem Aufkommen eines neuen kommerziellen Titels die Entwicklung eines neuen Spieleframeworks mit einher geht, existieren von den Haupvertretern großer Spiele Engines mehrere Generationen sowie Derrivate. 
+Seit einigen Jahren sind mit dem vorranschreiten der Open Source Entwicklung auch komplette open source Neuentwicklungen wie Sauerbraten \cite{sauerbraten08} oder Nexuiz \cite{nexuiz08} entstanden, die auch speziell für das Ego-Shooter Genre entworfen wurden. Obwohl diese Spiele Engines sowohl opulente Grafik, ein ausgereiftes Spielprinzip sowie eine ausgereifte Steuerung bieten, ist die Modifikation der darunterliegenden Hauptbestandteile wie den Netzwerkkomponenten oder der Spielelogik teilweise nicht ausführlich Dokumentiert, mühsahm oder gar nicht vorgesehen. 
+
+\subsection{3D Engines}
+Eine Alternative zu Spiele Engines bieten offene generische 3-D Engines, deren Fokus nicht auf der kompletten Entwicklung eines speziellen Spiels liegt sondern ledeglich komfortabel ermöglicht 3D-Grafiken interaktiv darzustellen. Dazu werden meist die Details von Systembibliotheken wie Direct3D oder OpenGL abstrahiert und dem Entwickler ein Interface angeboten das auf höher abstrahierten Objects oder anderen Abstraktionsklassen basiert. Bekannte Vertreter sind Ogre3D \cite{ogre08} oder Irrlicht \cite{irrlicht08}. 
+
+\subsubsection{Irrlicht}
+Irrlicht ist eine einfache gut dokumentierte open source Engine in C++ die alle üblichen 3D Features als auch Collision Detection, Animationen, Texturen unterstützt und sowohl unter Windows, Linux als auch Mac OS verfügbar ist. Aufgrund der bestehenden Arbeit von \cite{triebel07g}, war es mir möglich bereits bestehende Konzepte zu verwenden und somit eine schnelle Entwicklung des Prototyps zu gewährleisten.
+
+\subsubsection{Irrklang}
+Speziell für die Sprachkommunikation musste die Engine um eine Sound-Engine erweitert werden die eine Audioausgabe ermöglicht. Da speziell für Irrlicht speziell eine plattformübergreifende Audiobibliothek irrKlang \cite{irrklang08} existiert, die einerseits low level Audio Verarbeitung als auch Streaming, realistisches 3D Audio Rendering, Multithreading und Plugins unterstützt gleichzeitig aber auch über eine einfache API verfügt, war die Entscheidung dieses Kombination zu verwenden nicht schwer. 
 
 
 \section{Wahl des VoiP Standards}
-My focus:
-Audio management that restricts the use of the audio channel, including explicit and implicit floor control , and control actions like push to talk. 
 
 \subsection{Skype}
 \subsection{SIP}
@@ -36,23 +117,6 @@ Audio management that restricts the use of the audio channel, including explicit
 
 
 \section{Wahl der Netzwerk Architektur}
-\subsection {Analyse der bestehenden Architekturen für Audioübertragung}
-
-In einer Studie vergleichen Safei und Boustead Architekturen für sinnstimulierende (immersive) Audio Kommunikation in Mehrspieler Netzwerk Spielen. Dabei ist unter sinnstimuliernd zu verstehen dass jeder Spieler eine eine Mischung aus Stimmen und Geräuschen hören soll die speziell auf seine Position im Spiel angepasst ist und nicht nur die Lautstärke als auch die Position der Geräusche im Klangbild spezifiziert wird. 
-
-In einer Peer-to peer Architektur wird die Audioszene lokal erzeugt, nachdem man sämtliche Sprachquellen der der anderen Spieler erhalten hat. Der Hauptvorteil dieser Architektur liegt darin dass ein niedriger Delay auftritt, da die im optimalen Fall die Verbindung immer die kürzesten Wege zwischen den einzelnen Spielern etabliert wird. Zusätzlich nutzt man die freie Rechenleistung in den Knoten um das Abmischen der Audioszene vorzunehmen und man verfügt potenziell über eine Architektur die keinen single Point of Failure besitzt.  Der Hauptnachteil ist dass die Bandbreite der einzelnen Knoten im Peer-to-Peer die Anzahl der möglichen Verbindungen limitiert. 
-%BILD
-
-
-In einer Zentralisierten Lösungen wird der Audiostrom von jedem der Teilnehmer an einen zentralen Server gesendet. Mithilfe der Positionsdaten der Spieler wird die Audioszene zentral erzeugt. Diese wird danach an die jeweiligen Spieler gesendet. Die Hauptvorteile sind eine bessere Skalierbarkeit dadurch dass jeder Knoten auch mit beschränkter Bandbreite in der Lage ist teilzuhemen. Der Nachteil jedoch beim einsatz eines Zentralen servers ist dass für die Teilnehmer große Delays auftreten können wenn sie physikalisch weit vom Server entfernt sind. Zusätzlich ist die Kapazität des zentralen Servers Flaschenhals die sich im Grad von $O(N^2)$ erschöpft ein Flaschenhals. 
-% BILD
-
-In einer Proxy Lösung exitieren Server die sich weltweit verteilt immer eine geringe Entfernung zum Teilnehmer ermöglichen sollen. Diese Emfpangen die Audioströme, mischen diese ab und schicken sie zuürck an die jeweiligen Spieler. Die Proxys untereinader können ebenfalls Audioströme an weitere Proxys weiterleiten, falls diese benötigt werden. Im Gegensatz zur Peer-To-Peer Architektur können durch den Einsatz von dedizierten Proxys mit guter Anbindung Bandbreitenprobleme minimiert werden. Der Nachteil ist jedoch dass keine Korelation zur Position der Spieler in der Welt und den genutzten Proxys existiert, so dass nur Spieler die sich den gleichen Proxy benutzen und im Spiel ebenfalls Teil der gleichen Audioumgebung sind davon profitieren können. 
-
-In einer verteilten Server Lösung ist jeder zentrale Server nur für einen Teil der Spielewelt verantwortlich. So nutzen Spieler die sich in der gleichen virtuellen Umgebung den gleichen Server, der Ihre Audiodaten abmischt. Dieser Ansatz kann die Auftretenden Bandbreite einer zentralisierten Lösung zwar reduzieren, in dem die Last auf mehrere Server verteilt wird, bringt aber neue Probleme beim Übergang von einem Server zum anderen: Wenn Teilnehmer während dem Spiel die Spielzone wechseln und die Audioszene nun von einem anderen Server abgemischt werden soll. 
-
-Im Ansatz einer Hybrid Architektur senden die Teilnehmer ihre Audioströme zwar an einen zentralisierten Server, können aber bei Bedarf ihre Audioströme direkt austauschen, wenn die indirekte Route über den Server zu zu hohen Verzögerungen führen würde. 
-
 
 Safei und Boustead führen in einer Vergleichenden Studien \cite{safei04} \cite{safei04b} den Begriff des Interaktiven Delays ein, und die Parameter der Korrelation zwischen der physischen und virtuellen Welt sowie der Dichte und Verteilung von Avataren ein. 
 
