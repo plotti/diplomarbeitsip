@@ -113,32 +113,23 @@
 \contentsline {subsection}{\numberline {6.1.8}Sprachkommunikation}{56}
 \contentsline {subsubsection}{Probleme der Sprachkommunikation}{56}
 \contentsline {subsubsection}{Anforderungen an den Prototypen}{56}
-\contentsline {subsection}{\numberline {6.1.9}...}{57}
 \contentsline {section}{\numberline {6.2}Wahl der Grafik und Audio Engine}{57}
 \contentsline {subsection}{\numberline {6.2.1}3D Spieleengines}{57}
-\contentsline {subsection}{\numberline {6.2.2}3D Engines}{58}
+\contentsline {subsection}{\numberline {6.2.2}3D Engines}{57}
 \contentsline {subsubsection}{Irrlicht}{58}
 \contentsline {subsubsection}{Irrklang}{58}
-\contentsline {section}{\numberline {6.3}Wahl des VoiP Standards}{58}
-\contentsline {subsection}{\numberline {6.3.1}Skype}{58}
-\contentsline {subsection}{\numberline {6.3.2}SIP}{58}
-\contentsline {subsubsection}{PJSIP}{59}
-\contentsline {subsubsection}{WengoPhone}{59}
-\contentsline {subsubsection}{others}{59}
-\contentsline {section}{\numberline {6.4}Wahl der Netzwerk Architektur}{59}
-\contentsline {subsection}{\numberline {6.4.1}Client Server}{60}
-\contentsline {subsubsection}{Netmeeting}{60}
-\contentsline {subsubsection}{Ventrillo}{60}
-\contentsline {subsubsection}{Teamspeak}{60}
-\contentsline {subsubsection}{Battlecom}{60}
-\contentsline {subsection}{\numberline {6.4.2}Reine Peer-to-Peer Modelle}{60}
-\contentsline {subsection}{\numberline {6.4.3}Problems}{60}
-\contentsline {subsection}{\numberline {6.4.4}Hybrid Model}{60}
-\contentsline {subsubsection}{Design alternatives}{60}
-\contentsline {chapter}{\numberline {7}Summary, Conclusions, and Further Work}{61}
+\contentsline {section}{\numberline {6.3}Wahl der Netzwerk Architektur}{58}
+\contentsline {subsubsection}{Interaktiver Delay}{59}
+\contentsline {subsubsection}{Korrelation}{59}
+\contentsline {subsubsection}{Avatar-Dichte}{59}
+\contentsline {subsubsection}{Avatar-Verteilung}{59}
+\contentsline {subsection}{\numberline {6.3.1}Client Server}{60}
+\contentsline {subsubsection}{Kapazit\"at}{60}
+\contentsline {subsection}{\numberline {6.3.2}Peer-to-Peer}{61}
+\contentsline {chapter}{\numberline {7}Summary, Conclusions, and Further Work}{62}
 \select@language {english}
-\contentsline {section}{\numberline {7.1}Summary}{61}
-\contentsline {section}{\numberline {7.2}Conclusions}{61}
-\contentsline {section}{\numberline {7.3}Further Work}{63}
+\contentsline {section}{\numberline {7.1}Summary}{62}
+\contentsline {section}{\numberline {7.2}Conclusions}{62}
+\contentsline {section}{\numberline {7.3}Further Work}{64}
 \select@language {ngerman}
-\contentsline {chapter}{Literaturverzeichnis}{64}
+\contentsline {chapter}{Literaturverzeichnis}{65}
