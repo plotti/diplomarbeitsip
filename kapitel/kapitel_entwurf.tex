@@ -75,18 +75,9 @@ Eine mögliche Lösung wäre wenn der Spieler in der Lage IST problematische Audioq
 \end{itemize}
 
 \subsubsection{Anforderungen an den Prototypen}
-Viele der oben genannten Probleme beruhen auf dem Prinzip der Verwendung von Kanälen zur Kommunikation, die von mehreren Spielern geteilt werden müssen. Für den Prototypen bedeutet es, dass wir statt eines Einkanal Systems eine Kommunikationslösung anbieten wollen, die in der Lage ist mehrere Gespräche gleichzeitig zu führen ohne dass sie Spieler gegenseitig bei ihren Übertragungen stören. Zusätzlich soll nicht nur mehrere 1:1 Verbindungen möglich sein, sondern immernoch eine 1:N Adressierung existieren. 
-Prinzipiell erfordert die Einführung von mehreren Kanälen ein ensprechend kompliziertes Management dieser, da Spieler in der Lage sein sollen zu entscheiden was sie hören wollen und was nicht. Die Lösung beseht aus der Relaxierung des Problems zu einem Nachbarschaftsproblem indem Spieler durch ihre Distanz zueinander entscheiden können welche Kanäle sie hören möchten und welche nicht. Dieses Thema birgt zunächst ein Problem, dass ein Spieler nicht alle Kanäle abonieren kann die er möchte, da dies Bedeuten würde dass sich diese Personen immer in seiner Umgebung befinden müssten. Doch was auf den ersten Blick als Nachteil erscheint, kann auch als signifikanter Vorteil gesehen werden. Da bereits festgestellt wurde, dass durch eine Überlagerung mehrere Sprecher auf einem Kanal dieses vom Spieler als Lärm wahrgenommen wird, ist eine mögliche Lösung die Limitierung der Teilnahme an mehreren Kanälen. 
+Viele der oben genannten Probleme beruhen auf dem Prinzip der Verwendung von Kanälen zur Kommunikation, die von mehreren Spielern geteilt werden müssen. Für den Prototypen bedeutet es, dass wir statt eines Einkanal Systems eine Kommunikationslösung brauchen, die in der Lage ist mehrere gleichzeitig Gespräche zu ermöglichen ohne dass sie Spieler gegenseitig bei ihren Übertragungen stören. Zusätzlich soll nicht nur mehrere 1:1 Verbindungen möglich sein, sondern auch eine 1:N Adressierung existieren. 
+Prinzipiell erfordert die Einführung von mehreren Kanälen ein entsprechend kompliziertes Management dieser, da Spieler in der Lage sein sollen zu entscheiden was sie hören wollen und was nicht. Die Lösung besteht aus der Relaxierung des Problems zu einem Nachbarschaftsproblem indem Spieler durch ihre Distanz zueinander entscheiden können welche Kanäle sie hören möchten und welche nicht. Dieses Thema birgt zunächst ein Problem, dass ein Spieler nicht alle Kanäle abonnieren kann die er möchte, da dies bedeuten würde dass sich diese Personen immer in seiner Umgebung befinden müssten. Doch was auf den ersten Blick als Nachteil erscheint, kann auch als signifikanter Vorteil gesehen werden. Da bereits festgestellt wurde, dass durch eine Überlagerung zu viele gleichzeitig empfangener Audioströme diese vom Spieler als Lärm wahrgenommen wird, ist eine mögliche Lösung die Begrenzung der Teilnahme an mehreren Kanälen, indem man nunmal nicht in jedermans Nähe gleichzeitig sein kann.
 
-
-\subsection{...}
-	THE WHY: Work of Kevin Hew, Martin Gibbs, Greg Wadley
-	\cite{gibbs06}
-	\cite{Gibbs04a}
-	\cite{gibbs04}
- 	Übertragung von Sprache nach Modellen der Proxemik - (Distance Zones)
- 	Übertragung von Animationen, Übertragung von Text
- 	Anlegen eines Sprachmodells mit Telefon/ Luftübertragung
 
 \section{Wahl der Grafik und Audio Engine}
 
@@ -105,20 +96,14 @@ Irrlicht ist eine einfache gut dokumentierte open source Engine in C++ die alle 
 Speziell für die Sprachkommunikation musste die Engine um eine Sound-Engine erweitert werden die eine Audioausgabe ermöglicht. Da speziell für Irrlicht speziell eine plattformübergreifende Audiobibliothek irrKlang \cite{irrklang08} existiert, die einerseits low level Audio Verarbeitung als auch Streaming, realistisches 3D Audio Rendering, Multithreading und Plugins unterstützt gleichzeitig aber auch über eine einfache API verfügt, war die Entscheidung dieses Kombination zu verwenden nicht schwer. 
 
 
-\section{Wahl des VoiP Standards}
-
-\subsection{Skype}
-\subsection{SIP}
-	\cite{schulzrinne05} -- Peer-to-Peer SIP Assumptions
-	
-\subsubsection{PJSIP}
-\subsubsection{WengoPhone}
-\subsubsection{others}
-
-
 \section{Wahl der Netzwerk Architektur}
+Wie im Kapitel 3 und 4 vorgestellt existieren mehrere Netzwerkarchitekturen für eine für Spiele als auch für Sprachübertragungen. 
 
-Safei und Boustead führen in einer Vergleichenden Studien \cite{safei04} \cite{safei04b} den Begriff des Interaktiven Delays ein, und die Parameter der Korrelation zwischen der physischen und virtuellen Welt sowie der Dichte und Verteilung von Avataren ein. 
+Würde man Sprachübertragunng und Datenübertragung gleichbehandeln, so müsste man eine Netwerkarchitektur finden die eine die für unsere gestellten Anforderungen optimale Eigenschaften besitzt. Da Sprachübertragung noch weitere Anforderungen mit sich bringt, die bei der normalen Datenübertragung nicht essentiell sind werden noch weitere Differenzierungsbegriffe eingeführt.
+
+Safei und Boustead führen in einer Vergleichenden Studien von Netzwerkarchitekturen speziell im Bereich der Sprachübertragung \cite{safei04} \cite{safei04b} den Begriff des Interaktiven Delays ein, und die Parameter der Korrelation zwischen der physischen und virtuellen Welt sowie der Dichte und Verteilung von Avataren ein. 
+
+\subsubsection{Interaktiver Delay}
 
 Als interaktiver Delay wird der mittlere Delay zwischen der Audioquelle und allen Zuhörern verstanden. 
 
@@ -126,17 +111,78 @@ Als interaktiver Delay wird der mittlere Delay zwischen der Audioquelle und alle
 	\frac{\sum ^{N}_{i=1} d(m,n_{i})} {\sum ^{N}_{i=1} n_{i}}
 \]
 
+\subsubsection{Korrelation}
+
 Die Korrelation zwischen der physischen und virtuellen Welt, zwischen 0 und 1, gibt an wie hoch die Wahrscheinlichkeit ist dass Spieler sowohl physikalisch als auch virtuell sich in der Nähe befinden. Eine Korrelation von 0 bedeutet dass die Avatare in der virtuellen Welt nicht mit der Lokation der Spieler in der physischen Welt korreliert ist. 
 
+\subsubsection{Avatar-Dichte}
 Die Dichte der Avatare gibt an wie viele Avatare sich in der Hörnähe des Spielers befinden. 
 
-Die Verteilung der Avatare kann entweder uniform sein, bei der die Spieler zufällig gelichmäßig in der virtuellen Welt verteilt sind oder auch einzelne Ballungszentren besitzen. Dabei werden zuällig Ballungszentren verteilt und um diese mit hoher Dichte zum Ballungszentrum Avatare zuällig verteilt.
+\subsubsection{Avatar-Verteilung}
+Die Verteilung der Avatare kann entweder uniform sein, bei der die Spieler zufällig gleichmäßig in der virtuellen Welt verteilt sind oder auch einzelne Ballungszentren besitzen. Dabei werden zufällig Ballungszentren verteilt und um diese mit hoher Dichte zum Ballungszentrum Avatare zufällig verteilt.
 
 In Simulationen \cite{safei04} der oben genannten der Architekturen wurden der Einfluss der Parameter der Korrelation und Dichte auf das interaktive Delay und die Netzwerklast untersucht. Die Resultate der Simulation zeigten, das bei einem zentralisiertem Modell die Korrelation der Avatare keinen Einfluss auf den interaktiven Delay hatte. In einer verteilten Server Lösung war mit zunehmender Korelation eine Reduzierung des Delays erzielt worden. Die Peer-to-Peer Architektur dominierte alle anderen Lösungen mit dem geringsten Delay, der unabhängig von der Korrelation immer konstant klein verblieb. 
+
 Die Zunehmende Dichte der Avatare bei zentralisierten Lösungen hatte keinen signifikanten Einfluss auf die Netzwerkalast. Bei Peer-to-Peer Architekturen stieg diese zwar zuerst exponentiell an, konvergierte jedoch schnell gegen einen Mittelwert, da nicht die Anzahl der Teilnehmer erhöht wurde sondern nur die Dichte. Die geringste Netzwerklast zeigte die verteilte Server Lösung wobei die Simulation die Dichte speziell in den entsprechenden Zonen erhöhte. 
 
+Diese Ergebnisse lassen gute Einblicke gewinnen wie eine mögliche Architektur aussehen kann. 
 
 \subsection{Client Server}
+
+Wie in den oben Angegebenen Studien gezeigt hat bei einem serverbasiertem Modell die Korrelation der Avatare keinen Einfluss auf das interaktive Delay. Das bedeutet dass obwohl sich die Spielerpositionen der Avatare im Spiel zwar konstanten Positionsänderungen unterworfen sind das Delay für jeden Spieler durch das Delay des Servers dominiert wird. Serverbasierte Lösungen zeigen sich auch bei Änderungen der Avatar-Dichte konstant. Da im einfachsten Fall ohne einen Area of Interest Daten unabhängig von den Positionen der Avatare jederzeit an alle Mitspieler übertragen werden hat es keinen Einfluss auf die Netzwerklast ob 10 oder 100 Spieler in der Umgebung befinden. 
+
+Was jedoch großen Einflus auf die Netzwerklast hat ist die Gesammtanzahl der Spieler auf einem solchen zentralisiertem System. Wie bereits erwähnt steigt das Datenvolumen quadratisch mit der Anzahl der Spieler. Da Sprachkommunikation jedoch einen vieflaches größeren Bandbreitenbedarf erfordert als das reine Austauschen von Spielestatus und Positionsinformationen, können auch gut Angebundene Server schon bei kleinen Nutzeranzahlen an ihre theoretischen Grenzen stoßen. 
+
+\subsubsection{Kapazität}
+Die Grundlagen für die Berechnung verstehen sich unter folgenden Vorraussetzungen:
+\begin{itemize}
+	\item Jeder Person die spricht sendet einen Audiostream zum Server
+	\item Jede Person im gleichen Spiel möchte die die gesprochenen Daten der Personen empfangen.
+	\item der Server mischt die Audioströme nicht, da jede Person in der Lage sein soll selbst zu entscheiden welche Personen gehört werden sollen. 
+\end{itemize}
+Ein Beispiel wäre also wenn sich 12 Personen im Spiel befinden empfängt der Server Audioströme von 12 Persoenen und sendet 12 Audioströme an jede der 12 Personen. 
+
+Für nach dem heutigem Standard eingesetzte Server mit 100MBit Anbindungen für Upload und Download würde sich folgende Rechnung ergeben:
+
+\subsubsection{Server}
+
+Jeder Spieler sendet seinen Audiostrom mit 16 Kbit/s \cite {speex} an den Server. Bei einer Anbindung von 100 Mbit/s  ergibt sich eine theoretische Maximalanzahl von Spielern für den Server:
+
+Upstream
+
+\[
+ \frac{100000 \frac{Kbit}{s}}{16 \frac{Kbit}{s}} = 6250 Spieler
+\]
+
+Downstream
+
+\[
+	\frac{100000 \frac{Kbit}{s}} {16 \frac{Kbit}{s}^{2}} = 390 Spieler
+\]
+
+\subsubsection{Client}
+
+Upstream
+
+\[
+ \frac{10000 \frac{Kbit}{s}}{16 \frac{Kbit}{s}} = 62 Mögliche Verbindungen wovon jedoch nur eine einzige gebraucht wird.
+\]
+
+Downstream
+
+\[
+	\frac{10000 \frac{Kbit}{s}} {16 \frac{Kbit}{s}^{2}} = 39 gleichzeitig Mögliche 
+\]
+
+Wichtig bei dieser Berechnung ist dass die Spieleapplikation und andere im Hintergrund laufende Applikationen auch Bandbreite verbrauchen können so dass die oben genannten Werte nur als theoretisches Maximum anzusehen sind. 
+
+
+Möchte man die gleiche Berechnung für die Clients durchführen so ist sie Rechnung analog vorzunehmen nur dass Up- und Downstream vertauscht sind und eine Anbindung von Clients meist mit 10Mbit/s anzusiedeln ist. 
+
+Die Serverbasierte Lösung wird vor allem von kommerziellen Anbietern favorisiert, die über die entsprechende Infrastruktur verfügen. Die Benutzung einer solchen Software 
+\subsection{Peer-to-Peer}
+
+
 \subsubsection{Netmeeting}
 \subsubsection{Ventrillo}
 \subsubsection{Teamspeak}
@@ -153,7 +199,7 @@ Security Issues
 
 \subsubsection{Design alternatives}
 \subsubsection[{Replicate registrations vs. search on call setup}
-Durch die serverbasierte Architektur kann der server schnell ein Flaschenhals sowohl für die Bandbreite als auch für die Verfügbarkeit werden. Eine Möglichkeit ist der einsatz mehrerer Redundanter Server. Dabei bestehen zwei Alternativen.
+Durch die serverbasierte Architektur kann der server schnell ein Flaschenhals sowohl für die Bandbreite als auch für die Verfügbarkeit werden. Eine Möglichkeit ist der Einsatz mehrerer Redundanter Server. Dabei bestehen zwei Alternativen.
 
 \begin{itemize}
 	\item Die Benutzer Lokationsinformations auf allen Servern zu replizieren.
@@ -174,3 +220,15 @@ Beide Ansätze können fehlschlagen wenn die Anzahl an Benutzern sehr groß wird.
 %\cite{schulzrinne07}
 
 
+\section{Wahl des VoiP Standards}
+
+\subsection{Skype}
+
+\subsection{SIP}
+
+	\cite{schulzrinne05} -- Peer-to-Peer SIP Assumptions
+	
+\subsubsection{PJSIP}
+
+\subsubsection{WengoPhone}
+\subsubsection{others}
