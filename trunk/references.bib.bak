@@ -446,6 +446,15 @@
   timestamp = {2008.03.28}
 }
 
+@ARTICLE{irrklang08,
+  author = {Nikolaus Gebhardt},
+  title = {irrKlang},
+  journal = {http://www.ambiera.com/irrklang/index.html},
+  year = {2008},
+  owner = {plotti},
+  timestamp = {2008.04.09}
+}
+
 @ARTICLE{irrlicht08,
   author = {Nikolaus Gebhardt},
   title = {Irrlicht 3D Engine},

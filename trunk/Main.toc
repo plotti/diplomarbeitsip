@@ -1,9 +1,9 @@
 \select@language {english}
 \select@language {ngerman}
-\contentsline {chapter}{Stichwortverzeichnis}{v}
-\contentsline {chapter}{Abbildungsverzeichnis}{vi}
-\contentsline {chapter}{Tabellenverzeichnis}{vii}
-\contentsline {chapter}{Abk\"{u}rzungsverzeichnis}{viii}
+\contentsline {chapter}{Stichwortverzeichnis}{vi}
+\contentsline {chapter}{Abbildungsverzeichnis}{vii}
+\contentsline {chapter}{Tabellenverzeichnis}{viii}
+\contentsline {chapter}{Abk\"{u}rzungsverzeichnis}{ix}
 \contentsline {chapter}{\numberline {1}Einleitung}{1}
 \contentsline {section}{\numberline {1.1}Ziel der Arbeit}{1}
 \contentsline {section}{\numberline {1.2}Aufbau der Arbeit}{2}
@@ -88,48 +88,70 @@
 \contentsline {subsection}{\numberline {4.2.5}Hybride P2P-Systeme}{42}
 \contentsline {section}{\numberline {4.3}Hybride Systeme}{42}
 \contentsline {section}{\numberline {4.4}Analyse der bestehenden Architekturen f\"ur Audio\"ubertragung}{43}
-\contentsline {section}{\numberline {4.5}Peer-to-Peer SIP}{44}
-\contentsline {subsection}{\numberline {4.5.1}Motivation f\"ur Peer-to-Peer SIP}{44}
-\contentsline {subsection}{\numberline {4.5.2}Funktionsweise}{45}
-\contentsline {section}{\numberline {4.6}Architektur Variationen}{46}
-\contentsline {chapter}{\numberline {5}Verwandte Arbeiten}{47}
-\contentsline {section}{\numberline {5.1}Historische Ans\"atze}{47}
-\contentsline {section}{\numberline {5.2}Conferencing vs. Ingame Communication}{47}
-\contentsline {section}{\numberline {5.3}Serverbasierte Ans\"atze}{47}
-\contentsline {subsection}{\numberline {5.3.1}DICE: Internet Delivery of Immersive Voice Communication for Crowded Virtual Spaces}{47}
-\contentsline {subsection}{\numberline {5.3.2}MICE: Mobile Immersice Communication Environment}{48}
-\contentsline {subsection}{\numberline {5.3.3}Session Initiation Protocol for Multiplayer Networked Games}{49}
-\contentsline {subsection}{\numberline {5.3.4}SIP und SOAP basiertes Konferenzframework}{50}
-\contentsline {section}{\numberline {5.4}Dezentralisierte Ans\"atze}{50}
-\contentsline {chapter}{\numberline {6}Entwurf}{52}
-\contentsline {section}{\numberline {6.1}Soll - Kommunikationsaspekte}{52}
-\contentsline {subsection}{\numberline {6.1.1}Kommunikationsmodell}{52}
-\contentsline {subsection}{\numberline {6.1.2}Interpersonelle vs. Massenkommunikation}{52}
-\contentsline {subsection}{\numberline {6.1.3}Interaktivit\"at und Lebhaftigkeit}{53}
-\contentsline {subsection}{\numberline {6.1.4}Proxemik in der Kommunikation}{53}
-\contentsline {subsection}{\numberline {6.1.5}Positionierung des Prototyps}{54}
-\contentsline {subsection}{\numberline {6.1.6}Folgerungen aus den Studien der Textkommunikation}{55}
-\contentsline {subsection}{\numberline {6.1.7}Folgerungen aus den Studien der Nonverbalen Kommunikation}{55}
-\contentsline {subsection}{\numberline {6.1.8}Sprachkommunikation}{56}
-\contentsline {subsubsection}{Probleme der Sprachkommunikation}{56}
-\contentsline {subsubsection}{Anforderungen an den Prototypen}{56}
-\contentsline {section}{\numberline {6.2}Wahl der Grafik und Audio Engine}{57}
-\contentsline {subsection}{\numberline {6.2.1}3D Spieleengines}{57}
-\contentsline {subsection}{\numberline {6.2.2}3D Engines}{57}
-\contentsline {subsubsection}{Irrlicht}{58}
-\contentsline {subsubsection}{Irrklang}{58}
-\contentsline {section}{\numberline {6.3}Wahl der Netzwerk Architektur}{58}
-\contentsline {subsubsection}{Interaktiver Delay}{59}
-\contentsline {subsubsection}{Korrelation}{59}
-\contentsline {subsubsection}{Avatar-Dichte}{59}
-\contentsline {subsubsection}{Avatar-Verteilung}{59}
-\contentsline {subsection}{\numberline {6.3.1}Client Server}{60}
-\contentsline {subsubsection}{Kapazit\"at}{60}
-\contentsline {subsection}{\numberline {6.3.2}Peer-to-Peer}{61}
-\contentsline {chapter}{\numberline {7}Summary, Conclusions, and Further Work}{62}
+\contentsline {subsubsection}{Interaktiver Delay}{44}
+\contentsline {subsubsection}{Korrelation}{44}
+\contentsline {subsubsection}{Avatar-Dichte}{44}
+\contentsline {subsubsection}{Avatar-Verteilung}{44}
+\contentsline {section}{\numberline {4.5}Peer-to-Peer SIP}{45}
+\contentsline {subsection}{\numberline {4.5.1}Motivation f\"ur Peer-to-Peer SIP}{45}
+\contentsline {subsection}{\numberline {4.5.2}Funktionsweise}{46}
+\contentsline {section}{\numberline {4.6}Architektur Variationen}{47}
+\contentsline {chapter}{\numberline {5}Verwandte Arbeiten}{48}
+\contentsline {section}{\numberline {5.1}Historische Ans\"atze}{48}
+\contentsline {section}{\numberline {5.2}Conferencing vs. Ingame Communication}{48}
+\contentsline {section}{\numberline {5.3}Serverbasierte Ans\"atze}{48}
+\contentsline {subsection}{\numberline {5.3.1}DICE: Internet Delivery of Immersive Voice Communication for Crowded Virtual Spaces}{48}
+\contentsline {subsection}{\numberline {5.3.2}MICE: Mobile Immersice Communication Environment}{49}
+\contentsline {subsection}{\numberline {5.3.3}Session Initiation Protocol for Multiplayer Networked Games}{50}
+\contentsline {subsection}{\numberline {5.3.4}SIP und SOAP basiertes Konferenzframework}{51}
+\contentsline {section}{\numberline {5.4}Dezentralisierte Ans\"atze}{51}
+\contentsline {chapter}{\numberline {6}Entwurf}{53}
+\contentsline {section}{\numberline {6.1}Soll - Kommunikationsaspekte}{53}
+\contentsline {subsection}{\numberline {6.1.1}Kommunikationsmodell}{53}
+\contentsline {subsection}{\numberline {6.1.2}Interpersonelle vs. Massenkommunikation}{53}
+\contentsline {subsection}{\numberline {6.1.3}Interaktivit\"at und Lebhaftigkeit}{54}
+\contentsline {subsection}{\numberline {6.1.4}Proxemik in der Kommunikation}{54}
+\contentsline {subsection}{\numberline {6.1.5}Positionierung des Prototyps}{55}
+\contentsline {subsection}{\numberline {6.1.6}Folgerungen aus den Studien der Textkommunikation}{56}
+\contentsline {subsection}{\numberline {6.1.7}Folgerungen aus den Studien der Nonverbalen Kommunikation}{56}
+\contentsline {subsection}{\numberline {6.1.8}Sprachkommunikation}{57}
+\contentsline {subsubsection}{Probleme der Sprachkommunikation}{57}
+\contentsline {subsubsection}{Anforderungen an den Prototypen}{57}
+\contentsline {section}{\numberline {6.2}Wahl der Grafik und Audio Engine}{58}
+\contentsline {subsection}{\numberline {6.2.1}3D Spieleengines}{58}
+\contentsline {subsection}{\numberline {6.2.2}3D Engines}{58}
+\contentsline {subsubsection}{Irrlicht}{59}
+\contentsline {subsubsection}{Irrklang}{59}
+\contentsline {section}{\numberline {6.3}Bestehende VoIP Anwendungen f\"ur Spiele}{59}
+\contentsline {subsection}{\numberline {6.3.1}Serverbasierte Sprachkommunikationsl\"osungen}{60}
+\contentsline {subsubsection}{Ventrillo}{60}
+\contentsline {subsubsection}{Teamspeak}{60}
+\contentsline {subsubsection}{Mumble}{60}
+\contentsline {subsection}{\numberline {6.3.2}Dezentralisierte Sprachkommunikationsl\"osungen}{61}
+\contentsline {subsubsection}{Skype}{61}
+\contentsline {subsection}{\numberline {6.3.3}Instant Messanging Anwendungen}{61}
+\contentsline {subsection}{\numberline {6.3.4}SIP}{61}
+\contentsline {subsection}{\numberline {6.3.5}SIP Server}{62}
+\contentsline {subsection}{\numberline {6.3.6}Existierende SIP Clients}{62}
+\contentsline {subsubsection}{Pjsip}{63}
+\contentsline {section}{\numberline {6.4}Wahl der Netzwerk Architektur}{63}
+\contentsline {subsection}{\numberline {6.4.1}P2P SIP}{64}
+\contentsline {subsection}{\numberline {6.4.2}Zentralisiertes SIP}{64}
+\contentsline {subsubsection}{Kapazit\"at}{64}
+\contentsline {subsection}{\numberline {6.4.3}SIP Hybrid Model}{65}
+\contentsline {subsubsection}{Design alternatives}{65}
+\contentsline {subsubsection}{Client}{66}
+\contentsline {subsection}{\numberline {6.4.4}Peer-to-Peer}{67}
+\contentsline {subsubsection}{Netmeeting}{67}
+\contentsline {subsubsection}{Ventrillo}{67}
+\contentsline {subsubsection}{Teamspeak}{67}
+\contentsline {subsubsection}{Battlecom}{67}
+\contentsline {subsection}{\numberline {6.4.5}Reine Peer-to-Peer Modelle}{67}
+\contentsline {subsection}{\numberline {6.4.6}Problems}{67}
+\contentsline {chapter}{\numberline {7}Summary, Conclusions, and Further Work}{68}
 \select@language {english}
-\contentsline {section}{\numberline {7.1}Summary}{62}
-\contentsline {section}{\numberline {7.2}Conclusions}{62}
-\contentsline {section}{\numberline {7.3}Further Work}{64}
+\contentsline {section}{\numberline {7.1}Summary}{68}
+\contentsline {section}{\numberline {7.2}Conclusions}{68}
+\contentsline {section}{\numberline {7.3}Further Work}{70}
 \select@language {ngerman}
-\contentsline {chapter}{Literaturverzeichnis}{65}
+\contentsline {chapter}{Literaturverzeichnis}{71}

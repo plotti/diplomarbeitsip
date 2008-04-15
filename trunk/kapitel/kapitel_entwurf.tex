@@ -95,70 +95,161 @@ Irrlicht ist eine einfache gut dokumentierte open source Engine in C++ die alle 
 \subsubsection{Irrklang}
 Speziell für die Sprachkommunikation musste die Engine um eine Sound-Engine erweitert werden die eine Audioausgabe ermöglicht. Da speziell für Irrlicht speziell eine plattformübergreifende Audiobibliothek irrKlang \cite{irrklang08} existiert, die einerseits low level Audio Verarbeitung als auch Streaming, realistisches 3D Audio Rendering, Multithreading und Plugins unterstützt gleichzeitig aber auch über eine einfache API verfügt, war die Entscheidung dieses Kombination zu verwenden nicht schwer. 
 
+\section{Bestehende VoIP Anwendungen für Spiele}
+Zwecks der Implementierung einer Sprachkommunikationslösung stehen mehrere Alternativen zur Verfügung. Dabei ist die Mehrzahl der Lösungen kommerzieller oder proprietärer Natur. Bisher werden im Spielebereich fast aussschließlich serverbasierte Sprachkommunikationslösungen eingesetzt. Dabei unterstützen viele der Lösungen ähnliche Audiocodecs und bieten einen vergleichbaren Funktionsumfang.
+Im privaten VoIP Telefonie Bereich werden oft kommerzielle Produkte wie Skype eingesetzt.
+Die wenigsten Benutzer setzen offene Sprachkommunikationslösungen ein. 
+
+\subsection{Serverbasierte Sprachkommunikationslösungen}
+%http://www.tentonhammer.com/index.php?q=node/102
+
+\subsubsection{Ventrillo}
+%http://www.ventrilo.com/
+Die unter Spielern beliebteste Lösung Ventrillo (Version 3.0.1) ist eine serverbasiertes propriäteres VoIP Anwendung die eine Sprachkommunikation von Clients erlaubt. Die Software besteht aus einem Server- und Client-modul, wobei die Clientsoftware frei erhältlich ist, für die Serverkomponente jedoch eine kostenpflichtige Lizenz zu erwerben ist. Benutzer des Ventrillo Clients melden sich vor Beginn des eigentlichen Spieles auf einem der kostenpflichtigen Ventrillo Server an und können dort einen Kanal betreten. Benutzer des gleichen Kanals auf dem gleichen Server können gegenseitig gehört werden. Durch das Lizenzmodell ist es nicht möglich im privaten Bereich eigene Server zu betreiben und man ist auf bestehende Anbieter limitiert. 
+
+\subsubsection{Teamspeak}
+%http://www.goteamspeak.com
+Teamspeak (Version 2.0.33.7) ist ebenfalls ein serverbasiertes propriäteres VoIP Programm das eine Sprachkommunikation von Clients erlaubt.Die Software besteht ebenfalls aus eine Server und Client Komponenten. Benutzer des kostenlosen Teamspeak Clients können sich mit dem kostenpflichtigem TeamSpeak Server ihrer Wahl verbinden und dort einen Kanal betreten. Benutzer des gleichen Kanals auf dem gleichen Server können gegenseitig gehört werden. Zusätzlich existieren Plugins die es erlauben Kanäle während der Spielesitzung per Tastaturkombination zu wechseln. 
+
+
+\subsubsection{Mumble}
+%http://mumble.sourceforge.net
+Mumble (Version 1.1.3) ist eine offene serverbasierte VoIP Anwendung, die primär von Computerspielern für Sprachkommunikation genutzt wird. Mumble versucht die soziale Komponente der Sprachkommunikation zu betonen indem es sehr wenige Administrative Elemente besitzt und das Hauptaugenmerk auf der Sprachqualität liegt. Seine Verwendung gleicht den anderen Programmen indem Benutzer des Clients Kanäle auf Servern betreten um gegenseitig gehört zu werden. 
+
+Obwohl die kommerziellen Lösungen bei einer optimalen Konfiguration hunderte von Benutzern unterstützen können und eine gute Sprachqualität bieten haben sie den Nachteil, dass sie nicht modifizierbar sind, die Serverkomponenten nicht frei verfügbar sind, und somit eine Nutzung den Prototypen nicht sinnvoll erscheint. 
+Mumble als einziges ist wegen seiner offenen Lizenz modifizierbar, jedoch Aufgrund der komplizierten Serverkonfiguration und einem komplexen Rechtesystem, das auf Gruppen und Regeln basiert, nicht einfach für unsere Bedürfnisse anzupassen.
+Zusätzlich zu den vorhandenen Problemen sind die drei propriäteren Lösungen untereinander nicht kompatibel und bieten somit nur Insellösungen. 
+
+\subsection{Dezentralisierte Sprachkommunikationslösungen}
+
+\subsubsection{Skype}
+
+Das in Kapitel 2 bereits Skype erlaubt peer-to-peer VoIP. Obwohl der Einsatz Skype kostenlos ist und der Dienst völlig dezentralisiert ist bietet es auch einige Nachteile. 
+Da Skypes VoIP-Protokoll proprietär ist, kann es nur mit der originalen Skype-Software genutzt werden. Über das Skype-API ist es auch für externe Programme möglich, auf die Funktionalitäten des Skype-Clients und Teilen des Netzwerkes zuzugreifen. Jedoch sind in der kostenlosen Version nur Konferenzen mit bis zu 5 gleichzeitigen Teilnehmern möglich. In einer kostenpflichtigen Version werden bis zu 10 gleichzeitige Konferenzteilnehmer unterstützt, die Clients bieten jedoch keine Kontrolle über die einzelenen Audioströme. So kann man nur die Summe aller Audioströme empfangen und kann die Lautstärke einzelner Teilnehmer nicht geändert werden oder einzelen Audioströme komplett stummgeschaltet werden. 
+Somit bietet sich Skype als einziger tatsächlicher dezentralisierter Client nicht alle Eigenschaften um als mögliche Ausgangsgrundlage zu dienen. 
+
+
+\subsection{Instant Messanging Anwendungen}
+Andere peer-to-peer Programme wie Microsoft Netmeeting, Microsoft Messenger, GoogleTalk sind nicht modifizierbar und bieten nur keinerlei Konferenzmöglichkeiten. 
+
+\subsection{SIP}
+
+Das in Kapitel 2 vorgestellte SIP Protokoll erfüllt gleich mehrere Anforderungen an den Prototypen. Dadurch dass SIP ein sehr generisches offenes Protokoll ist kann es kann benutzt werden, um beliebige Sessions mit einem oder mehreren Teilnehmern zu verwalten. Dabei ist es nicht auf Internet-Telefonie beschränkt, sondern Sessions können beliebige Multimediaströme, Konferenzen, Computerspiele usw. sein.
+Zahlreiche standardisierungs Organisationen wie IETF PINT, 3GPP, International Packet Communications Consortium, IMTC und PacketCable unterstützen bereits den Einsatz von SIP.
+%http://www.cs.columbia.edu/sip/
+In der open source Gemeinde wird das SIP Protokoll auch zunehmend unterstützt so existieren bereit etliche Clientanwendungen als auch zentrale Komponenten wie Proxys und Registrare, die der zunehmenden globalen Verbreitung von SIP dienen. Zusätzlich werden etliche SIP stacks, Client anwendungen und SDKs bishin zu Komplettlösungen angeboten die in Konkurenz zu kommerziellen Lösungen stehen. Es existieren auch Referenzimplementierungen, wie SIP JAIN-SIP, welches vom National Insitute of Standards and Technology (NIST) entwickelt wurde, die sowohl in kommerziellen Projekten aber auch zu Forschungszwecken eingesetzt werden. 
+
+SIP erfüllt auch die Anforderungen an unseren Prototyp, indem wir in der Lage sind mehrere Audioströme zu verwalten, Kontrolle über die Audioströme zu haben und sowohl serverbasierte als auch dezentralisierte Lösungen umzusetzen. 
+
+\cite{schulzrinne05} -- Peer-to-Peer SIP Assumptions
+
+Um eine funktionierende Implementierung in kürzester Zeit umzusetzen, habe ich einige existierende offene SIP Stacks in Betracht gezogen.
+
+\subsection{SIP Server}
+Für den Einsatz als Server bieten sich zwei große Pakete an die beide den SIP Standard nach RFC 3261 unterstützen. 
+Asterisk (Version 1.4.19) unterstützt Voice-over-IP (VoIP) mit unterschiedlichen Protokollen  darunter sowohl SIP als auch das H323 Protokoll und bietet alle Möglichkeiten einer Anbindung an das Telefonnetz. 
+Die Serveranwendung OpenSer (Version 1.3.1) bietet ähnliche Funktionalität kann als SIP-Proxy, Registrar, aber auch als Location- und Application-Server betrieben werden und bietet zusätzlich das Unterstüztung für das SIP-SIMPLE Protokoll, was den Ausschlag gegeben hat diesen SIP Server zu benutzen. OpenSER ist flexibel einsetzbar, von eingebetteten System wie DSL-Routern bis zu großen Installationen mit mehreren Millionen Benutzern bei Internet Service Providern.
+Darüber hinaus existieren noch etliche andere sowohl open source als auch propriätere SIP Server Lösungen, die hier nicht weiter erläutert werden. 
+
+\subsection{Existierende SIP Clients}
+%Linux
+%http://sourceforge.net/projects/kphone
+%www.linphone.org
+%Windows
+%www.xten.com 
+%http://www.minisip.org
+%http://gizmo5.com/
+
+Bei den SIP Clients existiert mittlerweile eine Vielzahl an speziellen ausgereiften kostenlosen Softphone Lösungen Lösungen. Einige der bekanntesten open source Softphones für Linux und Windows sind das Ekiga, KPhone oder Linophone, Minisip. Bei diesen Softphones handelt es sich um kostenlose Projekte die frei eingesetzt und modifiziert werden können. Zusätzlich existieren zwar freie Softphones, die von Infrastruktur Betreibern kostenlos werden um den eigenen Marktanteil am VoIP Markt zu erhöhen. Dazu gehören Programme wie X-Lite, Gizmo5 oder OpenWengo, deren Einsatz meist mit der Nutzung der Infrastruktur eines bestimmten Betreibers empfohlen oder vorgesehen wird. 
+Zusätzlich zu kompletten Softphones existieren plattformübergriefende SIP Stacks die die Funktionalität von SIP in größeren Anwendungen ermöglichen sollen. Dazu zählen Stacks wie OpenSipStack, sipXtackLib, reSIProcate oder PJSIP.
+Eine ausführliche Übersicht über viele der auf dem Markt erhältlichen SIP Clients und Server Anwendungen findet sich unter \cite{sipsoftware08}.
+
+\subsubsection{Pjsip}
+Meine persönliche Wahl fiel aus den folgenden Gründen auf PJSIP:
+\begin{itemize}
+	\item Platformunabhängigkeit
+	\item Mögliche Integration mit Irrlicht wegen C und C++ als Programiersprache
+	\item Gute Dokumentation 
+	\item Unterstützung des SIP und SIP-SIMPLE Standards 
+	\item Unterstützung für STUN, TURN und ICE
+	\item Unterstützung von Asterisk und Openser
+	\item Möglicher Einsatz auf Mobilen Endgeräten
+	\item Unterstützung für moderne Audiocodecs wie z.B. Speex oder G.711
+	\item Bereits existierender Mediastack mit einer logischen Conference Bridge
+	\item Möglichkeit der Anpassung der Lautstärke der einzelnen Audiostreams
+\end{itemize}
+
+%Bild PJSIP
+
+Viele der existierenden SIP Stacks kamen für den Prototypen auch deshalb nicht in Frage, weil sie in einer anderen Programiersprache als C oder C++ geschrieben waren und so mit der 3D-Engine nicht integriert werden können. 
+
 
 \section{Wahl der Netzwerk Architektur}
 Wie im Kapitel 3 und 4 vorgestellt existieren mehrere Netzwerkarchitekturen für eine für Spiele als auch für Sprachübertragungen. 
 
-Würde man Sprachübertragunng und Datenübertragung gleichbehandeln, so müsste man eine Netwerkarchitektur finden die eine die für unsere gestellten Anforderungen optimale Eigenschaften besitzt. Da Sprachübertragung noch weitere Anforderungen mit sich bringt, die bei der normalen Datenübertragung nicht essentiell sind werden noch weitere Differenzierungsbegriffe eingeführt.
+Kapitel 3 enthält vergleichende Studien von Netzwerkarchtiekturen für Spiele und deren Tauglichkeit in ihrem Einsatz als Sprachkommunikationsmedium. Mit der grundsätzlichen Entscheidung SIP zu verwenden ergeben sich aus den in Kapitel 3 vorgestellten Alternativen nur folgende Kombitationen. 
 
-Safei und Boustead führen in einer Vergleichenden Studien von Netzwerkarchitekturen speziell im Bereich der Sprachübertragung \cite{safei04} \cite{safei04b} den Begriff des Interaktiven Delays ein, und die Parameter der Korrelation zwischen der physischen und virtuellen Welt sowie der Dichte und Verteilung von Avataren ein. 
+Der Einsatz eines komplett dezentralisierten SIP Netzwerkes auch P2PSIP genannt bei dem sowohl der Datenaustausch als auch der Austausch der Audioströme nur zwischen den einzelnen Peers stattfindet.
 
-\subsubsection{Interaktiver Delay}
+Als zentralisierten Ansatz kann man ein SIP Netzwerk mit einer zentralen Komponente bezeichen die für den Austausch auch sämtlicher Daten Spieledaten und der einzelnen Audioströme verantwortlich ist. 
 
-Als interaktiver Delay wird der mittlere Delay zwischen der Audioquelle und allen Zuhörern verstanden. 
+Der Einsatz eines Hybrid Modells würde bedeuten, dass die Datenkommunikation mittels eines Servers Stattfindet, die Sprachkommunikation dagegen zwischen den Clients selbst, was auch dem ursprünglichen SIP Entwurf gleichkommt.
 
-	\[	
-	\frac{\sum ^{N}_{i=1} d(m,n_{i})} {\sum ^{N}_{i=1} n_{i}}
-\]
+\subsection{P2P SIP}
 
-\subsubsection{Korrelation}
+Bei einem völlig dezentralisierten P2P SIP mittels DHT würden sowohl die Spiele Daten als auch die Sprachlkommunikation nur zwischen den einzelnen Clients ausgetauscht werden. Wie in Kapitel 3 vorgestellt, würde die zentrale Komponente des Registrars durch einen DHT ersetzt werden der die Daten auf den einzelnen Clients verteilt. Dieser Ansatz ist theoretisch möglich führt aber in unserem Fall relativ schnell zu Problemen die den Rahmen der Arbeit sprengen. So ist es zunächst nicht trivial zu bestimmen wer Teilnehmer des Spieles ist und an wen Daten verschickt werden sollen. Es wäre zwar vorstellbar dass jeder Teilnehmer eines solchen P2PSIP Spieles einfach seine Spieldaten an jeden aktiven Teilnehmer sendet wobei jeder Teilnehmer über eine Liste aller Teilnehmer eines Spieles verfügen müsste. 
+Wie im Kapitel 3 gezeigt existieren noch viele weitere Ansätze, von denen die meisten bisher auch nur simuliert worden sind und nicht genau genug spezifiziert sind um tatsächlich eine funktionierende Implementierung zu ermöglichen. Zusätzlich dazu existiert noch keine Implementierung eines funktionierenden P2PSIP Overlays was diese Option auf erst in der Zukunft umsetzbar macht. 
 
-Die Korrelation zwischen der physischen und virtuellen Welt, zwischen 0 und 1, gibt an wie hoch die Wahrscheinlichkeit ist dass Spieler sowohl physikalisch als auch virtuell sich in der Nähe befinden. Eine Korrelation von 0 bedeutet dass die Avatare in der virtuellen Welt nicht mit der Lokation der Spieler in der physischen Welt korreliert ist. 
-
-\subsubsection{Avatar-Dichte}
-Die Dichte der Avatare gibt an wie viele Avatare sich in der Hörnähe des Spielers befinden. 
-
-\subsubsection{Avatar-Verteilung}
-Die Verteilung der Avatare kann entweder uniform sein, bei der die Spieler zufällig gleichmäßig in der virtuellen Welt verteilt sind oder auch einzelne Ballungszentren besitzen. Dabei werden zufällig Ballungszentren verteilt und um diese mit hoher Dichte zum Ballungszentrum Avatare zufällig verteilt.
-
-In Simulationen \cite{safei04} der oben genannten der Architekturen wurden der Einfluss der Parameter der Korrelation und Dichte auf das interaktive Delay und die Netzwerklast untersucht. Die Resultate der Simulation zeigten, das bei einem zentralisiertem Modell die Korrelation der Avatare keinen Einfluss auf den interaktiven Delay hatte. In einer verteilten Server Lösung war mit zunehmender Korelation eine Reduzierung des Delays erzielt worden. Die Peer-to-Peer Architektur dominierte alle anderen Lösungen mit dem geringsten Delay, der unabhängig von der Korrelation immer konstant klein verblieb. 
-
-Die Zunehmende Dichte der Avatare bei zentralisierten Lösungen hatte keinen signifikanten Einfluss auf die Netzwerkalast. Bei Peer-to-Peer Architekturen stieg diese zwar zuerst exponentiell an, konvergierte jedoch schnell gegen einen Mittelwert, da nicht die Anzahl der Teilnehmer erhöht wurde sondern nur die Dichte. Die geringste Netzwerklast zeigte die verteilte Server Lösung wobei die Simulation die Dichte speziell in den entsprechenden Zonen erhöhte. 
-
-Diese Ergebnisse lassen gute Einblicke gewinnen wie eine mögliche Architektur aussehen kann. 
-
-\subsection{Client Server}
-
-Wie in den oben Angegebenen Studien gezeigt hat bei einem serverbasiertem Modell die Korrelation der Avatare keinen Einfluss auf das interaktive Delay. Das bedeutet dass obwohl sich die Spielerpositionen der Avatare im Spiel zwar konstanten Positionsänderungen unterworfen sind das Delay für jeden Spieler durch das Delay des Servers dominiert wird. Serverbasierte Lösungen zeigen sich auch bei Änderungen der Avatar-Dichte konstant. Da im einfachsten Fall ohne einen Area of Interest Daten unabhängig von den Positionen der Avatare jederzeit an alle Mitspieler übertragen werden hat es keinen Einfluss auf die Netzwerklast ob 10 oder 100 Spieler in der Umgebung befinden. 
-
-Was jedoch großen Einflus auf die Netzwerklast hat ist die Gesammtanzahl der Spieler auf einem solchen zentralisiertem System. Wie bereits erwähnt steigt das Datenvolumen quadratisch mit der Anzahl der Spieler. Da Sprachkommunikation jedoch einen vieflaches größeren Bandbreitenbedarf erfordert als das reine Austauschen von Spielestatus und Positionsinformationen, können auch gut Angebundene Server schon bei kleinen Nutzeranzahlen an ihre theoretischen Grenzen stoßen. 
+\subsection{Zentralisiertes SIP}
+Die in Kapitel 4 vorgestellte von Singh und Acharya vorgestellte Methode kann man als zentralisiertes SIP bezeichnen. Obwohl dieser Ansatz es erlaubt verschiedene Konferenzen für verschiedene Orte oder Personen zu kreieren, bleibt das Problem dass eine genaue Steuerung über die empfangegen Audioströme erfordert, dass der Client jedes mal dem Server mitteilen muss wie sein persönlicher Audiostrom gemischt werden muss. Andererseits da der Server auch alle Spieledaten erhält sollte er in der Lage sein die entsprechenden Audioströme für den einzelnen Client so anzupassen, dass dieser seine auf ihn angepasste vorgemischte Audioszene erhält. Diesen Ansatz verfolgen wiederrum Safei und Boustead in den vorgestellten MICE System. 
+Prinzipiell ist dieser Ansatz allen anderen Ansätzen überlegen da die eine zentralisierte Komponente in über die Bandbreite verfügt um möglichst viele Audioströme zu empfangen. 
 
 \subsubsection{Kapazität}
-Die Grundlagen für die Berechnung verstehen sich unter folgenden Vorraussetzungen:
+Die Grundlagen für die Berechnung versteht sich unter folgenden Vorraussetzungen:
 \begin{itemize}
 	\item Jeder Person die spricht sendet einen Audiostream zum Server
 	\item Jede Person im gleichen Spiel möchte die die gesprochenen Daten der Personen empfangen.
-	\item der Server mischt die Audioströme nicht, da jede Person in der Lage sein soll selbst zu entscheiden welche Personen gehört werden sollen. 
+	\item Der Server mischt die Audioströme da er auch die Positionen der Teilnehmer kennt. 
 \end{itemize}
-Ein Beispiel wäre also wenn sich 12 Personen im Spiel befinden empfängt der Server Audioströme von 12 Persoenen und sendet 12 Audioströme an jede der 12 Personen. 
+Ein Beispiel wäre also wenn sich 12 Personen im Spiel befinden empfängt der Server Audioströme von 12 Persoenen und sendet einen bereits abgemischten Audiostrom an jede der 12 Personen. 
 
-Für nach dem heutigem Standard eingesetzte Server mit 100MBit Anbindungen für Upload und Download würde sich folgende Rechnung ergeben:
+Sendet jeder Spieler seinen Audiostrom mit 16 Kbit/s \cite {speex} an den Server, der nach dem heutigem Standard mit einer 100MBit Anbindung für den Upload und Download ausgestattet ist würde sich folgende Rechnung ergeben:
 
-\subsubsection{Server}
-
-Jeder Spieler sendet seinen Audiostrom mit 16 Kbit/s \cite {speex} an den Server. Bei einer Anbindung von 100 Mbit/s  ergibt sich eine theoretische Maximalanzahl von Spielern für den Server:
-
-Upstream
+Upstream/Downstream
 
 \[
  \frac{100000 \frac{Kbit}{s}}{16 \frac{Kbit}{s}} = 6250 Spieler
 \]
 
-Downstream
+Der Client selbst muss nur in der Lage sein seinen eigenen Audistrom zu emfpangen und einen Audiostrom mit gleicher Bitrate zu empfangen. 
 
-\[
-	\frac{100000 \frac{Kbit}{s}} {16 \frac{Kbit}{s}^{2}} = 390 Spieler
-\]
+Probleme dieser Architektur liegen jedoch vor allem im interaktiven Delay und der Fähigkeit des Servers nicht nur Audioströme zu mischen sondern diese gleichzeitig in der jeweiligen Laustärke zu mischen. 
+
+\subsection{SIP Hybrid Model}
+
+\subsubsection{Design alternatives}
+\subsubsection[{Replicate registrations vs. search on call setup}
+Durch die serverbasierte Architektur kann der server schnell ein Flaschenhals sowohl für die Bandbreite als auch für die Verfügbarkeit werden. Eine Möglichkeit ist der Einsatz mehrerer Redundanter Server. Dabei bestehen zwei Alternativen.
+
+\begin{itemize}
+	\item Die Benutzer Lokationsinformations auf allen Servern zu replizieren.
+	\item Die Suche nach dem korrekten Server der die Lokation des Benutzers enthält auf allen Servern auszuführen, während die Registrierung nur auf einem Server geschieht.
+\end{itemize}
+
+% BILD see \cite{schulzrinne05}
+
+Im ersten Fall könnte durch Datenbanken Replikation Sichergestellt werden dass die Benutzereinträge zwischen verschiedenen Servern konsistent gehalten werden. Im zweiten Fall kann entweder der Benutzer alle Server kontaktieren oder der erste kontaktiere Server die Anfrage weiterleiten. 
+
+Der Nachteil des ersten Ansatzes ist das eine Synchronisation für jede Registrierung erforderlich ist. Es besteht die Möglichkeit dass Einträge veraltet sind bevor eine Synchronisation zwischen den Servern ausgeführt wird. Mit einer wachsenden Anzahl and Benutzern könnte diese Architektur der zusätzliche Netzwerkverkehr zwischen den Servern zu einem Flaschenhals werden. 
+
+Im Anderen Fall ist die Verbindungslatenz höher da erst eine Reihe von Schritten durchlaufen werden muss. Eine parallele Suche erhöht zudem die benötigte Bandbreite.  
+
+Beide Ansätze können fehlschlagen wenn die Anzahl an Benutzern sehr groß wird.
+
+Wie in den oben Angegebenen Studien gezeigt hat bei einem serverbasiertem Modell die Korrelation der Avatare keinen Einfluss auf das interaktive Delay. Das bedeutet dass obwohl sich die Spielerpositionen der Avatare im Spiel zwar konstanten Positionsänderungen unterworfen sind das Delay für jeden Spieler durch das Delay des Servers dominiert wird. Serverbasierte Lösungen zeigen sich auch bei Änderungen der Avatar-Dichte konstant. Da im einfachsten Fall ohne einen Area of Interest Daten unabhängig von den Positionen der Avatare jederzeit an alle Mitspieler übertragen werden hat es keinen Einfluss auf die Netzwerklast ob 10 oder 100 Spieler in der Umgebung befinden. 
+
+Was jedoch großen Einflus auf die Netzwerklast hat ist die Gesammtanzahl der Spieler auf einem solchen zentralisiertem System. Wie bereits erwähnt steigt das Datenvolumen quadratisch mit der Anzahl der Spieler. Da Sprachkommunikation jedoch einen vieflaches größeren Bandbreitenbedarf erfordert als das reine Austauschen von Spielestatus und Positionsinformationen, können auch gut Angebundene Server schon bei kleinen Nutzeranzahlen an ihre theoretischen Grenzen stoßen. 
+
 
 \subsubsection{Client}
 
@@ -195,40 +286,8 @@ Client Server O(1) Lookup Latency vs. Chord O(logN) lookup!
 Security Issues 
 
 
-\subsection{Hybrid Model}
-
-\subsubsection{Design alternatives}
-\subsubsection[{Replicate registrations vs. search on call setup}
-Durch die serverbasierte Architektur kann der server schnell ein Flaschenhals sowohl für die Bandbreite als auch für die Verfügbarkeit werden. Eine Möglichkeit ist der Einsatz mehrerer Redundanter Server. Dabei bestehen zwei Alternativen.
-
-\begin{itemize}
-	\item Die Benutzer Lokationsinformations auf allen Servern zu replizieren.
-	\item Die Suche nach dem korrekten Server der die Lokation des Benutzers enthält auf allen Servern auszuführen, während die Registrierung nur auf einem Server geschieht.
-\end{itemize}
-
-% BILD see \cite{schulzrinne05}
-
-Im ersten Fall könnte durch Datenbanken Replikation Sichergestellt werden dass die Benutzereinträge zwischen verschiedenen Servern konsistent gehalten werden. Im zweiten Fall kann entweder der Benutzer alle Server kontaktieren oder der erste kontaktiere Server die Anfrage weiterleiten. 
-
-Der Nachteil des ersten Ansatzes ist das eine Synchronisation für jede Registrierung erforderlich ist. Es besteht die Möglichkeit dass Einträge veraltet sind bevor eine Synchronisation zwischen den Servern ausgeführt wird. Mit einer wachsenden Anzahl and Benutzern könnte diese Architektur der zusätzliche Netzwerkverkehr zwischen den Servern zu einem Flaschenhals werden. 
-
-Im Anderen Fall ist die Verbindungslatenz höher da erst eine Reihe von Schritten durchlaufen werden muss. Eine parallele Suche erhöht zudem die benötigte Bandbreite.  
-
-Beide Ansätze können fehlschlagen wenn die Anzahl an Benutzern sehr groß wird.
 
 %TODO Analysis of Ansatz 1
 %\cite{schulzrinne07}
 
 
-\section{Wahl des VoiP Standards}
-
-\subsection{Skype}
-
-\subsection{SIP}
-
-	\cite{schulzrinne05} -- Peer-to-Peer SIP Assumptions
-	
-\subsubsection{PJSIP}
-
-\subsubsection{WengoPhone}
-\subsubsection{others}
