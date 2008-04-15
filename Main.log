@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592-1.40.7 (MiKTeX 2.7) (preloaded format=latex 2008.3.12)  11 APR 2008 15:54
+This is pdfTeX, Version 3.141592-1.40.7 (MiKTeX 2.7) (preloaded format=latex 2008.3.12)  15 APR 2008 18:16
 entering extended mode
 **Main.tex
 (Main.tex
@@ -269,34 +269,34 @@ Class scrbook Info: You've told me to use the font selection of the element
 (scrbook)            on input line 80.
 Class scrbook Info: You've told me to use the font selection of the element
 (scrbook)           `sectioning' that is an alias of element `disposition'
-(scrbook)            on input line 95.
+(scrbook)            on input line 99.
  [3]
 Class scrbook Info: You've told me to use the font selection of the element
 (scrbook)           `sectioning' that is an alias of element `disposition'
-(scrbook)            on input line 104.
+(scrbook)            on input line 108.
 Class scrbook Info: You've told me to use the font selection of the element
 (scrbook)           `sectioning' that is an alias of element `disposition'
-(scrbook)            on input line 129.
+(scrbook)            on input line 151.
 Class scrbook Info: You've told me to use the font selection of the element
 (scrbook)           `sectioning' that is an alias of element `disposition'
-(scrbook)            on input line 135.
-)
+(scrbook)            on input line 157.
+ [4])
 \tf@toc=\write3
- [4]
-(kapitel/stichwortverzeichnis.tex) [5
+ [5]
+(kapitel/stichwortverzeichnis.tex) [6
 
 
 ] (Main.lof)
 \tf@lof=\write4
- [6
+ [7
 
 
 ] (Main.lot)
 \tf@lot=\write5
- [7
+ [8
 
 ]
-(kapitel/abkuerzungen.tex) [8
+(kapitel/abkuerzungen.tex) [9
 
 
 ] (kapitel/einleitung.tex
@@ -573,65 +573,67 @@ Overfull \hbox (25.37892pt too wide) in paragraph at lines 91--92
 -ver zu zu ho-hen Verz[]ogerungen
  []
 
-
-Package natbib Warning: Citation `rosenberg02' on page 44 undefined on input li
-ne 95.
-
 [44]
 
-Package natbib Warning: Citation `bryan05s' on page 45 undefined on input line 
-112.
+Package natbib Warning: Citation `rosenberg02' on page 45 undefined on input li
+ne 119.
 
+[45]
 
-Package natbib Warning: Citation `schulzrinne05' on page 45 undefined on input 
-line 114.
+Package natbib Warning: Citation `bryan05s' on page 46 undefined on input line 
+136.
 
-[45]) [46] (kapitel/kapitel_recentwork.tex
+[46]
+
+Package natbib Warning: Citation `schulzrinne05' on page 47 undefined on input 
+line 138.
+
+) [47] (kapitel/kapitel_recentwork.tex
 Kapitel 5.
 
-Package natbib Warning: Citation `diot99' on page 47 undefined on input line 5.
+Package natbib Warning: Citation `diot99' on page 48 undefined on input line 5.
 
 
 
-Package natbib Warning: Citation `carlsson93' on page 47 undefined on input lin
+Package natbib Warning: Citation `carlsson93' on page 48 undefined on input lin
 e 6.
 
 
-Package natbib Warning: Citation `anderson95' on page 47 undefined on input lin
+Package natbib Warning: Citation `anderson95' on page 48 undefined on input lin
 e 6.
 
-[47
+[48
 
 
 
 ]
 
-Package natbib Warning: Citation `bergault94' on page 48 undefined on input lin
+Package natbib Warning: Citation `bergault94' on page 49 undefined on input lin
 e 31.
 
 
-Package natbib Warning: Citation `mtu96' on page 48 undefined on input line 31.
+Package natbib Warning: Citation `mtu96' on page 49 undefined on input line 31.
 
 
 
-Package natbib Warning: Citation `safaei06' on page 48 undefined on input line 
+Package natbib Warning: Citation `safaei06' on page 49 undefined on input line 
 31.
 
-[48] [49]
+[49] [50]
 
-Package natbib Warning: Citation `schulzrinne03' on page 50 undefined on input 
+Package natbib Warning: Citation `schulzrinne03' on page 51 undefined on input 
 line 49.
 
 
-Package natbib Warning: Citation `schulzrinne99' on page 50 undefined on input 
+Package natbib Warning: Citation `schulzrinne99' on page 51 undefined on input 
 line 49.
 
-[50]
+[51]
 
-Package natbib Warning: Citation `miladinovic-multiparty' on page 51 undefined 
+Package natbib Warning: Citation `miladinovic-multiparty' on page 52 undefined 
 on input line 56.
 
-) [51] (kapitel/kapitel_entwurf.tex
+) [52] (kapitel/kapitel_entwurf.tex
 Kapitel 6.
 
 Overfull \hbox (21.89284pt too wide) in paragraph at lines 16--18
@@ -639,90 +641,231 @@ Overfull \hbox (21.89284pt too wide) in paragraph at lines 16--18
 en k[]onnen, aber auch erm[]oglichen
  []
 
-[52
+[53
 
 
 
-] [53] [54]
+] [54] [55]
 Overfull \hbox (8.82492pt too wide) in paragraph at lines 55--57
 []\OT1/cmr/m/n/12 Studien der Non-ver-ba-len Kom-mu-ni-ka-ti-on aus Ka-pi-tel 1
  las-sen uns fol-gen-de Schl[]usse
  []
 
-[55]
+[56]
 Overfull \hbox (11.02908pt too wide) in paragraph at lines 68--71
 [][]\OT1/cmr/m/n/12 Geringe Au-dio-qua-lit[]at: Durch ei-ne ge-rin-ge Au-dio-qu
 a-lit[]at, ho-he St[]o rger[]ausche
  []
 
-[56]
+[57]
 
-Package natbib Warning: Citation `idsof08' on page 57 undefined on input line 8
+Package natbib Warning: Citation `idsof08' on page 58 undefined on input line 8
 6.
 
 
-Package natbib Warning: Citation `unreal2008' on page 57 undefined on input lin
+Package natbib Warning: Citation `unreal2008' on page 58 undefined on input lin
 e 86.
 
 
-Package natbib Warning: Citation `sauerbraten08' on page 57 undefined on input 
+Package natbib Warning: Citation `sauerbraten08' on page 58 undefined on input 
 line 87.
 
 
-Package natbib Warning: Citation `nexuiz08' on page 57 undefined on input line 
+Package natbib Warning: Citation `nexuiz08' on page 58 undefined on input line 
 87.
 
 
-Package natbib Warning: Citation `ogre08' on page 57 undefined on input line 90
+Package natbib Warning: Citation `ogre08' on page 58 undefined on input line 90
 .
 
 
-Package natbib Warning: Citation `irrlicht08' on page 57 undefined on input lin
+Package natbib Warning: Citation `irrlicht08' on page 58 undefined on input lin
 e 90.
 
-[57]
+[58]
 
-Package natbib Warning: Citation `triebel07g' on page 58 undefined on input lin
+Package natbib Warning: Citation `triebel07g' on page 59 undefined on input lin
 e 93.
 
 
-Package natbib Warning: Citation `irrklang08' on page 58 undefined on input lin
+Package natbib Warning: Citation `irrklang08' on page 59 undefined on input lin
 e 96.
 
-
-Overfull \hbox (12.0624pt too wide) in paragraph at lines 102--103
-[][]\OT1/cmr/m/n/12 W[]urde man Sprach[]ubertragunng und Da-ten[]ubertragung gl
-eich-be-han-deln, so m[]usste
+[59] [60]
+Overfull \hbox (17.39984pt too wide) in paragraph at lines 133--134
+\OT1/cmr/m/n/12 Goo-gle-Talk sind nicht mo-di-fi-zier-bar und bie-ten nur kei-n
+er-lei Kon-fe-renzm[]oglichkeiten. 
  []
 
-[58] [59]
+[61]
 
-Package natbib Warning: Citation `speex' on page 60 undefined on input line 147
+Package natbib Warning: Citation `schulzrinne05' on page 62 undefined on input 
+line 144.
+
+
+Package natbib Warning: Citation `sipsoftware08' on page 62 undefined on input 
+line 165.
+
+[62]
+Overfull \hbox (3.83331pt too wide) in paragraph at lines 192--193
+\OT1/cmr/m/n/12 nannt bei dem so-wohl der Da-ten-aus-tausch als auch der Aus-ta
+usch der Au-diostr[]ome
+ []
+
+[63] [64]
+
+Package natbib Warning: Citation `speex' on page 65 undefined on input line 216
 .
 
-[60])
 Runaway argument?
-{Dichte, Korrelation, Entscheidet man sich für ein zentralisiertes Cl\ETC.
-! File ended while scanning use of \@xdblarg.
-<inserted text> 
-                \par 
-l.76 \include{kapitel/kapitel_entwurf}
-                                      
-I suspect you have forgotten a `}', causing me
-to read past where you wanted me to stop.
-I'll try to recover; but if the error is serious,
-you'd better type `E' or `X' now and fix your file.
+{Replicate registrations vs. search on call setup} Durch die serverba\ETC.
+! Paragraph ended before \scr@sect was complete.
+<to be read again> 
+                   \par 
+l.233 
+      
+I suspect you've forgotten a `}', causing me to apply this
+control sequence to too much text. How can we recover?
+My plan is to forget the whole thing and hope for the best.
 
-[61] (kapitel/fazit.tex
+[65]
+
+LaTeX Warning: Command \" invalid in math mode on input line 259.
+
+! Please use \mathaccent for accents in math mode.
+<recently read> \accent 
+                        
+l.259 ...frac{Kbit}{s}}{16 \frac{Kbit}{s}} = 62 Mö
+                                                  gliche Verbindungen wovon ...
+I'm changing \accent to \mathaccent here; wish me luck.
+(Accents are not the same in formulas as they are in text.)
+
+! Missing { inserted.
+<to be read again> 
+                   \fontdimen 
+l.259 ...frac{Kbit}{s}}{16 \frac{Kbit}{s}} = 62 Mö
+                                                  gliche Verbindungen wovon ...
+A left brace was mandatory here, so I've put one in.
+You might want to delete and/or insert some corrections
+so that I will find a matching right brace soon.
+(If you're confused by all this, try typing `I}' now.)
+
+
+! LaTeX Error: Bad math environment delimiter.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.260 \]
+        
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.261 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.261 
+      
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Display math should end with $$.
+<to be read again> 
+                   \par 
+l.261 
+      
+The `$' that I just saw supposedly matches a previous `$$'.
+So I shall assume that you typed `$$' both times.
+
+
+Overfull \hbox (17.02824pt too wide) detected at line 261
+[] \OT1/cmr/m/n/12 = 62\OML/cmm/m/it/12 M[]
+ []
+
+
+LaTeX Warning: Command \" invalid in math mode on input line 265.
+
+! Please use \mathaccent for accents in math mode.
+<recently read> \accent 
+                        
+l.265 ... \frac{Kbit}{s}^{2}} = 39 gleichzeitig Mö
+                                                  gliche
+I'm changing \accent to \mathaccent here; wish me luck.
+(Accents are not the same in formulas as they are in text.)
+
+! Missing { inserted.
+<to be read again> 
+                   \fontdimen 
+l.265 ... \frac{Kbit}{s}^{2}} = 39 gleichzeitig Mö
+                                                  gliche
+A left brace was mandatory here, so I've put one in.
+You might want to delete and/or insert some corrections
+so that I will find a matching right brace soon.
+(If you're confused by all this, try typing `I}' now.)
+
+
+! LaTeX Error: Bad math environment delimiter.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.266 \]
+        
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.267 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.267 
+      
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Display math should end with $$.
+<to be read again> 
+                   \par 
+l.267 
+      
+The `$' that I just saw supposedly matches a previous `$$'.
+So I shall assume that you typed `$$' both times.
+
+) [66] [67] (kapitel/fazit.tex
 Kapitel 7.
 
-LaTeX Warning: Reference `cha:grafiken' on page 62 undefined on input line 13.
+LaTeX Warning: Reference `cha:grafiken' on page 68 undefined on input line 13.
 
-[62
+[68
 
 
 
-]) [63] [64] (Main.bbl
+]) [69] [70] (Main.bbl
 
 ! LaTeX Error: There's no line here to end.
 
@@ -883,7 +1026,7 @@ Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
-[65
+[71
 
 
 
@@ -1084,7 +1227,7 @@ Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
-[66]
+[72]
 
 ! LaTeX Error: There's no line here to end.
 
@@ -1298,7 +1441,7 @@ Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
-[67]
+[73]
 
 ! LaTeX Error: There's no line here to end.
 
@@ -1407,7 +1550,7 @@ Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
-[68]
+[74]
 
 ! LaTeX Error: There's no line here to end.
 
@@ -1616,7 +1759,7 @@ Underfull \hbox (badness 2027) in paragraph at lines 420--428
 -26.  $\OT1/cmtt/m/n/12 http :
  []
 
-[69]
+[75]
 
 ! LaTeX Error: There's no line here to end.
 
@@ -1643,7 +1786,7 @@ Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
-) [70] (kapitel/erklaerung.tex) [71
+) [76] (kapitel/erklaerung.tex) [77
 
 
 ]
@@ -1658,14 +1801,17 @@ Package natbib Warning: There were undefined citations.
 
 LaTeX Warning: There were undefined references.
 
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
  ) 
 Here is how much of TeX's memory you used:
- 2845 strings out of 95338
- 38487 string characters out of 1184228
- 122294 words of memory out of 1500000
- 5928 multiletter control sequences out of 110000
+ 2846 strings out of 95338
+ 38502 string characters out of 1184228
+ 122295 words of memory out of 1500000
+ 5929 multiletter control sequences out of 110000
  8415 words of font info for 30 fonts, out of 1200000 for 2000
  14 hyphenation exceptions out of 8191
  36i,10n,37p,3075b,413s stack positions out of 5000i,500n,10000p,200000b,5000s
 
-Output written on Main.dvi (79 pages, 293240 bytes).
+Output written on Main.dvi (86 pages, 319396 bytes).
