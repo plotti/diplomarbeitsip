@@ -28,9 +28,9 @@ Dabei wurden bisher
 Die Client- Server-Architektur für Netzwerk Spiele war über Jahrzehnte die dominierende Architektur, die in der Lage war zwischen 2 und 64 Spieler gleichzeitig zu unterstützen \cite{singhal99}. Die Mehrheit kommerzieller Mehrspieler Spiele benutzt heutzutage eine zentralisierte Architektur und diese wird auch in Zukunft die üblichste Architektur für Spiele mit einer kleinen Spieleranzahl bleiben, ist aber nicht in der Lage mehrere tausend gleichzeitige Spieler zu unterstützen. 
 Obwohl einzelne Server dem System hinzugefügt werden können, steigt die Netzwerklast des Systems polynomiell mit der Zunahme von Spielern auf dem System.\cite{lau06}.  Aufgrund dieser Tatsache bilden zentralisierte Systeme immer den Flaschenhals einer Netzwerkkommunikation. Da zentralisierte Systeme nicht über mehrere zehtausend Spieler skalierbar sind, verfehlen sie ihr eigentliches Marktpotenzial \cite{thor03}. 
 
-Um das Problem der unzureichenden Skalierbarkeit zu umgehen wird von vielen Entwicklern das so genannte "`Sharding"' eingesetzt \cite{brandt05}. Ein "`Shard"' ist eine komplette und unabhängige Instanz der Spielewelt. Die maximale Anzahl an Spielern einer solchen Welt ist limitiert.  Durch das Hinzufügen von Shards können Entwickeler zwar mehr Spieler aufnehmen die aber in verschiedenen Spielewelten existieren und nicht miteinander interagieren können. \textit{World of Warcraft (Wow)} ist das größte MMOG derzeit, das mit über 10 Millionen Nutzern weltweit, und bis zu mehreren tausend Benutzern gleichzeitig betrieben wird. \cite{wow08}.
+Um das Problem der unzureichenden Skalierbarkeit zu umgehen wird von vielen Entwicklern das so genannte "`Sharding"' eingesetzt \cite{brandt05}. Ein "`Shard"' ist eine komplette und unabhängige Instanz der Spielewelt. Die maximale Anzahl an Spielern einer solchen Welt ist limitiert.  Durch das Hinzufügen von Shards können Entwickler zwar mehr Spieler aufnehmen die aber in verschiedenen Spielewelten existieren und nicht miteinander interagieren können. \textit{World of Warcraft (Wow)} ist das größte MMOG derzeit, das mit über 10 Millionen Nutzern weltweit, und bis zu mehreren tausend Benutzern gleichzeitig betrieben wird. \cite{wow08} und auch Sharding einsetzt.
 
-Eine zusätzliche Möglichkeit besteht daraus Cluster von Computern einzusetzen die als gemeinsame Client- Server-Platform nach außen auftreten. Solche Systeme werden als Federated Client-Server Systeme bezeichnet. Diese Methode wird erfolgreich von Spielen wie EVE Online eingesetzt, die den Rekord für die größte Anzahl an gleichzeitigen Spielern auf einem "`Shard"' mit 23000 hält \cite{brandt05}. Dabei ist jeder Computer in diesem Cluster ist für eine andere Portion der virtuellen Welt verantwortlich. Durch Load Balancing werden Spieler zwischen Computern im Cluster transferiert um die maximale Bandbreite und Last einer Maschine nicht zu überschreiten. Studien von Lau in denen das Client-Server Federating Simuliert wurde, zeigten jedoch auch die Grenzen dieser Technologie auf \cite{lau06}.
+Eine zusätzliche Möglichkeit besteht daraus Cluster von Computern einzusetzen die als gemeinsame Client- Server-Platform nach außen auftreten. Solche Systeme werden als Federated Client-Server Systeme bezeichnet. Diese Methode wird erfolgreich von Spielen wie EVE Online eingesetzt, die den Rekord für die größte Anzahl an gleichzeitigen Spielern auf einem "`Shard"' mit 23000 hält \cite{brandt05}. Dabei ist jeder Computer in diesem Cluster ist für eine andere Portion der virtuellen Welt verantwortlich. Durch Load Balancing werden Spieler zwischen Computern im Cluster transferiert um die maximale Bandbreite und Last einer Maschine nicht zu überschreiten. Studien von Lau in denen das Client-Server Federating Simuliert wurde, zeigten jedoch, dass auch diese Technologie ihre Grenzen hat \cite{lau06}.
 
 Was die Technik des Interest Management angeht, ist dieses bei einer Client-Server Architektur sehr einfach, da der Server durch das Filtern von Nachrichten einfach, gestaltet sich jedoch in einem P2P System durchaus komplex \cite{yu05}.
 
@@ -70,49 +70,8 @@ In Hybriden Systemen werden beide Methoden gleichzeitig eingesetzt, so werden Vo
 %TODO TABLE
 
 \section{Hybride Systeme}
-Hybride P2P Systeme benutzen einen zentralisierten Server um einen bestimten Knoten der einen Service anbietet zu lokalisieren. Der Service selbst wiederrum, findet direkt zwischen den Knoten statt. Das beste Beispiel eines hybriden P2P Systems sind online Dateitauschdienste wie z.B. das Torrent Protokoll. Jeder Knoten veröffentlicht seine eine Liste seiner Dateien an einen zentralen öffentlichen Server. Ein Benutzer der nach einer speziellen Datei sucht, kontaktiert zunächst den öffentlichen Server um den Knoten herauszufinden, der Dateiaustausch selbst findet zwischen den einzelnen Knoten statt. Ein anderes Beispiel ist das SIP Protokoll zur Internet-Telefonie in dem einzelne öffentliche Server die Lokalisierung und Verwaltung der Benutzer vornehmen, das Telefongespräch selbst, aber zwischen den Knoten selbst stattfindet.
+Hybride P2P Systeme benutzen einen zentralisierten Server um einen bestimten Knoten der einen Service anbietet zu lokalisieren. Der Service selbst wiederum, findet direkt zwischen den Knoten statt. Das beste Beispiel eines hybriden P2P Systems sind online Dateitauschdienste wie z.B. das Torrent Protokoll. Jeder Knoten veröffentlicht seine eine Liste seiner Dateien an einen zentralen öffentlichen Server. Ein Benutzer der nach einer speziellen Datei sucht, kontaktiert zunächst den öffentlichen Server um den Knoten herauszufinden, der Dateiaustausch selbst findet zwischen den einzelnen Knoten statt. Ein anderes Beispiel ist das SIP Protokoll zur Internet-Telefonie in dem einzelne öffentliche Server die Lokalisierung und Verwaltung der Benutzer vornehmen, das Telefongespräch selbst, aber zwischen den Knoten selbst stattfindet.
 
-
-\section {Analyse der bestehenden Architekturen für Audioübertragung}
-
-In einer Studie vergleichen Safei und Boustead Architekturen für Sprachkommunikation Mehrspieler Netzwerk Spielen. Dabei wurde speziell gefordert dass jeder Spieler eine eine Mischung aus Stimmen und Geräuschen hören soll die speziell auf seine Position im Spiel angepasst ist und nicht nur die Lautstärke als auch die Position der Geräusche im Klangbild spezifiziert wird. 
-
-In einer Peer-to peer Architektur wird die Audioszene lokal erzeugt, nachdem man sämtliche Sprachquellen der der anderen Spieler erhalten hat. Der Hauptvorteil dieser Architektur liegt darin dass ein niedriger Delay auftritt, da die im optimalen Fall die Verbindung immer die kürzesten Wege zwischen den einzelnen Spielern etabliert wird. Zusätzlich nutzt man die freie Rechenleistung in den Knoten um das Abmischen der Audioszene vorzunehmen und man verfügt potenziell über eine Architektur die keinen single Point of Failure besitzt.  Der Hauptnachteil ist dass die Bandbreite der einzelnen Knoten im Peer-to-Peer die Anzahl der möglichen Verbindungen limitiert. 
-%BILD
-
-
-In einer Zentralisierten Lösungen wird der Audiostrom von jedem der Teilnehmer an einen zentralen Server gesendet. Mithilfe der Positionsdaten der Spieler wird die Audioszene zentral erzeugt. Diese wird danach an die jeweiligen Spieler gesendet. Die Hauptvorteile sind eine bessere Skalierbarkeit dadurch dass jeder Knoten auch mit beschränkter Bandbreite in der Lage ist teilzuhemen. Der Nachteil jedoch beim Einsatz eines Zentralen servers ist dass für die Teilnehmer große Delays auftreten können wenn sie physikalisch weit vom Server entfernt sind. Zusätzlich ist die Kapazität des zentralen Servers Flaschenhals die sich im Grad von $O(N^2)$ erschöpft ein Flaschenhals. 
-% BILD
-
-In einer Proxy Lösung exitieren Server die sich weltweit verteilt immer eine geringe Entfernung zum Teilnehmer ermöglichen sollen. Diese Emfpangen die Audioströme, mischen diese ab und schicken sie zuürck an die jeweiligen Spieler. Die Proxys untereinader können ebenfalls Audioströme an weitere Proxys weiterleiten, falls diese benötigt werden. Im Gegensatz zur Peer-To-Peer Architektur können durch den Einsatz von dedizierten Proxys mit guter Anbindung Bandbreitenprobleme minimiert werden. Der Nachteil ist jedoch dass keine Korelation zur Position der Spieler in der Welt und den genutzten Proxys existiert, so dass nur Spieler die sich den gleichen Proxy benutzen und im Spiel ebenfalls Teil der gleichen Audioumgebung sind davon profitieren können. 
-
-In einer verteilten Server Lösung ist jeder zentrale Server nur für einen Teil der Spielewelt verantwortlich. So nutzen Spieler die sich in der gleichen virtuellen Umgebung den gleichen Server, der Ihre Audiodaten abmischt. Dieser Ansatz kann die Auftretenden Bandbreite einer zentralisierten Lösung zwar reduzieren, in dem die Last auf mehrere Server verteilt wird, bringt aber neue Probleme beim Übergang von einem Server zum anderen: Wenn Teilnehmer während dem Spiel die Spielzone wechseln und die Audioszene nun von einem anderen Server abgemischt werden soll. 
-
-Im Ansatz einer Hybrid Architektur senden die Teilnehmer ihre Audioströme zwar an einen zentralisierten Server, können aber bei Bedarf ihre Audioströme direkt austauschen, wenn die indirekte Route über den Server zu zu hohen Verzögerungen führen würde. 
-
-Safei und Boustead führen in einer Vergleichenden Studien von Netzwerkarchitekturen speziell im Bereich der Sprachübertragung \cite{safei04} \cite{safei04b} den Begriff des Interaktiven Delays ein, und die Parameter der Korrelation zwischen der physischen und virtuellen Welt sowie der Dichte und Verteilung von Avataren ein. 
-
-\subsubsection{Interaktiver Delay}
-
-Als interaktiver Delay wird der mittlere Delay zwischen der Audioquelle und allen Zuhörern verstanden. 
-
-	\[	
-	\frac{\sum ^{N}_{i=1} d(m,n_{i})} {\sum ^{N}_{i=1} n_{i}}
-\]
-
-\subsubsection{Korrelation}
-
-Die Korrelation zwischen der physischen und virtuellen Welt, zwischen 0 und 1, gibt an wie hoch die Wahrscheinlichkeit ist dass Spieler sowohl physikalisch als auch virtuell sich in der Nähe befinden. Eine Korrelation von 0 bedeutet dass die Avatare in der virtuellen Welt nicht mit der Lokation der Spieler in der physischen Welt korreliert ist. 
-
-\subsubsection{Avatar-Dichte}
-Die Dichte der Avatare gibt an wie viele Avatare sich in der Hörnähe des Spielers befinden. 
-
-\subsubsection{Avatar-Verteilung}
-Die Verteilung der Avatare kann entweder uniform sein, bei der die Spieler zufällig gleichmäßig in der virtuellen Welt verteilt sind oder auch einzelne Ballungszentren besitzen. Dabei werden zufällig Ballungszentren verteilt und um diese mit hoher Dichte zum Ballungszentrum Avatare zufällig verteilt.
-
-In Simulationen \cite{safei04} der oben genannten der Architekturen wurden der Einfluss der Parameter der Korrelation und Dichte auf das interaktive Delay und die Netzwerklast untersucht. Die Resultate der Simulation zeigten, das bei einem zentralisiertem Modell die Korrelation der Avatare keinen Einfluss auf den interaktiven Delay hatte. In einer verteilten Server Lösung war mit zunehmender Korelation eine Reduzierung des Delays erzielt worden. Die Peer-to-Peer Architektur dominierte alle anderen Lösungen mit dem geringsten Delay, der unabhängig von der Korrelation immer konstant klein verblieb. 
-
-Die Zunehmende Dichte der Avatare bei zentralisierten Lösungen hatte keinen signifikanten Einfluss auf die Netzwerkalast. Bei Peer-to-Peer Architekturen stieg diese zwar zuerst exponentiell an, konvergierte jedoch schnell gegen einen Mittelwert, da nicht die Anzahl der Teilnehmer erhöht wurde sondern nur die Dichte. Die geringste Netzwerklast zeigte die verteilte Server Lösung wobei die Simulation die Dichte speziell in den entsprechenden Zonen erhöhte. 
 
 \section{Peer-to-Peer SIP}
 \subsection{Motivation für Peer-to-Peer SIP}
@@ -148,10 +107,3 @@ Wir können den DHT auf eine Server Farm limitieren, in der jeder Teilnehmer zu e
 Eine andere Möglichkeit ist dass jeder Client auch als Server arbeitet. Das Problem hierbei ist dass nicht alle Knoten eine gleiche Verfügbarkeit und Bandbreiten Kapazität besitzen. Ein Knoten mit geringer Bandbreite und einer schlechten Anbindung z.B. hinter einer NAT besitzt eventuell nicht ausreichend im DHT funktionieren. 
 
 Im dritten Ansatz kann eine Mischung aus den zwei Ansätzen gewählt werden in der Knoten mit hoher Kapazität  (Bandbreite, CPU, Speicher) und Verfügbarkeit (öffentlich Erreichbar) zu SuperNodes (Koordinatoren) erkoren werden. Diese Koordinatoren Formieren die DHT. Dabei entscheidet jeder Knoten aufgrund seiner Eigenschaften selbst ob eine SuperNode werden will oder nicht. 
-
-
-
-
-
-
-
