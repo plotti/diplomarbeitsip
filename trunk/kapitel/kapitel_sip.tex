@@ -292,25 +292,6 @@ Die typische STUN Konfiguration beinhaltet einen STUN Client, der in einem priva
 
 %Grafik von STUN Transaktion
 
-\section {SIP Konferenzen}
-Es gibt mehrere Möglichkeiten Konferenzen mit mehreren Teilnehmern in SIP zu realisieren. Diese werden in Entwürfen diskutiert, wobei die Konzepte des Mixing und Multicast die dominierenden sind \cite{rosenberg02}. 
-
-\subsection{Multicast}
-Großangelegte multicast Konferenzen waren die ursprüngliche Motivation für die Entwicklung von SIP. In solchen Konferenzen werden eine oder mehrere Multicast Konferenzen zu einer Konferenz vereint. Jeder Teilnehmer tritt einer Multicast Gruppe bei und sendet sein Medium and diese Gruppe. 
-Multicast Konferenzen können gut in Netzwerken funktionieren die sie unterstützen. Sie haben den Vorteil dass sie keine Koordination zwischen den Endsystemen benötigen. Konferenz teilnehmer können unabhängig einer Konferenz beitreten und sie verlassen, und Konferenzen können Probleme im Netzwerk überstehen und einfach wiederverbinden. Der Hauptnachteil von Multicast Konferenzen ist jedoch dass Multicast (PIM-DM, PIM-SM) benötigt dass jeder Router die Identitäten der Gruppe speichern muss. Außerdem kann jeder ohne Authentifizierung einer Multicast Gruppe beitreten. So wird die Teilnahme an Konferenzen nur mittels RTCP gesteuert und Sprecher können nicht in der Lage sein zu wissen wer ihnen gerade zuhört. Ist bereits ein System falsch konfiguriert so könnte es allen existierenden Multicast Gruppen abonieren und so das Netz fluten. Zusätzlich oder auch gerade auch wegen dieser Probleme wird Multicast in wenigen Internet Hauptleitungen unterstützt. So können Multicast Konferenzen zwar in LANs nützlich sein, sind jedoch im kommerziellen Internet nicht umsetzbar.
-
-\subsection{Mixing}
-Der andere existierende Anatz Konferenzen zu betrieben ist einen SIP Endpunkt zu haben der zu Teilnehmern einer Konferenz verbindet und deren Media Streams weiterleitet. Dabei gibt es zwei mögliche Varianten dieses Models: In einem End-System-Mixing übernimmt ein Teilnehmer die Verantwortung für das Mischen des Audio Verkehrs und in einem Server-Basiertem Mixing übernimmt ein unabhängiger Netzwerkknoten diese Verantwortung ohne am aktiv am Gespräch teilzunehmen. 
-
-% Grafik End-System-Mixing
-% Grafik Server-Based-Mixing
-
-Dieses Modell hat jedoch einige Nachteile: Die Existenz einer Konferenz ist abhängig von dem Vorhandensein eines Mix-Servers und die Last auf dem Mixer selbst kann sehr hoch sein. Dadurch dass ein Mixer bis zu N-1 Audio Ströme für eine N-Teilnehmer mischen muss. Zusätzlich kann der übergang von einem einfachen Telefongespräch zwischen zwei Teilnehmern zu einer Konferenz komplex sein, da erst alle Teilnehmer den gleichen Server aufsuchen müssen um diesen dann die Kontrolle über die Konferenz zu übergeben. Grundätztlich jedoch funktioniert das Server-basierte Mischen besser als das End-System basierte, da die Systeme meist zuverlässiger sind. Für größere Konferenzen bietet sich diese Art des Mischens an für kleinere jedoch bedeutet sie einen erheblichen Aufwand.
-
-\subsection{Full-Mesh}
-In einem full-mesh modell kommuniziert jeder Endpunkt direkt mit jedem anderen Endpunkt. Alle Teilnehmer in der Konferenz sind "`gleich"' - es gibt keinen Benutzer der topologisch Speziell wäre oder irgendwelche zusätzlichen Rechter oder Fähigkeiten besitzt. Jeder Teilnehmer kann jederzeit eine Konferenz betreten und verlassen. 
-Audio wird nur von den Endpunkten gemischt, ein Mischen wird innerhalb der Konferenz nicht vorgenommen. Der Hauptvorteil ist das kein Endystem mehr als einen Mediastrem enkodieren muss. Für die meisten Sprach Codecs verursacht das Encodieren mehr Last als das Dekodieren. Jeder Benutzer dekodiert bis zu N-1 Streams einer N-Teilnehmer Konferenz, muss aber nur einen Stream encodieren. 
-In einer N-Teilnehmer Konferenz muss jeder Teilnehmer über genügend Bandbreite verfügen um N-1 simultane Streams zu verschicken. Dadurch ist dieser Mechanismus für bandbreiten-limitierte Systeme wie analog-Modems oder asymetrische DSL verbindungen mit einer schwachen Upload Bandbreite nicht besonders gut skalierbar. 
 
 \section{Skype}
 \subsection{Registrierung und Login}
