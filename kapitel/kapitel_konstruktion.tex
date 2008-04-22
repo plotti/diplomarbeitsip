@@ -1,4 +1,4 @@
-\chapter{Entwurf}
+chapter{Entwurf}
 
 \section{Conferencing vs. Ingame Communication}
 %TODO
@@ -135,9 +135,8 @@ Ein Beispiel wäre also wenn sich 12 Personen im Spiel befinden empfängt jeder de
 
 Upstream/Downstream
 
-\[
-
-	\mbox{16 Spieler} \cdot {16 \frac{Kbit}{s}^{2} = 4096 \frac{Kbit}{s}
+\[	
+	\mbox{16 Spieler} \cdot 16 \frac{Kbit}{s}^{2} = 4096 \frac{Kbit}{s}
 \]
 
 Das würde bedeuten dass für unser Szenario bedeuten, dass theoretisch bei 16 gleichzeitigen Spielern jeder Spieler mindestens über einen Upload/Download von $4096 \frac{Kbit}{s}$ verfügen muss um in einem full-mesh miteinander kommunizieren zu können. Der Full-mesh Ansatz hat das Problem, die Kapazität der Bandbreite relativ schnell erschöpft bedingt dadurch dass die Verbreitung des Audiostroms unter Umständen nicht besonders effizient ist, da vielleicht nicht jeder Spieler des Spiels am Audiostrom aller Mitspieler interessiert ist.  
@@ -182,7 +181,7 @@ Die Grundlage für eine einfache Berechnung versteht sich unter folgenden Vorraus
 
 Ein Beispiel wäre also wenn sich 12 Personen im Spiel befinden, befindet sich ein Teil der Personen mit Wahrscheinlichkeit P in der Hörnähe des Senders. Nimmt an an dass $30\%$ aller Personen sich in Hörnähe befinden, so muss der Sender nun an 4 Personen seinen Audiostrom senden und auch nur von 4 Personen den Audiostrom empfangen. 
 
-$P_{Hörnähe}$ gibt an wieviele Personen im Schnitt, sich in der Hörnahe des Teilnehmers befinden. Hörnähe ist ein Wert der Aussagt wieviele Meter der Teilnehmer hören kann. 
+${P_{Hörnähe}}$ gibt an wieviele Personen im Schnitt, sich in der Hörnahe des Teilnehmers befinden. Hörnähe ist ein Wert der Aussagt wieviele Meter der Teilnehmer hören kann. 
 Generell gilt je größer die Hörnähe, desdo mehr Personen können sich in der Hörnähe des Teilnehmers befinden. In unserem Fall nehmen wir an dass bei einer festgelegten Hörnähe x die Wahrscheinlichkeit dass sich Personen in diesem Radius befinden $30\%$ beträgt. Da wir zeigen wollen, dass wir nun weniger Bandbreite benötigen stellen wir die gleichung etwas um und nehmen an dass wir immer noch 39 Personen erreichen wollen.
 
 Upstream/Downstream

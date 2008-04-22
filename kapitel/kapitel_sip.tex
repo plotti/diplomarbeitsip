@@ -278,6 +278,15 @@ Beim RTCP werden folgende RTCP-Pakete als Nachrichten verwendet.
 RTCP Pakete beginnen mit einem Header und können unabhängig von anderen bearbeitet werden. Die Reihenfolge der Pakete in einem IP-Paket kann beliebig sein. 
 Das SR Paket enthält einen Zeitstempel gemäß der NTP (Network Time Prococol) und beschreibt die Qualität der Übermittlung aus Sicht des Senders. So kann z.B. dem Empfänger die Sende-Datenrate mitgeteilt werden, damit dieser sich im Voraus auf die ankommende Datenmenge einstellen kann. 
 
+
+\subsection{Silence Supression}
+Teilnehmer einer Audio verbindung müssen nicht unbedingt Audiopakete über den RTP Stream senden, falls gerade bei den Teilnehmern Stille herrscht. Diese Funktion wurde im RFT 3389 spezifiziert.
+
+Die Möglichkeit den RTP Paketversand während Stilleperioden zu unterbrechen wird als Stille Unterdrückung ("`Silence Suppression"') oder Stimm Aktivitäts Erekennung("`Voice Activity Detection"') bezeichnet. Ob Silence Suppression eingesetzt wird hängt normalerweise von der Konfiguration der beiden Endpunkte ab, und wurde wird in den RTP Parametern detailierter erklärt. 
+
+%TODO
+
+
 % Grafik eines RTCP Pakets
 
 In einem Sender Report sind immer enthalten:
