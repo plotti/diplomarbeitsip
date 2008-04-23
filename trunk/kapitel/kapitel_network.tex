@@ -1,28 +1,29 @@
-\chapter{Netzwerkarchitekturen in Spielen}
+\chapter{SIP als Netzwerkgrundlage in Spielen}
+
+\section{SIP als Netzwerkgrundlage}
+Da SIP ein generisches Protokoll ist, ist es prinzipiell nicht nur für VoIP einsetzbar sondern auch um Daten zwischen Clients auszutauschen. Dabei wollten wir prüfen welche der bestehenden Architekturen sich mit SIP umsetzenlassen und bei welchen eine direkte Umsetzung nicht möglich ist. Experimentell haben wir eine einfache Client-Server Architektur implementiert, die aus dem Prototypen ein völlig auf SIP baisertes Spiel macht. 
+
+\section{Anforderungen an Computerspiele}
 
 Mehrspieler Spiele besitzen vielfältige Anforderungen an eine Netzwerkarchitektur:
 
-Sicherheit: Dadurch dass Spieler gegeneinander antreten, sollte Manipulation ausgeschlossen werden. Dazu benötigt man eine sichere Kommunikation zwischen den Spielern. 
+\textbf{Sicherheit:} Dadurch dass Spieler gegeneinander antreten, sollte Manipulation ausgeschlossen werden. Dazu benötigt man eine sichere Kommunikation zwischen den Spielern. 
 
-Persistenz: Dadurch dass der Inhalt des Spieles Spieler und Objekte enthalten kann die genau nur einmal existieren muss zwischen den einzelnen Sitzungen dafür gesorgt werden dass diese persistent gespeichert werden.
+\textbf{Persistenz:} Dadurch dass der Inhalt des Spieles Spieler und Objekte enthalten kann die genau nur einmal existieren muss zwischen den einzelnen Sitzungen dafür gesorgt werden dass diese persistent gespeichert werden.
 
-Zuverlässigkeit: Durch einen zu häufigen Ausfall des Spielesystems, wird die Erfahrung des Spielens negativ beeinflusst. 
+\textbf{Zuverlässigkeit:} Durch einen zu häufigen Ausfall des Spielesystems, wird die Erfahrung des Spielens negativ beeinflusst. 
 
-Konsistenz: Um eine sinnvolle Interaktion zwischen Spielern zu ermöglichen, muss die Erfahrung dieser Welt für jeden Mitspieler konsistent sein. Dies beinhaltet das Aufrechterhalten von Spielezuständen und die Synchronisation von Ereignissen. Um eine Konsistenz der Spielewelt zu Erreichen müssen Ereignisse der Spieler mittels Nachrichten im System ausgetauscht werden. 
+\textbf{Konsistenz:} Um eine sinnvolle Interaktion zwischen Spielern zu ermöglichen, muss die Erfahrung dieser Welt für jeden Mitspieler konsistent sein. Dies beinhaltet das Aufrechterhalten von Spielezuständen und die Synchronisation von Ereignissen. Um eine Konsistenz der Spielewelt zu Erreichen müssen Ereignisse der Spieler mittels Nachrichten im System ausgetauscht werden. 
 
-Durchsatz: Dadurch dass viele Spiele die echte Welt simulieren, hat der Durchsatz des Systems großen Einfluss darauf wie Echt diese Illusion wahrgenommen wird. Werden durch große Verzögerungen Ereignisse verzögert dargestellt, so wird die Spielmechanik gestört. 
+\textbf{Durchsatz:} Dadurch dass viele Spiele die echte Welt simulieren, hat der Durchsatz des Systems großen Einfluss darauf wie Echt diese Illusion wahrgenommen wird. Werden durch große Verzögerungen Ereignisse verzögert dargestellt, so wird die Spielmechanik gestört. 
 
-Skalierbarkeit: Eine skalierbare Architektur sollte sowohl eine große Anzahl an gleichzeitigen Benutzern, als auch einen starken Anstieg der Benutzer unterstützen, ohne dass die Last des Systems dramatisch ansteigt. 
-
-Um eine konsistente Spielewelt zu erzeugen die performant und skalierbar ist wird in Spielen das Interest Management eingesetzt \cite{morse96}. Unter Interest Management versteht man dass Individuen nur eine begrenzten Wahrnehmungsradius besitzen und nur an Dingen interessiert sind die in einer limitierten lokalen Umgebung geschehen, welche als Area of Interest bezeichnet wird. Eine übliche Technik im Interest Management besteht daraus die Spielewelt in Regionen aufzuteilen, wobei der Spieler immer nur Mitglied einer Region ist und auch nur Nachrichten dieser Region erhält. 
+\textbf{Skalierbarkeit:} Eine skalierbare Architektur sollte sowohl eine große Anzahl an gleichzeitigen Benutzern, als auch einen starken Anstieg der Benutzer unterstützen, ohne dass die Last des Systems dramatisch ansteigt. 
 
 Dabei sind diese Aspekte unterschiedlich schwer zu realisieren in Abhängigkeit der gewählten Netzwerkarchitektur. Während Client- Server Basierte Systeme eine hohe Sicherheit, Persistenz und Konsistenz bieten ist ihre Zuverlässigkeit und Skalierbarkeit durch den einzelner zentralen Komponenten limitiert.
 Peer-to-Peer basierte Systeme dagegen bieten eine potenziell hohe Skalierbarkeit und Zuverlässigkeit sind aber Anfällig in ihrer Sicherheit, Persistenz und Performanz. 
 
 In der Forschung werden beide Architekturen bezüglich der oben genannten Aspekte untersucht. So existieren vergleichende Studien \cite{lau06} bei denen Client-Server Systeme mit Peer-to-Peer Architekturen bezüglich ihrer Bandbreite, Last und des Delay in Simulationen verglichen wurden. Darüber hinaus wurden auch Inhalte des Netzwerkverkehrs in Spielen analysiert \cite{lau05b}, oder die geografische Verteilung von Spieleservern und Spielern untersucht \cite{feng03}. 
 
-% Studien von Farzad.
-Dabei wurden bisher 
 
 \section{Client - Server in Netzwerkspielen}
 Die Client- Server-Architektur für Netzwerk Spiele war über Jahrzehnte die dominierende Architektur, die in der Lage war zwischen 2 und 64 Spieler gleichzeitig zu unterstützen \cite{singhal99}. Die Mehrheit kommerzieller Mehrspieler Spiele benutzt heutzutage eine zentralisierte Architektur und diese wird auch in Zukunft die üblichste Architektur für Spiele mit einer kleinen Spieleranzahl bleiben, ist aber nicht in der Lage mehrere tausend gleichzeitige Spieler zu unterstützen. 
@@ -32,7 +33,13 @@ Um das Problem der unzureichenden Skalierbarkeit zu umgehen wird von vielen Entw
 
 Eine zusätzliche Möglichkeit besteht daraus Cluster von Computern einzusetzen die als gemeinsame Client- Server-Platform nach außen auftreten. Solche Systeme werden als Federated Client-Server Systeme bezeichnet. Diese Methode wird erfolgreich von Spielen wie EVE Online eingesetzt, die den Rekord für die größte Anzahl an gleichzeitigen Spielern auf einem "`Shard"' mit 23000 hält \cite{brandt05}. Dabei ist jeder Computer in diesem Cluster ist für eine andere Portion der virtuellen Welt verantwortlich. Durch Load Balancing werden Spieler zwischen Computern im Cluster transferiert um die maximale Bandbreite und Last einer Maschine nicht zu überschreiten. Studien von Lau in denen das Client-Server Federating Simuliert wurde, zeigten jedoch, dass auch diese Technologie ihre Grenzen hat \cite{lau06}.
 
-Was die Technik des Interest Management angeht, ist dieses bei einer Client-Server Architektur sehr einfach, da der Server durch das Filtern von Nachrichten einfach, gestaltet sich jedoch in einem P2P System durchaus komplex \cite{yu05}.
+Um eine konsistente Spielewelt zu erzeugen die performant und skalierbar ist wird in das Interest Management eingesetzt \cite{morse96}. Unter Interest Management versteht man dass Individuen nur eine begrenzten Wahrnehmungsradius besitzen und nur an Dingen interessiert sind die in einer limitierten lokalen Umgebung geschehen, welche als Area of Interest bezeichnet wird. Eine übliche Technik im Interest Management besteht daraus die Spielewelt in Regionen aufzuteilen, wobei der Spieler immer nur Mitglied einer Region ist und auch nur Nachrichten dieser Region erhält. Interest Management ist in einer Client-Server Architektur sehr einfach, da der Server durch das Filtern von Nachrichten einfach, gestaltet sich jedoch in einem P2P System durchaus komplex \cite{yu05}.
+
+\subsection{SIP im Client Server Modus}
+\subsection{Registrar als Server}
+\subsection{Clients}
+\subsection{SIP Message Marshalling}
+
 
 \section{Peer-to-Peer}
 In den letzten Jahren sind Peer-to-Peer Netzwerke ein wichtiger Forschungsgegenstand geworden.\cite{lua05} Ihr größter Vorteil gegenüber zentralisierten Architekturen ist ihre Skalierbarkeit. Jeder Knoten der dem System beitritt und Anfragen stellt, muss dem System gegenüber auch Ressourcen freigeben und Anfragen anderer Knoten bearbeiten. Knoten die mehr Dienste zur Verfügung stellen werden als SuperPeers oder Koordinatoren bezeichnet. Dabei wird eine Gruppe von Knoten als Overlay bezeichnet und die konstante Veränderung der Teilnehmer als Churn.  Es existieren P2P Systeme die bis zu mehreren Millionen an gleichzeitigen Benutzern skalieren \cite{stutzbach05}. 
@@ -70,7 +77,7 @@ In Hybriden Systemen werden beide Methoden gleichzeitig eingesetzt, so werden Vo
 %TODO TABLE
 
 \section{Hybride Systeme}
-Hybride P2P Systeme benutzen einen zentralisierten Server um einen bestimten Knoten der einen Service anbietet zu lokalisieren. Der Service selbst wiederum, findet direkt zwischen den Knoten statt. Das beste Beispiel eines hybriden P2P Systems sind online Dateitauschdienste wie z.B. das Torrent Protokoll. Jeder Knoten veröffentlicht seine eine Liste seiner Dateien an einen zentralen öffentlichen Server. Ein Benutzer der nach einer speziellen Datei sucht, kontaktiert zunächst den öffentlichen Server um den Knoten herauszufinden, der Dateiaustausch selbst findet zwischen den einzelnen Knoten statt. Ein anderes Beispiel ist das SIP Protokoll zur Internet-Telefonie in dem einzelne öffentliche Server die Lokalisierung und Verwaltung der Benutzer vornehmen, das Telefongespräch selbst, aber zwischen den Knoten selbst stattfindet.
+Hybride P2P Systeme benutzen einen zentralisierten Server um einen bestimmten Knoten der einen Service anbietet zu lokalisieren. Der Service selbst wiederum, findet direkt zwischen den Knoten statt. Das beste Beispiel eines hybriden P2P Systems sind online Dateitauschdienste wie z.B. das Torrent Protokoll. Jeder Knoten veröffentlicht seine eine Liste seiner Dateien an einen zentralen öffentlichen Server. Ein Benutzer der nach einer speziellen Datei sucht, kontaktiert zunächst den öffentlichen Server um den Knoten herauszufinden, der Dateiaustausch selbst findet zwischen den einzelnen Knoten statt. Ein anderes Beispiel ist das SIP Protokoll zur Internet-Telefonie in dem einzelne öffentliche Server die Lokalisierung und Verwaltung der Benutzer vornehmen, das Telefongespräch selbst, aber zwischen den Knoten selbst stattfindet.
 
 
 \section{Peer-to-Peer SIP}
@@ -97,7 +104,7 @@ Bryan, Lowekamp und Jennings schlagen im SOSIMPLE Prototyp eine Kombination vom 
 Alternativ analysieren Singh und Schulzrinne verschiedene VoiP Peer-to-Peer Alternativen und schlagen ebenfalls ein Konzept für P2P basierte SIP Telefonie auf Basis eines Chord basierten DHT vor \cite{schulzrinne05}.
 
 
-\section{Architektur Variationen}
+\subsection{Architektur Variationen}
 Es bestehen drei alternative Architektur Möglichkeiten im Einsatz mit DHT. 
 
 % TODO BILD.
