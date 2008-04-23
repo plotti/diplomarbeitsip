@@ -1,4 +1,4 @@
-\begin{thebibliography}{99}
+\begin{thebibliography}{100}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \makeatletter
@@ -719,6 +719,12 @@ udy\_2007}  (2007)
   --
 \newblock DOI http://doi.acm.org/10.1145/1274940.1274947.
 \newblock ISBN 978--1--59593--749--0
+
+\bibitem[Wikipedia(2008)]{sipsoftware08}
+\dinatlabel{Wikipedia 2008}\\ \textsc{Wikipedia}:
+\newblock Overview of SIP Software.
+\newblock {In: }\emph{http://en.wikipedia.org/wiki/List_of_SIP_software}
+  (2008)
 
 \bibitem[Wilbur(1954)]{schramm54}
 \dinatlabel{Wilbur 1954}\\ \textsc{Wilbur}, Schramm:
