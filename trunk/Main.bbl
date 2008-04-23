@@ -1,4 +1,4 @@
-\begin{thebibliography}{100}
+\begin{thebibliography}{99}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \makeatletter
@@ -592,16 +592,6 @@ udy\_2007}  (2007)
   --
 \newblock DOI http://doi.acm.org/10.1145/1065983.1065999.
 \newblock ISBN 1--58113--987--X
-
-\bibitem[Schulzrinne et~al.(2002)Schulzrinne, Wu, u.
-  Koskelainen]{schulzrinne02}
-\dinatlabel{Schulzrinne et~al. 2002}\\ \textsc{Schulzrinne}, Henning ;
-  \textsc{Wu}, Xiaotao  ; \textsc{Koskelainen}, Petri:
-\newblock A SIP-based conference control framework.
-\newblock   (2002), S. 53--61.
-\newblock  \url{http://dx.doi.org/http://doi.acm.org/10.1145/507670.507679}. --
-\newblock DOI http://doi.acm.org/10.1145/507670.507679.
-\newblock ISBN 1--58113--512--2
 
 \bibitem[Shannon u. Weaver(1963)]{shannon48}
 \dinatlabel{Shannon u. Weaver 1963}\\ \textsc{Shannon}, Claude~E. ;
