@@ -1,7 +1,7 @@
-This is pdfTeX, Version 3.141592-1.40.4 (MiKTeX 2.7 Beta 5) (preloaded format=pdflatex 2008.3.16)  18 APR 2008 18:42
+This is pdfTeX, Version 3.141592-1.40.4 (MiKTeX 2.7 Beta 5) (preloaded format=latex 2008.3.16)  24 APR 2008 00:26
 entering extended mode
-**J:/Diplomarbeit/Main.tex
-(J:/Diplomarbeit/Main.tex
+**Main.tex
+(Main.tex
 LaTeX2e <2005/12/01>
 Babel <v3.8h> and hyphenation patterns for english, dumylang, nohyphenation, ge
 rman, ngerman, french, loaded.
@@ -123,25 +123,83 @@ Package: inputenc 2006/05/05 v1.1b Input encoding file
 ("D:\Programme\MiKTeX 2.7\tex\latex\base\ansinew.def"
 File: ansinew.def 2006/05/05 v1.1b Input encoding file
 ))
+("D:\Programme\MiKTeX 2.7\tex\latex\amsmath\amsmath.sty"
+Package: amsmath 2000/07/18 v2.13 AMS math features
+\@mathmargin=\skip47
+
+For additional information on amsmath, use the `?' option.
+("D:\Programme\MiKTeX 2.7\tex\latex\amsmath\amstext.sty"
+Package: amstext 2000/06/29 v2.01
+
+("D:\Programme\MiKTeX 2.7\tex\latex\amsmath\amsgen.sty"
+File: amsgen.sty 1999/11/30 v2.0
+\@emptytoks=\toks17
+\ex@=\dimen104
+))
+("D:\Programme\MiKTeX 2.7\tex\latex\amsmath\amsbsy.sty"
+Package: amsbsy 1999/11/29 v1.2d
+\pmbraise@=\dimen105
+)
+("D:\Programme\MiKTeX 2.7\tex\latex\amsmath\amsopn.sty"
+Package: amsopn 1999/12/14 v2.01 operator names
+)
+\inf@bad=\count90
+LaTeX Info: Redefining \frac on input line 211.
+\uproot@=\count91
+\leftroot@=\count92
+LaTeX Info: Redefining \overline on input line 307.
+\classnum@=\count93
+\DOTSCASE@=\count94
+LaTeX Info: Redefining \ldots on input line 379.
+LaTeX Info: Redefining \dots on input line 382.
+LaTeX Info: Redefining \cdots on input line 467.
+\Mathstrutbox@=\box27
+\strutbox@=\box28
+\big@size=\dimen106
+LaTeX Font Info:    Redeclaring font encoding OML on input line 567.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 568.
+\macc@depth=\count95
+\c@MaxMatrixCols=\count96
+\dotsspace@=\muskip10
+\c@parentequation=\count97
+\dspbrk@lvl=\count98
+\tag@help=\toks18
+\row@=\count99
+\column@=\count100
+\maxfields@=\count101
+\andhelp@=\toks19
+\eqnshift@=\dimen107
+\alignsep@=\dimen108
+\tagshift@=\dimen109
+\tagwidth@=\dimen110
+\totwidth@=\dimen111
+\lineht@=\dimen112
+\@envbody=\toks20
+\multlinegap=\skip48
+\multlinetaggap=\skip49
+\mathdisplay@stack=\toks21
+LaTeX Info: Redefining \[ on input line 2666.
+LaTeX Info: Redefining \] on input line 2667.
+)
 ("D:\Programme\MiKTeX 2.7\tex\latex\subfigure\subfigure.sty"
 Package: subfigure 2002/07/30 v2.1.4 subfigure package
-\subfigtopskip=\skip47
-\subfigcapskip=\skip48
-\subfigcaptopadj=\dimen104
-\subfigbottomskip=\skip49
-\subfigcapmargin=\dimen105
-\subfiglabelskip=\skip50
-\c@subfigure=\count90
-\c@lofdepth=\count91
-\c@subtable=\count92
-\c@lotdepth=\count93
+\subfigtopskip=\skip50
+\subfigcapskip=\skip51
+\subfigcaptopadj=\dimen113
+\subfigbottomskip=\skip52
+\subfigcapmargin=\dimen114
+\subfiglabelskip=\skip53
+\c@subfigure=\count102
+\c@lofdepth=\count103
+\c@subtable=\count104
+\c@lotdepth=\count105
 
 ****************************************
 * Local config file subfigure.cfg used *
 ****************************************
 ("D:\Programme\MiKTeX 2.7\tex\latex\subfigure\subfigure.cfg")
-\subfig@top=\skip51
-\subfig@bottom=\skip52
+\subfig@top=\skip54
+\subfig@bottom=\skip55
 )
 ("D:\Programme\MiKTeX 2.7\tex\latex\graphics\epsfig.sty"
 Package: epsfig 1999/02/16 v1.7a (e)psfig emulation (SPQR)
@@ -158,25 +216,24 @@ Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
 ("D:\Programme\MiKTeX 2.7\tex\latex\00miktex\graphics.cfg"
 File: graphics.cfg 2007/01/18 v1.5 graphics configuration of teTeX/TeXLive
 )
-Package graphics Info: Driver file: pdftex.def on input line 90.
+Package graphics Info: Driver file: dvips.def on input line 90.
 
-("D:\Programme\MiKTeX 2.7\tex\latex\graphics\pdftex.def"
-File: pdftex.def 2007/06/12 v0.04h Graphics/color for pdfTeX
-\Gread@gobject=\count94
+("D:\Programme\MiKTeX 2.7\tex\latex\graphics\dvips.def"
+File: dvips.def 1999/02/16 v3.0i Driver-dependant file (DPC,SPQR)
 ))
-\Gin@req@height=\dimen106
-\Gin@req@width=\dimen107
+\Gin@req@height=\dimen115
+\Gin@req@width=\dimen116
 )
-\epsfxsize=\dimen108
-\epsfysize=\dimen109
+\epsfxsize=\dimen117
+\epsfysize=\dimen118
 )
 ("D:\Programme\MiKTeX 2.7\tex\latex\multirow\multirow.sty"
-\bigstrutjot=\dimen110
+\bigstrutjot=\dimen119
 )
 ("D:\Programme\MiKTeX 2.7\tex\latex\ltxmisc\framed.sty"
 Package: framed 2003/07/21 v 0.8a: framed or shaded text with page breaks
-\FrameRule=\dimen111
-\FrameSep=\dimen112
+\FrameRule=\dimen120
+\FrameSep=\dimen121
 )
 ("D:\Programme\MiKTeX 2.7\tex\latex\koma-script\scrpage2.sty"
 Package: scrpage2 2007/07/23 v2.2e LaTeX2e KOMA-Script package
@@ -184,74 +241,55 @@ LaTeX Info: Redefining \pagemark on input line 147.
 )
 ("D:\Programme\MiKTeX 2.7\tex\latex\natbib\natbib.sty"
 Package: natbib 2007/10/30 8.1 (PWD)
-\bibhang=\skip53
-\bibsep=\skip54
+\bibhang=\skip56
+\bibsep=\skip57
 LaTeX Info: Redefining \cite on input line 602.
-\c@NAT@ctr=\count95
+\c@NAT@ctr=\count106
 )
 ("D:\Programme\MiKTeX 2.7\tex\latex\setspace\setspace.sty"
 Package: setspace 2000/12/01 6.7 Contributed and Supported LaTeX2e package
 
 Package: `setspace' 6.7 <2000/12/01>
 ) ("D:\Programme\MiKTeX 2.7\tex\latex\ltxmisc\url.sty"
-\Urlmuskip=\muskip10
+\Urlmuskip=\muskip11
 Package: url 2005/06/27  ver 3.2  Verb mode for urls, etc.
 )
 Class scrbook Info: You've told me to redefine the font selection of the
 (scrbook)           element `sectioning' that is an alias of element
-(scrbook)           `disposition' on input line 46.
+(scrbook)           `disposition' on input line 47.
 
 
 Class scrbook Warning: `pagehead' and `pagefoot' are aliases for the same
-(scrbook)              font element, changed on input line 53.
+(scrbook)              font element, changed on input line 54.
 
 (Main.aux (kapitel/titel.aux) (kapitel/stichwortverzeichnis.aux)
 (kapitel/abkuerzungen.aux) (kapitel/einleitung.aux)
 (kapitel/kapitel_kommunikation.aux) (kapitel/kapitel_folgerungundziele.aux)
 (kapitel/kapitel_sip.aux) (kapitel/kapitel_recentwork.aux)
 (kapitel/kapitel_konstruktion.aux) (kapitel/kapitel_implementierung.aux)
-(kapitel/kapitel_network.aux) (kapitel/erklaerung.aux))
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 59.
-LaTeX Font Info:    ... okay on input line 59.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 59.
-LaTeX Font Info:    ... okay on input line 59.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 59.
-LaTeX Font Info:    ... okay on input line 59.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 59.
-LaTeX Font Info:    ... okay on input line 59.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 59.
-LaTeX Font Info:    ... okay on input line 59.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 59.
-LaTeX Font Info:    ... okay on input line 59.
-
-("D:\Programme\MiKTeX 2.7\tex\context\base\supp-pdf.tex"
-[Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count96
-\scratchdimen=\dimen113
-\scratchbox=\box27
-\nofMPsegments=\count97
-\nofMParguments=\count98
-\MPscratchCnt=\count99
-\MPscratchDim=\dimen114
-\MPnumerator=\count100
-\everyMPtoPDFconversion=\toks17
-) (kapitel/titel.tex <grafiken/unilogo.pdf, id=1, 208.78pt x 40.15pt>
-File: grafiken/unilogo.pdf Graphic file (type pdf)
-
-<use grafiken/unilogo.pdf>
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 33.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 33.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 33.
- [1
+(kapitel/kapitel_network.aux) (kapitel/kapitel_benchmarking.aux)
+(kapitel/erklaerung.aux))
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 60.
+LaTeX Font Info:    ... okay on input line 60.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 60.
+LaTeX Font Info:    ... okay on input line 60.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 60.
+LaTeX Font Info:    ... okay on input line 60.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 60.
+LaTeX Font Info:    ... okay on input line 60.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 60.
+LaTeX Font Info:    ... okay on input line 60.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 60.
+LaTeX Font Info:    ... okay on input line 60.
+ (kapitel/titel.tex
+File: grafiken/unilogo.eps Graphic file (type eps)
+ <grafiken/unilogo.eps> [1
 
 
 
 
-{D:/Dokumente und Einstellungen/All Users/Anwendungsdaten/MiKTeX/2.7/pdftex/con
-fig/pdftex.map} <grafiken/unilogo.pdf>]) (Main.toc
+])
+(Main.toc
 Class scrbook Info: You've told me to use the font selection of the element
 (scrbook)           `sectioning' that is an alias of element `disposition'
 (scrbook)            on input line 3.
@@ -270,46 +308,52 @@ Class scrbook Info: You've told me to use the font selection of the element
 Class scrbook Info: You've told me to use the font selection of the element
 (scrbook)           `sectioning' that is an alias of element `disposition'
 (scrbook)            on input line 10.
-[2
+ [2
 
 
 ]
 Class scrbook Info: You've told me to use the font selection of the element
 (scrbook)           `sectioning' that is an alias of element `disposition'
-(scrbook)            on input line 49.
+(scrbook)            on input line 50.
 Class scrbook Info: You've told me to use the font selection of the element
 (scrbook)           `sectioning' that is an alias of element `disposition'
-(scrbook)            on input line 73.
+(scrbook)            on input line 74.
  [3]
 Class scrbook Info: You've told me to use the font selection of the element
 (scrbook)           `sectioning' that is an alias of element `disposition'
-(scrbook)            on input line 104.
+(scrbook)            on input line 102.
 Class scrbook Info: You've told me to use the font selection of the element
 (scrbook)           `sectioning' that is an alias of element `disposition'
-(scrbook)            on input line 116.
+(scrbook)            on input line 113.
 Class scrbook Info: You've told me to use the font selection of the element
 (scrbook)           `sectioning' that is an alias of element `disposition'
-(scrbook)            on input line 133.
+(scrbook)            on input line 140.
  [4]
 Class scrbook Info: You've told me to use the font selection of the element
 (scrbook)           `sectioning' that is an alias of element `disposition'
-(scrbook)            on input line 147.
+(scrbook)            on input line 177.
+Class scrbook Info: You've told me to use the font selection of the element
+(scrbook)           `sectioning' that is an alias of element `disposition'
+(scrbook)            on input line 197.
+ [5]
+Class scrbook Info: You've told me to use the font selection of the element
+(scrbook)           `sectioning' that is an alias of element `disposition'
+(scrbook)            on input line 210.
 )
 \tf@toc=\write3
- [5] (kapitel/stichwortverzeichnis.tex) [6
+ [6] (kapitel/stichwortverzeichnis.tex) [7
 
 
 ] (Main.lof)
 \tf@lof=\write4
- [7
-
-
-]
-(Main.lot)
-\tf@lot=\write5
  [8
 
-] (kapitel/abkuerzungen.tex) [9
+
+] (Main.lot)
+\tf@lot=\write5
+ [9
+
+] (kapitel/abkuerzungen.tex) [10
 
 
 ] (kapitel/einleitung.tex
@@ -334,176 +378,166 @@ t line 13.
 
 
 ] [4]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 25.
- ("D:\Programme\MiKTeX 2.7\tex\latex\base\omscmr.fd"
+File: grafiken/kommunikationsmodell.eps Graphic file (type eps)
+ <grafiken/kommunikationsmodell.eps>
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 33.
+
+("D:\Programme\MiKTeX 2.7\tex\latex\base\omscmr.fd"
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 25.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 33.
  [5]
-Overfull \hbox (5.4083pt too wide) in paragraph at lines 48--49
+File: grafiken/kommunikationsmodell-schramm2.eps Graphic file (type eps)
+
+<grafiken/kommunikationsmodell-schramm2.eps>
+Overfull \hbox (5.4083pt too wide) in paragraph at lines 65--66
 \OT1/cmr/m/n/12 de die be-ab-sich-tigt mit-ein-an-der kom-mu-ni-zie-ren wo-bei 
 bei-de Sen-der und Empf[]anger
  []
 
-[6] [7] [8] [9]
+[6]
+File: grafiken/mediarichness.eps Graphic file (type eps)
+ <grafiken/mediarichness.eps> [7] [8] [9] [10]
 
-Package natbib Warning: Citation `porter00' on page 10 undefined on input line 
-105.
+Package natbib Warning: Citation `porter00' on page 11 undefined on input line 
+131.
 
-[10] [11] [12] [13] [14] [15] [16] [17] [18] [19]) [20]
+[11] [12] [13] [14] [15] [16] [17] [18] [19] [20]) [21]
 (kapitel/kapitel_folgerungundziele.tex
 Kapitel 3.
 
-Overfull \hbox (11.02908pt too wide) in paragraph at lines 18--20
-[]\OT1/cmr/m/n/12 Geringe Au-dio-qua-lit[]at: Durch ei-ne ge-rin-ge Au-dio-qua-
-lit[]at, ho-he St[]o rger[]ausche
+Overfull \hbox (11.0343pt too wide) in paragraph at lines 18--20
+[][]\OT1/cmr/m/n/12 Geringe Au-dio-qua-lit[]at: Durch ei-ne ge-rin-ge Au-dio-qu
+a-lit[]at, ho-he St[]o rger[]ausche
  []
 
-[21
+[22
 
 
 
-] [22]
-Overfull \hbox (34.533pt too wide) in paragraph at lines 46--49
-\OT1/cmr/m/n/12 Angelehnt an die Stu-di-en von Gibs, soll es Ziel des Pro-to-ty
-ps sein, die Sprach[]ubertragung
+]
+Overfull \hbox (4.7819pt too wide) in paragraph at lines 36--37
+\OT1/cmr/m/n/12 aber gleich-zei-tig ei-ne in-ter-per-so-nel-le Kom-mu-ni-ka-ti-
+on auf die-sem Ka-nal aus-schliet. 
  []
 
+[23]
+Overfull \hbox (34.53563pt too wide) in paragraph at lines 50--53
+[]\OT1/cmr/m/n/12 Angelehnt an die Stu-di-en von Gibs, soll es Ziel des Pro-to-
+typs sein, die Sprach[]ubertragung
+ []
 
-Package natbib Warning: Citation `e' on page 23 undefined on input line 51.
-
-[23] [24] [25] [26] [27] [28] [29]
-
-! LaTeX Error: \begin{document} ended by \end{chapter}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.153 \end{chapter}
-                   
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-! Extra \endgroup.
-<recently read> \endgroup 
-                          
-l.153 \end{chapter}
-                   
-Things are pretty mixed up, but I think the worst is over.
-
-) [30] (kapitel/kapitel_sip.tex
+[24] [25] [26] [27] [28] [29] [30]) [31] (kapitel/kapitel_sip.tex
 Kapitel 4.
 
-Package natbib Warning: Citation `needed' on page 31 undefined on input line 6.
+Package natbib Warning: Citation `needed' on page 32 undefined on input line 6.
 
 
 
-Package natbib Warning: Citation `needed' on page 31 undefined on input line 13
+Package natbib Warning: Citation `needed' on page 32 undefined on input line 12
 .
 
 
-Package natbib Warning: Citation `needed' on page 31 undefined on input line 15
+Package natbib Warning: Citation `needed' on page 32 undefined on input line 14
 .
 
 
-Package natbib Warning: Citation `needed' on page 31 undefined on input line 15
+Package natbib Warning: Citation `needed' on page 32 undefined on input line 14
 .
 
 
-Package natbib Warning: Citation `needed' on page 31 undefined on input line 15
+Package natbib Warning: Citation `needed' on page 32 undefined on input line 14
 .
 
 
-Overfull \hbox (4.06387pt too wide) in paragraph at lines 15--16
+Overfull \hbox (4.0665pt too wide) in paragraph at lines 14--15
 \OT1/cmr/m/n/12 wen-det, das dem Empf[]anger der Pa-ke-te er-laubt, trotz un-zu
 -verl[]assiger []Ubertragung
  []
 
-[31
+[32
 
 
 
 ]
 
-Package natbib Warning: Citation `needed' on page 32 undefined on input line 17
+Package natbib Warning: Citation `needed' on page 33 undefined on input line 16
 .
 
 
-Overfull \hbox (41.31766pt too wide) in paragraph at lines 24--25
+Overfull \hbox (41.32545pt too wide) in paragraph at lines 23--24
 \OT1/cmr/m/n/12 Ge-spr[]achspartner ken-nen um einen di-rek-ten An-ruf aus-zuf[
 ]uhren. Bei ei-ner Adress[]anderung
  []
 
-[32] [33]
-Overfull \hbox (10.84723pt too wide) in paragraph at lines 58--59
-\OT1/cmr/m/n/12 Es gibt meh-re-re Sprach-co-die-rungs-ver-fah-ren, die bei VoIP
- ver-wen-det wer-den k[]onnen.
+[33] [34]
+Overfull \hbox (10.84854pt too wide) in paragraph at lines 57--58
+[]\OT1/cmr/m/n/12 Es gibt meh-re-re Sprach-co-die-rungs-ver-fah-ren, die bei Vo
+IP ver-wen-det wer-den k[]onnen.
  []
 
 
-Overfull \hbox (36.33717pt too wide) in paragraph at lines 60--61
-[]\OT1/cmr/m/n/12 Obwohl die Qua-lit[]at quan-ti-ta-tiv durch Pa-ra-me-ter, wie
- die Lauf-zeit der IP-Pakete(Delay),
+Overfull \hbox (36.33849pt too wide) in paragraph at lines 59--60
+[][]\OT1/cmr/m/n/12 Obwohl die Qua-lit[]at quan-ti-ta-tiv durch Pa-ra-me-ter, w
+ie die Lauf-zeit der IP-Pakete(Delay),
  []
 
-[34] [35] [36]
-Overfull \hbox (40.51906pt too wide) in paragraph at lines 124--125
-[]\OT1/cmr/m/n/12 Ausgew[]ahlte er-wei-ter-te Request-Typen, die in zus[]atzlic
-hen RF-Cs(3428,3265) nachtr[]aglich
+[35] [36] [37]
+Overfull \hbox (40.52037pt too wide) in paragraph at lines 123--124
+[][]\OT1/cmr/m/n/12 Ausgew[]ahlte er-wei-ter-te Request-Typen, die in zus[]atzl
+ichen RF-Cs(3428,3265) nachtr[]aglich
  []
 
 
-Overfull \hbox (25.71376pt too wide) in paragraph at lines 127--128
+Overfull \hbox (25.71376pt too wide) in paragraph at lines 126--127
 \OT1/cmr/m/n/12 quests MI-ME (\OT1/cmr/m/it/12 Mul-ti-me-dia In-ter-net Mes-sa-
 ge Ex-ten-si-ons\OT1/cmr/m/n/12 ) Nach-rich-ten []ubertragen
  []
 
-[37] [38] [39]
-Overfull \hbox (0.49585pt too wide) in paragraph at lines 180--181
-\OT1/cmr/m/n/12 Als In-stant Mes-sa-ging wird im all-ge-mei-nen ein Dienst zur 
-so-for-ti-gen []Ubermittlung
+[38] [39]
+Overfull \hbox (0.49585pt too wide) in paragraph at lines 179--180
+[]\OT1/cmr/m/n/12 Als In-stant Mes-sa-ging wird im all-ge-mei-nen ein Dienst zu
+r so-for-ti-gen []Ubermittlung
  []
 
-[40] [41]
-Overfull \hbox (15.69305pt too wide) in paragraph at lines 241--242
-[]\OT1/cmr/m/n/12 Garantie der Rei-hen-fol-ge von RTP-Paketen: RTP num-me-riert
- die []ubertragenen
+[40] [41] [42]
+Overfull \hbox (15.69696pt too wide) in paragraph at lines 240--241
+[][]\OT1/cmr/m/n/12 Garantie der Rei-hen-fol-ge von RTP-Paketen: RTP num-me-rie
+rt die []ubertragenen
  []
 
-[42] [43]
-Overfull \hbox (21.84018pt too wide) in paragraph at lines 266--267
-[]\OT1/cmr/m/n/12 Die wich-tigs-ten Auf-ga-ben von RT-CP sind die []Uberwachung
- der []Ubertragungsqualit[]at:
+[43]
+Overfull \hbox (21.84018pt too wide) in paragraph at lines 265--266
+[][]\OT1/cmr/m/n/12 Die wich-tigs-ten Auf-ga-ben von RT-CP sind die []Uberwachu
+ng der []Ubertragungsqualit[]at:
  []
 
-
-Overfull \hbox (5.35982pt too wide) in paragraph at lines 286--287
-[]\OT1/cmr/m/n/12 RTP-Zeitstempel: Die NTP-Zeit in Zeit-ein-hei-ten der RTP Ses
--si-on, die prim[]ar
+[44]
+Overfull \hbox (5.36504pt too wide) in paragraph at lines 286--287
+[][]\OT1/cmr/m/n/12 RTP-Zeitstempel: Die NTP-Zeit in Zeit-ein-hei-ten der RTP S
+es-si-on, die prim[]ar
  []
 
-[44] [45]) [46] (kapitel/kapitel_recentwork.tex
+[45]) [46] (kapitel/kapitel_recentwork.tex
 Kapitel 5.
 [47
 
 
 
-] [48] [49] [50] [51]) [52] (kapitel/kapitel_konstruktion.tex
+] [48] [49] [50]) [51] (kapitel/kapitel_konstruktion.tex
 Kapitel 6.
-[53
+[52
 
 
 
 ]
-Overfull \hbox (25.37892pt too wide) in paragraph at lines 28--29
+Overfull \hbox (25.38023pt too wide) in paragraph at lines 28--29
 \OT1/cmr/m/n/12 rekt aus-tau-schen, wenn die in-di-rek-te Rou-te []uber den Ser
 -ver zu zu ho-hen Verz[]ogerungen
  []
 
-[54] [55]
+[53] [54]
 Overfull \hbox (3.83331pt too wide) in paragraph at lines 58--61
 \OT1/cmr/m/n/12 nannt bei dem so-wohl der Da-ten-aus-tausch als auch der Aus-ta
 usch der Au-diostr[]ome
@@ -511,235 +545,60 @@ usch der Au-diostr[]ome
 
 
 Overfull \hbox (10.5874pt too wide) in paragraph at lines 67--68
-[]\OT1/cmr/m/n/12 Multicast Kon-fe-ren-zen k[]onnen gut in Netz-wer-ken funk-ti
-o-nie-ren die sie un-terst[]utzen.
+[][]\OT1/cmr/m/n/12 Multicast Kon-fe-ren-zen k[]onnen gut in Netz-wer-ken funk-
+tio-nie-ren die sie un-terst[]utzen.
  []
 
-[56] [57]
+[55] [56]
 
-Package natbib Warning: Citation `speex' on page 58 undefined on input line 97.
+Package natbib Warning: Citation `speex' on page 57 undefined on input line 97.
 
+
+[57]
+Overfull \hbox (10.48717pt too wide) in paragraph at lines 112--113
+[][]\OT1/cmr/m/n/12 Dieses Mo-dell hat je-doch ei-ni-ge Nach-tei-le: Die Exis-t
+enz ei-ner Kon-fe-renz ist abh[]angig
+ []
 
 [58]
-Overfull \hbox (10.48326pt too wide) in paragraph at lines 112--113
-[]\OT1/cmr/m/n/12 Dieses Mo-dell hat je-doch ei-ni-ge Nach-tei-le: Die Exis-ten
-z ei-ner Kon-fe-renz ist abh[]angig
- []
-
 
 Package natbib Warning: Citation `speex' on page 59 undefined on input line 124
 .
 
-[59]
-! Missing $ inserted.
-<inserted text> 
-                $
-l.139 
-      
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-! Display math should end with $$.
-<to be read again> 
-                   \par 
-l.139 
-      
-The `$' that I just saw supposedly matches a previous `$$'.
-So I shall assume that you typed `$$' both times.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.140 	\mbox{16 Spieler} \cdot
-                               {16 \frac{Kbit}{s}^{2} = 4096 \frac{Kbit}{s}
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-
-! LaTeX Error: Bad math environment delimiter.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.141 \]
-        
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.142 
-      
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.142 
-      
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-[60]
-
-LaTeX Warning: Command \" invalid in math mode on input line 185.
-
-! Please use \mathaccent for accents in math mode.
-<recently read> \accent 
-                        
-l.185 $P_{Hö
-            rnähe}$ gibt an wieviele Personen im Schnitt, sich in der Hörnah...
-I'm changing \accent to \mathaccent here; wish me luck.
-(Accents are not the same in formulas as they are in text.)
-
-! Missing { inserted.
-<to be read again> 
-                   \fontdimen 
-l.185 $P_{Hö
-            rnähe}$ gibt an wieviele Personen im Schnitt, sich in der Hörnah...
-A left brace was mandatory here, so I've put one in.
-You might want to delete and/or insert some corrections
-so that I will find a matching right brace soon.
-(If you're confused by all this, try typing `I}' now.)
-
-
-LaTeX Warning: Command \" invalid in math mode on input line 185.
-
-! Please use \mathaccent for accents in math mode.
-<recently read> \accent 
-                        
-l.185 $P_{Hörnä
-               he}$ gibt an wieviele Personen im Schnitt, sich in der Hörnah...
-I'm changing \accent to \mathaccent here; wish me luck.
-(Accents are not the same in formulas as they are in text.)
-
-! Missing { inserted.
-<to be read again> 
-                   \fontdimen 
-l.185 $P_{Hörnä
-               he}$ gibt an wieviele Personen im Schnitt, sich in der Hörnah...
-A left brace was mandatory here, so I've put one in.
-You might want to delete and/or insert some corrections
-so that I will find a matching right brace soon.
-(If you're confused by all this, try typing `I}' now.)
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.185 $P_{Hörnähe}$
-                    gibt an wieviele Personen im Schnitt, sich in der Hörnah...
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.185 $P_{Hörnähe}$
-                    gibt an wieviele Personen im Schnitt, sich in der Hörnah...
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-[61]
-
-LaTeX Warning: Command \" invalid in math mode on input line 191.
-
-! Please use \mathaccent for accents in math mode.
-<recently read> \accent 
-                        
-l.191 ...} \cdot 16 \frac{Kbit}{s}^{2} \cdot P_{Hö
-                                                  rnahe} = 1228\frac{Kbit}{s}
-I'm changing \accent to \mathaccent here; wish me luck.
-(Accents are not the same in formulas as they are in text.)
-
-! Missing { inserted.
-<to be read again> 
-                   \fontdimen 
-l.191 ...} \cdot 16 \frac{Kbit}{s}^{2} \cdot P_{Hö
-                                                  rnahe} = 1228\frac{Kbit}{s}
-A left brace was mandatory here, so I've put one in.
-You might want to delete and/or insert some corrections
-so that I will find a matching right brace soon.
-(If you're confused by all this, try typing `I}' now.)
-
-
-! LaTeX Error: Bad math environment delimiter.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.192 \]
-        
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.193 
-      
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.193 
-      
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-! Display math should end with $$.
-<to be read again> 
-                   \par 
-l.193 
-      
-The `$' that I just saw supposedly matches a previous `$$'.
-So I shall assume that you typed `$$' both times.
-
-) [62]
-No file kapitel/kapitel_implementierung.tex.
-(kapitel/kapitel_network.tex
+[59] [60]) [61] (kapitel/kapitel_implementierung.tex
 Kapitel 7.
+[62
 
-Overfull \hbox (5.76108pt too wide) in paragraph at lines 15--16
-\OT1/cmr/m/n/12 gleich-zei-ti-gen Be-nut-zern, als auch einen star-ken An-stieg
- der Be-nut-zer un-terst[]utzen,
+
+
+] [63] [64] [65]
+Overfull \hbox (6.04727pt too wide) in paragraph at lines 98--99
+[]\OT1/cmr/m/n/12 In der pri-va-ten Zo-ne A va-ri-iert die Lautst[]arke der Tei
+l-neh-mer nicht in Abh[]angigkeit
  []
 
-[63
+[66] [67] [68] [69]) [70] (kapitel/kapitel_network.tex
+Kapitel 8.
+[71
 
 
 
+] [72]
 
-
-] [64]
-
-Package natbib Warning: Citation `lua05' on page 65 undefined on input line 38.
+Package natbib Warning: Citation `lua05' on page 73 undefined on input line 45.
 
 
 
-Package natbib Warning: Citation `stutzbach05' on page 65 undefined on input li
-ne 38.
+Package natbib Warning: Citation `stutzbach05' on page 73 undefined on input li
+ne 45.
 
-[65] [66] [67] [68] [69] [70]) [71] (Main.bbl
+[73] [74] [75] [76] [77] [78]) [79] (kapitel/kapitel_benchmarking.tex
+Kapitel 9.
+) [80
+
+
+
+] (Main.bbl
 
 ! LaTeX Error: There's no line here to end.
 
@@ -912,7 +771,7 @@ Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
-[72
+[81
 
 
 
@@ -1077,7 +936,7 @@ Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
-[73]
+[82]
 
 ! LaTeX Error: There's no line here to end.
 
@@ -1093,8 +952,8 @@ or  <return>  to continue without it.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 188--193
-[]\OT1/cmr/m/sc/12 Ernst&Young\OT1/cmr/m/n/12 :  Di-gi-ta-le Spie-le in Deutsch
--land.  In:
+[][]\OT1/cmr/m/sc/12 Ernst&Young\OT1/cmr/m/n/12 :  Di-gi-ta-le Spie-le in Deuts
+ch-land.  In:
  []
 
 
@@ -1118,8 +977,8 @@ or  <return>  to continue without it.
 
 
 Underfull \hbox (badness 1325) in paragraph at lines 195--202
-[]\OT1/cmr/m/sc/12 Feng\OT1/cmr/m/n/12 , Wu chang ; \OT1/cmr/m/sc/12 Feng\OT1/c
-mr/m/n/12 , Wu chi:  On the geo-gra-phic dis-tri-bu-ti-
+[][]\OT1/cmr/m/sc/12 Feng\OT1/cmr/m/n/12 , Wu chang ; \OT1/cmr/m/sc/12 Feng\OT1
+/cmr/m/n/12 , Wu chi:  On the geo-gra-phic dis-tri-bu-ti-
  []
 
 
@@ -1156,7 +1015,7 @@ or  <return>  to continue without it.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 209--212
-[]\OT1/cmr/m/sc/12 Gebhardt\OT1/cmr/m/n/12 , Ni-ko-laus:  irr-Klang.  In:
+[][]\OT1/cmr/m/sc/12 Gebhardt\OT1/cmr/m/n/12 , Ni-ko-laus:  irr-Klang.  In:
  []
 
 
@@ -1281,9 +1140,9 @@ Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-Underfull \hbox (badness 6094) in paragraph at lines 274--282
-[]\OT1/cmr/m/sc/12 Hu\OT1/cmr/m/n/12 , Shun-Yun ; \OT1/cmr/m/sc/12 Liao\OT1/cmr
-/m/n/12 , Guan-Ming:  Sca-la-ble peer-to-peer net-
+Underfull \hbox (badness 6078) in paragraph at lines 274--282
+[][]\OT1/cmr/m/sc/12 Hu\OT1/cmr/m/n/12 , Shun-Yun ; \OT1/cmr/m/sc/12 Liao\OT1/c
+mr/m/n/12 , Guan-Ming:  Sca-la-ble peer-to-peer net-
  []
 
 
@@ -1298,7 +1157,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 274--282
  1016552$\OT1/cmr/m/n/12 . --  DOI
  []
 
-[74]
+[83]
 
 ! LaTeX Error: There's no line here to end.
 
@@ -1359,7 +1218,7 @@ or  <return>  to continue without it.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 300--305
-[]\OT1/cmr/m/sc/12 Ipoque\OT1/cmr/m/n/12 :  In-ter-net Stu-die 2007.  In:
+[][]\OT1/cmr/m/sc/12 Ipoque\OT1/cmr/m/n/12 :  In-ter-net Stu-die 2007.  In:
  []
 
 
@@ -1488,7 +1347,7 @@ Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
-[75]
+[84]
 
 ! LaTeX Error: There's no line here to end.
 
@@ -1568,9 +1427,9 @@ Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-Underfull \hbox (badness 2020) in paragraph at lines 404--409
-[]\OT1/cmr/m/sc/12 Museum\OT1/cmr/m/n/12 , Com-pu-ter H.:  Co-mu-ter His-to-ry 
-Mu-se-um, PDP-1.  In:
+Underfull \hbox (badness 2012) in paragraph at lines 404--409
+[][]\OT1/cmr/m/sc/12 Museum\OT1/cmr/m/n/12 , Com-pu-ter H.:  Co-mu-ter His-to-r
+y Mu-se-um, PDP-1.  In:
  []
 
 
@@ -1659,9 +1518,9 @@ or  <return>  to continue without it.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 452--457
-[]\OT1/cmr/m/sc/12 Reichswald\OT1/cmr/m/n/12 , R. ; \OT1/cmr/m/sc/12 M[]oslein\
-OT1/cmr/m/n/12 , K. ; \OT1/cmr/m/sc/12 Sa-chen-ba-che-rand\OT1/cmr/m/n/12 , K. 
-;
+[][]\OT1/cmr/m/sc/12 Reichswald\OT1/cmr/m/n/12 , R. ; \OT1/cmr/m/sc/12 M[]oslei
+n\OT1/cmr/m/n/12 , K. ; \OT1/cmr/m/sc/12 Sa-chen-ba-che-rand\OT1/cmr/m/n/12 , K
+. ;
  []
 
 
@@ -1677,7 +1536,7 @@ Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
-[76]
+[85]
 
 ! LaTeX Error: There's no line here to end.
 
@@ -1693,8 +1552,8 @@ or  <return>  to continue without it.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 465--468
-[]\OT1/cmr/m/sc/12 ResoundingTechnologyInc\OT1/cmr/m/n/12 :  Ro-ger Wil-co.  In
-:
+[][]\OT1/cmr/m/sc/12 ResoundingTechnologyInc\OT1/cmr/m/n/12 :  Ro-ger Wil-co.  
+In:
  []
 
 
@@ -1815,7 +1674,7 @@ Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
-[77]
+[86]
 
 ! LaTeX Error: There's no line here to end.
 
@@ -1883,9 +1742,9 @@ Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-Underfull \hbox (badness 2221) in paragraph at lines 578--585
-[]\OT1/cmr/m/sc/12 Schulzrinne\OT1/cmr/m/n/12 , Hen-ning ; \OT1/cmr/m/sc/12 Len
-n-ox\OT1/cmr/m/n/12 , Jo-na-than:  A pro-to-col for re-
+Underfull \hbox (badness 2213) in paragraph at lines 578--585
+[][]\OT1/cmr/m/sc/12 Schulzrinne\OT1/cmr/m/n/12 , Hen-ning ; \OT1/cmr/m/sc/12 L
+enn-ox\OT1/cmr/m/n/12 , Jo-na-than:  A pro-to-col for re-
  []
 
 
@@ -1915,8 +1774,8 @@ or  <return>  to continue without it.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 587--595
-[]\OT1/cmr/m/sc/12 Schulzrinne\OT1/cmr/m/n/12 , Hen-ning ; \OT1/cmr/m/sc/12 Sin
--gh\OT1/cmr/m/n/12 , Kun-dan:  Peer-to-peer in-ter-
+[][]\OT1/cmr/m/sc/12 Schulzrinne\OT1/cmr/m/n/12 , Hen-ning ; \OT1/cmr/m/sc/12 S
+in-gh\OT1/cmr/m/n/12 , Kun-dan:  Peer-to-peer in-ter-
  []
 
 
@@ -1938,39 +1797,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.598 ...tlabel{Schulzrinne et~al. 2002}\\ \textsc
-                                                  {Schulzrinne}, Henning ;
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-Underfull \hbox (badness 1533) in paragraph at lines 598--605
-[]\OT1/cmr/m/sc/12 Schulzrinne\OT1/cmr/m/n/12 , Hen-ning ; \OT1/cmr/m/sc/12 Wu\
-OT1/cmr/m/n/12 , Xiao-tao ; \OT1/cmr/m/sc/12 Kos-ke-lai-nen\OT1/cmr/m/n/12 , Pe
--tri:  A
- []
-
-
-Underfull \hbox (badness 1354) in paragraph at lines 598--605
-\OT1/cmr/m/n/12 SIP-based con-fe-rence con-trol fra-me-work.  (2002), S. 53--61
-.  $\OT1/cmtt/m/n/12 http :
- []
-
-
-Underfull \hbox (badness 1661) in paragraph at lines 598--605
-\OT1/cmtt/m/n/12 / / dx . doi . org / http : / / doi . acm . org / 10 . 1145 / 
-507670 . 507679$\OT1/cmr/m/n/12 . --  DOI
- []
-
-
-! LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.607 ...atlabel{Shannon u. Weaver 1963}\\ \textsc
+l.597 ...atlabel{Shannon u. Weaver 1963}\\ \textsc
                                                   {Shannon}, Claude~E. ;
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -1983,22 +1810,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.614 \dinatlabel{Singh u. Acharya 2004}\\ \textsc
-                                                  {Singh}, Aameek ; \textsc{...
-
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-[78]
-
-! LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.625 \dinatlabel{Singh u. Acharya 2005}\\ \textsc
+l.604 \dinatlabel{Singh u. Acharya 2004}\\ \textsc
                                                   {Singh}, Aameek ; \textsc{...
 
 Your command was ignored.
@@ -2012,7 +1824,22 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.635 \dinatlabel{Singh et~al. 2006}\\ \textsc
+l.615 \dinatlabel{Singh u. Acharya 2005}\\ \textsc
+                                                  {Singh}, Aameek ; \textsc{...
+
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+[87]
+
+! LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.625 \dinatlabel{Singh et~al. 2006}\\ \textsc
                                               {Singh}, Aameek ; \textsc{Acha...
 
 Your command was ignored.
@@ -2026,7 +1853,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.645 \dinatlabel{Singhal u. Zyda 1999}\\ \textsc
+l.635 \dinatlabel{Singhal u. Zyda 1999}\\ \textsc
                                                  {Singhal}, Sandeep ; \texts...
 
 Your command was ignored.
@@ -2040,7 +1867,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.652 ...atlabel{SonyEntertainment 2008}\\ \textsc
+l.642 ...atlabel{SonyEntertainment 2008}\\ \textsc
                                                   {SonyEntertainment}:
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -2049,7 +1876,7 @@ or  <return>  to continue without it.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.654 ...//en.wikipedia.org/wiki/PlayStation_Home}
+l.644 ...//en.wikipedia.org/wiki/PlayStation_Home}
                                                     (2008)
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -2057,7 +1884,7 @@ you left one out. Proceed, with fingers crossed.
 ! Extra }, or forgotten $.
 <recently read> \egroup 
                         
-l.654 ...//en.wikipedia.org/wiki/PlayStation_Home}
+l.644 ...//en.wikipedia.org/wiki/PlayStation_Home}
                                                     (2008)
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -2068,7 +1895,7 @@ deleted material, e.g., by typing `I$}'.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.655 
+l.645 
       
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -2076,7 +1903,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing } inserted.
 <inserted text> 
                 }
-l.655 
+l.645 
       
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -2085,9 +1912,9 @@ really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 652--655
-[]\OT1/cmr/m/sc/12 SonyEntertainment\OT1/cmr/m/n/12 :  Play-Sta-ti-on Ho-me.  I
-n:
+Underfull \hbox (badness 10000) in paragraph at lines 642--645
+[][]\OT1/cmr/m/sc/12 SonyEntertainment\OT1/cmr/m/n/12 :  Play-Sta-ti-on Ho-me. 
+ In:
  []
 
 
@@ -2097,7 +1924,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.658 \dinatlabel{Stoica et~al. 2001}\\ \textsc
+l.648 \dinatlabel{Stoica et~al. 2001}\\ \textsc
                                                {Stoica}, Ion ; \textsc{Morris},
 
 Your command was ignored.
@@ -2111,15 +1938,15 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.667 ...abel{TeamSpeakSystemsGmbH 2008}\\ \textsc
+l.657 ...abel{TeamSpeakSystemsGmbH 2008}\\ \textsc
                                                   {TeamSpeakSystemsGmbH}:
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 667--670
-[]\OT1/cmr/m/sc/12 TeamSpeakSystemsGmbH\OT1/cmr/m/n/12 :  Teams-peak.  In:
+Underfull \hbox (badness 10000) in paragraph at lines 657--660
+[][]\OT1/cmr/m/sc/12 TeamSpeakSystemsGmbH\OT1/cmr/m/n/12 :  Teams-peak.  In:
  []
 
 
@@ -2129,7 +1956,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.672 \dinatlabel{TheOGRETeam 2008}\\ \textsc
+l.662 \dinatlabel{TheOGRETeam 2008}\\ \textsc
                                              {TheOGRETeam}:
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -2142,20 +1969,20 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.677 \dinatlabel{Thon 2006}\\ \textsc
+l.667 \dinatlabel{Thon 2006}\\ \textsc
                                       {Thon}, Jan~N.:
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-Underfull \hbox (badness 4981) in paragraph at lines 677--683
-[]\OT1/cmr/m/sc/12 Thon\OT1/cmr/m/n/12 , Jan N.:  Com-mu-ni-ca-ti-on and In-ter
--ac-ti-on in Mul-ti-player
+Underfull \hbox (badness 4967) in paragraph at lines 667--673
+[][]\OT1/cmr/m/sc/12 Thon\OT1/cmr/m/n/12 , Jan N.:  Com-mu-ni-ca-ti-on and In-t
+er-ac-ti-on in Mul-ti-player
  []
 
 
-Underfull \hbox (badness 3780) in paragraph at lines 677--683
+Underfull \hbox (badness 3780) in paragraph at lines 667--673
 \OT1/cmr/m/n/12 First Per-son Shoo-ter Ga-mes.  In: \OT1/cmr/m/it/12 From Com-m
 u-ni-ca-ti-on to Pre-
  []
@@ -2167,7 +1994,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.685 \dinatlabel{Triebel et~al. 2007}\\ \textsc
+l.675 \dinatlabel{Triebel et~al. 2007}\\ \textsc
                                                 {Triebel}, Tonio ; \textsc{G...
 
 Your command was ignored.
@@ -2175,20 +2002,20 @@ Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 685--693
-[]\OT1/cmr/m/sc/12 Triebel\OT1/cmr/m/n/12 , To-nio ; \OT1/cmr/m/sc/12 Gut-hier\
-OT1/cmr/m/n/12 , Ben-ja-min ; \OT1/cmr/m/sc/12 Ef-fels-berg\OT1/cmr/m/n/12 , Wo
-lf-
+Underfull \hbox (badness 10000) in paragraph at lines 675--683
+[][]\OT1/cmr/m/sc/12 Triebel\OT1/cmr/m/n/12 , To-nio ; \OT1/cmr/m/sc/12 Gut-hie
+r\OT1/cmr/m/n/12 , Ben-ja-min ; \OT1/cmr/m/sc/12 Ef-fels-berg\OT1/cmr/m/n/12 , 
+Wolf-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 685--693
+Underfull \hbox (badness 10000) in paragraph at lines 675--683
 \OT1/cmr/m/n/12 gang:  Sky-pe4Games.  (2007), S. 13--18.  $\OT1/cmtt/m/n/12 htt
 p : / / dx . doi .
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 685--693
+Underfull \hbox (badness 10000) in paragraph at lines 675--683
 \OT1/cmtt/m/n/12 org / http : / / doi . acm . org / 10 . 1145 / 1326257 . 13262
 60$\OT1/cmr/m/n/12 . --  DOI
  []
@@ -2200,7 +2027,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.695 \dinatlabel{Turkle 1995}\\ \textsc
+l.685 \dinatlabel{Turkle 1995}\\ \textsc
                                         {Turkle}, S.:
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -2213,13 +2040,12 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.700 \dinatlabel{Wadley 2008}\\ \textsc
+l.690 \dinatlabel{Wadley 2008}\\ \textsc
                                         {Wadley}, Greg:
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
-[79]
 
 ! LaTeX Error: There's no line here to end.
 
@@ -2227,12 +2053,13 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.706 \dinatlabel{Walther 2002}\\ \textsc
+l.696 \dinatlabel{Walther 2002}\\ \textsc
                                          {Walther}, J.B.:
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
+[88]
 
 ! LaTeX Error: There's no line here to end.
 
@@ -2240,7 +2067,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.714 \dinatlabel{Wang et~al. 2007}\\ \textsc
+l.704 \dinatlabel{Wang et~al. 2007}\\ \textsc
                                              {Wang}, Alice ; \textsc{Emmi}, ...
 
 Your command was ignored.
@@ -2248,14 +2075,14 @@ Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-Underfull \hbox (badness 2005) in paragraph at lines 714--722
-[]\OT1/cmr/m/sc/12 Wang\OT1/cmr/m/n/12 , Ali-ce ; \OT1/cmr/m/sc/12 Em-mi\OT1/cm
-r/m/n/12 , Mi-cha-el ; \OT1/cmr/m/sc/12 Fa-lout-sos\OT1/cmr/m/n/12 , Pe-tros:  
-As-semb-ling
+Underfull \hbox (badness 1997) in paragraph at lines 704--712
+[][]\OT1/cmr/m/sc/12 Wang\OT1/cmr/m/n/12 , Ali-ce ; \OT1/cmr/m/sc/12 Em-mi\OT1/
+cmr/m/n/12 , Mi-cha-el ; \OT1/cmr/m/sc/12 Fa-lout-sos\OT1/cmr/m/n/12 , Pe-tros:
+  As-semb-ling
  []
 
 
-Underfull \hbox (badness 2027) in paragraph at lines 714--722
+Underfull \hbox (badness 2027) in paragraph at lines 704--712
 \OT1/cmr/m/n/12 an ex-pres-si-ve fa-ci-al ani-ma-ti-on sys-tem.  (2007), S. 21-
 -26.  $\OT1/cmtt/m/n/12 http :
  []
@@ -2267,7 +2094,64 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.724 \dinatlabel{Wilbur 1954}\\ \textsc
+l.714 \dinatlabel{Wikipedia 2008}\\ \textsc
+                                           {Wikipedia}:
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.716 ....wikipedia.org/wiki/List_of_SIP_software}
+                                                  
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Extra }, or forgotten $.
+<recently read> \egroup 
+                        
+l.716 ....wikipedia.org/wiki/List_of_SIP_software}
+                                                  
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.718 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.718 
+      
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 714--718
+[][]\OT1/cmr/m/sc/12 Wikipedia\OT1/cmr/m/n/12 :  Over-view of SIP Soft-wa-re.  
+In:
+ []
+
+
+! LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.720 \dinatlabel{Wilbur 1954}\\ \textsc
                                         {Wilbur}, Schramm:
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -2280,7 +2164,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.729 \dinatlabel{Wright et~al. 2002}\\ \textsc
+l.725 \dinatlabel{Wright et~al. 2002}\\ \textsc
                                                {Wright}, Talmadge ;
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -2293,7 +2177,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.736 \dinatlabel{Yu u. Vuong 2005}\\ \textsc
+l.732 \dinatlabel{Yu u. Vuong 2005}\\ \textsc
                                              {Yu}, Anthony~(. ; \textsc{Vuong},
 
 Your command was ignored.
@@ -2307,14 +2191,14 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.747 \dinatlabel{Zhao et~al. 2001}\\ \textsc
+l.743 \dinatlabel{Zhao et~al. 2001}\\ \textsc
                                              {Zhao}, B.~Y. ; \textsc{Kubiato...
 
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
-) [80] (kapitel/erklaerung.tex) [81
+) [89] (kapitel/erklaerung.tex) [90
 
 
 ]
@@ -2326,27 +2210,19 @@ Package natbib Warning: There were undefined citations.
 (kapitel/kapitel_kommunikation.aux) (kapitel/kapitel_folgerungundziele.aux)
 (kapitel/kapitel_sip.aux) (kapitel/kapitel_recentwork.aux)
 (kapitel/kapitel_konstruktion.aux) (kapitel/kapitel_implementierung.aux)
-(kapitel/kapitel_network.aux) (kapitel/erklaerung.aux)) ) 
-Here is how much of TeX's memory you used:
- 3192 strings out of 95350
- 43466 string characters out of 1184541
- 122311 words of memory out of 1500000
- 6261 multiletter control sequences out of 110000
- 8415 words of font info for 30 fonts, out of 1200000 for 2000
- 14 hyphenation exceptions out of 8191
- 36i,11n,37p,1784b,490s stack positions out of 5000i,500n,10000p,200000b,5000s
-<D:/Programme/MiKTeX 2
-.7/fonts/type1/bluesky/cm/cmbx12.pfb><D:/Programme/MiKTeX 2.7/fonts/type1/blues
-ky/cm/cmcsc10.pfb><D:/Programme/MiKTeX 2.7/fonts/type1/bluesky/cm/cmex10.pfb><D
-:/Programme/MiKTeX 2.7/fonts/type1/bluesky/cm/cmmi12.pfb><D:/Programme/MiKTeX 2
-.7/fonts/type1/bluesky/cm/cmmi6.pfb><D:/Programme/MiKTeX 2.7/fonts/type1/bluesk
-y/cm/cmmi8.pfb><D:/Programme/MiKTeX 2.7/fonts/type1/bluesky/cm/cmr12.pfb><D:/Pr
-ogramme/MiKTeX 2.7/fonts/type1/bluesky/cm/cmr8.pfb><D:/Programme/MiKTeX 2.7/fon
-ts/type1/bluesky/cm/cmsy10.pfb><D:/Programme/MiKTeX 2.7/fonts/type1/bluesky/cm/
-cmti12.pfb><D:/Programme/MiKTeX 2.7/fonts/type1/bluesky/cm/cmtt12.pfb>
-Output written on Main.pdf (90 pages, 333787 bytes).
-PDF statistics:
- 342 PDF objects out of 1000 (max. 8388607)
- 0 named destinations out of 1000 (max. 131072)
- 6 words of extra memory for PDF output out of 10000 (max. 10000000)
+(kapitel/kapitel_network.aux) (kapitel/kapitel_benchmarking.aux)
+(kapitel/erklaerung.aux))
 
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 3480 strings out of 95351
+ 46353 string characters out of 1184568
+ 129116 words of memory out of 1500000
+ 6528 multiletter control sequences out of 110000
+ 9089 words of font info for 33 fonts, out of 1200000 for 2000
+ 14 hyphenation exceptions out of 8191
+ 36i,11n,37p,1768b,500s stack positions out of 5000i,500n,10000p,200000b,5000s
+
+Output written on Main.dvi (100 pages, 381296 bytes).

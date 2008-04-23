@@ -1,16 +1,15 @@
 \chapter{VoIP und SIP}
 
-Unter der IP-Telefonie, eine Kurzform für die Internet-Protokoll-Telefonie, auch kurz Internet-Telefonie oder auch Voice over IP (kurz VoIP) genannt, versteht man das Telefonieren über Computernetzwerke, welche nach Internet-Standards aufgebaut sind. Dabei werden für Telefonie typische Informationen, d.h. Sprache und Steuerinformationen z.B. für den Verbindungsaufbau, über ein auch für Datenübertragung nutzbares Netz übertragen. Bei den Gesprächsteilnehmern können sowohl Computer, für IP-Telefonie spezialisierte Telefonendgeräte, als auch über spezielle Adapter angeschlossene klassische Telefone die Verbindung ins Telefonnetz herstellen.
+Unter der IP-Telefonie, eine Kurzform für die Internet-Protokoll-Telefonie, auch Voice over IP (kurz VoIP) genannt, versteht man das Telefonieren über Computernetzwerke, welche nach Internet-Standards aufgebaut sind. Dabei werden für Telefonie typische Informationen, d.h. Sprache und Steuerinformationen z.B. für den Verbindungsaufbau, über ein auch für Datenübertragung nutzbares Netz übertragen. Bei den Gesprächsteilnehmern können sowohl Computer, für IP-Telefonie spezialisierte Telefonendgeräte, als auch über spezielle Adapter angeschlossene klassische Telefone die Verbindung ins Telefonnetz herstellen.
 
 \subsection{Protokolle zur Echtzeitkommunikation}
 Voice-over-IP beinhaltet unterschiedliche Protokolle. Zur reinen Signalisierung werden hauptsächlich das Session Initiation Protocol (SIP) \citep{needed} bzw. Protokolle aus der H.323-Protokollfamilie verwendet. Bei VoIP sing generell folgende Klassen der Protokolle zu unterscheiden:
 \begin{itemize}
 	\item Protokolle für die Sprachübermittlung: Da die Sprachkommunikation in Echtzeit verläuft, sind spezielle Protokolle für die Übermittlung der Sprache über IP-Netze nötig.
 	\item Signalisierungsprotokolle: Es handelt sich hier um Protokolle für den Auf- und Abbau von Verbindungen zwischen zwei IP-Telefonen.
-	\item Diese Protokolle sind nötig, um die klassischen TK-Systeme und -Netze, wie z.B. das ISDN mit den IP-Netzen mit Hilfe von verschiedenen Gateways zu integrieren. 
 \end{itemize}
 
-Vorgänge wie die Vermittlung von Gesprächen, der Rufaufbau oder -abbau sowie die Aushandlung von Parametern, z.B. die Verwendung eines gemeinsamen Codecs, der entsprechenden Bitrate oder der maximal zulässigen Bandbreite werden in diesen Protokollen kontrolliert. Speziell für diese zwecke wurde das Session Description Protocol (SDP) \citep{needed} entwickelt um den Medienstrom zu kontrollieren. SIP basiert auf den gleichen Prinzipien, die man beim HTTP(HyperText Transfer Protocol) nutzt. 
+Vorgänge wie die Vermittlung von Gesprächen, der Rufaufbau oder -abbau sowie die Aushandlung von Parametern, z.B. die Verwendung eines gemeinsamen Codecs, der entsprechenden Bitrate oder der maximal zulässigen Bandbreite werden in diesen Protokollen kontrolliert. Speziell für diese Zwecke wurde das Session Description Protocol (SDP) \citep{needed} entwickelt um den Medienstrom zu kontrollieren. SIP basiert auf den gleichen Prinzipien, die man beim HTTP(HyperText Transfer Protocol) nutzt. 
 
 Für die Sprachübertragung wird das Real-time Transport Protocol (RTP) \citep{needed} verwendet, das dem Empfänger der Pakete erlaubt, trotz unzuverlässiger Übertragung über UDP \citep{needed}, einen Paketverlust festzustellen und die ursprüngliche Reihenfolge der Daten wiederherzustellen. RTP ist ein Transprotokoll, ist also nicht nur für Sprache, sondern für alle Echtzeitmedien, wie Video verwendbar. Da RTP keine Bestätigungen verwendet, kann der Empfänger dem Sender nicht mitteilen, ob überhaupt btw. wie die Sprache in Form von IP-Paketen bei ihm ankommt. Das RTCP Protokoll gleicht diesen Nachteil aus: Mit Hilfe des RTP Control Protocols (RTCP) können zusätzlich zu den reinen Mediendaten auch Kontrollinformationen wie die Anzahl der verlorenen Pakete oder der gemessene Jitter \citep {needed} der RTP-Verbindung übertragen werden und so Übertragungsparameter angepasst werden. 
 
@@ -18,10 +17,10 @@ Neben den bisher erwähnten Protokollen zur Hauptfunktionalität gibt es noch noch
 
 Für die Ansteuerung von VoIP-Gateways stehen die Protokolle MGCP(Media Gateway Control Protocol) nund Megaco(Media Gateway Control) zur Verfügung, die im Rahmen der Arbeit jedoch nicht weiter erläutert werden. 
 
-Dieses Kapitel soll zunächst den Aufbau eines VoIP Systems beschreiben um anschließend die Protokolle SIP/SDP, RTP und RTCP zu behandeln. Da SIP die ältere H.323 Protokollfamilie in langfristig verdrängen wird, wird diese Protokollfamilie nicht behandelt. Im Abschluss wird ein Überblick über das propriätere Protokoll von Skype gegeben, dessen Funktionsweise und Details zwar nicht offen sind, es jedoch eine Alternative zu den offenen Protokollen bietet. 
+Dieses Kapitel soll zunächst den Aufbau eines VoIP Systems beschreiben um anschließend die Protokolle SIP/SDP, RTP und RTCP zu behandeln. Da SIP die ältere H.323 Protokollfamilie in langfristig verdrängen wird, wird diese Protokollfamilie nicht behandelt. %Im Abschluss wird ein Überblick über das propriätere Protokoll von Skype gegeben, dessen Funktionsweise und Details zwar nicht offen sind, es jedoch eine Alternative zu den offenen Protokollen bietet. 
 
 \subsection{Einfaches VoIP System}
-Der einfache Aufbau eines funktionierenden VoIP Systems kann prinzipiell mit einer bestehenden IP-Infrastruktur und Softphones (Programmen die Telefone emulieren), die auf Rechners ausgeführt werden, funktionieren. Die Teilnehmer müssen jedoch bei einer solchen Konfiguration die IP-Adressen der gewünschten Gesprächspartner kennen um einen direkten Anruf auszuführen. Bei einer Adressänderung der IP Adresse eines Gesprächspartners, müssten jedoch alle Einträge der Gesprächspartner entsprechend abgeändert werden, weil sich die Teilnehmer sonst nicht mehr erreichen könnten. Der gleiche Aufwand müsste auch beim Hinzufügen weiterer Teilnehmer erfolgen. Ein solcher Aufbau wird daher als unflexibel angesehen. 
+Der einfache Aufbau eines funktionierenden VoIP Systems kann prinzipiell mit einer bestehenden IP-Infrastruktur und Softphones (Programmen die Telefone emulieren), die auf Rechnern ausgeführt werden, funktionieren. Die Teilnehmer müssen jedoch bei einer solchen Konfiguration die IP-Adressen der gewünschten Gesprächspartner kennen um einen direkten Anruf auszuführen. Bei einer Adressänderung der IP Adresse eines Gesprächspartners, müssten jedoch alle Einträge der Gesprächspartner entsprechend abgeändert werden, weil sich die Teilnehmer sonst nicht mehr erreichen könnten. Der gleiche Aufwand müsste auch beim Hinzufügen weiterer Teilnehmer erfolgen. Ein solcher Aufbau wird daher als unflexibel angesehen. 
 
 Im SIP-Protokoll wird dieses Problem von Proxys übernommen, die die Aufgabe einer Vermittlungsstelle einnehmen und später im Detial erläutert werden. Ein Proxy kann einen Location Service enthalten, der ankommende SIP-Pakete an das Telefon des angerufenen Teilnehmers weiterleitet oder an einen anderen Proxy weiterleitet, falls sich der Benutzer außerhalb des eigenen Adressbereichs befindet. Zusätzlich können Konferencen, Voice-Mail und Anrufweiterleitungen Teil eines VoIP System sein. 
 
@@ -278,15 +277,7 @@ Beim RTCP werden folgende RTCP-Pakete als Nachrichten verwendet.
 RTCP Pakete beginnen mit einem Header und können unabhängig von anderen bearbeitet werden. Die Reihenfolge der Pakete in einem IP-Paket kann beliebig sein. 
 Das SR Paket enthält einen Zeitstempel gemäß der NTP (Network Time Prococol) und beschreibt die Qualität der Übermittlung aus Sicht des Senders. So kann z.B. dem Empfänger die Sende-Datenrate mitgeteilt werden, damit dieser sich im Voraus auf die ankommende Datenmenge einstellen kann. 
 
-
-\subsection{Silence Supression}
-Teilnehmer einer Audio verbindung müssen nicht unbedingt Audiopakete über den RTP Stream senden, falls gerade bei den Teilnehmern Stille herrscht. Diese Funktion wurde im RFT 3389 spezifiziert.
-
-Die Möglichkeit den RTP Paketversand während Stilleperioden zu unterbrechen wird als Stille Unterdrückung ("`Silence Suppression"') oder Stimm Aktivitäts Erekennung("`Voice Activity Detection"') bezeichnet. Ob Silence Suppression eingesetzt wird hängt normalerweise von der Konfiguration der beiden Endpunkte ab, und wurde wird in den RTP Parametern detailierter erklärt. 
-
 %TODO
-
-
 % Grafik eines RTCP Pakets
 
 In einem Sender Report sind immer enthalten:
@@ -306,6 +297,11 @@ In einem Receiver Report sind unter anderm folgende Informationen enthalten:
 
 Die SDES Pakete ermöglichen es, die Quallen mit Namen zu kennzeichnen. Diese Kennzeichnung wird vom Empfänger dazu verwendet mehrere Bitströme einer Quelle, die in getrennten RTP-Sessions übertragen werden wieder zusammenzuführen. Das BYE Paket dient dazu das Ende der Teilnahme an einer Kommunikation anzuzeigen. 
 
+\subsection{Silence Supression}
+Teilnehmer einer Audio Verbindung müssen nicht unbedingt Audiopakete über den RTP Stream senden, falls gerade bei den Teilnehmern Stille herrscht. Diese Funktion wurde im RFT 3389 spezifiziert.
+
+Die Möglichkeit den RTP Paketversand während Stilleperioden zu unterbrechen wird als Stille Unterdrückung ("`Silence Suppression"') oder Stimm Aktivitäts Erkennung("`Voice Activity Detection"') bezeichnet. Ob Silence Suppression eingesetzt wird hängt normalerweise von der Konfiguration der beiden Endpunkte ab, und wurde wird in den RTP Parametern detaillierter erklärt. 
+
 \section{STUN Protokoll} 
 
 Unter STUN (Simple Traversal of User Datagram Protocol Through Network Adress Translators) versteht man ein einfaches Protokoll, dass im RFC 3489 spezifiziert wurde. Es erlaubt Anwendungen festzustellen ob sie sich hinter einer Firewall oder einem Router mit NAT (Network Adress Translator) befinden und um welche Kategorie von Router es sich handelt. Ebenso ist es mit STUN möglich seine öffentliche IP Adresse herauszufinden. 
@@ -315,19 +311,12 @@ Die typische STUN Konfiguration beinhaltet einen STUN Client, der in einem priva
 
 %Grafik von STUN Transaktion
 
+%\section{Skype}
+%\subsection{Registrierung und Login}
+%\subsection{Rufsignalisierung und Sprachübertragung}
+%\subsection{Technologie von Skype}
+%\subsubsection{Verbindungsstruktur}
+%\subsubsection{Sicherheit}
+%\subsubsection{Konferenzen}
 
-\section{Skype}
-\subsection{Registrierung und Login}
-\subsection{Rufsignalisierung und Sprachübertragung}
-\subsection{Technologie von Skype}
-\subsubsection{Verbindungsstruktur}
-\subsubsection{Sicherheit}
-\subsubsection{Konferenzen}
-
-DO I REALLY NEED TO TALK ABOUT SKYPE??
-
-1. The protocol is proprietary unlike open standard such as SIP.
-2. It provides a single service wich is making calls or instant messages and not a architecture for new services
-3. Most importantly it has centrlized elements for login authentication 
-\cite{schulzrinne05}
 
