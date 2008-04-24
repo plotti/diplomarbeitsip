@@ -3,31 +3,13 @@
 \section{Konferenzensteuerung vs. Sprachkommunikation in Spielen}
 %TODO
 
-Bevor wir im Entwurf mögliche Szenarien vorstellen, möchte ich vorab klären, was nicht Aufgabe der Arbeit sein soll. Da Probleme der Kontrolle von Konferenzen der Einsatz von Multicast Gruppen und deren Kontroll Mechanismen umfangreich in den letzten Jahren erforscht wurden sollen diese Probleme nicht erläutert werden. Der Schwerpunkt des Entwurfs soll sich mit dem Vergleich bestehender Architekturen für Sprachübertragung in Computerspielen befassen und den Einsatz von SIP in diesen Szenarien evaluieren. 
+Bevor wir im Entwurf mögliche Szenarien vorstellen, möchte abgrenzen, was nicht Aufgabe der Arbeit sein soll. Da Probleme der Kontrolle von Konferenzen der Einsatz von Multicast Gruppen und deren Kontroll Mechanismen in den letzten Jahren umfangreich erforscht wurden, sollen diese hier nicht weiter erläutert werden. Der Schwerpunkt des Entwurfs soll sich mit dem Vergleich bestehender Architekturen für Sprachübertragung in Computerspielen befassen und den Einsatz von SIP in diesen Szenarien evaluieren. 
 
 \section {Analyse der bestehenden Architekturen für Audioübertragung}
 
-In einer Studie vergleichen Safei und Boustead Architekturen für Sprachkommunikation Mehrspieler Netzwerk Spielen. Dabei wird speziell gefordert, dass jeder Spieler eine eine Mischung aus Stimmen und Geräuschen hören soll die speziell auf seine Position im Spiel angepasst ist und nicht nur die Lautstärke als auch die Position der Geräusche im Klangbild spezifiziert wird. 
+In einer Studie vergleichen Safei und Boustead Architekturen für Sprachkommunikation Mehrspieler Netzwerk Spielen \cite{safei04} \cite{safei04b}. Dabei legen sie den Fokus darauf, dass jeder Spieler eine eine Mischung aus Stimmen und Geräuschen hören soll die speziell auf seine Position im Spiel angepasst ist. Dies erfordert ein Abmischen der vorhandenen Stimmen und vor allem eine Anpassung der Lautstärke der Audioquellen an deren Position in der Audioszene. Sie beschäftigen sich mit zwei Hauptaspekten: Wo soll das Abmischen der Audioströme je nach Architektur geschehen und welche Auswirkungen hat dies auf die verbrauchte Bandbreite und den Delay. 
 
-\subsection{Peer-to-Peer}
-In einer Peer-to peer Architektur wird die Audioszene lokal erzeugt, nachdem man sämtliche Sprachquellen der der anderen Spieler erhalten hat. Der Hauptvorteil dieser Architektur liegt darin dass ein niedriger Delay auftritt, da die im optimalen Fall die Verbindung immer die kürzesten Wege zwischen den einzelnen Spielern etabliert wird. Zusätzlich nutzt man die freie Rechenleistung in den Knoten um das Abmischen der Audioszene vorzunehmen und man verfügt potenziell über eine Architektur die keinen single Point of Failure besitzt.  Der Hauptnachteil ist dass die Bandbreite der einzelnen Knoten im Peer-to-Peer die Anzahl der möglichen Verbindungen limitiert. 
-%BILD
-
-\subsection{Client-Server}
-In einer Zentralisierten Lösungen wird der Audiostrom von jedem der Teilnehmer an einen zentralen Server gesendet. Mithilfe der Positionsdaten der Spieler wird die Audioszene zentral erzeugt. Diese wird danach an die jeweiligen Spieler gesendet. Die Hauptvorteile sind eine bessere Skalierbarkeit dadurch dass jeder Knoten auch mit beschränkter Bandbreite in der Lage ist teilzunehemen. Der Nachteil jedoch beim Einsatz eines Zentralen Servers ist dass für die Teilnehmer große Delays auftreten können wenn sie physikalisch weit vom Server entfernt sind. Zusätzlich limitierend ist die Kapazität des zentralen der für N eingehende Audioströme $O(N^2)$ ausgehende Ströme verschicken muss, falls kein Mischvorgang auf dem Server stattfindet.
-% BILD
-
-\subsection{Proxy}
-In einer Proxy Lösung existieren Server die weltweit verteilt sind und so immer eine geringe Entfernung zum Teilnehmer ermöglichen sollen. Diese empfangen die Audioströme der Clients, mischen diese ab und schicken sie zürck an die jeweiligen Spieler. 
-Die Proxys untereinader können ebenfalls Audioströme an weitere Proxys weiterleiten, falls diese benötigt werden. Im Gegensatz zur Peer-To-Peer Architektur können durch den Einsatz von dedizierten Proxys mit guter Anbindung Bandbreitenprobleme minimiert werden. Der Nachteil ist jedoch dass keine Korelation zur Position der Spieler in der Welt und den genutzten Proxys existiert, so dass nur Spieler die den gleichen Proxy benutzen und im Spiel ebenfalls Teil der gleichen Audioumgebung befinden von dieser Lösung profitieren können. 
-
-\subsection{Verteilte Server}
-In einer verteilten Server Lösung ist jeder zentrale Server nur für einen Teil der Spielewelt verantwortlich. So nutzen Spieler die sich in der gleichen virtuellen Umgebung den gleichen Server, der Ihre Audiodaten abmischt. Dieser Ansatz kann die auftretenden Kapazitätsprobleme einer zentralisierten Lösung zwar reduzieren, in dem die Last auf mehrere Server verteilt wird, bringt aber neue Probleme beim Übergang von einem Server zum anderen: Wenn Teilnehmer während dem Spiel die Spielzone wechseln und die Audioszene nun von einem anderen Server abgemischt werden soll. 
-
-\subsection{Hybrid}
-Im Ansatz einer Hybrid Architektur senden die Teilnehmer ihre Audioströme zwar an einen zentralisierten Server, können aber bei Bedarf ihre Audioströme direkt austauschen, wenn die indirekte Route über den Server zu zu hohen Verzögerungen führen würde. 
-
-Safei und Boustead führen in einer Vergleichenden Studien von Netzwerkarchitekturen speziell im Bereich der Sprachübertragung \cite{safei04} \cite{safei04b} den Begriff des Interaktiven Delays ein, und die Parameter der Korrelation zwischen der physischen und virtuellen Welt sowie der Dichte und Verteilung von Avataren ein. 
+Dabei führen auch neue Einfluss und Messgrößen ein, die speziell im Bereich der Sprachübertragung in Spielen relevant sind: Den Begriff des Interaktiven Delays, die Parameter der Korrelation zwischen der physischen und virtuellen Welt sowie der Dichte und Verteilung von Avataren. Diese wurden in den Studien simuliert um neue Aufschlüsse über ihren Einfluss auf die bestehenden Architekturen zu erhalten.
 
 \subsubsection{Interaktiver Delay}
 
@@ -37,23 +19,57 @@ Als interaktiver Delay wird der mittlere Delay zwischen der Audioquelle und alle
 	\frac{\sum ^{N}_{i=1} d(m,n_{i})} {\sum ^{N}_{i=1} n_{i}}
 \]
 
+Er ist ein gutes Maß für die Verzögerungen die im Mittel bei allen Teilnehmern auftreten. 
+
 \subsubsection{Korrelation}
 
-Die Korrelation zwischen der physischen und virtuellen Welt, zwischen 0 und 1, gibt an wie hoch die Wahrscheinlichkeit ist dass Spieler sowohl physikalisch als auch virtuell sich in der Nähe befinden. Eine Korrelation von 0 bedeutet dass die Avatare in der virtuellen Welt nicht mit der Lokation der Spieler in der physischen Welt korreliert ist. 
+Die Korrelation zwischen der physischen und virtuellen Welt, zwischen 0 und 1, gibt an wie hoch die Wahrscheinlichkeit ist dass Spieler sowohl physikalisch als auch virtuell sich in der Nähe befinden. Eine Korrelation von 0 bedeutet dass die Avatare in der virtuellen Welt nicht mit der Lokation der Spieler in der physischen Welt korreliert ist. Ist auf einem Server eine starke Korelation vorhanden, so können alle Spieler von einem niedrigen Delay ausgehen, da sich alle Spieler auch in Entfernung in der realen Welt befinden. 
 
 \subsubsection{Avatar-Dichte}
-Die Dichte der Avatare gibt an wie viele Avatare sich in der Hörnähe des Spielers befinden. 
+Die Dichte der Avatare gibt an wie viele Avatare sich in der Hörnähe des Spielers befinden. Hier gilt auch, dass verschiedene Architekturen unterschiedlich gut mit einer zunehmenden Avatardichte skalieren.  
 
 \subsubsection{Avatar-Verteilung}
-Die Verteilung der Avatare kann entweder uniform sein, bei der die Spieler zufällig gleichmäßig in der virtuellen Welt verteilt sind oder auch einzelne Ballungszentren besitzen. Dabei werden zufällig Ballungszentren verteilt und um diese mit hoher Dichte zum Ballungszentrum Avatare zufällig verteilt.
+Die Verteilung der Avatare kann entweder uniform sein, bei der die Spieler zufällig gleichmäßig in der virtuellen Welt verteilt sind oder auch einzelne Ballungszentren besitzen. Dabei werden zufällig Ballungszentren verteilt und um diese mit hoher Dichte zum Ballungszentrum Avatare zufällig verteilt. Die Avatarverteilung ist ein oft beobachtetes Phänomen, dass die Spielewelt an verschiedenen Hotspots eine hohe Avatardichte besitzt während diese an anderen Orten sehr gering sein kann.
 
-In Simulationen \cite{safei04} der oben genannten der Architekturen wurden der Einfluss der Parameter der Korrelation und Dichte auf das interaktive Delay und die Netzwerklast untersucht. Die Resultate der Simulation zeigten, das bei einem zentralisiertem Modell die Korrelation der Avatare keinen Einfluss auf den interaktiven Delay hatte. In einer verteilten Server Lösung war mit zunehmender Korelation eine Reduzierung des Delays erzielt worden. Die Peer-to-Peer Architektur dominierte alle anderen Lösungen mit dem geringsten Delay, der unabhängig von der Korrelation immer konstant klein verblieb. 
+\subsection{Peer-to-Peer}
+In einer Peer-to peer Architektur wird die Audioszene lokal erzeugt, nachdem man sämtliche Sprachquellen der der anderen Spieler erhalten hat. Der Hauptvorteil dieser Architektur liegt darin dass ein niedriger Delay auftritt, da im optimalen Fall die Verbindung immer über die kürzesten Wege zwischen den einzelnen Spielern etabliert wird. Zusätzlich nutzt man die freie Rechenleistung in den Knoten um das Abmischen der Audioszene vorzunehmen und man über eine Architektur verfügt, die keinen single Point of Failure besitzt.  Der Hauptnachteil ist dass die Bandbreite der einzelnen Knoten im Peer-to-Peer die Anzahl der möglichen Verbindungen limitiert.
 
-Die Zunehmende Dichte der Avatare bei zentralisierten Lösungen hatte keinen signifikanten Einfluss auf die Netzwerkalast. Bei Peer-to-Peer Architekturen stieg diese zwar zuerst exponentiell an, konvergierte jedoch schnell gegen einen Mittelwert, da nicht die Anzahl der Teilnehmer erhöht wurde sondern nur deren  Dichte. Die geringste Netzwerklast zeigte die verteilte Server Lösung wobei die Simulation die Dichte speziell in den entsprechenden Zonen erhöhte. 
+Die Peer-to-Peer Architektur dominierte alle anderen Lösungen mit dem geringsten interaktivem Delay, der unabhängig von der Korrelation und Avatardichte konstant klein verblieb. Bei der Netzwerklast führte jedoch eine Änderung der Avatardichte zunächst zum exponentiellen Anstieg, konvergierte jedoch schnell gegen einen Mittelwert, da nicht die Anzahl der Teilnehmer erhöht wurde sondern nur deren Dichte. Der Vorteil von Peer-to-Peer basierten Systemen beruht vor allem auf der Tatsache, dass einzig die Avatardichte Einfluss auf die Netzwerklast hat, jedoch nicht die Gesamtanzahl der Spieler, da jeder Client nur seinen Teil der Spielewelt verwaltet. 
+%BILD
+
+\subsection{Client-Server}
+In einer zentralisierten Lösung wird der Audiostrom von jedem der Teilnehmer an einen zentralen Server gesendet. Mithilfe der Positionsdaten der Spieler wird die Audioszene zentral abgemischt. Diese wird danach an die jeweiligen Spieler gesendet. Der Hauptvorteil besteht daraus, dass jeder Knoten auch mit beschränkter Bandbreite in der Lage ist an solchen Konferenzen teilzunehmen. Der Nachteil jedoch beim Einsatz eines zentralen Servers ist, dass für die Teilnehmer große Delays auftreten können wenn sie physikalisch weit vom Server entfernt sind. Zusätzlich limitierend ist die sich schnell erschöpfende Kapazität des zentralen Servers, der für N eingehende Audioströme $O(N^2)$ ausgehende Ströme verschicken muss, falls kein Mischvorgang auf dem Server stattfindet. 
+
+Die Resultate der Simulation zeigten, das bei einem zentralisiertem Modell weder die Korrelation der Avatare noch deren zunehmende Dichte einen Einfluss auf den interaktiven Delay hatte. Dieser hängt bei einem zentralisierten System stark vom dessen Standort und kann bei einem falsch positioniertem Server sehr schlecht ausfallen. Beide Parameter hatten auch keinen keinen Einfluss auf die Netzwerkalast auf dem Server, die einzig von der Gesammtspieleranzahl abhängt. Wie bereits besprochen bildet diese auch den kritischen Punkt eines solchen Systems. Deswegen wurden zwei alternative Systeme vorgestellt um die Last zu verteilen. 
+% BILD
+
+\subsubsection{Proxy}
+In einer Proxy Lösung existieren Server die weltweit verteilt sind und so immer eine geringe Entfernung zum Teilnehmer ermöglichen sollen. Diese empfangen die Audioströme der Clients, mischen diese ab und schicken sie an die jeweiligen Spieler zurück. 
+Proxys untereinander können ebenfalls Audioströme an weitere Proxys weiterleiten, falls diese benötigt werden. Im Gegensatz zur Peer-To-Peer Architektur können durch den Einsatz von dedizierten Proxys mit guter Anbindung Bandbreitenprobleme minimiert werden. Der Nachteil ist , dass man zunächst von keiner Korrelation der Spieler in der realen Welt und den genutzten Proxys ausgehen kann. So können nur Spieler, die den gleichen Proxy benutzen und sich im Spiel in der gleichen Audioumgebung befinden von dieser Lösung profitieren. 
+
+Die Zunahme Avatardiche hat keinen Einfluss auf den interkativen Delay, da nur Spieler die den  gleichen Proxy benutzen, davon profitieren. Je mehr Spieler sich in der Umgebung befinden die die andere Proxys benutzen, um so mehr Nachrichten müssen zwischen den Proxys untereinander weitergeleitet werden, was letztendlich zu einer Verschlechterung des interaktiven Delays führt.
+Bei einer Zunahme der Korrelation zwischen der realen Welt und der Spielewelt können Proxys ihren Vorteil ausspielen, da Spieler der gleichen Spielewelt auch kleinere Delays erhalten, da sie sich alle in räumlicher Nähe befinden. 
+Bei einer Zunahme der Gesammtanzahl Spieler helfen Proxys dem zentralisierten System, da mehrere Server die Anfragen bearbeiten können. Die Parameter der Korrelation und Dichte haben keinen Einfluss auf die Netzwerklast, die einzig durch die Gesamtanzahl der Spieler bestimmt wird. 
+
+\subsubsection{Verteilte Server}
+In einer verteilten Server Lösung ist jeder zentrale Server nur für einen Teil der Spielewelt verantwortlich. So nutzen Spieler die sich in der gleichen virtuellen Umgebung den gleichen Server, der Ihre Audioströme abmischt. Dieser Ansatz kann die auftretenden Kapazitätsprobleme einer zentralisierten Lösung zwar reduzieren, in dem die Last auf mehrere Server verteilt wird, bringt aber neue Probleme beim Übergang von einem Server zum anderen: Wenn Teilnehmer während dem Spiel die Spielzone wechseln und diese nun von einem anderen Server abgemischt werden soll. 
+In einer verteilten Server Lösung war mit zunehmender Korrelation eine Reduzierung des Delays erzielt worden. 
+
+Verteilte Server helfen zunächst die Netzwerklast auf mehrere Server zu verteilen. Diese hängt wie bei allen Serversysteme nur von der Gesamtspieleranzahl ab. Verteilte Server verhalten sich indifferent bei einer Zunahme der Avatardichte. Zwar werden dann Spieler der gleichen Spielregion auf dem gleichen Server gemischt, der interaktive Delay hängt davon ab wo der entsprechende Regionsserver positioniert ist. Von einer starken Korrelation der Spielerwelt und der realen Welt können verteilte Server nur dann profitieren, wenn die Spieler der Spielewelt sich auch in der Nähe des Servers befinden, was nicht garantiert ist. 
+
+\subsection{Hybrid}
+Im Ansatz einer Hybrid Architektur senden die Teilnehmer ihre Audioströme zwar an einen zentralisierten Server, können aber bei Bedarf ihre Audioströme direkt austauschen, wenn die indirekte Route über den Server zu zu hohen Delays führen würde. Der Hybride Ansatz würde zwar alle Vorteile von Peer-to-Peer Systemen mit zentralisierten Systemen kombinieren, ist allerdings nicht einfach umzusetzen, da nicht klar definiert ist, wann ein Teilnehmer zentral abgemischt werden soll und wann der Audiostrom direkt zwischen den Clients ausgetauscht wird.
 
 
 \section {SIP Konferenzen}
 Entsprechend der vorgestellten Architekturen gibt mehrere Möglichkeiten solche Konferenzen mit mehreren Teilnehmern in SIP zu realisieren. Diese werden in Entwürfen diskutiert, wobei die Konzepte des Mixing und Multicast die dominierenden sind \cite{rosenberg02}.  %TODO CHANGE
+
+Prinzipiell stellen sich 2 Fragen bei einer Umsetzung:
+\begin{itemize}
+	\item Wie finde ich die Teilnehmer in der Architektur?
+	\item Wo mische ich den Audiostrom für die Teilnehmer ab?
+\end{itemize}
+
 
 Der Einsatz eines komplett dezentralisierten SIP Netzwerkes auch P2PSIP genannt bei dem sowohl der Datenaustausch als auch der Austausch der Audioströme nur zwischen den einzelnen Peers stattfindet.
 Als zentralisierten Ansatz kann man ein SIP Netzwerk mit einer zentralen Komponente bezeichen die für den Austausch auch sämtlicher Daten Spieledaten und der einzelnen Audioströme verantwortlich ist. 
