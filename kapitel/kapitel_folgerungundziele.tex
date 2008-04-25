@@ -7,7 +7,12 @@ Aus den Studien der Kommunikation in Computerspielen ergeben sich Folgerungen un
 \subsection{Mehrkanal Modell}
 Da der Hauptaspekt der Arbeit die Herstellung einer Sprachkommunikation besteht, sollte diese auch anhand des Kommmunikationsmodell von Shannon und Weaver \cite{shannon48} modelliert werden. Wie in den vorgestellten Studien gezeigt wurde,
 basieren viele der der unten genannten Probleme auf der Verwendung von genau einem Kanal zur Sprachübertragung, der von mehreren Sendern und Empfängern gleichzeitig genutzt wird.  Ein Großteil der Störungen resultierte genau dieser Unzulänglichkeit des Übertragungskanals, der nicht vorgesehen war mehrere gleichzeitige Audioströme zu übertragen. Dies führte zu folgenden Hauptproblemen:
-%Bild des Problems
+
+\begin{figure[h]}
+	\centering
+		\includegraphics[width=1.00\textwidth]{grafiken/singlekanal-kommunikationsmodell.eps}
+	\label{fig:singlekanal-kommunikationsmodell}
+\end{figure}
 
 \begin{itemize}
 
@@ -23,6 +28,12 @@ rgeräusche und Latenzen waren Spieler nicht in der Lage erfolgreich miteinander 
 		\item Keine Kontrolle über Empfang der Nachrichten: Analog zum Adressierungsproblem waren Spieler genauso wenig in der Lage zu kontrollieren, welche Sprachnachrichten sie empfangen möchten. Oft führte dies dazu dass ein Großteil der Sprachkommunikation auf den Kanälen als Lärm empfunden wurde. 
 		
 \end{itemize}
+
+\begin{figure}[htbp]
+	\centering
+		\includegraphics[width=1.00\textwidth]{grafiken/multi-kommunikationsmodell.eps}
+	\label{fig:multi-kommunikationsmodell}
+\end{figure}
 
 Ersetzen wir einen Kanal durch mehrere parallele Kanäle so können wir viele der genannten Probleme lösen: Wird nun zwischen jedem Spielerpaar nur ein Kanal aufgebaut, können keine Störungen durch Interferenzen mehr auftreten und jeder Spieler ist in der Lage genau zu bestimmen an wen seine Nachricht gehen soll. Dazu müssen wir dazu in der Lage sein mehrere gleichzeitige 1:1 Gespräche zu führen ohne dass sich Teilnehmer gegenseitig bei ihren Übertragungen stören.  Auch der Feedback entsprechend dem Modell von Schramm \cite{schramm54} kann so gezielt erfolgen. 
 %BILD vom Mehrkanal System
