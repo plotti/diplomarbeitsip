@@ -119,6 +119,23 @@ Dabei haben wir drei verschiedene Präsenzstati definiert:
 
 Eine übliche Presence-Subscribe Verbindung findet folgendermaßen statt:
 %BILD Presence
+%   Watcher             Server                 PUA
+%      | F1 SUBSCRIBE      |                    |
+%      |------------------>|                    |
+%      | F2 200 OK         |                    |
+%      |<------------------|                    |
+%      | F3 NOTIFY         |                    |
+%      |<------------------|                    |
+%      | F4 200 OK         |                    |
+%      |------------------>|                    |
+%      |                   |                    |
+%      |                   |   Update presence  |
+%      |                   |<------------------ |
+%      |                   |                    |
+%      | F5 NOTIFY         |                    |
+%      |<------------------|                    |
+%      | F6 200 OK         |                    |
+%      |------------------>|                    |
 
 \subsection{Skalierbarkeit}
 Um das Konzept des Sharding umzusetzen, kann bei einem solcher Aufbau für jede Spielewelt ein zentralen Registrar eingesetzt werdem, der eine maximale Anzahl an Spielern erhält. Möchte man Clustering einsetzen, so ist vorstellbar, dass für eine Region der Spielwelt jeweils ein Registrar eingesetzt wird, an dem sich die Clients anmelden und Nachrichten der Spieler empfangen die am gleichen Registrar angemeldet sind. Um Interestmanagement umzusetzen, können beim Registrar Nachrichten gefiltert werden, oder Clients autonom entscheiden an welche Teilnehmer sie Nachrichten versenden möchten.

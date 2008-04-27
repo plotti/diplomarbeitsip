@@ -4,8 +4,8 @@ Version=2
 
 [SessionInfo]
 ActiveTab=0
-FrameCount=13
-ActiveFrame=4
+FrameCount=14
+ActiveFrame=11
 
 [Frame0]
 Columns=1
@@ -32,9 +32,9 @@ cxCur=820
 cxMin=10
 
 [Frame0_View0,0]
-Cursor.row=0
-Cursor.column=0
-TopSubLine=0
+Cursor.row=179
+Cursor.column=1
+TopSubLine=403
 
 [Frame1]
 Columns=1
@@ -119,15 +119,15 @@ cxCur=751
 cxMin=10
 
 [Frame3_View0,0]
-Cursor.row=13
-Cursor.column=26
-TopSubLine=15
+Cursor.row=79
+Cursor.column=0
+TopSubLine=145
 
 [Frame4]
 Columns=1
 Rows=1
-Flags=2
-ShowCmd=3
+Flags=0
+ShowCmd=1
 MinPos.x=-1
 MinPos.y=-1
 MaxPos.x=-4
@@ -140,17 +140,17 @@ Class=CLatexEdit
 Document=kapitel\kapitel_folgerungundziele.tex
 
 [Frame4_Row0]
-cyCur=554
+cyCur=346
 cyMin=10
 
 [Frame4_Col0]
-cxCur=936
+cxCur=751
 cxMin=10
 
 [Frame4_View0,0]
-Cursor.row=43
-Cursor.column=820
-TopSubLine=78
+Cursor.row=14
+Cursor.column=0
+TopSubLine=22
 
 [Frame5]
 Columns=1
@@ -177,9 +177,9 @@ cxCur=751
 cxMin=10
 
 [Frame5_View0,0]
-Cursor.row=0
+Cursor.row=91
 Cursor.column=0
-TopSubLine=0
+TopSubLine=217
 
 [Frame6]
 Columns=1
@@ -235,9 +235,9 @@ cxCur=751
 cxMin=10
 
 [Frame7_View0,0]
-Cursor.row=116
-Cursor.column=16
-TopSubLine=289
+Cursor.row=12
+Cursor.column=1367
+TopSubLine=58
 
 [Frame8]
 Columns=1
@@ -329,8 +329,8 @@ TopSubLine=0
 [Frame11]
 Columns=1
 Rows=1
-Flags=0
-ShowCmd=1
+Flags=2
+ShowCmd=3
 MinPos.x=-1
 MinPos.y=-1
 MaxPos.x=-4
@@ -343,17 +343,17 @@ Class=CLatexEdit
 Document=kapitel\kapitel_network.tex
 
 [Frame11_Row0]
-cyCur=346
+cyCur=554
 cyMin=10
 
 [Frame11_Col0]
-cxCur=796
+cxCur=936
 cxMin=10
 
 [Frame11_View0,0]
-Cursor.row=131
-Cursor.column=356
-TopSubLine=397
+Cursor.row=230
+Cursor.column=0
+TopSubLine=530
 
 [Frame12]
 Columns=1
@@ -383,4 +383,33 @@ cxMin=10
 Cursor.row=15
 Cursor.column=0
 TopSubLine=0
+
+[Frame13]
+Columns=1
+Rows=1
+Flags=0
+ShowCmd=1
+MinPos.x=-1
+MinPos.y=-1
+MaxPos.x=-4
+MaxPos.y=-30
+NormalPos.left=132
+NormalPos.top=174
+NormalPos.right=957
+NormalPos.bottom=575
+Class=CLatexEdit
+Document=Main.bbl
+
+[Frame13_Row0]
+cyCur=346
+cyMin=10
+
+[Frame13_Col0]
+cxCur=796
+cxMin=10
+
+[Frame13_View0,0]
+Cursor.row=127
+Cursor.column=0
+TopSubLine=119
 
