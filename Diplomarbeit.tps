@@ -148,9 +148,9 @@ cxCur=936
 cxMin=10
 
 [Frame4_View0,0]
-Cursor.row=29
-Cursor.column=13
-TopSubLine=30
+Cursor.row=43
+Cursor.column=820
+TopSubLine=78
 
 [Frame5]
 Columns=1
@@ -177,9 +177,9 @@ cxCur=751
 cxMin=10
 
 [Frame5_View0,0]
-Cursor.row=254
-Cursor.column=104
-TopSubLine=551
+Cursor.row=0
+Cursor.column=0
+TopSubLine=0
 
 [Frame6]
 Columns=1
@@ -353,7 +353,7 @@ cxMin=10
 [Frame11_View0,0]
 Cursor.row=131
 Cursor.column=356
-TopSubLine=415
+TopSubLine=397
 
 [Frame12]
 Columns=1

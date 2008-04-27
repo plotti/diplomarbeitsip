@@ -1,17 +1,17 @@
 \chapter{SIP als Netzwerkgrundlage in Spielen}
 
 \section{SIP als Netzwerkschicht}
-Wie schon im Kapitel 5 beobachtet, sind die Herausforderungen an die Verwaltung eines Spieles mit der darunter liegenden Netzwerkarchitektur verbunden. So haben wir uns in Kapitel 5 und 6 ausführlich mit dem der Evaluation, Entwurf und Umsetzugn eines verschiedener Architekturen und ihrer Tauglichkeit für die Sprachkommunikation auseinander gesetzt. 
+Wie schon im Kapitel 5 beobachtet, sind die Herausforderungen an die Verwaltung eines Spieles mit der darunter liegenden Netzwerkarchitektur verbunden. So haben wir uns in Kapitel 5 und 6 ausführlich mit dem der Evaluation, Entwurf und Umsetzung verschiedener Architekturen und ihrer Tauglichkeit für die Sprachkommunikation auseinander gesetzt und wollen zum Schluss zeigen wie SIP zusätzlich auch als Netzwerkschicht verwendet werden kann. 
 
-Da SIP ein generisches Protokoll ist, ist es prinzipiell nicht nur für die Sprachkommunikation einsetzbar sondern auch um Daten zwischen Clients auszutauschen. Dabei wollten wir prüfen welche der bestehenden Architekturen sich mit SIP umsetzen lassen. Experimentell haben wir eine einfache Client-Server Architektur implementiert, die aus dem Prototypen somit ein völlig auf dem SIP Protokoll basiertes Spiel macht. 
+Da SIP ein generisches Protokoll ist, ist es prinzipiell nicht nur für die Sprachkommunikation einsetzbar sondern auch um Daten zwischen Clients auszutauschen. Dabei wollten wir prüfen welche der bestehenden Architekturen sich mit SIP umsetzen lassen. Experimentell haben wir eine einfache Client-Server Architektur implementiert, die aus dem Prototypen somit ein völlig auf dem SIP Protokoll basiertes Spiel macht. Dabei wollen wir nicht bestehende Probleme der einzelnen Architekturen lösen indem wir das SIP Protokoll verwenden, sondern zeigen das SIP es uns ermöglicht bestehende Architekturen umzusetzen. Der resultierende Vorteil besteht vor allem in einer standardisierten Addressierung,  Signalisierung und hoher Abstraktionsebene.
 
 \section{Anforderungen an die Netzwerkschicht}
 
-Mehrspieler Spiele besitzen vielfältige Anforderungen an eine Netzwerkarchitektur:
+Mehrspieler Spiele besitzen vielfältige Anforderungen an eine Netzwerkarchitektur. Abhängig von der gewählten Architektur lassen sich einige der Anforderungen leichter umsetzen als andere.
 
 \textbf{Sicherheit:} Dadurch dass Spieler gegeneinander antreten, sollte Manipulation ausgeschlossen werden. Dazu benötigt man eine sichere Kommunikation zwischen den Spielern. 
 
-\textbf{Persistenz:} Dadurch dass der Inhalt des Spieles Spieler und Objekte enthalten kann die genau nur einmal existieren muss zwischen den einzelnen Sitzungen dafür gesorgt werden dass diese persistent gespeichert werden.
+\textbf{Persistenz:} Dadurch dass der Inhalt des Spieles Spieler und Objekte enthalten kann die genau nur einmal existieren, muss zwischen den einzelnen Sitzungen dafür gesorgt werden dass diese persistent gespeichert werden.
 
 \textbf{Zuverlässigkeit:} Durch einen zu häufigen Ausfall des Spielesystems, wird die Erfahrung des Spielens negativ beeinflusst. 
 
@@ -21,27 +21,110 @@ Mehrspieler Spiele besitzen vielfältige Anforderungen an eine Netzwerkarchitektu
 
 \textbf{Skalierbarkeit:} Eine skalierbare Architektur sollte sowohl eine große Anzahl an gleichzeitigen Benutzern, als auch einen starken Anstieg der Benutzer unterstützen, ohne dass die Last des Systems dramatisch ansteigt. 
 
-Dabei sind diese Aspekte unterschiedlich schwer zu realisieren in Abhängigkeit der gewählten Netzwerkarchitektur. Während Client- Server Basierte Systeme eine hohe Sicherheit, Persistenz und Konsistenz bieten ist ihre Zuverlässigkeit und Skalierbarkeit durch den einzelner zentralen Komponenten limitiert.
-Peer-to-Peer basierte Systeme dagegen bieten eine potenziell hohe Skalierbarkeit und Zuverlässigkeit sind aber Anfällig in ihrer Sicherheit, Persistenz und Performanz. 
+Während Client- Server Basierte Systeme eine hohe Sicherheit, Persistenz und Konsistenz bieten ist ihre Zuverlässigkeit und Skalierbarkeit durch den einzelner zentralen Komponenten limitiert.Peer-to-Peer basierte Systeme dagegen bieten eine hohe Skalierbarkeit und Zuverlässigkeit sind aber Anfällig in ihrer Sicherheit, Persistenz und Performanz. 
 
-In der Forschung werden beide Architekturen bezüglich der oben genannten Aspekte untersucht. So existieren vergleichende Studien \cite{lau06} bei denen Client-Server Systeme mit Peer-to-Peer Architekturen bezüglich ihrer Bandbreite, Last und des Delay in Simulationen verglichen wurden. Darüber hinaus wurden auch Inhalte des Netzwerkverkehrs in Spielen analysiert \cite{lau05b}, oder die geografische Verteilung von Spieleservern und Spielern untersucht \cite{feng03}. 
+In der Forschung werden beide Architekturen bezüglich der oben genannten Aspekte untersucht. So existieren vergleichende Studien \cite{lau06} bei denen Client-Server Systeme mit Peer-to-Peer Architekturen bezüglich ihrer Bandbreite, Last und des Delay in Simulationen verglichen wurden. Darüber hinaus wurden auch Inhalte des Netzwerkverkehrs in Spielen analysiert \cite{lau05b}, oder die Auswirkungen der geografische Verteilung von Spieleservern und Spielern untersucht \cite{feng03}. 
 
 
 \section{Client - Server in Netzwerkspielen}
-Die Client- Server-Architektur für Netzwerk Spiele war über Jahrzehnte die dominierende Architektur, die in der Lage war zwischen 2 und 64 Spieler gleichzeitig zu unterstützen \cite{singhal99}. Die Mehrheit kommerzieller Mehrspieler Spiele benutzt heutzutage eine zentralisierte Architektur und diese wird auch in Zukunft die üblichste Architektur für Spiele mit einer kleinen Spieleranzahl bleiben, ist aber nicht in der Lage mehrere tausend gleichzeitige Spieler zu unterstützen. 
-Obwohl einzelne Server dem System hinzugefügt werden können, steigt die Netzwerklast des Systems polynomiell mit der Zunahme von Spielern auf dem System.\cite{lau06}.  Aufgrund dieser Tatsache bilden zentralisierte Systeme immer den Flaschenhals einer Netzwerkkommunikation. Da zentralisierte Systeme nicht über mehrere zehtausend Spieler skalierbar sind, verfehlen sie ihr eigentliches Marktpotenzial \cite{thor03}. 
+Die Client- Server-Architektur für Netzwerk Spiele war über Jahrzehnte die dominierende Architektur, die in der Lage war zwischen 2 und 64 Spieler gleichzeitig zu unterstützen \cite{singhal99}. Die Mehrheit kommerzieller Mehrspieler Spiele benutzt heutzutage eine zentralisierte Architektur. Diese wird auch in Zukunft die üblichste Architektur für Spiele mit einer kleinen Spieleranzahl bleiben, ist aber nicht in der Lage mehrere tausend gleichzeitige Spieler zu unterstützen. 
 
-Um das Problem der unzureichenden Skalierbarkeit zu umgehen wird von vielen Entwicklern das so genannte "`Sharding"' eingesetzt \cite{brandt05}. Ein "`Shard"' ist eine komplette und unabhängige Instanz der Spielewelt. Die maximale Anzahl an Spielern einer solchen Welt ist limitiert.  Durch das Hinzufügen von Shards können Entwickler zwar mehr Spieler aufnehmen die aber in verschiedenen Spielewelten existieren und nicht miteinander interagieren können. \textit{World of Warcraft (Wow)} ist das größte MMOG derzeit, das mit über 10 Millionen Nutzern weltweit, und bis zu mehreren tausend Benutzern gleichzeitig betrieben wird. \cite{wow08} und auch Sharding einsetzt.
+Obwohl einzelne Server dem System hinzugefügt werden können, steigt die Netzwerklast des Systems polynomiell mit der Zunahme von Spielern auf dem System \cite{lau06}.  Aufgrund dieser Tatsache bilden zentralisierte Server immer den Flaschenhals einer Netzwerkkommunikation. Da die Tendenz zum Spiel als Kommunikationsplattform (Massive Multiplayer Onlinge Game Abk. MMOG), bei der bis zu 10 Millionen Spieler in Spielergruppen miteinander spielen und kommunizieren \citep{wow2.2} geht und zentralisierte Systeme nicht über mehrere zehtausend Spieler skalierbar sind, verfehlen sie laut Marktanalysten ihr eigentliches Marktpotenzial \cite{thor03}. 
 
-Eine zusätzliche Möglichkeit besteht daraus Cluster von Computern einzusetzen die als gemeinsame Client- Server-Platform nach außen auftreten. Solche Systeme werden als Federated Client-Server Systeme bezeichnet. Diese Methode wird erfolgreich von Spielen wie EVE Online eingesetzt, die den Rekord für die größte Anzahl an gleichzeitigen Spielern auf einem "`Shard"' mit 23000 hält \cite{brandt05}. Dabei ist jeder Computer in diesem Cluster ist für eine andere Portion der virtuellen Welt verantwortlich. Durch Load Balancing werden Spieler zwischen Computern im Cluster transferiert um die maximale Bandbreite und Last einer Maschine nicht zu überschreiten. Studien von Lau in denen das Client-Server Federating Simuliert wurde, zeigten jedoch, dass auch diese Technologie ihre Grenzen hat \cite{lau06}.
+\subsection{Techniken zur Skalierung}
 
-Um eine konsistente Spielewelt zu erzeugen die performant und skalierbar ist wird in das Interest Management eingesetzt \cite{morse96}. Unter Interest Management versteht man dass Individuen nur eine begrenzten Wahrnehmungsradius besitzen und nur an Dingen interessiert sind die in einer limitierten lokalen Umgebung geschehen, welche als Area of Interest bezeichnet wird. Eine übliche Technik im Interest Management besteht daraus die Spielewelt in Regionen aufzuteilen, wobei der Spieler immer nur Mitglied einer Region ist und auch nur Nachrichten dieser Region erhält. Interest Management ist in einer Client-Server Architektur sehr einfach, da der Server durch das Filtern von Nachrichten einfach, gestaltet sich jedoch in einem P2P System durchaus komplex \cite{yu05}.
+\subsubsection{Sharding}
+Um das Problem der unzureichenden Skalierbarkeit zu umgehen wird von vielen Entwicklern das so genannte "`Sharding"' eingesetzt \cite{brandt05}. Ein "`Shard"' ist eine komplette und unabhängige Instanz der Spielewelt. Die maximale Anzahl an Spielern einer solchen Welt ist limitiert.  Durch das Hinzufügen von Shards können Entwickler zwar mehr Spieler aufnehmen, die aber in verschiedenen Spielewelten existieren und nicht miteinander interagieren können. Das derzeit größte MMOG \textit{World of Warcraft (WoW)} \cite{wow08} weltweit setzt erfolgreich Sharding ein um Spieler in mehreren gleichzeitig existierenden Spielewelten zu verwalten.
 
-\subsection{SIP im Client Server Modus}
-\subsection{Registrar als Server}
-\subsection{Clients}
-\subsection{SIP Message Marshalling}
+\subsubsection{Clustering}
+Eine zusätzliche Möglichkeit besteht daraus Cluster von Computern einzusetzen die als gemeinsame Client- Server-Platform nach außen auftreten. Solche Systeme werden als Federated Client-Server Systeme bezeichnet. Diese Methode wird erfolgreich von Spielen wie EVE Online eingesetzt, die den Rekord für die größte Anzahl an gleichzeitigen Spielern auf einem Cluster mit 23000 Spielern hält \cite{brandt05}. Dabei ist jeder Computer in diesem Cluster ist für eine andere Portion der virtuellen Welt verantwortlich. Durch Load Balancing werden Spieler zwischen Computern im Cluster transferiert um die maximale Bandbreite und Last einer Maschine nicht zu überschreiten. Studien von Lau in denen das Client-Server Federating Simuliert wurde, zeigten jedoch, dass auch diese Technologie ihre Grenzen hat \cite{lau06}.
 
+\subsubsection{Interest Management}
+Um eine konsistente Spielewelt zu erzeugen, die performant und skalierbar ist wird in das Interest Management eingesetzt \cite{morse96}. Unter Interest Management versteht man, dass Individuen nur eine begrenzten Wahrnehmungsradius besitzen und nur an Dingen interessiert sind die in einer limitierten lokalen Umgebung geschehen, welche auch als Area of Interest bezeichnet wird. 
+
+Eine übliche Technik im Interest Management besteht daraus die Spielewelt in Regionen aufzuteilen, wobei der Spieler immer nur Mitglied einer Region ist und auch nur Nachrichten dieser Region erhält. Interest Management ist in einer Client-Server Architektur sehr einfach umsetzbar, da der Server alle eingehenden Nachrichten vor dem weiterleiten filtern kann, was jedoch in einem P2P System nicht ohne weiteres möglich ist, da keine solche zentrale Komponente existiert \cite{yu05}.
+
+\section{SIP im Client-Server Modus}
+In der Implementierung einer SIP Netzwerkarchitektur wurde versucht bereits bestehende Komponenten einzusetzen. Proxy und Registrar sind hier als eine Einheit zu verstehen, die SIP Server genannt wird. Der SIP Server wurde dazu eingesetzt um die Registrierung der Benutzer vorzunehmen und alle Nachrichten zu empfangen und weiterzuleiten an die entsprechenden Teilnehmer weiterzuleiten. 
+
+%Abbildung die den Nachrichtenfluss zeigt. 
+%Registrierung am Registrar
+%Nachrichtenfluss mittels MESSAGE so eine Art Knotennetz oder sowas.
+
+Hat sich ein Spieler erfolgreich auf dem Registrar angemeldet, werden alle Nachrichten an diesen Benutzer auf dem SIP Server aufgelöst und an den Client weitergeleitet. Dabei ist es prinzipiell sogar möglich ohne die Hilfe eines Registrars miteinander zu kommunizieren, falls die Spieler die gegenseitigen Adressen bereits kennen. 
+
+Da die Entwicklung einer Spiellogik viele Aspekte unter anderem auch der Synchronisation, Konsitenz und Fairness enthält, die über den Rahmen der Arbeit hinausgehen, haben wir uns darauf konzentriert, zu zeigen wie das SIP Protokoll als Netzwerkschicht dazu genutzt werden kann Spielezustände auszutauschen. 
+
+Dies wurde im Spiel auf den Clients so umgesetzt, dass jeder Teilnehmer in der Lage ist sich in einer 3D Umgebung zu bewegen, und mit den Gegenständen und Spielern eines Spieles zu kollidieren. Dabei informiert er alle anderen Spieler über seine Ereignisse.
+
+\subsection{SIP SIMPLE Protokoll}
+
+%                 A Framework for Conferencing with the
+%                  Session Initiation Protocol (SIP)
+% http://www.ietf.org/rfc/rfc4353.txt
+
+Die Entscheidung das SIMPLE Protokoll als Untergruppe des SIP Protokolls zu benutzen ergibt sich aus den gleichen Gründen wie das SIP Protokoll. Es handelt sich um ein offenes, weit verbreitetes Protokoll für das viele open-source Implementierungen existieren. Auch der MSN Messenger, eines der am weitesten verbreiteten Instant Messenging Applikationen weltweit, beruht auf der Grundlage des SIP und SIMPLE Protokolls. 
+
+\subsubsection{Nachrichtendienst}
+Die SIP Clients nutzen das in Kapitel 3 vorgestellte SIP SIMPLE Protokoll um miteinander zu kommunizieren. Der Datenaustausch zwischen den Clients findet mit Hilfe des SIP MESSAGE Nachrichtentyps statt. 
+
+Obwohl das SIP SIMPLE Protokoll ursprünglich vorgesehen wurde um Instant Messenging im SIP Standard analog zu vorhandenen Standards wie ICQ, Jabber zu ermöglichen, nutzen wir den es um Spieledaten auszutauschen. So enthalten Nachrichten außer Empfänger und Versender in ihrem Payload Teil Koordinaten der Spieler oder deren Status. 
+
+Die Benutzung dieses Standards für unsere Zwecke ist deshalb möglich weil es sich auch hier um ein generisches Protokoll handelt, das für verschiedene Zwecke genutzt werden kann und sich somit auch für Datenkommunikation in Spielen nutzen lässt. 
+
+Exemplarisch haben wir mehrere Nachrichtentypen generiert:
+\begin{itemize}
+	\item Position: Die Positionsnachricht enthält die aktuelle Position des Spielers im Spiel. Ihr Aufbau besteht aus der X, Y und Z Koordinate, denen die Buchstabenfloge COORD vorrausgeht.
+	\item Status: 
+\end{itemize}
+
+Eine übliche Transaktion sieht folgendermaßen aus:
+
+%           |  F1 MESSAGE          |                         |
+%           |--------------------> |  F2 MESSAGE             |
+%           |                      | ----------------------->|
+%           |                      |                         |
+%           |                      |  F3 200 OK              |
+%           |                      | <-----------------------|
+%           |  F4 200 OK           |                         |
+%           |<-------------------- |                         |
+%           |                      |                         |
+%           |                      |                         |
+%           |                      |                         |
+%        User 1                  Proxy                    User 2
+
+Die Grafik zeigt eine Nachricht die von Teilnehmer A and Teilnehmer B geschickt wurde, wobei beide Teilnehmer Teil der gleichen Domäne sind, und den gleichen Proxy benutzen. 
+Der Grundlegende Unterschied zum SIP Protokoll besteht darauf dass es hier kein separater Medienstrom existiert. Die Textnachrichten werden in einem SIP Paket über die Knoten übertragen die den Signalisierungspfad bilden. Dies erfordert eine größeres Bedürfniss nach Sicherheit als bei anderen SIP Anfragen da der der Benutzer allen dem Proxy vertrauen muss. Unverschlüsselte Nachrichten liegen diesem offen und auch eventuelles Forking ohne Wissen des Benutzers ist hier möglich. 
+
+
+
+\subsubsection{Buddy Konzept}
+Spieler wählen einen Benutzernamen, der auch ihrer SIP Adresse entspricht. In einer Freundesliste halten sie Adressen alle Benutzer des Spieles vor, die auch Buddy Liste genannt wird. Mittels dieser Liste und des vorgestellten Präsenzdienstes sind Spieler in der Lage festzustellen welche Spieler Teil des Spiels sind. 
+
+\subsubsection {Präsenzdienst}
+Präsenz ist eine Begriff der im Instant Messenging verwendet wird und sich darauf bezieht ob Benutzer in der Lage sind festzustellen ob andere Benutzer verbunden sind, um dann benachrichtigt zu werden falls diese das online oder offline gehen. Zum Beispiel kann ein Benutzer eine Liste von Personen besizten mit denen er kommunizieren möchte. Solche benutzer werden "`Freunde"' oder englisch Buddies genannt. Der Präsenzdient erlaubt es einem Benutzer zu sehen ob ein Freund online gegangen ist, indem dieser zum Beispiel in der Liste farblich hervorgehoben wird. 
+
+Generell dient der Proxy nur als Nachrichtenverteiler, dh. dass er selbst keinerlei Spielelogik enthält, sondern stattdessen alle Spieler dafür selbst verantwortlich sind anwesende Mitspieler mit allen relevanten Informationen über sich zu versorgen. Umgekehrt erwarten Teilnehmer, dass alle anderen Spieler sich genauso verhalten und sie mit ihren Informationen versorgen.
+
+Durch dieses Vorgehen existiert kein spezieller Spieler, der das Spiel veranstaltet und steuert. So ist es möglich dass jederzeit Spieler das Spiel verlassen und betreten ohne  dass das aktuelle Spiel unterbrochen wird. 
+
+Dazu müssen alle Teilnehmer in der Lage sein zu wissen welche andern Teilnehmer am aktuellen Spiel teilnehmen. Zu diesem Zweck wird der SUBSCRIBE/NOTIFY Mechanismus von SIP benutzt. Mittels des SIMPLE PRESENCE Dienstes, der auf diesem Mechanismus aufbaut sind Teilnehmer in der Lage die eigene Präsenz zu signalisieren und Präsenzen anderer Teilnehmer zu abonnieren. Anhand der Präsenzinformation werden Nachrichten nur an Spieler versendet die eine Teilnahme am Spiel signalisieren. 
+
+Dabei haben wir drei verschiedene Präsenzstati definiert:
+\begin{itemize}
+	\item Offline - Der Spieler ist nicht an einem Registrar angemeldet und kann auch nicht kontaktiert werden. 
+	\item Online - Der Spieler hat sich an einem Registrar angemeldet, nimmt aber momentan nicht am Spiel teil.
+	\item Im Spiel - Der Spieler hat sich am Registrar angemeldet und nimmt gerade am Spiel teil.
+\end{itemize}
+
+Eine übliche Presence-Subscribe Verbindung findet folgendermaßen statt:
+%BILD Presence
+
+\subsection{Skalierbarkeit}
+Um das Konzept des Sharding umzusetzen, kann bei einem solcher Aufbau für jede Spielewelt ein zentralen Registrar eingesetzt werdem, der eine maximale Anzahl an Spielern erhält. Möchte man Clustering einsetzen, so ist vorstellbar, dass für eine Region der Spielwelt jeweils ein Registrar eingesetzt wird, an dem sich die Clients anmelden und Nachrichten der Spieler empfangen die am gleichen Registrar angemeldet sind. Um Interestmanagement umzusetzen, können beim Registrar Nachrichten gefiltert werden, oder Clients autonom entscheiden an welche Teilnehmer sie Nachrichten versenden möchten.
+
+\subsection{Tauglichkeit als Peer-to-Peer Ansatz}
+Der von uns implementierte Ansatz braucht einzig die zentrale Komponente des Registrars, der für die Lokation der Teilnehmer verantwortlich ist. Wie wir später zeigen lässt sich diese SIP Komponente verteilt realisieren, was es uns ermöglichen könnte SIP als eine Netzwerkgrundlage für Peer-to-Peer Spiele zu nutzen.
 
 \section{Peer-to-Peer}
 In den letzten Jahren sind Peer-to-Peer Netzwerke ein wichtiger Gegenstand der Forschung geworden \cite{lua05}. Ihr größter Vorteil gegenüber zentralisierten Architekturen ist ihre Skalierbarkeit. Jeder Knoten der dem System beitritt und Anfragen stellt, muss dem System gegenüber auch Ressourcen freigeben und Anfragen anderer Knoten bearbeiten. Knoten die mehr Dienste zur Verfügung stellen werden als SuperPeers oder Koordinatoren bezeichnet. Dabei wird eine Gruppe von Knoten als Overlay bezeichnet und die konstante Veränderung der Teilnehmer als Churn. Es existieren P2P Systeme die bis zu mehreren Millionen an gleichzeitigen Benutzern skalieren \cite{stutzbach05}. 
@@ -98,10 +181,10 @@ Hybride P2P Systeme benutzen einen zentralisierten Server um einen bestimmten Kn
 
 \section{Peer-to-Peer SIP}
 \subsection{Motivation für Peer-to-Peer SIP}
-Da SIP bereits als Standard etabliert ist hat auf dem Technologien Aufsetzen können und viele Eigenschaften besitzt die es Attraktiv für einen reinen Peer-to-Peer Betrieb attraktiv machen, bestehen seit dem Jahr 2005 Bemühungen das Hybride SIP Protokoll komplett zu einem reinen Peer-to-Peer Protokoll zu erweitern. Dabei ist das Interesse sehr hoch, da Mittlerweile bereits über zwei dutzend Entwürfe zur Realisierung eines Standards bei der IETF eingegangen sind \cite{bryan07}. Der große Vorteil gegenüber anderen Systemen ist die Kombination von bereits etablierten Standards wie dem SIP und SIMPLE Protokoll \cite{rosenberg02} für Voice Over IP und Instant Messaging mit Eigenschaften von Distributed Hash Tables. Dadurch dass disher in P2P Systemen noch keine Standards existieren bietet sich die Verwendung von SIP, das als ausgereift und etabliert gilt für diese Verwendung an. Zusätzlich sind viele Endgeräte wie Firewalls und Router bereits in der Lage SIP Netzwerkverkehr zu erkennen und zu unterstützen. 
+Da SIP bereits als Standard etabliert ist hat auf dem Technologien Aufsetzen können und viele Eigenschaften besitzt die es Attraktiv für einen reinen Peer-to-Peer Betrieb attraktiv machen, bestehen seit dem Jahr 2005 Bemühungen das Hybride SIP Protokoll komplett zu einem reinen Peer-to-Peer Protokoll zu erweitern. Dabei ist das Interesse sehr hoch, da Mittlerweile bereits über dutzende Entwürfe zur Realisierung eines Standards bei der IETF eingegangen sind \cite{bryan07}. Der große Vorteil gegenüber anderen Systemen ist die Kombination von bereits etablierten Standards wie dem SIP und SIMPLE Protokoll \cite{rosenberg02} für Voice Over IP und Instant Messaging mit Eigenschaften von Distributed Hash Tables. Dadurch, dass bisher in P2P Systemen noch keine Standards existieren bietet sich die Verwendung von SIP, das als ausgereift und etabliert gilt, für diesen Zweck an. Zusätzlich sind viele Endgeräte wie Firewalls und Router bereits in der Lage SIP Netzwerkverkehr zu erkennen und zu unterstützen. 
 
 SIP ist konventionell so gestaltet, dass so viel Funktionalität wie möglich in den Endpunkten enthalten ist. So werden alle Nachrichten die für den Aufbau eines Telefongesprächs, oder dem Austausch von Nachrichten notwendig sind bereits nur zwischen nur zwischen den Endpunkten ausgetauscht. Das Verhandeln des Mediacodecs und der Fähigkeiten der einzelnen User Agents findet ebenfalls direkt zwischen den Endpunkten statt. Ist ein Telefongespräch etabliert, so fließen die Daten zwischen direkt zwischen den Teilnehmern, zwei UA können auch so konfiguriert werden, dass sie direkt miteinander völlig ohne Server kommunizieren.
-Der einzige zentralisierte Baustein in SIP besteht aus der Lokation der Ressourcen, Registrar genannt. In einer gewöhnlichen SIP Konfiguration meldet sich jeder Endpunkt bei einem Registrar an der eine Zuordnung zwischen dem Namen des Teilnehmers und seiner IP Adresse herstellt. Möchte nun ein Benutzer einen anderen Anrufen so kontaktiert er zunächst den SIP Proxy um die Zieladresse herauszufinden. Dabei sind gewöhnlich Proxy und Registrar als eine Einheit vorhanden, die auch SIP Server genannt wird. 
+Der einzige zentralisierte Baustein in SIP besteht aus der Lokation der Ressourcen, beim Registrar. In einer gewöhnlichen SIP Konfiguration meldet sich jeder Endpunkt bei einem Registrar an, der eine Zuordnung zwischen dem Namen des Teilnehmers und seiner IP Adresse herstellt. Möchte nun ein Benutzer einen anderen anrufen, so kontaktiert er zunächst den SIP Proxy um die Zieladresse herauszufinden.
 
 \subsection{Funktionsweise}
 Als Peer-to-Peer SIP kann verstanden werden, dass die einzige zentrale Komponente des Systems entfernt wird und dezentral zwischen den einzelnen Teilnehmern verteilt realisiert wird. Dazu müssten die einzelnen Knoten die Funktion des Registrars übernehmen. Dabei fungiert jedes Telefon als ein Knoten im Overlay. Dem Telefon wir eine PeerID zugewiesen, die ein eindeutiger Hash aus seiner IP Adresse sein kann. Der Name des Benutzers des Telefons wird ebenfalls als ein eindeutiger Hash in der ResourceID gespeichert. Dabei ist jeder Knoten für die Speicherung eines Teils der gesammten Information zuständig. 
