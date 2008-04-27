@@ -90,6 +90,31 @@ Prinzipiell stellen sich 2 Fragen bei einer Umsetzung:
 	\item Wo findet das Abmischen des Audiostroms statt?
 \end{itemize}
 
+Auch interessant:
+http://www.ietf.org/internet-drafts/draft-ietf-simple-simple-02.txt
+
+
+KOMPONENTEN:
+
+   Mixer: A mixer receives a set of media streams of the same type, and
+      combines their media in a type-specific manner, redistributing the
+      result to each participant.  This includes media transported using
+      RTP [2].  As a result, the term defined here is a superset of the
+      mixer concept defined in RFC 3550, since it allows for non-RTP-
+      based media such as instant messaging sessions [5].
+      
+
+   Conference Server: A conference server is a physical server that
+      contains, at a minimum, the focus.  It may also include a
+      conference policy server and mixers.
+      
+
+   Participant: The software element that connects a user or automata to
+      a conference.  It implements, at a minimum, a SIP user agent, but
+      may also implement non-SIP-specific mechanisms for additional
+      functionality.
+      
+                  
 Diese zwei Aspekte können nicht getrennt voneinander betrachtet werden, da immer die Wahl einer Architektur Einfluss auf beide Probleme hat. In einer Peer-to-Peer basierten Architektur ist es z.B. zunächst keine triviale Aufgabe eine Spielewelt konsistent zu verwalten, da jeder Peer nur über einen Teil der Spielewelt verfügt und keine zentralisierte Instanz existiert, die über alle Positionen aller Spieler verfügt. So müssen für Konferenzen nicht nur die Frage beantwortet werden wo der Audiostrom abgemischt wird sondern, wie die Teilnehmer informiert werden dass sie Teil einer Konferenz sind. Genauso ergeht es dem zentralisiertem System in dem die Verwaltung der Spielewelt zwar durch eine zentrale  Instanz einfach ist, aber eine Verteilung des Audiostroms wie oben gezeigt, problematisch ist.
 
 Bei Einer Umsetzung mit SIP stehen uns folgende vier Kombinationen zur Verfügung: 
@@ -115,7 +140,14 @@ Großangelegte Multicast Konferenzen waren die ursprüngliche Motivation für die E
 Multicast Konferenzen können gut in Netzwerken funktionieren die sie unterstützen. Sie haben den Vorteil dass sie keine Koordination zwischen den Endsystemen benötigen. Konferenzteilnehmer können unabhängig eine Konferenz beitreten und sie verlassen. 
 
 Der Hauptnachteil von Multicast Konferenzen ist jedoch dass jeder Router die Identitäten der Gruppe speichern muss. Außerdem kann jeder ohne Authentifizierung einer Multicast Gruppe beitreten. So verlieren die Teilnehmer die Kontrolle darüber wer an Konferenzen teilnehmen kann und sind auch nicht in der Lage sein zu wissen wer ihnen gerade zuhört. Ist bereits ein System falsch konfiguriert so könnte es allen existierenden Multicast Gruppen abonnieren und so das Netz fluten. Zusätzlich oder auch gerade auch wegen dieser Probleme wird Multicast in wenigen Internet Hauptleitungen unterstützt. So können Multicast Konferenzen zwar in LANs nützlich sein, sind jedoch im kommerziellen Internet nicht umsetzbar.
- 
+
+ In the loosely coupled model, there is no signaling
+   relationship between participants in the conference.  There is no
+   central point of control or conference server.  Participation is
+   gradually learned through control information that is passed as part
+   of the conference (using the Real Time Control Protocol (RTCP) [2],
+   for example).  Loosely coupled conferences are easily supported in
+   SIP by using multicast addresses within its session descriptions. 
 
 \subsubsection{P2P SIP}
 Bei einem völlig dezentralisierten P2P SIP mittels DHT würden sowohl die Spiele Daten als auch die Sprachlkommunikation nur zwischen den einzelnen Clients ausgetauscht werden. Wie in Kapitel 3 vorgestellt, würde die zentrale Komponente des Registrars durch einen DHT ersetzt werden, der die Daten auf den einzelnen Clients verteilt. Dieser Ansatz ist bisher nur theoretisch möglich, da keine geingnete SIP Implementierung exisitert die einen verteilten Registrar umsetzt. Zudem ist das Problem einer verteilten Spielkontrolle nicht trivial, da kein Teilnehmer über komplette Informationen über die Spielewelt verfügt. Wir werden dieses Problem nocheinmal später ausführlich im Kapitel 8 behandeln.

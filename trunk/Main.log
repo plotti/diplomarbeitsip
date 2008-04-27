@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592-1.40.4 (MiKTeX 2.7 Beta 5) (preloaded format=latex 2008.3.16)  25 APR 2008 18:40
+This is pdfTeX, Version 3.141592-1.40.4 (MiKTeX 2.7 Beta 5) (preloaded format=latex 2008.3.16)  27 APR 2008 11:08
 entering extended mode
 **Main.tex
 (Main.tex
@@ -460,13 +460,13 @@ lit[]at, ho-he St[]o rger[]ausche
 
 File: grafiken/multi-kommunikationsmodell.eps Graphic file (type eps)
 <grafiken/multi-kommunikationsmodell.eps> [24]
-Overfull \hbox (4.7819pt too wide) in paragraph at lines 47--48
+Overfull \hbox (4.7819pt too wide) in paragraph at lines 48--49
 \OT1/cmr/m/n/12 aber gleich-zei-tig ei-ne in-ter-per-so-nel-le Kom-mu-ni-ka-ti-
 on auf die-sem Ka-nal aus-schliet. 
  []
 
 [25]
-Overfull \hbox (34.53563pt too wide) in paragraph at lines 61--64
+Overfull \hbox (34.53563pt too wide) in paragraph at lines 62--65
 []\OT1/cmr/m/n/12 Angelehnt an die Stu-di-en von Gibs, soll es Ziel des Pro-to-
 typs sein, die Sprach[]ubertragung
  []
@@ -2266,10 +2266,10 @@ LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 Here is how much of TeX's memory you used:
  3490 strings out of 95351
  46629 string characters out of 1184568
- 128151 words of memory out of 1500000
+ 128164 words of memory out of 1500000
  6535 multiletter control sequences out of 110000
  9089 words of font info for 33 fonts, out of 1200000 for 2000
  14 hyphenation exceptions out of 8191
  36i,10n,37p,1768b,500s stack positions out of 5000i,500n,10000p,200000b,5000s
 
-Output written on Main.dvi (105 pages, 396556 bytes).
+Output written on Main.dvi (105 pages, 396680 bytes).
