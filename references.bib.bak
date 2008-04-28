@@ -1,52 +1,6 @@
 % This file was created with JabRef 2.3.1.
 % Encoding: Cp1252
 
-@INPROCEEDINGS{Gibbs04a,
-  author = {Martin R. Gibbs and Kevin Hew and Greg Wadley},
-  title = {Social Translucence of the Xbox Live Voice Channel.},
-  booktitle = {ICEC},
-  year = {2004},
-  editor = {Matthias Rauterberg},
-  volume = {3166},
-  series = {Lecture Notes in Computer Science},
-  pages = {377-385},
-  publisher = {Springer},
-  __markedentry = {[plotti]},
-  biburl = {http://www.bibsonomy.org/bibtex/222c40a9d2f7087c3d49027c5aac837ff/dblp},
-  crossref = {conf/iwec/2004},
-  date = {2004-08-27},
-  description = {dblp},
-  ee = {http://springerlink.metapress.com/openurl.asp?genre=article&issn=0302-9743&volume=3166&spage=377},
-  isbn = {3-540-22947-7},
-  keywords = {dblp },
-  pdf = {J:\Diplomarbeit Dokumente\Papers\ICEC04_Gibbs_Social_Trans_Xbox.pdf},
-  url = {http://dblp.uni-trier.de/db/conf/iwec/icec2004.html#GibbsHW04}
-}
-
-@ARTICLE{Keller03,
-  author = {Joaqu\'{\i}n Keller and Gwendal Simon},
-  title = {Solipsis: A Massively Multi-Participant Virtual World},
-  year = {2003},
-  pages = {262-268},
-  bibsource = {DBLP, http://dblp.uni-trier.de},
-  booktitle = {PDPTA},
-  crossref = {DBLP:conf/pdpta/2003-1}
-}
-
-@ARTICLE{manninen03,
-  author = {Tony Manninen and Tomi Kujanp‰‰},
-  title = {Supporting visual elements of non-verbal communication in computer
-	game avatars.},
-  year = {2003},
-  booktitle = {DIGRA Conf.},
-  crossref = {conf/digra/2003},
-  date = {2005-11-28},
-  description = {dblp},
-  ee = {http://www.digra.org/dl/display_html?chid=http://www.digra.org/dl/db/05163.24426},
-  keywords = {dblp },
-  url = {http://dblp.uni-trier.de/db/conf/digra/digra2003.html#KujanpaaM03}
-}
-
 @ARTICLE{aarseth_multi-dimensional_2003,
   author = {Aarseth, Espen and Smedstad, Solveig M. and Sunnan{\~o}, Lise},
   title = {A Multi-Dimensional Typology of Games},
@@ -105,6 +59,15 @@
   doi = {http://dx.doi.org/10.1109/93.482298},
   issn = {1070-986X},
   publisher = {IEEE Computer Society Press}
+}
+
+@ARTICLE{mgcp99,
+  author = {M. Arango and A. Dugan and I. Elliott and C. Huitema and S. Pickett},
+  title = {Media Gateway Control Protocol (MGCP)},
+  journal = {http://www.ietf.org/rfc/rfc2705.txt},
+  year = {1999},
+  owner = {plotkowi},
+  timestamp = {2008.04.28}
 }
 
 @ARTICLE{krause07,
@@ -368,6 +331,16 @@
   year = {2007}
 }
 
+@ARTICLE{megaco00,
+  author = {F. Cuervo and N. Greene and A. Rayhan and  C. Huitema and B. Rosen
+	and   J. Segers},
+  title = {Megaco Protocol},
+  journal = {http://www.ietf.org/rfc/rfc3015.txt},
+  year = {2000},
+  owner = {plotkowi},
+  timestamp = {2008.04.28}
+}
+
 @ARTICLE{diot99,
   author = {C. Diot and L. Gautier},
   title = {A distributed architecture for multiplayer interactive applications
@@ -528,6 +501,27 @@
   pdf = {J:\Diplomarbeit Dokumente\Papers\Towards a framework for designing speech-based player interaction in multiplayer online games.pdf}
 }
 
+@INPROCEEDINGS{Gibbs04a,
+  author = {Martin R. Gibbs and Kevin Hew and Greg Wadley},
+  title = {Social Translucence of the Xbox Live Voice Channel.},
+  booktitle = {ICEC},
+  year = {2004},
+  editor = {Matthias Rauterberg},
+  volume = {3166},
+  series = {Lecture Notes in Computer Science},
+  pages = {377-385},
+  publisher = {Springer},
+  __markedentry = {[plotti]},
+  biburl = {http://www.bibsonomy.org/bibtex/222c40a9d2f7087c3d49027c5aac837ff/dblp},
+  date = {2004-08-27},
+  description = {dblp},
+  ee = {http://springerlink.metapress.com/openurl.asp?genre=article&issn=0302-9743&volume=3166&spage=377},
+  isbn = {3-540-22947-7},
+  keywords = {dblp },
+  pdf = {J:\Diplomarbeit Dokumente\Papers\ICEC04_Gibbs_Social_Trans_Xbox.pdf},
+  url = {http://dblp.uni-trier.de/db/conf/iwec/icec2004.html#GibbsHW04}
+}
+
 @ARTICLE{gu05,
   author = {Xiaohui Gu and Zhen Wen and Philip S. Yu and Zon-Yin Shae},
   title = {Supporting multi-party voice-over-IP services with peer-to-peer stream
@@ -581,6 +575,21 @@
   booktitle = {Proc. Level Up: 1st International Digital Games Research Conference},
   pages = {130--142},
   pdf = {J:\Diplomarbeit Dokumente\Papers\From text to talk multiplayer games and voiceover ip.pdf}
+}
+
+@ARTICLE{,
+  author = {M. Handley},
+  owner = {plotkowi},
+  timestamp = {2008.04.28}
+}
+
+@ARTICLE{sdp98,
+  author = {M. Handley and V. Jacobson},
+  title = {SDP: Session Description Protocol},
+  journal = {http://www.ietf.org/rfc/rfc2327.txt},
+  year = {1998},
+  owner = {plotkowi},
+  timestamp = {2008.04.28}
 }
 
 @ARTICLE{hu04,
@@ -667,6 +676,15 @@
   publisher = {IEEE Computer Society}
 }
 
+@ARTICLE{Keller03,
+  author = {Joaqu\'{\i}n Keller and Gwendal Simon},
+  title = {Solipsis: A Massively Multi-Participant Virtual World},
+  year = {2003},
+  pages = {262-268},
+  bibsource = {DBLP, http://dblp.uni-trier.de},
+  booktitle = {PDPTA}
+}
+
 @BOOK{kiesler97,
   title = {Culture of the Internet},
   publisher = {Lawrence Erlbaum Associates},
@@ -742,6 +760,19 @@
   publisher = {ACM}
 }
 
+@ARTICLE{manninen03,
+  author = {Tony Manninen and Tomi Kujanp‰‰},
+  title = {Supporting visual elements of non-verbal communication in computer
+	game avatars.},
+  year = {2003},
+  booktitle = {DIGRA Conf.},
+  date = {2005-11-28},
+  description = {dblp},
+  ee = {http://www.digra.org/dl/display_html?chid=http://www.digra.org/dl/db/05163.24426},
+  keywords = {dblp},
+  url = {http://dblp.uni-trier.de/db/conf/digra/digra2003.html#KujanpaaM03}
+}
+
 @ARTICLE{xbox08,
   author = {Microsoft},
   title = {Xbox Live},
@@ -807,8 +838,8 @@
   timestamp = {2008.03.25}
 }
 
-@ARTICLE{porter00m,
-  author = {Tom Porter and Galyn Susman},
+@ARTICLE{porter00,
+  author = {Tom Porter and Galyn Susmanw},
   title = {On site: creating lifelike characters in Pixar movies},
   journal = {Commun. ACM},
   year = {2000},
@@ -821,6 +852,15 @@
   publisher = {ACM}
 }
 
+@ARTICLE{udp80,
+  author = {J. Postel},
+  title = {User Datagram Protocol},
+  journal = {http://www.ietf.org/rfc/rfc768.txt},
+  year = {1980},
+  owner = {plotkowi},
+  timestamp = {2008.04.28}
+}
+
 @ARTICLE{pearce03,
   author = {Jenny Preece and Diane Maloney-Krichmar},
   title = {Online communities: focusing on sociability and usability},
@@ -831,6 +871,15 @@
 	and emerging applications},
   isbn = {0-8058-3838-4},
   publisher = {Lawrence Erlbaum Associates, Inc.}
+}
+
+@ARTICLE{,
+  author = {Benny Prijono},
+  title = {PjSIP},
+  journal = {http://www.pjsip.org/},
+  year = {2008},
+  owner = {plotti},
+  timestamp = {2008.04.15}
 }
 
 @ARTICLE{pundkar07,
@@ -947,6 +996,15 @@
   timestamp = {2008.04.04}
 }
 
+@ARTICLE{turn06,
+  author = {J. Rosenberg and R. Mahy and C. Huitema},
+  title = {Traversal Using Relay NAT (TURN)},
+  journal = {http://www.jdrosen.net/papers/draft-rosenberg-midcom-turn-08.txt},
+  year = {2006},
+  owner = {plotkowi},
+  timestamp = {2008.04.28}
+}
+
 @ARTICLE{rosenberg02s,
   author = {J. Rosenberg and H. Schulzrinne and G. Camarillo and A. Johnston
 	and J. Peterson and R. Sparks and M. Handley and E. Schooler},
@@ -955,6 +1013,26 @@
   year = {2002},
   owner = {plotti},
   timestamp = {2008.04.04}
+}
+
+@ARTICLE{sip02,
+  author = {J. Rosenberg and H. Schulzrinne and G. Camarillo and  A. Johnston
+	and J. Peterson and  R. Sparks and M. Handley and E. Schooler},
+  title = {SIP: Session Initiation Protocol},
+  journal = {http://www.ietf.org/rfc/rfc3261.txt},
+  year = {2002},
+  owner = {plotkowi},
+  timestamp = {2008.04.28}
+}
+
+@ARTICLE{stun03,
+  author = {J. Rosenberg and J. Weinberger and C. Huitema and R. Mahy},
+  title = {STUN - Simple Traversal of User Datagram Protocol (UDP) Through Network
+	Address Translators (NATs)},
+  journal = {http://www.ietf.org/rfc/rfc3489.txt},
+  year = {2003},
+  owner = {plotkowi},
+  timestamp = {2008.04.28}
 }
 
 @ARTICLE{Rowstron01,
@@ -1081,6 +1159,15 @@
   pages = {65-82},
   owner = {Administrator},
   timestamp = {2008.03.26}
+}
+
+@ARTICLE{rtp96,
+  author = {H. Schulzrinne and S. Casner and  R. Frederick and V. Jacobson},
+  title = {RTP: A Transport Protocol for Real-Time Applications},
+  journal = {http://www.ietf.org/rfc/rfc1889.txt},
+  year = {1996},
+  owner = {plotkowi},
+  timestamp = {2008.04.28}
 }
 
 @ARTICLE{schulzrinne03,
