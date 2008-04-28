@@ -7,7 +7,7 @@ Bevor wir im Entwurf mögliche Szenarien vorstellen, möchte abgrenzen, was nicht 
 
 \section {Analyse der bestehenden Architekturen für Audioübertragung}
 
-In einer Studie vergleichen Safei und Boustead Architekturen für Sprachkommunikation Mehrspieler Netzwerk Spielen \cite{safei04} \cite{safei04b}. Dabei legen sie den Fokus darauf, dass jeder Spieler eine eine Mischung aus Stimmen und Geräuschen hören soll die speziell auf seine Position im Spiel angepasst ist. Dies erfordert ein Abmischen der vorhandenen Stimmen und vor allem eine Anpassung der Lautstärke der Audioquellen an deren Position in der Audioszene. Sie beschäftigen sich mit zwei Hauptaspekten: Wo soll das Abmischen der Audioströme je nach Architektur geschehen und welche Auswirkungen hat dies auf die Netzwerklast und den Delay. 
+In einer Studie vergleichen Safei und Boustead Architekturen für Sprachkommunikation Mehrspieler Netzwerk Spielen \cite{safei04}, \cite{safei04b}. Dabei legen sie den Fokus darauf, dass jeder Spieler eine eine Mischung aus Stimmen und Geräuschen hören soll die speziell auf seine Position im Spiel angepasst ist. Dies erfordert ein Abmischen der vorhandenen Stimmen und vor allem eine Anpassung der Lautstärke der Audioquellen an deren Position in der Audioszene. Sie beschäftigen sich mit zwei Hauptaspekten: Wo soll das Abmischen der Audioströme je nach Architektur geschehen und welche Auswirkungen hat dies auf die Netzwerklast und den Delay. 
 
 Dabei führen auch neue Einfluss und Messgrößen ein, die speziell im Bereich der Sprachübertragung in Spielen relevant sind: Den Begriff des Interaktiven Delays, die Parameter der Korrelation zwischen der physischen und virtuellen Welt sowie der Dichte und Verteilung von Avataren. Diese wurden in den Studien simuliert um neue Aufschlüsse über ihren Einfluss auf die bestehenden Architekturen zu erhalten.
 
@@ -90,8 +90,8 @@ Prinzipiell stellen sich 2 Fragen bei einer Umsetzung:
 	\item Wo findet das Abmischen des Audiostroms statt?
 \end{itemize}
 
-Auch interessant:
-http://www.ietf.org/internet-drafts/draft-ietf-simple-simple-02.txt
+%Auch interessant:
+%http://www.ietf.org/internet-drafts/draft-ietf-simple-simple-02.txt
 
 
 KOMPONENTEN:
@@ -117,7 +117,7 @@ KOMPONENTEN:
                   
 Diese zwei Aspekte können nicht getrennt voneinander betrachtet werden, da immer die Wahl einer Architektur Einfluss auf beide Probleme hat. In einer Peer-to-Peer basierten Architektur ist es z.B. zunächst keine triviale Aufgabe eine Spielewelt konsistent zu verwalten, da jeder Peer nur über einen Teil der Spielewelt verfügt und keine zentralisierte Instanz existiert, die über alle Positionen aller Spieler verfügt. So müssen für Konferenzen nicht nur die Frage beantwortet werden wo der Audiostrom abgemischt wird sondern, wie die Teilnehmer informiert werden dass sie Teil einer Konferenz sind. Genauso ergeht es dem zentralisiertem System in dem die Verwaltung der Spielewelt zwar durch eine zentrale  Instanz einfach ist, aber eine Verteilung des Audiostroms wie oben gezeigt, problematisch ist.
 
-Bei Einer Umsetzung mit SIP stehen uns folgende vier Kombinationen zur Verfügung: 
+Bei Einer Umsetzung mit SIP stehen uns folgende vier Kombinationen zur Ver\-fügung: 
 
 \begin{itemize}
 	\item Man realisiert sowohl den Datenaustausch als auch das Mischen des Audiostroms verteilt. Der Einsatz eines komplett dezentralisierten SIP Netzwerkes wird P2PSIP genannt, hier findet der Datenaustausch mittels DHT statt und das Abmischen der Audioströme zwischen den einzelnen Peers statt.
@@ -137,7 +137,7 @@ Der Einsatz eines Hybrid Modells würde bedeuten, dass die Datenkommunikation mit
 \subsubsection{Multicast}
 Großangelegte Multicast Konferenzen waren die ursprüngliche Motivation für die Entwicklung von SIP. In solchen Konferenzen werden eine oder mehrere Multicast Konferenzen zu einer Konferenz vereint. Jeder Teilnehmer tritt einer Multicast Gruppe bei und sendet sein Medium an diese Gruppe. 
 
-Multicast Konferenzen können gut in Netzwerken funktionieren die sie unterstützen. Sie haben den Vorteil dass sie keine Koordination zwischen den Endsystemen benötigen. Konferenzteilnehmer können unabhängig eine Konferenz beitreten und sie verlassen. 
+Multicast Konferenzen können gut in Netzwerken funktionieren die sie unter\-stützen. Sie haben den Vorteil dass sie keine Koordination zwischen den Endsystemen benötigen. Konferenzteilnehmer können unabhängig eine Konferenz beitreten und sie verlassen. 
 
 Der Hauptnachteil von Multicast Konferenzen ist jedoch dass jeder Router die Identitäten der Gruppe speichern muss. Außerdem kann jeder ohne Authentifizierung einer Multicast Gruppe beitreten. So verlieren die Teilnehmer die Kontrolle darüber wer an Konferenzen teilnehmen kann und sind auch nicht in der Lage sein zu wissen wer ihnen gerade zuhört. Ist bereits ein System falsch konfiguriert so könnte es allen existierenden Multicast Gruppen abonnieren und so das Netz fluten. Zusätzlich oder auch gerade auch wegen dieser Probleme wird Multicast in wenigen Internet Hauptleitungen unterstützt. So können Multicast Konferenzen zwar in LANs nützlich sein, sind jedoch im kommerziellen Internet nicht umsetzbar.
 
@@ -173,7 +173,7 @@ Die Grundlage für eine einfache Berechnung der verbrauchten Bandbreite versteht 
 \end{itemize}
 Ein Beispiel wäre also wenn sich 12 Personen im Spiel befinden empfängt der Server Audioströme von 12 Persoenen und sendet einen bereits abgemischten Audiostrom an jede der 12 Personen. 
 
-Sendet jeder Spieler seinen Audiostrom mit 16 Kbit/s \cite {speex} an den Server, der nach dem heutigem Standard mit einer 100MBit Anbindung für den Upload und Download ausgestattet ist würde sich folgende Rechnung ergeben:
+Sendet jeder Spieler seinen Audiostrom mit einer Speex \cite{speex08} 16 Kbit/s codierung an den Server, der nach dem heutigem Standard mit einer 100MBit Anbindung für den Upload und Download ausgestattet ist würde sich folgende Rechnung ergeben:
 
 Upstream/Downstream
 
@@ -190,7 +190,7 @@ Prinzipiell hat diese Architektur, wie bereits oben dargestellt Probleme beim in
 \subsubsection{Dedicated Node Mixing}
 Der andere existierende Ansatz Konferenzen zu betrieben ist einen SIP Endpunkt zu haben der zu Teilnehmern einer Konferenz verbindet und deren Media Streams weiterleitet. Dabei gibt es zwei mögliche Varianten dieses Modells: In einem End-System-Mixing übernimmt ein Teilnehmer die Verantwortung für das Mischen des Audiostroms und in einem Server-Basiertem Mixing übernehmen unabhängige dedizierte Netzwerkknoten diese Verantwortung ohne am aktiv am Gespräch teilzunehmen. 
 
-Dieses Modell hat jedoch einige Nachteile: Die Existenz einer Konferenz ist abhängig von dem Vorhandensein eines Mix-Servers und die Last auf dem Mixer selbst kann sehr hoch sein. Dadurch dass ein Mixer bis zu N-1 Audio Ströme für eine N-Teilnehmer mischen muss. Zusätzlich kann der Übergang von einem einfachen Telefongespräch zwischen zwei Teilnehmern zu einer Konferenz komplex sein, da erst alle Teilnehmer den gleichen Server aufsuchen müssen um diesen dann die Kontrolle über die Konferenz zu übergeben. Grundätztlich jedoch funktioniert das Server-basierte Mischen besser als das End-System basierte, da die Systeme meist zuverlässiger sind. Für größere Konferenzen bietet sich diese Art des Mischens an für kleinere jedoch bedeutet sie einen erheblichen Aufwand.
+Dieses Modell hat jedoch einige Nachteile: Die Existenz einer Konferenz ist ab\-hän\-gig von dem Vorhandensein eines Mix-Servers und die Last auf dem Mixer selbst kann sehr hoch sein. Dadurch dass ein Mixer bis zu N-1 Audio Ströme für eine N-Teilnehmer mischen muss. Zusätzlich kann der Übergang von einem einfachen Telefongespräch zwischen zwei Teilnehmern zu einer Konferenz komplex sein, da erst alle Teilnehmer den gleichen Server aufsuchen müssen um diesen dann die Kontrolle über die Konferenz zu übergeben. Grundätztlich jedoch funktioniert das Server-basierte Mischen besser als das End-System basierte, da die Systeme meist zuverlässiger sind. Für größere Konferenzen bietet sich diese Art des Mischens an für kleinere jedoch bedeutet sie einen erheblichen Aufwand.
 -- METHODE von GU 
 -- Proxys und Verteilte Server
 
@@ -204,7 +204,7 @@ Im Hybrid Modell existiert noch die zentrale Komponente des Registrars, bei dem 
 
 Dies entspricht dem Full-Mesh Anatz von Schulzrinne \cite{schulzrinne03}, der jedoch in einem völlig dezentralisierten Ansatz damit zu kämpfen hatte, die Teilnehmer einer Konferenz zu bestimmen. Hier kann die Bestimmung der Teilnehmer einer Konferenz mit Hilfe des Registrars und Presence Servers zentral geschehen und stellt vereinfacht das Problem. 
 
-In unserem Fall fordern wir dass mindestens 16 Spieler in der Lage sind miteinander zu kommunizieren. Sendet jeder Spieler seinen Audiostrom mit 16 Kbit/s \cite {speex} an den die anderen Spieler, können wir errechnen über welche Anbindung die Spieler mindestens verfügen müssen um diese Anforderung zu erfüllen. 
+In unserem Fall fordern wir dass mindestens 16 Spieler in der Lage sind miteinander zu kommunizieren. Sendet jeder Spieler seinen Audiostrom mit 16 Kbit/s an den die anderen Spieler, können wir errechnen über welche Anbindung die Spieler mindestens verfügen müssen um diese Anforderung zu erfüllen. 
 
 Die Grundlage für eine einfache Berechnung versteht sich unter folgenden Vorraussetzungen:
 

@@ -4,8 +4,8 @@ Version=2
 
 [SessionInfo]
 ActiveTab=0
-FrameCount=14
-ActiveFrame=11
+FrameCount=13
+ActiveFrame=12
 
 [Frame0]
 Columns=1
@@ -32,9 +32,9 @@ cxCur=820
 cxMin=10
 
 [Frame0_View0,0]
-Cursor.row=179
-Cursor.column=1
-TopSubLine=403
+Cursor.row=293
+Cursor.column=71
+TopSubLine=620
 
 [Frame1]
 Columns=1
@@ -119,9 +119,9 @@ cxCur=751
 cxMin=10
 
 [Frame3_View0,0]
-Cursor.row=79
-Cursor.column=0
-TopSubLine=145
+Cursor.row=103
+Cursor.column=87
+TopSubLine=218
 
 [Frame4]
 Columns=1
@@ -148,9 +148,9 @@ cxCur=751
 cxMin=10
 
 [Frame4_View0,0]
-Cursor.row=14
-Cursor.column=0
-TopSubLine=22
+Cursor.row=60
+Cursor.column=86
+TopSubLine=142
 
 [Frame5]
 Columns=1
@@ -177,9 +177,9 @@ cxCur=751
 cxMin=10
 
 [Frame5_View0,0]
-Cursor.row=91
-Cursor.column=0
-TopSubLine=217
+Cursor.row=192
+Cursor.column=85
+TopSubLine=439
 
 [Frame6]
 Columns=1
@@ -235,9 +235,9 @@ cxCur=751
 cxMin=10
 
 [Frame7_View0,0]
-Cursor.row=12
-Cursor.column=1367
-TopSubLine=58
+Cursor.row=66
+Cursor.column=137
+TopSubLine=176
 
 [Frame8]
 Columns=1
@@ -264,9 +264,9 @@ cxCur=751
 cxMin=10
 
 [Frame8_View0,0]
-Cursor.row=0
+Cursor.row=54
 Cursor.column=0
-TopSubLine=0
+TopSubLine=52
 
 [Frame9]
 Columns=1
@@ -293,8 +293,8 @@ cxCur=751
 cxMin=10
 
 [Frame9_View0,0]
-Cursor.row=0
-Cursor.column=0
+Cursor.row=7
+Cursor.column=202
 TopSubLine=0
 
 [Frame10]
@@ -329,8 +329,8 @@ TopSubLine=0
 [Frame11]
 Columns=1
 Rows=1
-Flags=2
-ShowCmd=3
+Flags=0
+ShowCmd=1
 MinPos.x=-1
 MinPos.y=-1
 MaxPos.x=-4
@@ -343,23 +343,23 @@ Class=CLatexEdit
 Document=kapitel\kapitel_network.tex
 
 [Frame11_Row0]
-cyCur=554
+cyCur=346
 cyMin=10
 
 [Frame11_Col0]
-cxCur=936
+cxCur=796
 cxMin=10
 
 [Frame11_View0,0]
 Cursor.row=230
 Cursor.column=0
-TopSubLine=530
+TopSubLine=590
 
 [Frame12]
 Columns=1
 Rows=1
-Flags=0
-ShowCmd=1
+Flags=2
+ShowCmd=3
 MinPos.x=-1
 MinPos.y=-1
 MaxPos.x=-4
@@ -372,44 +372,15 @@ Class=CLatexEdit
 Document=kapitel\kapitel_benchmarking.tex
 
 [Frame12_Row0]
-cyCur=346
+cyCur=284
 cyMin=10
 
 [Frame12_Col0]
-cxCur=796
+cxCur=1009
 cxMin=10
 
 [Frame12_View0,0]
-Cursor.row=15
-Cursor.column=0
-TopSubLine=0
-
-[Frame13]
-Columns=1
-Rows=1
-Flags=0
-ShowCmd=1
-MinPos.x=-1
-MinPos.y=-1
-MaxPos.x=-4
-MaxPos.y=-30
-NormalPos.left=132
-NormalPos.top=174
-NormalPos.right=957
-NormalPos.bottom=575
-Class=CLatexEdit
-Document=Main.bbl
-
-[Frame13_Row0]
-cyCur=346
-cyMin=10
-
-[Frame13_Col0]
-cxCur=796
-cxMin=10
-
-[Frame13_View0,0]
-Cursor.row=127
-Cursor.column=0
-TopSubLine=119
+Cursor.row=7
+Cursor.column=39
+TopSubLine=1
 

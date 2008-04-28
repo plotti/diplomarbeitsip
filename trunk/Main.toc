@@ -19,12 +19,12 @@
 \contentsline {section}{\numberline {2.4}Kommunikation in Computerspielen}{11}
 \contentsline {subsection}{\numberline {2.4.1}Spielegenre}{11}
 \contentsline {subsection}{\numberline {2.4.2}Textkommunikation in Spielen}{12}
-\contentsline {subsection}{\numberline {2.4.3}Non-verbale Kommunikation in Spielen}{13}
+\contentsline {subsection}{\numberline {2.4.3}Non-verbale Kommunikation in Spielen}{12}
 \contentsline {subsection}{\numberline {2.4.4}Sprachkommunikation in Spielen}{13}
 \contentsline {section}{\numberline {2.5}Text-Kommunikation}{13}
 \contentsline {subsection}{\numberline {2.5.1}Computer Mediated Communication}{13}
 \contentsline {subsection}{\numberline {2.5.2}Soziale Aspekte}{14}
-\contentsline {subsection}{\numberline {2.5.3}Handicaps}{15}
+\contentsline {subsection}{\numberline {2.5.3}Handicaps}{14}
 \contentsline {subsection}{\numberline {2.5.4}Fehlende Pers\"onlichkeit}{15}
 \contentsline {subsection}{\numberline {2.5.5}Fehlende Mediarichness}{15}
 \contentsline {subsection}{\numberline {2.5.6}Ein Medium der Vergangenheit?}{16}
@@ -73,33 +73,33 @@
 \contentsline {subsection}{\numberline {3.4.4}SIP als L\"osung}{33}
 \contentsline {subsubsection}{Anforderungen an SIP}{34}
 \contentsline {chapter}{\numberline {4}VoIP und SIP}{35}
-\contentsline {subsection}{\numberline {4.0.5}Protokolle zur Echtzeitkommunikation}{35}
-\contentsline {subsection}{\numberline {4.0.6}Einfaches VoIP System}{36}
-\contentsline {subsection}{\numberline {4.0.7}Einflussfaktoren auf die VoIP-Qualit\"at}{37}
+\contentsline {section}{\numberline {4.1}Protokolle zur Echtzeitkommunikation}{35}
+\contentsline {subsection}{\numberline {4.1.1}Einfaches VoIP System}{36}
+\contentsline {subsection}{\numberline {4.1.2}Einflussfaktoren auf die VoIP-Qualit\"at}{37}
 \contentsline {subsubsection}{Ende-zu-Ende-Verz\"ogerung (Delay)}{37}
 \contentsline {subsubsection}{Schwankung der \"Ubermittlungszeit (Jitter)}{37}
 \contentsline {subsubsection}{Paketverlustrate (Packet Loss Rate)}{38}
-\contentsline {subsection}{\numberline {4.0.8}VoIP-relevante Sprachcodierungsverfahren}{38}
-\contentsline {section}{\numberline {4.1}Session Initiation Protokoll (SIP)}{39}
-\contentsline {subsection}{\numberline {4.1.1}SIP Building Blocks}{39}
-\contentsline {subsection}{\numberline {4.1.2}Aufbau}{40}
+\contentsline {subsection}{\numberline {4.1.3}VoIP-relevante Sprachcodierungsverfahren}{38}
+\contentsline {section}{\numberline {4.2}Session Initiation Protokoll (SIP)}{39}
+\contentsline {subsection}{\numberline {4.2.1}SIP Building Blocks}{39}
+\contentsline {subsection}{\numberline {4.2.2}Aufbau}{40}
 \contentsline {subsubsection}{Request Typen}{41}
 \contentsline {subsubsection}{Response Typen}{41}
-\contentsline {subsection}{\numberline {4.1.3}Rufaufbau, Verbindung, Rufabbau}{42}
-\contentsline {subsection}{\numberline {4.1.4}Registrierung der Lokation von Teilnehmern}{43}
-\contentsline {subsection}{\numberline {4.1.5}Konferenzschaltungen}{43}
-\contentsline {subsection}{\numberline {4.1.6}Instant Messaging zwischen Teilnehmern}{43}
-\contentsline {subsection}{\numberline {4.1.7}Pr\"asenzfunktion von Teilnehmern}{44}
-\contentsline {section}{\numberline {4.2}Session Description Protokoll}{44}
-\contentsline {subsection}{\numberline {4.2.1}Aufbau}{45}
-\contentsline {subsection}{\numberline {4.2.2}Aushandeln der Sitzungsparameter}{45}
-\contentsline {section}{\numberline {4.3}Real-Time Transport Protokoll}{46}
-\contentsline {subsection}{\numberline {4.3.1}Aufbau von RTP-Paketen}{46}
-\contentsline {subsection}{\numberline {4.3.2}Payload-Typen}{47}
-\contentsline {subsection}{\numberline {4.3.3}RTP Control Protokoll}{47}
+\contentsline {subsection}{\numberline {4.2.3}Rufaufbau, Verbindung, Rufabbau}{42}
+\contentsline {subsection}{\numberline {4.2.4}Registrierung der Lokation von Teilnehmern}{43}
+\contentsline {subsection}{\numberline {4.2.5}Konferenzschaltungen}{43}
+\contentsline {subsection}{\numberline {4.2.6}Instant Messaging zwischen Teilnehmern}{43}
+\contentsline {subsection}{\numberline {4.2.7}Pr\"asenzfunktion von Teilnehmern}{44}
+\contentsline {section}{\numberline {4.3}Session Description Protokoll}{44}
+\contentsline {subsection}{\numberline {4.3.1}Aufbau}{45}
+\contentsline {subsection}{\numberline {4.3.2}Aushandeln der Sitzungsparameter}{45}
+\contentsline {section}{\numberline {4.4}Real-Time Transport Protokoll}{46}
+\contentsline {subsection}{\numberline {4.4.1}Aufbau von RTP-Paketen}{46}
+\contentsline {subsection}{\numberline {4.4.2}Payload-Typen}{47}
+\contentsline {subsection}{\numberline {4.4.3}RTP Control Protokoll}{47}
 \contentsline {subsubsection}{Typen und Struktur der RTCP-Pakete}{47}
-\contentsline {subsection}{\numberline {4.3.4}Silence Supression}{48}
-\contentsline {section}{\numberline {4.4}STUN Protokoll}{49}
+\contentsline {subsection}{\numberline {4.4.4}Silence Supression}{48}
+\contentsline {section}{\numberline {4.5}STUN Protokoll}{49}
 \contentsline {chapter}{\numberline {5}Verwandte Arbeiten}{50}
 \contentsline {section}{\numberline {5.1}Historische Ans\"atze}{50}
 \contentsline {section}{\numberline {5.2}Serverbasierte Ans\"atze}{50}

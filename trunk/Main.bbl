@@ -1,79 +1,69 @@
-\begin{thebibliography}{108}
-\providecommand{\natexlab}[1]{#1}
-\providecommand{\url}[1]{\texttt{#1}}
+\begin{thebibliography}{109}
+% this bibliography was produced with the style dinat.bst v2.5
 \makeatletter
 \newcommand{\dinatlabel}[1]%
-{\ifNAT@numbers\else\NAT@biblabelnum{#1}\fi}
+{\ifNAT@numbers\else\NAT@biblabelnum{#1}\hspace{2\labelsep}\fi}
 \makeatother
-\expandafter\ifx\csname urlstyle\endcsname\relax
-  \providecommand{\doi}[1]{doi: #1}\else
-  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+\expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
+\expandafter\ifx\csname url\endcsname\relax\def\url#1{\texttt{#1}}\fi
 
-\bibitem[hal(2003)]{halloran03}
-\dinatlabel{hal 2003}\\ \emph{From text to talk: multiplayer games and
-  voiceover IP}.
-\newblock 2003 . --
-\newblock  130--142 S
-
-\bibitem[hal(2004)]{halloran04}
-\dinatlabel{hal 2004}\\ \emph{Does it matter if you don’t know who’s talking?
-  Multiplayer gaming with voiceover IP} . --
-\newblock  1215--1218 S
-
-\bibitem[Aarseth et~al.(2003)Aarseth, Smedstad, u.
-  Sunnan{\~o}]{aarseth_multi-dimensional_2003}
-\dinatlabel{Aarseth et~al. 2003}\\ \textsc{Aarseth}, Espen ; \textsc{Smedstad},
-  Solveig~M.  ; \textsc{Sunnan{\~o}}, Lise:
+\bibitem[Aarseth u.\,a.(2003)Aarseth, Smedstad und Sunnan{\~o}]{aarseth03}
+\dinatlabel{Aarseth u.\,a. 2003} \textsc{Aarseth}, Espen~; \textsc{Smedstad},
+  Solveig~M.~; \textsc{Sunnan{\~o}}, Lise:
 \newblock A Multi-Dimensional Typology of Games.
-\newblock {In: }\emph{Level Up}  (2003), S. 48--53
+\newblock In: \emph{Level Up}
+\newblock (2003), S.~48--53
 
 \bibitem[Alexander(2003)]{thor03}
-\dinatlabel{Alexander 2003}\\ \textsc{Alexander}, Thor ;
-  \textsc{Massachusetts}, Hingham (Hrsg.):
+\dinatlabel{Alexander 2003} \textsc{Alexander}, Thor~; \textsc{Massachusetts},
+  Hingham (Hrsg.):
 \newblock \emph{Massively Multiplayer Game Development (Game Development
   Series)}.
 \newblock Charles River Media, 2003
 
 \bibitem[Alientrap(2008)]{nexuiz08}
-\dinatlabel{Alientrap 2008}\\ \textsc{Alientrap}:
+\dinatlabel{Alientrap 2008} \textsc{Alientrap}:
 \newblock Nexuiz.
-\newblock {In: }\emph{http://www.alientrap.org/nexuiz/}  (2008)
+\newblock In: \emph{http://www.alientrap.org/nexuiz/}
+\newblock (2008). --
+\newblock [Online; abgerufen am 01-Feburar-2008]
 
-\bibitem[Anderson et~al.(1995)Anderson, Barrus, Howard, Rich, Shen, u.
+\bibitem[Anderson u.\,a.(1995)Anderson, Barrus, Howard, Rich, Shen und
   Waters]{anderson95}
-\dinatlabel{Anderson et~al. 1995}\\ \textsc{Anderson}, David~B. ;
-  \textsc{Barrus}, John~W. ; \textsc{Howard}, John~H. ; \textsc{Rich}, Charles
-  ; \textsc{Shen}, Chia  ; \textsc{Waters}, Richard~C.:
+\dinatlabel{Anderson u.\,a. 1995} \textsc{Anderson}, David~B.~;
+  \textsc{Barrus}, John~W.~; \textsc{Howard}, John~H.~; \textsc{Rich},
+  Charles~; \textsc{Shen}, Chia~; \textsc{Waters}, Richard~C.:
 \newblock Building Multiuser Interactive Multimedia Environments at MERL.
-\newblock {In: }\emph{IEEE MultiMedia} 2 (1995), Nr. 4, S. 77--82.
-\newblock  \url{http://dx.doi.org/http://dx.doi.org/10.1109/93.482298}. --
-\newblock DOI http://dx.doi.org/10.1109/93.482298. --
-\newblock ISSN 1070--986X
+\newblock In: \emph{IEEE MultiMedia}
+\newblock 2 (1995), Nr.~4, S.~77--82. --
+\newblock ISSN 1070-986X
 
-\bibitem[Arango et~al.(1999)Arango, Dugan, Elliott, Huitema, u.
+\bibitem[Arango u.\,a.(1999)Arango, Dugan, Elliott, Huitema und
   Pickett]{mgcp99}
-\dinatlabel{Arango et~al. 1999}\\ \textsc{Arango}, M. ; \textsc{Dugan}, A. ;
-  \textsc{Elliott}, I. ; \textsc{Huitema}, C.  ; \textsc{Pickett}, S.:
+\dinatlabel{Arango u.\,a. 1999} \textsc{Arango}, M.~; \textsc{Dugan}, A.~;
+  \textsc{Elliott}, I.~; \textsc{Huitema}, C.~; \textsc{Pickett}, S.:
 \newblock Media Gateway Control Protocol (MGCP).
-\newblock {In: }\emph{http://www.ietf.org/rfc/rfc2705.txt}  (1999)
+\newblock In: \emph{http://www.ietf.org/rfc/rfc2705.txt}
+\newblock (1999)
 
-\bibitem[Bailenson et~al.(2002)Bailenson, Beall, u. Blascovich]{bailenson02}
-\dinatlabel{Bailenson et~al. 2002}\\ \textsc{Bailenson}, J.~N. ;
-  \textsc{Beall}, A.C.  ; \textsc{Blascovich}, J.:
+\bibitem[Bailenson u.\,a.(2002)Bailenson, Beall und Blascovich]{bailenson02}
+\dinatlabel{Bailenson u.\,a. 2002} \textsc{Bailenson}, J.~N.~; \textsc{Beall},
+  A.C.~; \textsc{Blascovich}, J.:
 \newblock Gaze and task performance in shared virtual environments.
-\newblock {In: }\emph{The Journal of Visualization and Computer Animation} 13
-  (2002), S. 313--320
+\newblock In: \emph{The Journal of Visualization and Computer Animation}
+\newblock 13 (2002), S.~313--320
 
-\bibitem[Bailenson et~al.(2001)Bailenson, Blascovich, Beal, u.
+\bibitem[Bailenson u.\,a.(2001)Bailenson, Blascovich, Beal und
   Loomis]{bailenson01}
-\dinatlabel{Bailenson et~al. 2001}\\ \textsc{Bailenson}, J.~N. ;
-  \textsc{Blascovich}, J. ; \textsc{Beal}, A.C.  ; \textsc{Loomis}, J.M.:
+\dinatlabel{Bailenson u.\,a. 2001} \textsc{Bailenson}, J.~N.~;
+  \textsc{Blascovich}, J.~; \textsc{Beal}, A.C.~; \textsc{Loomis}, J.M.:
 \newblock Equilibrium theory revisited: Mutual gaze and personal space in
   virtual environments.
-\newblock {In: }\emph{Presence} 10 (2001), S. 583--598
+\newblock In: \emph{Presence}
+\newblock 10 (2001), S.~583--598
 
 \bibitem[Bales(1950)]{bales50}
-\dinatlabel{Bales 1950}\\ \textsc{Bales}, R.F. ; \textsc{Press}, Addison-Wesley
+\dinatlabel{Bales 1950} \textsc{Bales}, R.F.~; \textsc{Press}, Addison-Wesley
   (Hrsg.):
 \newblock \emph{Interaction process analysis: A method for the study of small
   groups.}
@@ -81,736 +71,775 @@
   groups., 1950
 
 \bibitem[Begault(1994)]{bergault94}
-\dinatlabel{Begault 1994}\\ \textsc{Begault}, Durand~R.:
+\dinatlabel{Begault 1994} \textsc{Begault}, Durand~R.:
 \newblock 3-D sound for virtual reality and multimedia.
-\newblock   (1994).
-\newblock ISBN 0--12--084735--3
+\newblock
+\newblock (1994).
+\newblock ISBN 0-12-084735-3
 
 \bibitem[BlizzardEntertainment(2008{\natexlab{a}})]{wow2.2}
-\dinatlabel{BlizzardEntertainment 2008{\natexlab{a}}}\\
+\dinatlabel{BlizzardEntertainment 2008{\natexlab{a}}}
   \textsc{BlizzardEntertainment}:
 \newblock World Of Warcraft Communication Basics.
-\newblock {In: }\emph{http://worldofwarcraft.com/info/basics/voicechat.html}
-  (2008)
+\newblock In: \emph{http://worldofwarcraft.com/info/basics/voicechat.html}
+\newblock (2008)
 
 \bibitem[BlizzardEntertainment(2008{\natexlab{b}})]{wow08}
-\dinatlabel{BlizzardEntertainment 2008{\natexlab{b}}}\\
+\dinatlabel{BlizzardEntertainment 2008{\natexlab{b}}}
   \textsc{BlizzardEntertainment}:
 \newblock World of Warcraft User Statistics.
-\newblock {In: }\emph{http://blizzard.co.uk/press/080122.shtml}  (2008)
+\newblock In: \emph{http://blizzard.co.uk/press/080122.shtml}
+\newblock (2008)
 
-\bibitem[Bolot u. g(29 M)]{bolot98}
-\dinatlabel{Bolot u. g 29 M}\\ \textsc{Bolot}, J.-C. ; \textsc{g}, S.:
+\bibitem[Bolot und g(29 Mar--2 Apr 1998)]{bolot98}
+\dinatlabel{Bolot und g 29 Mar--2 Apr 1998} \textsc{Bolot}, J.-C.~; \textsc{g},
+  S.:
 \newblock Adding voice to distributed games on the Internet.
-\newblock {In: }\emph{INFOCOM '98. Seventeenth Annual Joint Conference of the
-  IEEE Computer and Communications Societies. Proceedings. IEEE} 2 (29 Mar-2
-  Apr 1998), S. 480--487 vol.2.
-\newblock  \url{http://dx.doi.org/10.1109/INFCOM.1998.665065}. --
-\newblock DOI 10.1109/INFCOM.1998.665065. --
-\newblock ISSN 0743--166X
+\newblock In: \emph{INFOCOM '98. Seventeenth Annual Joint Conference of the
+  IEEE Computer and Communications Societies. Proceedings. IEEE}
+\newblock 2 (29 Mar-2 Apr 1998), S.~480--487 vol.2. --
+\newblock ISSN 0743-166X
 
-\bibitem[Bradner u. Mark(2002)]{bradner02}
-\dinatlabel{Bradner u. Mark 2002}\\ \textsc{Bradner}, E. ; \textsc{Mark}, G.:
+\bibitem[Bradner und Mark(2002)]{bradner02}
+\dinatlabel{Bradner und Mark 2002} \textsc{Bradner}, E.~; \textsc{Mark}, G.:
 \newblock Why distance matters: effects on cooperation persuasion and
   deception.
-\newblock {In: }\emph{Proceedings CSCW}  (2002), S. 226--296
+\newblock In: \emph{Proceedings CSCW}
+\newblock (2002), S.~226--296
 
-\bibitem[Brandt(05)]{brandt05}
-\dinatlabel{Brandt 05}\\ \textsc{Brandt}, D.:
+\bibitem[Brandt(2005)]{brandt05}
+\dinatlabel{Brandt 2005} \textsc{Brandt}, D.:
 \newblock Networking and Scalability in EVE Online.
-\newblock {In: }\emph{Netgames}  (05)
+\newblock In: \emph{Netgames}
+\newblock (2005)
 
-\bibitem[Bryan et~al.(15 1)Bryan, Lowekamp, u. Jennings]{bryan05s}
-\dinatlabel{Bryan et~al. 15 1}\\ \textsc{Bryan}, D.A. ; \textsc{Lowekamp}, B.B.
-   ; \textsc{Jennings}, C.:
+\bibitem[Bryan u.\,a.(15--15 June 2005)Bryan, Lowekamp und Jennings]{bryan05s}
+\dinatlabel{Bryan u.\,a. 15--15 June 2005} \textsc{Bryan}, D.A.~;
+  \textsc{Lowekamp}, B.B.~; \textsc{Jennings}, C.:
 \newblock SOSIMPLE: A Serverless, Standards-based, P2P SIP Communication
   System.
-\newblock {In: }\emph{Advanced Architectures and Algorithms for Internet
-  Delivery and Applications, 2005. AAA-IDEA 2005. First International Workshop
-  on}  (15-15 June 2005), S. 42--49.
-\newblock  \url{http://dx.doi.org/10.1109/AAA-IDEA.2005.15}. --
-\newblock DOI 10.1109/AAA--IDEA.2005.15
+\newblock In: \emph{Advanced Architectures and Algorithms for Internet Delivery
+  and Applications, 2005. AAA-IDEA 2005. First International Workshop on}
+\newblock (15-15 June 2005), S.~42--49
 
-\bibitem[Bryan u. Lowekamp(2007)]{bryan07}
-\dinatlabel{Bryan u. Lowekamp 2007}\\ \textsc{Bryan}, David~A. ;
+\bibitem[Bryan und Lowekamp(2007)]{bryan07}
+\dinatlabel{Bryan und Lowekamp 2007} \textsc{Bryan}, David~A.~;
   \textsc{Lowekamp}, Bruce~B.:
 \newblock \emph{Decentralizing SIP}.
-\newblock New York, NY, USA : ACM, 2007. --
-\newblock  34--41 S.
-\newblock  \url{http://dx.doi.org/http://doi.acm.org/10.1145/1229899.1229910}.
-\newblock  \url{http://dx.doi.org/http://doi.acm.org/10.1145/1229899.1229910}.
-\newblock ISSN 1542--7730
+\newblock New York, NY, USA~: ACM, 2007. --
+\newblock 34--41~S.
+\newblock ISSN 1542-7730
 
-\bibitem[Carlsson u. Hagsand(18 2)]{carlsson93}
-\dinatlabel{Carlsson u. Hagsand 18 2}\\ \textsc{Carlsson}, C. ;
+\bibitem[Carlsson und Hagsand(18--22 Sep 1993)]{carlsson93}
+\dinatlabel{Carlsson und Hagsand 18--22 Sep 1993} \textsc{Carlsson}, C.~;
   \textsc{Hagsand}, O.:
 \newblock DIVE A multi-user virtual reality system.
-\newblock {In: }\emph{Virtual Reality Annual International Symposium, 1993.,
-  1993 IEEE}  (18-22 Sep 1993), S. 394--400.
-\newblock  \url{http://dx.doi.org/10.1109/VRAIS.1993.380753}. --
-\newblock DOI 10.1109/VRAIS.1993.380753
+\newblock In: \emph{Virtual Reality Annual International Symposium, 1993., 1993
+  IEEE}
+\newblock (18-22 Sep 1993), S.~394--400
 
 \bibitem[Carter(2003)]{carter03}
-\dinatlabel{Carter 2003}\\ \textsc{Carter}, K.~A.:
+\dinatlabel{Carter 2003} \textsc{Carter}, K.~A.:
 \newblock Type me how you feel: Quasi-nonverbal cues in computer-mediated
   communication.
-\newblock {In: }\emph{ETC} 60 (2003), S. 29--39
+\newblock In: \emph{ETC}
+\newblock 60 (2003), S.~29--39
 
 \bibitem[Commission(2007)]{E-Business:08}
-\dinatlabel{Commission 2007}\\ \textsc{Commission}, European:
+\dinatlabel{Commission 2007} \textsc{Commission}, European:
 \newblock The European e-Business Report 2006/07.
-\newblock {In: }\emph{http://www.ebusiness-watch.org/studies/}  (2007)
+\newblock In: \emph{http://www.ebusiness-watch.org/studies/}
+\newblock (2007)
 
 \bibitem[Coopers(2007)]{pwc:07}
-\dinatlabel{Coopers 2007}\\ \textsc{Coopers}, Pricewater~H.:
+\dinatlabel{Coopers 2007} \textsc{Coopers}, Pricewater~H.:
 \newblock German Entertainment and Media Outlook: 2007-2011.
-\newblock {In: }\emph{http://www.pwc.de/portal/pub/!ut/p/kcxml}  (2007)
+\newblock In: \emph{http://www.pwc.de/portal/pub/!ut/p/kcxml}
+\newblock (2007)
 
-\bibitem[Cuervo et~al.(2000)Cuervo, Greene, Rayhan, Huitema, Rosen, u.
+\bibitem[Cuervo u.\,a.(2000)Cuervo, Greene, Rayhan, Huitema, Rosen und
   Segers]{megaco00}
-\dinatlabel{Cuervo et~al. 2000}\\ \textsc{Cuervo}, F. ; \textsc{Greene}, N. ;
-  \textsc{Rayhan}, A. ; \textsc{Huitema}, C. ; \textsc{Rosen}, B.  ;
+\dinatlabel{Cuervo u.\,a. 2000} \textsc{Cuervo}, F.~; \textsc{Greene}, N.~;
+  \textsc{Rayhan}, A.~; \textsc{Huitema}, C.~; \textsc{Rosen}, B.~;
   \textsc{Segers}, J.:
 \newblock Megaco Protocol.
-\newblock {In: }\emph{http://www.ietf.org/rfc/rfc3015.txt}  (2000)
+\newblock In: \emph{http://www.ietf.org/rfc/rfc3015.txt}
+\newblock (2000)
 
-\bibitem[Diot u. Gautier(1999)]{diot99}
-\dinatlabel{Diot u. Gautier 1999}\\ \textsc{Diot}, C. ; \textsc{Gautier}, L.:
+\bibitem[Diot und Gautier(1999)]{diot99}
+\dinatlabel{Diot und Gautier 1999} \textsc{Diot}, C.~; \textsc{Gautier}, L.:
 \newblock A distributed architecture for multiplayer interactive applications
   on the internet.
-\newblock   (1999).
-\newblock  \url{citeseer.ist.psu.edu/diot99distributed.html}
+\newblock
+\newblock (1999). --
+\newblock URL \url{citeseer.ist.psu.edu/diot99distributed.html}
 
-\bibitem[Douglas et~al.(2005)Douglas, Tanin, Harwood, u.
+\bibitem[Douglas u.\,a.(2005)Douglas, Tanin, Harwood und
   Karunasekera]{douglas05}
-\dinatlabel{Douglas et~al. 2005}\\ \textsc{Douglas}, Scott ; \textsc{Tanin},
-  Egmen ; \textsc{Harwood}, Aaron  ; \textsc{Karunasekera}, Shanika:
+\dinatlabel{Douglas u.\,a. 2005} \textsc{Douglas}, Scott~; \textsc{Tanin},
+  Egmen~; \textsc{Harwood}, Aaron~; \textsc{Karunasekera}, Shanika:
 \newblock Enabling Massively Multi-Player Online Gaming Applications on a P2P
   Architecture.
-\newblock {In: }\emph{Information and Automation}  (2005)
+\newblock In: \emph{Information and Automation}
+\newblock (2005)
 
 \bibitem[ElectronicArts(2008)]{uo08}
-\dinatlabel{ElectronicArts 2008}\\ \textsc{ElectronicArts}:
+\dinatlabel{ElectronicArts 2008} \textsc{ElectronicArts}:
 \newblock Ultima Online, Electronic Arts.
-\newblock {In: }\emph{http://www.uo.com}  (2008)
+\newblock In: \emph{http://www.uo.com}
+\newblock (2008)
 
 \bibitem[EpicGames(2008)]{unreal2008}
-\dinatlabel{EpicGames 2008}\\ \textsc{EpicGames}:
+\dinatlabel{EpicGames 2008} \textsc{EpicGames}:
 \newblock Unreal Engine.
-\newblock {In: }\emph{http://www.unrealtechnology.com/}  (2008)
+\newblock In: \emph{http://www.unrealtechnology.com/}
+\newblock (2008)
 
 \bibitem[Ernst\&Young(2007)]{ErnstYoung:07}
-\dinatlabel{Ernst\&Young 2007}\\ \textsc{Ernst\&Young}:
+\dinatlabel{Ernst\&Young 2007} \textsc{Ernst\&Young}:
 \newblock Digitale Spiele in Deutschland.
-\newblock {In:
-  }\emph{http://www.ey.com/global/content.nsf/Germany/Publikationen\_-\_Studie%
-n\_\-\_2007}  (2007)
+\newblock In:
+  \emph{http://www.ey.com/global/content.nsf/Germany/Publikationen\_-\_Studien%
+\_\-\_2007}
+\newblock (2007)
 
-\bibitem[chang Feng u. chi Feng(2003)]{feng03}
-\dinatlabel{chang Feng u. chi Feng 2003}\\ \textsc{Feng}, Wu chang ;
+\bibitem[chang Feng und chi Feng(2003)]{feng03}
+\dinatlabel{chang Feng und chi Feng 2003} \textsc{Feng}, Wu chang~;
   \textsc{Feng}, Wu chi:
 \newblock On the geographic distribution of on-line game servers and players.
-\newblock   (2003), S. 173--179.
-\newblock  \url{http://dx.doi.org/http://doi.acm.org/10.1145/963900.963916}. --
-\newblock DOI http://doi.acm.org/10.1145/963900.963916.
-\newblock ISBN 1--58113--734--6
+\newblock
+\newblock (2003), S.~173--179.
+\newblock ISBN 1-58113-734-6
 
 \bibitem[FlagshipIndustriesInc(2008)]{ventrillo08}
-\dinatlabel{FlagshipIndustriesInc 2008}\\ \textsc{FlagshipIndustriesInc}:
+\dinatlabel{FlagshipIndustriesInc 2008} \textsc{FlagshipIndustriesInc}:
 \newblock Ventrillo.
-\newblock {In: }\emph{http://www.ventrilo.com/}  (2008)
+\newblock In: \emph{http://www.ventrilo.com/}
+\newblock (2008)
 
 \bibitem[Gebhardt(2008{\natexlab{a}})]{irrklang08}
-\dinatlabel{Gebhardt 2008{\natexlab{a}}}\\ \textsc{Gebhardt}, Nikolaus:
+\dinatlabel{Gebhardt 2008{\natexlab{a}}} \textsc{Gebhardt}, Nikolaus:
 \newblock irrKlang.
-\newblock {In: }\emph{http://www.ambiera.com/irrklang/index.html}  (2008)
+\newblock In: \emph{http://www.ambiera.com/irrklang/index.html}
+\newblock (2008)
 
 \bibitem[Gebhardt(2008{\natexlab{b}})]{irrlicht08}
-\dinatlabel{Gebhardt 2008{\natexlab{b}}}\\ \textsc{Gebhardt}, Nikolaus:
+\dinatlabel{Gebhardt 2008{\natexlab{b}}} \textsc{Gebhardt}, Nikolaus:
 \newblock Irrlicht 3D Engine.
-\newblock {In: }\emph{http://irrlicht.sourceforge.net/}  (2008)
+\newblock In: \emph{http://irrlicht.sourceforge.net/}
+\newblock (2008)
 
 \bibitem[Gerhard(1998)]{maletzke98}
-\dinatlabel{Gerhard 1998}\\ \textsc{Gerhard}, Maletzke:
+\dinatlabel{Gerhard 1998} \textsc{Gerhard}, Maletzke:
 \newblock \emph{Kommunikationswissenschaft im Überblick}.
 \newblock VS VERLAG, 1998
 
-\bibitem[Gibbs et~al.(2003)Gibbs, Wadley, Hew, u. Graham]{gibbs03}
-\dinatlabel{Gibbs et~al. 2003}\\ \textsc{Gibbs}, M. ; \textsc{Wadley}, Greg ;
-  \textsc{Hew}, Kevin  ; \textsc{Graham}, C.:
+\bibitem[Gibbs u.\,a.(2003)Gibbs, Wadley, Hew und Graham]{gibbs03}
+\dinatlabel{Gibbs u.\,a. 2003} \textsc{Gibbs}, M.~; \textsc{Wadley}, Greg~;
+  \textsc{Hew}, Kevin~; \textsc{Graham}, C.:
 \newblock Computer supported cooperative play 'third places' and online
   videogames.
-\newblock {In: }\emph{OzCHI}  (2003), S. 238--241
+\newblock In: \emph{OzCHI}
+\newblock (2003), S.~238--241
 
-\bibitem[Gibbs et~al.(2004{\natexlab{a}})Gibbs, Hew, u. Wadley]{gibbs04}
-\dinatlabel{Gibbs et~al. 2004{\natexlab{a}}}\\ \textsc{Gibbs}, Martin ;
-  \textsc{Hew}, Kevin  ; \textsc{Wadley}, Greg:
+\bibitem[Gibbs u.\,a.(2004{\natexlab{a}})Gibbs, Hew und Wadley]{gibbs04}
+\dinatlabel{Gibbs u.\,a. 2004{\natexlab{a}}} \textsc{Gibbs}, Martin~;
+  \textsc{Hew}, Kevin~; \textsc{Wadley}, Greg:
 \newblock Usability and Sociability of the Xbox Live Voice Channel.
-\newblock {In: }\emph{Australian Workshop on Interactive Entertainment},
-  Creative and Cognitive Studios Press, 2004
+\newblock In: \emph{Australian Workshop on Interactive Entertainment}, Creative
+  and Cognitive Studios Press, 2004
 
-\bibitem[Gibbs et~al.(2005)Gibbs, ands, u. Benda]{gibbs05}
-\dinatlabel{Gibbs et~al. 2005}\\ \textsc{Gibbs}, Martin~R. ; \textsc{ands},
-  Greg~W.  ; \textsc{Benda}, Peter:
+\bibitem[Gibbs u.\,a.(2005)Gibbs, ands und Benda]{gibbs05}
+\dinatlabel{Gibbs u.\,a. 2005} \textsc{Gibbs}, Martin~R.~; \textsc{ands},
+  Greg~W.~; \textsc{Benda}, Peter:
 \newblock Towards a framework for designing speech-based player interaction in
   multiplayer online games.
-\newblock {In: }\emph{IE2005: Proceedings of the second Australasian conference
+\newblock In: \emph{IE2005: Proceedings of the second Australasian conference
   on Interactive entertainment}.
-\newblock Sydney, Australia, Australia : Creativity \& Cognition Studios Press,
-  2005. --
-\newblock ISBN 0--9751533--2--3, S. 223--226
+\newblock Sydney, Australia, Australia~: Creativity \& Cognition Studios Press,
+  2005, S.~223--226. --
+\newblock ISBN 0-9751533-2-3
 
-\bibitem[Gibbs et~al.(2004{\natexlab{b}})Gibbs, Hew, u. Wadley]{Gibbs04a}
-\dinatlabel{Gibbs et~al. 2004{\natexlab{b}}}\\ \textsc{Gibbs}, Martin~R. ;
-  \textsc{Hew}, Kevin  ; \textsc{Wadley}, Greg:
+\bibitem[Gibbs u.\,a.(2004{\natexlab{b}})Gibbs, Hew und Wadley]{Gibbs04a}
+\dinatlabel{Gibbs u.\,a. 2004{\natexlab{b}}} \textsc{Gibbs}, Martin~R.~;
+  \textsc{Hew}, Kevin~; \textsc{Wadley}, Greg:
 \newblock Social Translucence of the Xbox Live Voice Channel.
-\newblock {In: }\textsc{Rauterberg}, Matthias (Hrsg.): \emph{ICEC} Bd. 3166,
-  Springer. --
-\newblock ISBN 3--540--22947--7, 377-385
+\newblock In: \textsc{Rauterberg}, Matthias (Hrsg.): \emph{ICEC} Bd.~3166,
+  Springer, 2004, S.~377--385. --
+\newblock URL
+  \url{http://dblp.uni-trier.de/db/conf/iwec/icec2004.html#GibbsHW04}. --
+\newblock ISBN 3-540-22947-7
 
-\bibitem[Gu et~al.(2005)Gu, Wen, Yu, u. Shae]{gu05}
-\dinatlabel{Gu et~al. 2005}\\ \textsc{Gu}, Xiaohui ; \textsc{Wen}, Zhen ;
-  \textsc{Yu}, Philip~S.  ; \textsc{Shae}, Zon-Yin:
+\bibitem[Gu u.\,a.(2005)Gu, Wen, Yu und Shae]{gu05}
+\dinatlabel{Gu u.\,a. 2005} \textsc{Gu}, Xiaohui~; \textsc{Wen}, Zhen~;
+  \textsc{Yu}, Philip~S.~; \textsc{Shae}, Zon-Yin:
 \newblock Supporting multi-party voice-over-IP services with peer-to-peer
   stream processing.
-\newblock   (2005), S. 303--306.
-\newblock  \url{http://dx.doi.org/http://doi.acm.org/10.1145/1101149.1101210}.
-  --
-\newblock DOI http://doi.acm.org/10.1145/1101149.1101210.
-\newblock ISBN 1--59593--044--2
+\newblock
+\newblock (2005), S.~303--306.
+\newblock ISBN 1-59593-044-2
 
-\bibitem[Hall u. Knapp(2005)]{hall05}
-\dinatlabel{Hall u. Knapp 2005}\\ \textsc{Hall}, Judith~A. ; \textsc{Knapp},
+\bibitem[Hall und Knapp(2005)]{hall05}
+\dinatlabel{Hall und Knapp 2005} \textsc{Hall}, Judith~A.~; \textsc{Knapp},
   Mark~L.:
 \newblock \emph{Nonverbal Communication in Human Interaction}.
 \newblock Wadsworth Publishing; 6 edition (March 8, 2005), 2005
 
-\bibitem[Handley u. Jacobson(1998)]{sdp98}
-\dinatlabel{Handley u. Jacobson 1998}\\ \textsc{Handley}, M. ;
+\bibitem[Halloran~J.(2003)]{halloran03}
+\dinatlabel{Halloran~J. 2003} \textsc{Halloran~J.}, Fitzpatrick~G.:
+\newblock From text to talk: multiplayer games and voiceover IP.
+\newblock
+\newblock (2003), S.~130--142
+
+\bibitem[Halloran~J.(2004)]{halloran04}
+\dinatlabel{Halloran~J. 2004} \textsc{Halloran~J.}, Fitzpatrick~G.:
+\newblock Does it matter if you don’t know who’s talking? Multiplayer gaming
+  with voiceover IP.
+\newblock
+\newblock (2004), S.~1215--1218. --
+\newblock URL \url{http://www.cogs.susx.ac.uk/interact/papers/pdfs/CHI'04.pdf}
+
+\bibitem[Handley und Jacobson(1998)]{sdp98}
+\dinatlabel{Handley und Jacobson 1998} \textsc{Handley}, M.~;
   \textsc{Jacobson}, V.:
 \newblock SDP: Session Description Protocol.
-\newblock {In: }\emph{http://www.ietf.org/rfc/rfc2327.txt}  (1998)
+\newblock In: \emph{http://www.ietf.org/rfc/rfc2327.txt}
+\newblock (1998)
 
-\bibitem[Hu u. Liao(2004)]{hu04}
-\dinatlabel{Hu u. Liao 2004}\\ \textsc{Hu}, Shun-Yun ; \textsc{Liao},
-  Guan-Ming:
+\bibitem[Hu und Liao(2004)]{hu04}
+\dinatlabel{Hu und Liao 2004} \textsc{Hu}, Shun-Yun~; \textsc{Liao}, Guan-Ming:
 \newblock Scalable peer-to-peer networked virtual environment.
-\newblock   (2004), S. 129--133.
-\newblock  \url{http://dx.doi.org/http://doi.acm.org/10.1145/1016540.1016552}.
-  --
-\newblock DOI http://doi.acm.org/10.1145/1016540.1016552.
-\newblock ISBN 1--58113--942--X
+\newblock
+\newblock (2004), S.~129--133.
+\newblock ISBN 1-58113-942-X
 
 \bibitem[IdSoftware(2008)]{idsof08}
-\dinatlabel{IdSoftware 2008}\\ \textsc{IdSoftware}:
+\dinatlabel{IdSoftware 2008} \textsc{IdSoftware}:
 \newblock Quake II / III Open Source.
-\newblock {In: }\emph{http://www.idsoftware.com/}  (2008)
+\newblock In: \emph{http://www.idsoftware.com/}
+\newblock (2008)
 
-\bibitem[Iimura et~al.(2004)Iimura, Hazeyama, u. Kadobayashi]{Iimura04}
-\dinatlabel{Iimura et~al. 2004}\\ \textsc{Iimura}, Takuji ; \textsc{Hazeyama},
-  Hiroaki  ; \textsc{Kadobayashi}, Youki:
+\bibitem[Iimura u.\,a.(2004)Iimura, Hazeyama und Kadobayashi]{Iimura04}
+\dinatlabel{Iimura u.\,a. 2004} \textsc{Iimura}, Takuji~; \textsc{Hazeyama},
+  Hiroaki~; \textsc{Kadobayashi}, Youki:
 \newblock Zoned federation of game servers: a peer-to-peer approach to scalable
   multi-player online games.
-\newblock   (2004), S. 116--120.
-\newblock  \url{http://dx.doi.org/http://doi.acm.org/10.1145/1016540.1016549}.
-  --
-\newblock DOI http://doi.acm.org/10.1145/1016540.1016549.
-\newblock ISBN 1--58113--942--X
+\newblock
+\newblock (2004), S.~116--120.
+\newblock ISBN 1-58113-942-X
 
 \bibitem[Ipoque(2007)]{ipoque:2007}
-\dinatlabel{Ipoque 2007}\\ \textsc{Ipoque}:
+\dinatlabel{Ipoque 2007} \textsc{Ipoque}:
 \newblock Internet Studie 2007.
-\newblock {In:
-  }\emph{http://www.ipoque.com/news\_\&\_events/internet\_studies/internet\_st%
-udy\_2007}  (2007)
+\newblock In:
+  \emph{http://www.ipoque.com/news\_\&\_events/internet\_studies/internet\_stu%
+dy\_2007}
+\newblock (2007)
 
 \bibitem[ITU(1996)]{mtu96}
-\dinatlabel{ITU 1996}\\ \textsc{ITU}:
+\dinatlabel{ITU 1996} \textsc{ITU}:
 \newblock Methods for subjective determination of transmission quality.
-\newblock {In: }\emph{International Telecomunications Union (ITU)}  (1996), S.
-  P.800
+\newblock In: \emph{International Telecomunications Union (ITU)}
+\newblock (1996), S.~P.800
 
 \bibitem[Jensen(1998)]{jensen98}
-\dinatlabel{Jensen 1998}\\ \textsc{Jensen}, Jens~F.:
+\dinatlabel{Jensen 1998} \textsc{Jensen}, Jens~F.:
 \newblock Interactivity: tracking a new concept in media and communication
-  studies, 1998
+  studies.
+\newblock
+\newblock Nordicom Review, 19(1), 185-204 (1998)
 
-\bibitem[Kawahara et~al.(2002)Kawahara, Morikawa, u. Aoyama]{kawahara02}
-\dinatlabel{Kawahara et~al. 2002}\\ \textsc{Kawahara}, Y. ; \textsc{Morikawa},
-  H.  ; \textsc{Aoyama}, T.:
+\bibitem[Kawahara u.\,a.(2002)Kawahara, Morikawa und Aoyama]{kawahara02}
+\dinatlabel{Kawahara u.\,a. 2002} \textsc{Kawahara}, Y.~; \textsc{Morikawa},
+  H.~; \textsc{Aoyama}, T.:
 \newblock A peer-to-peer message exchange scheme for large scale networked
   virtual environments.
-\newblock   (2002), S. 957--961.
-\newblock ISBN 0--7803--7510--6
+\newblock
+\newblock (2002), S.~957--961.
+\newblock ISBN 0-7803-7510-6
 
-\bibitem[Keller u. Simon(2003)]{Keller03}
-\dinatlabel{Keller u. Simon 2003}\\ \textsc{Keller}, Joaqu\'{\i}n ;
+\bibitem[Keller und Simon(2003)]{Keller03}
+\dinatlabel{Keller und Simon 2003} \textsc{Keller}, Joaqu\'{\i}n~;
   \textsc{Simon}, Gwendal:
 \newblock Solipsis: A Massively Multi-Participant Virtual World.
-\newblock   (2003), S. 262--268
+\newblock
+\newblock (2003), S.~262--268
 
 \bibitem[Kiesler(1997)]{kiesler97}
-\dinatlabel{Kiesler 1997}\\ \textsc{Kiesler}, Sara:
+\dinatlabel{Kiesler 1997} \textsc{Kiesler}, Sara:
 \newblock \emph{Culture of the Internet}.
 \newblock Lawrence Erlbaum Associates, 1997
 
-\bibitem[Knutsson et~al.(2004)Knutsson, Lu, Xu, u. Hopkins]{knutsson04}
-\dinatlabel{Knutsson et~al. 2004}\\ \textsc{Knutsson}, B. ; \textsc{Lu}, H. ;
-  \textsc{Xu}, W.  ; \textsc{Hopkins}, B.:
+\bibitem[Knutsson u.\,a.(2004)Knutsson, Lu, Xu und Hopkins]{knutsson04}
+\dinatlabel{Knutsson u.\,a. 2004} \textsc{Knutsson}, B.~; \textsc{Lu}, H.~;
+  \textsc{Xu}, W.~; \textsc{Hopkins}, B.:
 \newblock Peer-to-peer support for massively multiplayer games.
-\newblock   (2004).
-\newblock  \url{citeseer.ist.psu.edu/knutsson04peertopeer.html}
+\newblock
+\newblock (2004). --
+\newblock URL \url{citeseer.ist.psu.edu/knutsson04peertopeer.html}
 
-\bibitem[Lau et~al.(2005{\natexlab{a}})Lau, Crowcroft, Pias, Sharma, u.
+\bibitem[Lau u.\,a.(2005{\natexlab{a}})Lau, Crowcroft, Pias, Sharma und
   Lim]{lau05}
-\dinatlabel{Lau et~al. 2005{\natexlab{a}}}\\ \textsc{Lau}, Keong ;
-  \textsc{Crowcroft}, J. ; \textsc{Pias}, M. ; \textsc{Sharma}, R.  ;
+\dinatlabel{Lau u.\,a. 2005{\natexlab{a}}} \textsc{Lau}, Keong~;
+  \textsc{Crowcroft}, J.~; \textsc{Pias}, M.~; \textsc{Sharma}, R.~;
   \textsc{Lim}, S.:
 \newblock A survey and comparison of peer-to-peer overlay network schemes.
-\newblock {In: }\emph{Communications Surveys \& Tutorials, IEEE}  (2005),
-  72--93.
-\newblock  \url{http://ieeexplore.ieee.org/xpls/abs\_all.jsp?arnumber=1528337}
+\newblock In: \emph{Communications Surveys \& Tutorials, IEEE}
+\newblock (2005), S.~72--93. --
+\newblock URL
+  \url{http://ieeexplore.ieee.org/xpls/abs\_all.jsp?arnumber=1528337}
 
-\bibitem[Lau et~al.(2006)Lau, Soh, u. Webb]{lau06}
-\dinatlabel{Lau et~al. 2006}\\ \textsc{Lau}, William ; \textsc{Soh}, Sieteng  ;
+\bibitem[Lau u.\,a.(2006)Lau, Soh und Webb]{lau06}
+\dinatlabel{Lau u.\,a. 2006} \textsc{Lau}, William~; \textsc{Soh}, Sieteng~;
   \textsc{Webb}, Steven~D.:
 \newblock NGS: an application layer network game simulator.
-\newblock   (2006), S. 15--22.
-\newblock ISBN 86905--902--5
+\newblock
+\newblock (2006), S.~15--22.
+\newblock ISBN 86905-902-5
 
-\bibitem[Lau et~al.(2005{\natexlab{b}})Lau, Tan, u. Loh]{lau05b}
-\dinatlabel{Lau et~al. 2005{\natexlab{b}}}\\ \textsc{Lau}, William ;
-  \textsc{Tan}, Swee~A.  ; \textsc{Loh}, Allan:
+\bibitem[Lau u.\,a.(2005{\natexlab{b}})Lau, Tan und Loh]{lau05b}
+\dinatlabel{Lau u.\,a. 2005{\natexlab{b}}} \textsc{Lau}, William~;
+  \textsc{Tan}, Swee~A.~; \textsc{Loh}, Allan:
 \newblock Networked game mobility model for first-person-shooter games.
-\newblock   (2005), S. 1--9.
-\newblock  \url{http://dx.doi.org/http://doi.acm.org/10.1145/1103599.1103601}.
-  --
-\newblock DOI http://doi.acm.org/10.1145/1103599.1103601.
-\newblock ISBN 1--59593--156--2
+\newblock
+\newblock (2005), S.~1--9.
+\newblock ISBN 1-59593-156-2
 
-\bibitem[Manninen u. Kujanpää(2003)]{manninen03}
-\dinatlabel{Manninen u. Kujanpää 2003}\\ \textsc{Manninen}, Tony ;
+\bibitem[Manninen und Kujanpää(2003)]{manninen03}
+\dinatlabel{Manninen und Kujanpää 2003} \textsc{Manninen}, Tony~;
   \textsc{Kujanpää}, Tomi:
 \newblock Supporting visual elements of non-verbal communication in computer
   game avatars.
-\newblock   (2003).
 \newblock
+\newblock (2003). --
+\newblock URL
   \url{http://dblp.uni-trier.de/db/conf/digra/digra2003.html#KujanpaaM03}
 
 \bibitem[Microsoft(2008)]{xbox08}
-\dinatlabel{Microsoft 2008}\\ \textsc{Microsoft}:
+\dinatlabel{Microsoft 2008} \textsc{Microsoft}:
 \newblock Xbox Live.
-\newblock {In: }\emph{http://www.xbox.com/de-DE/live/}  (2008)
+\newblock In: \emph{http://www.xbox.com/de-DE/live/}
+\newblock (2008)
 
-\bibitem[Miladinovic u. Stadler(2002)]{miladinovic-multiparty}
-\dinatlabel{Miladinovic u. Stadler 2002}\\ \textsc{Miladinovic}, I. ;
+\bibitem[Miladinovic und Stadler(2002)]{miladinovic-multiparty}
+\dinatlabel{Miladinovic und Stadler 2002} \textsc{Miladinovic}, I.~;
   \textsc{Stadler}, J.:
 \newblock Multiparty Conference Signalling using the Session Initiation
   Protocol (SIP).
-\newblock {In: }\emph{International Network Conference}  (2002), 191-198.
-\newblock  \url{citeseer.ist.psu.edu/miladinovic02multiparty.html}
+\newblock In: \emph{International Network Conference}
+\newblock (2002), S.~191--198. --
+\newblock URL \url{citeseer.ist.psu.edu/miladinovic02multiparty.html}
 
 \bibitem[Morrisk(2006)]{morris06}
-\dinatlabel{Morrisk 2006}\\ \textsc{Morrisk}, S.:
+\dinatlabel{Morrisk 2006} \textsc{Morrisk}, S.:
 \newblock WADs, Bots and Mods: Multiplayer FPS Games as Co-Creative Media.
-\newblock {In: }\emph{Level Up Conference Proceedings} 3 (2006)
+\newblock In: \emph{Level Up Conference Proceedings}
+\newblock 3 (2006)
 
 \bibitem[Morse(1996)]{morse96}
-\dinatlabel{Morse 1996}\\ \textsc{Morse}, Katherine~L.:
+\dinatlabel{Morse 1996} \textsc{Morse}, Katherine~L.:
 \newblock Interest Management in Large-Scale Distributed Simulations.
-\newblock   (1996), Nr. ICS-TR-96-27, 17.
-\newblock  \url{citeseer.ist.psu.edu/morse96interest.html}
+\newblock
+\newblock (1996), Nr.~ICS-TR-96-27, S.~17. --
+\newblock URL \url{citeseer.ist.psu.edu/morse96interest.html}
 
 \bibitem[Museum(2008)]{CHM}
-\dinatlabel{Museum 2008}\\ \textsc{Museum}, Computer~H.:
+\dinatlabel{Museum 2008} \textsc{Museum}, Computer~H.:
 \newblock Comuter History Museum, PDP-1.
-\newblock {In:
-  }\emph{http://www.computerhistory.org/pdp-1/index.php?f=theme\&s=4\&ss=3}
-  (2008)
+\newblock In:
+  \emph{http://www.computerhistory.org/pdp-1/index.php?f=theme\&s=4\&ss=3}
+\newblock (2008)
 
 \bibitem[Oortmerssen(2008)]{sauerbraten08}
-\dinatlabel{Oortmerssen 2008}\\ \textsc{Oortmerssen}, Wouter:
+\dinatlabel{Oortmerssen 2008} \textsc{Oortmerssen}, Wouter:
 \newblock Sauerbraten.
-\newblock {In: }\emph{http://sauerbraten.org}  (2008)
+\newblock In: \emph{http://sauerbraten.org}
+\newblock (2008)
 
-\bibitem[Pena-Herborn u. Hancock(2004)]{pena04}
-\dinatlabel{Pena-Herborn u. Hancock 2004}\\ \textsc{Pena-Herborn}, Jorge ;
+\bibitem[Pena-Herborn und Hancock(2004)]{pena04}
+\dinatlabel{Pena-Herborn und Hancock 2004} \textsc{Pena-Herborn}, Jorge~;
   \textsc{Hancock}, Jeffrey~T.:
 \newblock An interaction process analysis of text-based communication in an
   online multiplayer videogame.
-\newblock {In: }\emph{International Communication Association}  (2004), S.~80
+\newblock In: \emph{International Communication Association}
+\newblock (2004), S.~80
 
-\bibitem[Porter u. Susmanw(2000)]{porter00}
-\dinatlabel{Porter u. Susmanw 2000}\\ \textsc{Porter}, Tom ; \textsc{Susmanw},
+\bibitem[Porter und Susmanw(2000)]{porter00}
+\dinatlabel{Porter und Susmanw 2000} \textsc{Porter}, Tom~; \textsc{Susmanw},
   Galyn:
 \newblock On site: creating lifelike characters in Pixar movies.
-\newblock {In: }\emph{Commun. ACM} 43 (2000), Nr. 1, S.~25.
-\newblock  \url{http://dx.doi.org/http://doi.acm.org/10.1145/323830.323839}. --
-\newblock DOI http://doi.acm.org/10.1145/323830.323839. --
-\newblock ISSN 0001--0782
+\newblock In: \emph{Commun. ACM}
+\newblock 43 (2000), Nr.~1, S.~25. --
+\newblock ISSN 0001-0782
 
 \bibitem[Postel(1980)]{udp80}
-\dinatlabel{Postel 1980}\\ \textsc{Postel}, J.:
+\dinatlabel{Postel 1980} \textsc{Postel}, J.:
 \newblock User Datagram Protocol.
-\newblock {In: }\emph{http://www.ietf.org/rfc/rfc768.txt}  (1980)
+\newblock In: \emph{http://www.ietf.org/rfc/rfc768.txt}
+\newblock (1980)
 
-\bibitem[Preece u. Maloney-Krichmar(2003)]{pearce03}
-\dinatlabel{Preece u. Maloney-Krichmar 2003}\\ \textsc{Preece}, Jenny ;
+\bibitem[Preece und Maloney-Krichmar(2003)]{pearce03}
+\dinatlabel{Preece und Maloney-Krichmar 2003} \textsc{Preece}, Jenny~;
   \textsc{Maloney-Krichmar}, Diane:
 \newblock Online communities: focusing on sociability and usability.
-\newblock   (2003), S. 596--620.
-\newblock ISBN 0--8058--3838--4
+\newblock
+\newblock (2003), S.~596--620.
+\newblock ISBN 0-8058-3838-4
 
-\bibitem[Radenkovic et~al.(2002)Radenkovic, Greenhalgh, u.
+\bibitem[Radenkovic u.\,a.(2002)Radenkovic, Greenhalgh und
   Benford]{radenkovic02}
-\dinatlabel{Radenkovic et~al. 2002}\\ \textsc{Radenkovic}, Milena ;
-  \textsc{Greenhalgh}, Chris  ; \textsc{Benford}, Steve:
+\dinatlabel{Radenkovic u.\,a. 2002} \textsc{Radenkovic}, Milena~;
+  \textsc{Greenhalgh}, Chris~; \textsc{Benford}, Steve:
 \newblock Deployment issues for multi-user audio support in CVEs.
-\newblock   (2002), S. 179--185.
-\newblock  \url{http://dx.doi.org/http://doi.acm.org/10.1145/585740.585770}. --
-\newblock DOI http://doi.acm.org/10.1145/585740.585770.
-\newblock ISBN 1--58113--530--0
+\newblock
+\newblock (2002), S.~179--185.
+\newblock ISBN 1-58113-530-0
 
-\bibitem[Ratnasamy et~al.(2001)Ratnasamy, Francis, Handley, Karp, u.
+\bibitem[Ratnasamy u.\,a.(2001)Ratnasamy, Francis, Handley, Karp und
   Schenker]{Ratnasamy01}
-\dinatlabel{Ratnasamy et~al. 2001}\\ \textsc{Ratnasamy}, Sylvia ;
-  \textsc{Francis}, Paul ; \textsc{Handley}, Mark ; \textsc{Karp}, Richard  ;
+\dinatlabel{Ratnasamy u.\,a. 2001} \textsc{Ratnasamy}, Sylvia~;
+  \textsc{Francis}, Paul~; \textsc{Handley}, Mark~; \textsc{Karp}, Richard~;
   \textsc{Schenker}, Scott:
 \newblock A scalable content-addressable network.
-\newblock   (2001), S. 161--172.
-\newblock  \url{http://dx.doi.org/http://doi.acm.org/10.1145/383059.383072}. --
-\newblock DOI http://doi.acm.org/10.1145/383059.383072.
-\newblock ISBN 1--58113--411--8
+\newblock
+\newblock (2001), S.~161--172.
+\newblock ISBN 1-58113-411-8
 
-\bibitem[Reichswald et~al.(1998)Reichswald, Möslein, Sachenbacherand, u.
+\bibitem[Reichswald u.\,a.(1998)Reichswald, Möslein, Sachenbacherand und
   H.Engelberger]{reichswald98}
-\dinatlabel{Reichswald et~al. 1998}\\ \textsc{Reichswald}, R. ;
-  \textsc{Möslein}, K. ; \textsc{Sachenbacherand}, K.  ;
-  \textsc{H.Engelberger}:
+\dinatlabel{Reichswald u.\,a. 1998} \textsc{Reichswald}, R.~; \textsc{Möslein},
+  K.~; \textsc{Sachenbacherand}, K.~; \textsc{H.Engelberger}:
 \newblock \emph{Telekooperation - Verteilte- Arbeits und Organisationsformen.}
 \newblock Springer, 1998
 
 \bibitem[Reid(1995)]{reid95}
-\dinatlabel{Reid 1995}\\ \textsc{Reid}, E.:
+\dinatlabel{Reid 1995} \textsc{Reid}, E.:
 \newblock Virtual worlds: Culture and imagination.
-\newblock {In: }\emph{Cybersociety: Computer-mediated communication and
-  community} 24 (1995), S. 164--83
+\newblock In: \emph{Cybersociety: Computer-mediated communication and
+  community}
+\newblock 24 (1995), S.~164--83
 
 \bibitem[ResoundingTechnologyInc(2008)]{wilco08}
-\dinatlabel{ResoundingTechnologyInc 2008}\\ \textsc{ResoundingTechnologyInc}:
+\dinatlabel{ResoundingTechnologyInc 2008} \textsc{ResoundingTechnologyInc}:
 \newblock Roger Wilco.
-\newblock {In: }\emph{http://rogerwilco.gamespy.com/}  (2008)
+\newblock In: \emph{http://rogerwilco.gamespy.com/}
+\newblock (2008)
 
 \bibitem[Rice(1992)]{rice92}
-\dinatlabel{Rice 1992}\\ \textsc{Rice}, R.:
+\dinatlabel{Rice 1992} \textsc{Rice}, R.:
 \newblock \emph{Task Analyzability, Use of New Media and Effectiveness: A
   Multi-site Exploration of Media Richness}.
 \newblock Organization Science, 3 (4): 475-500., 1992
 
-\bibitem[Riva u. Galimberti(2001)]{riva01}
-\dinatlabel{Riva u. Galimberti 2001}\\ \textsc{Riva}, G. ; \textsc{Galimberti},
+\bibitem[Riva und Galimberti(2001)]{riva01}
+\dinatlabel{Riva und Galimberti 2001} \textsc{Riva}, G.~; \textsc{Galimberti},
   C.:
 \newblock Actors, artifacts and inter-actions: Outline for a social psychology
   of cyberspace.
-\newblock {In: }\emph{Towards CyberPsychology}  (2001), S. 3--18
+\newblock In: \emph{Towards CyberPsychology}
+\newblock (2001), S.~3--18
 
-\bibitem[Rosenberg u. H.~Schulzrinne(2002)]{rosenberg02}
-\dinatlabel{Rosenberg u. H.~Schulzrinne 2002}\\ \textsc{Rosenberg}, J. ;
+\bibitem[Rosenberg und H.~Schulzrinne(2002)]{rosenberg02}
+\dinatlabel{Rosenberg und H.~Schulzrinne 2002} \textsc{Rosenberg}, J.~;
   \textsc{H.~Schulzrinne}, H.:
 \newblock Models for multi party conferencing in SIP - Internet Draft.
-\newblock {In: }\emph{Internet Engineering Task Force} Work in Progress (2002)
+\newblock In: \emph{Internet Engineering Task Force}
+\newblock Work in Progress (2002)
 
-\bibitem[Rosenberg et~al.(2006)Rosenberg, Mahy, u. Huitema]{turn06}
-\dinatlabel{Rosenberg et~al. 2006}\\ \textsc{Rosenberg}, J. ; \textsc{Mahy}, R.
-   ; \textsc{Huitema}, C.:
+\bibitem[Rosenberg u.\,a.(2006)Rosenberg, Mahy und Huitema]{turn06}
+\dinatlabel{Rosenberg u.\,a. 2006} \textsc{Rosenberg}, J.~; \textsc{Mahy}, R.~;
+  \textsc{Huitema}, C.:
 \newblock Traversal Using Relay NAT (TURN).
-\newblock {In:
-  }\emph{http://www.jdrosen.net/papers/draft-rosenberg-midcom-turn-08.txt}
-  (2006)
+\newblock In:
+  \emph{http://www.jdrosen.net/papers/draft-rosenberg-midcom-turn-08.txt}
+\newblock (2006)
 
-\bibitem[Rosenberg et~al.(2002)Rosenberg, Schulzrinne, Camarillo, Johnston,
-  Peterson, Sparks, Handley, u. Schooler]{sip02}
-\dinatlabel{Rosenberg et~al. 2002}\\ \textsc{Rosenberg}, J. ;
-  \textsc{Schulzrinne}, H. ; \textsc{Camarillo}, G. ; \textsc{Johnston}, A. ;
-  \textsc{Peterson}, J. ; \textsc{Sparks}, R. ; \textsc{Handley}, M.  ;
+\bibitem[Rosenberg u.\,a.(2002)Rosenberg, Schulzrinne, Camarillo, Johnston,
+  Peterson, Sparks, Handley und Schooler]{sip02}
+\dinatlabel{Rosenberg u.\,a. 2002} \textsc{Rosenberg}, J.~;
+  \textsc{Schulzrinne}, H.~; \textsc{Camarillo}, G.~; \textsc{Johnston}, A.~;
+  \textsc{Peterson}, J.~; \textsc{Sparks}, R.~; \textsc{Handley}, M.~;
   \textsc{Schooler}, E.:
 \newblock SIP: Session Initiation Protocol.
-\newblock {In: }\emph{http://www.ietf.org/rfc/rfc3261.txt}  (2002)
+\newblock In: \emph{http://www.ietf.org/rfc/rfc3261.txt}
+\newblock (2002)
 
-\bibitem[Rosenberg et~al.(2003)Rosenberg, Weinberger, Huitema, u. Mahy]{stun03}
-\dinatlabel{Rosenberg et~al. 2003}\\ \textsc{Rosenberg}, J. ;
-  \textsc{Weinberger}, J. ; \textsc{Huitema}, C.  ; \textsc{Mahy}, R.:
+\bibitem[Rosenberg u.\,a.(2003)Rosenberg, Weinberger, Huitema und Mahy]{stun03}
+\dinatlabel{Rosenberg u.\,a. 2003} \textsc{Rosenberg}, J.~;
+  \textsc{Weinberger}, J.~; \textsc{Huitema}, C.~; \textsc{Mahy}, R.:
 \newblock STUN - Simple Traversal of User Datagram Protocol (UDP) Through
   Network Address Translators (NATs).
-\newblock {In: }\emph{http://www.ietf.org/rfc/rfc3489.txt}  (2003)
+\newblock In: \emph{http://www.ietf.org/rfc/rfc3489.txt}
+\newblock (2003)
 
-\bibitem[Rowstron u. Druschel(2001)]{Rowstron01}
-\dinatlabel{Rowstron u. Druschel 2001}\\ \textsc{Rowstron}, Antony ;
+\bibitem[Rowstron und Druschel(2001)]{Rowstron01}
+\dinatlabel{Rowstron und Druschel 2001} \textsc{Rowstron}, Antony~;
   \textsc{Druschel}, Peter:
 \newblock Pastry: Scalable, Decentralized Object Location, and Routing for
   Large-Scale Peer-to-Peer Systems.
-\newblock {In: }\emph{Lecture Notes in Computer Science} 2218 (2001), 329--??
-\newblock  \url{citeseer.ist.psu.edu/rowstron01pastry.html}
+\newblock In: \emph{Lecture Notes in Computer Science}
+\newblock 2218 (2001), S.~329--??. --
+\newblock URL \url{citeseer.ist.psu.edu/rowstron01pastry.html}
 
-\bibitem[Safaei u. Dowlatshahi(9 12)]{safaei06}
-\dinatlabel{Safaei u. Dowlatshahi 9 12}\\ \textsc{Safaei}, F. ;
+\bibitem[Safaei und Dowlatshahi(9--12 July 2006)]{safaei06}
+\dinatlabel{Safaei und Dowlatshahi 9--12 July 2006} \textsc{Safaei}, F.~;
   \textsc{Dowlatshahi}, M.:
 \newblock Mobility Management for Untethered Immersive Communications.
-\newblock {In: }\emph{Multimedia and Expo, 2006 IEEE International Conference
-  on}  (9-12 July 2006), S. 1213--1216.
-\newblock  \url{http://dx.doi.org/10.1109/ICME.2006.262755}. --
-\newblock DOI 10.1109/ICME.2006.262755
+\newblock In: \emph{Multimedia and Expo, 2006 IEEE International Conference on}
+\newblock (9-12 July 2006), S.~1213--1216
 
-\bibitem[Safaei et~al.(2004)Safaei, Nguyen, u. Platt]{safei04b}
-\dinatlabel{Safaei et~al. 2004}\\ \textsc{Safaei}, F. ; \textsc{Nguyen},
-  Cong~D.  ; \textsc{Platt}, D.:
+\bibitem[Safaei u.\,a.(2004)Safaei, Nguyen und Platt]{safei04b}
+\dinatlabel{Safaei u.\,a. 2004} \textsc{Safaei}, F.~; \textsc{Nguyen},
+  Cong~D.~; \textsc{Platt}, D.:
 \newblock On the provision of immersive audio communication to massively
   multi-player online games.
-\newblock {In: }\emph{Computers and Communications, 2004. Proceedings. ISCC
-  2004. Ninth International Symposium on} 2 (2004), S. 1000--1005 Vol.2
+\newblock In: \emph{Computers and Communications, 2004. Proceedings. ISCC 2004.
+  Ninth International Symposium on}
+\newblock 2 (2004), S.~1000--1005 Vol.2
 
-\bibitem[Safaei et~al.(2006{\natexlab{a}})Safaei, Que, u. Boustead]{safei06b}
-\dinatlabel{Safaei et~al. 2006{\natexlab{a}}}\\ \textsc{Safaei}, F. ;
-  \textsc{Que}, Y.P.  ; \textsc{Boustead}, P.~a.:
+\bibitem[Safaei u.\,a.(2006{\natexlab{a}})Safaei, Que und Boustead]{safei06b}
+\dinatlabel{Safaei u.\,a. 2006{\natexlab{a}}} \textsc{Safaei}, F.~;
+  \textsc{Que}, Y.P.~; \textsc{Boustead}, P.:
 \newblock Minimising the computational cost of providing a mobile immersive
   communication environment (MICE).
-\newblock {In: }\emph{Consumer Communications and Networking Conference, 2006.
-  CCNC 2006. 3rd IEEE} 2 (2006), S. 1163--1167.
-\newblock  \url{http://dx.doi.org/10.1109/CCNC.2006.1593221}. --
-\newblock DOI 10.1109/CCNC.2006.1593221
+\newblock In: \emph{Consumer Communications and Networking Conference, 2006.
+  CCNC 2006. 3rd IEEE}
+\newblock 2 (2006), S.~1163--1167
 
 \bibitem[Safaei(2005)]{safei05}
-\dinatlabel{Safaei 2005}\\ \textsc{Safaei}, Farzad:
+\dinatlabel{Safaei 2005} \textsc{Safaei}, Farzad:
 \newblock DICE: Internet Delivery of Immersive Voice Communication for Crowded
   Virtual Spaces.
-\newblock {In: }\emph{VR '05: Proceedings of the 2005 IEEE Conference 2005 on
+\newblock In: \emph{VR '05: Proceedings of the 2005 IEEE Conference 2005 on
   Virtual Reality}.
-\newblock Washington, DC, USA : IEEE Computer Society, 2005. --
-\newblock ISBN 0--7803--8929--8, S. 35--41
+\newblock Washington, DC, USA~: IEEE Computer Society, 2005, S.~35--41. --
+\newblock ISBN 0-7803-8929-8
 
-\bibitem[Safaei u. Boustead(2004)]{safei04}
-\dinatlabel{Safaei u. Boustead 2004}\\ \textsc{Safaei}, Farzad ;
+\bibitem[Safaei und Boustead(2004)]{safei04}
+\dinatlabel{Safaei und Boustead 2004} \textsc{Safaei}, Farzad~;
   \textsc{Boustead}, Paul:
 \newblock Comparison of delivery architectures for immersive audio in crowded
   networked games.
-\newblock {In: }\emph{NOSSDAV '04: Proceedings of the 14th international
-  workshop on Network and operating systems support for digital audio and
-  video}.
-\newblock New York, NY, USA : ACM, 2004. --
-\newblock ISBN 1--58113--801--6, S. 22--27
+\newblock In: \emph{NOSSDAV '04: Proceedings of the 14th international workshop
+  on Network and operating systems support for digital audio and video}.
+\newblock New York, NY, USA~: ACM, 2004, S.~22--27. --
+\newblock ISBN 1-58113-801-6
 
-\bibitem[Safaei et~al.(2007)Safaei, Boustead, u. Que]{safei07}
-\dinatlabel{Safaei et~al. 2007}\\ \textsc{Safaei}, Farzad ; \textsc{Boustead},
-  Paul  ; \textsc{Que}, Ying~P.:
+\bibitem[Safaei u.\,a.(2007)Safaei, Boustead und Que]{safei07}
+\dinatlabel{Safaei u.\,a. 2007} \textsc{Safaei}, Farzad~; \textsc{Boustead},
+  Paul~; \textsc{Que}, Ying~P.:
 \newblock An immersive voice over IP service to wireless gaming: user study and
   impact of virtual world mobility.
-\newblock {In: }\emph{NetGames '07: Proceedings of the 6th ACM SIGCOMM workshop
+\newblock In: \emph{NetGames '07: Proceedings of the 6th ACM SIGCOMM workshop
   on Network and system support for games}.
-\newblock New York, NY, USA : ACM, 2007. --
-\newblock ISBN 978--0--9804460--0--5, S. 93--98
+\newblock New York, NY, USA~: ACM, 2007, S.~93--98. --
+\newblock ISBN 978-0-9804460-0-5
 
-\bibitem[Safaei et~al.(2006{\natexlab{b}})Safaei, Que, u. Boustead]{safei06}
-\dinatlabel{Safaei et~al. 2006{\natexlab{b}}}\\ \textsc{Safaei}, Farzad ;
-  \textsc{Que}, Ying~P.  ; \textsc{Boustead}, Paul:
+\bibitem[Safaei u.\,a.(2006{\natexlab{b}})Safaei, Que und Boustead]{safei06}
+\dinatlabel{Safaei u.\,a. 2006{\natexlab{b}}} \textsc{Safaei}, Farzad~;
+  \textsc{Que}, Ying~P.~; \textsc{Boustead}, Paul:
 \newblock Trading off computation for error in providing immersive voice
   communications for mobile gaming.
-\newblock   (2006), S.~31.
-\newblock  \url{http://dx.doi.org/http://doi.acm.org/10.1145/1230040.1230041}.
-  --
-\newblock DOI http://doi.acm.org/10.1145/1230040.1230041.
-\newblock ISBN 1--59593--589--4
+\newblock
+\newblock (2006), S.~31.
+\newblock ISBN 1-59593-589-4
 
 \bibitem[Schulze(1999)]{schulze99}
-\dinatlabel{Schulze 1999}\\ \textsc{Schulze}, M.:
+\dinatlabel{Schulze 1999} \textsc{Schulze}, M.:
 \newblock Substitution of paraverbal and nonverbal cues in the written medium
   of IRC.
-\newblock {In: }\emph{Dialogue analysis and the mass media: Proceedings of the
-  international conference in Erlangen} 2 (1999), S. 65--82
+\newblock In: \emph{Dialogue analysis and the mass media: Proceedings of the
+  international conference in Erlangen}
+\newblock 2 (1999), S.~65--82
 
-\bibitem[Schulzrinne et~al.(1996)Schulzrinne, Casner, Frederick, u.
+\bibitem[Schulzrinne u.\,a.(1996)Schulzrinne, Casner, Frederick und
   Jacobson]{rtp96}
-\dinatlabel{Schulzrinne et~al. 1996}\\ \textsc{Schulzrinne}, H. ;
-  \textsc{Casner}, S. ; \textsc{Frederick}, R.  ; \textsc{Jacobson}, V.:
+\dinatlabel{Schulzrinne u.\,a. 1996} \textsc{Schulzrinne}, H.~;
+  \textsc{Casner}, S.~; \textsc{Frederick}, R.~; \textsc{Jacobson}, V.:
 \newblock RTP: A Transport Protocol for Real-Time Applications.
-\newblock {In: }\emph{http://www.ietf.org/rfc/rfc1889.txt}  (1996)
+\newblock In: \emph{http://www.ietf.org/rfc/rfc1889.txt}
+\newblock (1996)
 
-\bibitem[Schulzrinne u. Rosenberg(1999)]{schulzrinne99}
-\dinatlabel{Schulzrinne u. Rosenberg 1999}\\ \textsc{Schulzrinne}, H. ;
+\bibitem[Schulzrinne und Rosenberg(1999)]{schulzrinne99}
+\dinatlabel{Schulzrinne und Rosenberg 1999} \textsc{Schulzrinne}, H.~;
   \textsc{Rosenberg}, J.:
 \newblock SIP call control services. Internet draft.
-\newblock {In: }\emph{Internet Engineering Task Force} Work in Progress (1999)
+\newblock In: \emph{Internet Engineering Task Force}
+\newblock Work in Progress (1999)
 
-\bibitem[Schulzrinne u. Lennox(2003)]{schulzrinne03}
-\dinatlabel{Schulzrinne u. Lennox 2003}\\ \textsc{Schulzrinne}, Henning ;
+\bibitem[Schulzrinne und Lennox(2003)]{schulzrinne03}
+\dinatlabel{Schulzrinne und Lennox 2003} \textsc{Schulzrinne}, Henning~;
   \textsc{Lennox}, Jonathan:
 \newblock A protocol for reliable decentralized conferencing.
-\newblock   (2003), S. 72--81.
-\newblock  \url{http://dx.doi.org/http://doi.acm.org/10.1145/776322.776335}. --
-\newblock DOI http://doi.acm.org/10.1145/776322.776335.
-\newblock ISBN 1--58113--694--3
+\newblock
+\newblock (2003), S.~72--81.
+\newblock ISBN 1-58113-694-3
 
-\bibitem[Schulzrinne u. Singh(2005)]{schulzrinne05}
-\dinatlabel{Schulzrinne u. Singh 2005}\\ \textsc{Schulzrinne}, Henning ;
+\bibitem[Schulzrinne und Singh(2005)]{schulzrinne05}
+\dinatlabel{Schulzrinne und Singh 2005} \textsc{Schulzrinne}, Henning~;
   \textsc{Singh}, Kundan:
 \newblock Peer-to-peer internet telephony using SIP.
-\newblock   (2005), S. 63--68.
-\newblock  \url{http://dx.doi.org/http://doi.acm.org/10.1145/1065983.1065999}.
-  --
-\newblock DOI http://doi.acm.org/10.1145/1065983.1065999.
-\newblock ISBN 1--58113--987--X
+\newblock
+\newblock (2005), S.~63--68.
+\newblock ISBN 1-58113-987-X
 
-\bibitem[Shannon u. Weaver(1963)]{shannon48}
-\dinatlabel{Shannon u. Weaver 1963}\\ \textsc{Shannon}, Claude~E. ;
+\bibitem[Shannon und Weaver(1963)]{shannon48}
+\dinatlabel{Shannon und Weaver 1963} \textsc{Shannon}, Claude~E.~;
   \textsc{Weaver}, Warren:
 \newblock \emph{A Mathematical Theory of Communication}.
-\newblock Champaign, IL, USA : University of Illinois Press, 1963. --
+\newblock Champaign, IL, USA~: University of Illinois Press, 1963. --
 \newblock ISBN 0252725484
 
-\bibitem[Singh u. Acharya(2004)]{singh04}
-\dinatlabel{Singh u. Acharya 2004}\\ \textsc{Singh}, Aameek ; \textsc{Acharya},
+\bibitem[Singh und Acharya(2004)]{singh04}
+\dinatlabel{Singh und Acharya 2004} \textsc{Singh}, Aameek~; \textsc{Acharya},
   Arup:
 \newblock Using session initiation protocol to build context-aware VoIP support
   for multiplayer networked games.
-\newblock   (2004), S. 98--105.
-\newblock  \url{http://dx.doi.org/http://doi.acm.org/10.1145/1016540.1016546}.
-  --
-\newblock DOI http://doi.acm.org/10.1145/1016540.1016546.
-\newblock ISBN 1--58113--942--X
+\newblock
+\newblock (2004), S.~98--105.
+\newblock ISBN 1-58113-942-X
 
-\bibitem[Singh u. Acharya(2005)]{singh05}
-\dinatlabel{Singh u. Acharya 2005}\\ \textsc{Singh}, Aameek ; \textsc{Acharya},
+\bibitem[Singh und Acharya(2005)]{singh05}
+\dinatlabel{Singh und Acharya 2005} \textsc{Singh}, Aameek~; \textsc{Acharya},
   Arup:
 \newblock Multiplayer networked gaming with the session initiation protocol.
-\newblock {In: }\emph{Comput. Netw.} 49 (2005), Nr. 1, S. 38--51.
-\newblock
-  \url{http://dx.doi.org/http://dx.doi.org/10.1016/j.comnet.2005.04.005}. --
-\newblock DOI http://dx.doi.org/10.1016/j.comnet.2005.04.005. --
-\newblock ISSN 1389--1286
+\newblock In: \emph{Comput. Netw.}
+\newblock 49 (2005), Nr.~1, S.~38--51. --
+\newblock ISSN 1389-1286
 
-\bibitem[Singh et~al.(2006)Singh, Acharya, Mahadevan, u. Shae]{singh06}
-\dinatlabel{Singh et~al. 2006}\\ \textsc{Singh}, Aameek ; \textsc{Acharya},
-  Arup ; \textsc{Mahadevan}, Priya  ; \textsc{Shae}, Zon-Yin:
+\bibitem[Singh u.\,a.(2006)Singh, Acharya, Mahadevan und Shae]{singh06}
+\dinatlabel{Singh u.\,a. 2006} \textsc{Singh}, Aameek~; \textsc{Acharya},
+  Arup~; \textsc{Mahadevan}, Priya~; \textsc{Shae}, Zon-Yin:
 \newblock SPLAT: a unified SIP services platform for VoIP applications:
   Research Articles.
-\newblock {In: }\emph{Int. J. Commun. Syst.} 19 (2006), Nr. 4, S. 425--444.
-\newblock  \url{http://dx.doi.org/http://dx.doi.org/10.1002/dac.v19:4}. --
-\newblock DOI http://dx.doi.org/10.1002/dac.v19:4. --
-\newblock ISSN 1074--5351
+\newblock In: \emph{Int. J. Commun. Syst.}
+\newblock 19 (2006), Nr.~4, S.~425--444. --
+\newblock ISSN 1074-5351
 
-\bibitem[Singhal u. Zyda(1999)]{singhal99}
-\dinatlabel{Singhal u. Zyda 1999}\\ \textsc{Singhal}, Sandeep ; \textsc{Zyda},
+\bibitem[Singhal und Zyda(1999)]{singhal99}
+\dinatlabel{Singhal und Zyda 1999} \textsc{Singhal}, Sandeep~; \textsc{Zyda},
   Michael:
 \newblock \emph{Networked virtual environments: design and implementation}.
-\newblock New York, NY, USA : ACM Press/Addison-Wesley Publishing Co., 1999. --
-\newblock ISBN 0--201--32557--8
+\newblock ACM Press Addison-Wesley Publishing Co., 1999. --
+\newblock ISBN 0-201-32557-8
 
 \bibitem[SonyEntertainment(2008)]{home08}
-\dinatlabel{SonyEntertainment 2008}\\ \textsc{SonyEntertainment}:
+\dinatlabel{SonyEntertainment 2008} \textsc{SonyEntertainment}:
 \newblock PlayStation Home.
-\newblock {In: }\emph{http://en.wikipedia.org/wiki/PlayStation_Home}  (2008)
+\newblock In: \emph{http://en.wikipedia.org/wiki/PlayStation\_Home}
+\newblock (2008)
 
-\bibitem[Stoica et~al.(2001)Stoica, Morris, Karger, Kaashoek, u.
+\bibitem[Stoica u.\,a.(2001)Stoica, Morris, Karger, Kaashoek und
   Balakrishnan]{Stoica01}
-\dinatlabel{Stoica et~al. 2001}\\ \textsc{Stoica}, Ion ; \textsc{Morris},
-  Robert ; \textsc{Karger}, David ; \textsc{Kaashoek}, Frans  ;
+\dinatlabel{Stoica u.\,a. 2001} \textsc{Stoica}, Ion~; \textsc{Morris},
+  Robert~; \textsc{Karger}, David~; \textsc{Kaashoek}, Frans~;
   \textsc{Balakrishnan}, Hari:
 \newblock Chord: {A} Scalable {Peer-To-Peer} Lookup Service for Internet
   Applications.
-\newblock   (2001), 149--160.
-\newblock  \url{citeseer.ist.psu.edu/stoica01chord.html}
+\newblock
+\newblock (2001), S.~149--160. --
+\newblock URL \url{citeseer.ist.psu.edu/stoica01chord.html}
+
+\bibitem[Stutzbach u.\,a.(2005)Stutzbach, Rejaie und Sen]{stutzbach05b}
+\dinatlabel{Stutzbach u.\,a. 2005} \textsc{Stutzbach}, Daniel~;
+  \textsc{Rejaie}, Reza~; \textsc{Sen}, Subhabrata:
+\newblock Characterizing unstructured overlay topologies in modern P2P
+  file-sharing systems.
+\newblock
+\newblock (2005), S.~1--14
 
 \bibitem[TeamSpeakSystemsGmbH(2008)]{teamspeak08}
-\dinatlabel{TeamSpeakSystemsGmbH 2008}\\ \textsc{TeamSpeakSystemsGmbH}:
+\dinatlabel{TeamSpeakSystemsGmbH 2008} \textsc{TeamSpeakSystemsGmbH}:
 \newblock Teamspeak.
-\newblock {In: }\emph{http://www.goteamspeak.com/}  (2008)
+\newblock In: \emph{http://www.goteamspeak.com/}
+\newblock (2008)
 
 \bibitem[TheOGRETeam(2008)]{ogre08}
-\dinatlabel{TheOGRETeam 2008}\\ \textsc{TheOGRETeam}:
+\dinatlabel{TheOGRETeam 2008} \textsc{TheOGRETeam}:
 \newblock Ogre3D.
-\newblock {In: }\emph{http://www.ogre3d.org/}  (2008)
+\newblock In: \emph{http://www.ogre3d.org/}
+\newblock (2008)
 
 \bibitem[Thon(2006)]{thon06}
-\dinatlabel{Thon 2006}\\ \textsc{Thon}, Jan~N.:
+\dinatlabel{Thon 2006} \textsc{Thon}, Jan~N.:
 \newblock Communication and Interaction in Multiplayer First Person Shooter
   Games.
-\newblock {In: }\emph{From Communication to Presence} 9 (2006).
-\newblock  \url{http://www.vepsy.com/communication/volume9.html}. --
+\newblock In: \emph{From Communication to Presence}
+\newblock 9 (2006). --
+\newblock URL \url{http://www.vepsy.com/communication/volume9.html}. --
 \newblock http://www.vepsy.com/communication/volume9.html
 
-\bibitem[Triebel et~al.(2007)Triebel, Guthier, u. Effelsberg]{triebel07g}
-\dinatlabel{Triebel et~al. 2007}\\ \textsc{Triebel}, Tonio ; \textsc{Guthier},
-  Benjamin  ; \textsc{Effelsberg}, Wolfgang:
+\bibitem[Triebel u.\,a.(2007)Triebel, Guthier und Effelsberg]{triebel07g}
+\dinatlabel{Triebel u.\,a. 2007} \textsc{Triebel}, Tonio~; \textsc{Guthier},
+  Benjamin~; \textsc{Effelsberg}, Wolfgang:
 \newblock Skype4Games.
-\newblock   (2007), S. 13--18.
-\newblock  \url{http://dx.doi.org/http://doi.acm.org/10.1145/1326257.1326260}.
-  --
-\newblock DOI http://doi.acm.org/10.1145/1326257.1326260.
-\newblock ISBN 978--0--9804460--0--5
+\newblock
+\newblock (2007), S.~13--18.
+\newblock ISBN 978-0-9804460-0-5
 
 \bibitem[Turkle(1995)]{turkle95}
-\dinatlabel{Turkle 1995}\\ \textsc{Turkle}, S.:
+\dinatlabel{Turkle 1995} \textsc{Turkle}, S.:
 \newblock Life on the Screen: Identity in the Age of the Internet.
-\newblock {In: }\emph{Touchstone} 3 (1995)
+\newblock In: \emph{Touchstone}
+\newblock 3 (1995)
 
-\bibitem[Wadley(2008)]{wadley08}
-\dinatlabel{Wadley 2008}\\ \textsc{Wadley}, Greg:
-\newblock Mundane metaverses: Communicating by voice in virtual worlds.
-\newblock {In: }\emph{International Workshop on Social Interaction and Mundane
-  Technologies}  (2008)
+\bibitem[Valin(Retrieved March 2008)]{speex08}
+\dinatlabel{Valin Retrieved March 2008} \textsc{Valin}, Jean-Marc:
+\newblock Speex.
+\newblock In: \emph{http://www.speex.org/}
+\newblock (Retrieved March 2008)
 
 \bibitem[Walther(2002)]{walther02}
-\dinatlabel{Walther 2002}\\ \textsc{Walther}, J.B.:
+\dinatlabel{Walther 2002} \textsc{Walther}, J.B.:
 \newblock \emph{Cues filtered out, cues filtered in: Computermediated
   communication and relationships.}
-\newblock Thousand Oaks, 2002 (Handbook of interpersonal communication 3rd.
-  Edition). --
-\newblock  pp. 529--563 S
+\newblock Thousand Oaks, 2002
+\newblock (Handbook of interpersonal communication 3rd. Edition). --
+\newblock pp. 529--563~S
 
-\bibitem[Wang et~al.(2007)Wang, Emmi, u. Faloutsos]{wang07}
-\dinatlabel{Wang et~al. 2007}\\ \textsc{Wang}, Alice ; \textsc{Emmi}, Michael
-  ; \textsc{Faloutsos}, Petros:
+\bibitem[Wang u.\,a.(2007)Wang, Emmi und Faloutsos]{wang07}
+\dinatlabel{Wang u.\,a. 2007} \textsc{Wang}, Alice~; \textsc{Emmi}, Michael~;
+  \textsc{Faloutsos}, Petros:
 \newblock Assembling an expressive facial animation system.
-\newblock   (2007), S. 21--26.
-\newblock  \url{http://dx.doi.org/http://doi.acm.org/10.1145/1274940.1274947}.
-  --
-\newblock DOI http://doi.acm.org/10.1145/1274940.1274947.
-\newblock ISBN 978--1--59593--749--0
+\newblock
+\newblock (2007), S.~21--26.
+\newblock ISBN 978-1-59593-749-0
 
 \bibitem[Wikipedia(2008)]{sipsoftware08}
-\dinatlabel{Wikipedia 2008}\\ \textsc{Wikipedia}:
+\dinatlabel{Wikipedia 2008} \textsc{Wikipedia}:
 \newblock Overview of SIP Software.
-\newblock {In: }\emph{http://en.wikipedia.org/wiki/List_of_SIP_software}
-  (2008)
+\newblock In: \emph{http://en.wikipedia.org/wiki/List\_of\_SIP\_software}
+\newblock (2008)
 
 \bibitem[Wilbur(1954)]{schramm54}
-\dinatlabel{Wilbur 1954}\\ \textsc{Wilbur}, Schramm:
+\dinatlabel{Wilbur 1954} \textsc{Wilbur}, Schramm:
 \newblock \emph{The Process and Effects of Mass Communication}.
 \newblock University of Illinois Press, 1954
 
-\bibitem[Wright et~al.(2002)Wright, Breidenbach, u. Boria]{wright02}
-\dinatlabel{Wright et~al. 2002}\\ \textsc{Wright}, Talmadge ;
-  \textsc{Breidenbach}, Paul  ; \textsc{Boria}, Eric:
+\bibitem[Wright u.\,a.(2002)Wright, Breidenbach und Boria]{wright02}
+\dinatlabel{Wright u.\,a. 2002} \textsc{Wright}, Talmadge~;
+  \textsc{Breidenbach}, Paul~; \textsc{Boria}, Eric:
 \newblock Creative Player Actions in FPS Online Video Games.
-\newblock {In: }\emph{Game Studies: The International Journal of Computer Game
-  Research} 2 (2002)
+\newblock In: \emph{Game Studies: The International Journal of Computer Game
+  Research}
+\newblock 2 (2002)
 
-\bibitem[Yu u. Vuong(2005)]{yu05}
-\dinatlabel{Yu u. Vuong 2005}\\ \textsc{Yu}, Anthony~(. ; \textsc{Vuong},
+\bibitem[Yu und Vuong(2005)]{yu05}
+\dinatlabel{Yu und Vuong 2005} \textsc{Yu}, Anthony~(.~; \textsc{Vuong},
   Son~T.:
 \newblock MOPAR: a mobile peer-to-peer overlay rrchitecture for interest
   management of massively multiplayer online games.
-\newblock   (2005), S. 99--104.
-\newblock  \url{http://dx.doi.org/http://doi.acm.org/10.1145/1065983.1066007}.
-  --
-\newblock DOI http://doi.acm.org/10.1145/1065983.1066007.
-\newblock ISBN 1--58113--987--X
+\newblock
+\newblock (2005), S.~99--104.
+\newblock ISBN 1-58113-987-X
 
-\bibitem[Zhao et~al.(2001)Zhao, Kubiatowicz, u. Joseph]{zaho01}
-\dinatlabel{Zhao et~al. 2001}\\ \textsc{Zhao}, B.~Y. ; \textsc{Kubiatowicz},
-  J.~D.  ; \textsc{Joseph}, A.~D.:
+\bibitem[Zhao u.\,a.(2001)Zhao, Kubiatowicz und Joseph]{zaho01}
+\dinatlabel{Zhao u.\,a. 2001} \textsc{Zhao}, B.~Y.~; \textsc{Kubiatowicz},
+  J.~D.~; \textsc{Joseph}, A.~D.:
 \newblock Tapestry: An Infrastructure for Fault-tolerant Wide-area Location and
   Routing.
-\newblock   (2001), April, Nr. UCB/CSD-01-1141.
-\newblock  \url{citeseer.ist.psu.edu/zhao01tapestry.html}
+\newblock
+\newblock (2001), April, Nr.~UCB/CSD-01-1141. --
+\newblock URL \url{citeseer.ist.psu.edu/zhao01tapestry.html}
 
 \end{thebibliography}

@@ -11,15 +11,8 @@ A level-1 auxiliary file: kapitel/kapitel_konstruktion.aux
 A level-1 auxiliary file: kapitel/kapitel_implementierung.aux
 A level-1 auxiliary file: kapitel/kapitel_network.aux
 A level-1 auxiliary file: kapitel/kapitel_benchmarking.aux
-The style file: literatur/natdin.bst
+The style file: dinat.bst
 A level-1 auxiliary file: kapitel/erklaerung.aux
 Database file #1: literatur/da.bib
-Warning--I didn't find a database entry for "speex"
-Warning--I didn't find a database entry for "stutzbach05"
-Warning--to sort, need editor, organization, or key in halloran03
-Warning--to sort, need editor, organization, or key in halloran04
-Warning--empty organization and editor in halloran03
-Warning--empty organization and editor in halloran04
-Warning--empty publisher in halloran04
-Warning--empty booktitle in jensen98
-(There were 8 warnings)
+Warning--empty pages in gibbs04
+(There was 1 warning)
