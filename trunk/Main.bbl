@@ -1,4 +1,4 @@
-\begin{thebibliography}{99}
+\begin{thebibliography}{108}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \makeatletter
@@ -49,6 +49,13 @@
 \newblock  \url{http://dx.doi.org/http://dx.doi.org/10.1109/93.482298}. --
 \newblock DOI http://dx.doi.org/10.1109/93.482298. --
 \newblock ISSN 1070--986X
+
+\bibitem[Arango et~al.(1999)Arango, Dugan, Elliott, Huitema, u.
+  Pickett]{mgcp99}
+\dinatlabel{Arango et~al. 1999}\\ \textsc{Arango}, M. ; \textsc{Dugan}, A. ;
+  \textsc{Elliott}, I. ; \textsc{Huitema}, C.  ; \textsc{Pickett}, S.:
+\newblock Media Gateway Control Protocol (MGCP).
+\newblock {In: }\emph{http://www.ietf.org/rfc/rfc2705.txt}  (1999)
 
 \bibitem[Bailenson et~al.(2002)Bailenson, Beall, u. Blascovich]{bailenson02}
 \dinatlabel{Bailenson et~al. 2002}\\ \textsc{Bailenson}, J.~N. ;
@@ -158,6 +165,14 @@
 \dinatlabel{Coopers 2007}\\ \textsc{Coopers}, Pricewater~H.:
 \newblock German Entertainment and Media Outlook: 2007-2011.
 \newblock {In: }\emph{http://www.pwc.de/portal/pub/!ut/p/kcxml}  (2007)
+
+\bibitem[Cuervo et~al.(2000)Cuervo, Greene, Rayhan, Huitema, Rosen, u.
+  Segers]{megaco00}
+\dinatlabel{Cuervo et~al. 2000}\\ \textsc{Cuervo}, F. ; \textsc{Greene}, N. ;
+  \textsc{Rayhan}, A. ; \textsc{Huitema}, C. ; \textsc{Rosen}, B.  ;
+  \textsc{Segers}, J.:
+\newblock Megaco Protocol.
+\newblock {In: }\emph{http://www.ietf.org/rfc/rfc3015.txt}  (2000)
 
 \bibitem[Diot u. Gautier(1999)]{diot99}
 \dinatlabel{Diot u. Gautier 1999}\\ \textsc{Diot}, C. ; \textsc{Gautier}, L.:
@@ -270,6 +285,12 @@ n\_\-\_2007}  (2007)
 \newblock \emph{Nonverbal Communication in Human Interaction}.
 \newblock Wadsworth Publishing; 6 edition (March 8, 2005), 2005
 
+\bibitem[Handley u. Jacobson(1998)]{sdp98}
+\dinatlabel{Handley u. Jacobson 1998}\\ \textsc{Handley}, M. ;
+  \textsc{Jacobson}, V.:
+\newblock SDP: Session Description Protocol.
+\newblock {In: }\emph{http://www.ietf.org/rfc/rfc2327.txt}  (1998)
+
 \bibitem[Hu u. Liao(2004)]{hu04}
 \dinatlabel{Hu u. Liao 2004}\\ \textsc{Hu}, Shun-Yun ; \textsc{Liao},
   Guan-Ming:
@@ -341,7 +362,7 @@ udy\_2007}  (2007)
 \newblock  \url{citeseer.ist.psu.edu/knutsson04peertopeer.html}
 
 \bibitem[Lau et~al.(2005{\natexlab{a}})Lau, Crowcroft, Pias, Sharma, u.
-  Lim]{lau05w}
+  Lim]{lau05}
 \dinatlabel{Lau et~al. 2005{\natexlab{a}}}\\ \textsc{Lau}, Keong ;
   \textsc{Crowcroft}, J. ; \textsc{Pias}, M. ; \textsc{Sharma}, R.  ;
   \textsc{Lim}, S.:
@@ -419,6 +440,20 @@ udy\_2007}  (2007)
   online multiplayer videogame.
 \newblock {In: }\emph{International Communication Association}  (2004), S.~80
 
+\bibitem[Porter u. Susmanw(2000)]{porter00}
+\dinatlabel{Porter u. Susmanw 2000}\\ \textsc{Porter}, Tom ; \textsc{Susmanw},
+  Galyn:
+\newblock On site: creating lifelike characters in Pixar movies.
+\newblock {In: }\emph{Commun. ACM} 43 (2000), Nr. 1, S.~25.
+\newblock  \url{http://dx.doi.org/http://doi.acm.org/10.1145/323830.323839}. --
+\newblock DOI http://doi.acm.org/10.1145/323830.323839. --
+\newblock ISSN 0001--0782
+
+\bibitem[Postel(1980)]{udp80}
+\dinatlabel{Postel 1980}\\ \textsc{Postel}, J.:
+\newblock User Datagram Protocol.
+\newblock {In: }\emph{http://www.ietf.org/rfc/rfc768.txt}  (1980)
+
 \bibitem[Preece u. Maloney-Krichmar(2003)]{pearce03}
 \dinatlabel{Preece u. Maloney-Krichmar 2003}\\ \textsc{Preece}, Jenny ;
   \textsc{Maloney-Krichmar}, Diane:
@@ -484,6 +519,30 @@ udy\_2007}  (2007)
   \textsc{H.~Schulzrinne}, H.:
 \newblock Models for multi party conferencing in SIP - Internet Draft.
 \newblock {In: }\emph{Internet Engineering Task Force} Work in Progress (2002)
+
+\bibitem[Rosenberg et~al.(2006)Rosenberg, Mahy, u. Huitema]{turn06}
+\dinatlabel{Rosenberg et~al. 2006}\\ \textsc{Rosenberg}, J. ; \textsc{Mahy}, R.
+   ; \textsc{Huitema}, C.:
+\newblock Traversal Using Relay NAT (TURN).
+\newblock {In:
+  }\emph{http://www.jdrosen.net/papers/draft-rosenberg-midcom-turn-08.txt}
+  (2006)
+
+\bibitem[Rosenberg et~al.(2002)Rosenberg, Schulzrinne, Camarillo, Johnston,
+  Peterson, Sparks, Handley, u. Schooler]{sip02}
+\dinatlabel{Rosenberg et~al. 2002}\\ \textsc{Rosenberg}, J. ;
+  \textsc{Schulzrinne}, H. ; \textsc{Camarillo}, G. ; \textsc{Johnston}, A. ;
+  \textsc{Peterson}, J. ; \textsc{Sparks}, R. ; \textsc{Handley}, M.  ;
+  \textsc{Schooler}, E.:
+\newblock SIP: Session Initiation Protocol.
+\newblock {In: }\emph{http://www.ietf.org/rfc/rfc3261.txt}  (2002)
+
+\bibitem[Rosenberg et~al.(2003)Rosenberg, Weinberger, Huitema, u. Mahy]{stun03}
+\dinatlabel{Rosenberg et~al. 2003}\\ \textsc{Rosenberg}, J. ;
+  \textsc{Weinberger}, J. ; \textsc{Huitema}, C.  ; \textsc{Mahy}, R.:
+\newblock STUN - Simple Traversal of User Datagram Protocol (UDP) Through
+  Network Address Translators (NATs).
+\newblock {In: }\emph{http://www.ietf.org/rfc/rfc3489.txt}  (2003)
 
 \bibitem[Rowstron u. Druschel(2001)]{Rowstron01}
 \dinatlabel{Rowstron u. Druschel 2001}\\ \textsc{Rowstron}, Antony ;
@@ -567,6 +626,13 @@ udy\_2007}  (2007)
   of IRC.
 \newblock {In: }\emph{Dialogue analysis and the mass media: Proceedings of the
   international conference in Erlangen} 2 (1999), S. 65--82
+
+\bibitem[Schulzrinne et~al.(1996)Schulzrinne, Casner, Frederick, u.
+  Jacobson]{rtp96}
+\dinatlabel{Schulzrinne et~al. 1996}\\ \textsc{Schulzrinne}, H. ;
+  \textsc{Casner}, S. ; \textsc{Frederick}, R.  ; \textsc{Jacobson}, V.:
+\newblock RTP: A Transport Protocol for Real-Time Applications.
+\newblock {In: }\emph{http://www.ietf.org/rfc/rfc1889.txt}  (1996)
 
 \bibitem[Schulzrinne u. Rosenberg(1999)]{schulzrinne99}
 \dinatlabel{Schulzrinne u. Rosenberg 1999}\\ \textsc{Schulzrinne}, H. ;

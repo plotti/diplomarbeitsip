@@ -1,4 +1,4 @@
-This is BibTeX, Version 0.99cThe top-level auxiliary file: J:\Diplomarbeit\Main.aux
+This is BibTeX, Version 0.99cThe top-level auxiliary file: C:\Documents and Settings\plotkowi\My Documents\Diplomarbeit\Main.aux
 A level-1 auxiliary file: kapitel/titel.aux
 A level-1 auxiliary file: kapitel/stichwortverzeichnis.aux
 A level-1 auxiliary file: kapitel/abkuerzungen.aux
@@ -14,26 +14,12 @@ A level-1 auxiliary file: kapitel/kapitel_benchmarking.aux
 The style file: literatur/natdin.bst
 A level-1 auxiliary file: kapitel/erklaerung.aux
 Database file #1: literatur/da.bib
-A bad cross reference---entry "manninen03"
-refers to entry "conf/digra/2003", which doesn't exist
-A bad cross reference---entry "Gibbs04a"
-refers to entry "conf/iwec/2004", which doesn't exist
-A bad cross reference---entry "Keller03"
-refers to entry "DBLP:conf/pdpta/2003-1", which doesn't exist
-Warning--I didn't find a database entry for "printout1"
-Warning--I didn't find a database entry for "triggerhappybuch"
-Warning--I didn't find a database entry for "porter00"
-Warning--I didn't find a database entry for "needed"
 Warning--I didn't find a database entry for "speex"
-Warning--I didn't find a database entry for "lua05"
 Warning--I didn't find a database entry for "stutzbach05"
-Warning--I didn't find a database entry for "conf/iwec/2004"
-Warning--I didn't find a database entry for "DBLP:conf/pdpta/2003-1"
-Warning--I didn't find a database entry for "conf/digra/2003"
 Warning--to sort, need editor, organization, or key in halloran03
 Warning--to sort, need editor, organization, or key in halloran04
 Warning--empty organization and editor in halloran03
 Warning--empty organization and editor in halloran04
 Warning--empty publisher in halloran04
 Warning--empty booktitle in jensen98
-(There were 3 error messages)
+(There were 8 warnings)
