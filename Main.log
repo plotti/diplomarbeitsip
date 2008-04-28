@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592-1.40.4 (MiKTeX 2.7) (preloaded format=latex 2008.3.17)  28 APR 2008 13:21
+This is pdfTeX, Version 3.141592-1.40.4 (MiKTeX 2.7) (preloaded format=latex 2008.3.17)  28 APR 2008 16:26
 entering extended mode
 **Main.tex
 (Main.tex
@@ -252,17 +252,32 @@ LaTeX Info: Redefining \cite on input line 602.
 Package: setspace 2000/12/01 6.7 Contributed and Supported LaTeX2e package
 
 Package: `setspace' 6.7 <2000/12/01>
-) ("C:\Program Files\MiKTeX 2.7\tex\latex\ltxmisc\url.sty"
+) ("C:\Program Files\MiKTeX 2.7\tex\latex\microtype\microtype.sty"
+Package: microtype 2008/02/29 v2.3a Micro-typography with pdfTeX (RS)
+\MT@toks=\toks22
+\MT@count=\count107
+LaTeX Info: Redefining \lsstyle on input line 1542.
+LaTeX Info: Redefining \lslig on input line 1542.
+\MT@outer@space=\skip58
+LaTeX Info: Redefining \textls on input line 1543.
+\MT@outer@kern=\dimen124
+LaTeX Info: Redefining \textmicrotypecontext on input line 2070.
+Package microtype Info: Loading configuration file microtype.cfg.
+
+("C:\Program Files\MiKTeX 2.7\tex\latex\microtype\microtype.cfg"
+File: microtype.cfg 2008/02/29 v2.3a microtype main configuration file (RS)
+))
+("C:\Program Files\MiKTeX 2.7\tex\latex\ltxmisc\url.sty"
 \Urlmuskip=\muskip11
 Package: url 2006/04/12  ver 3.3  Verb mode for urls, etc.
 )
 Class scrbook Info: You've told me to redefine the font selection of the
 (scrbook)           element `sectioning' that is an alias of element
-(scrbook)           `disposition' on input line 47.
+(scrbook)           `disposition' on input line 48.
 
 
 Class scrbook Warning: `pagehead' and `pagefoot' are aliases for the same
-(scrbook)              font element, changed on input line 54.
+(scrbook)              font element, changed on input line 55.
 
 (Main.aux (kapitel/titel.aux) (kapitel/stichwortverzeichnis.aux)
 (kapitel/abkuerzungen.aux) (kapitel/einleitung.aux)
@@ -271,27 +286,39 @@ Class scrbook Warning: `pagehead' and `pagefoot' are aliases for the same
 (kapitel/kapitel_konstruktion.aux) (kapitel/kapitel_implementierung.aux)
 (kapitel/kapitel_network.aux) (kapitel/kapitel_benchmarking.aux)
 (kapitel/erklaerung.aux))
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 60.
-LaTeX Font Info:    ... okay on input line 60.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 60.
-LaTeX Font Info:    ... okay on input line 60.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 60.
-LaTeX Font Info:    ... okay on input line 60.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 60.
-LaTeX Font Info:    ... okay on input line 60.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 60.
-LaTeX Font Info:    ... okay on input line 60.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 60.
-LaTeX Font Info:    ... okay on input line 60.
- (kapitel/titel.tex
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 61.
+LaTeX Font Info:    ... okay on input line 61.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 61.
+LaTeX Font Info:    ... okay on input line 61.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 61.
+LaTeX Font Info:    ... okay on input line 61.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 61.
+LaTeX Font Info:    ... okay on input line 61.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 61.
+LaTeX Font Info:    ... okay on input line 61.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 61.
+LaTeX Font Info:    ... okay on input line 61.
+LaTeX Info: Redefining \microtypecontext on input line 61.
+Package microtype Info: Generating DVI output.
+Package microtype Info: Character protrusion enabled (level 2).
+Package microtype Info: Using default protrusion set `alltext'.
+Package microtype Info: No font expansion.
+Package microtype Info: No tracking.
+Package microtype Info: No adjustment of interword spacing.
+Package microtype Info: No adjustment of character kerning.
+
+("C:\Program Files\MiKTeX 2.7\tex\latex\microtype\mt-cmr.cfg"
+File: mt-cmr.cfg 2008/02/29 v1.9a microtype config. file: Computer Modern Roman
+ (RS)
+)
+(kapitel/titel.tex
 File: grafiken/unilogo.eps Graphic file (type eps)
  <grafiken/unilogo.eps> [1
 
 
 
 
-])
-(Main.toc
+]) (Main.toc
 Class scrbook Info: You've told me to use the font selection of the element
 (scrbook)           `sectioning' that is an alias of element `disposition'
 (scrbook)            on input line 3.
@@ -343,7 +370,8 @@ Class scrbook Info: You've told me to use the font selection of the element
 (scrbook)            on input line 220.
 )
 \tf@toc=\write3
- [6] (kapitel/stichwortverzeichnis.tex) [7
+
+[6] (kapitel/stichwortverzeichnis.tex) [7
 
 
 ] (Main.lof)
@@ -355,7 +383,8 @@ Class scrbook Info: You've told me to use the font selection of the element
 \tf@lot=\write5
  [9
 
-] (kapitel/abkuerzungen.tex) [10
+]
+(kapitel/abkuerzungen.tex) [10
 
 
 ] (kapitel/einleitung.tex
@@ -385,17 +414,12 @@ LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
 File: grafiken/kommunikationsmodell-schramm2.eps Graphic file (type eps)
 
 <grafiken/kommunikationsmodell-schramm2.eps> [6]
-Overfull \hbox (5.4083pt too wide) in paragraph at lines 67--68
-\OT1/cmr/m/n/12 de die be-ab-sich-tigt mit-ein-an-der kom-mu-ni-zie-ren wo-bei 
-bei-de Sen-der und Empf[]anger
- []
-
 File: grafiken/mediarichness.eps Graphic file (type eps)
-<grafiken/mediarichness.eps> [7] [8]
+ <grafiken/mediarichness.eps>
+[7] [8]
 File: grafiken/proxemik.eps Graphic file (type eps)
- <grafiken/proxemik.eps> [9] [10] [11]
-[12] [13] [14] [15] [16] [17] [18] [19] [20] [21] [22]) [23]
-(kapitel/kapitel_folgerungundziele.tex
+ <grafiken/proxemik.eps> [9] [10] [11] [12] [13] [14] [15] [16] [17]
+[18] [19] [20] [21] [22]) [23] (kapitel/kapitel_folgerungundziele.tex
 Kapitel 3.
 File: grafiken/singlekanal-kommunikationsmodell.eps Graphic file (type eps)
 <grafiken/singlekanal-kommunikationsmodell.eps> [24
@@ -403,97 +427,17 @@ File: grafiken/singlekanal-kommunikationsmodell.eps Graphic file (type eps)
 
 
 ]
-Overfull \hbox (11.0343pt too wide) in paragraph at lines 23--25
-[][]\OT1/cmr/m/n/12 Geringe Au-dio-qua-lit[]at: Durch ei-ne ge-rin-ge Au-dio-qu
-a-lit[]at, ho-he St[]o rger[]ausche
- []
-
 File: grafiken/multi-kommunikationsmodell.eps Graphic file (type eps)
-<grafiken/multi-kommunikationsmodell.eps> [25]
-Overfull \hbox (4.7819pt too wide) in paragraph at lines 48--49
-\OT1/cmr/m/n/12 aber gleich-zei-tig ei-ne in-ter-per-so-nel-le Kom-mu-ni-ka-ti-
-on auf die-sem Ka-nal aus-schliet. 
- []
 
-[26]
-Overfull \hbox (34.53563pt too wide) in paragraph at lines 62--65
-[]\OT1/cmr/m/n/12 Angelehnt an die Stu-di-en von Gibs, soll es Ziel des Pro-to-
-typs sein, die Sprach[]ubertragung
- []
-
-[27] [28] [29] [30] [31] [32] [33]) [34] (kapitel/kapitel_sip.tex
+<grafiken/multi-kommunikationsmodell.eps> [25] [26] [27] [28] [29] [30]
+[31] [32] [33]) [34] (kapitel/kapitel_sip.tex
 Kapitel 4.
-
-Overfull \hbox (19.733pt too wide) in paragraph at lines 14--15
-\OT1/cmr/m/n/12 ver-wen-det, das dem Empf[]anger der Pa-ke-te er-laubt, trotz u
-n-zu-verl[]assiger []Ubertragung
- []
-
 [35
 
 
 
-]
-Overfull \hbox (0.80496pt too wide) in paragraph at lines 16--17
-\OT1/cmr/m/n/12 ex-ter-nen ent-spricht. Dies ist vor al-lem not-wen-dig, da die
- IP-Kontaktinformationen
- []
-
-
-Overfull \hbox (41.32545pt too wide) in paragraph at lines 23--24
-\OT1/cmr/m/n/12 Ge-spr[]achspartner ken-nen um einen di-rek-ten An-ruf aus-zuf[
-]uhren. Bei ei-ner Adress[]anderung
- []
-
-[36] [37]
-Overfull \hbox (10.84854pt too wide) in paragraph at lines 57--58
-[]\OT1/cmr/m/n/12 Es gibt meh-re-re Sprach-co-die-rungs-ver-fah-ren, die bei Vo
-IP ver-wen-det wer-den k[]onnen.
- []
-
-
-Overfull \hbox (36.33849pt too wide) in paragraph at lines 59--60
-[][]\OT1/cmr/m/n/12 Obwohl die Qua-lit[]at quan-ti-ta-tiv durch Pa-ra-me-ter, w
-ie die Lauf-zeit der IP-Pakete(Delay),
- []
-
-[38] [39] [40]
-Overfull \hbox (40.52037pt too wide) in paragraph at lines 123--124
-[][]\OT1/cmr/m/n/12 Ausgew[]ahlte er-wei-ter-te Request-Typen, die in zus[]atzl
-ichen RF-Cs(3428,3265) nachtr[]aglich
- []
-
-
-Overfull \hbox (25.71376pt too wide) in paragraph at lines 126--127
-\OT1/cmr/m/n/12 quests MI-ME (\OT1/cmr/m/it/12 Mul-ti-me-dia In-ter-net Mes-sa-
-ge Ex-ten-si-ons\OT1/cmr/m/n/12 ) Nach-rich-ten []ubertragen
- []
-
-[41] [42]
-Overfull \hbox (0.49585pt too wide) in paragraph at lines 179--181
-[]\OT1/cmr/m/n/12 Als In-stant Mes-sa-ging wird im all-ge-mei-nen ein Dienst zu
-r so-for-ti-gen []Ubermittlung
- []
-
-[43] [44] [45]
-Overfull \hbox (15.69696pt too wide) in paragraph at lines 240--241
-[][]\OT1/cmr/m/n/12 Garantie der Rei-hen-fol-ge von RTP-Paketen: RTP num-me-rie
-rt die []ubertragenen
- []
-
-[46]
-Overfull \hbox (21.84018pt too wide) in paragraph at lines 265--266
-[][]\OT1/cmr/m/n/12 Die wich-tigs-ten Auf-ga-ben von RT-CP sind die []Uberwachu
-ng der []Ubertragungsqualit[]at:
- []
-
-[47]
-Overfull \hbox (5.36504pt too wide) in paragraph at lines 286--287
-[][]\OT1/cmr/m/n/12 RTP-Zeitstempel: Die NTP-Zeit in Zeit-ein-hei-ten der RTP S
-es-si-on, die prim[]ar
- []
-
-[48]) [49] (kapitel/kapitel_recentwork.tex
+] [36] [37] [38] [39] [40] [41] [42] [43] [44] [45] [46] [47] [48]) [49]
+(kapitel/kapitel_recentwork.tex
 Kapitel 5.
 [50
 
@@ -505,40 +449,7 @@ Kapitel 6.
 
 
 
-] [56] [57] [58] [59]
-Overfull \hbox (18.88983pt too wide) in paragraph at lines 93--95
-[][]\OT1/cmr/m/n/12 Auch in-ter-essant: http://www.ietf.org/internet-drafts/dra
-ft-ietf-simple-simple-02.txt 
- []
-
-
-Overfull \hbox (17.26662pt too wide) in paragraph at lines 120--121
-[][]\OT1/cmr/m/n/12 Bei Ei-ner Um-set-zung mit SIP ste-hen uns fol-gen-de vier 
-Kom-bi-na-tio-nen zur Verf[]ugung: 
- []
-
-[60]
-Overfull \hbox (10.5874pt too wide) in paragraph at lines 140--141
-[][]\OT1/cmr/m/n/12 Multicast Kon-fe-ren-zen k[]onnen gut in Netz-wer-ken funk-
-tio-nie-ren die sie un-terst[]utzen.
- []
-
-[61] [62]
-
-Package natbib Warning: Citation `speex' on page 63 undefined on input line 176
-.
-
-[63]
-Overfull \hbox (10.48717pt too wide) in paragraph at lines 193--196
-[][]\OT1/cmr/m/n/12 Dieses Mo-dell hat je-doch ei-ni-ge Nach-tei-le: Die Exis-t
-enz ei-ner Kon-fe-renz ist abh[]angig
- []
-
-
-Package natbib Warning: Citation `speex' on page 64 undefined on input line 207
-.
-
-[64] [65] [66])
+] [56] [57] [58] [59] [60] [61] [62] [63] [64] [65] [66])
 Overfull \vbox (10.87498pt too high) has occurred while \output is active []
 
 
@@ -548,1810 +459,172 @@ Kapitel 7.
 
 
 
-] [69] [70] [71]
-Overfull \hbox (6.04727pt too wide) in paragraph at lines 104--105
-[]\OT1/cmr/m/n/12 In der pri-va-ten Zo-ne A va-ri-iert die Lautst[]arke der Tei
-l-neh-mer nicht in Abh[]angigkeit
- []
-
-[72] [73] [74] [75]) [76] (kapitel/kapitel_network.tex
+] [69] [70] [71] [72] [73] [74] [75]) [76] (kapitel/kapitel_network.tex
 Kapitel 8.
 [77
 
 
 
-] [78] [79] [80] [81] [82]
-
-Package natbib Warning: Citation `lau05' on page 83 undefined on input line 147
-.
-
-
-Package natbib Warning: Citation `stutzbach05' on page 83 undefined on input li
-ne 147.
-
-[83]
-
-Package natbib Warning: Citation `lau05' on page 84 undefined on input line 157
-.
-
-[84] [85] [86] [87] [88]) [89] (kapitel/kapitel_benchmarking.tex
+] [78] [79] [80] [81] [82] [83] [84] [85] [86] [87] [88]) [89]
+(kapitel/kapitel_benchmarking.tex
 Kapitel 9.
 ) [90
 
 
 
 ] (Main.bbl
-
-! LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.13 \dinatlabel{hal 2003}\\ \emph
-                                  {From text to talk: multiplayer games and
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.19 \dinatlabel{hal 2004}\\ \emph
-                                  {Does it matter if you donít know whoís ta...
-
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.25 \dinatlabel{Aarseth et~al. 2003}\\ \textsc
-                                               {Aarseth}, Espen ; \textsc{Sm...
-
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.31 \dinatlabel{Alexander 2003}\\ \textsc
-                                          {Alexander}, Thor ;
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.38 \dinatlabel{Alientrap 2008}\\ \textsc
-                                          {Alientrap}:
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.44 \dinatlabel{Anderson et~al. 1995}\\ \textsc
-                                                {Anderson}, David~B. ;
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.55 \dinatlabel{Arango et~al. 1999}\\ \textsc
-                                              {Arango}, M. ; \textsc{Dugan},...
-
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-Underfull \hbox (badness 5711) in paragraph at lines 55--59
+Underfull \hbox (badness 6063) in paragraph at lines 43--48
 [][]\OT1/cmr/m/sc/12 Arango\OT1/cmr/m/n/12 , M. ; \OT1/cmr/m/sc/12 Du-gan\OT1/c
 mr/m/n/12 , A. ; \OT1/cmr/m/sc/12 El-liott\OT1/cmr/m/n/12 , I. ; \OT1/cmr/m/sc/
 12 Hui-te-ma\OT1/cmr/m/n/12 , C. ;
  []
 
 
-Underfull \hbox (badness 2856) in paragraph at lines 55--59
+Underfull \hbox (badness 3078) in paragraph at lines 43--48
 \OT1/cmr/m/sc/12 Pickett\OT1/cmr/m/n/12 , S.:  Me-dia Ga-te-way Con-trol Pro-to
 -col (MG-CP).  In:
  []
-
-
-! LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.61 \dinatlabel{Bailenson et~al. 2002}\\ \textsc
-                                                 {Bailenson}, J.~N. ;
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.69 \dinatlabel{Bailenson et~al. 2001}\\ \textsc
-                                                 {Bailenson}, J.~N. ;
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.76 \dinatlabel{Bales 1950}\\ \textsc
-                                      {Bales}, R.F. ; \textsc{Press}, Addiso...
-
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.84 \dinatlabel{Begault 1994}\\ \textsc
-                                        {Begault}, Durand~R.:
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.91   \textsc
-              {BlizzardEntertainment}:
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.98   \textsc
-              {BlizzardEntertainment}:
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
 
 [91
 
 
 
 ]
-
-! LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.103 \dinatlabel{Bolot u. g 29 M}\\ \textsc
-                                            {Bolot}, J.-C. ; \textsc{g}, S.:
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.113 \dinatlabel{Bradner u. Mark 2002}\\ \textsc
-                                                 {Bradner}, E. ; \textsc{Mar...
-
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.119 \dinatlabel{Brandt 05}\\ \textsc
-                                      {Brandt}, D.:
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.124 \dinatlabel{Bryan et~al. 15 1}\\ \textsc
-                                              {Bryan}, D.A. ; \textsc{Loweka...
-
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.135 ...atlabel{Bryan u. Lowekamp 2007}\\ \textsc
-                                                  {Bryan}, David~A. ;
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.145 ...label{Carlsson u. Hagsand 18 2}\\ \textsc
-                                                  {Carlsson}, C. ;
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.154 \dinatlabel{Carter 2003}\\ \textsc
-                                        {Carter}, K.~A.:
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.160 \dinatlabel{Commission 2007}\\ \textsc
-                                            {Commission}, European:
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.165 \dinatlabel{Coopers 2007}\\ \textsc
-                                         {Coopers}, Pricewater~H.:
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.171 \dinatlabel{Cuervo et~al. 2000}\\ \textsc
-                                               {Cuervo}, F. ; \textsc{Greene...
-
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.178 \dinatlabel{Diot u. Gautier 1999}\\ \textsc
-                                                 {Diot}, C. ; \textsc{Gautie...
-
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-[92]
-
-! LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.186 \dinatlabel{Douglas et~al. 2005}\\ \textsc
-                                                {Douglas}, Scott ; \textsc{T...
-
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.193 \dinatlabel{ElectronicArts 2008}\\ \textsc
-                                                {ElectronicArts}:
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.198 \dinatlabel{EpicGames 2008}\\ \textsc
-                                           {EpicGames}:
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.203 \dinatlabel{Ernst\&Young 2007}\\ \textsc
-                                              {Ernst\&Young}:
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 203--208
+Underfull \hbox (badness 10000) in paragraph at lines 199--205
 [][]\OT1/cmr/m/sc/12 Ernst&Young\OT1/cmr/m/n/12 :  Di-gi-ta-le Spie-le in Deuts
 ch-land.  In:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 203--208
-\OT1/cmr/m/it/12 http://www.ey.com/global/content.nsf/Germany/Publikationen[]-
+Underfull \hbox (badness 10000) in paragraph at lines 199--205
+\OT1/cmr/m/it/12 http://www.ey.com/global/content.nsf/Germany/Publikationen[]-[
+]Studien[]-
  []
 
-
-! LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.210 ...el{chang Feng u. chi Feng 2003}\\ \textsc
-                                                  {Feng}, Wu chang ;
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.219 ...bel{FlagshipIndustriesInc 2008}\\ \textsc
-                                                  {FlagshipIndustriesInc}:
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.224 ...el{Gebhardt 2008{\natexlab{a}}}\\ \textsc
-                                                  {Gebhardt}, Nikolaus:
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 224--227
+[92]
+Underfull \hbox (badness 10000) in paragraph at lines 221--225
 [][]\OT1/cmr/m/sc/12 Gebhardt\OT1/cmr/m/n/12 , Ni-ko-laus:  irr-Klang.  In:
  []
 
 
-! LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.229 ...el{Gebhardt 2008{\natexlab{b}}}\\ \textsc
-                                                  {Gebhardt}, Nikolaus:
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 229--232
+Underfull \hbox (badness 10000) in paragraph at lines 227--231
 [][]\OT1/cmr/m/sc/12 Gebhardt\OT1/cmr/m/n/12 , Ni-ko-laus:  Irr-licht 3D En-gi-
 ne.  In:
  []
 
-
-! LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.234 \dinatlabel{Gerhard 1998}\\ \textsc
-                                         {Gerhard}, Maletzke:
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.239 \dinatlabel{Gibbs et~al. 2003}\\ \textsc
-                                              {Gibbs}, M. ; \textsc{Wadley},...
-
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.246 ...ibbs et~al. 2004{\natexlab{a}}}\\ \textsc
-                                                  {Gibbs}, Martin ;
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.253 \dinatlabel{Gibbs et~al. 2005}\\ \textsc
-                                              {Gibbs}, Martin~R. ; \textsc{a...
-
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.264 ...ibbs et~al. 2004{\natexlab{b}}}\\ \textsc
-                                                  {Gibbs}, Martin~R. ;
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
 [93]
-
-! LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.272 \dinatlabel{Gu et~al. 2005}\\ \textsc
-                                           {Gu}, Xiaohui ; \textsc{Wen}, Zhen ;
-
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.283 \dinatlabel{Hall u. Knapp 2005}\\ \textsc
-                                               {Hall}, Judith~A. ; \textsc{K...
-
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.289 ...label{Handley u. Jacobson 1998}\\ \textsc
-                                                  {Handley}, M. ;
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.295 \dinatlabel{Hu u. Liao 2004}\\ \textsc
-                                            {Hu}, Shun-Yun ; \textsc{Liao},
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-Underfull \hbox (badness 4660) in paragraph at lines 295--303
-[][]\OT1/cmr/m/sc/12 Hu\OT1/cmr/m/n/12 , Shun-Yun ; \OT1/cmr/m/sc/12 Liao\OT1/c
-mr/m/n/12 , Guan-Ming:  Sca-la-ble peer-to-peer net-
- []
-
-
-Underfull \hbox (badness 3965) in paragraph at lines 295--303
-\OT1/cmr/m/n/12 wor-ked vir-tu-al en-vi-ron-ment.  (2004), S. 129--133.  $\OT1/
-cmtt/m/n/12 http : / / dx .
- []
-
-
-Underfull \hbox (badness 7273) in paragraph at lines 295--303
-\OT1/cmtt/m/n/12 doi . org / http : / / doi . acm . org / 10 . 1145 / 1016540 .
- 1016552$\OT1/cmr/m/n/12 . --  DOI
- []
-
-
-! LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.305 \dinatlabel{IdSoftware 2008}\\ \textsc
-                                            {IdSoftware}:
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.310 \dinatlabel{Iimura et~al. 2004}\\ \textsc
-                                               {Iimura}, Takuji ; \textsc{Ha...
-
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-Underfull \hbox (badness 3601) in paragraph at lines 310--319
-\OT1/cmr/m/n/12 ned fe-de-ra-ti-on of ga-me ser-vers: a peer-to-peer ap-proach 
-to sca-
- []
-
-
-Underfull \hbox (badness 3049) in paragraph at lines 310--319
-\OT1/cmr/m/n/12 la-ble multi-player on-li-ne ga-mes.  (2004), S. 116--120.  $\O
-T1/cmtt/m/n/12 http : / /
- []
-
-
-! LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.321 \dinatlabel{Ipoque 2007}\\ \textsc
-                                        {Ipoque}:
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 321--326
+Underfull \hbox (badness 10000) in paragraph at lines 332--338
 [][]\OT1/cmr/m/sc/12 Ipoque\OT1/cmr/m/n/12 :  In-ter-net Stu-die 2007.  In:
  []
 
 
-Overfull \hbox (6.8924pt too wide) in paragraph at lines 321--326
+Overfull \hbox (7.7924pt too wide) in paragraph at lines 332--338
 \OT1/cmr/m/it/12 http://www.ipoque.com/news[]&[]events/internet[]studies/intern
 et[]study[]2007
  []
 
 
-! LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.328 \dinatlabel{ITU 1996}\\ \textsc
-                                     {ITU}:
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.334 \dinatlabel{Jensen 1998}\\ \textsc
-                                        {Jensen}, Jens~F.:
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.339 \dinatlabel{Kawahara et~al. 2002}\\ \textsc
-                                                 {Kawahara}, Y. ; \textsc{Mo...
-
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.347 \dinatlabel{Keller u. Simon 2003}\\ \textsc
-                                                 {Keller}, Joaqu\'{\i}n ;
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.353 \dinatlabel{Kiesler 1997}\\ \textsc
-                                         {Kiesler}, Sara:
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
+Underfull \hbox (badness 1062) in paragraph at lines 362--367
+[][]\OT1/cmr/m/sc/12 Keller\OT1/cmr/m/n/12 , Joaqun ; \OT1/cmr/m/sc/12 Si-mon
+\OT1/cmr/m/n/12 , Gwen-dal:  So-lip-sis: A Mas-si-ve-ly Multi-
+ []
 
 [94]
-
-! LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.358 \dinatlabel{Knutsson et~al. 2004}\\ \textsc
-                                                 {Knutsson}, B. ; \textsc{Lu...
-
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
+Underfull \hbox (badness 1112) in paragraph at lines 425--432
+[][]\OT1/cmr/m/sc/12 Miladinovic\OT1/cmr/m/n/12 , I. ; \OT1/cmr/m/sc/12 Stad-le
+r\OT1/cmr/m/n/12 , J.:  Mul-ti-par-ty Con-fe-rence Si-gnal-ling
+ []
 
 
-! LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.366 ...{Lau et~al. 2005{\natexlab{a}}}\\ \textsc
-                                                  {Lau}, Keong ;
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
+Underfull \hbox (badness 1194) in paragraph at lines 425--432
+\OT1/cmr/m/n/12 using the Ses-si-on In-itia-ti-on Pro-to-col (SIP).  In: \OT1/c
+mr/m/it/12 In-ter-na-tio-nal Net-
+ []
 
 
-! LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.375 \dinatlabel{Lau et~al. 2006}\\ \textsc
-                                            {Lau}, William ; \textsc{Soh}, S...
-
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.382 ...{Lau et~al. 2005{\natexlab{b}}}\\ \textsc
-                                                  {Lau}, William ;
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.392 ...abel{Manninen u. Kujanp‰‰ 2003}\\ \textsc
-                                                  {Manninen}, Tony ;
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.401 \dinatlabel{Microsoft 2008}\\ \textsc
-                                           {Microsoft}:
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.406 ...el{Miladinovic u. Stadler 2002}\\ \textsc
-                                                  {Miladinovic}, I. ;
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.414 \dinatlabel{Morrisk 2006}\\ \textsc
-                                         {Morrisk}, S.:
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.419 \dinatlabel{Morse 1996}\\ \textsc
-                                       {Morse}, Katherine~L.:
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.425 \dinatlabel{Museum 2008}\\ \textsc
-                                        {Museum}, Computer~H.:
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-Underfull \hbox (badness 1466) in paragraph at lines 425--430
+Underfull \hbox (badness 1603) in paragraph at lines 447--452
 [][]\OT1/cmr/m/sc/12 Museum\OT1/cmr/m/n/12 , Com-pu-ter H.:  Co-mu-ter His-to-r
 y Mu-se-um, PDP-1.  In:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 425--430
+Underfull \hbox (badness 10000) in paragraph at lines 447--452
 \OT1/cmr/m/it/12 http://www.computerhistory.org/pdp-1/index.php?f=theme&s=4&ss=
 3
  []
 
 
-! LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.432 \dinatlabel{Oortmerssen 2008}\\ \textsc
-                                             {Oortmerssen}, Wouter:
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.437 ...l{Pena-Herborn u. Hancock 2004}\\ \textsc
-                                                  {Pena-Herborn}, Jorge ;
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.444 ...atlabel{Porter u. Susmanw 2000}\\ \textsc
-                                                  {Porter}, Tom ; \textsc{Su...
-
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-[95]
-
-! LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.453 \dinatlabel{Postel 1980}\\ \textsc
-                                        {Postel}, J.:
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 453--456
+Underfull \hbox (badness 10000) in paragraph at lines 476--480
 [][]\OT1/cmr/m/sc/12 Postel\OT1/cmr/m/n/12 , J.:  User Da-ta-gram Pro-to-col.  
 In:
  []
 
-
-! LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.458 ...reece u. Maloney-Krichmar 2003}\\ \textsc
-                                                  {Preece}, Jenny ;
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.466 ...atlabel{Radenkovic et~al. 2002}\\ \textsc
-                                                  {Radenkovic}, Milena ;
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-Underfull \hbox (badness 1028) in paragraph at lines 466--473
-\OT1/cmr/m/n/12 ploy-ment is-su-es for multi-user au-dio sup-port in CVEs.  (20
-02), S.
- []
-
-
-! LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.476 \dinatlabel{Ratnasamy et~al. 2001}\\ \textsc
-                                                  {Ratnasamy}, Sylvia ;
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.487 ...atlabel{Reichswald et~al. 1998}\\ \textsc
-                                                  {Reichswald}, R. ;
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-Underfull \hbox (badness 8151) in paragraph at lines 487--492
+[95]
+Underfull \hbox (badness 10000) in paragraph at lines 510--514
 [][]\OT1/cmr/m/sc/12 Reichswald\OT1/cmr/m/n/12 , R. ; \OT1/cmr/m/sc/12 M[]oslei
 n\OT1/cmr/m/n/12 , K. ; \OT1/cmr/m/sc/12 Sa-chen-ba-che-rand\OT1/cmr/m/n/12 , K
 . ;
  []
 
 
-! LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.494 \dinatlabel{Reid 1995}\\ \textsc
-                                      {Reid}, E.:
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.500 ...l{ResoundingTechnologyInc 2008}\\ \textsc
-                                                  {ResoundingTechnologyInc}:
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 500--503
+Underfull \hbox (badness 10000) in paragraph at lines 523--527
 [][]\OT1/cmr/m/sc/12 ResoundingTechnologyInc\OT1/cmr/m/n/12 :  Ro-ger Wil-co.  
 In:
  []
 
-
-! LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.505 \dinatlabel{Rice 1992}\\ \textsc
-                                      {Rice}, R.:
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.511 ...tlabel{Riva u. Galimberti 2001}\\ \textsc
-                                                  {Riva}, G. ; \textsc{Galim...
-
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.518 ...senberg u. H.~Schulzrinne 2002}\\ \textsc
-                                                  {Rosenberg}, J. ;
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.524 \dinatlabel{Rosenberg et~al. 2006}\\ \textsc
-                                                  {Rosenberg}, J. ; \textsc{...
-
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
 [96]
-
-! LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.533 \dinatlabel{Rosenberg et~al. 2002}\\ \textsc
-                                                  {Rosenberg}, J. ;
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.541 \dinatlabel{Rosenberg et~al. 2003}\\ \textsc
-                                                  {Rosenberg}, J. ;
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.548 ...abel{Rowstron u. Druschel 2001}\\ \textsc
-                                                  {Rowstron}, Antony ;
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.556 ...bel{Safaei u. Dowlatshahi 9 12}\\ \textsc
-                                                  {Safaei}, F. ;
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.565 \dinatlabel{Safaei et~al. 2004}\\ \textsc
-                                               {Safaei}, F. ; \textsc{Nguyen},
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.573 ...faei et~al. 2006{\natexlab{a}}}\\ \textsc
-                                                  {Safaei}, F. ;
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.583 \dinatlabel{Safaei 2005}\\ \textsc
-                                        {Safaei}, Farzad:
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.592 ...tlabel{Safaei u. Boustead 2004}\\ \textsc
-                                                  {Safaei}, Farzad ;
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.603 \dinatlabel{Safaei et~al. 2007}\\ \textsc
-                                               {Safaei}, Farzad ; \textsc{Bo...
-
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-[97]
-
-! LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.613 ...faei et~al. 2006{\natexlab{b}}}\\ \textsc
-                                                  {Safaei}, Farzad ;
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.624 \dinatlabel{Schulze 1999}\\ \textsc
-                                         {Schulze}, M.:
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.632 ...tlabel{Schulzrinne et~al. 1996}\\ \textsc
-                                                  {Schulzrinne}, H. ;
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-Underfull \hbox (badness 2961) in paragraph at lines 632--636
+Underfull \hbox (badness 3229) in paragraph at lines 657--662
 [][]\OT1/cmr/m/sc/12 Schulzrinne\OT1/cmr/m/n/12 , H. ; \OT1/cmr/m/sc/12 Cas-ner
 \OT1/cmr/m/n/12 , S. ; \OT1/cmr/m/sc/12 Fre-de-rick\OT1/cmr/m/n/12 , R. ; \OT1/
 cmr/m/sc/12 Ja-cob-son\OT1/cmr/m/n/12 ,
  []
 
 
-Underfull \hbox (badness 1122) in paragraph at lines 632--636
+Underfull \hbox (badness 1259) in paragraph at lines 657--662
 \OT1/cmr/m/n/12 V.:  RTP: A Trans-port Pro-to-col for Real-Time Ap-p-li-ca-ti-o
 ns.  In:
  []
 
-
-! LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.638 ...{Schulzrinne u. Rosenberg 1999}\\ \textsc
-                                                  {Schulzrinne}, H. ;
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.644 ...bel{Schulzrinne u. Lennox 2003}\\ \textsc
-                                                  {Schulzrinne}, Henning ;
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-Underfull \hbox (badness 1577) in paragraph at lines 644--651
-[][]\OT1/cmr/m/sc/12 Schulzrinne\OT1/cmr/m/n/12 , Hen-ning ; \OT1/cmr/m/sc/12 L
-enn-ox\OT1/cmr/m/n/12 , Jo-na-than:  A pro-to-col for re-
- []
-
-
-Underfull \hbox (badness 5231) in paragraph at lines 644--651
-\OT1/cmr/m/n/12 lia-ble de-cen-tra-li-zed con-fe-ren-cing.  (2003), S. 72--81. 
- $\OT1/cmtt/m/n/12 http : / /
- []
-
-
-Underfull \hbox (badness 3861) in paragraph at lines 644--651
-\OT1/cmtt/m/n/12 dx . doi . org / http : / / doi . acm . org / 10 . 1145 / 7763
-22 . 776335$\OT1/cmr/m/n/12 . --  DOI
- []
-
-
-! LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.653 ...abel{Schulzrinne u. Singh 2005}\\ \textsc
-                                                  {Schulzrinne}, Henning ;
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-Underfull \hbox (badness 6412) in paragraph at lines 653--661
-[][]\OT1/cmr/m/sc/12 Schulzrinne\OT1/cmr/m/n/12 , Hen-ning ; \OT1/cmr/m/sc/12 S
-in-gh\OT1/cmr/m/n/12 , Kun-dan:  Peer-to-peer in-ter-
- []
-
-
-Underfull \hbox (badness 3977) in paragraph at lines 653--661
-\OT1/cmr/m/n/12 net te-le-phony using SIP.  (2005), S. 63--68.  $\OT1/cmtt/m/n/
-12 http : / / dx . doi .
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 653--661
-\OT1/cmtt/m/n/12 org / http : / / doi . acm . org / 10 . 1145 / 1065983 . 10659
-99$\OT1/cmr/m/n/12 . --  DOI
- []
-
-
-! LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.663 ...atlabel{Shannon u. Weaver 1963}\\ \textsc
-                                                  {Shannon}, Claude~E. ;
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.670 \dinatlabel{Singh u. Acharya 2004}\\ \textsc
-                                                  {Singh}, Aameek ; \textsc{...
-
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.681 \dinatlabel{Singh u. Acharya 2005}\\ \textsc
-                                                  {Singh}, Aameek ; \textsc{...
-
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.691 \dinatlabel{Singh et~al. 2006}\\ \textsc
-                                              {Singh}, Aameek ; \textsc{Acha...
-
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-[98]
-
-! LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.701 \dinatlabel{Singhal u. Zyda 1999}\\ \textsc
-                                                 {Singhal}, Sandeep ; \texts...
-
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.708 ...atlabel{SonyEntertainment 2008}\\ \textsc
-                                                  {SonyEntertainment}:
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.710 ...//en.wikipedia.org/wiki/PlayStation_Home}
-                                                    (2008)
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-! Extra }, or forgotten $.
-<recently read> \egroup 
-                        
-l.710 ...//en.wikipedia.org/wiki/PlayStation_Home}
-                                                    (2008)
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.711 
-      
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.711 
-      
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 708--711
+[97]
+Underfull \hbox (badness 10000) in paragraph at lines 727--731
 [][]\OT1/cmr/m/sc/12 SonyEntertainment\OT1/cmr/m/n/12 :  Play-Sta-ti-on Ho-me. 
  In:
  []
 
 
-! LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.714 \dinatlabel{Stoica et~al. 2001}\\ \textsc
-                                               {Stoica}, Ion ; \textsc{Morris},
-
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.723 ...abel{TeamSpeakSystemsGmbH 2008}\\ \textsc
-                                                  {TeamSpeakSystemsGmbH}:
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 723--726
+Underfull \hbox (badness 10000) in paragraph at lines 752--756
 [][]\OT1/cmr/m/sc/12 TeamSpeakSystemsGmbH\OT1/cmr/m/n/12 :  Teams-peak.  In:
  []
 
 
-! LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.728 \dinatlabel{TheOGRETeam 2008}\\ \textsc
-                                             {TheOGRETeam}:
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.733 \dinatlabel{Thon 2006}\\ \textsc
-                                      {Thon}, Jan~N.:
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-Underfull \hbox (badness 3735) in paragraph at lines 733--739
-[][]\OT1/cmr/m/sc/12 Thon\OT1/cmr/m/n/12 , Jan N.:  Com-mu-ni-ca-ti-on and In-t
-er-ac-ti-on in Mul-ti-player
+Underfull \hbox (badness 1178) in paragraph at lines 764--771
+\OT1/cmr/m/n/12 Per-son Shoo-ter Ga-mes.  In: \OT1/cmr/m/it/12 From Com-mu-ni-c
+a-ti-on to Pre-sence  \OT1/cmr/m/n/12 9
  []
 
-
-Underfull \hbox (badness 2293) in paragraph at lines 733--739
-\OT1/cmr/m/n/12 9 (2006).  $\OT1/cmtt/m/n/12 http : / / www . vepsy . com / com
-munication / volume9 . html$\OT1/cmr/m/n/12 . --
- []
-
-
-! LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.741 \dinatlabel{Triebel et~al. 2007}\\ \textsc
-                                                {Triebel}, Tonio ; \textsc{G...
-
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 741--749
-[][]\OT1/cmr/m/sc/12 Triebel\OT1/cmr/m/n/12 , To-nio ; \OT1/cmr/m/sc/12 Gut-hie
-r\OT1/cmr/m/n/12 , Ben-ja-min ; \OT1/cmr/m/sc/12 Ef-fels-berg\OT1/cmr/m/n/12 , 
-Wolf-
- []
-
-
-Underfull \hbox (badness 7740) in paragraph at lines 741--749
-\OT1/cmr/m/n/12 gang:  Sky-pe4Games.  (2007), S. 13--18.  $\OT1/cmtt/m/n/12 htt
-p : / / dx . doi .
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 741--749
-\OT1/cmtt/m/n/12 org / http : / / doi . acm . org / 10 . 1145 / 1326257 . 13262
-60$\OT1/cmr/m/n/12 . --  DOI
- []
-
-
-Underfull \hbox (badness 4303) in paragraph at lines 741--749
-\OT1/cmr/m/n/12 http://doi.acm.org/10.1145/1326257.1326260.  ISBN 978--0--98044
-60--
- []
-
-
-! LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.751 \dinatlabel{Turkle 1995}\\ \textsc
-                                        {Turkle}, S.:
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.756 \dinatlabel{Wadley 2008}\\ \textsc
-                                        {Wadley}, Greg:
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.762 \dinatlabel{Walther 2002}\\ \textsc
-                                         {Walther}, J.B.:
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.770 \dinatlabel{Wang et~al. 2007}\\ \textsc
-                                             {Wang}, Alice ; \textsc{Emmi}, ...
-
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-Underfull \hbox (badness 1406) in paragraph at lines 770--778
-[][]\OT1/cmr/m/sc/12 Wang\OT1/cmr/m/n/12 , Ali-ce ; \OT1/cmr/m/sc/12 Em-mi\OT1/
-cmr/m/n/12 , Mi-cha-el ; \OT1/cmr/m/sc/12 Fa-lout-sos\OT1/cmr/m/n/12 , Pe-tros:
-  As-semb-ling
- []
-
-[99]
-
-! LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.780 \dinatlabel{Wikipedia 2008}\\ \textsc
-                                           {Wikipedia}:
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.782 ....wikipedia.org/wiki/List_of_SIP_software}
-                                                  
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-! Extra }, or forgotten $.
-<recently read> \egroup 
-                        
-l.782 ....wikipedia.org/wiki/List_of_SIP_software}
-                                                  
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.784 
-      
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.784 
-      
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 780--784
+[98]
+Underfull \hbox (badness 10000) in paragraph at lines 809--813
 [][]\OT1/cmr/m/sc/12 Wikipedia\OT1/cmr/m/n/12 :  Over-view of SIP Soft-wa-re.  
 In:
  []
 
-
-! LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.786 \dinatlabel{Wilbur 1954}\\ \textsc
-                                        {Wilbur}, Schramm:
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
+) [99] (kapitel/erklaerung.tex) [100
 
 
-! LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.791 \dinatlabel{Wright et~al. 2002}\\ \textsc
-                                               {Wright}, Talmadge ;
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.798 \dinatlabel{Yu u. Vuong 2005}\\ \textsc
-                                             {Yu}, Anthony~(. ; \textsc{Vuong},
-
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.809 \dinatlabel{Zhao et~al. 2001}\\ \textsc
-                                             {Zhao}, B.~Y. ; \textsc{Kubiato...
-
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-) [100] (kapitel/erklaerung.tex) [101
-
-
-]
-
-Package natbib Warning: There were undefined citations.
-
-(Main.aux (kapitel/titel.aux) (kapitel/stichwortverzeichnis.aux)
-(kapitel/abkuerzungen.aux) (kapitel/einleitung.aux)
-(kapitel/kapitel_kommunikation.aux) (kapitel/kapitel_folgerungundziele.aux)
-(kapitel/kapitel_sip.aux) (kapitel/kapitel_recentwork.aux)
-(kapitel/kapitel_konstruktion.aux) (kapitel/kapitel_implementierung.aux)
-(kapitel/kapitel_network.aux) (kapitel/kapitel_benchmarking.aux)
-
-Package natbib Warning: Citation(s) may have changed.
-(natbib)                Rerun to get citations correct.
-
-(kapitel/erklaerung.aux)) ) 
+] (Main.aux (kapitel/titel.aux)
+(kapitel/stichwortverzeichnis.aux) (kapitel/abkuerzungen.aux)
+(kapitel/einleitung.aux) (kapitel/kapitel_kommunikation.aux)
+(kapitel/kapitel_folgerungundziele.aux) (kapitel/kapitel_sip.aux)
+(kapitel/kapitel_recentwork.aux) (kapitel/kapitel_konstruktion.aux)
+(kapitel/kapitel_implementierung.aux) (kapitel/kapitel_network.aux)
+(kapitel/kapitel_benchmarking.aux) (kapitel/erklaerung.aux)) ) 
 Here is how much of TeX's memory you used:
- 3501 strings out of 95341
- 46886 string characters out of 1184182
- 128983 words of memory out of 1500000
- 6547 multiletter control sequences out of 110000
+ 4815 strings out of 95341
+ 70431 string characters out of 1184182
+ 182734 words of memory out of 1500000
+ 7848 multiletter control sequences out of 110000
  9089 words of font info for 33 fonts, out of 1200000 for 2000
  14 hyphenation exceptions out of 8191
- 36i,10n,37p,1743b,521s stack positions out of 5000i,500n,10000p,200000b,5000s
+ 36i,10n,37p,1743b,519s stack positions out of 5000i,500n,10000p,200000b,5000s
 
-Output written on Main.dvi (111 pages, 415656 bytes).
+Output written on Main.dvi (110 pages, 412984 bytes).
