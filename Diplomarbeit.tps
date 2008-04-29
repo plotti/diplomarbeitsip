@@ -4,8 +4,8 @@ Version=2
 
 [SessionInfo]
 ActiveTab=0
-FrameCount=13
-ActiveFrame=12
+FrameCount=15
+ActiveFrame=7
 
 [Frame0]
 Columns=1
@@ -32,9 +32,9 @@ cxCur=820
 cxMin=10
 
 [Frame0_View0,0]
-Cursor.row=293
-Cursor.column=71
-TopSubLine=620
+Cursor.row=2
+Cursor.column=472
+TopSubLine=0
 
 [Frame1]
 Columns=1
@@ -119,9 +119,9 @@ cxCur=751
 cxMin=10
 
 [Frame3_View0,0]
-Cursor.row=103
-Cursor.column=87
-TopSubLine=218
+Cursor.row=147
+Cursor.column=30
+TopSubLine=303
 
 [Frame4]
 Columns=1
@@ -177,9 +177,9 @@ cxCur=751
 cxMin=10
 
 [Frame5_View0,0]
-Cursor.row=192
-Cursor.column=85
-TopSubLine=439
+Cursor.row=7
+Cursor.column=0
+TopSubLine=0
 
 [Frame6]
 Columns=1
@@ -213,8 +213,8 @@ TopSubLine=0
 [Frame7]
 Columns=1
 Rows=1
-Flags=0
-ShowCmd=1
+Flags=2
+ShowCmd=3
 MinPos.x=-1
 MinPos.y=-1
 MaxPos.x=-4
@@ -227,17 +227,17 @@ Class=CLatexEdit
 Document=kapitel\kapitel_kommunikation.tex
 
 [Frame7_Row0]
-cyCur=346
+cyCur=554
 cyMin=10
 
 [Frame7_Col0]
-cxCur=751
+cxCur=890
 cxMin=10
 
 [Frame7_View0,0]
-Cursor.row=66
-Cursor.column=137
-TopSubLine=176
+Cursor.row=8
+Cursor.column=337
+TopSubLine=0
 
 [Frame8]
 Columns=1
@@ -264,9 +264,9 @@ cxCur=751
 cxMin=10
 
 [Frame8_View0,0]
-Cursor.row=54
-Cursor.column=0
-TopSubLine=52
+Cursor.row=62
+Cursor.column=11
+TopSubLine=55
 
 [Frame9]
 Columns=1
@@ -293,9 +293,9 @@ cxCur=751
 cxMin=10
 
 [Frame9_View0,0]
-Cursor.row=7
-Cursor.column=202
-TopSubLine=0
+Cursor.row=48
+Cursor.column=0
+TopSubLine=148
 
 [Frame10]
 Columns=1
@@ -322,9 +322,9 @@ cxCur=751
 cxMin=10
 
 [Frame10_View0,0]
-Cursor.row=9
-Cursor.column=0
-TopSubLine=0
+Cursor.row=18
+Cursor.column=119
+TopSubLine=19
 
 [Frame11]
 Columns=1
@@ -358,8 +358,8 @@ TopSubLine=590
 [Frame12]
 Columns=1
 Rows=1
-Flags=2
-ShowCmd=3
+Flags=0
+ShowCmd=1
 MinPos.x=-1
 MinPos.y=-1
 MaxPos.x=-4
@@ -372,15 +372,73 @@ Class=CLatexEdit
 Document=kapitel\kapitel_benchmarking.tex
 
 [Frame12_Row0]
-cyCur=284
+cyCur=346
 cyMin=10
 
 [Frame12_Col0]
-cxCur=1009
+cxCur=796
 cxMin=10
 
 [Frame12_View0,0]
-Cursor.row=7
-Cursor.column=39
-TopSubLine=1
+Cursor.row=0
+Cursor.column=0
+TopSubLine=0
+
+[Frame13]
+Columns=1
+Rows=1
+Flags=0
+ShowCmd=1
+MinPos.x=-1
+MinPos.y=-1
+MaxPos.x=-4
+MaxPos.y=-30
+NormalPos.left=132
+NormalPos.top=174
+NormalPos.right=1001
+NormalPos.bottom=575
+Class=CLatexEdit
+Document=kapitel\abstract.tex
+
+[Frame13_Row0]
+cyCur=346
+cyMin=10
+
+[Frame13_Col0]
+cxCur=840
+cxMin=10
+
+[Frame13_View0,0]
+Cursor.row=0
+Cursor.column=0
+TopSubLine=0
+
+[Frame14]
+Columns=1
+Rows=1
+Flags=0
+ShowCmd=1
+MinPos.x=-1
+MinPos.y=-1
+MaxPos.x=-4
+MaxPos.y=-30
+NormalPos.left=0
+NormalPos.top=0
+NormalPos.right=869
+NormalPos.bottom=401
+Class=CLatexEdit
+Document=kapitel\erklaerung.tex
+
+[Frame14_Row0]
+cyCur=346
+cyMin=10
+
+[Frame14_Col0]
+cxCur=840
+cxMin=10
+
+[Frame14_View0,0]
+Cursor.row=0
+Cursor.column=501
+TopSubLine=0
 
