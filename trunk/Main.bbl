@@ -1,4 +1,4 @@
-\begin{thebibliography}{109}
+\begin{thebibliography}{108}
 % this bibliography was produced with the style dinat.bst v2.5
 \makeatletter
 \newcommand{\dinatlabel}[1]%
@@ -442,13 +442,6 @@ dy\_2007}
 \newblock
 \newblock (1996), Nr.~ICS-TR-96-27, S.~17. --
 \newblock URL \url{citeseer.ist.psu.edu/morse96interest.html}
-
-\bibitem[Museum(2008)]{CHM}
-\dinatlabel{Museum 2008} \textsc{Museum}, Computer~H.:
-\newblock Comuter History Museum, PDP-1.
-\newblock In:
-  \emph{http://www.computerhistory.org/pdp-1/index.php?f=theme\&s=4\&ss=3}
-\newblock (2008)
 
 \bibitem[Oortmerssen(2008)]{sauerbraten08}
 \dinatlabel{Oortmerssen 2008} \textsc{Oortmerssen}, Wouter:
