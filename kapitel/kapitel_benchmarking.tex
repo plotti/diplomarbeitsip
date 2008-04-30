@@ -2,14 +2,29 @@
 
 \section{Tests von Audioübertragung}
 \subsection{Bandbreite}
+-- Verbrauch der Bandbreite mit zunehmender Nutzerzahl beim "`Full mesh"'
+-- Verbrauch der Bandbreite mit zunehmender Nutzerzahl beim "`Partial mesh"' 
+-- Ballungszentren führen zu fullmesh --> zeigen
+
+--> Müsste zeigen dass im Schnitt bei einer gleichmäßigen Avatarverteilung die der Verbrauch geringer ist.
+--> Messung mit Wireshark
+
+\subsection{Bandbreite vs. Entfernung}
+-- Verbrauch der Bandbreite mit zunehmender Entfernung
+--> Müsste zeigen dass beim "`silencen"' der RTP Session weniger Bandbreite verbraucht wird.
+--> Messung mit Wireshark
+
 \subsection{Mixing}
+-- Verbrauch der CPU Last mit Zunehmender Nutzerzahl beim Full Mesh
+-- Verbrauch der CPU Last mit Zunehmender Nutzerzahl beim Partial Mesh
+--> Müsste zeigen dass weniger Streams gemischt werden müssen und somit Last eingespart werden kann. ( Wie messe ich das?)
+
 \subsection{Ende-zu-Ende Verzögerung (Delay)}
+-- delay über zeit bei mehreren verteilten stationen
 \subsection{Verzögerungsschwankung (Jitter)}
+-- jitter über zeit bei mehreren verteilten stationen
 \subsection{Paketverlust (Packet Loss)}
-\subsection{Übertragungsqualität}
+-- packetloss über zeit bei mehreren verteilten stationen
 
 \section{Tests von SIP als Netzwerkschnitstelle}
-\subsection{Latenzen}
-\subsection{Skalierbarkeit}
-\subsubsection{Vergleich mit Daten aus Skype}
-\section{Vergleich mit Daten aus Multicast Sockets}
+-- RTT über die zeit bei konstanten benutzern vs. Resultat mit Multicast Sockets oder Skype.
