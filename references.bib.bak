@@ -1,5 +1,5 @@
-% This file was created with JabRef 2.3.1.
-% Encoding: Cp1252
+This file was created with JabRef 2.2.
+Encoding: Cp1252
 
 @ARTICLE{aarseth03,
   author = {Aarseth, Espen and Smedstad, Solveig M. and Sunnan{\~o}, Lise},
@@ -983,6 +983,15 @@
   volume = {Work in Progress},
   owner = {plotti},
   timestamp = {2008.04.04}
+}
+
+@ARTICLE{turn08,
+  author = {J. Rosenberg and R. Mahy and  C. Huitema},
+  title = {Traversal Using Relay NAT (TURN)},
+  journal = {http://www.jdrosen.net/papers/draft-rosenberg-midcom-turn-08.txt},
+  year = {2008},
+  owner = {Administrator},
+  timestamp = {2008.05.03}
 }
 
 @ARTICLE{turn06,

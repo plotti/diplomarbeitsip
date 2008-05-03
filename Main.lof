@@ -3,12 +3,20 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\addvspace {10\p@ }
 \contentsline {figure}{\numberline {2.1}{\ignorespaces Kommunikationsmodell nach Shannon und Weaver}}{7}
 \contentsline {figure}{\numberline {2.2}{\ignorespaces Kommunikationsmodell nach Schramm}}{8}
 \contentsline {figure}{\numberline {2.3}{\ignorespaces Interaktivitat vs. Lebendigkeit}}{9}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Eine \"Ubersicht \"uber die VoIP Protokollfamilie}}{37}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Beispiel eines typischen SIP-Requests}}{42}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Sip Anruf ohne Proxy}}{45}
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Einsatz eines Proxy Servers mit Registrar}}{47}
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Teilnehmer A schickt Teilnehmer B eine Nachricht. Beide sind Teil der gleichen Dom\"ane sind, und benutzen den gleichen Proxy.}}{48}
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Teilnehmer A m\"ochte die Pr\"asenz von Teilnehmer B abonnieren. Teilnehmer B aktualisiert seine Information.}}{49}
+\contentsline {figure}{\numberline {4.7}{\ignorespaces Beispiel einer SDP Nachricht}}{50}
+\contentsline {figure}{\numberline {4.8}{\ignorespaces Header eines RTP-Pakets}}{52}
+\contentsline {figure}{\numberline {4.9}{\ignorespaces Ein schematischer Ablauf von STUN}}{56}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

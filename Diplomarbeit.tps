@@ -4,7 +4,7 @@ Version=2
 
 [SessionInfo]
 ActiveTab=0
-FrameCount=15
+FrameCount=14
 ActiveFrame=7
 
 [Frame0]
@@ -148,8 +148,8 @@ cxCur=751
 cxMin=10
 
 [Frame4_View0,0]
-Cursor.row=11
-Cursor.column=11
+Cursor.row=0
+Cursor.column=0
 TopSubLine=0
 
 [Frame5]
@@ -177,8 +177,8 @@ cxCur=751
 cxMin=10
 
 [Frame5_View0,0]
-Cursor.row=251
-Cursor.column=26
+Cursor.row=0
+Cursor.column=0
 TopSubLine=537
 
 [Frame6]
@@ -231,13 +231,13 @@ cyCur=554
 cyMin=10
 
 [Frame7_Col0]
-cxCur=920
+cxCur=936
 cxMin=10
 
 [Frame7_View0,0]
-Cursor.row=170
-Cursor.column=37
-TopSubLine=432
+Cursor.row=129
+Cursor.column=91
+TopSubLine=241
 
 [Frame8]
 Columns=1
@@ -266,7 +266,7 @@ cxMin=10
 [Frame8_View0,0]
 Cursor.row=54
 Cursor.column=0
-TopSubLine=59
+TopSubLine=60
 
 [Frame9]
 Columns=1
@@ -295,7 +295,7 @@ cxMin=10
 [Frame9_View0,0]
 Cursor.row=85
 Cursor.column=190
-TopSubLine=237
+TopSubLine=250
 
 [Frame10]
 Columns=1
@@ -351,9 +351,9 @@ cxCur=796
 cxMin=10
 
 [Frame11_View0,0]
-Cursor.row=221
+Cursor.row=198
 Cursor.column=0
-TopSubLine=566
+TopSubLine=475
 
 [Frame12]
 Columns=1
@@ -380,40 +380,11 @@ cxCur=796
 cxMin=10
 
 [Frame12_View0,0]
-Cursor.row=19
-Cursor.column=117
-TopSubLine=5
-
-[Frame13]
-Columns=1
-Rows=1
-Flags=0
-ShowCmd=1
-MinPos.x=-1
-MinPos.y=-1
-MaxPos.x=-4
-MaxPos.y=-30
-NormalPos.left=132
-NormalPos.top=174
-NormalPos.right=1001
-NormalPos.bottom=575
-Class=CLatexEdit
-Document=kapitel\abstract.tex
-
-[Frame13_Row0]
-cyCur=346
-cyMin=10
-
-[Frame13_Col0]
-cxCur=840
-cxMin=10
-
-[Frame13_View0,0]
-Cursor.row=0
+Cursor.row=2
 Cursor.column=0
 TopSubLine=0
 
-[Frame14]
+[Frame13]
 Columns=1
 Rows=1
 Flags=0
@@ -429,15 +400,15 @@ NormalPos.bottom=401
 Class=CLatexEdit
 Document=kapitel\erklaerung.tex
 
-[Frame14_Row0]
+[Frame13_Row0]
 cyCur=346
 cyMin=10
 
-[Frame14_Col0]
+[Frame13_Col0]
 cxCur=840
 cxMin=10
 
-[Frame14_View0,0]
+[Frame13_View0,0]
 Cursor.row=0
 Cursor.column=501
 TopSubLine=0

@@ -78,26 +78,6 @@ Exemplarisch haben wir mehrere Nachrichtentypen generiert:
 	\item Status: 
 \end{itemize}
 
-Eine übliche Transaktion sieht folgendermaßen aus:
-
-%           |  F1 MESSAGE          |                         |
-%           |--------------------> |  F2 MESSAGE             |
-%           |                      | ----------------------->|
-%           |                      |                         |
-%           |                      |  F3 200 OK              |
-%           |                      | <-----------------------|
-%           |  F4 200 OK           |                         |
-%           |<-------------------- |                         |
-%           |                      |                         |
-%           |                      |                         |
-%           |                      |                         |
-%        User 1                  Proxy                    User 2
-
-Die Grafik zeigt eine Nachricht die von Teilnehmer A and Teilnehmer B geschickt wurde, wobei beide Teilnehmer Teil der gleichen Domäne sind, und den gleichen Proxy benutzen. 
-Der Grundlegende Unterschied zum SIP Protokoll besteht darauf dass es hier kein separater Medienstrom existiert. Die Textnachrichten werden in einem SIP Paket über die Knoten übertragen die den Signalisierungspfad bilden. Dies erfordert eine größeres Bedürfniss nach Sicherheit als bei anderen SIP Anfragen da der der Benutzer allen dem Proxy vertrauen muss. Unverschlüsselte Nachrichten liegen diesem offen und auch eventuelles Forking ohne Wissen des Benutzers ist hier möglich. 
-
-
-
 \subsubsection{Buddy Konzept}
 Spieler wählen einen Benutzernamen, der auch ihrer SIP Adresse entspricht. In einer Freundesliste halten sie Adressen alle Benutzer des Spieles vor, die auch Buddy Liste genannt wird. Mittels dieser Liste und des vorgestellten Präsenzdienstes sind Spieler in der Lage festzustellen welche Spieler Teil des Spiels sind. 
 
@@ -117,25 +97,6 @@ Dabei haben wir drei verschiedene Präsenzstati definiert:
 	\item Im Spiel - Der Spieler hat sich am Registrar angemeldet und nimmt gerade am Spiel teil.
 \end{itemize}
 
-Eine übliche Presence-Subscribe Verbindung findet folgendermaßen statt:
-%BILD Presence
-%   Watcher             Server                 PUA
-%      | F1 SUBSCRIBE      |                    |
-%      |------------------>|                    |
-%      | F2 200 OK         |                    |
-%      |<------------------|                    |
-%      | F3 NOTIFY         |                    |
-%      |<------------------|                    |
-%      | F4 200 OK         |                    |
-%      |------------------>|                    |
-%      |                   |                    |
-%      |                   |   Update presence  |
-%      |                   |<------------------ |
-%      |                   |                    |
-%      | F5 NOTIFY         |                    |
-%      |<------------------|                    |
-%      | F6 200 OK         |                    |
-%      |------------------>|                    |
 
 \subsection{Skalierbarkeit}
 Um das Konzept des Sharding umzusetzen, kann bei einem solcher Aufbau für jede Spielewelt ein zentralen Registrar eingesetzt werdem, der eine maximale Anzahl an Spielern erhält. Möchte man Clustering einsetzen, so ist vorstellbar, dass für eine Region der Spielwelt jeweils ein Registrar eingesetzt wird, an dem sich die Clients anmelden und Nachrichten der Spieler empfangen die am gleichen Registrar angemeldet sind. Um Interestmanagement umzusetzen, können beim Registrar Nachrichten gefiltert werden, oder Clients autonom entscheiden an welche Teilnehmer sie Nachrichten versenden möchten.
