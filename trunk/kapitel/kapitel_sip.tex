@@ -3,15 +3,22 @@
 Unter der IP-Telefonie, eine Kurzform für die Internet-Protokoll-Telefonie, auch Voice over IP (kurz VoIP) genannt, versteht man das Telefonieren über Computernetzwerke, welche nach Internet-Standards aufgebaut sind. Dabei werden für Telefonie typische Informationen, d.h. Sprache und Steuerinformationen z.B. für den Verbindungsaufbau, über ein auch für Datenübertragung nutzbares Netz übertragen. Bei den Gesprächsteilnehmern können sowohl Computer, für IP-Telefonie spezialisierte Telefonendgeräte, als auch über spezielle Adapter angeschlossene klassische Telefone die Verbindung ins Telefonnetz herstellen.
 
 \section{Protokolle zur Echtzeitkommunikation}
-	Voice-over-IP beinhaltet unterschiedliche Protokolle. Zur reinen Signalisierung werden hauptsächlich das Session Initiation Protocol (SIP) \cite{sip02} bzw. Protokolle aus der H.323-Protokollfamilie verwendet. Bei VoIP sing generell folgende Klassen der Protokolle zu unterscheiden:
+	Voice-over-IP beinhaltet unterschiedliche Protokolle. Zur reinen Signalisierung werden hauptsächlich das Session Initiation Protocol (SIP) \cite{sip02} bzw. Protokolle aus der H.323-Protokollfamilie verwendet. Bei VoIP sind generell folgende Klassen der Protokolle zu unterscheiden:
 \begin{itemize}
 	\item Protokolle für die Sprachübermittlung: Da die Sprachkommunikation in Echtzeit verläuft, sind spezielle Protokolle für die Übermittlung der Sprache über IP-Netze nötig.
-	\item Signalisierungsprotokolle: Es handelt sich hier um Protokolle für den Auf- und Abbau von Verbindungen zwischen zwei IP-Telefonen.
+	\item Signalisierungsprotokolle: Es handelt sich hier um Protokolle für den Auf- und Abbau von Verbindungen zwischen IP-Telefonen.
 \end{itemize}
 
 Vorgänge wie die Vermittlung von Gesprächen, der Rufaufbau oder -abbau sowie die Aushandlung von Parametern, z.B. die Verwendung eines gemeinsamen Codecs, der entsprechenden Bitrate oder der maximal zulässigen Bandbreite werden in diesen Protokollen kontrolliert. Speziell für diese Zwecke wurde das Session Description Protocol (SDP) \cite{sdp98} entwickelt um den Medienstrom zu kontrollieren. SIP basiert auf den gleichen Prinzipien, die man beim HTTP(HyperText Transfer Protocol) nutzt. 
 
 Für die Sprachübertragung wird das Echtzeit Transport Protokoll (Realtime Transport Protocol (RTP)) \cite{rtp96} ver\-wen\-det, das dem Empfänger der Pakete erlaubt, trotz unzuverlässiger Übertragung über UDP \cite{udp80}, einen Paketverlust festzustellen und die ursprüngliche Reihenfolge der Daten wiederherzustellen. RTP ist ein Transprotokoll, ist also nicht nur für Sprache, sondern für alle Echtzeitmedien, wie Video verwendbar. Da RTP keine Bestätigungen verwendet, kann der Empfänger dem Sender nicht mitteilen, ob überhaupt btw. wie die Sprache in Form von IP-Paketen bei ihm ankommt. Das RTCP Protokoll gleicht diesen Nachteil aus: Mit Hilfe des RTP Control Protocols (RTCP) können zusätzlich zu den reinen Mediendaten auch Kontrollinformationen wie die Anzahl der verlorenen Pakete oder der gemessene Jitter der RTP-Verbindung übertragen werden und so Übertragungsparameter angepasst werden. 
+
+\begin{figure}
+	\centering
+		\includegraphics[width=.60\textwidth]{grafiken/voipprotokolle.eps}
+	\caption{Eine Übersicht über die VoIP Protokollfamilie}
+	\label{fig:voipprotokolle}
+\end{figure}
 
 Neben den bisher erwähnten Protokollen zur Hauptfunktionalität gibt es noch noch wei\-te\-re, die sich mit allen angrenzenden Bereichen von VoIP beschäftigen. So wird mit Hilfe des STUN (Simple Traversal of User Datagram Protocol Through Network Address Translators) \cite{stun03} ermöglicht seine IP-Adresse zu ermitteln, falls man sich hinter einem NAT Router befindet und die interne IP-Adresse nicht der externen entspricht. Dies ist vor allem notwendig, da die IP-Kontakt\-in\-for\-mationen in SIP und SDP in der Anwendungsschicht übertragen werden und somit ein Client ohne Kentniss richtigen Adresse falsche Informationen liefern würde. Ein weiteres Protokoll mit dem Ziel der Überbrückung eines NATs ist TURN(Traversal Using Relay NAT) \cite{turn06}. Bei TURN bekommt ein Client von einem TURN-Server eine öffentlich erreichbares IP-Adressen- und Port-Paar zugewiesen und leitet alle an diese öffentliche Adresse ankommenden Pakete an den Client weiter. 
 
@@ -62,8 +69,24 @@ Es gibt mehrere Sprachcodierungsverfahren, die bei Voice over IP verwendet werde
 
 Obwohl die Qualität quantitativ durch Parameter, wie die Laufzeit der IP-Pakete (Delay), die Laufzeitunterschiede(Jitter) und die Verlustrate von IP-Paketen im Netz beinflusst wird, sagen diese Parameter nichts über die eigentliche Sprachqualität aus. Die eigentliche Sprachqualität wird nach der MOS (Mean Opinion Score) - Skala  gemessen. Diese unterscheidet Aspekte wie Verständlichkeit der Sprache, Akzeptanz der Lautstärke sowie die Akzeptanz der Laufzeitschwankungen und Echos. 
 
-%TODO TABELLE ÜBER MOSS S147
 %TODO Tabelle mit Codecs
+\begin{table}[htbp]
+	\centering
+		\begin{tabular}{p{0.2\textwidth}|p{0.6\textwidth}}
+		\hline
+		\textbf{MOS-Wert} & \textbf{Bedeutung} \\
+		\hline
+		5=excellent & keinerlei Anstrengung zum Verständnis der Sprache notwendig; totale Entspannung möglich \\
+		\hline
+		4=good & keine Anstrengung notwendig, Aufmerksamkeit nötig \\
+		\hline
+		3=fair & leichte, moderate Anstrengung nötig \\
+		\hline
+		2=poor & merkbare, deutliche Anstrengung nötig \\
+		\hline
+		1=bad & trotz Anstrengung keine Verständigung 
+		\end{tabular}
+\end{table}
 
 Eine Analoge Sprachübertragung kommt auf einen MOS-Wert von 3.5 bis 4. Hochwertige VoIP-Implementierungen bieten eine Sprachqualität zwischen 3.8 und 4.4 je nach verwendeter Sprachcodierung. Dabei bieten VoIP-Systeme mindestens die Qualität eines herkömmlichen analogen Telefonnetzes. 
 
@@ -101,6 +124,23 @@ von SIP Nachrichten:
 Sowohl \textit{SIP-Responses} als auch \textit{SIP-Requests} sind ähnlich aufgebaut und haben die folgende Struktur:
 
 % Bild vom SIP Message
+\begin{figure}
+\caption{Beispiel eines typischen SIP-Requests}
+\lstset{frame=single}
+	\begin{lstlisting}[label={SIP-Message}]
+INVITE sip:8495302002@192.168.2.25 SIP/2.0
+Via: SIP/2.0/UDP 192.168.3.250:5060; branch=1
+From: sip:8495305005@192.168.2.25;tag=29ae1249
+Max-Forwards: 70
+To: sip:8495302002@192.168.2.25
+Call-ID: 48c7df2a9b4@myvoip1
+Cseq: 1 INVITE
+Contact: sip:8495305005@192.168.3.250
+Content-Length: 202
+Supported: 100rel
+Content-Type: application/sdp
+\end{lstlisting}
+\end{figure}
 
 Die Start-Zeile (\textit{Status-Line}) besteht bei den Requests aus einer Angabe des Request-Typs z.B. INVITE, einer Request-URI als Ziel-Adresse und der SIP-Version. Bei einem Response enthält die \textit{Status-Line} die SIP-Version und einen \textit{Status-Code} der den Typ definiert der Nachricht definiert. Beide Typen von Nachrichten enthalten mehrere Header-Felder von den folgende besonders hervorzuheben sind:
 \begin{itemize}
@@ -111,7 +151,6 @@ Anfragen erreicht werden kann. Das Format entspricht dem der To- und From-
 Header. Ein Parameter für diese Headerzeile ist \textit{expires}, der die Zeit in Sekunden angibt, bis der Kontakt nicht mehr verfügbar ist.
 	\item Call-ID: Diese Identifiziert den Anruf. Jeder Anruf enthält eine ID die sich aus siner Zufallszahl und dem Namen des Anrufenden enthält. 
 \end{itemize}
-
 
 \subsubsection{Request Typen}
 In der Spezifikation RFC 3261 werden sechs Request-Typen definiert, die jedoch inzwischen um weitere Request Typen erweitert wurden:
@@ -147,7 +186,7 @@ Im RFC 3261 werden ebenfalls sechs Response Klassen spezifiziert, bei denen dem 
 	\subitem 403 Forbidden - Der Anruf ist nicht zulässig.
 	\subitem 404 Not Found - Der Benutzer ist nicht erreichbar oder kann nicht gefunden
 	werden.
-	\subitem   486 Busy Here - Indiziert dass der Angerufene gerade in einem Gespräch ist und den Anruf nicht annehmen kann.
+	\subitem 486 Busy Here - Indiziert dass der Angerufene gerade in einem Gespräch ist und den Anruf nicht annehmen kann.
 	\item \textit{Server Error}: Eine 5xx Nachricht teilt mit dass der Server nicht in der Lage war den Request auszuführen. Einige Beispiele sind:
 	\subitem 500 Internal Server Error
 	\subitem 505 SIP Version not supported
@@ -156,16 +195,27 @@ Im RFC 3261 werden ebenfalls sechs Response Klassen spezifiziert, bei denen dem 
 
 \subsection{Rufaufbau, Verbindung, Rufabbau}
 
-% Grafik über Ruffaufbau
+% Grafik über Rufaufbau
+\begin{figure}[htbp]
+	\centering
+		\includegraphics[width=.60\textwidth]{grafiken/sipanruf.eps}
+	\caption{Sip Anruf ohne Proxy}
+	\label{fig:sipanruf}
+\end{figure}
 
 Teilnehmer A möchte zu Teilnehmer B eine Verbindung herstellen. Dazu sendet er eine SIP-Nachricht INVITE an Teilnehmer B. Die Nachricht enthält die Beschreibung der RTP-Session nach dem SDP Protokoll und alle notwendigen Angaben, wie z.B. die Sprachkodierung, damit Teilnehmer B Prüfen kann ob eine Session hergestellt werden kann. 
 Falls Teilnehmer B die Verbindung annehmen kann, klingelt das angerufene IP-Telefon von Teilnehmer B, dies wird mit der SIP-Response 180 Ringing signalisiert. 
-Hat nun Teilnehmer B den Hörer abgehoben, sendet er einen SIP-Response 200 OK der vom Teilnehmer A mit der Nachricht ACK bestätigt wird. Mit dem Empfang der ACT Nachricht von Teilnehmer B, ist die logische Verbindung abgeschlossen. Nun kann eine Verbindung nach dem Protokoll RTP verlaufen und es besteht eine Session zwischen den Teilnehmern. 
-Die bestehende RTP-Session kann von beiden Seiten beendet werden. Beendet Teilnehmer B durch das Absenden der SIP Nachricht BYE die Session, bestätigt Teilnehmer A den Empfang der Nachricht mit der SIP-Response 200 OK. Mit dem Empfang von 200 OK beim IP Telefon des Teilnehmers B wird die Session beendet. 
+Hat nun Teilnehmer B den Hörer abgehoben, sendet er einen SIP-Response 200 OK der vom Teilnehmer A mit der Nachricht ACK bestätigt wird. Mit dem Empfang der ACK Nachricht von Teilnehmer B, ist die logische Verbindung abgeschlossen. Nun kann eine Verbindung nach dem Protokoll RTP verlaufen und es besteht eine Session zwischen den Teilnehmern. 
+Die bestehende RTP-Session kann von beiden Seiten beendet werden. Beendet Teilnehmer A durch das Absenden der SIP Nachricht BYE die Session, bestätigt Teilnehmer B den Empfang der Nachricht mit der SIP-Response 200 OK. Mit dem Empfang von 200 OK beim IP Telefon des Teilnehmers A wird die Session beendet. 
 
 \subsection{Registrierung der Lokation von Teilnehmern}
 
-% Grafik über Registrierung
+\begin{figure}[htbp]
+	\centering
+		\includegraphics[width=1.00\textwidth]{grafiken/sipanrufmitproxy.eps}
+	\caption{Einsatz eines Proxy Servers mit Registrar}
+	\label{fig:sipanrufmitproxy}
+\end{figure}
 
 SIP definiert einen speziellen Server, der als Registrar bezeichnet wird. Diese Komponente wird generell in einem Proxy Server bzw. in einem Redirect-Server untergebracht. Ein Registrar enthält die Angaben hinsichtlich der Lokation von Teilnehmern in einer Domain. 
 
@@ -173,26 +223,39 @@ Dadurch, dass ein Teilnehmer mobil sein kann und verschiedene Clients benutzen k
 
 Möchte ein Teilnehmer mit der SIP Adresse thomasp@uni-mannheim.de in seiner Heimat-Domain uni-mannheinm entgegennehmen so wird an den Registrar, z.B. registrar.uni-mannheim.de mit der Request Nachricht REGISTER dieser Wunsch mitgeteilt. Relevante Felder der Nachricht enthalten die Herkunft (From), die Lokation des Benutzers(Contact) und die Gültigkeit der Nachricht(Expires). Wechselt der Benutzer vor Ablauf der Expire Zeit seine Lokation so wird der Registrar mit einer weiteren Nachricht darüber aktualisiert. Der Registrar bestätigt den Empfang der Nachrichten jeweils mit einer ACK Nachricht. Ebenso ist eine Registrierung über eine andere Person möglich, so kann z.B. die Sekretärin die aktuelle Lokation ihres Chefs aktualisieren. 
 
-\subsection{Konferenzschaltungen}
-
-
 \subsection{Instant Messaging zwischen Teilnehmern}
 
-% Grafik eines Messaeg versands.
+Als Instant Messaging wird im allgemeinen ein Dienst zur sofortigen Übermittlung von Nachrichten zwischen Teilnehmern eines Netzwerks verstanden. Es existieren viele proprietäre Protokolle wie IRC, XMPP, SLC, OSCAR. Auch bei SIP wurde in den RFCs 3860,3428 und 3265 ein Protokoll für das Instant Messaging definiert: SIMPLE (SIP for Instant Messagingn and Presence). Eine SIP MESSAGE Transaktion kann sowohl über einen PROXY laufen als auch direkt zwischen den UACs stattfinden. Möchte Teilnehmer A eine Nachricht an Teilnehmer B verschicken so wird diese mittels der MESSAGE Nachricht versendet und vom Empfänger mit einer ACK Nachricht bestätigt. Die wichtigsten Felder der MESSAGE Nachricht sind das Empfänger Feld(To) der Typ des Inhalts(Content-Type), dessen Länge(Content-Length) und der Inhalt selbst(Body). 
 
-Als Instant Messaging wird im allgemeinen ein Dienst zur sofortigen Übermittlung von Nachrichten zwischen Teilnehmern eines Netzwerks verstanden. Es existieren viele proprietäre Protokolle wie IRC, XMPP, SLC, OSCAR. Auch bei SIP wurde in den RFCs 3860,3428 und 3265 ein Protokoll für das Instant Messaging definiert: SIMPLE (SIP for Instant Messagingn and Presence). Eine SIP MESSAG Transaktion kann sowohl über einen PROXY laufen als auch direkt zwischen den UACs stattfinden. Möchte Teilnehmer A eine Nachricht an Teilnehmer B verschicken so wird diese mittels der MESSAGE Nachricht versendet und vom Empfänger mit einer ACK Nachricht bestätigt. Die wichtigsten Felder der MESSAGE Nachricht sind das Empfänger Feld(To) der Typ des Inhalts(Content-Type), dessen Länge(Content-Length) und der Inhalt selbst(Body). 
+\begin{figure}
+\caption{Teilnehmer A schickt Teilnehmer B eine Nachricht. Beide sind Teil der gleichen Domäne sind, und benutzen den gleichen Proxy.}
+	\centering
+		\includegraphics[width=1.00\textwidth]{grafiken/sipmessage.eps}
+	\label{fig:sipmessage}
+\end{figure}
+
+
+Die Grafik zeigt eine . 
+Der Grundlegende Unterschied zum SIP Protokoll besteht darauf dass es hier kein separater Medienstrom existiert. Die Textnachrichten werden in einem SIP Paket über die Knoten übertragen die den Signalisierungspfad bilden. Dies erfordert eine größeres Bedürfniss nach Sicherheit als bei anderen SIP Anfragen da der der Benutzer allen dem Proxy vertrauen muss. Unverschlüsselte Nachrichten liegen diesem offen und auch eventuelles Forking ohne Wissen des Benutzers ist hier möglich. 
+
 %RFC 3428
 \subsection{Präsenzfunktion von Teilnehmern}
 
 % Grafik über Publish Subscribe
 
-Die SIP Präsenzfunktion dient zur Anzeige des Präsenzstatus anderer Teilnehmer. Die Verwendung eines Präsenzstatus ist in vielen Instant Messaging Anwenungen weit verbreitet jedoch und in verschiedenen Protokolle etabliert IMPS, XMPP. SIP besitzt eine Eigene Erweiterung für Ereignisse die in den RFCs 3265 und 3903 fediniert wurde. Diese Beinhaltet die Nachrichtentypen PUBLISH, SUBSCRIBE und NOTIFY. 
+Die SIP Präsenzfunktion dient zur Anzeige des Präsenzstatus anderer Teilnehmer. Die Verwendung eines Präsenzstatus ist in vielen Instant Messaging Anwenungen weit verbreitet jedoch und in verschiedenen Protokolle etabliert IMPS, XMPP. SIP besitzt eine Eigene Erweiterung für Ereignisse die in den RFCs 3265 und 3903 definiert wurde. Diese Beinhaltet die Nachrichtentypen PUBLISH, SUBSCRIBE und NOTIFY. 
 
-Möchte ein Teilnehmer ein Ereignis wie z.B. seine Statusänderung veröffentlichen, so schickt er eine PUBLISH Nachricht an den Presence-Server, der üblicherweise Teil eines Proxys ist. Dabei enthält die Nachricht den Event Typ in einem Header der Nachrichten Header, die relevanten PUBLISH Informationen im XML Format jedoch im Body Feld. Grundsätzlich sind beliebige Formate nutzbar wobei ein Standard speziell für die Präsenzinformation PIDF (Presence Information Data Format) existiert. Ein solches PIDF Tupel kann Beispielsweise den Namen des Teilnehmers, seinen Status und eine NTP Zeit enthalten. 
+Möchte ein Teilnehmer ein Ereignis wie z.B. seine Statusänderung veröffentlichen, so schickt er eine PUBLISH Nachricht an den Presence-Server, der üblicherweise Teil eines Proxys ist. Dabei enthält die Nachricht den Event Typ im Header, die relevanten PUBLISH Informationen im XML Format im Body Feld. Grundsätzlich sind beliebige Formate nutzbar wobei ein Standard speziell für die Präsenzinformation PIDF (Presence Information Data Format) existiert. Ein solches PIDF Tupel kann Beispielsweise den Namen des Teilnehmers, seinen Status und eine NTP Zeit enthalten. 
 
-Möchte ein Teilnehmer die Ereignisse eines bestimmten Typs abonnieren z.B. presence oder nur von bestimmten Teilnehmern (SIP-URI) so versendet er an den Presence-Server eine SUBSCRIBE Nachricht.Die Länge des Dialogs wird durch das Laufzeit-Feld deklariert(Expires). Möchte der Teilnehmer sein Abonnement vorzeitig kündigen so kann er eine SUBSCRIBE Nachricht mit der Laufzeit 0s verschicken. Der Erhalt einer solchen Nachricht führt dazu dass ein Dialog zwischen Presence Server und dem Teilnehmer eingeleitet wird. 
+Möchte ein Teilnehmer die Ereignisse eines bestimmten Typs abonnieren z.B. der Präsenz bestimmter Teilnehmer (SIP-URI) so versendet er an den Presence-Server eine SUBSCRIBE Nachricht.Die Länge des Dialogs wird durch das Laufzeit-Feld deklariert(Expires). Möchte der Teilnehmer sein Abonnement vorzeitig kündigen so kann er eine SUBSCRIBE Nachricht mit der Laufzeit 0s verschicken. Der Erhalt einer solchen Nachricht führt dazu dass ein Dialog zwischen Presence Server und dem Teilnehmer eingeleitet wird. 
 Eine NOTIFY Transaktion informiert nun den Abonnenten über seine abonnierten Ereignisse wie z.B. den Präsenzstatus eines Teilnehmers. 
 
+\begin{figure}[htbp]
+	\centering
+		\includegraphics[width=1.00\textwidth]{grafiken/sippresence.eps}
+	\caption{Teilnehmer A möchte die Präsenz von Teilnehmer B abonnieren. Teilnehmer B aktualisiert seine Information.}
+	\label{fig:sippresence}
+\end{figure}
 
 \section{Session Description Protokoll}
 Das Session Description Protokoll wird vom Signalisierungsprotokoll SIP dazu verwendet, die Eigenschaften des Medienstroms sowie den Verwendeten Codec , Transportprotokoll und Zieladresse mit Port festzulegen. 
@@ -201,6 +264,22 @@ Das Session Description Protokoll wird vom Signalisierungsprotokoll SIP dazu ver
 SDP ist ein textbasiertes Format in dem die Eigenschaft und der Wert in Textform in der Nachricht festgehalten werden. Der Message Body enthält die Besonderheiten der RTP-Session, die durch das SDP (Session Description Protocol) festgelegt wird. Der Message Body setzt sich aus der Spezifikation der RTP-Session, der Zeitbeschreibung und der Medienbeschreibung zusammen. 
 
 % Bild der SDP message
+% Bild vom SIP Message
+\begin{figure}
+\caption{Beispiel einer SDP Nachricht}
+\lstset{frame=single}
+	\begin{lstlisting}[label={SIP-Message}]
+v=0
+o=Anonymous 1234567890 1234567890 IN IP4 192.168.3.250
+s=Testing the SDP Message
+t=0 0
+m=audio 6006 RTP/AVP 8 3 0
+a=rtpmap:8 PCMA/8000
+a=rtpmap:3 GSM/8000
+a=rtpmap:0 PCMU/8000
+\end{lstlisting}
+\end{figure}
+
 
 Die Beschreibung der RTP-Session wird mit den folgenden Parametern definiert:
 \begin{itemize}
@@ -217,25 +296,39 @@ Die Beschreibung der RTP-Session wird mit den folgenden Parametern definiert:
 	\subitem $\left\langle media \right\rangle$: Hier wird die Medienart (z.B. Audio) definiert.
 	\subitem $\left\langle port \right\rangle$: Die Portnummer über den das Medium empfangen wird.
 	\subitem $\left\langle transport \right\rangle$: Das verwendete Transportprotokoll
-	\subitem $\left\langle fmt list \right\rangle$: Eine List der zulässigen Formate des Mediums. 
+	\subitem $\left\langle fmt list \right\rangle$: Eine Liste der zulässigen Formate des Mediums. 
 	\item a: Hier wird eine Liste angegeben welches Format des Mediums empfangen werden kann. 
 \end{itemize}
 
-% Tabelle Buch Seite 155
+\begin{table}
+\centering
+\caption{Einige Sprachcodierungsverfahren und hre PT-Nummern}
+\label{pt-tabelle}
+\begin{tabular}{lllr}
+\toprule
+PT-Nr. & Codierungsname & Codierungsart & Bitrate (kbit/s) \\
+\midrule
+0  & PCM $\mu-Law$ & Abtastwert-orientiert & 64 \\
+4  & G723 & Segment-orientiert & 5.3-6.3 \\
+8 & PCM A-Law & Abtastwert-orientiert & 64 \\
+12  & QCELP & Segment-orientiert & 4.8-6.8\\
+15  & G728 & Segment-orientiert & 16\\
+18  & G729 & Segment-orientiert & 8\\
+dyn & G726-32 & Abtastwert-orientiert & 32 \\
+dyn & G726-16 & Abtastwert-orientiert & 16 \\
+\bottomrule
+\end{tabular}
+\end{table}
 
-Eine Übersicht üblicher Codecs ist in der Tabelle xy dargestellt. Den "`klassischen"' Audio Formaten sind feste Nummern zugeordnet. Weiter Typen befinden sich im dynamischen Bereich und können für jede Sitzung zu beliebigen Medienformaten vereinbart werden.
+Eine Übersicht üblicher Codecs ist in der Tabelle \ref{pt-tabelle} dargestellt. Den "`klassischen"' Audio Formaten sind feste Nummern zugeordnet. Weiter Typen befinden sich im dynamischen Bereich und können für jede Sitzung zu beliebigen Medienformaten vereinbart werden.
 
 \subsection{Aushandeln der Sitzungsparameter}
 Die unter dem Parameter a ausgetauschte Liste der Medienformate entspricht in der Reihenfolge der Präferenzen des des Senders. Der Empfänger eines solchen SDP Nachricht Angebots beantwortet jedes empfangene Medienformat mit einer Korrespondierenden Antwort falls er dieses Medienformat unterstützt. Ein Medienstrom kann vom Empfänger abgelehnt werden, wenn keines der aufgelisteten Medienformate unterstützt wird, indem als Port eine Null gesendet wird. Nach Möglichkeit sollte die Reihenfolge die unterstützten Medienformate aus dem Angebot beibehalten und nicht unterstützte Formate sollten ausgeblendet werden.
 
-Nachdem sich beide Teilnehmer auf die unterstützte Formate geeinigt haben wurden, können beide Seite damit
-beginnen, die Mediendaten zu senden. Beide Seiten sollten jeweils das bevorzugte Format senden. 
-Während einer Sitzung können die Parameter neu verhandelt werden, indem der gleiche Ablauf mit entsprechend modifizierten SDP-Beschreibungen durchgeführt wird. 
+Nachdem sich beide Teilnehmer auf die unterstützte Formate geeinigt haben wurden, können beide Seite damit beginnen, die Mediendaten zu senden. Beide Seiten sollten jeweils das bevorzugte Format senden. Während einer Sitzung können die Parameter neu verhandelt werden, indem der gleiche Ablauf mit entsprechend modifizierten SDP-Beschreibungen durchgeführt wird. 
 
 \section{Real-Time Transport Protokoll}
-Speziell für die Übermittlung von Sprache, Audio und Video über IP-Netze wurde RTP(Real-time Transport Protocol) bei der IETF entwickelt (2003 RFC 2550). Einerseits stellt RTP ein Transportprotokoll für die Echtzeitmedien dar anderseits kann es als eine Anwendungsart oberhalb des verbindungslosen Protokolls UDP angesehen werden. 
-
-%--grafik s151
+Speziell für die Übermittlung von Sprache, Audio und Video über IP-Netze wurde RTP(Real-time Transport Protocol) bei der IETF entwickelt (RFC 2550). Einerseits stellt RTP ein Transportprotokoll für die Echtzeitmedien dar, anderseits kann es als eine Anwendungsart oberhalb des verbindungslosen Protokolls UDP angesehen werden. 
 
 Die Wichtigsten Besonderheiten von RTP sind:
 
@@ -248,7 +341,13 @@ Die Wichtigsten Besonderheiten von RTP sind:
 
 \subsection{Aufbau von RTP-Paketen}
 RTP übermittelt ein Echtzeitmedium als Folge von RTP Paketen , die mit einem vorangestellten UDP-Header in den IP-Paketen transportiert werden. Jedes RTP-Paket enthält einen RTP-Header und einen Payload-Teil. Die Wesentlichen angaben im RTP-Header sind:
-%-- grafik  S153
+
+\begin{figure}
+	\centering
+		\includegraphics[width=1.00\textwidth]{grafiken/rtppaket.eps}
+	\caption{Header eines RTP-Pakets}
+	\label{fig:rtppaket}
+\end{figure}
 
 \begin{itemize}
 	\item PT: Payload Type: Es wird angegeben, um welches Format es sich beim transportierten Medium handelt, dh. nach welchem Verfahren codiert wurde. Die Möglichen Codierungsarten sind in RFC 3551 festgelegt. 
@@ -258,10 +357,7 @@ RTP übermittelt ein Echtzeitmedium als Folge von RTP Paketen , die mit einem vor
 	\item CSRC: Wird optional verwendet un enthält die "`Orginal"'-Quellen der Bitströme falls der SSRC von einem Mixer verändert wurde.
 \end{itemize}
 
-\subsection{Payload-Typen}
-Die PT Nummern dienen zur Identifikation der einzelnen Audio- und Video-Formate. Da der Nummernraum nicht komplett belegt ist können wietere nummern vergeben werden (dynamische PT-Nummern). Bei der Verwendung von dynamischen PT-Nummern wird die Kompatibilität zwischen Empfänger und Sender mit Hilfe des SDP Protokolls vereinbart. 
-
--- payload tabelle
+Die PT Nummern dienen zur Identifikation der einzelnen Audio- und Video-Formate. Da der Nummernraum nicht komplett belegt ist können weitere Nummern vergeben werden (dynamische PT-Nummern). Bei der Verwendung von dynamischen PT-Nummern wird die Kompatibilität zwischen Empfänger und Sender mit Hilfe des SDP Protokolls vereinbart. (siehe Tabelle \ref{pt-tabelle}
 
 \subsection{RTP Control Protokoll}
 RTP wird mit RTCP so ergänzt, dass Information über den Verlauf der Kommunikation zwischen Sender und Empfänger, insbesondere über die Qualität der Übertragung, ausgetauscht werden können. 
@@ -281,9 +377,6 @@ Beim RTCP werden folgende RTCP-Pakete als Nachrichten verwendet.
 RTCP Pakete beginnen mit einem Header und können unabhängig von anderen bearbeitet werden. Die Reihenfolge der Pakete in einem IP-Paket kann beliebig sein. 
 Das SR Paket enthält einen Zeitstempel gemäß der NTP (Network Time Prococol) und beschreibt die Qualität der Übermittlung aus Sicht des Senders. So kann z.B. dem Empfänger die Sende-Datenrate mitgeteilt werden, damit dieser sich im Voraus auf die ankommende Datenmenge einstellen kann. 
 
-%TODO
-% Grafik eines RTCP Pakets
-
 In einem Sender Report sind immer enthalten:
 \begin{itemize}
 	\item NTP-Zeitstempel: Ein Zeitstempel gemäß der NTP Uhrzeit. 
@@ -292,6 +385,7 @@ In einem Sender Report sind immer enthalten:
 \end{itemize}
 
 Bei RR Paket werden Werte wie Jitter, Round-Trip-Delay (Hin und Zürück Verzögerung)  oder Paketverlust aus Sicht des Emfpängers berechnet und abgeschätzt. 
+
 In einem Receiver Report sind unter anderm folgende Informationen enthalten:
 \begin{enumerate}
 	\item Paketverlust: Der Anteil der verlorenen Pakete seit dem letzten Report, als auch die Gesamtanzahl der verlorenen Pakete.
@@ -299,19 +393,26 @@ In einem Receiver Report sind unter anderm folgende Informationen enthalten:
 	\item Letzter Report: Die verstrichene Zeit seid dem Empfang des letzten Reports.
 \end{enumerate}
 
-Die SDES Pakete ermöglichen es, die Quallen mit Namen zu kennzeichnen. Diese Kennzeichnung wird vom Empfänger dazu verwendet mehrere Bitströme einer Quelle, die in getrennten RTP-Sessions übertragen werden wieder zusammenzuführen. Das BYE Paket dient dazu das Ende der Teilnahme an einer Kommunikation anzuzeigen. 
+Die SDES Pakete ermöglichen es, die Quellen mit Namen zu kennzeichnen. Diese Kennzeichnung wird vom Empfänger dazu verwendet mehrere Bitströme einer Quelle, die in getrennten RTP-Sessions übertragen werden wieder zusammenzuführen. Das BYE Paket dient dazu das Ende der Teilnahme an einer Kommunikation anzuzeigen. 
 
 \subsection{Silence Supression}
 Teilnehmer einer Audio Verbindung müssen nicht unbedingt Audiopakete über den RTP Stream senden, falls gerade bei den Teilnehmern Stille herrscht. Diese Funktion wurde im RFT 3389 spezifiziert.
 
-Die Möglichkeit den RTP Paketversand während Stilleperioden zu unterbrechen wird als Stille Unterdrückung ("`Silence Suppression"') oder Stimm Aktivitäts Erkennung("`Voice Activity Detection"') bezeichnet. Ob Silence Suppression eingesetzt wird hängt normalerweise von der Konfiguration der beiden Endpunkte ab, und wurde wird in den RTP Parametern detaillierter erklärt. 
+Die Möglichkeit den RTP Paketversand während Stilleperioden zu unterbrechen wird als Stille Unterdrückung ("`Silence Suppression"') oder Stimm Aktivitäts Erkennung("`Voice Activity Detection"') bezeichnet. Silcence Suppression kann vom Empfänger erkannt werden, wenn der RTP Zeitstempel nicht mit dem Intervall übereinstimmt, das vom letzten Paket abgedeckt wurde, obwohl die RTP Sequenznummer sich nur um 1 erhöht hat. Ob Silence Suppression eingesetzt wird hängt normalerweise von der Konfiguration der beiden Endpunkte ab.
 
-\section{STUN Protokoll} 
+\section{NAT Traversal} 
+Unter NAT Traversal versteht man das Erkennen und Durchdringen von Firewalls und NAT-Routern. Hier gibt es mehrere Ansätze wie TURN (Traversal Using Relay NAT) \cite{turn08}, ICE (Interactive Connectivity Establishment) \cite{ice08} und STUN (Simple Traversal of User Datagram Protocol Through Network Adress Translators) \cite{stun03}. 
+Diese Protokolle helfen vor allem Peer-to-Peer Protokollfamilien, die durch NATs in ihrer Funktionsweise behindert werden. Beispiele solcher Protokolle sind generell alle Peer-to-Peer Protokolle die Multimediakommunikation, Datenaustausch oder Spielen ermöglichen. 
 
-Unter STUN (Simple Traversal of User Datagram Protocol Through Network Adress Translators) versteht man ein einfaches Protokoll, dass im RFC 3489 spezifiziert wurde. Es erlaubt Anwendungen festzustellen ob sie sich hinter einer Firewall oder einem Router mit NAT (Network Adress Translator) befinden und um welche Kategorie von Router es sich handelt. Ebenso ist es mit STUN möglich seine öffentliche IP Adresse herauszufinden. 
-STUN kann vielen vor allem Peer-to-Peer Protokollfamilien helfen, die durch NATs in ihrer Funktionsweise behindert werden. Beispiele solcher Protokolle sind generell alle Peer-to-Peer Protokolle die Multimediakommunikation, Datenaustausch oder Spielen ermöglichen. 
+Unter STUN versteht man ein einfaches Protokoll das es erlaubt Anwendungen festzustellen ob sie sich hinter einer Firewall oder einem Router mit NAT (Network Adress Translator) befinden und um welche Kategorie von Router es sich handelt. Ebenso ist es mit STUN möglich seine öffentliche IP Adresse herauszufinden. 
 
-Die typische STUN Konfiguration beinhaltet einen STUN Client, der in einem privaten Netzwerk beheimatet ist. Dieses Netzwerk wird mit dem Internet durch einen NAT verbunden. Ein weiteres privates Netzwerk das ebenfalls durch einen NAT verbunden ist, beheimatet einen weiteren STUN Client. Der STUN Server befindet sich im öffentlichen Internet. Möchte nun eine Client- Anwendung seine öffentliche IP Adresse und Port erfahren auf der sie Daten empfangen kann sendet der STUN Client in der Anwendung einen STUN "`Shared Secret Request"' an den STUN Server und dann einen Binding Request. Dafür muss dem Client mindestens die Adresse eines öffentlichen STUN Servers bekannt sein. Ein Binding Request wird benutzt um die Anwesenheit eines NATs festzustellen und um die öffentliche IP Adresse und Port zu erfahren, die der NAT generiert hat. Vom STUN Server wird ein solcher Request wird mit einer Binding Response beantwortet die genau diese Daten zurück an den Client schickt. Erhält nun ein STUN-Client eine Binding Response vergleicht er die IP-Adresse und den Port mit seiner lokalen IP Adresse und Sendereport und kann so feststellen ob es sich hinter einem NAT befindet. Nachdem beide Clients ihre öffentlichen IP-Adressen und Port Paare kennen sind sie in der Lage direkt miteinander zu kommunizieren. Eine detaillierter schematischer Ablauf einer STUN Transaktion wird in Abblildung xy dargestellt.
+Die typische STUN Konfiguration beinhaltet einen STUN Client, der in einem privaten Netzwerk beheimatet ist. Dieses Netzwerk wird mit dem Internet durch einen NAT verbunden. Ein weiteres privates Netzwerk das ebenfalls durch einen NAT verbunden ist, beheimatet einen weiteren STUN Client. Der STUN Server befindet sich im öffentlichen Internet. Möchte nun eine Client- Anwendung seine öffentliche IP Adresse und Port erfahren auf der sie Daten empfangen kann sendet der STUN Client in der Anwendung einen STUN "`Shared Secret Request"' an den STUN Server und dann einen Binding Request. Dafür muss dem Client mindestens die Adresse eines öffentlichen STUN Servers bekannt sein. Ein Binding Request wird benutzt um die Anwesenheit eines NATs festzustellen und um die öffentliche IP Adresse und Port zu erfahren, die der NAT generiert hat. Vom STUN Server wird ein solcher Request wird mit einer Binding Response beantwortet die genau diese Daten zurück an den Client schickt. Erhält nun ein STUN-Client eine Binding Response vergleicht er die IP-Adresse und den Port mit seiner lokalen IP Adresse und Sendereport und kann so feststellen ob es sich hinter einem NAT befindet. Nachdem beide Clients ihre öffentlichen IP-Adressen und Port Paare kennen sind sie in der Lage direkt miteinander zu kommunizieren. 
+\begin{figure}[htbp]
+	\centering
+		\includegraphics[width=0.60\textwidth]{grafiken/stun.eps}
+	\caption{Ein schematischer Ablauf von STUN}
+	\label{fig:stun}
+\end{figure}
 
 %Grafik von STUN Transaktion
 
