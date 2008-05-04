@@ -125,28 +125,25 @@ Speziell bedeutet es dass wir im Spiel den den Raum um den Spieler in drei Dista
 
 
 \subsection{Art des Spiels}
-// TODO Ich will einen Prototypen bauen, der dem Modell von Gibbs entspricht, hohe Spielerinteraktion aber gerninger erzählerischer Aspekt. 
 
+Eine in Kapitel 1 vorgestellte klassische Unterteilung von Spielen in Spielegenre zeigt, dass in Abhängigkeit vom Genre des Spiels der Kommunikationsaspekt unterschiedlich stark ausgeprägt ist. So besitzen Actionspiele und Rollenspiele meist den größten Bedarf nach einer ausgeprägten Sprachkommunikation, da stets mehrere Spieler miteinander konkurrieren oder kollaborieren. Beide Genre besitzen eine detaillierte, realistische virtuelle 3D Welt in der der Spieler in mittels einer Spielfigur navigiert und mit anderen Spielfiguren in Interaktion treten kann.
 
-Eine in Kapitel 1 vorgestellte klassische Unterteilung von Spielen in Spielegenre zeigt, dass in Abhängigkeit vom Genre des Spiels der Kommunikationsaspekt unterschiedlich stark ausgeprägt ist. So besitzen Actionspiele und Rollenspiele meist den größten Bedarf nach einer ausgeprägten Sprachkommunikation, da stets mehrere Spieler miteinander konkurrieren oder kollaborieren.
-Beide Genre haben gemeinsam dass der Spieler in detaillierten realistischen virtuellen 3D Welten mittels einer Spielfigur navigieren, die mit anderen Spielfiguren in Interaktion treten kann.
-Dabei entsteht der Spielspaß gerade in der Interaktion welche entweder als Zusammenarbeit oder Kampf verstanden werden kann. In Actionspielen wird durch dem Beschuss mit Projektilen eine Interaktion ausgeübt, die zu einer Konkurenz führt in der der schnellste und geschickteste Spieler das Spiel gewinnt. Finden sich die Spieler in Spielergruppen zusammen so entscheidet nicht mehr die Leistung des einzelen Über den Sieg des Teams. Ein ähnliches Phänomen lässt sich in Rollenspielen beobachten in denen Spieler mittels Zaubersprüchen oder anderen Artefakten miteinander interagieren. Hier entscheidet oft nur die Kollaboration der Spieler der gleichen Spielergruppe über den Spielausgang. Können Mitspieler ihre Aktionen besonders gut aufeinander abstimmen um Vor und Nachteile der einzelenen Spieler zu kompensieren sind sie oft von Erfolg gekrönt. Beide Genre Bedürfen einer ausgeklügelten Kommunikation und Interaktion zwischen den einezelnen Teilnehmern. 
- Angehnt an das System das Gibs, Wadley und Benda im ersten Kapitel vorstellen wollen wir den Prototypen im einem Viereck aus Spielerlebniss, Spielsimulation, erzählerischem Aspekt und der Spielerinteraktion einordnen. Die oben genannten Vertreter der Actionspiele Genre sowie der Rollenspielegenre unterscheiden sich zwar im erzählerischen Aspekt, der bei Rollenspielen dominierend ist, während bei Actionspielen das Spielerelbniss domiert, haben aber beide eine hohe Spielerinteraktion und Simulationstiefe.   
-	Obwohl der Prototyp weder ein ausgereiftes Action oder Rollenspiel ist, da diese die Zielvorgaben der Arbeit sprengen würde, soll er deren gemeinsamen Aspekt der Spielerinteraktion betonen. 
+ Angehnt an das System das Gibs, Wadley und Benda, das im ersten Kapitel vorgestellt wurde soll der Prototyp im Viereck aus Spielerlebniss, Spielsimulation, erzählerischem Aspekt und der Spielerinteraktion eingeordnet werden. Vertreter des Actionspiel- und Rollenspielgenres unterscheiden sich zwar im erzählerischen Aspekt, der bei Rollenspielen dominierend ist, während bei den den anderen das Spielerelbniss domiert, besitzen aber beide eine hohe Spielerinteraktion und Simulationstiefe. Obwohl kein Anspruch darauf besteht einen Prototypen zu entwickeln der ein ausgereiftes Action oder Rollenspiel sein soll, ist das Ziel der Arbeit den Aspekt der gemeinsamen Spielerinteraktion zu betonen. 
  
  %BILD der Einordnung des Spiels.
  %BILD der Einordnung eines Actionspiels
  %Bild der Einordnung eines Rollenspiels
 
-Dabei sollen Aspekte des Spielererlebniss, und des erzählerischen Aspekts vernachlässigt werden, jedoch Aspekte der Simulation und Spielerinteraktion betont werden. 
-
-\section{Wahl der Grafik und Audio Engine}
+\section{Wahl des 3D Frameworks}
 
 \subsection{3D Spieleengines}
-Die Entwicklung eines realistisches Spieles geht weit über das Thema der Arbeit hinaus, da diese Aufgabe normalerweise von ganzen Teams über mehrere Monate oder Jahre bewältigt wird. Deswegen fiel die Entscheidung eine bestehendes Spiele-Framework zu nutzen. Das Framework sollte dazu eingesetzt werden einen Prototypen zu erstellen in dem ein Avatar in einer 3D möglichst realistischen Umgebung gesteuert werden kann. 
+Da die Entwicklung eines realistisches Spieles weit über das Thema der Arbeit hinaus geht, und diese Aufgabe normalerweise von ganzen Teams über mehrere Monate oder Jahre bewältigt wird wird in der Arbeit versucht bestehende Komponenten zu verwenden.
 
-Viele der bestehenden Spiele Engines für 3D orientierte Spiele existieren meist auf der Enwicklungsgrundlagen großer Softwarestudios wie Idsoftware\cite{idsof08} oder Epic Games \cite{unreal2008}, die Standards setzten indem sie, die den Quellcode ihrer erfolgreichsten Frameworks wie z.B. Quake II, Quake III sowie Unreal I öffneten. Da es bei großen Entwicklerstudios üblich ist, dass meist mit dem Aufkommen eines neuen kommerziellen Titels die Entwicklung eines neuen Spieleframeworks mit einher geht, existieren von den Haupvertretern großer Spiele Engines mehrere Generationen sowie Derrivate (siehe Abblidung). 
-Seit einigen Jahren sind mit dem voranschreiten des Open Source Trend auch komplette offene Neuentwicklungen wie Sauerbraten \cite{sauerbraten08} oder Nexuiz \cite{nexuiz08} entstanden, die auch speziell für das Ego-Shooter Genre entworfen wurden. Obwohl diese Spiele Engines opulente Grafik, ein ausgereiftes Spielprinzip sowie eine ausgereifte Steuerung bieten, ist die Modifikation der darunter liegenden Hauptbestandteile wie den Netzwerkkomponenten oder der Spielelogik teilweise nicht ausführlich Dokumentiert, sehr mühsam oder gar nicht vorgesehen. 
+Deswegen habe ich mich Entschieden ein bestehendes Spiele-Framework zu nutzen. Das Framework sollte dazu eingesetzt werden einen Prototypen zu erstellen in dem ein Avatar in einer 3D möglichst realistischen Umgebung gesteuert werden kann. 
+
+Viele der bestehenden Spiele Engines für 3D orientierte Spiele existieren meist auf der Enwicklungsgrundlagen großer Softwarestudios wie Idsoftware\cite{idsof08} oder Epic Games \cite{unreal2008}, die Standards setzten indem sie, die den Quellcode ihrer erfolgreichsten Frameworks wie z.B. Quake II, Quake III sowie Unreal I öffneten. Da es bei großen Entwicklerstudios üblich ist, dass meist mit dem Aufkommen eines neuen kommerziellen Titels die Entwicklung eines neuen Spieleframeworks mit einher geht, existieren von den Haupvertretern großer Spiele-Engines mehrere Generationen sowie Derrivate. 
+
+Seit einigen Jahren sind auch komplette offene Neuentwicklungen wie Sauerbraten \cite{sauerbraten08} oder Nexuiz \cite{nexuiz08} entwickelt worden, die auch speziell für das Ego-Shooter Genre geschrieben wurden. Obwohl diese Spiele-Engines opulente Grafik, ein ausgereiftes Spielprinzip sowie eine ausgereifte Steuerung bieten, ist die Modifikation der darunter liegenden Hauptbestandteile wie den Netzwerkkomponenten oder der Spielelogik teilweise nicht ausführlich dokumentiert, sehr mühsam oder gar nicht vorgesehen. 
 
 \subsection{3D Engines}
 Eine Alternative zu Spiele Engines bieten offene generische 3-D Engines, deren Fokus nicht auf der kompletten Entwicklung eines speziellen Spiels liegt sondern lediglich möglichst komfortabel ermöglichen soll 3D-Grafiken interaktiv darzustellen. Dazu werden meist die Details von Systembibliotheken wie Direct3D oder OpenGL abstrahiert und dem Entwickler ein Interface angeboten das auf höher abstrahierten Objekten oder anderen Abstraktionsklassen basiert. Bekannte Vertreter sind Ogre3D \cite{ogre08} oder Irrlicht \cite{irrlicht08}. 
@@ -157,7 +154,8 @@ Irrlicht ist eine einfache gut dokumentierte open source Engine in C++ die alle 
 \subsubsection{Irrklang}
 Speziell für die Sprachkommunikation musste die 3D-Engine um eine Sound-Engine erweitert werden, die eine gezielte Audioausgabe ermöglicht. Für Irrlicht existiert eine plattform-übergreifende Audiobibliothek irrKlang \cite{irrklang08} die sich für wegen ihrer zahlreichen Features für das Projekt anbiete. Sie unterstützt einerseits low level Audio Verarbeitung, Audiostreaming, realistisches 3D Audio Rendering, Multithreading und kann über Plugins erweitert werden. Zusätzlich besitzt sie eine einfache API, die eine schnelle Einarbeitung und Entwicklung ermöglicht. All diese Gründe waren ausschlaggebend diese Bibliothek zu benutzen. 
 
-\section{Bestehende VoIP Anwendungen für Spiele}
+\section{Wahl der VoIP Anwendung}
+
 Zwecks der Implementierung einer Sprachkommunikationslösung stehen mehrere Alternativen zur Verfügung. Dabei ist die Mehrzahl der Lösungen kommerzieller oder proprietärer Natur. Bisher werden im Spielebereich fast ausschließlich serverbasierte Sprachkommunikationslösungen eingesetzt. Dabei unterstützen viele der Lösungen ähnliche Audiocodecs und bieten einen vergleichbaren Funktionsumfang.
 Im privaten VoIP Telefonie Bereich werden oft kommerzielle Produkte wie Skype eingesetzt.Die wenigsten Anbieter setzen offene Sprachkommunikationslösungen ein. 
 
@@ -166,7 +164,7 @@ Im privaten VoIP Telefonie Bereich werden oft kommerzielle Produkte wie Skype ei
 
 \subsubsection{Ventrillo}
 %http://www.ventrilo.com/
-Die unter Spielern beliebteste Lösung Ventrillo (Version 3.0.1) \cite{ventrillo08} ist eine serverbasiertes propriäteres VoIP Anwendung, die eine Sprachkommunikation von Clients erlaubt. Die Software besteht aus einem Server- und Client-Modul, wobei die Clientsoftware frei erhältlich ist, für die Serverkomponente jedoch eine kostenpflichtige Lizenz zu erwerben ist. Benutzer des Ventrillo Clients melden sich vor Beginn des eigentlichen Spieles auf einem der kostenpflichtigen Ventrillo Server an und können dort einen Kanal betreten. Benutzer des gleichen Kanals auf dem gleichen Server können gegenseitig gehört werden. Durch das Lizenzmodell ist es nicht möglich im privaten Bereich eigene Server zu betreiben und man ist auf bestehende Anbieter limitiert. 
+Die unter Spielern beliebteste Lösung Ventrillo (Version 3.0.1) \cite{ventrillo08} ist eine serverbasierte propriätere VoIP Anwendung, die eine Sprachkommunikation von Clients erlaubt. Die Software besteht aus einem Server- und Client-Modul, wobei die Clientsoftware frei erhältlich ist, für die Serverkomponente jedoch eine kostenpflichtige Lizenz zu erwerben ist. Benutzer des Ventrillo Clients melden sich vor Beginn des eigentlichen Spieles auf einem der kostenpflichtigen Ventrillo Server an und können dort einen Kanal betreten. Benutzer des gleichen Kanals auf dem gleichen Server können gegenseitig gehört werden. Durch das Lizenzmodell ist es nicht möglich im privaten Bereich eigene Server zu betreiben und man ist auf bestehende Anbieter limitiert. 
 
 \subsubsection{Teamspeak}
 %http://www.goteamspeak.com
@@ -184,7 +182,7 @@ Mumble ist zwar als einziges dank seiner offenen Lizenz modifizierbar, jedoch Au
 
 \subsubsection{Skype}
 
-Die im Kapitel 2 näher vorgestellte Skype Technologie erlaubt es P2P VoIP zu ermöglichen. Der Einsatz Skype ist kostenlos und der Dienst völlig dezentralisiert. Über das Skype-API ist es auch für externe Programme möglich, auf die Funktionalitäten des Skype-Clients und Teilen des Netzwerkes zuzugreifen.
+Als einziges erlaubt uns die Skype Technologie völlig dezentrales P2P VoIP zu ermöglichen. Der Einsatz Skype ist kostenlos und der Dienst völlig dezentralisiert. Über das Skype-API ist es auch für externe Programme möglich, auf die Funktionalitäten des Skype-Clients und Teilen des Netzwerkes zuzugreifen.
 Trotz der Vorteile bietet Skype auch einige Nachteile: Da Skypes VoIP-Protokoll proprietär ist, kann es nur mit der originalen Skype-Software genutzt werden. In der kostenlosen Version nur Konferenzen mit bis zu 5 gleichzeitigen Teilnehmern möglich. In einer kostenpflichtigen Version werden zwar bis zu 10 gleichzeitige Konferenzteilnehmer unterstützt. Beide Versionen jedoch bieten keine Kontrolle über die einzelnen Audioströme auf der Clientseite. So kann man nur die Summe aller Audioströme empfangen. Die Clients sind nicht in der Lage die Lautstärke einzelner Teilnehmer zu ändern noch einzelnen Audioströme komplett stumm zuschalten. Zudem bietet die Skype API nur zwei spezielle Interfaces an um entweder Anrufe zu tätigen oder Nachrichten zu verschicken. Eine Architektur für weitere Dienste ist nicht vorgesehen \cite{schulzrinne05}.
 
 Somit bietet sich Skype als einziger tatsächlicher dezentralisierter Client nicht alle Eigenschaften um als mögliche Ausgangsgrundlage zu dienen. 

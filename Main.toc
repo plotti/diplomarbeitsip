@@ -55,12 +55,12 @@
 \contentsline {subsection}{\numberline {3.1.5}Luft als Medium}{28}
 \contentsline {subsection}{\numberline {3.1.6}Proxemik als Steuerung von Konferenzen}{29}
 \contentsline {subsection}{\numberline {3.1.7}Art des Spiels}{30}
-\contentsline {section}{\numberline {3.2}Wahl der Grafik und Audio Engine}{31}
+\contentsline {section}{\numberline {3.2}Wahl des 3D Frameworks}{31}
 \contentsline {subsection}{\numberline {3.2.1}3D Spieleengines}{31}
-\contentsline {subsection}{\numberline {3.2.2}3D Engines}{32}
+\contentsline {subsection}{\numberline {3.2.2}3D Engines}{31}
 \contentsline {subsubsection}{Irrlicht}{32}
 \contentsline {subsubsection}{Irrklang}{32}
-\contentsline {section}{\numberline {3.3}Bestehende VoIP Anwendungen f\"ur Spiele}{33}
+\contentsline {section}{\numberline {3.3}Wahl der VoIP Anwendung}{32}
 \contentsline {subsection}{\numberline {3.3.1}Serverbasierte Sprachkommunikationsl\"osungen}{33}
 \contentsline {subsubsection}{Ventrillo}{33}
 \contentsline {subsubsection}{Teamspeak}{33}
@@ -68,7 +68,7 @@
 \contentsline {subsection}{\numberline {3.3.2}Dezentralisierte Sprachkommunikationsl\"osungen}{34}
 \contentsline {subsubsection}{Skype}{34}
 \contentsline {subsection}{\numberline {3.3.3}Instant Messanging Anwendungen}{34}
-\contentsline {subsection}{\numberline {3.3.4}SIP als L\"osung}{35}
+\contentsline {subsection}{\numberline {3.3.4}SIP als L\"osung}{34}
 \contentsline {chapter}{\numberline {4}VoIP Grundlagen}{36}
 \contentsline {section}{\numberline {4.1}Protokolle zur Echtzeitkommunikation}{36}
 \contentsline {subsection}{\numberline {4.1.1}Einfaches VoIP System}{38}
@@ -113,99 +113,99 @@
 \contentsline {subsubsection}{Avatar-Dichte}{63}
 \contentsline {subsubsection}{Avatar-Verteilung}{63}
 \contentsline {subsubsection}{Korrelation}{63}
-\contentsline {subsection}{\numberline {6.2.1}Peer-to-Peer}{63}
+\contentsline {subsection}{\numberline {6.2.1}Peer-to-Peer}{64}
 \contentsline {subsection}{\numberline {6.2.2}Client-Server}{64}
 \contentsline {subsubsection}{Proxy}{65}
-\contentsline {subsubsection}{Verteilte Server}{65}
-\contentsline {subsection}{\numberline {6.2.3}Hybrid}{66}
-\contentsline {section}{\numberline {6.3}SIP Konferenzen}{66}
-\contentsline {subsection}{\numberline {6.3.1}Komplett Dezentralisierte Ans\"atze}{68}
-\contentsline {subsubsection}{Multicast}{68}
-\contentsline {subsubsection}{P2P SIP}{69}
-\contentsline {subsubsection}{Fullmesh}{69}
-\contentsline {subsection}{\numberline {6.3.2}Komplett Zentralisierte Ans\"atze}{69}
-\contentsline {subsection}{\numberline {6.3.3}Verteilter Server und Zentrales Abmischen}{70}
-\contentsline {subsubsection}{Dedicated Node Mixing}{70}
-\contentsline {subsection}{\numberline {6.3.4}Zentraler Server und Dezentrales Abmischen}{71}
-\contentsline {subsubsection}{SIP Hybrid Model}{71}
-\contentsline {section}{\numberline {6.4}Resultierende Probleme}{72}
-\contentsline {subsection}{\numberline {6.4.1}Einsatz mehrerer Registrare}{72}
-\contentsline {subsubsection}{Single Registrar}{73}
-\contentsline {subsubsection}{Multiple Registrars aka Proxies}{73}
-\contentsline {subsection}{\numberline {6.4.2}H\"orn\"ahe vs. Area of Interest}{73}
-\contentsline {section}{\numberline {6.5}Gr\"unde f\"ur die Entscheidung eine Hybride Architektur zu benutzen}{74}
-\contentsline {chapter}{\numberline {7}Implementierung}{75}
-\contentsline {section}{\numberline {7.1}Entwicklungsumgebung}{75}
-\contentsline {subsection}{\numberline {7.1.1}Programmiersprache}{75}
-\contentsline {subsection}{\numberline {7.1.2}Build und Testumgeung}{75}
-\contentsline {subsection}{\numberline {7.1.3}SIP Server}{75}
-\contentsline {subsection}{\numberline {7.1.4}Existierende SIP Clients}{75}
-\contentsline {subsubsection}{Pjsip}{76}
-\contentsline {section}{\numberline {7.2}SIP Nachrichten}{76}
-\contentsline {subsection}{\numberline {7.2.1}Herstellen einer Verbindung}{76}
-\contentsline {subsubsection}{Verbindungsaufbau}{76}
-\contentsline {subsubsection}{Das Problem der doppelten Verbindung}{77}
-\contentsline {subsection}{\numberline {7.2.2}Verbindungsabbau}{78}
-\contentsline {subsection}{\numberline {7.2.3}PTSN Netzwerke}{78}
-\contentsline {section}{\numberline {7.3}Zonen}{78}
-\contentsline {subsection}{\numberline {7.3.1}\"Offentliche Zone}{78}
-\contentsline {subsubsection}{Eingang und Verlassen der \"Offentlichen Zone}{78}
-\contentsline {subsubsection}{RTP - Silence Supression}{79}
-\contentsline {subsection}{\numberline {7.3.2}Soziale Zone}{79}
-\contentsline {subsubsection}{Lautst\"arkenanpassung}{79}
-\contentsline {subsection}{\numberline {7.3.3}Private Zone}{80}
-\contentsline {subsection}{\numberline {7.3.4}Radar}{80}
-\contentsline {section}{\numberline {7.4}Spielewelt in Irrlicht und Irrklang}{80}
-\contentsline {subsection}{\numberline {7.4.1}Irrlicht}{80}
-\contentsline {subsubsection}{Level}{80}
-\contentsline {subsubsection}{Collision Detection}{80}
-\contentsline {subsubsection}{Steuerung}{81}
-\contentsline {subsection}{\numberline {7.4.2}Irrklang}{81}
-\contentsline {subsubsection}{Lokale Audiszene}{81}
-\contentsline {section}{\numberline {7.5}Zusammenarbeit von Irrlicht und VoiP}{81}
-\contentsline {subsection}{\numberline {7.5.1}Aktualisierung der VoIP Instanz}{81}
-\contentsline {subsection}{\numberline {7.5.2}Buddy Concept}{81}
-\contentsline {section}{\numberline {7.6}Spielablauf Use Cases}{82}
-\contentsline {subsection}{\numberline {7.6.1}Registrierung}{82}
-\contentsline {subsection}{\numberline {7.6.2}NAT Traversal}{82}
-\contentsline {subsection}{\numberline {7.6.3}Spieler startet das Spiel}{82}
-\contentsline {subsection}{\numberline {7.6.4}Neuer Spieler betritt das Spiel}{82}
-\contentsline {subsection}{\numberline {7.6.5}Spieler bewegt sich im Spiel}{83}
-\contentsline {subsection}{\numberline {7.6.6}Spieler beendet sein Spiel}{83}
-\contentsline {chapter}{\numberline {8}SIP als Netzwerkgrundlage in Spielen}{84}
-\contentsline {section}{\numberline {8.1}SIP als Netzwerkschicht}{84}
-\contentsline {section}{\numberline {8.2}Anforderungen an die Netzwerkschicht}{84}
-\contentsline {section}{\numberline {8.3}Client - Server in Netzwerkspielen}{85}
-\contentsline {subsection}{\numberline {8.3.1}Techniken zur Skalierung}{86}
-\contentsline {subsubsection}{Sharding}{86}
-\contentsline {subsubsection}{Clustering}{86}
-\contentsline {subsubsection}{Interest Management}{86}
-\contentsline {section}{\numberline {8.4}SIP im Client-Server Modus}{87}
-\contentsline {subsection}{\numberline {8.4.1}SIP SIMPLE Protokoll}{87}
-\contentsline {subsubsection}{Nachrichtendienst}{87}
-\contentsline {subsubsection}{Buddy Konzept}{88}
-\contentsline {subsubsection}{Pr\"asenzdienst}{88}
-\contentsline {subsection}{\numberline {8.4.2}Skalierbarkeit}{89}
-\contentsline {subsection}{\numberline {8.4.3}Tauglichkeit als Peer-to-Peer Ansatz}{89}
-\contentsline {section}{\numberline {8.5}Peer-to-Peer}{89}
-\contentsline {subsection}{\numberline {8.5.1}Distributed Hash Tables}{90}
-\contentsline {subsection}{\numberline {8.5.2}Peer-to-Peer in Netzwerkspielen}{90}
-\contentsline {subsection}{\numberline {8.5.3}Nachbarbasierte P2P-Systeme}{91}
-\contentsline {subsubsection}{Voronoibasierte P2P Systeme}{91}
-\contentsline {subsection}{\numberline {8.5.4}Regionsbasierte P2P-Systeme}{92}
-\contentsline {subsection}{\numberline {8.5.5}Hybride P2P-Systeme}{93}
-\contentsline {section}{\numberline {8.6}Hybride Systeme}{93}
-\contentsline {section}{\numberline {8.7}Peer-to-Peer SIP}{93}
-\contentsline {subsection}{\numberline {8.7.1}Motivation f\"ur Peer-to-Peer SIP}{93}
-\contentsline {subsection}{\numberline {8.7.2}Funktionsweise}{94}
-\contentsline {subsection}{\numberline {8.7.3}Architektur Variationen}{95}
-\contentsline {chapter}{\numberline {9}Performancemessungen}{97}
-\contentsline {section}{\numberline {9.1}Tests von Audio\"ubertragung}{97}
-\contentsline {subsection}{\numberline {9.1.1}Bandbreite}{97}
-\contentsline {subsection}{\numberline {9.1.2}Bandbreite vs. Entfernung}{97}
-\contentsline {subsection}{\numberline {9.1.3}Mixing}{97}
-\contentsline {subsection}{\numberline {9.1.4}Ende-zu-Ende Verz\"ogerung (Delay)}{97}
-\contentsline {subsection}{\numberline {9.1.5}Verz\"ogerungsschwankung (Jitter)}{97}
-\contentsline {subsection}{\numberline {9.1.6}Paketverlust (Packet Loss)}{97}
-\contentsline {section}{\numberline {9.2}Tests von SIP als Netzwerkschnitstelle}{98}
-\contentsline {chapter}{Literaturverzeichnis}{99}
+\contentsline {subsubsection}{Verteilte Server}{67}
+\contentsline {subsection}{\numberline {6.2.3}Hybrid}{68}
+\contentsline {section}{\numberline {6.3}SIP Konferenzen}{68}
+\contentsline {subsection}{\numberline {6.3.1}Komplett Dezentralisierte Ans\"atze}{70}
+\contentsline {subsubsection}{Multicast}{70}
+\contentsline {subsubsection}{P2P SIP}{70}
+\contentsline {subsubsection}{Fullmesh}{71}
+\contentsline {subsection}{\numberline {6.3.2}Komplett Zentralisierte Ans\"atze}{71}
+\contentsline {subsection}{\numberline {6.3.3}Verteilter Server und Zentrales Abmischen}{72}
+\contentsline {subsubsection}{Dedicated Node Mixing}{72}
+\contentsline {subsection}{\numberline {6.3.4}Zentraler Server und Dezentrales Abmischen}{73}
+\contentsline {subsubsection}{SIP Hybrid Model}{73}
+\contentsline {section}{\numberline {6.4}Resultierende Probleme}{74}
+\contentsline {subsection}{\numberline {6.4.1}Einsatz mehrerer Registrare}{74}
+\contentsline {subsubsection}{Single Registrar}{75}
+\contentsline {subsubsection}{Multiple Registrars aka Proxies}{75}
+\contentsline {subsection}{\numberline {6.4.2}H\"orn\"ahe vs. Area of Interest}{75}
+\contentsline {section}{\numberline {6.5}Gr\"unde f\"ur die Entscheidung eine Hybride Architektur zu benutzen}{76}
+\contentsline {chapter}{\numberline {7}Implementierung}{77}
+\contentsline {section}{\numberline {7.1}Entwicklungsumgebung}{77}
+\contentsline {subsection}{\numberline {7.1.1}Programmiersprache}{77}
+\contentsline {subsection}{\numberline {7.1.2}Build und Testumgeung}{77}
+\contentsline {subsection}{\numberline {7.1.3}SIP Server}{77}
+\contentsline {subsection}{\numberline {7.1.4}Existierende SIP Clients}{77}
+\contentsline {subsubsection}{Pjsip}{78}
+\contentsline {section}{\numberline {7.2}SIP Nachrichten}{78}
+\contentsline {subsection}{\numberline {7.2.1}Herstellen einer Verbindung}{78}
+\contentsline {subsubsection}{Verbindungsaufbau}{78}
+\contentsline {subsubsection}{Das Problem der doppelten Verbindung}{79}
+\contentsline {subsection}{\numberline {7.2.2}Verbindungsabbau}{80}
+\contentsline {subsection}{\numberline {7.2.3}PTSN Netzwerke}{80}
+\contentsline {section}{\numberline {7.3}Zonen}{80}
+\contentsline {subsection}{\numberline {7.3.1}\"Offentliche Zone}{80}
+\contentsline {subsubsection}{Eingang und Verlassen der \"Offentlichen Zone}{80}
+\contentsline {subsubsection}{RTP - Silence Supression}{81}
+\contentsline {subsection}{\numberline {7.3.2}Soziale Zone}{81}
+\contentsline {subsubsection}{Lautst\"arkenanpassung}{81}
+\contentsline {subsection}{\numberline {7.3.3}Private Zone}{82}
+\contentsline {subsection}{\numberline {7.3.4}Radar}{82}
+\contentsline {section}{\numberline {7.4}Spielewelt in Irrlicht und Irrklang}{82}
+\contentsline {subsection}{\numberline {7.4.1}Irrlicht}{82}
+\contentsline {subsubsection}{Level}{82}
+\contentsline {subsubsection}{Collision Detection}{82}
+\contentsline {subsubsection}{Steuerung}{83}
+\contentsline {subsection}{\numberline {7.4.2}Irrklang}{83}
+\contentsline {subsubsection}{Lokale Audiszene}{83}
+\contentsline {section}{\numberline {7.5}Zusammenarbeit von Irrlicht und VoiP}{83}
+\contentsline {subsection}{\numberline {7.5.1}Aktualisierung der VoIP Instanz}{83}
+\contentsline {subsection}{\numberline {7.5.2}Buddy Concept}{83}
+\contentsline {section}{\numberline {7.6}Spielablauf Use Cases}{84}
+\contentsline {subsection}{\numberline {7.6.1}Registrierung}{84}
+\contentsline {subsection}{\numberline {7.6.2}NAT Traversal}{84}
+\contentsline {subsection}{\numberline {7.6.3}Spieler startet das Spiel}{84}
+\contentsline {subsection}{\numberline {7.6.4}Neuer Spieler betritt das Spiel}{84}
+\contentsline {subsection}{\numberline {7.6.5}Spieler bewegt sich im Spiel}{85}
+\contentsline {subsection}{\numberline {7.6.6}Spieler beendet sein Spiel}{85}
+\contentsline {chapter}{\numberline {8}SIP als Netzwerkgrundlage in Spielen}{86}
+\contentsline {section}{\numberline {8.1}SIP als Netzwerkschicht}{86}
+\contentsline {section}{\numberline {8.2}Anforderungen an die Netzwerkschicht}{86}
+\contentsline {section}{\numberline {8.3}Client - Server in Netzwerkspielen}{87}
+\contentsline {subsection}{\numberline {8.3.1}Techniken zur Skalierung}{88}
+\contentsline {subsubsection}{Sharding}{88}
+\contentsline {subsubsection}{Clustering}{88}
+\contentsline {subsubsection}{Interest Management}{88}
+\contentsline {section}{\numberline {8.4}SIP im Client-Server Modus}{89}
+\contentsline {subsection}{\numberline {8.4.1}SIP SIMPLE Protokoll}{89}
+\contentsline {subsubsection}{Nachrichtendienst}{89}
+\contentsline {subsubsection}{Buddy Konzept}{90}
+\contentsline {subsubsection}{Pr\"asenzdienst}{90}
+\contentsline {subsection}{\numberline {8.4.2}Skalierbarkeit}{91}
+\contentsline {subsection}{\numberline {8.4.3}Tauglichkeit als Peer-to-Peer Ansatz}{91}
+\contentsline {section}{\numberline {8.5}Peer-to-Peer}{91}
+\contentsline {subsection}{\numberline {8.5.1}Distributed Hash Tables}{92}
+\contentsline {subsection}{\numberline {8.5.2}Peer-to-Peer in Netzwerkspielen}{92}
+\contentsline {subsection}{\numberline {8.5.3}Nachbarbasierte P2P-Systeme}{93}
+\contentsline {subsubsection}{Voronoibasierte P2P Systeme}{93}
+\contentsline {subsection}{\numberline {8.5.4}Regionsbasierte P2P-Systeme}{94}
+\contentsline {subsection}{\numberline {8.5.5}Hybride P2P-Systeme}{95}
+\contentsline {section}{\numberline {8.6}Hybride Systeme}{95}
+\contentsline {section}{\numberline {8.7}Peer-to-Peer SIP}{95}
+\contentsline {subsection}{\numberline {8.7.1}Motivation f\"ur Peer-to-Peer SIP}{95}
+\contentsline {subsection}{\numberline {8.7.2}Funktionsweise}{96}
+\contentsline {subsection}{\numberline {8.7.3}Architektur Variationen}{97}
+\contentsline {chapter}{\numberline {9}Performancemessungen}{99}
+\contentsline {section}{\numberline {9.1}Tests von Audio\"ubertragung}{99}
+\contentsline {subsection}{\numberline {9.1.1}Bandbreite}{99}
+\contentsline {subsection}{\numberline {9.1.2}Bandbreite vs. Entfernung}{99}
+\contentsline {subsection}{\numberline {9.1.3}Mixing}{99}
+\contentsline {subsection}{\numberline {9.1.4}Ende-zu-Ende Verz\"ogerung (Delay)}{99}
+\contentsline {subsection}{\numberline {9.1.5}Verz\"ogerungsschwankung (Jitter)}{99}
+\contentsline {subsection}{\numberline {9.1.6}Paketverlust (Packet Loss)}{99}
+\contentsline {section}{\numberline {9.2}Tests von SIP als Netzwerkschnitstelle}{100}
+\contentsline {chapter}{Literaturverzeichnis}{101}

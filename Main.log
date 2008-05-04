@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592-1.40.4 (MiKTeX 2.7 Beta 5) (preloaded format=latex 2008.3.16)  3 MAY 2008 22:43
+This is pdfTeX, Version 3.141592-1.40.4 (MiKTeX 2.7 Beta 5) (preloaded format=latex 2008.3.16)  4 MAY 2008 17:34
 entering extended mode
 **Main.tex
 (Main.tex
@@ -400,25 +400,25 @@ Class scrbook Info: You've told me to use the font selection of the element
 (scrbook)            on input line 72.
 Class scrbook Info: You've told me to use the font selection of the element
 (scrbook)           `sectioning' that is an alias of element `disposition'
-(scrbook)            on input line 99.
+(scrbook)            on input line 98.
  [3]
 Class scrbook Info: You've told me to use the font selection of the element
 (scrbook)           `sectioning' that is an alias of element `disposition'
-(scrbook)            on input line 110.
+(scrbook)            on input line 109.
 Class scrbook Info: You've told me to use the font selection of the element
 (scrbook)           `sectioning' that is an alias of element `disposition'
-(scrbook)            on input line 138.
+(scrbook)            on input line 137.
  [4]
 Class scrbook Info: You've told me to use the font selection of the element
 (scrbook)           `sectioning' that is an alias of element `disposition'
-(scrbook)            on input line 176.
+(scrbook)            on input line 175.
 Class scrbook Info: You've told me to use the font selection of the element
 (scrbook)           `sectioning' that is an alias of element `disposition'
-(scrbook)            on input line 203.
+(scrbook)            on input line 202.
  [5]
 Class scrbook Info: You've told me to use the font selection of the element
 (scrbook)           `sectioning' that is an alias of element `disposition'
-(scrbook)            on input line 212.
+(scrbook)            on input line 211.
 )
 \tf@toc=\write3
  [6] (kapitel/stichwortverzeichnis.tex) [7
@@ -582,30 +582,40 @@ Kapitel 6.
 
 
 
-] [63] [64] [65] [66] [67] [68] [69] [70] [71] [72] [73])
+] [63]
+File: grafiken/entwurf-p2p.eps Graphic file (type eps)
+ <grafiken/entwurf-p2p.eps> [64]
+File: grafiken/entwurf-server.eps Graphic file (type eps)
+ <grafiken/entwurf-server.eps>
+[65]
+File: grafiken/entwurf-proxy.eps Graphic file (type eps)
+ <grafiken/entwurf-proxy.eps> [66]
+File: grafiken/entwurf-verteilteserver.eps Graphic file (type eps)
+ <grafiken/entwurf-verteilteserver.eps>
+[67] [68] [69] [70] [71] [72] [73] [74] [75])
 Overfull \vbox (10.87498pt too high) has occurred while \output is active []
 
 
-[74] (kapitel/kapitel_implementierung.tex
+[76] (kapitel/kapitel_implementierung.tex
 Kapitel 7.
-[75
+[77
 
 
 
-] [76] [77] [78] [79] [80] [81] [82]) [83] (kapitel/kapitel_network.tex
+] [78] [79] [80] [81] [82] [83] [84]) [85] (kapitel/kapitel_network.tex
 Kapitel 8.
-[84
+[86
 
 
 
-] [85] [86] [87] [88] [89] [90] [91] [92] [93] [94] [95]) [96]
+] [87] [88] [89] [90] [91] [92] [93] [94] [95] [96] [97]) [98]
 (kapitel/kapitel_benchmarking.tex
 Kapitel 9.
-) [97
+) [99
 
 
 
-] [98] (Main.bbl
+] [100] (Main.bbl
 Underfull \hbox (badness 6063) in paragraph at lines 43--48
 [][]\OT1/cmr/m/sc/12 Arango\OT1/cmr/m/n/12 , M. ; \OT1/cmr/m/sc/12 Du-gan\OT1/c
 mr/m/n/12 , A. ; \OT1/cmr/m/sc/12 El-liott\OT1/cmr/m/n/12 , I. ; \OT1/cmr/m/sc/
@@ -618,7 +628,7 @@ Underfull \hbox (badness 3078) in paragraph at lines 43--48
 -col (MG-CP).  In:
  []
 
-[99
+[101
 
 
 
@@ -634,7 +644,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 199--205
 ]Studien[]-
  []
 
-[100]
+[102]
 Underfull \hbox (badness 10000) in paragraph at lines 221--225
 [][]\OT1/cmr/m/sc/12 Gebhardt\OT1/cmr/m/n/12 , Ni-ko-laus:  irr-Klang.  In:
  []
@@ -645,7 +655,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 227--231
 ne.  In:
  []
 
-[101]
+[103]
 Underfull \hbox (badness 10000) in paragraph at lines 332--338
 [][]\OT1/cmr/m/sc/12 Ipoque\OT1/cmr/m/n/12 :  In-ter-net Stu-die 2007.  In:
  []
@@ -662,7 +672,7 @@ Underfull \hbox (badness 1062) in paragraph at lines 362--367
 \OT1/cmr/m/n/12 , Gwen-dal:  So-lip-sis: A Mas-si-ve-ly Multi-
  []
 
-[102]
+[104]
 Underfull \hbox (badness 1112) in paragraph at lines 425--432
 [][]\OT1/cmr/m/sc/12 Miladinovic\OT1/cmr/m/n/12 , I. ; \OT1/cmr/m/sc/12 Stad-le
 r\OT1/cmr/m/n/12 , J.:  Mul-ti-par-ty Con-fe-rence Si-gnal-ling
@@ -687,13 +697,13 @@ n\OT1/cmr/m/n/12 , K. ; \OT1/cmr/m/sc/12 Sa-chen-ba-che-rand\OT1/cmr/m/n/12 , K
 . ;
  []
 
-[103]
+[105]
 Underfull \hbox (badness 10000) in paragraph at lines 516--520
 [][]\OT1/cmr/m/sc/12 ResoundingTechnologyInc\OT1/cmr/m/n/12 :  Ro-ger Wil-co.  
 In:
  []
 
-[104]
+[106]
 Underfull \hbox (badness 3229) in paragraph at lines 650--655
 [][]\OT1/cmr/m/sc/12 Schulzrinne\OT1/cmr/m/n/12 , H. ; \OT1/cmr/m/sc/12 Cas-ner
 \OT1/cmr/m/n/12 , S. ; \OT1/cmr/m/sc/12 Fre-de-rick\OT1/cmr/m/n/12 , R. ; \OT1/
@@ -706,7 +716,7 @@ Underfull \hbox (badness 1259) in paragraph at lines 650--655
 ns.  In:
  []
 
-[105]
+[107]
 Underfull \hbox (badness 10000) in paragraph at lines 720--724
 [][]\OT1/cmr/m/sc/12 SonyEntertainment\OT1/cmr/m/n/12 :  Play-Sta-ti-on Ho-me. 
  In:
@@ -723,13 +733,13 @@ Underfull \hbox (badness 1178) in paragraph at lines 757--764
 a-ti-on to Pre-sence  \OT1/cmr/m/n/12 9
  []
 
-[106]
+[108]
 Underfull \hbox (badness 10000) in paragraph at lines 802--806
 [][]\OT1/cmr/m/sc/12 Wikipedia\OT1/cmr/m/n/12 :  Over-view of SIP Soft-wa-re.  
 In:
  []
 
-) [107] (kapitel/erklaerung.tex) [108
+) [109] (kapitel/erklaerung.tex) [110
 
 
 ]
@@ -748,12 +758,12 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 6509 strings out of 95351
- 92430 string characters out of 1184568
- 206190 words of memory out of 1500000
- 9513 multiletter control sequences out of 110000
+ 6522 strings out of 95351
+ 92718 string characters out of 1184568
+ 206250 words of memory out of 1500000
+ 9522 multiletter control sequences out of 110000
  9089 words of font info for 33 fonts, out of 1200000 for 2000
  14 hyphenation exceptions out of 8191
  36i,11n,37p,1708b,1115s stack positions out of 5000i,500n,10000p,200000b,5000s
 
-Output written on Main.dvi (118 pages, 431304 bytes).
+Output written on Main.dvi (120 pages, 432728 bytes).

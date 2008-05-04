@@ -19,6 +19,9 @@
 \contentsline {figure}{\numberline {4.9}{\ignorespaces Ein schematischer Ablauf von STUN}}{56}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {6.1}{\ignorespaces Client Server Architektur, mit zentralem Mischserver}}{65}
+\contentsline {figure}{\numberline {6.2}{\ignorespaces Eine Proxy Architektur. In schwarz ist die Verbindung von Spieler 3 mit Spieler 7 dargestellt.}}{66}
+\contentsline {figure}{\numberline {6.3}{\ignorespaces Verteile Server S1...S4. Die Verbindungen der Spielewelt S3 wird in schwarz dargestellt. }}{67}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
