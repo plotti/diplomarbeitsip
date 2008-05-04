@@ -5,7 +5,7 @@ Version=2
 [SessionInfo]
 ActiveTab=0
 FrameCount=14
-ActiveFrame=7
+ActiveFrame=5
 
 [Frame0]
 Columns=1
@@ -32,8 +32,8 @@ cxCur=820
 cxMin=10
 
 [Frame0_View0,0]
-Cursor.row=2
-Cursor.column=472
+Cursor.row=0
+Cursor.column=0
 TopSubLine=0
 
 [Frame1]
@@ -61,7 +61,7 @@ cxCur=747
 cxMin=10
 
 [Frame1_View0,0]
-Cursor.row=313
+Cursor.row=427
 Cursor.column=0
 TopSubLine=612
 
@@ -90,9 +90,9 @@ cxCur=751
 cxMin=10
 
 [Frame2_View0,0]
-Cursor.row=0
-Cursor.column=0
-TopSubLine=0
+Cursor.row=73
+Cursor.column=10
+TopSubLine=225
 
 [Frame3]
 Columns=1
@@ -119,9 +119,9 @@ cxCur=751
 cxMin=10
 
 [Frame3_View0,0]
-Cursor.row=147
-Cursor.column=30
-TopSubLine=303
+Cursor.row=0
+Cursor.column=0
+TopSubLine=0
 
 [Frame4]
 Columns=1
@@ -148,15 +148,15 @@ cxCur=751
 cxMin=10
 
 [Frame4_View0,0]
-Cursor.row=0
-Cursor.column=0
-TopSubLine=0
+Cursor.row=162
+Cursor.column=41
+TopSubLine=394
 
 [Frame5]
 Columns=1
 Rows=1
-Flags=0
-ShowCmd=1
+Flags=2
+ShowCmd=3
 MinPos.x=-1
 MinPos.y=-1
 MaxPos.x=-4
@@ -169,17 +169,17 @@ Class=CLatexEdit
 Document=kapitel\kapitel_konstruktion.tex
 
 [Frame5_Row0]
-cyCur=346
+cyCur=525
 cyMin=10
 
 [Frame5_Col0]
-cxCur=751
+cxCur=966
 cxMin=10
 
 [Frame5_View0,0]
-Cursor.row=0
-Cursor.column=0
-TopSubLine=537
+Cursor.row=252
+Cursor.column=32
+TopSubLine=490
 
 [Frame6]
 Columns=1
@@ -213,8 +213,8 @@ TopSubLine=0
 [Frame7]
 Columns=1
 Rows=1
-Flags=2
-ShowCmd=3
+Flags=0
+ShowCmd=1
 MinPos.x=-1
 MinPos.y=-1
 MaxPos.x=-4
@@ -227,17 +227,17 @@ Class=CLatexEdit
 Document=kapitel\kapitel_kommunikation.tex
 
 [Frame7_Row0]
-cyCur=554
+cyCur=346
 cyMin=10
 
 [Frame7_Col0]
-cxCur=936
+cxCur=751
 cxMin=10
 
 [Frame7_View0,0]
-Cursor.row=129
-Cursor.column=91
-TopSubLine=241
+Cursor.row=0
+Cursor.column=0
+TopSubLine=0
 
 [Frame8]
 Columns=1
@@ -264,9 +264,9 @@ cxCur=751
 cxMin=10
 
 [Frame8_View0,0]
-Cursor.row=54
+Cursor.row=0
 Cursor.column=0
-TopSubLine=60
+TopSubLine=0
 
 [Frame9]
 Columns=1
@@ -351,9 +351,9 @@ cxCur=796
 cxMin=10
 
 [Frame11_View0,0]
-Cursor.row=198
+Cursor.row=99
 Cursor.column=0
-TopSubLine=475
+TopSubLine=248
 
 [Frame12]
 Columns=1
