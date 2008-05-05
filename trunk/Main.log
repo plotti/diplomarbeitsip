@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592-1.40.7 (MiKTeX 2.7) (preloaded format=latex 2008.3.12)  5 MAY 2008 10:11
+This is pdfTeX, Version 3.141592-1.40.7 (MiKTeX 2.7) (preloaded format=latex 2008.3.12)  5 MAY 2008 18:13
 entering extended mode
 **Main.tex
 (Main.tex
@@ -431,7 +431,7 @@ Class scrbook Info: You've told me to use the font selection of the element
  [6]
 Class scrbook Info: You've told me to use the font selection of the element
 (scrbook)           `sectioning' that is an alias of element `disposition'
-(scrbook)            on input line 216.
+(scrbook)            on input line 219.
 )
 \tf@toc=\write3
  [7] (kapitel/stichwortverzeichnis.tex) [8
@@ -631,7 +631,21 @@ Kapitel 8.
 ] [87] [88] [89] [90] [91] [92] [93] [94] [95] [96] [97]) [98]
 (kapitel/kapitel_benchmarking.tex
 Kapitel 9.
+File: grafiken/fullmesh.eps Graphic file (type eps)
+<grafiken/fullmesh.eps>
+File: grafiken/fullmeshchart.eps Graphic file (type eps)
+ <grafiken/fullmeshchart.eps>
+File: grafiken/partialmesh.eps Graphic file (type eps)
+
+<grafiken/partialmesh.eps>
+File: grafiken/partialmeshchart.eps Graphic file (type eps)
+ <grafiken/partialmeshchart.eps> [99
+
+
+
+] [100]
 File: grafiken/ohnevpn1.eps Graphic file (type eps)
+
 <grafiken/ohnevpn1.eps>
 File: grafiken/ohnevpn2.eps Graphic file (type eps)
  <grafiken/ohnevpn2.eps>
@@ -644,11 +658,7 @@ File: grafiken/mitholdupanddown.eps Graphic file (type eps)
  <grafiken/mitholdupanddown.eps>
 File: grafiken/mithold1.eps Graphic file (type eps)
 
-<grafiken/mithold1.eps> [99
-
-
-
-] [100] [101] [102]) [103] (Main.bbl
+<grafiken/mithold1.eps> [101] [102] [103] [104]) [105] (Main.bbl
 Underfull \hbox (badness 6063) in paragraph at lines 43--48
 [][]\OT1/cmr/m/sc/12 Arango\OT1/cmr/m/n/12 , M. ; \OT1/cmr/m/sc/12 Du-gan\OT1/c
 mr/m/n/12 , A. ; \OT1/cmr/m/sc/12 El-liott\OT1/cmr/m/n/12 , I. ; \OT1/cmr/m/sc/
@@ -661,7 +671,7 @@ Underfull \hbox (badness 3078) in paragraph at lines 43--48
 -col (MG-CP).  In:
  []
 
-[104
+[106
 
 
 
@@ -677,7 +687,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 199--205
 ]Studien[]-
  []
 
-[105]
+[107]
 Underfull \hbox (badness 10000) in paragraph at lines 221--225
 [][]\OT1/cmr/m/sc/12 Gebhardt\OT1/cmr/m/n/12 , Ni-ko-laus:  irr-Klang.  In:
  []
@@ -688,7 +698,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 227--231
 ne.  In:
  []
 
-[106]
+[108]
 Underfull \hbox (badness 10000) in paragraph at lines 332--338
 [][]\OT1/cmr/m/sc/12 Ipoque\OT1/cmr/m/n/12 :  In-ter-net Stu-die 2007.  In:
  []
@@ -705,7 +715,7 @@ Underfull \hbox (badness 1062) in paragraph at lines 362--367
 \OT1/cmr/m/n/12 , Gwen-dal:  So-lip-sis: A Mas-si-ve-ly Multi-
  []
 
-[107]
+[109]
 Underfull \hbox (badness 1112) in paragraph at lines 425--432
 [][]\OT1/cmr/m/sc/12 Miladinovic\OT1/cmr/m/n/12 , I. ; \OT1/cmr/m/sc/12 Stad-le
 r\OT1/cmr/m/n/12 , J.:  Mul-ti-par-ty Con-fe-rence Si-gnal-ling
@@ -730,13 +740,13 @@ n\OT1/cmr/m/n/12 , K. ; \OT1/cmr/m/sc/12 Sa-chen-ba-che-rand\OT1/cmr/m/n/12 , K
 . ;
  []
 
-[108]
+[110]
 Underfull \hbox (badness 10000) in paragraph at lines 516--520
 [][]\OT1/cmr/m/sc/12 ResoundingTechnologyInc\OT1/cmr/m/n/12 :  Ro-ger Wil-co.  
 In:
  []
 
-[109]
+[111]
 Underfull \hbox (badness 3229) in paragraph at lines 650--655
 [][]\OT1/cmr/m/sc/12 Schulzrinne\OT1/cmr/m/n/12 , H. ; \OT1/cmr/m/sc/12 Cas-ner
 \OT1/cmr/m/n/12 , S. ; \OT1/cmr/m/sc/12 Fre-de-rick\OT1/cmr/m/n/12 , R. ; \OT1/
@@ -749,7 +759,7 @@ Underfull \hbox (badness 1259) in paragraph at lines 650--655
 ns.  In:
  []
 
-[110]
+[112]
 Underfull \hbox (badness 10000) in paragraph at lines 720--724
 [][]\OT1/cmr/m/sc/12 SonyEntertainment\OT1/cmr/m/n/12 :  Play-Sta-ti-on Ho-me. 
  In:
@@ -766,13 +776,13 @@ Underfull \hbox (badness 1178) in paragraph at lines 757--764
 a-ti-on to Pre-sence  \OT1/cmr/m/n/12 9
  []
 
-[111]
+[113]
 Underfull \hbox (badness 10000) in paragraph at lines 802--806
 [][]\OT1/cmr/m/sc/12 Wikipedia\OT1/cmr/m/n/12 :  Over-view of SIP Soft-wa-re.  
 In:
  []
 
-) [112] (kapitel/erklaerung.tex) [113
+) [114] (kapitel/erklaerung.tex) [115
 
 
 ]
@@ -791,12 +801,12 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 6555 strings out of 95338
- 93268 string characters out of 1184228
- 206617 words of memory out of 1500000
- 9548 multiletter control sequences out of 110000
+ 6567 strings out of 95338
+ 93509 string characters out of 1184228
+ 206656 words of memory out of 1500000
+ 9556 multiletter control sequences out of 110000
  9089 words of font info for 33 fonts, out of 1200000 for 2000
  14 hyphenation exceptions out of 8191
  36i,11n,37p,1708b,1115s stack positions out of 5000i,500n,10000p,200000b,5000s
 
-Output written on Main.dvi (124 pages, 439060 bytes).
+Output written on Main.dvi (126 pages, 440688 bytes).
