@@ -3,6 +3,7 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
+\addvspace {10\p@ }
 \contentsline {figure}{\numberline {2.1}{\ignorespaces Kommunikationsmodell nach Shannon und Weaver}}{7}
 \contentsline {figure}{\numberline {2.2}{\ignorespaces Kommunikationsmodell nach Schramm}}{8}
 \contentsline {figure}{\numberline {2.3}{\ignorespaces Interaktivitat vs. Lebendigkeit}}{9}
@@ -25,3 +26,9 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {9.1}{\ignorespaces Der Up- und Downstream}}{100}
+\contentsline {figure}{\numberline {9.2}{\ignorespaces Gegen\"uberstellung der SIP und RTP}}{100}
+\contentsline {figure}{\numberline {9.3}{\ignorespaces Der Up- und Downstream mit der VAD - Technik}}{101}
+\contentsline {figure}{\numberline {9.4}{\ignorespaces Gegen\"uberstellung der SIP und RTP Traffics mit der VAD - Technik}}{101}
+\contentsline {figure}{\numberline {9.5}{\ignorespaces Der Up- und Downstream mit der SIP HOLD - Technik}}{102}
+\contentsline {figure}{\numberline {9.6}{\ignorespaces Gegen\"uberstellung des SIP und RTP Traffics mit der SIP HOLD - Technik}}{102}
