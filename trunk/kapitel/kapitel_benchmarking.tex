@@ -12,32 +12,58 @@
 \subsection{Bandbreite vs. Entfernung}
 Um zu zeigen, dass das Verfahren auch tatsächlich Bandbreite einsparen kann, haben wir in einem Versuchsaufbau die Bandbreite in den verschiedenen Kommunikationszonen gemessen. Dabei ist klar ersichtlich dass durch ein Herausnehmen beider Teilnehmer aus der Konferenz somit kein Audio mehr übertragen wird und der VAD die silence detection einschaltet.
 
+\subsection{ohne Alles}
+
 \begin{figure}[htbp]
 	\centering
+	\caption{Der Up- und Downstream}
 		\includegraphics[width=1.00\textwidth]{grafiken/ohnevpn1.eps}
 	\label{fig:NOVADrtpsip}
 \end{figure}
 
 \begin{figure}[htbp]
 	\centering
+	\caption{Gegenüberstellung der SIP und RTP}
 		\includegraphics[width=1.00\textwidth]{grafiken/ohnevpn2.eps}
 	\label{fig:NoVADupdown}
 \end{figure}
 
 
+\subsection{mit RTP manual Silence Supression}
 
 \begin{figure}[htbp]
 	\centering
-		\includegraphics[width=1.00\textwidth]{grafiken/mitvpn1.eps}
+	\caption{Der Up- und Downstream mit der VAD - Technik}
+		\includegraphics[width=1.00\textwidth]{grafiken/mitvadupdown.eps}
+	\label{fig:NoVADupdown}
+\end{figure}
+
+\begin{figure}[htbp]
+	\centering
+		\caption{Gegenüberstellung der SIP und RTP Traffics mit der VAD - Technik}
+		\includegraphics[width=1.00\textwidth]{grafiken/mitvadrtpsip.eps}
 	\label{fig:NoVADupdown}
 \end{figure}
 
 
+
+
+\subsection{mit SIP HOLD}
+
 \begin{figure}[htbp]
 	\centering
-		\includegraphics[width=1.00\textwidth]{grafiken/mitvpn2.eps}
-	\label{fig:NoVADupdown}
+	\caption{Der Up- und Downstream mit der SIP HOLD - Technik}
+		\includegraphics[width=1.00\textwidth]{grafiken/mitholdupanddown.eps}
+	\label{fig:mitholdupanddown}
 \end{figure}
+
+\begin{figure}[htbp]
+	\centering
+	\caption{Gegenüberstellung des SIP und RTP Traffics mit der SIP HOLD - Technik}
+		\includegraphics[width=1.00\textwidth]{grafiken/mithold1.eps}
+	\label{fig:mithold1}
+\end{figure}
+
 
 -- Verbrauch der Bandbreite mit zunehmender Entfernung
 --> Müsste zeigen dass beim "`silencen"' der RTP Session weniger Bandbreite verbraucht wird.
@@ -45,9 +71,10 @@ Um zu zeigen, dass das Verfahren auch tatsächlich Bandbreite einsparen kann, hab
 -->DONE
 
 \subsection{Mixing}
--- Verbrauch der CPU Last mit Zunehmender Nutzerzahl beim Full Mesh
+-- Verbrauch der CPU Last mit Zunehmender Nutzerzahl beim Full Mesh 
 -- Verbrauch der CPU Last mit Zunehmender Nutzerzahl beim Partial Mesh
 --> Müsste zeigen dass weniger Streams gemischt werden müssen und somit Last eingespart werden kann. ( Wie messe ich das?)
+MESSUNG: einfach nur die conference bridge messen.
 
 \subsection{Ende-zu-Ende Verzögerung (Delay)}
 -- delay über zeit bei mehreren verteilten stationen

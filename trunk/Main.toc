@@ -1,9 +1,10 @@
 \select@language {english}
 \select@language {ngerman}
-\contentsline {chapter}{Stichwortverzeichnis}{vii}
-\contentsline {chapter}{Abbildungsverzeichnis}{viii}
-\contentsline {chapter}{Tabellenverzeichnis}{ix}
-\contentsline {chapter}{Abk\"{u}rzungsverzeichnis}{x}
+\contentsline {chapter}{Zusammenfassung}{ii}
+\contentsline {chapter}{Stichwortverzeichnis}{viii}
+\contentsline {chapter}{Abbildungsverzeichnis}{ix}
+\contentsline {chapter}{Tabellenverzeichnis}{x}
+\contentsline {chapter}{Abk\"{u}rzungsverzeichnis}{xi}
 \contentsline {chapter}{\numberline {1}Einf\"uhrung}{1}
 \contentsline {section}{\numberline {1.1}Marktrelevanz}{1}
 \contentsline {section}{\numberline {1.2}Virtuelle Welten}{1}
@@ -119,14 +120,15 @@
 \contentsline {subsubsection}{Verteilte Server}{67}
 \contentsline {subsection}{\numberline {6.2.3}Hybrid}{68}
 \contentsline {section}{\numberline {6.3}SIP Konferenzen}{68}
-\contentsline {subsection}{\numberline {6.3.1}Komplett Dezentralisierte Ans\"atze}{70}
+\contentsline {subsection}{\numberline {6.3.1}Komponenten}{68}
+\contentsline {subsection}{\numberline {6.3.2}Komplett Dezentralisierte Ans\"atze}{70}
 \contentsline {subsubsection}{Multicast}{70}
 \contentsline {subsubsection}{P2P SIP}{70}
 \contentsline {subsubsection}{Fullmesh}{71}
-\contentsline {subsection}{\numberline {6.3.2}Komplett Zentralisierte Ans\"atze}{71}
-\contentsline {subsection}{\numberline {6.3.3}Verteilter Server und Zentrales Abmischen}{72}
+\contentsline {subsection}{\numberline {6.3.3}Komplett Zentralisierte Ans\"atze}{71}
+\contentsline {subsection}{\numberline {6.3.4}Verteilter Server und Zentrales Abmischen}{72}
 \contentsline {subsubsection}{Dedicated Node Mixing}{72}
-\contentsline {subsection}{\numberline {6.3.4}Zentraler Server und Dezentrales Abmischen}{73}
+\contentsline {subsection}{\numberline {6.3.5}Zentraler Server und Dezentrales Abmischen}{73}
 \contentsline {subsubsection}{SIP Hybrid Model}{73}
 \contentsline {section}{\numberline {6.4}Resultierende Probleme}{74}
 \contentsline {subsection}{\numberline {6.4.1}Einsatz mehrerer Registrare}{74}
@@ -203,9 +205,12 @@
 \contentsline {section}{\numberline {9.1}Tests von Audio\"ubertragung}{99}
 \contentsline {subsection}{\numberline {9.1.1}Bandbreite}{99}
 \contentsline {subsection}{\numberline {9.1.2}Bandbreite vs. Entfernung}{99}
-\contentsline {subsection}{\numberline {9.1.3}Mixing}{99}
-\contentsline {subsection}{\numberline {9.1.4}Ende-zu-Ende Verz\"ogerung (Delay)}{99}
-\contentsline {subsection}{\numberline {9.1.5}Verz\"ogerungsschwankung (Jitter)}{99}
-\contentsline {subsection}{\numberline {9.1.6}Paketverlust (Packet Loss)}{99}
-\contentsline {section}{\numberline {9.2}Tests von SIP als Netzwerkschnitstelle}{100}
-\contentsline {chapter}{Literaturverzeichnis}{101}
+\contentsline {subsection}{\numberline {9.1.3}ohne Alles}{99}
+\contentsline {subsection}{\numberline {9.1.4}mit RTP manual Silence Supression}{99}
+\contentsline {subsection}{\numberline {9.1.5}mit SIP HOLD}{99}
+\contentsline {subsection}{\numberline {9.1.6}Mixing}{99}
+\contentsline {subsection}{\numberline {9.1.7}Ende-zu-Ende Verz\"ogerung (Delay)}{103}
+\contentsline {subsection}{\numberline {9.1.8}Verz\"ogerungsschwankung (Jitter)}{103}
+\contentsline {subsection}{\numberline {9.1.9}Paketverlust (Packet Loss)}{103}
+\contentsline {section}{\numberline {9.2}Tests von SIP als Netzwerkschnitstelle}{103}
+\contentsline {chapter}{Literaturverzeichnis}{104}
