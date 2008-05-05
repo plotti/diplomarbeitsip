@@ -10,9 +10,39 @@
 --> Messung mit Wireshark
 
 \subsection{Bandbreite vs. Entfernung}
+Um zu zeigen, dass das Verfahren auch tatsächlich Bandbreite einsparen kann, haben wir in einem Versuchsaufbau die Bandbreite in den verschiedenen Kommunikationszonen gemessen. Dabei ist klar ersichtlich dass durch ein Herausnehmen beider Teilnehmer aus der Konferenz somit kein Audio mehr übertragen wird und der VAD die silence detection einschaltet.
+
+\begin{figure}[htbp]
+	\centering
+		\includegraphics[width=1.00\textwidth]{grafiken/ohnevpn1.eps}
+	\label{fig:NOVADrtpsip}
+\end{figure}
+
+\begin{figure}[htbp]
+	\centering
+		\includegraphics[width=1.00\textwidth]{grafiken/ohnevpn2.eps}
+	\label{fig:NoVADupdown}
+\end{figure}
+
+
+
+\begin{figure}[htbp]
+	\centering
+		\includegraphics[width=1.00\textwidth]{grafiken/mitvpn1.eps}
+	\label{fig:NoVADupdown}
+\end{figure}
+
+
+\begin{figure}[htbp]
+	\centering
+		\includegraphics[width=1.00\textwidth]{grafiken/mitvpn2.eps}
+	\label{fig:NoVADupdown}
+\end{figure}
+
 -- Verbrauch der Bandbreite mit zunehmender Entfernung
 --> Müsste zeigen dass beim "`silencen"' der RTP Session weniger Bandbreite verbraucht wird.
 --> Messung mit Wireshark
+-->DONE
 
 \subsection{Mixing}
 -- Verbrauch der CPU Last mit Zunehmender Nutzerzahl beim Full Mesh
