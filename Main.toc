@@ -204,13 +204,16 @@
 \contentsline {chapter}{\numberline {9}Performancemessungen}{99}
 \contentsline {section}{\numberline {9.1}Tests von Audio\"ubertragung}{99}
 \contentsline {subsection}{\numberline {9.1.1}Bandbreite}{99}
-\contentsline {subsection}{\numberline {9.1.2}Bandbreite vs. Entfernung}{99}
-\contentsline {subsection}{\numberline {9.1.3}ohne Alles}{99}
-\contentsline {subsection}{\numberline {9.1.4}mit RTP manual Silence Supression}{99}
-\contentsline {subsection}{\numberline {9.1.5}mit SIP HOLD}{99}
-\contentsline {subsection}{\numberline {9.1.6}Mixing}{99}
-\contentsline {subsection}{\numberline {9.1.7}Ende-zu-Ende Verz\"ogerung (Delay)}{103}
-\contentsline {subsection}{\numberline {9.1.8}Verz\"ogerungsschwankung (Jitter)}{103}
-\contentsline {subsection}{\numberline {9.1.9}Paketverlust (Packet Loss)}{103}
-\contentsline {section}{\numberline {9.2}Tests von SIP als Netzwerkschnitstelle}{103}
-\contentsline {chapter}{Literaturverzeichnis}{104}
+\contentsline {subsubsection}{Full Mesh}{99}
+\contentsline {subsubsection}{Partial Mesh}{99}
+\contentsline {subsubsection}{Ballungszentrum}{101}
+\contentsline {subsection}{\numberline {9.1.2}Bandbreite vs. Entfernung}{101}
+\contentsline {subsection}{\numberline {9.1.3}ohne Alles}{105}
+\contentsline {subsection}{\numberline {9.1.4}mit RTP manual Silence Supression}{105}
+\contentsline {subsection}{\numberline {9.1.5}mit SIP HOLD}{105}
+\contentsline {subsection}{\numberline {9.1.6}Mixing}{105}
+\contentsline {subsection}{\numberline {9.1.7}Ende-zu-Ende Verz\"ogerung (Delay)}{105}
+\contentsline {subsection}{\numberline {9.1.8}Verz\"ogerungsschwankung (Jitter)}{105}
+\contentsline {subsection}{\numberline {9.1.9}Paketverlust (Packet Loss)}{105}
+\contentsline {section}{\numberline {9.2}Tests von SIP als Netzwerkschnitstelle}{105}
+\contentsline {chapter}{Literaturverzeichnis}{106}

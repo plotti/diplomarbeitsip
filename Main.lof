@@ -26,9 +26,10 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {9.1}{\ignorespaces Der Up- und Downstream}}{100}
-\contentsline {figure}{\numberline {9.2}{\ignorespaces Gegen\"uberstellung der SIP und RTP}}{100}
-\contentsline {figure}{\numberline {9.3}{\ignorespaces Der Up- und Downstream mit der VAD - Technik}}{101}
-\contentsline {figure}{\numberline {9.4}{\ignorespaces Gegen\"uberstellung der SIP und RTP Traffics mit der VAD - Technik}}{101}
-\contentsline {figure}{\numberline {9.5}{\ignorespaces Der Up- und Downstream mit der SIP HOLD - Technik}}{102}
-\contentsline {figure}{\numberline {9.6}{\ignorespaces Gegen\"uberstellung des SIP und RTP Traffics mit der SIP HOLD - Technik}}{102}
+\contentsline {figure}{\numberline {9.1}{\ignorespaces Bandbreitenverbrauch beim Full Mesh Ansatz}}{100}
+\contentsline {figure}{\numberline {9.2}{\ignorespaces Der Up- und Downstream}}{102}
+\contentsline {figure}{\numberline {9.3}{\ignorespaces Gegen\"uberstellung der SIP und RTP}}{102}
+\contentsline {figure}{\numberline {9.4}{\ignorespaces Der Up- und Downstream mit der VAD - Technik}}{103}
+\contentsline {figure}{\numberline {9.5}{\ignorespaces Gegen\"uberstellung der SIP und RTP Traffics mit der VAD - Technik}}{103}
+\contentsline {figure}{\numberline {9.6}{\ignorespaces Der Up- und Downstream mit der SIP HOLD - Technik}}{104}
+\contentsline {figure}{\numberline {9.7}{\ignorespaces Gegen\"uberstellung des SIP und RTP Traffics mit der SIP HOLD - Technik}}{104}
