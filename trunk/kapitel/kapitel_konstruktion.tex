@@ -103,7 +103,7 @@ Verteilte Server profitieren von einer starken Korrelation der Spielerwelt und d
 Im Ansatz einer Hybrid Architektur senden die Teilnehmer ihre Audioströme zwar an einen zentralisierten Server, können aber bei Bedarf ihre Audioströme direkt austauschen, wenn die indirekte Route über den Server zu zu hohen Delays führen würde. Der Hybride Ansatz würde zwar alle Vorteile von Peer-to-Peer Systemen mit zentralisierten Systemen kombinieren, ist allerdings nicht einfach umzusetzen, da nicht klar definiert ist, wann ein Teilnehmer zentral abgemischt werden soll und wann der Audiostrom direkt zwischen den Clients ausgetauscht wird und zudem eine hohe Koordination zwischen den Teilnehmern erfordert.
 
 
-\section {SIP Konferenzen}
+\section {Sprachkommunkation mittels SIP}
 Entsprechend der vorgestellten Architekturen gibt mehrere Möglichkeiten solche Konferenzen mit mehreren Teilnehmern in SIP zu realisieren. 
 
 Prinzipiell stellen sich 2 Fragen bei einer Umsetzung:
@@ -115,28 +115,65 @@ Prinzipiell stellen sich 2 Fragen bei einer Umsetzung:
 %Auch interessant:
 %http://www.ietf.org/internet-drafts/draft-ietf-simple-simple-02.txt
 
-Diese zwei Aspekte können nicht getrennt voneinander betrachtet werden, da immer die Wahl einer Architektur Einfluss auf beide Probleme hat. In einer Peer-to-Peer basierten Architektur ist es z.B. zunächst keine triviale Aufgabe eine Spielewelt konsistent zu verwalten, da jeder Peer nur über einen Teil der Spielewelt verfügt und keine zentralisierte Instanz existiert, die über alle Positionen aller Spieler verfügt. So müssen für Konferenzen nicht nur die Frage beantwortet werden wo der Audiostrom abgemischt wird sondern, wie die Teilnehmer informiert werden dass sie Teil einer Konferenz sind. Genauso ergeht es dem zentralisiertem System in dem die Verwaltung der Spielewelt zwar durch eine zentrale  Instanz einfach ist, aber eine Verteilung des Audiostroms wie oben gezeigt, problematisch ist.
+Diese zwei Aspekte können nicht getrennt voneinander betrachtet werden, da immer die Wahl einer Architektur Einfluss auf beide Probleme hat. In einer Peer-to-Peer basierten Architektur ist es z.B. zunächst keine triviale Aufgabe eine Spielewelt konsistent zu verwalten, da jeder Peer nur über einen Teil der Spielewelt verwaltet und keine zentralisierte Instanz existiert, die über alle Positionen aller Spieler verfügt. So müssen für Konferenzen nicht nur die Frage beantwortet werden wo der Audiostrom abgemischt wird sondern, wie die Teilnehmer informiert werden, dass sie Teil einer Konferenz sind. 
+
+Genauso ergeht es dem zentralisiertem System in dem die Verwaltung der Spielewelt zwar durch eine zentrale  Instanz einfach ist, aber eine Verteilung des Audiostroms wie oben gezeigt, problematisch ist.
 
 \subsection{Komponenten}
-Dabei definieren wir folgende Komponenten:
+Es können vier Hauptkomponenten eines Systems definiert werden, die je nach ihrer Verteilung verschiedene Architekturen bilden können:
 
 \begin{itemize}
 	\item Mixer: Ein Mixer empfängt eine Gruppe von Audioströmen und verenigt ihre Medien nach einer spezifischen Art, um das Ergebniss an jeden Teilnehmer zu schicken. Dies beinhaltet Medien die mittels des RTP Protokolls übertragen wurden.
-	\item Konferenz Server: Ein Konferenz server ist ein physischer Server, der darüber entscheidet welche Audioströme miteinander gemischt werden und an wen sie verteilt werden. Dieser kann auch den Mixer beinhalten. 
-	\item Teilnhemer: Ein software Element, das einen Benutzer mit einer Konferenz verbindet. Dieses implementiert mindestens einen SIP User Agent kann aber auch nicht SIP Spezifische Mechanismen für zusätzliche funktionalität beherbergen. 
-	\item Spieleserver: Ein Spieleserver nimmt die Daten der Spieler entgegen, um sie auszuwerten und an die anderen Teilnehmer zu verteilen. Er unterstützt mindestens das SIP Protokoll. 
+	\item Konferenz Server: Ein Konferenz Server ist die logische Instanz, die darüber entscheidet welche Audioströme miteinander gemischt werden und an wen sie verteilt werden. 
+	\item Teilnehmer: Ein Software Element, das einen Benutzer mit einer Konferenz verbindet. Dieses implementiert mindestens einen SIP User Agent kann aber auch nicht SIP Spezifische Mechanismen für zusätzliche Funktionalität beherbergen. 
+	\item Spieleserver: Ein Spieleserver nimmt die Daten der Spieler entgegen, um sie auszuwerten und an die anderen Teilnehmer zu verteilen. Dieser kann, muss aber nicht die  Spielelogik enthalten und unterstützt mindestens das SIP Protokoll. 
 \end{itemize}
-      
-Bei Einer Umsetzung mit SIP stehen uns folgende vier Kombinationen zur Ver\-fügung: 
+
+%TODO DEDICATED CLIENT VS DEDICATED SERVER
+
+Dabei können die Komponenten beliebig zusammengestellt werden, und jeder Knoten entweder alle Komponenten enthalten oder nur eine. Bei Einer Umsetzung mit stehen uns folgende 9 Kombinationen zur Ver\-fügung: 
+
+\begin{table}[htbp]
+	\centering
+		\begin{tabular}{p{0.2\textwidth}p{0.2\textwidth}p{0.2\textwidth}p{0.2\textwidth}}		
+		\toprule
+		\textbf{Audio / Daten} & \textbf{Zentral} & \textbf{Verteilt} & \textbf{P2P} \\
+		\midrule
+		\textbf{Zentral} & ($A_{1}$) Client-Server Paradigma & ($A_{4}$) Ein Audioserver und mehrere Datenserver & ($A_{7}$) Ein Audioserver aber dezentrale Spieleverwaltung\\
+		\hline
+		\textbf{Verteilt} & ($A_{2}$) Zentraler Spieleserver mit mehreren dedizierten Audioservern & ($A_{5}$) Regions-/Zonen Audio- und Spieleserver & ($A_{8}$) Supernodes mischen Audioströme, Datenverkehr ist verteilt \\
+		\hline
+		\textbf{P2P} & ($A_{3}$) VoIP mit zentralem Spieleserver & ($A_{6}$) VoIP mit verteilten Spieleservern & ($A_{9}$) Komplett dezentrale Lösungen. \\
+		\bottomrule
+		\end{tabular}
+\end{table}
+
+Prinzipiell sind alle Alternativen vorstellbar. Da wir in erster Linie an der Implementierung einer Sprachkommunikationslösung interessiert sind, sind für uns solche Alternativen interessant die sowohl umsetzbar, als auch sinnvoll sind. 
 
 \begin{itemize}
-	\item Man realisiert sowohl den Datenaustausch als auch das Mischen des Audiostroms verteilt. Der Einsatz eines komplett dezentralisierten SIP Netzwerkes wird P2PSIP genannt, hier findet der Datenaustausch mittels DHT statt und das Abmischen der Audioströme zwischen den einzelnen Peers statt.
-	\item Man realisiert den Datenaustausch als auch das Mischen des Audiostroms zentral. Darunter versteht man ein SIP Netzwerk, das mit einem zentralen Server ausgestattet ist, der sämtliche Daten der Spieleclients entgegen nimmt und verteilt. Das Abmischen der Audioströme findet ebenfalls in einer zentralen Konferenz statt, die auf dem Server verwaltet wird. 
-	\item Man realisiert den Dautenaustausch verteilt, aber Mischt die Audioströme zentral ab. Dies würde einem oder mehreren dedizierten SIP Konferenz Servern entsprechen, die nur für das Abmischen der Audioströme verantwortlich sind. Dabei könnten diese wie oben geschildert entweder für Spieleregionen oder für Spieler einer gleichen Regionen in der wirklichen Welt verantwortlich sein. (Siehe Verteilte Server und Proxys)
-	\item Man realisiert den Datenaustausch zentral, aber Mischt die Audioströme dezentral ab. Dies entspricht dem ursprünglichen hybriden SIP System, das über die Komponente eines Proxys und Registrars den Datenaustausch zentral vornimmt, die Sprachkommunikation jedoch zwischen den einzelnen Peers fließt und lokal abgemischt wird.
+	\item ($A_{1}$) Hier findet sowohl der Datenaustausch als auch das Mischen des Audiostroms zentral statt. Darunter versteht man ein SIP Netzwerk, das mit einem zentralen Server ausgestattet ist, der sämtliche Daten der Spieleclients entgegen nimmt und verteilt. Das Abmischen der Audioströme findet ebenfalls in einer zentralen Konferenz statt, die auf dem Server verwaltet wird. 	
+	\item ($A_{2}$) Bei einem zentralen Datenaustausch, aber einem verteilten Abmischen der Audioströme geht man davon aus dass man entweder mehrere dedizierte Mixer einsetzt oder auch einzelne Clients mit genügend Bandbreite (Superpeers) dazu nutz um den Audiostrom zu mischen und dann zu verteilen.
+	\item ($A_{3}$) Man realisiert den Datenaustausch zentral, aber Mischt die Audioströme dezentral ab. Dies entspricht dem ursprünglichen hybriden SIP System, das über die Komponente eines Proxys und Registrars den Datenaustausch zentral vornimmt, die Sprachkommunikation jedoch zwischen den einzelnen Peers stattfindet und das Audiosignal lokal von jedem Teilnehmer abgemischt wird.
+	\item ($A_{4}$) Setzt man Proxys oder verteilte Server für den Datenaustausch ein, mischt aber die Audioströme zentral, entspricht das einem dedizierten SIP Konferenz Server mit Mixer für die Audioströme während die Spieledaten über mehrere Proxys verteilt werden. 
+	\item ($A_{5}$): Realisiert man sowohl den Datenaustausch als auch das Mischen des Audiostroms komplett verteilt, kann man davon ausgehen dass entweder dedizierte Audio und Datenkomponenten zusammenarbeiten oder auch ein Netzwerk aus dedizierten Client Superpeers gebildet wird. Hier wird von gut angebundenen Knoten das Mischen des Audiostroms vorgenommen, und dann verteilt. 
+	\item ($A_{6}$): Diese Alternative entspricht der vorhergehenden Alternative nur dass hier jeder Knoten den Audiostrom verschicken und abmischen muss, während die Spielelogik von verteilten Spieleservern übernommen wird.
+	\item ($A_{7}$): Ein komplett dezentraler Datenaustausch mit einem zentralen Audioserver. 
+	\item ($A_{8}$): Ein komplett dezentraler Datenaustausch mit mehreren Audioservern. Ähnlich zur Alternative ($A_{7}$). 
+	\item ($A_{9}$): Realisiert man sowohl den Datenaustausch als auch das Mischen des Audiostroms komplett dezentral, 	sprechen wir vom Einsatz eines dezentralisierten SIP Netzwerkes dass mittels P2PSIP, Multicast oder Fullmesh ansätze realisiert werden kann. 
 \end{itemize}
 
+Geht man dazu über die Datenaustausch des Spiels zu verteilen, so tut man das aus zwei Gründen, erstens um keinen Single Point of Failure zu besizten und zweitens um eine bessere Skalierbarkeit zu erreichen. Prinzipiell ist dieses Vorgehen praktikabel solange noch einige zentrale Komponenten bestehen die hierarchisch höher gestellt sind als andere Knoten. Dies ist schon aus Gründen der Consisency Control notwendig, da Knoten existieren müssen, die entscheiden können wie die Spielewelt verändert werden soll, wenn sich zwei Clients uneinig sind. Ansätze zu einer komplett dezentralen Spielelogik werden im Kapitel 9 kurz dargestellt, wir können aber schon vorab festhalten, dass ein hoher Aufwand betrieben werden muss um skalierbare dezentrale Systeme zu konstruieren. Nimmt man tatsächlich diesen Aufwand auf sich, so erscheint es unlogisch noch zentrale Audioserver Komponenten zu behalten, da man wieder einen Single Point of Failure besitzt. Das führt uns zur logischen Entscheidung alle Kombinationen die eine dezentrale Spielelogik besitzen, die aber trotzdem zentrale Audioserver einsetzen nicht weiter zu analysieren. Davon sind die Alternativen ($A_{7}$) und ($A_{8}$) betroffen.
+
+Genauso verhält es sich bei der Skalierbarkeit, der Grund warum man mehre Server einsetzt, liegt wie bereits besprochen darin die Ansteigende Netzwerklast zu verteilen. Behält man jedoch einen einzigen zentralen Audioserver bildet dieser schnell den Flaschenhals. Deswegen wollen wir die Alternative ($A_{4}$) die verteilte Spieleserver aber zentralen Audioserver einsetzt vorerst nicht weiter untersuchen.
+
+Die Restlichen Alternativen lassen sich in 4 Gruppen eingliedern. 
+Komplett Dezentralisierte Ansätze beinhalten die Alternative $A_{9}$.
+Komplett Zentralisierte Ansätze beinhalten die Alternative $A_{1}$.
+Ansätze die verteiltes dediziertes Audiomixing beinhalten $A_{2}$,$A_{5}$.
+Ansätze die komplett dezentrales Audiomixing beinhalten $A_{3}$,$A_{6}$
+
 \subsection{Komplett Dezentralisierte Ansätze}
+Hier handelt es sich um alle komplett dezentralisierten Ansätze der Alternative ($A_{9}$) die sich darin unterscheiden, wie die einzelnen Clients miteinander verbunden werden. Je nachdem wie verteilt die Architektur ist prinzipiell die Alternative $A_{5}$ hier auc
 
 \subsubsection{Multicast}
 Großangelegte Multicast Konferenzen waren die ursprüngliche Motivation für die Entwicklung von SIP. In solchen Konferenzen werden eine oder mehrere Multicast Konferenzen zu einer Konferenz vereint. Jeder Teilnehmer tritt einer Multicast Gruppe bei und sendet sein Medium an diese Gruppe. 
@@ -145,17 +182,10 @@ Multicast Konferenzen können gut in Netzwerken funktionieren die sie unter\-stüt
 
 Der Hauptnachteil von Multicast Konferenzen ist jedoch dass jeder Router die Identitäten der Gruppe speichern muss. Außerdem kann jeder ohne Authentifizierung einer Multicast Gruppe beitreten. So verlieren die Teilnehmer die Kontrolle darüber wer an Konferenzen teilnehmen kann und sind auch nicht in der Lage sein zu wissen wer ihnen gerade zuhört. Ist bereits ein System falsch konfiguriert so könnte es allen existierenden Multicast Gruppen abonnieren und so das Netz fluten. Zusätzlich oder auch gerade auch wegen dieser Probleme wird Multicast in wenigen Internet Hauptleitungen unterstützt. So können Multicast Konferenzen zwar in LANs nützlich sein, sind jedoch im kommerziellen Internet nicht umsetzbar.
 
- In the loosely coupled model, there is no signaling
-   relationship between participants in the conference.  There is no
-   central point of control or conference server.  Participation is
-   gradually learned through control information that is passed as part
-   of the conference (using the Real Time Control Protocol (RTCP) [2],
-   for example).  Loosely coupled conferences are easily supported in
-   SIP by using multicast addresses within its session descriptions. 
+% In the loosely coupled model, there is no signaling relationship between participants in the conference.  There is no central point of control or conference server.  Participation is gradually learned through control information that is passed as partof the conference (using the Real Time Control Protocol (RTCP) [2], for example).  Loosely coupled conferences are easily supported in SIP by using multicast addresses within its session descriptions. 
 
 \subsubsection{P2P SIP}
-Bei einem völlig dezentralisierten P2P SIP mittels DHT würden sowohl die Spiele Daten als auch die Sprachlkommunikation nur zwischen den einzelnen Clients ausgetauscht werden. Wie in Kapitel 3 vorgestellt, würde die zentrale Komponente des Registrars durch einen DHT ersetzt werden, der die Daten auf den einzelnen Clients verteilt. Dieser Ansatz ist bisher nur theoretisch möglich, da keine geingnete SIP Implementierung exisitert die einen verteilten Registrar umsetzt. Zudem ist das Problem einer verteilten Spielkontrolle nicht trivial, da kein Teilnehmer über komplette Informationen über die Spielewelt verfügt. Wir werden dieses Problem nocheinmal später ausführlich im Kapitel 8 behandeln.
-Sollte in Zukunft eine Implementierung eines funktionierenden P2PSIP Overlays exisiteren, könnte diese Option in Zukunft durchaus vorstellbar sein. 
+Bei einem völlig dezentralisierten P2P SIP mittels DHT würden sowohl die Spiele Daten als auch die Sprachlkommunikation nur zwischen den einzelnen Clients ausgetauscht werden. Wie in Kapitel 3 vorgestellt, würde die zentrale Komponente des Registrars durch mit Hilfe eines  DHT ersetzt werden, der die Daten auf den einzelnen Clients verteilt. Dieser Ansatz ist bisher nur theoretisch möglich, da keine geeignete SIP Implementierung exisitert die einen verteilten Registrar umsetzt. Zudem ist das Problem einer verteilten Spielkontrolle nicht trivial, da kein Teilnehmer über komplette Informationen über die Spielewelt verfügt. Wir werden dieses Problem später genauer in Kapitel 9 behandeln. Sollte in Zukunft eine Implementierung eines funktionierenden P2PSIP Overlays exisiteren, könnte diese Option in Zukunft durchaus vorstellbar sein. 
 
 \subsubsection{Fullmesh}
 In einem full-mesh modell kommuniziert jeder Endpunkt direkt mit jedem anderen Endpunkt. Alle Teilnehmer in der Konferenz sind "`gleich"' - es gibt keinen Benutzer der topologisch besonders ist oder über zusätzlichen Rechte oder Fähigkeiten verfügt. Jeder Teilnehmer kann jederzeit eine Konferenz betreten und verlassen. 
@@ -166,18 +196,17 @@ In einer N-Teilnehmer Konferenz muss jedoch jeder Teilnehmer über genügend Bandb
 \subsection{Komplett Zentralisierte Ansätze}
 Die in Kapitel 4 vorgestellte von Singh und Acharya vorgestellte Methode kann man als zentralisiertes SIP bezeichnen. Obwohl dieser Ansatz es erlaubt verschiedene Konferenzen für verschiedene Orte oder Personen zu erstellen, Da der Server über alle Spieledaten enthält, sollte er in der Lage sein die entsprechenden Audioströme für den einzelnen Client so anzupassen, dass jeder seine auf ihn angepasste vorgemischte Audioszene erhält.  Den komplett zentralisierten Ansatz verfolgen auch Safei und Boustead im vorgestellten MICE System. 
 
-Prinzipiell ist dieser Ansatz allen den dezentralisierten Ansätzen überlegen, da die zentralisierte Komponente in der Regel über genügend Bandbreite verfügt um viele Audioströme zu empfangen und zu versenden, während dies bei einfachen Clients oft zu Problemen führt.
-
 Die Grundlage für eine einfache Berechnung der verbrauchten Bandbreite versteht sich unter folgenden Vorraussetzungen:
 
 \begin{itemize}
-	\item Jeder Person die spricht sendet einen Audiostream zum Server
-	\item Jede Person im gleichen Spiel möchte die die gesprochenen Daten der Personen empfangen.
-	\item Der Server mischt die Audioströme da er auch die Positionen der Teilnehmer kennt. 
+	\item Jeder Spieler sendet einen Audiostream zum Server
+	\item Jeder Spieler im gleichen Spiel möchte die die gesprochenen Daten aller Spieler empfangen.
+	\item Da Spieleserver, Konferenzserver und Mixer zentralisiert sind, kann der Mixer die Audioströme zentral abmischen, da er auch die Positionen der Teilnehmer kennt. 
 \end{itemize}
-Ein Beispiel wäre also wenn sich 12 Personen im Spiel befinden empfängt der Server Audioströme von 12 Persoenen und sendet einen bereits abgemischten Audiostrom an jede der 12 Personen. 
 
-Sendet jeder Spieler seinen Audiostrom mit einer Speex \cite{speex08} 16 Kbit/s codierung an den Server, der nach dem heutigem Standard mit einer 100MBit Anbindung für den Upload und Download ausgestattet ist würde sich folgende Rechnung ergeben:
+Befinden sich beispielsweise 12 Personen im Spiel, empfängt der Server Audioströme von 12 Persoenen und sendet einen bereits abgemischten Audiostrom an jede der 12 Personen. 
+
+Sendet jeder Spieler seinen Audiostrom mit einer Speex \cite{speex08} 16 Kbit/s Kodierung an den Server, der nach dem heutigem Standard mit einer 100MBit Anbindung für den Upload und Download ausgestattet ist würde sich folgende Rechnung ergeben:
 
 Upstream/Downstream
 
@@ -185,11 +214,11 @@ Upstream/Downstream
  \frac{100000 \frac{Kbit}{s}}{16 \frac{Kbit}{s}} = 6250 Spieler
 \]
 
-Der Client selbst muss nur in der Lage sein seinen eigenen Audistrom zu emfpangen und einen Audiostrom mit gleicher Bitrate zu empfangen. 
+Der Client selbst muss nur in der Lage sein seinen eigenen Audistrom zu senden und einen Audiostrom mit gleicher Bitrate zu empfangen. 
 
-Prinzipiell hat diese Architektur, wie bereits oben dargestellt Probleme beim interaktiven Delay, der sehr abhängig von der Position des Servers ist. Zudem ist als einziges der zentrale Mischserver dafür zuständig alle Audioströme zu mischen, was schnell zu seiner Überlastung seiner Bandbreite und Rechnerkapazität führen kann. 
+Prinzipiell ist dieser Ansatz allen den dezentralisierten Ansätzen überlegen, da die zentralisierte Komponente in der Regel über genügend Bandbreite verfügt um viele Audioströme zu empfangen und zu versenden, während dies bei einfachen Clients oft zu Problemen führt. Zudem haben wir die Möglichkeit Spielelogik zentral zu verwalten. Die Nachteile liegen im beim interaktiven Delay, der sehr abhängig von der Position des Servers sein kann. Zudem ergeben sich Schwierigkeiten bei der Skalierbarkeite eines einzigen der zentrale Mischservers, der dessen Bandbreite und Rechnerkapazität begrenzt sind. 
 
-\subsection{Verteilter Server und Zentrales Abmischen}
+\subsection{Verteiltes dediziertes Audiomixing}
 
 \subsubsection{Dedicated Node Mixing}
 Der andere existierende Ansatz Konferenzen zu betrieben ist einen SIP Endpunkt zu haben der zu Teilnehmern einer Konferenz verbindet und deren Media Streams weiterleitet. Dabei gibt es zwei mögliche Varianten dieses Modells: In einem End-System-Mixing übernimmt ein Teilnehmer die Verantwortung für das Mischen des Audiostroms und in einem Server-Basiertem Mixing übernehmen unabhängige dedizierte Netzwerkknoten diese Verantwortung ohne am aktiv am Gespräch teilzunehmen. 
@@ -201,10 +230,10 @@ Dieses Modell hat jedoch einige Nachteile: Die Existenz einer Konferenz ist ab\-
 % Grafik End-System-Mixing
 % Grafik Server-Based-Mixing
 
-\subsection{Zentraler Server und Dezentrales Abmischen}
+\subsection{Dezentrales Audiomixing}
 \subsubsection{SIP Hybrid Model}
 
-Im Hybrid Modell existiert noch die zentrale Komponente des Registrars, bei dem sich jeder Teilnehmer des Spiels zuerst anmeldet. Der Registrar verfügt so über eine komplette Liste aller Teilnehmer. Der Datenaustausch findet über den Proxy statt, der bei jeder Nachricht die Adresse des Empfängers bestimmt. Die Sprachkommunikation jedoch findet nicht über die zentrale Komponente statt sondern direkt zwischen den einzelnen Spielern. Im einfachsten Fall wird der eigene Audiostrom an alle Teilnehmer des Spieles gesendet, und man selbst empfängt auch den Audiostrom aller Teilnehmer. 
+Dies enstpricht der Alternative ($A_{3}$) Im Hybrid Modell existiert noch die zentrale Komponente des Registrars, bei dem sich jeder Teilnehmer des Spiels zuerst anmeldet. Der Registrar verfügt so über eine komplette Liste aller Teilnehmer. Der Datenaustausch findet über den Proxy statt, der bei jeder Nachricht die Adresse des Empfängers bestimmt. Die Sprachkommunikation jedoch findet nicht über die zentrale Komponente statt sondern direkt zwischen den einzelnen Spielern. Im einfachsten Fall wird der eigene Audiostrom an alle Teilnehmer des Spieles gesendet, und man selbst empfängt auch den Audiostrom aller Teilnehmer. 
 
 Dies entspricht dem Full-Mesh Anatz von Schulzrinne \cite{schulzrinne03}, der jedoch in einem völlig dezentralisierten Ansatz damit zu kämpfen hatte, die Teilnehmer einer Konferenz zu bestimmen. Hier kann die Bestimmung der Teilnehmer einer Konferenz mit Hilfe des Registrars und Presence Servers zentral geschehen und stellt vereinfacht das Problem. 
 
@@ -234,7 +263,7 @@ Aus dem einsatz einer Zentralen Komponente resultieren 2 Grundsätzliche Probleme
 
 \subsection{Einsatz mehrerer Registrare}
 
-Sowohl im zentralisierten, als auch im Hybriden Szenario wird ein zentraler Registrar eingesetzt. Sein Einsatz kann bezüglich der Bandbreite als auch bezüglich der Verfügbarkeit zu problematisch werden. Eine Möglichkeit ist der Einsatz mehrerer Redundanter Server. Dabei bestehen zwei Alternativen.
+Sowohl im zentralisierten, als auch im Hybriden Szenario wird ein zentraler Registrar eingesetzt. Sein Einsatz kann bezüglich der Bandbreite als auch bezüglich der Verfügbarkeit zu problematisch werden. Eine Möglichkeit ist der Einsatz mehrerer Redundanter Server, was der Alterniative ($A_{6}$) entspricht. Hier können wir nochmals genauer unterscheiden:
 
 \begin{itemize}
 	\item Die Benutzer Benutzerinformation wird auf mehreren Registraren repliziert.
