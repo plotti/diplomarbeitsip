@@ -1,4 +1,4 @@
-\begin{thebibliography}{107}
+\begin{thebibliography}{106}
 % this bibliography was produced with the style dinat.bst v2.5
 \makeatletter
 \newcommand{\dinatlabel}[1]%
@@ -782,14 +782,6 @@ dy\_2007}
 \newblock Thousand Oaks, 2002
 \newblock (Handbook of interpersonal communication 3rd. Edition). --
 \newblock pp. 529--563~S
-
-\bibitem[Wang u.\,a.(2007)Wang, Emmi und Faloutsos]{wang07}
-\dinatlabel{Wang u.\,a. 2007} \textsc{Wang}, Alice~; \textsc{Emmi}, Michael~;
-  \textsc{Faloutsos}, Petros:
-\newblock Assembling an expressive facial animation system.
-\newblock
-\newblock (2007), S.~21--26.
-\newblock ISBN 978-1-59593-749-0
 
 \bibitem[Wikipedia(2008)]{sipsoftware08}
 \dinatlabel{Wikipedia 2008} \textsc{Wikipedia}:
