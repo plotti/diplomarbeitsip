@@ -1,20 +1,20 @@
-This is pdfTeX, Version 3.141592-1.40.4 (MiKTeX 2.7 Beta 5) (preloaded format=latex 2008.3.16)  6 MAY 2008 11:54
+This is pdfTeX, Version 3.141592-1.40.4 (MiKTeX 2.7) (preloaded format=latex 2008.3.17)  7 MAY 2008 16:25
 entering extended mode
 **Main.tex
 (Main.tex
 LaTeX2e <2005/12/01>
 Babel <v3.8h> and hyphenation patterns for english, dumylang, nohyphenation, ge
 rman, ngerman, french, loaded.
-("D:\Programme\MiKTeX 2.7\tex\latex\koma-script\scrbook.cls"
+("C:\Program Files\MiKTeX 2.7\tex\latex\koma-script\scrbook.cls"
 Document Class: scrbook 2007/12/24 v2.98 KOMA-Script document class (book)
-("D:\Programme\MiKTeX 2.7\tex\latex\koma-script\scrkbase.sty"
+("C:\Program Files\MiKTeX 2.7\tex\latex\koma-script\scrkbase.sty"
 Package: scrkbase 2007/12/24 v2.98 KOMA-Script package (basics and keyval use)
 
-("D:\Programme\MiKTeX 2.7\tex\latex\graphics\keyval.sty"
+("C:\Program Files\MiKTeX 2.7\tex\latex\graphics\keyval.sty"
 Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
 \KV@toks@=\toks14
 )
-("D:\Programme\MiKTeX 2.7\tex\latex\koma-script\scrlfile.sty"
+("C:\Program Files\MiKTeX 2.7\tex\latex\koma-script\scrlfile.sty"
 Package: scrlfile 2007/12/18 v2.98 KOMA-Script package (loading files)
 
 Package scrlfile, 2007/12/18 v2.98 KOMA-Script package (loading files)
@@ -33,10 +33,10 @@ Package scrkbase Info: You've used obsolete option `12pt'.
 (scrkbase)             by `fontsize=12pt'.
 Class scrbook Info: File `bk12.clo' used to setup font sizes on input line 953.
 
- ("D:\Programme\MiKTeX 2.7\tex\latex\base\bk12.clo"
+ ("C:\Program Files\MiKTeX 2.7\tex\latex\base\bk12.clo"
 File: bk12.clo 2005/09/16 v1.4f Standard LaTeX file (size option)
 )
-("D:\Programme\MiKTeX 2.7\tex\latex\koma-script\typearea.sty"
+("C:\Program Files\MiKTeX 2.7\tex\latex\koma-script\typearea.sty"
 Package: typearea 2007/12/24 v2.98 KOMA-Script package (type area)
 
 Package typearea, 2007/12/24 v2.98 KOMA-Script package (type area)
@@ -84,22 +84,22 @@ Package typearea Info: These are the values describing the layout:
 \c@figure=\count87
 \c@table=\count88
 \bibindent=\dimen102
-) ("D:\Programme\MiKTeX 2.7\tex\latex\ntgclass\a4.sty"
+) ("C:\Program Files\MiKTeX 2.7\tex\latex\ntgclass\a4.sty"
 Package: a4 2004/04/15 v1.2g A4 based page layout
 )
-("D:\Programme\MiKTeX 2.7\tex\generic\babel\babel.sty"
+("C:\Program Files\MiKTeX 2.7\tex\generic\babel\babel.sty"
 Package: babel 2005/11/23 v3.8h The Babel package
 
 *************************************
 * Local config file bblopts.cfg used
 *
-("D:\Programme\MiKTeX 2.7\tex\latex\00miktex\bblopts.cfg"
+("C:\Program Files\MiKTeX 2.7\tex\latex\00miktex\bblopts.cfg"
 File: bblopts.cfg 2006/07/31 v1.0 MiKTeX 'babel' configuration
 )
-("D:\Programme\MiKTeX 2.7\tex\generic\babel\ngermanb.ldf"
+("C:\Program Files\MiKTeX 2.7\tex\generic\babel\ngermanb.ldf"
 Language: ngermanb 2004/02/20 v2.6m new German support from the babel system
 
-("D:\Programme\MiKTeX 2.7\tex\generic\babel\babel.def"
+("C:\Program Files\MiKTeX 2.7\tex\generic\babel\babel.def"
 File: babel.def 2005/11/23 v3.8h Babel common definitions
 \babel@savecnt=\count89
 \U@D=\dimen103
@@ -107,7 +107,7 @@ File: babel.def 2005/11/23 v3.8h Babel common definitions
 \l@naustrian = a dialect from \language\l@ngerman 
 Package babel Info: Making " an active character on input line 92.
 )
-("D:\Programme\MiKTeX 2.7\tex\generic\babel\english.ldf"
+("C:\Program Files\MiKTeX 2.7\tex\generic\babel\english.ldf"
 Language: english 2005/03/30 v3.3o English support from the babel system
 \l@british = a dialect from \language\l@english 
 \l@UKenglish = a dialect from \language\l@english 
@@ -115,32 +115,32 @@ Language: english 2005/03/30 v3.3o English support from the babel system
 \l@australian = a dialect from \language\l@british 
 \l@newzealand = a dialect from \language\l@british 
 ))
-("D:\Programme\MiKTeX 2.7\tex\latex\base\inputenc.sty"
+("C:\Program Files\MiKTeX 2.7\tex\latex\base\inputenc.sty"
 Package: inputenc 2006/05/05 v1.1b Input encoding file
 \inpenc@prehook=\toks15
 \inpenc@posthook=\toks16
 
-("D:\Programme\MiKTeX 2.7\tex\latex\base\ansinew.def"
+("C:\Program Files\MiKTeX 2.7\tex\latex\base\ansinew.def"
 File: ansinew.def 2006/05/05 v1.1b Input encoding file
 ))
-("D:\Programme\MiKTeX 2.7\tex\latex\amsmath\amsmath.sty"
+("C:\Program Files\MiKTeX 2.7\tex\latex\amsmath\amsmath.sty"
 Package: amsmath 2000/07/18 v2.13 AMS math features
 \@mathmargin=\skip47
 
 For additional information on amsmath, use the `?' option.
-("D:\Programme\MiKTeX 2.7\tex\latex\amsmath\amstext.sty"
+("C:\Program Files\MiKTeX 2.7\tex\latex\amsmath\amstext.sty"
 Package: amstext 2000/06/29 v2.01
 
-("D:\Programme\MiKTeX 2.7\tex\latex\amsmath\amsgen.sty"
+("C:\Program Files\MiKTeX 2.7\tex\latex\amsmath\amsgen.sty"
 File: amsgen.sty 1999/11/30 v2.0
 \@emptytoks=\toks17
 \ex@=\dimen104
 ))
-("D:\Programme\MiKTeX 2.7\tex\latex\amsmath\amsbsy.sty"
+("C:\Program Files\MiKTeX 2.7\tex\latex\amsmath\amsbsy.sty"
 Package: amsbsy 1999/11/29 v1.2d
 \pmbraise@=\dimen105
 )
-("D:\Programme\MiKTeX 2.7\tex\latex\amsmath\amsopn.sty"
+("C:\Program Files\MiKTeX 2.7\tex\latex\amsmath\amsopn.sty"
 Package: amsopn 1999/12/14 v2.01 operator names
 )
 \inf@bad=\count90
@@ -181,7 +181,7 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 568.
 LaTeX Info: Redefining \[ on input line 2666.
 LaTeX Info: Redefining \] on input line 2667.
 )
-("D:\Programme\MiKTeX 2.7\tex\latex\subfigure\subfigure.sty"
+("C:\Program Files\MiKTeX 2.7\tex\latex\subfigure\subfigure.sty"
 Package: subfigure 2002/07/30 v2.1.4 subfigure package
 \subfigtopskip=\skip50
 \subfigcapskip=\skip51
@@ -197,28 +197,28 @@ Package: subfigure 2002/07/30 v2.1.4 subfigure package
 ****************************************
 * Local config file subfigure.cfg used *
 ****************************************
-("D:\Programme\MiKTeX 2.7\tex\latex\subfigure\subfigure.cfg")
+("C:\Program Files\MiKTeX 2.7\tex\latex\subfigure\subfigure.cfg")
 \subfig@top=\skip54
 \subfig@bottom=\skip55
 )
-("D:\Programme\MiKTeX 2.7\tex\latex\graphics\epsfig.sty"
+("C:\Program Files\MiKTeX 2.7\tex\latex\graphics\epsfig.sty"
 Package: epsfig 1999/02/16 v1.7a (e)psfig emulation (SPQR)
 
-("D:\Programme\MiKTeX 2.7\tex\latex\graphics\graphicx.sty"
+("C:\Program Files\MiKTeX 2.7\tex\latex\graphics\graphicx.sty"
 Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
 
-("D:\Programme\MiKTeX 2.7\tex\latex\graphics\graphics.sty"
+("C:\Program Files\MiKTeX 2.7\tex\latex\graphics\graphics.sty"
 Package: graphics 2006/02/20 v1.0o Standard LaTeX Graphics (DPC,SPQR)
 
-("D:\Programme\MiKTeX 2.7\tex\latex\graphics\trig.sty"
+("C:\Program Files\MiKTeX 2.7\tex\latex\graphics\trig.sty"
 Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
 )
-("D:\Programme\MiKTeX 2.7\tex\latex\00miktex\graphics.cfg"
+("C:\Program Files\MiKTeX 2.7\tex\latex\00miktex\graphics.cfg"
 File: graphics.cfg 2007/01/18 v1.5 graphics configuration of teTeX/TeXLive
 )
 Package graphics Info: Driver file: dvips.def on input line 90.
 
-("D:\Programme\MiKTeX 2.7\tex\latex\graphics\dvips.def"
+("C:\Program Files\MiKTeX 2.7\tex\latex\graphics\dvips.def"
 File: dvips.def 1999/02/16 v3.0i Driver-dependant file (DPC,SPQR)
 ))
 \Gin@req@height=\dimen115
@@ -227,75 +227,77 @@ File: dvips.def 1999/02/16 v3.0i Driver-dependant file (DPC,SPQR)
 \epsfxsize=\dimen117
 \epsfysize=\dimen118
 )
-("D:\Programme\MiKTeX 2.7\tex\latex\multirow\multirow.sty"
+("C:\Program Files\MiKTeX 2.7\tex\latex\multirow\multirow.sty"
 \bigstrutjot=\dimen119
 )
-("D:\Programme\MiKTeX 2.7\tex\latex\ltxmisc\framed.sty"
-Package: framed 2003/07/21 v 0.8a: framed or shaded text with page breaks
-\FrameRule=\dimen120
-\FrameSep=\dimen121
+("C:\Program Files\MiKTeX 2.7\tex\latex\ltxmisc\framed.sty"
+Package: framed 2007/10/04 v 0.95: framed or shaded text with page breaks
+\fb@frw=\dimen120
+\fb@frh=\dimen121
+\FrameRule=\dimen122
+\FrameSep=\dimen123
 )
-("D:\Programme\MiKTeX 2.7\tex\latex\koma-script\scrpage2.sty"
+("C:\Program Files\MiKTeX 2.7\tex\latex\koma-script\scrpage2.sty"
 Package: scrpage2 2007/07/23 v2.2e LaTeX2e KOMA-Script package
 LaTeX Info: Redefining \pagemark on input line 147.
 )
-("D:\Programme\MiKTeX 2.7\tex\latex\natbib\natbib.sty"
+("C:\Program Files\MiKTeX 2.7\tex\latex\natbib\natbib.sty"
 Package: natbib 2007/10/30 8.1 (PWD)
 \bibhang=\skip56
 \bibsep=\skip57
 LaTeX Info: Redefining \cite on input line 602.
 \c@NAT@ctr=\count106
 )
-("D:\Programme\MiKTeX 2.7\tex\latex\listings\listings.sty"
+("C:\Program Files\MiKTeX 2.7\tex\latex\listings\listings.sty"
 \lst@mode=\count107
 \lst@gtempboxa=\box29
 \lst@token=\toks22
 \lst@length=\count108
-\lst@currlwidth=\dimen122
+\lst@currlwidth=\dimen124
 \lst@column=\count109
 \lst@pos=\count110
-\lst@lostspace=\dimen123
-\lst@width=\dimen124
+\lst@lostspace=\dimen125
+\lst@width=\dimen126
 \lst@newlines=\count111
 \lst@lineno=\count112
-\lst@maxwidth=\dimen125
+\lst@maxwidth=\dimen127
 
-("D:\Programme\MiKTeX 2.7\tex\latex\listings\lstmisc.sty"
+("C:\Program Files\MiKTeX 2.7\tex\latex\listings\lstmisc.sty"
 File: lstmisc.sty 2007/02/22 1.4 (Carsten Heinz)
 \c@lstnumber=\count113
 \lst@skipnumbers=\count114
 \lst@framebox=\box30
 )
-("D:\Programme\MiKTeX 2.7\tex\latex\listings\listings.cfg"
+("C:\Program Files\MiKTeX 2.7\tex\latex\listings\listings.cfg"
 File: listings.cfg 2007/02/22 1.4 listings configuration
 ))
 Package: listings 2007/02/22 1.4 (Carsten Heinz)
 
-("D:\Programme\MiKTeX 2.7\tex\latex\setspace\setspace.sty"
+("C:\Program Files\MiKTeX 2.7\tex\latex\setspace\setspace.sty"
 Package: setspace 2000/12/01 6.7 Contributed and Supported LaTeX2e package
 
 Package: `setspace' 6.7 <2000/12/01>
-) ("D:\Programme\MiKTeX 2.7\tex\latex\booktabs\booktabs.sty"
+) ("C:\Program Files\MiKTeX 2.7\tex\latex\booktabs\booktabs.sty"
 Package: booktabs 2005/04/14 v1.61803 publication quality tables
-\heavyrulewidth=\dimen126
-\lightrulewidth=\dimen127
-\cmidrulewidth=\dimen128
-\belowrulesep=\dimen129
-\belowbottomsep=\dimen130
-\aboverulesep=\dimen131
-\abovetopsep=\dimen132
-\cmidrulesep=\dimen133
-\cmidrulekern=\dimen134
-\defaultaddspace=\dimen135
+\heavyrulewidth=\dimen128
+\lightrulewidth=\dimen129
+\cmidrulewidth=\dimen130
+\belowrulesep=\dimen131
+\belowbottomsep=\dimen132
+\aboverulesep=\dimen133
+\abovetopsep=\dimen134
+\cmidrulesep=\dimen135
+\cmidrulekern=\dimen136
+\defaultaddspace=\dimen137
 \@cmidla=\count115
 \@cmidlb=\count116
-\@aboverulesep=\dimen136
-\@belowrulesep=\dimen137
+\@aboverulesep=\dimen138
+\@belowrulesep=\dimen139
 \@thisruleclass=\count117
 \@lastruleclass=\count118
-\@thisrulewidth=\dimen138
+\@thisrulewidth=\dimen140
 )
-("D:\Programme\MiKTeX 2.7\tex\latex\microtype\microtype.sty"
+("C:\Program Files\MiKTeX 2.7\tex\latex\microtype\microtype.sty"
 Package: microtype 2008/02/29 v2.3a Micro-typography with pdfTeX (RS)
 \MT@toks=\toks23
 \MT@count=\count119
@@ -303,16 +305,16 @@ LaTeX Info: Redefining \lsstyle on input line 1542.
 LaTeX Info: Redefining \lslig on input line 1542.
 \MT@outer@space=\skip58
 LaTeX Info: Redefining \textls on input line 1543.
-\MT@outer@kern=\dimen139
+\MT@outer@kern=\dimen141
 LaTeX Info: Redefining \textmicrotypecontext on input line 2070.
 Package microtype Info: Loading configuration file microtype.cfg.
 
-("D:\Programme\MiKTeX 2.7\tex\latex\microtype\microtype.cfg"
+("C:\Program Files\MiKTeX 2.7\tex\latex\microtype\microtype.cfg"
 File: microtype.cfg 2008/02/29 v2.3a microtype main configuration file (RS)
 ))
-("D:\Programme\MiKTeX 2.7\tex\latex\ltxmisc\url.sty"
+("C:\Program Files\MiKTeX 2.7\tex\latex\ltxmisc\url.sty"
 \Urlmuskip=\muskip11
-Package: url 2005/06/27  ver 3.2  Verb mode for urls, etc.
+Package: url 2006/04/12  ver 3.3  Verb mode for urls, etc.
 )
 Class scrbook Info: You've told me to redefine the font selection of the
 (scrbook)           element `sectioning' that is an alias of element
@@ -361,13 +363,13 @@ Package microtype Info: No tracking.
 Package microtype Info: No adjustment of interword spacing.
 Package microtype Info: No adjustment of character kerning.
 
-("D:\Programme\MiKTeX 2.7\tex\latex\microtype\mt-cmr.cfg"
+("C:\Program Files\MiKTeX 2.7\tex\latex\microtype\mt-cmr.cfg"
 File: mt-cmr.cfg 2008/02/29 v1.9a microtype config. file: Computer Modern Roman
  (RS)
-) (kapitel/titel.tex
+)
+(kapitel/titel.tex
 File: grafiken/unilogo.eps Graphic file (type eps)
-
-<grafiken/unilogo.eps> [1
+ <grafiken/unilogo.eps> [1
 
 
 
@@ -376,7 +378,8 @@ File: grafiken/unilogo.eps Graphic file (type eps)
 
 
 
-] (Main.toc
+]
+(Main.toc
 Class scrbook Info: You've told me to use the font selection of the element
 (scrbook)           `sectioning' that is an alias of element `disposition'
 (scrbook)            on input line 3.
@@ -418,8 +421,7 @@ Class scrbook Info: You've told me to use the font selection of the element
 Class scrbook Info: You've told me to use the font selection of the element
 (scrbook)           `sectioning' that is an alias of element `disposition'
 (scrbook)            on input line 139.
-
-[5]
+ [5]
 Class scrbook Info: You've told me to use the font selection of the element
 (scrbook)           `sectioning' that is an alias of element `disposition'
 (scrbook)            on input line 177.
@@ -442,8 +444,7 @@ Class scrbook Info: You've told me to use the font selection of the element
 
 ] (Main.lot)
 \tf@lot=\write5
-
-[10
+ [10
 
 ] (kapitel/abkuerzungen.tex) [11
 
@@ -457,7 +458,7 @@ Kapitel 1.
 
 ] [2]
 LaTeX Font Info:    Try loading font information for OMS+cmr on input line 49.
- ("D:\Programme\MiKTeX 2.7\tex\latex\base\omscmr.fd"
+ ("C:\Program Files\MiKTeX 2.7\tex\latex\base\omscmr.fd"
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
@@ -488,69 +489,100 @@ t[]at der Sprach[]ubertragung.
 
 ) [5] (kapitel/kapitel_kommunikation.tex
 Kapitel 2.
+File: grafiken/kommunikationoverview.eps Graphic file (type eps)
+<grafiken/kommunikationoverview.eps>
 File: grafiken/kommunikationsmodell.eps Graphic file (type eps)
-<grafiken/kommunikationsmodell.eps> [6
+ <grafiken/kommunikationsmodell.eps>
+[6
 
 
 
-]
+] [7]
 File: grafiken/kommunikationsmodell-schramm2.eps Graphic file (type eps)
-
-<grafiken/kommunikationsmodell-schramm2.eps> [7] [8]
+ <grafiken/kommunikationsmodell-schramm2.eps> [8]
 File: grafiken/mediarichness.eps Graphic file (type eps)
 
 <grafiken/mediarichness.eps> [9] [10]
 File: grafiken/proxemik.eps Graphic file (type eps)
  <grafiken/proxemik.eps> [11] [12]
-[13] [14] [15] [16] [17] [18] [19] [20] [21] [22]) [23]
-(kapitel/kapitel_folgerungundziele.tex
+[13]
+File: grafiken/spieledreieck.eps Graphic file (type eps)
+ <grafiken/spieledreieck.eps>
+
+Package natbib Warning: Citation `lindley03' on page 14 undefined on input line
+ 142.
+
+[14] [15] [16] [17] [18]
+Overfull \hbox (29.13028pt too wide) in paragraph at lines 198--199
+\OT1/cmr/m/n/12 be-ste-hen-de Pro-ble-me bei ih-rer Be-nut-zer-freund-lich-keit
+ und ih-ren so-zia-lem M[]oglichkeiten
+ []
+
+[19] [20] [21] [22] [23] [24]) [25] (kapitel/kapitel_folgerungundziele.tex
 Kapitel 3.
+
+Overfull \hbox (24.26373pt too wide) in paragraph at lines 11--16
+\OT1/cmr/m/n/12 nann-ten Pro-ble-me auf der Ver-wen-dung von ge-nau ei-nem Ka-n
+al zur Sprach[]ubertragung,
+ []
+
+
+Overfull \hbox (10.06804pt too wide) in paragraph at lines 11--16
+\OT1/cmr/m/n/12 teil der St[]orungen re-sul-tier-te ge-nau die-ser Un-zul[]angl
+ichkeit des []Ubertragungskanals,
+ []
+
 File: grafiken/singlekanal-kommunikationsmodell.eps Graphic file (type eps)
-<grafiken/singlekanal-kommunikationsmodell.eps> [24
+<grafiken/singlekanal-kommunikationsmodell.eps>
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[26
 
 
 
 ]
 File: grafiken/multi-kommunikationsmodell.eps Graphic file (type eps)
-
-<grafiken/multi-kommunikationsmodell.eps> [25]
+ <grafiken/multi-kommunikationsmodell.eps> [27]
 File: grafiken/ventrillo.eps Graphic file (type eps)
  <grafiken/ventrillo.eps>
-Overfull \hbox (13.32773pt too wide) in paragraph at lines 50--58
+Overfull \hbox (13.32773pt too wide) in paragraph at lines 57--65
 \OT1/cmr/m/n/12 kei-ne Un-ter-schei-dung zwi-schen In-ter-per-so-nel-len und Ma
 s-sen-kom-mu-ni-ka-ti-on m[]oglich,
  []
 
-[26] [27]
-Underfull \hbox (badness 10000) in paragraph at lines 93--93
+[28] [29]
+File: grafiken/keybinding.eps Graphic file (type eps)
+ <grafiken/keybinding.eps>
+Underfull \hbox (badness 10000) in paragraph at lines 107--107
 [][]\OT1/cmr/m/n/12 Pers[]onliche / un-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 93--94
+Underfull \hbox (badness 10000) in paragraph at lines 107--108
 []\OT1/cmr/m/n/12 nur mit Emo-ti-cons
  []
 
-[28] [29]
+[30] [31] [32]
 File: grafiken/lautstaerke.eps Graphic file (type eps)
- <grafiken/lautstaerke.eps> [30] [31] [32] [33] [34]) [35]
+ <grafiken/lautstaerke.eps> [33] [34] [35] [36] [37]) [38]
 (kapitel/kapitel_sip.tex
 Kapitel 4.
-[36
+[39
 
 
 
 ]
 File: grafiken/voipprotokolle.eps Graphic file (type eps)
- <grafiken/voipprotokolle.eps> [37] [38] [39] [40] [41] [42] [43]
+ <grafiken/voipprotokolle.eps> [40] [41] [42] [43] [44] [45] [46]
 File: grafiken/sipanruf.eps Graphic file (type eps)
 
-<grafiken/sipanruf.eps> [44] [45]
+<grafiken/sipanruf.eps> [47] [48]
 File: grafiken/sipanrufmitproxy.eps Graphic file (type eps)
- <grafiken/sipanrufmitproxy.eps> [46] [47]
+ <grafiken/sipanrufmitproxy.eps> [49] [50]
 File: grafiken/sipmessage.eps Graphic file (type eps)
 
-<grafiken/sipmessage.eps> [48]
+<grafiken/sipmessage.eps> [51]
 Overfull \hbox (19.73454pt too wide) in paragraph at lines 248--249
 \OT1/cmr/m/n/12 sind be-lie-bi-ge For-ma-te nutz-bar wo-bei ein Stan-dard spe-z
 i-ell f[]ur die Pr[]asenzinformation
@@ -569,191 +601,196 @@ Overfull \hbox (17.38403pt too wide) in paragraph at lines 250--252
  []
 
 File: grafiken/sippresence.eps Graphic file (type eps)
-<grafiken/sippresence.eps> [49] [50] [51]
+<grafiken/sippresence.eps> [52] [53] [54]
 File: grafiken/rtppaket.eps Graphic file (type eps)
- <grafiken/rtppaket.eps> [52] [53]
-[54]
+ <grafiken/rtppaket.eps> [55] [56]
+[57]
 
-Package natbib Warning: Citation `turn08' on page 55 undefined on input line 40
+Package natbib Warning: Citation `turn08' on page 58 undefined on input line 40
 4.
 
 
-Package natbib Warning: Citation `ice08' on page 55 undefined on input line 404
+Package natbib Warning: Citation `ice08' on page 58 undefined on input line 404
 .
 
 File: grafiken/stun.eps Graphic file (type eps)
-<grafiken/stun.eps>) [55] [56] (kapitel/kapitel_recentwork.tex
+<grafiken/stun.eps>) [58] [59] (kapitel/kapitel_recentwork.tex
 Kapitel 5.
-[57
+[60
 
 
 
-] [58] [59] [60]) [61] (kapitel/kapitel_konstruktion.tex
+] [61] [62] [63]) [64] (kapitel/kapitel_konstruktion.tex
 Kapitel 6.
-[62
+[65
 
 
 
-] [63]
+] [66]
 File: grafiken/entwurf-p2p.eps Graphic file (type eps)
- <grafiken/entwurf-p2p.eps> [64]
+ <grafiken/entwurf-p2p.eps>
+Overfull \hbox (34.93579pt too wide) in paragraph at lines 46--47
+[][]\OT1/cmr/m/n/12 Bezogen auf den in-ter-ak-ti-ven De-lay do-mi-niert die Pee
+r-to-Peer Ar-chi-tek-tur grunds[]atzlich
+ []
+
+[67]
 File: grafiken/entwurf-server.eps Graphic file (type eps)
- <grafiken/entwurf-server.eps>
-[65]
+ <grafiken/entwurf-server.eps> [68]
 File: grafiken/entwurf-proxy.eps Graphic file (type eps)
- <grafiken/entwurf-proxy.eps> [66]
+ <grafiken/entwurf-proxy.eps> [69]
 File: grafiken/entwurf-verteilteserver.eps Graphic file (type eps)
- <grafiken/entwurf-verteilteserver.eps>
-[67] [68]
-Underfull \hbox (badness 2035) in paragraph at lines 140--140
+
+<grafiken/entwurf-verteilteserver.eps> [70] [71]
+Underfull \hbox (badness 2035) in paragraph at lines 136--136
 [][]\OT1/cmr/bx/n/12 Audio / Da-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 142--142
+Underfull \hbox (badness 10000) in paragraph at lines 138--138
 []\OT1/cmr/m/n/12 ($\OML/cmm/m/it/12 A[]$\OT1/cmr/m/n/12 ) Client-
  []
 
 
-Underfull \hbox (badness 1540) in paragraph at lines 142--142
+Underfull \hbox (badness 1540) in paragraph at lines 138--138
 \OT1/cmr/m/n/12 Server Pa-ra-dig-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 142--142
+Underfull \hbox (badness 10000) in paragraph at lines 138--138
 []\OT1/cmr/m/n/12 ($\OML/cmm/m/it/12 A[]$\OT1/cmr/m/n/12 ) Ein Au-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 142--142
+Underfull \hbox (badness 10000) in paragraph at lines 138--138
 \OT1/cmr/m/n/12 dio-ser-ver und
  []
 
 
-Underfull \hbox (badness 3386) in paragraph at lines 142--143
+Underfull \hbox (badness 3386) in paragraph at lines 138--139
 \OT1/cmr/m/n/12 zen-tra-le Spie-le-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 144--144
+Underfull \hbox (badness 10000) in paragraph at lines 140--140
 []\OT1/cmr/m/n/12 ($\OML/cmm/m/it/12 A[]$\OT1/cmr/m/n/12 ) Zen-tra-ler
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 144--144
+Underfull \hbox (badness 10000) in paragraph at lines 140--140
 \OT1/cmr/m/n/12 Spie-le-ser-ver
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 144--144
+Underfull \hbox (badness 10000) in paragraph at lines 140--140
 \OT1/cmr/m/n/12 mit meh-re-ren
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 144--144
+Underfull \hbox (badness 10000) in paragraph at lines 140--140
 \OT1/cmr/m/n/12 de-di-zier-ten
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 144--144
+Underfull \hbox (badness 10000) in paragraph at lines 140--140
 []\OT1/cmr/m/n/12 ($\OML/cmm/m/it/12 A[]$\OT1/cmr/m/n/12 ) Regions-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 144--144
+Underfull \hbox (badness 10000) in paragraph at lines 140--140
 \OT1/cmr/m/n/12 /Zonen Audio-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 144--144
+Underfull \hbox (badness 10000) in paragraph at lines 140--140
 \OT1/cmr/m/n/12 und Spie-le-ser-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 144--145
+Underfull \hbox (badness 10000) in paragraph at lines 140--141
 []\OT1/cmr/m/n/12 ($\OML/cmm/m/it/12 A[]$\OT1/cmr/m/n/12 ) Su-per-no-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 144--145
+Underfull \hbox (badness 10000) in paragraph at lines 140--141
 \OT1/cmr/m/n/12 des mi-schen
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 144--145
+Underfull \hbox (badness 10000) in paragraph at lines 140--141
 \OT1/cmr/m/n/12 Au-diostr[]ome,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 144--145
+Underfull \hbox (badness 10000) in paragraph at lines 140--141
 \OT1/cmr/m/n/12 Da-ten-ver-kehr
  []
 
 
-Underfull \hbox (badness 1655) in paragraph at lines 146--146
+Underfull \hbox (badness 1655) in paragraph at lines 142--142
 []\OT1/cmr/m/n/12 ($\OML/cmm/m/it/12 A[]$\OT1/cmr/m/n/12 ) VoIP mit
  []
 
 
-Underfull \hbox (badness 1694) in paragraph at lines 146--146
+Underfull \hbox (badness 1694) in paragraph at lines 142--142
 \OT1/cmr/m/n/12 zen-tra-lem Spie-
  []
 
 
-Underfull \hbox (badness 1655) in paragraph at lines 146--146
+Underfull \hbox (badness 1655) in paragraph at lines 142--142
 []\OT1/cmr/m/n/12 ($\OML/cmm/m/it/12 A[]$\OT1/cmr/m/n/12 ) VoIP mit
  []
 
 
-Underfull \hbox (badness 4505) in paragraph at lines 146--146
+Underfull \hbox (badness 4505) in paragraph at lines 142--142
 \OT1/cmr/m/n/12 ver-teil-ten Spie-
  []
 
 
-Underfull \hbox (badness 8189) in paragraph at lines 146--147
+Underfull \hbox (badness 8189) in paragraph at lines 142--143
 []\OT1/cmr/m/n/12 ($\OML/cmm/m/it/12 A[]$\OT1/cmr/m/n/12 ) Kom-plett
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 146--147
+Underfull \hbox (badness 10000) in paragraph at lines 142--143
 \OT1/cmr/m/n/12 de-zen-tra-le
  []
 
-[69]
-Overfull \hbox (6.48749pt too wide) in paragraph at lines 156--157
+[72]
+Overfull \hbox (6.48749pt too wide) in paragraph at lines 152--153
 [][]\OT1/cmr/m/n/12 ($\OML/cmm/m/it/12 A[]$\OT1/cmr/m/n/12 ) Man rea-li-siert d
 en Da-ten-aus-tausch zen-tral, aber Mischt die Au-diostr[]ome
  []
 
 
-Overfull \hbox (4.8485pt too wide) in paragraph at lines 159--160
+Overfull \hbox (4.8485pt too wide) in paragraph at lines 155--156
 \OT1/cmr/m/n/12 hier je-der Kno-ten den Au-diostrom ver-schi-cken und ab-mi-sch
 en muss, w[]ahrend
  []
 
-[70] [71] [72]
-Overfull \hbox (8.83041pt too wide) in paragraph at lines 201--202
+[73] [74] [75]
+Overfull \hbox (8.83041pt too wide) in paragraph at lines 206--207
 [][]\OT1/cmr/m/n/12 Befinden sich bei-spiels-wei-se 12 Per-so-nen im Spiel, emp
 f[]angt der Ser-ver Au-diostr[]ome
  []
 
-[73] [74] [75] [76])
+[76] [77] [78] [79])
 Overfull \vbox (10.87498pt too high) has occurred while \output is active []
 
 
-[77] (kapitel/kapitel_implementierung.tex
+[80] (kapitel/kapitel_implementierung.tex
 Kapitel 7.
-[78
+[81
 
 
 
-] [79] [80] [81] [82] [83] [84] [85]) [86] (kapitel/kapitel_network.tex
+] [82] [83] [84] [85] [86] [87] [88]) [89] (kapitel/kapitel_network.tex
 Kapitel 8.
-[87
+[90
 
 
 
-] [88] [89] [90] [91] [92] [93] [94] [95] [96] [97] [98]) [99]
+] [91] [92] [93] [94] [95] [96] [97] [98] [99] [100] [101]) [102]
 (kapitel/kapitel_benchmarking.tex
 Kapitel 9.
 File: grafiken/fullmesh.eps Graphic file (type eps)
@@ -764,11 +801,11 @@ File: grafiken/partialmesh.eps Graphic file (type eps)
 
 <grafiken/partialmesh.eps>
 File: grafiken/partialmeshchart.eps Graphic file (type eps)
- <grafiken/partialmeshchart.eps> [100
+ <grafiken/partialmeshchart.eps> [103
 
 
 
-] [101]
+] [104]
 File: grafiken/ohnevpn1.eps Graphic file (type eps)
 
 <grafiken/ohnevpn1.eps>
@@ -783,7 +820,7 @@ File: grafiken/mitholdupanddown.eps Graphic file (type eps)
  <grafiken/mitholdupanddown.eps>
 File: grafiken/mithold1.eps Graphic file (type eps)
 
-<grafiken/mithold1.eps> [102] [103] [104] [105]) [106] (Main.bbl
+<grafiken/mithold1.eps> [105] [106] [107] [108]) [109] (Main.bbl
 Underfull \hbox (badness 6063) in paragraph at lines 43--48
 [][]\OT1/cmr/m/sc/12 Arango\OT1/cmr/m/n/12 , M. ; \OT1/cmr/m/sc/12 Du-gan\OT1/c
 mr/m/n/12 , A. ; \OT1/cmr/m/sc/12 El-liott\OT1/cmr/m/n/12 , I. ; \OT1/cmr/m/sc/
@@ -796,118 +833,118 @@ Underfull \hbox (badness 3078) in paragraph at lines 43--48
 -col (MG-CP).  In:
  []
 
-[107
+[110
 
 
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 199--205
+Underfull \hbox (badness 10000) in paragraph at lines 192--198
 [][]\OT1/cmr/m/sc/12 Ernst&Young\OT1/cmr/m/n/12 :  Di-gi-ta-le Spie-le in Deuts
 ch-land.  In:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 199--205
+Underfull \hbox (badness 10000) in paragraph at lines 192--198
 \OT1/cmr/m/it/12 http://www.ey.com/global/content.nsf/Germany/Publikationen[]-[
 ]Studien[]-
  []
 
-[108]
-Underfull \hbox (badness 10000) in paragraph at lines 221--225
+[111]
+Underfull \hbox (badness 10000) in paragraph at lines 214--218
 [][]\OT1/cmr/m/sc/12 Gebhardt\OT1/cmr/m/n/12 , Ni-ko-laus:  irr-Klang.  In:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 227--231
+Underfull \hbox (badness 10000) in paragraph at lines 220--224
 [][]\OT1/cmr/m/sc/12 Gebhardt\OT1/cmr/m/n/12 , Ni-ko-laus:  Irr-licht 3D En-gi-
 ne.  In:
  []
 
-[109]
-Underfull \hbox (badness 10000) in paragraph at lines 332--338
+[112]
+Underfull \hbox (badness 10000) in paragraph at lines 325--331
 [][]\OT1/cmr/m/sc/12 Ipoque\OT1/cmr/m/n/12 :  In-ter-net Stu-die 2007.  In:
  []
 
 
-Overfull \hbox (7.7924pt too wide) in paragraph at lines 332--338
+Overfull \hbox (7.7924pt too wide) in paragraph at lines 325--331
 \OT1/cmr/m/it/12 http://www.ipoque.com/news[]&[]events/internet[]studies/intern
 et[]study[]2007
  []
 
 
-Underfull \hbox (badness 1062) in paragraph at lines 362--367
+Underfull \hbox (badness 1062) in paragraph at lines 355--360
 [][]\OT1/cmr/m/sc/12 Keller\OT1/cmr/m/n/12 , Joaqun ; \OT1/cmr/m/sc/12 Si-mon
 \OT1/cmr/m/n/12 , Gwen-dal:  So-lip-sis: A Mas-si-ve-ly Multi-
  []
 
-[110]
-Underfull \hbox (badness 1112) in paragraph at lines 425--432
+[113]
+Underfull \hbox (badness 1112) in paragraph at lines 418--425
 [][]\OT1/cmr/m/sc/12 Miladinovic\OT1/cmr/m/n/12 , I. ; \OT1/cmr/m/sc/12 Stad-le
 r\OT1/cmr/m/n/12 , J.:  Mul-ti-par-ty Con-fe-rence Si-gnal-ling
  []
 
 
-Underfull \hbox (badness 1194) in paragraph at lines 425--432
+Underfull \hbox (badness 1194) in paragraph at lines 418--425
 \OT1/cmr/m/n/12 using the Ses-si-on In-itia-ti-on Pro-to-col (SIP).  In: \OT1/c
 mr/m/it/12 In-ter-na-tio-nal Net-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 469--473
+Underfull \hbox (badness 10000) in paragraph at lines 462--466
 [][]\OT1/cmr/m/sc/12 Postel\OT1/cmr/m/n/12 , J.:  User Da-ta-gram Pro-to-col.  
 In:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 503--507
+Underfull \hbox (badness 10000) in paragraph at lines 496--500
 [][]\OT1/cmr/m/sc/12 Reichswald\OT1/cmr/m/n/12 , R. ; \OT1/cmr/m/sc/12 M[]oslei
 n\OT1/cmr/m/n/12 , K. ; \OT1/cmr/m/sc/12 Sa-chen-ba-che-rand\OT1/cmr/m/n/12 , K
 . ;
  []
 
-[111]
-Underfull \hbox (badness 10000) in paragraph at lines 516--520
+[114]
+Underfull \hbox (badness 10000) in paragraph at lines 509--513
 [][]\OT1/cmr/m/sc/12 ResoundingTechnologyInc\OT1/cmr/m/n/12 :  Ro-ger Wil-co.  
 In:
  []
 
-[112]
-Underfull \hbox (badness 3229) in paragraph at lines 650--655
+[115]
+Underfull \hbox (badness 3229) in paragraph at lines 643--648
 [][]\OT1/cmr/m/sc/12 Schulzrinne\OT1/cmr/m/n/12 , H. ; \OT1/cmr/m/sc/12 Cas-ner
 \OT1/cmr/m/n/12 , S. ; \OT1/cmr/m/sc/12 Fre-de-rick\OT1/cmr/m/n/12 , R. ; \OT1/
 cmr/m/sc/12 Ja-cob-son\OT1/cmr/m/n/12 ,
  []
 
 
-Underfull \hbox (badness 1259) in paragraph at lines 650--655
+Underfull \hbox (badness 1259) in paragraph at lines 643--648
 \OT1/cmr/m/n/12 V.:  RTP: A Trans-port Pro-to-col for Real-Time Ap-p-li-ca-ti-o
 ns.  In:
  []
 
-[113]
-Underfull \hbox (badness 10000) in paragraph at lines 720--724
+[116]
+Underfull \hbox (badness 10000) in paragraph at lines 713--717
 [][]\OT1/cmr/m/sc/12 SonyEntertainment\OT1/cmr/m/n/12 :  Play-Sta-ti-on Ho-me. 
  In:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 745--749
+Underfull \hbox (badness 10000) in paragraph at lines 738--742
 [][]\OT1/cmr/m/sc/12 TeamSpeakSystemsGmbH\OT1/cmr/m/n/12 :  Teams-peak.  In:
  []
 
 
-Underfull \hbox (badness 1178) in paragraph at lines 757--764
+Underfull \hbox (badness 1178) in paragraph at lines 750--757
 \OT1/cmr/m/n/12 Per-son Shoo-ter Ga-mes.  In: \OT1/cmr/m/it/12 From Com-mu-ni-c
 a-ti-on to Pre-sence  \OT1/cmr/m/n/12 9
  []
 
-[114]
-Underfull \hbox (badness 10000) in paragraph at lines 802--806
+[117]
+Underfull \hbox (badness 10000) in paragraph at lines 795--799
 [][]\OT1/cmr/m/sc/12 Wikipedia\OT1/cmr/m/n/12 :  Over-view of SIP Soft-wa-re.  
 In:
  []
 
-) [115] (kapitel/erklaerung.tex) [116
+) [118] (kapitel/erklaerung.tex) [119
 
 
 ]
@@ -926,12 +963,12 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 6554 strings out of 95351
- 93354 string characters out of 1184568
- 206364 words of memory out of 1500000
- 9542 multiletter control sequences out of 110000
+ 6570 strings out of 95341
+ 93824 string characters out of 1184182
+ 206567 words of memory out of 1500000
+ 9556 multiletter control sequences out of 110000
  9089 words of font info for 33 fonts, out of 1200000 for 2000
  14 hyphenation exceptions out of 8191
- 36i,11n,37p,1708b,1115s stack positions out of 5000i,500n,10000p,200000b,5000s
+ 36i,11n,37p,1694b,1115s stack positions out of 5000i,500n,10000p,200000b,5000s
 
-Output written on Main.dvi (127 pages, 446980 bytes).
+Output written on Main.dvi (130 pages, 451736 bytes).

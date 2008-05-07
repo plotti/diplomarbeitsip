@@ -5,7 +5,7 @@ Version=2
 [SessionInfo]
 ActiveTab=0
 FrameCount=14
-ActiveFrame=5
+ActiveFrame=7
 
 [Frame0]
 Columns=1
@@ -155,8 +155,8 @@ TopSubLine=394
 [Frame5]
 Columns=1
 Rows=1
-Flags=2
-ShowCmd=3
+Flags=0
+ShowCmd=1
 MinPos.x=-1
 MinPos.y=-1
 MaxPos.x=-4
@@ -169,17 +169,17 @@ Class=CLatexEdit
 Document=kapitel\kapitel_konstruktion.tex
 
 [Frame5_Row0]
-cyCur=584
+cyCur=346
 cyMin=10
 
 [Frame5_Col0]
-cxCur=1024
+cxCur=751
 cxMin=10
 
 [Frame5_View0,0]
-Cursor.row=260
-Cursor.column=30
-TopSubLine=502
+Cursor.row=259
+Cursor.column=0
+TopSubLine=631
 
 [Frame6]
 Columns=1
@@ -213,8 +213,8 @@ TopSubLine=0
 [Frame7]
 Columns=1
 Rows=1
-Flags=0
-ShowCmd=1
+Flags=2
+ShowCmd=3
 MinPos.x=-1
 MinPos.y=-1
 MaxPos.x=-4
@@ -227,17 +227,17 @@ Class=CLatexEdit
 Document=kapitel\kapitel_kommunikation.tex
 
 [Frame7_Row0]
-cyCur=346
+cyCur=401
 cyMin=10
 
 [Frame7_Col0]
-cxCur=751
+cxCur=848
 cxMin=10
 
 [Frame7_View0,0]
-Cursor.row=0
-Cursor.column=0
-TopSubLine=0
+Cursor.row=100
+Cursor.column=15
+TopSubLine=190
 
 [Frame8]
 Columns=1
@@ -293,9 +293,9 @@ cxCur=751
 cxMin=10
 
 [Frame9_View0,0]
-Cursor.row=85
-Cursor.column=190
-TopSubLine=250
+Cursor.row=0
+Cursor.column=0
+TopSubLine=0
 
 [Frame10]
 Columns=1
@@ -353,7 +353,7 @@ cxMin=10
 [Frame11_View0,0]
 Cursor.row=99
 Cursor.column=0
-TopSubLine=248
+TopSubLine=250
 
 [Frame12]
 Columns=1

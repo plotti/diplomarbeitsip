@@ -6,30 +6,32 @@
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {2.1}{\ignorespaces Kommunikationsmodell nach Shannon und Weaver}}{7}
 \contentsline {figure}{\numberline {2.2}{\ignorespaces Kommunikationsmodell nach Schramm}}{8}
-\contentsline {figure}{\numberline {2.3}{\ignorespaces Interaktivitat vs. Lebendigkeit}}{9}
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Interaktivitat vs. Lebendigkeit}}{10}
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Viereck aus Spielerlebniss, Simulation, erz\"ahlerischem Aspekt und Spielerinteraktion}}{14}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Eine typische Konfigurationseinstellung in Teamspeak}}{31}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Eine \"Ubersicht \"uber die VoIP Protokollfamilie}}{40}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Beispiel eines typischen SIP-Requests}}{45}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Sip Anruf ohne Proxy}}{48}
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Einsatz eines Proxy Servers mit Registrar}}{50}
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Teilnehmer A schickt Teilnehmer B eine Nachricht. Beide sind Teil der gleichen Dom\"ane sind, und benutzen den gleichen Proxy.}}{51}
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Teilnehmer A m\"ochte die Pr\"asenz von Teilnehmer B abonnieren. Teilnehmer B aktualisiert seine Information.}}{52}
+\contentsline {figure}{\numberline {4.7}{\ignorespaces Beispiel einer SDP Nachricht}}{53}
+\contentsline {figure}{\numberline {4.8}{\ignorespaces Header eines RTP-Pakets}}{55}
+\contentsline {figure}{\numberline {4.9}{\ignorespaces Ein schematischer Ablauf von STUN}}{59}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Eine \"Ubersicht \"uber die VoIP Protokollfamilie}}{37}
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Beispiel eines typischen SIP-Requests}}{42}
-\contentsline {figure}{\numberline {4.3}{\ignorespaces Sip Anruf ohne Proxy}}{45}
-\contentsline {figure}{\numberline {4.4}{\ignorespaces Einsatz eines Proxy Servers mit Registrar}}{47}
-\contentsline {figure}{\numberline {4.5}{\ignorespaces Teilnehmer A schickt Teilnehmer B eine Nachricht. Beide sind Teil der gleichen Dom\"ane sind, und benutzen den gleichen Proxy.}}{48}
-\contentsline {figure}{\numberline {4.6}{\ignorespaces Teilnehmer A m\"ochte die Pr\"asenz von Teilnehmer B abonnieren. Teilnehmer B aktualisiert seine Information.}}{49}
-\contentsline {figure}{\numberline {4.7}{\ignorespaces Beispiel einer SDP Nachricht}}{50}
-\contentsline {figure}{\numberline {4.8}{\ignorespaces Header eines RTP-Pakets}}{52}
-\contentsline {figure}{\numberline {4.9}{\ignorespaces Ein schematischer Ablauf von STUN}}{56}
-\addvspace {10\p@ }
-\addvspace {10\p@ }
-\contentsline {figure}{\numberline {6.1}{\ignorespaces Client Server Architektur, mit zentralem Mischserver}}{65}
-\contentsline {figure}{\numberline {6.2}{\ignorespaces Eine Proxy Architektur. In schwarz ist die Verbindung von Spieler 3 mit Spieler 7 dargestellt.}}{66}
-\contentsline {figure}{\numberline {6.3}{\ignorespaces Verteile Server S1...S4. Die Verbindungen der Spielewelt S3 wird in schwarz dargestellt. }}{67}
+\contentsline {figure}{\numberline {6.1}{\ignorespaces Client Server Architektur, mit zentralem Mischserver}}{68}
+\contentsline {figure}{\numberline {6.2}{\ignorespaces Eine Proxy Architektur. In schwarz ist die Verbindung von Spieler 3 mit Spieler 7 dargestellt.}}{69}
+\contentsline {figure}{\numberline {6.3}{\ignorespaces Verteile Server S1...S4. Die Verbindungen der Spielewelt S3 wird in schwarz dargestellt. }}{70}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {9.1}{\ignorespaces Bandbreitenverbrauch beim Full Mesh Ansatz}}{101}
-\contentsline {figure}{\numberline {9.2}{\ignorespaces Der Up- und Downstream}}{103}
-\contentsline {figure}{\numberline {9.3}{\ignorespaces Gegen\"uberstellung der SIP und RTP}}{103}
-\contentsline {figure}{\numberline {9.4}{\ignorespaces Der Up- und Downstream mit der VAD - Technik}}{104}
-\contentsline {figure}{\numberline {9.5}{\ignorespaces Gegen\"uberstellung der SIP und RTP Traffics mit der VAD - Technik}}{104}
-\contentsline {figure}{\numberline {9.6}{\ignorespaces Der Up- und Downstream mit der SIP HOLD - Technik}}{105}
-\contentsline {figure}{\numberline {9.7}{\ignorespaces Gegen\"uberstellung des SIP und RTP Traffics mit der SIP HOLD - Technik}}{105}
+\contentsline {figure}{\numberline {9.1}{\ignorespaces Bandbreitenverbrauch beim Full Mesh Ansatz}}{104}
+\contentsline {figure}{\numberline {9.2}{\ignorespaces Der Up- und Downstream}}{106}
+\contentsline {figure}{\numberline {9.3}{\ignorespaces Gegen\"uberstellung der SIP und RTP}}{106}
+\contentsline {figure}{\numberline {9.4}{\ignorespaces Der Up- und Downstream mit der VAD - Technik}}{107}
+\contentsline {figure}{\numberline {9.5}{\ignorespaces Gegen\"uberstellung der SIP und RTP Traffics mit der VAD - Technik}}{107}
+\contentsline {figure}{\numberline {9.6}{\ignorespaces Der Up- und Downstream mit der SIP HOLD - Technik}}{108}
+\contentsline {figure}{\numberline {9.7}{\ignorespaces Gegen\"uberstellung des SIP und RTP Traffics mit der SIP HOLD - Technik}}{108}
