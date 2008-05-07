@@ -1,4 +1,4 @@
-\begin{thebibliography}{108}
+\begin{thebibliography}{107}
 % this bibliography was produced with the style dinat.bst v2.5
 \makeatletter
 \newcommand{\dinatlabel}[1]%
@@ -99,13 +99,6 @@
   IEEE Computer and Communications Societies. Proceedings. IEEE}
 \newblock 2 (29 Mar-2 Apr 1998), S.~480--487 vol.2. --
 \newblock ISSN 0743-166X
-
-\bibitem[Bradner und Mark(2002)]{bradner02}
-\dinatlabel{Bradner und Mark 2002} \textsc{Bradner}, E.~; \textsc{Mark}, G.:
-\newblock Why distance matters: effects on cooperation persuasion and
-  deception.
-\newblock In: \emph{Proceedings CSCW}
-\newblock (2002), S.~226--296
 
 \bibitem[Brandt(2005)]{brandt05}
 \dinatlabel{Brandt 2005} \textsc{Brandt}, D.:
