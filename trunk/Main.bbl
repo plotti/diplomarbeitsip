@@ -1,4 +1,4 @@
-\begin{thebibliography}{106}
+\begin{thebibliography}{113}
 % this bibliography was produced with the style dinat.bst v2.5
 \makeatletter
 \newcommand{\dinatlabel}[1]%
@@ -13,6 +13,12 @@
 \newblock A Multi-Dimensional Typology of Games.
 \newblock In: \emph{Level Up}
 \newblock (2003), S.~48--53
+
+\bibitem[ActiveworldsInc.(March 2008)]{activeworlds08}
+\dinatlabel{ActiveworldsInc. March 2008} \textsc{ActiveworldsInc.}:
+\newblock Active Worlds.
+\newblock In: \emph{http://www.activeworlds.com/}
+\newblock (March 2008)
 
 \bibitem[Alexander(2003)]{thor03}
 \dinatlabel{Alexander 2003} \textsc{Alexander}, Thor~; \textsc{Massachusetts},
@@ -131,8 +137,8 @@
   IEEE}
 \newblock (18-22 Sep 1993), S.~394--400
 
-\bibitem[Carter(2003)]{carter03}
-\dinatlabel{Carter 2003} \textsc{Carter}, K.~A.:
+\bibitem[Carterm(2003)]{carter03}
+\dinatlabel{Carterm 2003} \textsc{Carterm}, K.~A.:
 \newblock Type me how you feel: Quasi-nonverbal cues in computer-mediated
   communication.
 \newblock In: \emph{ETC}
@@ -306,6 +312,13 @@
 \newblock (2004), S.~129--133.
 \newblock ISBN 1-58113-942-X
 
+\bibitem[Huitema(2003)]{rtcp03}
+\dinatlabel{Huitema 2003} \textsc{Huitema}, C.:
+\newblock Real Time Control Protocol (RTCP) attribute in Session Description
+  Protocol (SDP).
+\newblock In: \emph{http://tools.ietf.org/html/rfc3605}
+\newblock (2003)
+
 \bibitem[IdSoftware(2008)]{idsof08}
 \dinatlabel{IdSoftware 2008} \textsc{IdSoftware}:
 \newblock Quake II / III Open Source.
@@ -397,6 +410,24 @@ dy\_2007}
 \newblock
 \newblock (2005), S.~1--9.
 \newblock ISBN 1-59593-156-2
+
+\bibitem[LindenResearchInc.(March 2008)]{secondlife08}
+\dinatlabel{LindenResearchInc. March 2008} \textsc{LindenResearchInc.}:
+\newblock Second Life.
+\newblock In: \emph{http://de.secondlife.com/}
+\newblock (March 2008)
+
+\bibitem[Lindley(2003)]{lindley03}
+\dinatlabel{Lindley 2003} \textsc{Lindley}, C.:
+\newblock Game taxonomies: a high level framework for game analysis and design.
+\newblock In: \emph{Gamasutra}
+\newblock (2003)
+
+\bibitem[MakenaTechnologies(March 2008)]{there08}
+\dinatlabel{MakenaTechnologies March 2008} \textsc{MakenaTechnologies}:
+\newblock There.
+\newblock In: \emph{http://www.there.com/}
+\newblock (March 2008)
 
 \bibitem[Manninen und Kujanp‰‰(2003)]{manninen03}
 \dinatlabel{Manninen und Kujanp‰‰ 2003} \textsc{Manninen}, Tony~;
@@ -525,6 +556,13 @@ dy\_2007}
 \newblock In: \emph{Towards CyberPsychology}
 \newblock (2001), S.~3--18
 
+\bibitem[Rosenberg(2008)]{ice08}
+\dinatlabel{Rosenberg 2008} \textsc{Rosenberg}, J.:
+\newblock Interactive Connectivity Establishment (ICE): A Protocol for Network
+  Address Translator (NAT) Traversal for Offer/Answer Protocols.
+\newblock In: \emph{http://tools.ietf.org/html/draft-ietf-mmusic-ice-19}
+\newblock (2008)
+
 \bibitem[Rosenberg und H.~Schulzrinne(2002)]{rosenberg02}
 \dinatlabel{Rosenberg und H.~Schulzrinne 2002} \textsc{Rosenberg}, J.~;
   \textsc{H.~Schulzrinne}, H.:
@@ -532,13 +570,13 @@ dy\_2007}
 \newblock In: \emph{Internet Engineering Task Force}
 \newblock Work in Progress (2002)
 
-\bibitem[Rosenberg u.\,a.(2006)Rosenberg, Mahy und Huitema]{turn06}
-\dinatlabel{Rosenberg u.\,a. 2006} \textsc{Rosenberg}, J.~; \textsc{Mahy}, R.~;
+\bibitem[Rosenberg u.\,a.(2008)Rosenberg, Mahy und Huitema]{turn08}
+\dinatlabel{Rosenberg u.\,a. 2008} \textsc{Rosenberg}, J.~; \textsc{Mahy}, R.~;
   \textsc{Huitema}, C.:
 \newblock Traversal Using Relay NAT (TURN).
 \newblock In:
   \emph{http://www.jdrosen.net/papers/draft-rosenberg-midcom-turn-08.txt}
-\newblock (2006)
+\newblock (2008)
 
 \bibitem[Rosenberg u.\,a.(2002)Rosenberg, Schulzrinne, Camarillo, Johnston,
   Peterson, Sparks, Handley und Schooler]{sip02}
@@ -709,8 +747,14 @@ dy\_2007}
 \newblock ACM Press Addison-Wesley Publishing Co., 1999. --
 \newblock ISBN 0-201-32557-8
 
-\bibitem[SonyEntertainment(2008)]{home08}
-\dinatlabel{SonyEntertainment 2008} \textsc{SonyEntertainment}:
+\bibitem[SonyEntertainment(2008{\natexlab{a}})]{everquest08}
+\dinatlabel{SonyEntertainment 2008{\natexlab{a}}} \textsc{SonyEntertainment}:
+\newblock Everquest.
+\newblock In: \emph{http://eqplayers.station.sony.com/}
+\newblock (2008)
+
+\bibitem[SonyEntertainment(2008{\natexlab{b}})]{home08}
+\dinatlabel{SonyEntertainment 2008{\natexlab{b}}} \textsc{SonyEntertainment}:
 \newblock PlayStation Home.
 \newblock In: \emph{http://en.wikipedia.org/wiki/PlayStation\_Home}
 \newblock (2008)
