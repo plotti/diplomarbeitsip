@@ -11,7 +11,7 @@ Um eine funktionierende Implementierung in kürzester Zeit umzusetzen, habe ich e
 
 \subsection{SIP Server}
 Für den Einsatz als Server bieten sich zwei große Pakete an die beide den SIP Standard nach RFC 3265 unterstützen. 
-Asterisk (Version 1.4.19) unterstützt Voice-over-IP (VoIP) mit unterschiedlichen Protokollen  darunter sowohl SIP als auch das H323 Protokoll und bietet alle Möglichkeiten einer Anbindung an das Telefonnetz. 
+Asterisk (Version 1.4.19) unterstützt Voice-over-IP mit unterschiedlichen Protokollen  darunter sowohl SIP als auch das H323 Protokoll und bietet alle Möglichkeiten einer Anbindung an das Telefonnetz. 
 Die Serveranwendung OpenSer (Version 1.3.1) bietet ähnliche Funktionalität kann als SIP-Proxy, Registrar, aber auch als Location- und Application-Server betrieben werden und bietet zusätzlich das Unterstüztung für das SIP-SIMPLE Protokoll, was den Ausschlag gegeben hat diesen SIP Server zu benutzen. OpenSER ist sowohl von eingebetteten System wie DSL-Routern bis zu großen Installationen mit mehreren Millionen Benutzern bei Internet Service Providern flexibel einsetzbar.
 Darüber hinaus existieren noch etliche open source als auch propriätere SIP Server Lösungen, die hier nicht weiter erläutert werden. 
 
@@ -45,55 +45,49 @@ Meine persönliche Wahl fiel aus den folgenden Gründen auf den offenen SIP Stack 
 
 Viele der existierenden SIP Stacks kamen für den Prototypen auch deshalb nicht in Frage, weil sie in einer anderen Programiersprache als C oder C++ geschrieben waren und so mit der 3D-Engine nicht integriert werden konnten. 
 
-\section{SIP Nachrichten}
-\subsection{Herstellen einer Verbindung}
-\subsubsection{Verbindungsaufbau}
+\section{Verbindungauf- und abbau}
+\subsection{Verbindungsaufbau}
+Befinden sich zwei Teilnehmer in einer entsprechenden Hörnähe, wir diese sie dazu veranlassen eine Verbindung untereinander aufzubauen. Dabei findet der Verbindungsaufbau entsprechend des SIP Protokolls statt, besitzt jedoch einen signifikanten Unterschied, der im folgenden erklärt werden soll:
 
-Teilnehmer A möchte zu Teilnehmer B eine Verbindung herstellen. Dazu sendet er eine SIP-Nachricht INVITE an Teilnehmer B. Die Nachricht enthält die Beschreibung der RTP-Session nach dem SDP Protokoll und alle notwendigen Angaben, wie z.B. die Sprachkodierung, damit Teilnehmer B Prüfen kann ob eine Session hergestellt werden kann. 
-Falls Teilnehmer B die Verbindung annehmen kann, klingelt das angerufene IP-Telefon von Teilnehmer B, dies wird mit der SIP-Response 180 Ringing signalisiert. 
+Möchte Teilnehmer A möchte zu Teilnehmer B eine Verbindung herstellen sendet er eine SIP-Nachricht INVITE an Teilnehmer B. Die Nachricht enthält die Beschreibung der RTP-Session nach dem SDP Protokoll und alle notwendigen Angaben. 
 
-Hier prüft nun Teilnehmer B, ob er gerade eine Verbindung zu A aufbaut, oder bereits eine Verbindung aufgebaut hat. Ist das der Fall so antwortet er auf den ankommenden Anruf mit der Response Nachricht 403 Forbidden. Diese Vorgehenswiese weicht vom SIP Standard ab und wird im anschließenden Abschnitt behandelt.
+Falls Teilnehmer B die Verbindung annehmen kann, prüft er, ob er gerade eine Verbindung zu A aufbaut, oder bereits eine Verbindung aufgebaut hat. Ist das der Fall so antwortet er auf den ankommenden Anruf mit der Response Nachricht 403 Forbidden. Diese Vorgehenswiese weicht vom SIP Standard ab und wird im anschließenden Abschnitt behandelt.
 
 Baut Teilnehmer jedoch noch keine Verbindung zu Teilnehmer A auf und ist auch nicht mit ihm verbunden, so funktioniert der Rufaufbau wie gewohnt. Hat B den die Verbindung  akzeptiert, sendet er einen SIP-Response 200 OK der vom Teilnehmer A mit der Nachricht ACK bestätigt wird. Mit dem Empfang der ACK Nachricht von Teilnehmer B, ist die logische Verbindung abgeschlossen. Nun kann eine Verbindung nach dem Protokoll RTP verlaufen und es besteht eine Session zwischen den Teilnehmern. 
-Die bestehende RTP-Session kann von beiden Seiten beendet werden. Beendet Teilnehmer B durch das Absenden der SIP Nachricht BYE die Session, bestätigt Teilnehmer A den Empfang der Nachricht mit der SIP-Response 200OK. Mit dem Empfang von 200 OK beim beim Teilnehmer B wird die Session beendet. 
 
 \subsubsection{Das Problem der doppelten Verbindung}
-Da Teilnehmer unabhängig von einer zentralen Instanz Verbindungen aufbauen können, kann der Fall auftreten, dass beide Teilnehmer zeitgleich eine Verbindung miteinander aufbauen wollen. Dieser Fall tritt immer dann auf, wenn beide Spieler im Spiel die erforderliche Nähe zueinander erreicht haben. Dann Versucht sowohl Teilnehmer A eine Verbindung zu Teilnehmer B aufzubauen, als auch Teilnehmer B eine Verbindung zu Teilnehmer A aufzubauen. Dies entspricht dem Problem im Alltag, wenn zwei Personen sich versuchen zur exakt gleichen Zeit anzurufen. 
+Da Teilnehmer zwar zentral Lokalisiert werden jedoch unabhängig von einer zentralen Instanz Verbindungen aufbauen können, kann der Fall auftreten, dass beide Teilnehmer zeitgleich eine Verbindung miteinander aufbauen wollen. Dieser Fall tritt immer dann auf, wenn beide Spieler im Spiel die erforderliche Nähe zueinander erreicht haben. Dann versucht sowohl Teilnehmer A eine Verbindung zu Teilnehmer B aufzubauen, als auch Teilnehmer B eine Verbindung zu Teilnehmer A aufzubauen. Dies entspricht dem Problem im Alltag, wenn zwei Personen sich versuchen zur exakt gleichen Zeit anzurufen und jeder nur ein Besetztzeichen hört. 
 
-Dabei existieren zwei verschiedene Szenarios für diesen Fall. Der einfache Fall ist wenn eine INVITE Nachricht von A eintritt und B bereits mit A verbunden ist. Dann kann er den zweiten Dialog einfach verwerfen, da ja bereits eine bestehende Verbindung existiert.
+Bei diesem Szenarion können zwei verschiedene Fälle auftreten. Der einfache Fall liegt vor, wenn eine INVITE Nachricht von A eintritt und B bereits mit A verbunden ist. Dann kann er den zweiten Dialog einfach verwerfen, da ja bereits eine bestehende Verbindung existiert.
 
-Der kompliziertere Fall ist der symetrische Fall. Dieser tritt dann ein wenn B während er selbst eine Verbindung mit A aufbaut die INVITE Nachricht erhält. Hier hat B hat ebenfalls eine INVITE Nachricht an A geschickt, während A zur gleichen Zeit auch eine INVITE Nachricht an B geschickt hat. Lehnen nun beide Teilnehmer die Verbindung ab, so führt es dazu dass in diesem Fall überhaupt keine Verbindung zwischen den Teilnehmern zustande kommt. 
+Der kompliziertere Fall ist der symetrische Fall: Dieser tritt dann ein wenn B, während er selbst eine Verbindung mit A aufbaut, die INVITE Nachricht erhält. Hier hat B hat ebenfalls eine INVITE Nachricht an A geschickt, während A zur gleichen Zeit auch eine INVITE Nachricht an B geschickt hat. Lehnen nun beide Teilnehmer die Verbindung ab, so führt es dazu dass in diesem Fall überhaupt keine Verbindung zwischen den Teilnehmern zustande kommt. 
 
-Hierbei ist es wichtig, dass eine gemeinsame Regel für alle Teilnehmer existiert nach der beim Dialog Aufbau vorgehen. Ich habe mich dafür entschieden, dass in diesem Fall beide Teilnehmer die Verbindung ablehnen, und solange versuchen ein eine neue Verbindung zu etablieren bis der unsymmetrische Fall auftritt. Diese Vorgehensweise hat sich in der Praxis bestätigt, da ein Teilnehmer meistens schneller akzeptiert als der andere. Zudem braucht man keine lexikalische Sortierung der Teilnehmer vorzunehmen um einen dominierenden Peer zu ermitteln. 
-
+Hierbei ist es wichtig, dass eine gemeinsame Regel für alle Teilnehmer existiert nach der beim Dialog Aufbau vorgehen. Ich habe mich dafür entschieden, dass in diesem Fall beide Teilnehmer die Verbindung ablehnen, und solange versuchen ein eine neue Verbindung zu etablieren bis der unsymmetrische Fall auftritt. Diese Vorgehensweise hat sich in der Praxis bewährt, da meist ein Teilnehmer schneller akzeptiert als der andere. Zudem braucht man keine lexikalische Sortierung der Teilnehmer vorzunehmen um einen dominierenden Peer zu ermitteln. 
 
 \subsection{Verbindungsabbau}
-Befindet sich Teilnehmer B nicht mehr in Verbindungsreichweite zu Teilnehmer A so beenden beide die Verbindung zueinander. Dazu senden sie eine BYE Nachricht an den anderen Teilnehmer, die mit einer ACK Nachricht bestätigt wird. 
-
-\subsection{PTSN Netzwerke}
-Der Zugang zu externen Public Swiched Telehone Network wird in SIP gateways implementiert. Diese erlaube es Teilnehmern eines IP Telefonnetzwerks mit Teilnehmern eines gewöhnlichen Netzwerks miteinander zu kommunizieren. 
--- Write something about how we are going to use it here.
--- Call people on the phone etc...
-
+Der Verbindungsabbau findet wie gewohnt statt: Befindet sich Teilnehmer B nicht mehr in Verbindungsreichweite zu Teilnehmer A so beenden beide die Verbindung zueinander. Dazu senden sie eine BYE Nachricht an den anderen Teilnehmer, die mit einer ACK Nachricht bestätigt wird. 
 
 \section{Zonen}
 Die Umgebung des Spielers wurde wie gefordert in drei Zonen unterteilt. 
 
 \subsection{Öffentliche Zone}
-Der Teilnehmer stellt in der Zone C Verbindungen zu Teilnehmern dieser Zone her. Da der Verbindungsaufbau mitunter bis zu 1 oder 2 Sekunden betragen kann wird diese Zone dazu genutzt bereits vorab Verbindungen zu etablieren, bevor die Teilnehmer tatsächlich in der Lage sind miteinander zu sprechen. So soll die entstehende Latenz beim Verbindungsaufbau für den Spieler nicht erkennbar sein. Diese Zone soll auch dafür sorgen dass eine gewisse Unschärfe existiert, was die Verbindungen zwischen den Teilnehmern angeht. In dieser Übergangphase werden logische Verbindungen aus dem Grund aufrechterhalten, weil es sehr wahrscheinlich ist dass die Teilnehmer wieder die soziale Zone betreten.
+Der Teilnehmer stellt in der Zone C Verbindungen zu Teilnehmern dieser Zone her. Da der Verbindungsaufbau mitunter bis zu 1 oder 2 Sekunden betragen kann, wird diese Zone dazu genutzt bereits vorab Verbindungen zu etablieren, bevor die Teilnehmer tatsächlich in der Lage sind miteinander zu sprechen. So soll die entstehende Latenz beim Verbindungsaufbau für den Spieler nicht erkennbar sein. Diese Zone soll auch dafür sorgen dass eine gewisse Unschärfe existiert, was die Verbindungen zwischen den Teilnehmern angeht: In dieser Übergangphase werden logische SIP Verbindungen aus dem Grund aufrechterhalten, weil es sehr wahrscheinlich ist dass die Teilnehmer wieder die soziale Zone betreten. Trotzdem wird aufgrund der Tatsache das Teilnehmer in dieser Zone sich gegenseitig nicht hören können versucht Bandbreite einzusparen.
 
 \subsubsection{Eingang und Verlassen der Öffentlichen Zone}
-Die öffentliche Zone kann aus zwei Richtungen betreten werden. Wird sie von außen betreten wird eine Verbindung zwischen den Teilnehmern aufgebaut. Der Verbindungsaufbau und die damit eingehenden Probleme wurden oben bereits beschrieben. Wird die Zone von innen betreten. dh. findet ein Übergang von der sozialen Zone zur öffentlichen Zone statt, so findet auf Protokollebene folgender Ablauf statt.
+Die öffentliche Zone kann aus zwei Richtungen betreten werden. Wird sie von außen betreten wird eine SIP Verbindung zwischen den Teilnehmern aufgebaut. Der Verbindungsaufbau und die damit eingehenden Probleme wurden oben bereits beschrieben. Wird die Zone von innen betreten. dh. findet ein Übergang von der sozialen Zone zur öffentlichen Zone statt, so findet auf Protokollebene folgender Ablauf statt:
 
 \subsubsection{RTP - Silence Supression}
-Der logische SIP Anruf bleibt weiterhin erhalten, während auf auf RTP Ebene kein weiteres Audiosignal mehr übertragen wird. Dies geschieht indem der Teilnehmer aus der internen Conference Bridge genommen wird. Das bedeutet dass der Spieler das Audiosignal des Teilnehmers nicht mehr empfängt da beide Teilnehmern eine Silence Suppression vornehmen. Dies entspricht der im Kapitel 3 geschilderten Eigenschaften von Silence Supression von RTP und RTCP, nur dass sie hier nicht in Abhängigkeit der tatsächlichen Stille, sondern der Enfernung der Teilnehmer zueinander stattfindet. Durch diese Methode sind wir in der Lage einerseits den Bandbreitenverbrauch in dieser Zone minimal zu halten, aber gleichzeitig in der Lage Teilnehmern einen verzögerungsfreien Wechsel zurück in die soziale Zone zu ermöglichen. 
+Der logische SIP Anruf bleibt weiterhin erhalten, während auf auf RTP Ebene kein weiteres Audiosignal mehr übertragen wird. Dies geschieht indem der Teilnehmer aus der internen Conference Bridge genommen wird. Das bedeutet dass beide Spieler das gegenseitige Audiosignal nicht mehr empfangen da beide Teilnehmer eine Silence Suppression vornehmen. Dies entspricht der im Kapitel 3 geschilderten Eigenschaften von Silence Supression von RTP und RTCP, nur dass sie hier nicht in Abhängigkeit der tatsächlichen Stille im Mikrofon, sondern der Enfernung der Teilnehmer zueinander stattfindet. Durch diese Methode bietet die Möglichkeit, einerseits den Bandbreitenverbrauch in dieser Zone minimal zu halten, aber gleichzeitig in den Teilnehmern einen verzögerungsfreien Wechsel zurück in die soziale Zone zu ermöglichen, da der Wechsel von Silence Supression zurück zu normaler übertragung kein neues aushandeln der Parameter benötigt. 
+
+\subsubsection{SIP - HOLD}
+Das gleiche Prinzip wurde ebenfalls mit der SIP HOLD Funktionalität ausprobiert, was wie in den Messergebnissen zu sehen ist, zwar zu einer noch größeren Einsparung der Bandbreite geführt hat, aber als Nachteil eine Verzögerung beim wiederaufnehmen des Calls bewirkte, da die Verbindungsparameter beim Wiederaufnehmen des Gesprächs wieder neu verhandelt wurden.
 
 \subsection{Soziale Zone}
 In der Zone B werden nun die Teilnehmer der bereits existierenden Verbindungen unserer eigenen lokalen Konferenz hinzugefügt. Innerhalb der Konferenz wird die Lautstärke der Teilnehmer gemäß ihrer Entfernung angepasst. Teilnehmer die sich unmittelbar in der nähe des Spielers befinden haben die Lautstärke von 100\% während Teilnehmer die sich am äußersten Rand der Zone befinden eine Lautstärke von 0\% besitzen.
 
 \subsubsection{Lautstärkenanpassung}
 
-Da die Lautstärke der Übertragenen Stimme bei einer Übertragung durch Luft mit zunehmender Entfernung abnimmt haben wir ein einfaches physikalisches Modell benutzt: Generell gilt, dass Schalldruck bei zunehmender Entfernung r  mit 1/r abnimmt.  Da sich die Schallintensität auf eine immer größer werdende gedachte Kugeloberfläche (proportional zur Entfernung r) verteilt, nimmt sie mit der Entfernung quadratisch ab. 
+Da die Lautstärke der Übertragenen Stimme bei einer Übertragung durch Luft mit zunehmender Entfernung abnimmt haben wir ein einfaches physikalisches Modell benutzt: Generell gilt, dass Schalldruck bei zunehmender Entfernung r  mit 1/r abnimmt. Da sich die Schallintensität auf eine immer größer werdende gedachte Kugeloberfläche (proportional zur Entfernung r) verteilt, nimmt sie mit der Entfernung quadratisch ab. 
 
 Wir haben zu Testzwecken sowohl die lineare Abnahme der Schallintensität als auch die quadratische Abnahme der Schallintensität modelliert, um festzustellen welche Veränderung in einer Konferenz natürlicher erscheint. 
 %http://www.sengpielaudio.com/Rechner-entfernung.htm
@@ -103,9 +97,12 @@ In der privaten Zone A variiert die Laut\-stärke der Teilnehmer nicht in Ab\-hän
 
 \subsection{Radar}
 
-In einem Radar werden für den Spieler alle Teilnehmer des Spiels angezeigt. Der Radar besitzt ebenfalls drei Zonen, die die Verbindungsstufen anzeigen. Spieler werden einem  Icons und ihrem zugehörigen Namen angezeigt. In der öffentlichen Zone wird der Icon gräulich angezeigt, betreten sie die soziale Zone werden dieser grün gefärbt und in der privaten Zone ist ihr Icon gelb. So ist der Spieler jederzeit in der Lage zu wissen welche Spieler er gerade adressiert und welche Spieler er auch hören kann.
+In einem Radar werden für den Spieler alle Teilnehmer des Spiels angezeigt. Der Radar besitzt ebenfalls drei Zonen, die die Verbindungsstufen anzeigen. Spieler werden einem Icon und ihrem zugehörigen Namen angezeigt. In der öffentlichen Zone wird der Icon gräulich angezeigt, betreten sie die soziale Zone werden dieser grün gefärbt und in der privaten Zone ist ihr Icon gelb. So ist der Spieler jederzeit in der Lage zu wissen welche Spieler er gerade adressiert und welche Spieler er auch hören kann.
 
-Die Metapher der Luftübertragung mit der orientierungshilfe des Radars Hilft uns die das Problem der Addressierung in den Griff zu bekommen. Wir sind so in der Lage zu sehen an wen unsere Sprachnachrichten gehen und wen wir gerade hören. Möchten wir eine Person besser hören so müssen wir nur dafür sorgen, dass wir uns dieser Person auf dem Spielfeld nähren.  
+Die Metapher der Luftübertragung mit dem Radar als Orientierungshilfe hilft das Problem der Addressierung in den Griff zu bekommen. Spieler sind in der Lage zu sehen an wen ihre Sprachnachrichten gehen und wen sie gerade hören. 
+
+\subsection{PTSN Netzwerke}
+Durch die Möglichkeit SIP Server mit externen Gateways zu verbinden, wurde auch die Metapher des Festnetz-Telephons umgesetzt, dass dem Spieler tatsächlich erlaubt aus der virtuellen Welt in die reale Welt zu telefonieren. Hier wurde eine Telefonzelle auf dem Spielfeld plaziert. Befindet sich der Spieler in unmittelbarer Nähe zu dieser Zelle, findet ein Anruf an eine beliebige Telefonnumer statt. Dieses Proof of Concept wurde deshalb implementiert, um zu verdeutlichen, dass mit Hilfe eines standartisierten Protokolls auch solche Möglichkeiten offen stehen. 
 
 \section{Spielewelt in Irrlicht und Irrklang}
 
@@ -115,12 +112,10 @@ Die Metapher der Luftübertragung mit der orientierungshilfe des Radars Hilft uns
 Für eine möglichst realistische Umsetzung haben wir ein Level benutzt, das einen Park zeigt, und dem Spieler die Möglichkeit bietet sich in diesem Park frei zu bewegen. Die Metapher des Parks und Menschen die sich im Park bewegen erlaubt die spontane Kommunikation untereinander. Ebenso erscheint in diesem Szenario die Übertragung der Sprache per Luft sehr natürlich. 
 
 \subsubsection{Collision Detection}
-Unter Collision Detection versteht man eine Berechnung der Kollisionen des Spielers mit seiner Umgebung. So kann der Spieler mit Gegenständen des Levels und dem Level selbst interagieren. Würde keine Collision Detection exisiteren, könnte der Spieler durch die Gegenstände laufen. Diese Aufgabe wird mit der Hilfe der Irrlicht Engine erledigt. 
+Unter Collision Detection versteht man eine Berechnung der Kollisionen des Spielers mit seiner Umgebung. Der Spieler kann in der Implementierung mit andern Spielern des Levels und dem Level selbst interagieren. Ohne Collision Detection, könnte der Spieler alle Gegenstände durchdringen. Diese Aufgabe wurde mit der Hilfe der Irrlicht Engine umgesetzt. 
 
 \subsubsection{Steuerung}
 Der Spieler ist in der Lage sich in alle Richtungen zu Bewegen und zu springen.
-
---TODO Aufbau der Klassen, der Spielelogik, wie ist die VOIP Klasse mit der Spielelogik verzahnt. 
 
 \subsection{Irrklang}
 
@@ -132,7 +127,7 @@ Das Level wurde zusätzlich mit mehreren lokalen Audioquellen ausgestattet, die e
 
 \subsection{Aktualisierung der VoIP Instanz}
 
-Im Spiel selbst ist der Irrlicht Scene Manager verantwortlich alle Objekte der Szene zu verwalten. Er verfügt auch über die die X,Y,Z Koordinaten aller Spieler im Spiel. Die im Scene Manager enthaltenen Objekte durch die Spielelogik verwaltet. 
+Im Spiel selbst ist der Irrlicht Scene Manager verantwortlich alle Objekte der Szene zu verwalten. Er verfügt auch über die die (X,Y,Z) Koordinaten aller Spieler im Spiel. Die im Scene Manager enthaltenen Objekte durch die Spielelogik verwaltet. 
 
 Der Scene Manager enthält dabei nicht nur Objekte des Levels sondern auch die Spielfiguren aller Spieler. Erhält der Spieler neue Positionsinformationen so werden die entsprechenden Spieler im SceneManager aktualisiert. 
 
@@ -143,7 +138,7 @@ Die VoIP Instanz fragt periodisch beim SceneManager die Koordinaten der aktiven 
 Die Spieler im Spiel werden durch Avatare repräsentiert. Jedem Avatar im Spiel ist ein entsprechender Buddy in der VoIP Instanz gegenübergestellt.
 Die VoIP Instanz hält eine lokale Liste von Buddies vor. Sämtliche Sprachkommunikation findet durch einen Anruf zum entsprechendem Buddy statt. Es sind auch mehrere Anrufe möglich wenn sich mehrere Personen in der Hörnähe befinden. Dadurch dass für jeden Spieler ein eigener Anruf verwaltet wird, sind wir in der Lage die Parameter, wie Lautstärke oder auch Bitrate und Codec jedes einzelnen Anrufs zu verwalten und auszuhandeln.
 
-\section{Spielablauf Use Cases}
+\section{Spielablauf - Use Cases}
 
 \subsection{Registrierung}
 Bevor das eigentliche Spiel stattfindet registriert sich der Spieler bei einem voreingestellten Registrar. Dazu sendet er seine Anmeldung gemäß im Kapitel 3 vorgestellten Registrierungsprozess. Ist die Registrierung abgeschlossen ist der Registrar in der Lage diesen Spieler erfolgreich zu lokalisieren.
@@ -163,3 +158,4 @@ Jeder Spieler ist in der Lage sich frei im Level zu bewegen. Jede der Bewegungen
 \subsection{Spieler beendet sein Spiel}
 Beendet ein Spieler sein Spiel, so bedeutet es für die übrigen Spieler nicht, dass das komplette Spiel auch beendet ist. Das Verlassen eines Spielers hat die einzige Auswirkung, dass dieser Spieler keine Positionsinformationen mehr versendet und empfängt. Alle aktiven Gespräche mit diesem Spieler werden ebenfalls beendet. Die übrigen Spieler im Spiel können das Spiel jedoch ohne Unterbrechung weiterführen. 
 
+//TODO
