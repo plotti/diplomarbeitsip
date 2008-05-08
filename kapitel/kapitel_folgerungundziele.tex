@@ -1,12 +1,12 @@
 \chapter{Folgerungen und Ziele}
 
-Wie wir bereits in vielen vorgestellten Studien der Text- Sprachkommunikation in Computerspielen gesehen haben, besteht an vielen Stellen ein großer Bedarf die bisherigen Unzulänglichkeiten der Kommunikationsmedien zu beheben. In diesem Kapitel sollen bisher vorgestellten Grundlagen der Kommunikation genutzt werden um Folgerungen und Ziele abzuleiten, die auch dieser modelliert werden sollen. Somit soll der bisherige theoretische Ansatz helfen bisherige Problemfelder einzuordnen und daraus sukzessive praktische Empfehlungen für eine bessere Sprach\-kommunikations\-lösung abzuleiten. In der zweiten Hälfte des Kapitels, sollen anhand der gestellten Anforderungen grundlegende Entscheidungen zur Wahl der 3-D Engine, Audioengine und VoIP Lösungen getroffen werden.
+Wie wir bereits in vielen vorgestellten Studien der Text- Sprachkommunikation in Computerspielen gesehen haben, besteht an vielen Stellen ein großer Bedarf die bisherigen Unzulänglichkeiten der Kommunikationsmedien zu beheben. In diesem Kapitel sollen bisher vorgestellten Grundlagen der Kommunikation genutzt werden um Folgerungen und Ziele abzuleiten, die auch anhand dieser modelliert werden sollen. Somit soll der bisherige theoretische Ansatz helfen bisherige Problemfelder einzuordnen und daraus sukzessive praktische Empfehlungen für eine bessere Sprach\-kommunikations\-lösung abzuleiten. In der zweiten Hälfte des Kapitels, sollen anhand der gestellten Anforderungen grundlegende Entscheidungen zur Wahl der 3-D Engine, Audioengine und VoIP Lösungen getroffen werden.
 
 \section{Ziele}
 
 \subsection{Mehrkanal Modell}
 
-Wie in den vorgestellten Studien gezeigt wurde, basieren viele der der genannten Probleme auf der Verwendung von genau einem Kanal zur Sprachübertragung, der von mehreren Sendern und Empfängern gleichzeitig genutzt wird. Diese Beobachtung stützt sich auf das vorgestellte Kommunikationsmodell von Shannon und Weaver, das es uns erlaub diesen Sachverhalt etwas anschaulicher zu verdeutlichen:
+Wie in den vorgestellten Studien gezeigt wurde, basieren viele der der genannten Probleme auf der Verwendung von genau einem Kanal zur Sprachübertragung, der von mehreren Sendern und Empfängern gleichzeitig genutzt wird. Diese Beobachtung stützt sich auf das vorgestellte Kommunikationsmodell von Shannon und Weaver, das es uns erlaubt diesen Sachverhalt etwas anschaulicher zu verdeutlichen:
 
 \begin{figure}[htbp]
 	\centering
@@ -14,17 +14,17 @@ Wie in den vorgestellten Studien gezeigt wurde, basieren viele der der genannten
 	\label{fig:singlekanal-kommunikationsmodell}
 \end{figure}
 
-Ein Großteil der Störungen resultierte aus der Unzulänglichkeit eines einzigen Übertragungskanals, mehrere gleichzeitige Audioströme zu übertragen. Dies führte zu folgenden Hauptproblemen:
+Ein Großteil der Störungen resultierte aus der Unzulänglichkeit eines einzigen Übertragungskanals mehrere gleichzeitige Audioströme zu übertragen. Dies führte zu folgenden Hauptproblemen:
 
 \begin{itemize}
 
 	\item Limitierter Kanal: Vor allem durch die Beschränkte Nutzung eines einzigen Kanals der durch alle Spieler genutzt wurde, nutzten Teilnehmer diesen nur zur reinen aufgabenorientieren Koordinierung des Teams. Der gewünschte soziale Aspekt der Kommunikation dagegen blieb über weite Strecken vollständig aus. 
 	
-	\item Störungen durch Interferenzen: Durch Überlagerung von mehreren gleichzeitigen sich Audioströmen nahm die Qualität des Mediums kontinuierlich ab, bis zu dem Punkt an dem viele Spieler die Sprachkommunikation als störend empfanden.
+	\item Störungen durch Interferenzen: Durch Überlagerung von mehreren gleichzeitigen Audioströmen nahm die Qualität des Mediums kontinuierlich ab, bis zu dem Punkt an dem viele Spieler die Sprachkommunikation als störend empfanden.
 	
-		\item Geringe Audioqualität: Durch eine geringe Audioqualität, hohe Stör\-ge\-räu\-sche und Latenzen waren Spieler nicht in der Lage erfolgreich miteinander zu kommunizieren. Spieler waren nicht in der Lage ist problematische Audioquellen, die mit Störungen behaftet sind zu meiden. 
+		\item Geringe Audioqualität: Durch eine geringe Audioqualität, hohe Stör\-ge\-räu\-sche und Latenzen waren Spieler nicht in der Lage erfolgreich miteinander zu kommunizieren. Problematische Audioquellen, die mit Störungen behaftet waren konnten nicht gemieden oder ausgeblendet werden.
 
-	\item Keine Kontrolle über Empfänger der Nachricht: In den gezeigten Studien wurde festgestellt dass eine gezielte Adressierung der Teilnehmer nicht gelöst wurde.  So konnten nur alle Teilnehmer gleichzeitig angesprochen werden, und der Empfänger konnte nur aus dem Kontext erkennen, dass die Nachricht für ihn bestimmt ist. 
+	\item Keine Kontrolle über Empfänger der Nachricht: In den gezeigten Studien wurde festgestellt dass eine gezielte Adressierung der Teilnehmer nicht gelöst wurde.  So konnten nur alle Teilnehmer gleichzeitig angesprochen werden, und der Empfänger nur aus dem Kontext erkennen, dass die Nachricht für ihn bestimmt ist. 
 	
 		\item Keine Kontrolle über Empfang der Nachrichten: Analog zum Adressierungsproblem waren Spieler genauso wenig in der Lage zu kontrollieren, welche Sprachnachrichten sie empfangen möchten. Oft führte dies dazu dass ein Großteil der Sprachkommunikation auf den Kanälen als Lärm empfunden wurde. 
 		
@@ -38,7 +38,7 @@ Ein Großteil der Störungen resultierte aus der Unzulänglichkeit eines einzigen Ü
 
 Ersetzen wir einen Kanal durch mehrere parallele Kanäle so können wir viele der genannten Probleme lösen:
 \begin{itemize}
-	\item  Wird nun zwischen jedem Spielerpaar nur ein Kanal aufgebaut, können keine Störungen durch Interferenzen mehr auftreten.
+	\item  Wird nun zwischen jedem Spielerpaar nur ein Kanal aufgebaut, können nur wenige Störungen durch Interferenzen auftreten.
 	\item Jeder Spieler ist in der Lage genau zu bestimmen an wen seine Nachricht gehen soll, da für jede Übertragung ein spezieller Kanal benutzt wird. 
 	\item Dadurch dass jedes empfange Audiosignal den Empfänger ungemischt erriecht, ist dieser in der Lage unerwünschte Signale auszufiltern.
 	\item Findet das Abmischen der Kanäle lokal statt, sind wir in der Lage eine hohe Qualität des Mischsignals zu gewährleisten.	
@@ -60,9 +60,9 @@ Spieler sind nicht in der Lage selbst zu bestimmen an wen ihre Nachrichten gehen
 	\label{fig:ventrillo}
 \end{figure}
 
-Einige kommerzielle Lösungen verfügen über einen "`Flüstermodus"', der es erlaubt eine private Konversation mit einzelnen Spielern zu ermöglichen. Dieser bringt den Nachteil mit sich, dass eine solche private Kommunikation vor dem Spiel in der Konfiguration der Hilfsprogramme definiert werden muss und keine dynamische Allokation der Spieler erlaubt. Somit keine spontane Adressierung eines beliebigen Spielers erlaubt. Zudem werden Teilnehmer eines solchen Flüstergesprächs vom restlichen Geschehen ausgegrenzt, da sie nicht gleichzeitig beide Kanäle benutzen können.
+Einige kommerzielle Lösungen verfügen über einen "`Flüstermodus"', der es erlaubt eine private Konversation mit einzelnen Spielern zu ermöglichen. Dieser bringt den Nachteil mit sich, dass eine solche private Kommunikation vor dem Spiel in der Konfiguration der Hilfsprogramme definiert werden muss und keine spontane Addressierung der Spieler erlaubt. Zudem werden Teilnehmer eines solchen Flüstergesprächs vom restlichen Geschehen ausgegrenzt, da sie nicht gleichzeitig beide Kanäle benutzen können.
 
-Deswegen wird in der Umsetzung einer besseren Sprachkommunikation ein Ansatz gesucht der es Teilnehmern ermöglichen soll sowohl persönliche Gespräche zu führen, als auch an der Massenkommunikation teilzunehmen. Dies soll durch einen erweiterten Mischvorgang ermöglicht werden, der die Teilnahme an einem Kanal nicht binär definiert, sondern einen fließenden Übergang zwischen Kanälen ermöglicht.
+Deswegen wird in der Umsetzung einer besseren Sprachkommunikation ein Ansatz gesucht, der es Teilnehmern ermöglichen soll sowohl persönliche Gespräche zu führen, als auch an der Massenkommunikation teilzunehmen. Dies soll durch einen erweiterten Mischvorgang ermöglicht werden, der die Teilnahme an einem Kanal nicht binär definiert, sondern einen fließenden Übergang zwischen Kanälen ermöglicht.
 
 \subsection {Erweitertes Audio Mixing}
 Wie wir festgestellt haben ist die Teilnahme an einer Konferenz bisher binär gelöst worden. Spieler sind entweder Teil einer Konferenz oder nicht. So ist in einer Konferenz mit \textit{n} Teilnehmern ${p_{1},p_{2},...,p_{n}}$, mit Audioströmen ${V_{1},V_{2},...,V_{n}}$, das von einem Teilnehmer $p_{i}$ zu einer Zeit \textit{t} empfangene Signal definiert durch:
@@ -84,7 +84,7 @@ Der Distanzvektor wird dabei immer vom Spieler anhand der Spielerinformationen b
 Wie Studien der Texkommunikation gezeigt haben, besteht ein großes Interesse nach einem Medium für Kommunikation in Spielen, das eine ausreichend hohe Mediarichness besitzt. 
 Textkommunikation dagegen enthält außer der ursprünglichen Nachricht viele Akronyme und Emoticons, die nur unzulänglich die soziale Komponente einer Kommunikation widerspiegeln können und ist für durch die Nutzung von eines einzigen gemeinsamen öffentlichen Kommunikationskanals nicht für persönliche Gespräche tauglich. 
 
-Dabei besteht gerade für diese persögliche soziale Kommunikation überproportionaler Bedarf wie Studien aus Kapitel 2 festgestellt haben. Die Vermutung liegt nahe, dass die Spieler die Handicaps der Textkommunikation zwar teilweise erfolgreich durch verschiedene Methoden behoben haben, trotzdem der Wunsch nach einem Medium, das besser ohne Einschränkungen in der Lage ist Nachrichten sozialer Natur zu übertragen nach wie vor vorhanden ist. Dies entspricht auch Beobachtungen der Media-Richness Theorie, nach der komplizierte Telekoordinationsaufgaben ein ebenso reiches Medium benötigen.
+Dabei besteht gerade für die persönliche soziale Kommunikation über\-proportio\-naler Bedarf, wie Studien aus Kapitel 2 festgestellt haben. Die Vermutung liegt nahe, dass die Spieler die Handicaps der Textkommunikation zwar teilweise erfolgreich durch verschiedene Methoden behoben haben, trotzdem der Wunsch nach einem Medium, das besser ohne Einschränkungen in der Lage ist Nachrichten sozialer Natur zu übertragen nach wie vor vorhanden ist und auch eingesetzte Tools bisher dieser Aufgabe nicht gerecht werden. Dies entspricht auch Beobachtungen der Media-Richness Theorie, nach der komplizierte Telekoordinationsaufgaben ein ebenso reiches Medium benötigen.
 
 Spielen kann als  Kooperationsaufgabe mit einer Vielzahl an Teilnehmern und komplexen Anforderungen in Bezug auf die Gruppendynamik und das Timing verstanden werden. Sprachkommunikation scheint genau den Grad an Mediarichness zu besitzen die Spiele benötigen. Sie erlaubt kurze Feedbackzeiten, was die Interaktivität fördert und ist durch verschiedene Stimmvariationen lebendig genug um Emotionen wie z.B. Wut und Freude auszudrücken. 
 
@@ -110,21 +110,21 @@ Spielen kann als  Kooperationsaufgabe mit einer Vielzahl an Teilnehmern und komp
 
 
 \subsection{Luft als Medium}
-Angelehnt an die im Kapitel 2 vorgestellten Metaphern von Gibs und Wadley, habe ich mich entschlossen die Sprach\-über\-tragung anhand einer der vorgestellten Metaphen modellieren. Ich habe mich für den Fall der Luftübertragung entschieden, da es die intuitivste Art der Übertragung der Sprache ist und wir im Alltag am häufigsten davon Gebrauch machen. Ein wichtiger Vorteil ist zudem, das sie als einzige das angestrebte Konzept der Proxemik zulässt.
+Angelehnt an die vorgestellten Metaphern von Gibs und Wadley, habe ich mich entschlossen die Sprach\-über\-tragung anhand einer der vorgestellten Metaphern modellieren. Ich habe mich für den Fall der Luftübertragung entschieden, da es die intuitivste Art der Übertragung der Sprache ist und wir im Alltag am häufigsten davon Gebrauch machen. Ein wichtiger Vorteil ist zudem, das sie als einzige das angestrebte Konzept der Proxemik zulässt.
 Die Übertragung von Sprache soll nur möglich sein falls sich Spieler in einer von uns bestimmten Hörnähe befinden. Die Lautstärke und Qualität der Kommunikation hängt dabei von der Entfernung der Spieler voneinander ab. 
 %Bild von Schall in Luft.
 
 \subsection{Proxemik als Steuerung von Konferenzen}
-Obwohl die Verwaltung von Telefonkonferenzen seit Jahren erforscht wird \cite{} existieren bisher wenige intuitive Methoden. Alle Studien zur Konferenzsteuerung zeigen dass die Einführung von mehreren Kanälen ein entsprechend kompliziertes Konferenz Management erforder, da Teilnehmer in der Lage sein sollen zu entscheiden was sie hören wollen und was nicht. 
+Obwohl die Verwaltung von Telefonkonferenzen seit Jahren erforscht wird \cite{} existieren bisher wenige intuitive Methoden. Alle Studien zur Konferenzsteuerung zeigen dass die Einführung von mehreren Kanälen ein entsprechend kompliziertes Konferenz Management erfordert, da Teilnehmer in der Lage sein sollen zu entscheiden was sie hören wollen und was nicht. 
 
-Die Lösung besteht aus der Relaxierung des Problems zu einem Nachbarschaftsproblem in einer 3D Umgebung in der Spieler durch ihre Distanz zueinander entscheiden können welche Kanäle sie hören möchten und welche nicht. Es entscheidet einzig die Entfernung der Teilnehmer zueinander ob eine interpersonelle oder Massenkommunikation gewünscht wird und jeder Teilnehmer ist in der Lage intuitiv seine persönliche Konferenz zu erstellen. Nonverbale kommunikation in Form der Bewegung der Avatare, trägt hier nicht nur zur Erhöhung der Interaktivität und Lebhaftigkeit bei sondern bildet die Grundlage für die einfachste und intuitivste Form der Verwaltung einer Konferenz. Durch die Representation der Teilnehmer einer Konferenz durch Avatare im 3D Raum, kann jeder Teilnehmer selbst bestimmen welche Entfernung er zu seinen Nachbarn einnehmen will. Die Entfernung zu seinem Nachbarn entscheidet wie im Alltagsleben, ob wir jemanden hören oder nicht. 
+Die Lösung besteht aus der Relaxierung des Problems zu einem Nachbarschaftsproblem in einer 3D Umgebung in der Spieler durch ihre Distanz zueinander entscheiden können welche Kanäle sie hören möchten und welche nicht. Es entscheidet einzig die Entfernung der Teilnehmer zueinander ob eine interpersonelle oder Massenkommunikation gewünscht wird und jeder Teilnehmer ist in der Lage intuitiv seine persönliche Konferenz zu erstellen. Nonverbale kommunikation in Form der Bewegung der Avatare, trägt hier nicht nur zur Erhöhung der Interaktivität und Lebhaftigkeit bei sondern bildet die Grundlage für die einfachste und intuitivste Form der Verwaltung einer Konferenz. Durch die Repräsentation der Teilnehmer einer Konferenz durch Avatare im 3D Raum, kann jeder Teilnehmer selbst bestimmen welche Entfernung er zu seinen Nachbarn einnehmen will. Die Entfernung zu seinem Nachbarn entscheidet wie im Alltagsleben, ob wir jemanden hören oder nicht. 
 
 Speziell bedeutet es dass der Raum um den Spieler in drei Distanzzonen einteilen wird, in denen verschiedene Ausprägungen der Sprachkommunikation möglich sein sollen. Dieser Vorschlag ist angelehnt an die Proxemikforschung\cite{hall05} deren Grundlagen bereits in Kapitel 2 erläutert wurden. 
 
 \begin{itemize}
 	\item Persönliche Distanz: Hier sollen die Spieler in der Lage sein frei miteinander interpersonell zu kommunizieren. Vorstellbar sind zwei Alternativen indem eine Kommunikation auf dieser Distanzzone entweder nur zwischen 2 Personen möglich ist und von anderen nicht mitgehört werden kann, oder auch eine relaxierte Version, in der die die Lautstärke der Kommunikation in dieser Distanzzone konstant laut innerhalb dieses Radius bleibt.
 	
-	\item Soziale Distanz: Hier sollen die Spieler in der Lage sein sich gegenseitig zu hören, dabei soll die direkte Entfernung untereinander Einfluss auf die wahrgenommene Lautstärke haben. So sollen Spieler die sich näher befinden Lauter sein, während Spieler die sich weiter entfernt befinden leiser sein sollen. Die Lautstärke soll linear abnehmen bis Spieler die öffentliche Distanz erreichen.Die entspricht dem erweitertem Mixing Konzept.
+	\item Soziale Distanz: Hier sollen die Spieler in der Lage sein sich gegenseitig zu hören, dabei soll die direkte Entfernung untereinander Einfluss auf die wahrgenommene Lautstärke haben. So sollen Spieler die sich näher befinden lauter sein, während Spieler die sich weiter entfernt befinden leiser sein sollen. Die Lautstärke soll linear abnehmen, bis Spieler die öffentliche Distanz erreichen. Dies entspricht dem erweitertem Mixing Konzept.
 	
 	\item Öffentliche Distanz: In der Öffentlichen Distanz ist zunächst keine weitere Sprachkommunikation möglich. Das einzige Mittel der Kommunikation bleibt hier die Textkommunikation die jederzeit und an jeden Spieler übertragen wird, deshalb auch einen öffentlichen Charakter besitzt. Trotzdem soll in der öffentlichen Zone der unmittelbare Übergang zur Sozialen Zone störungsfrei ablaufen und keine Verzögerungen aufweisen. Falls sich Spieler aus der Öffentlichen Distanz in die Soziale Distanz bewegen soll bereits in der öffentlichen Distanz der bevorstehende Anruf auf Protokollebene bereits vorbereitet werden, und dann in der sozialen Instanz tatsächlich ohne Verzögerung eingeleitet werden.  
 \end{itemize}
@@ -134,8 +134,6 @@ Speziell bedeutet es dass der Raum um den Spieler in drei Distanzzonen einteilen
 		\includegraphics[width=1.00\textwidth]{grafiken/lautstaerke.eps}
 	\label{fig:lautstaerke}
 \end{figure}
-
-
 
 \subsection{Art des Spiels}
 
@@ -150,9 +148,9 @@ Eine in Kapitel 2 vorgestellte klassische Unterteilung von Spielen in Spielegenr
 \section{Wahl des 3D Frameworks}
 
 \subsection{3D Spieleengines}
-Da die Entwicklung eines realistisches Spieles weit über das Thema der Arbeit hinaus geht, und diese Aufgabe normalerweise von ganzen Teams über mehrere Monate oder Jahre bewältigt wird wird in der Arbeit versucht bestehende Komponenten zu verwenden.
+Da die Entwicklung eines realistisches Spieles weit über das Thema der Arbeit hinaus geht, und diese Aufgabe normalerweise von ganzen Teams über mehrere Monate oder Jahre bewältigt wird, sollen in dieser Arbeit bestehende Komponenten eingesetzt werden.
 
-Deswegen habe ich mich Entschieden ein bestehendes Spiele-Framework zu nutzen. Das Framework sollte dazu eingesetzt werden einen Prototypen zu erstellen in dem ein Avatar in einer 3D möglichst realistischen Umgebung gesteuert werden kann. 
+Deswegen habe ich mich entschieden ein bestehendes Spiele-Framework zu nutzen. Das Framework sollte dazu eingesetzt werden einen Prototypen zu erstellen in dem ein Avatar in einer 3D möglichst realistischen Umgebung gesteuert werden kann. 
 
 Viele der bestehenden Spiele Engines für 3D orientierte Spiele existieren meist auf der Enwicklungsgrundlagen großer Softwarestudios wie Idsoftware\cite{idsof08} oder Epic Games \cite{unreal2008}, die Standards setzten indem sie, die den Quellcode ihrer erfolgreichsten Frameworks wie z.B. Quake II, Quake III sowie Unreal I öffneten. Da es bei großen Entwicklerstudios üblich ist, dass meist mit dem Aufkommen eines neuen kommerziellen Titels die Entwicklung eines neuen Spieleframeworks mit einher geht, existieren von den Haupvertretern großer Spiele-Engines mehrere Generationen sowie Derrivate. 
 
@@ -162,7 +160,7 @@ Seit einigen Jahren sind auch komplette offene Neuentwicklungen wie Sauerbraten 
 Eine Alternative zu Spiele Engines bieten offene generische 3-D Engines, deren Fokus nicht auf der kompletten Entwicklung eines speziellen Spiels liegt sondern lediglich möglichst komfortabel ermöglichen soll 3D-Grafiken interaktiv darzustellen. Dazu werden meist die Details von Systembibliotheken wie Direct3D oder OpenGL abstrahiert und dem Entwickler ein Interface angeboten das auf höher abstrahierten Objekten oder anderen Abstraktionsklassen basiert. Bekannte Vertreter sind Ogre3D \cite{ogre08} oder Irrlicht \cite{irrlicht08}. 
 
 \subsubsection{Irrlicht}
-Irrlicht ist eine einfache gut dokumentierte open source Engine in C++ die alle üblichen 3D Features als auch Collision Detection, Animationen, Texturen unterstützt und sowohl unter Windows, Linux als auch Mac OS verfügbar ist. Aufgrund der bestehenden Arbeit von \cite{triebel07g}, war es mir möglich bereits bestehende Konzepte zu verwenden und somit eine schnelle Entwicklung des Prototyps zu gewährleisten.
+Irrlicht ist eine einfache gut dokumentierte open source Engine in C++ die alle üblichen 3D Features wie Collision Detection, Animationen, Shading und Texturen unterstützt und sowohl unter Windows, Linux als auch Mac OS verfügbar ist. Aufgrund der bestehenden Arbeit von Triebel \cite{triebel07g}, war es mir möglich bereits bestehende Konzepte zu verwenden und somit eine schnelle Entwicklung des Prototyps zu gewährleisten.
 
 \subsubsection{Irrklang}
 Speziell für die Sprachkommunikation musste die 3D-Engine um eine Sound-Engine erweitert werden, die eine gezielte Audioausgabe ermöglicht. Für Irrlicht existiert eine plattform-übergreifende Audiobibliothek irrKlang \cite{irrklang08} die sich für wegen ihrer zahlreichen Features für das Projekt anbot. Sie unterstützt einerseits low level Audio Verarbeitung, Audiostreaming, realistisches 3D Audio Rendering, Multithreading und kann über Plugins erweitert werden. Zusätzlich besitzt sie eine einfache API, die eine schnelle Einarbeitung und Entwicklung ermöglicht. All diese Gründe waren ausschlaggebend diese Bibliothek zu benutzen. 
@@ -170,7 +168,7 @@ Speziell für die Sprachkommunikation musste die 3D-Engine um eine Sound-Engine e
 \section{Wahl der VoIP Anwendung}
 
 Zwecks der Implementierung einer Sprachkommunikationslösung stehen mehrere Alternativen zur Verfügung. Dabei ist die Mehrzahl der Lösungen kommerzieller oder proprietärer Natur. Bisher werden im Spielebereich fast ausschließlich serverbasierte Sprachkommunikationslösungen eingesetzt. Dabei unterstützen viele der Lösungen ähnliche Audiocodecs und bieten einen vergleichbaren Funktionsumfang.
-Im privaten VoIP Telefonie Bereich werden oft kommerzielle Produkte wie Skype eingesetzt.Die wenigsten Anbieter setzen offene Sprachkommunikationslösungen ein. 
+Im privaten VoIP Telefonie Bereich werden oft kommerzielle Produkte wie Skype eingesetzt. Die wenigsten Anbieter setzen offene Sprachkommunikationslösungen ein. 
 
 \subsection{Serverbasierte Sprachkommunikationslösungen}
 %http://www.tentonhammer.com/index.php?q=node/102
@@ -186,10 +184,11 @@ Teamspeak (Version 2.0.33.7) \cite{teamspeak08}ist ebenfalls ein serverbasiertes
 
 \subsubsection{Mumble}
 %http://mumble.sourceforge.net
-Mumble (Version 1.1.3) ist eine offene serverbasierte VoIP Anwendung, die primär von Computerspielern für Sprachkommunikation genutzt wird. Mumble versucht die soziale Komponente der Sprachkommunikation zu betonen, indem es sehr wenige Administrative Elemente besitzt und das Hauptaugenmerk auf der Sprachqualität liegt. Seine Verwendung gleicht den anderen Programmen indem Benutzer des Clients Kanäle auf Servern betreten um gegenseitig gehört zu werden. 
+Mumble (Version 1.1.3) ist eine offene serverbasierte VoIP Anwendung, die primär von Computerspielern für Sprachkommunikation genutzt wird. Mumble versucht die soziale Komponente der Sprachkommunikation zu betonen, indem es für den Endanwender sehr wenige administrative Elemente besitzt und das Hauptaugenmerk auf der Sprachqualität liegt. Seine Verwendung gleicht den anderen Programmen indem Benutzer des Clients Kanäle auf Servern betreten um gegenseitig gehört zu werden. 
 
-Obwohl die kommerziellen Lösungen bei einer optimalen Konfiguration hunderte von Benutzern unterstützen können und eine gute Sprachqualität bieten haben sie den Nachteil, dass sie nicht modifizierbar sind, die Serverkomponenten nicht frei verfügbar sind, und somit eine Nutzung den Prototypen nicht sinnvoll erscheint. 
-Mumble ist zwar als einziges dank seiner offenen Lizenz modifizierbar, jedoch Aufgrund aufgrund der komplizierten Serverkonfiguration und einem komplexen Rechtesystem, das auf Gruppen und Regeln basiert, nicht einfach für meine Bedürfnisse anzupassen. 
+Obwohl die kommerziellen Lösungen bei einer optimalen Konfiguration hunderte von Benutzern unterstützen können und eine gute Sprachqualität bieten haben sie den Nachteil, dass sie nicht modifizierbar sind, die Serverkomponenten nicht frei verfügbar sind, und somit deren Nutzung für eine Umsetzung des Prototypen nicht sinnvoll erscheint. 
+
+Mumble ist zwar als einziges dank seiner offenen Lizenz modifizierbar, jedoch aufgrund der komplizierten Serverkonfiguration und einem komplexen Rechtesystem, das auf Gruppen und Regeln basiert, nicht einfach für meine Bedürfnisse anzupassen. 
 
 Zusätzlich zu den vorhandenen Problemen sind die drei Lösungen untereinander nicht kompatibel und bieten somit nur Insellösungen. 
 
@@ -198,7 +197,7 @@ Zusätzlich zu den vorhandenen Problemen sind die drei Lösungen untereinander nic
 \subsubsection{Skype}
 
 Als einziges erlaubt uns die Skype Technologie völlig dezentrales P2P VoIP zu ermöglichen. Der Einsatz Skype ist kostenlos und der Dienst völlig dezentralisiert. Über das Skype-API ist es auch für externe Programme möglich, auf die Funktionalitäten des Skype-Clients und Teilen des Netzwerkes zuzugreifen.
-Trotz der Vorteile bietet Skype auch einige Nachteile: Da Skypes VoIP-Protokoll proprietär ist, kann es nur mit der originalen Skype-Software genutzt werden. In der kostenlosen Version nur Konferenzen mit bis zu 5 gleichzeitigen Teilnehmern möglich. In einer kostenpflichtigen Version werden zwar bis zu 10 gleichzeitige Konferenzteilnehmer unterstützt. Beide Versionen jedoch bieten keine Kontrolle über die einzelnen Audioströme auf der Clientseite. So kann man nur die Summe aller Audioströme empfangen. Die Clients sind nicht in der Lage die Lautstärke einzelner Teilnehmer zu ändern noch einzelnen Audioströme komplett stumm zuschalten. Zudem bietet die Skype API nur zwei spezielle Interfaces an um entweder Anrufe zu tätigen oder Nachrichten zu verschicken. Eine Architektur für weitere Dienste ist nicht vorgesehen \cite{schulzrinne05}.
+Trotz der Vorteile bietet Skype auch einige Nachteile: Da Skypes VoIP-Protokoll proprietär ist, kann es nur mit der originalen Skype-Software genutzt werden. In der kostenlosen Version sind nur Konferenzen mit bis zu 5 gleichzeitigen Teilnehmern möglich. In einer kostenpflichtigen Version werden zwar bis zu 10 gleichzeitige Konferenzteilnehmer unterstützt. Beide Versionen jedoch bieten keine Kontrolle über die einzelnen Audioströme auf der Clientseite. So kann man nur die Summe aller Audioströme empfangen. Die Clients sind nicht in der Lage die Lautstärke einzelner Teilnehmer zu ändern noch einzelnen Audioströme komplett stumm zuschalten. Zudem bietet die Skype API nur zwei spezielle Interfaces an um entweder Anrufe zu tätigen oder Nachrichten zu verschicken. Eine Architektur für weitere Dienste ist nicht vorgesehen \cite{schulzrinne05}.
 
 Somit bietet Skype als einziger tatsächlicher dezentralisierter Client nicht alle Eigenschaften um als mögliche Ausgangsgrundlage zu dienen. 
 
@@ -207,9 +206,9 @@ Somit bietet Skype als einziger tatsächlicher dezentralisierter Client nicht all
 Andere peer-to-peer Programme wie Microsoft Netmeeting, Microsoft Messenger, GoogleTalk sind nicht modifizierbar und bieten keinerlei Konferenzmöglichkeiten. 
 
 \subsection{SIP Protokoll als Lösung}
-Das im folgenden Kapitel vorgestellte SIP Protokoll erfüllt gleich mehrere Anforderungen an den Prototypen. Dadurch dass SIP ein sehr generisches offenes Protokoll ist, kann es kann benutzt werden, um beliebige Sessions mit einem oder mehreren Teilnehmern zu verwalten. Dabei ist es nicht auf Internet-Telefonie beschränkt, und kann Sessions zwischen beliebige Multimediaströmen, Konferenzen, Computerspiele usw. herstellen.Zahlreiche standardisierungs Organisationen wie IETF PINT, 3GPP, International Packet Communications Consortium, IMTC und PacketCable unterstützen bereits den Einsatz von SIP.
+Das im folgenden Kapitel vorgestellte SIP Protokoll erfüllt gleich mehrere Anforderungen an den Prototypen. Dadurch dass SIP ein sehr generisches offenes Protokoll ist, kann es kann benutzt werden, um beliebige Sessions mit einem oder mehreren Teilnehmern zu verwalten. Dabei ist es nicht auf Internet-Telefonie beschränkt, und kann Sessions zwischen beliebige Multimediaströmen, Konferenzen, Computerspiele usw. herstellen.Zahlreiche standardisierungs Organisationen wie IETF, PINT, 3GPP, International Packet Communications Consortium, IMTC und PacketCable unterstützen bereits den Einsatz von SIP.
 %http://www.cs.columbia.edu/sip/
-In der open source Gemeinde wird das SIP Protokoll auch zunehmend unterstützt so existieren bereit etliche Clientanwendungen als auch zentrale Komponenten wie Proxys und Registrare, die der zunehmenden globalen Verbreitung von SIP dienen. Zusätzlich werden etliche SIP Stacks, Client Anwendungen und SDKs bishin zu Komplettlösungen angeboten. Es existieren auch Referenzimplementierungen, wie SIP JAIN-SIP, welches vom National Insitute of Standards and Technology (NIST) entwickelt wurde, die sowohl in kommerziellen Projekten aber auch zu Forschungszwecken eingesetzt werden. Der wichtigste Grund für den Einsatz von SIP ist, dass es alle Anforderungen für die Umsetzung des Protyps unterstützt:
+In der open source Gemeinde wird das SIP Protokoll auch zunehmend unterstützt. So existieren bereits etliche Clientanwendungen als auch zentrale Komponenten wie Proxys und Registrare, die der zunehmenden globalen Verbreitung von SIP dienen. Zusätzlich werden etliche SIP Stacks, Client Anwendungen und SDKs bishin zu Komplettlösungen angeboten. Es existieren auch Referenzimplementierungen, wie SIP JAIN-SIP, welches vom National Insitute of Standards and Technology (NIST) entwickelt wurde, die sowohl in kommerziellen Projekten aber auch zu Forschungszwecken eingesetzt werden. Der wichtigste Grund für den Einsatz von SIP ist, dass es alle Anforderungen für die Umsetzung des Protyps unterstützt:
 
 \begin{itemize}
 	\item Generische Einsatzmöglichkeiten	auch für Computerspiele
