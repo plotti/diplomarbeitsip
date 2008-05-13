@@ -73,29 +73,38 @@ Der Verbindungsabbau findet wie gewohnt statt: Befindet sich Teilnehmer B nicht 
 Die Umgebung des Spielers wurde wie gefordert in drei Zonen unterteilt. 
 
 \subsection{Öffentliche Zone}
-Der Teilnehmer stellt in der Zone C Verbindungen zu Teilnehmern dieser Zone her. Da der Verbindungsaufbau mitunter bis zu 1 oder 2 Sekunden betragen kann, wird diese Zone dazu genutzt bereits vorab Verbindungen zu etablieren, bevor die Teilnehmer tatsächlich in der Lage sind miteinander zu sprechen. So soll die entstehende Latenz beim Verbindungsaufbau für den Spieler nicht erkennbar sein. Diese Zone soll auch dafür sorgen dass eine gewisse Unschärfe existiert, was die Verbindungen zwischen den Teilnehmern angeht: In dieser Übergangphase werden logische SIP Verbindungen aus dem Grund aufrechterhalten, weil es sehr wahrscheinlich ist dass die Teilnehmer wieder die soziale Zone betreten. Trotzdem wird aufgrund der Tatsache das Teilnehmer in dieser Zone sich gegenseitig nicht hören können versucht Bandbreite einzusparen.
+Die Öffentliche Zone dient zum initiieren von SIP Verbindungen des Spielers mit anderen Teilnehmern, die sich in seiner Öffentlichen Zone befinden. Da der Verbindungsaufbau mitunter bis zu 1 oder 2 Sekunden betragen kann, wird diese Zone dazu genutzt bereits vorab Verbindungen zu etablieren, bevor die Teilnehmer tatsächlich in der Lage sind miteinander zu sprechen. So soll die entstehende Latenz beim Verbindungsaufbau für den Spieler nicht erkennbar sein. 
+
+Durch die Existenz der öffentlichen Zone herrscht ein gradueller Übergang von nicht Verbundenen Teilnehmern, über Teilnehmer die bereits auf logischer Ebene Verbunden sind aber noch keine Audiodaten austauschen. In dieser Übergangphase werden logische SIP Verbindungen aus dem Grund aufrechterhalten, weil es sehr wahrscheinlich ist, dass die Teilnehmer die bereits diese Entfernung eingenommen haben die soziale Zone betreten werden, in der tatsächlich eine Audioverbindung stattfindet. Da Spielergruppen in virtuellen Welten der Erfahrung nach meist in größeren Anzahlen miteinander in die gleiche Richtung wandern, soll durch eien Öffentliche Zone sichergestellt werden, dass bereits eine Konnektivität zwischen allen Teilnehmern herrrscht, damit ohne Verzögerungen eine Sprachkommunikation etabliert werden kann. Diese Konnektivität soll eine minimale Bandbreite beanspruchen, trotzdem aber einen schnellen Verbindungsaufbau ermöglichen. 
 
 \subsubsection{Eingang und Verlassen der Öffentlichen Zone}
-Die öffentliche Zone kann aus zwei Richtungen betreten werden. Wird sie von außen betreten wird eine SIP Verbindung zwischen den Teilnehmern aufgebaut. Der Verbindungsaufbau und die damit eingehenden Probleme wurden oben bereits beschrieben. Wird die Zone von innen betreten. dh. findet ein Übergang von der sozialen Zone zur öffentlichen Zone statt, so findet auf Protokollebene folgender Ablauf statt:
+Die öffentliche Zone kann aus zwei Richtungen betreten werden. Wird sie von außen betreten, wird eine SIP Verbindung zwischen den Teilnehmern aufgebaut. Der Verbindungsaufbau und die damit eingehenden Probleme wurden oben bereits beschrieben. Wird die Zone von innen betreten. dh. findet ein Übergang von der sozialen Zone zur öffentlichen Zone statt, so findet auf Protokollebene folgender Ablauf statt:
 
 \subsubsection{RTP - Silence Supression}
 Der logische SIP Anruf bleibt weiterhin erhalten, während auf auf RTP Ebene kein weiteres Audiosignal mehr übertragen wird. Dies geschieht indem der Teilnehmer aus der internen Conference Bridge genommen wird. Das bedeutet dass beide Spieler das gegenseitige Audiosignal nicht mehr empfangen da beide Teilnehmer eine Silence Suppression vornehmen. Dies entspricht der im Kapitel 3 geschilderten Eigenschaften von Silence Supression von RTP und RTCP, nur dass sie hier nicht in Abhängigkeit der tatsächlichen Stille im Mikrofon, sondern der Enfernung der Teilnehmer zueinander stattfindet. Durch diese Methode bietet die Möglichkeit, einerseits den Bandbreitenverbrauch in dieser Zone minimal zu halten, aber gleichzeitig in den Teilnehmern einen verzögerungsfreien Wechsel zurück in die soziale Zone zu ermöglichen, da der Wechsel von Silence Supression zurück zu normaler übertragung kein neues aushandeln der Parameter benötigt. 
 
 \subsubsection{SIP - HOLD}
 Das gleiche Prinzip wurde ebenfalls mit der SIP HOLD Funktionalität ausprobiert, was wie in den Messergebnissen zu sehen ist, zwar zu einer noch größeren Einsparung der Bandbreite geführt hat, aber als Nachteil eine Verzögerung beim wiederaufnehmen des Calls bewirkte, da die Verbindungsparameter beim Wiederaufnehmen des Gesprächs wieder neu verhandelt wurden.
+%TODO Ablaufdiagrapp SIP HOLD
 
 \subsection{Soziale Zone}
-In der Zone B werden nun die Teilnehmer der bereits existierenden Verbindungen unserer eigenen lokalen Konferenz hinzugefügt. Innerhalb der Konferenz wird die Lautstärke der Teilnehmer gemäß ihrer Entfernung angepasst. Teilnehmer die sich unmittelbar in der nähe des Spielers befinden haben die Lautstärke von 100\% während Teilnehmer die sich am äußersten Rand der Zone befinden eine Lautstärke von 0\% besitzen.
+In der Sozialen Zone werden die Teilnehmer, der bereits aufgebauten Verbindungen unserer eigenen lokalen Konferenz hinzugefügt. Innerhalb der Konferenz wird die Lautstärke der Teilnehmer gemäß ihrer Entfernung angepasst. Audiosignale von Teilnehmern, die sich am inneren Rand der Sozialen Zone des Spielers befinden werden ungedämpft mit einer Lautstärke von 100\% abgemischt. Die Lautstärke der Spieler nimmt linear in Abhängigkeit der Entfernung ab, bis sie am äußersten Rand der Zone 0\% beträgt. 
 
 \subsubsection{Lautstärkenanpassung}
-
 Da die Lautstärke der Übertragenen Stimme bei einer Übertragung durch Luft mit zunehmender Entfernung abnimmt haben wir ein einfaches physikalisches Modell benutzt: Generell gilt, dass Schalldruck bei zunehmender Entfernung r  mit 1/r abnimmt. Da sich die Schallintensität auf eine immer größer werdende gedachte Kugeloberfläche (proportional zur Entfernung r) verteilt, nimmt sie mit der Entfernung quadratisch ab. 
 
-Wir haben zu Testzwecken sowohl die lineare Abnahme der Schallintensität als auch die quadratische Abnahme der Schallintensität modelliert, um festzustellen welche Veränderung in einer Konferenz natürlicher erscheint. 
-%http://www.sengpielaudio.com/Rechner-entfernung.htm
+Wir haben zu Testzwecken sowohl die lineare Abnahme der Schallintensität als auch die quadratische Abnahme der Schallintensität modelliert, um festzustellen welche Veränderung in einer Konferenz natürlicher erscheint. Ein Problem bei der Implementierung bleibt, dass Mikrofone eine unterschiedliche Aufnahmelautstärke haben, so dass manche Spieler ein lauteres Signal besitzen als andere. In einem fertigen Produkt, sollte auf das Mikrofon dynamisch auf einen bestimmten Pegel normiert werden, bevor das Spiel beginnt. Solche Verfahren sind Standard bei VoIP Telefonen und könnten später leicht nachgerüstet werden. %http://www.sengpielaudio.com/Rechner-entfernung.htm
+
+\subsubsection{Audiocodec}
+In der sozialen Zone wird ein Audiocodec mit einer niedrigen Bitrate eingesetzt, um eine größere Anzahl an möglichen Mitspielern zu ermöglichen. Ich habe mich für den Speex Codec mit einer Abtastrate von 16kHz und einer Bitrate von 11 Kbps entschieden, der einen MOS Wert von über 4 liefert. Es ist natürlich vorstellbar auch qualitativ schlechtere Codecs mit einer noch geringeren Bitrate einzusetzen, um dem Spieler noch mehr Verbindungen zu ermöglichen. Diese Entscheidung kann in einem fertigen Produkt entweder dem Spieler überlassen bei einer manuellen Konfiguration überlassen werden oder automatisch anhand der verfügbaren Bandbreite bestimmt werden. So könnten Spieler mit einer höheren Bandbreite auch ein besseres Audiosignal verbreiten, während Spieler mit einer schwachen Anbindung nur Codecs mit einer niedrigen Bitrate einsetzen könnten.
 
 \subsection{Private Zone}
+
+\subsubsection{Lautstärke}
 In der privaten Zone A variiert die Laut\-stärke der Teilnehmer nicht in Ab\-hän\-gig\-keit von ihrer Distanz. Hier wird die sie konstant auf 100\% gehalten, um den Teilnehmern zu ermöglichen sich in einem kleinen Radius untereinander zubewegen, aber immer noch mit einer optimalen Lautstärke zu kommunizieren. 
+
+\subsubsection{Audiocodec}
+In der Audiocodec Variante wird für die Private Zone ein höherwertigerer Codec mit einem größeren MOS Wert gewählt. Diese Vorgehensweise soll dafür sorgen, das Mitspieler in unmittelbarer Nähe besonders gut verständlich sind. Im Gegensatz zur Sozialen Zone werden nur wenige Spieler erwartet die sich in dieser Zone befinden, da man speziell auf den Spieler zulaufen muss um sich in diese Zone zu begeben und dann meist der Wunsch besteht mit diesem Spieler zu kommunizieren. In der Implementierung wurde für die Private Zone der Speex Codec mit einer Abtastrate von 32 kHz verwendet, während in der Sozialen Zone der Speex Codec mit einer geringen Abtastrate von 8kHz eingesetzt wurde. 
 
 \subsection{Radar}
 
@@ -104,7 +113,7 @@ In einem Radar werden für den Spieler alle Teilnehmer des Spiels angezeigt. Der 
 Die Metapher der Luftübertragung mit dem Radar als Orientierungshilfe hilft das Problem der Addressierung in den Griff zu bekommen. Spieler sind in der Lage zu sehen an wen ihre Sprachnachrichten gehen und wen sie gerade hören. 
 
 \subsection{PTSN Netzwerke}
-Durch die Möglichkeit SIP Server mit externen Gateways zu verbinden, wurde auch die Metapher des Festnetz-Telephons umgesetzt, dass dem Spieler tatsächlich erlaubt aus der virtuellen Welt in die reale Welt zu telefonieren. Hier wurde eine Telefonzelle auf dem Spielfeld plaziert. Befindet sich der Spieler in unmittelbarer Nähe zu dieser Zelle, findet ein Anruf an eine beliebige Telefonnumer statt. Dieses Proof of Concept wurde deshalb implementiert, um zu verdeutlichen, dass mit Hilfe eines standartisierten Protokolls auch solche Möglichkeiten offen stehen. 
+Durch die Möglichkeit SIP Server mit externen Gateways zu verbinden, wurde auch die Metapher des Festnetz-Telephons umgesetzt, dass dem Spieler tatsächlich erlaubt aus der virtuellen Welt in die reale Welt zu telefonieren. Hier wurde eine Telefonzelle auf dem Spielfeld platziert. Befindet sich der Spieler in unmittelbarer Nähe zu dieser Zelle, findet ein Anruf an eine beliebige Telefonnumer statt. Dieser Proof of Concept zeigt, dass mit Hilfe eines standartisierten Protokolls auch solche Möglichkeiten offen stehen. 
 
 \section{Spielewelt in Irrlicht und Irrklang}
 
@@ -159,5 +168,4 @@ Jeder Spieler ist in der Lage sich frei im Level zu bewegen. Jede der Bewegungen
 
 \subsection{Spieler beendet sein Spiel}
 Beendet ein Spieler sein Spiel, so bedeutet es für die übrigen Spieler nicht, dass das komplette Spiel auch beendet ist. Das Verlassen eines Spielers hat die einzige Auswirkung, dass dieser Spieler keine Positionsinformationen mehr versendet und empfängt. Alle aktiven Gespräche mit diesem Spieler werden ebenfalls beendet. Die übrigen Spieler im Spiel können das Spiel jedoch ohne Unterbrechung weiterführen. 
-
 //TODO

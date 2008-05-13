@@ -31,10 +31,13 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {9.1}{\ignorespaces Bandbreitenverbrauch beim Full Mesh Ansatz}}{108}
-\contentsline {figure}{\numberline {9.2}{\ignorespaces Der Up- und Downstream}}{110}
-\contentsline {figure}{\numberline {9.3}{\ignorespaces Gegen\"uberstellung der SIP und RTP}}{110}
-\contentsline {figure}{\numberline {9.4}{\ignorespaces Der Up- und Downstream mit der VAD - Technik}}{111}
-\contentsline {figure}{\numberline {9.5}{\ignorespaces Gegen\"uberstellung der SIP und RTP Traffics mit der VAD - Technik}}{111}
-\contentsline {figure}{\numberline {9.6}{\ignorespaces Der Up- und Downstream mit der SIP HOLD - Technik}}{112}
-\contentsline {figure}{\numberline {9.7}{\ignorespaces Gegen\"uberstellung des SIP und RTP Traffics mit der SIP HOLD - Technik}}{112}
+\contentsline {figure}{\numberline {9.1}{\ignorespaces Unn\"otige Audiverbindungen im Full-Mesh Ansatz}}{108}
+\contentsline {figure}{\numberline {9.2}{\ignorespaces Bandbreitenverbrauch beim Full Mesh Ansatz}}{108}
+\contentsline {figure}{\numberline {9.3}{\ignorespaces Der Up- und Downstream}}{111}
+\contentsline {figure}{\numberline {9.4}{\ignorespaces Signalisierung mit SIP, Audiostrom mit RTP}}{112}
+\contentsline {figure}{\numberline {9.5}{\ignorespaces Der Up- und Downstream mit der VAD - Technik}}{113}
+\contentsline {figure}{\numberline {9.6}{\ignorespaces Gegen\"uberstellung der SIP und RTP Traffics mit der VAD - Technik}}{113}
+\contentsline {figure}{\numberline {9.7}{\ignorespaces Der Up- und Downstream mit der SIP HOLD - Technik}}{114}
+\contentsline {figure}{\numberline {9.8}{\ignorespaces Gegen\"uberstellung des SIP und RTP Traffics mit der SIP HOLD - Technik}}{115}
+\contentsline {figure}{\numberline {9.9}{\ignorespaces Speex mit 32kHz in der Privaten Zone und Speex 8khZ in der Sozialen Zone}}{115}
+\contentsline {figure}{\numberline {9.10}{\ignorespaces Rufauf und -abbau, sowie Signalisierung eines anderen Codecs mit SIP, Reduktion des Audiostroms mit RTP}}{116}

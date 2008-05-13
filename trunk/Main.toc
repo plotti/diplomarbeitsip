@@ -202,19 +202,15 @@
 \contentsline {subsubsection}{Registrierung}{103}
 \contentsline {subsubsection}{Aufbau einer Verbindung}{104}
 \contentsline {subsection}{\numberline {8.7.3}Architektur Variationen}{105}
-\contentsline {chapter}{\numberline {9}Performancemessungen}{107}
-\contentsline {section}{\numberline {9.1}Tests von Audio\"ubertragung}{107}
-\contentsline {subsection}{\numberline {9.1.1}Bandbreite}{107}
-\contentsline {subsubsection}{Full Mesh}{107}
-\contentsline {subsubsection}{Partial Mesh}{107}
-\contentsline {subsubsection}{Ballungszentrum}{109}
-\contentsline {subsection}{\numberline {9.1.2}Bandbreite vs. Entfernung}{109}
-\contentsline {subsection}{\numberline {9.1.3}ohne Alles}{113}
-\contentsline {subsection}{\numberline {9.1.4}mit RTP manual Silence Supression}{113}
-\contentsline {subsection}{\numberline {9.1.5}mit SIP HOLD}{113}
-\contentsline {subsection}{\numberline {9.1.6}Mixing}{113}
-\contentsline {subsection}{\numberline {9.1.7}Ende-zu-Ende Verz\"ogerung (Delay)}{113}
-\contentsline {subsection}{\numberline {9.1.8}Verz\"ogerungsschwankung (Jitter)}{113}
-\contentsline {subsection}{\numberline {9.1.9}Paketverlust (Packet Loss)}{113}
-\contentsline {section}{\numberline {9.2}Tests von SIP als Netzwerkschnitstelle}{113}
-\contentsline {chapter}{Literaturverzeichnis}{114}
+\contentsline {chapter}{\numberline {9}Evaluation}{107}
+\contentsline {section}{\numberline {9.1}Fullmesh vs. Partialmesh}{107}
+\contentsline {subsection}{\numberline {9.1.1}Full Mesh}{107}
+\contentsline {subsection}{\numberline {9.1.2}Partial Mesh}{107}
+\contentsline {subsubsection}{Partial-Mesh Worst Case}{109}
+\contentsline {section}{\numberline {9.2}Zonenkonzepte}{110}
+\contentsline {subsection}{\numberline {9.2.1}Ohne Unterscheidung}{110}
+\contentsline {subsection}{\numberline {9.2.2}Zonen mit RTP Silence Supression}{112}
+\contentsline {subsection}{\numberline {9.2.3}Zonen mit SIP HOLD}{112}
+\contentsline {subsection}{\numberline {9.2.4}Zonen mit unterschiedlichen Audiocodecs}{114}
+\contentsline {section}{\numberline {9.3}Tests von SIP als Netzwerkschnitstelle}{116}
+\contentsline {chapter}{Literaturverzeichnis}{117}

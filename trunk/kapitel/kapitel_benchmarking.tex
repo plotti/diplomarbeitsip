@@ -1,26 +1,38 @@
-\chapter{Performancemessungen}
+\chapter{Evaluation}
 
-\section{Tests von Audioübertragung}
-\subsection{Bandbreite}
-\subsubsection{Full Mesh}
--- Verbrauch der Bandbreite mit zunehmender Nutzerzahl beim "`Full mesh"'
+\section{Fullmesh vs. Partialmesh}
+
+Im Full-Mesh Ansatz verbindet sich jeder Teilnehmer mit allen anderen 
+Teilnehmern. Im vom mir vorgeschlagenen Partial-Mesh Ansatz verbindet sich der Teilnehmer nur mit Spielern die sich in seiner unmittelbaren Nähe befinden. Um zu vergleichen, wie mit dem umgesetzte Ansatz Bandbreite eingespart werden kann, wurde ein Szenario entwicklt, in dem beide Ansätze ausprobiert werden.
+
+In diesem Szenario sind 5 Spieler in der Spielewelt anwesend, wobei sich Spieler 1,2 und 3 in Hörnähe befinden, während Spieler 5 und 6 isolierte Positionen einnehmen.
+
+\subsection{Full Mesh}
+Die Abbildung \ref{fullmeshszenario} verdeutlicht, wie im Full-Mesh Ansatz jeder Teilnehmer Verbindungen zu allen anderen Teilnehmern etabliert. Dabei ist die Abbildung folgend zu lesen: Zunächst betritt Teilnehmer 1 an Position 1 das Spielfeld, danach Teilnehmer 2 an seiner Position usw.. Jeder Teilnehmer baut beim Betreten der Spielewelt Verbindungen zu allen andern Teilnehmern auf.
 
 \begin{figure}[htbp]
 	\centering
+	\caption{Unnötige Audiverbindungen im Full-Mesh Ansatz}
+	\label{fullmeshszenario}
 		\includegraphics[width=.70\textwidth]{grafiken/fullmesh.eps}
 	\label{fig:fullmesh}
 \end{figure}
 
+Der Bandbreitenverbrauch wurde aus Sicht des Teilnehmers 1 gemessen. Da ca. alle 10 Sekunden ein weiterer Teilnehmer das Spielfeld betritt, wird auch entsprechend eine Audioverbindung mit diesem Spieler aufgebaut. Dies führt dazu, dass der Verbrauch der Bandbreite sich jeweils um weitere 10kb erhöht. Bei allen Messungen wurde der Speex Codec mit einer Abtastrate von 16kHz benutzt, der eine mittlere Bitrate von 10 - 15 kbps besitzt.
 
 \begin{figure}[htbp]
 	\centering
-		\includegraphics[width=1.00\textwidth]{grafiken/fullmeshchart.eps}
+		\includegraphics[width=.70\textwidth]{grafiken/fullmeshchart.eps}
 	\caption{Bandbreitenverbrauch beim Full Mesh Ansatz}
 	\label{fig:fullmesh-withchart}
 \end{figure}
 
-\subsubsection{Partial Mesh}
--- Verbrauch der Bandbreite mit zunehmender Nutzerzahl beim "`Partial mesh"' 
+\subsection{Partial Mesh}
+Im gleichen Szenario wurde nun die Partial-Mesh Technik eingesetzt, bei der nur noch Verbindungen mit Teilnehmern aufgebaut wurden, die sich tatsächlich auch in der Reichweite des Spielers befinden. 
+
+Dabei wurde zunächst immer dann ein SIP Call zwischen den Teilnehmern etabliert, wenn sie die Öffentliche Zone betraten. In dieser Zone wird der Anruf ausgeführt und eine Silence Supression durchgeführt, bis der Teilnehmer sich in die soziale Zone begibt. In der Sozialen Zone findet wird der volle RTP Audiostrom zwischen den Teilnehmern iniitiert. 
+
+Diese Technik führt dazu, dass im vorgestellten Szenario Spieler 1 zunächst zwei logische SIP Verbindungen mit Spieler 2 und 3 etabliert. Während mit Spieler 2 ein voller RTP Audiostrom fließt, wird mit Spieler 3 nur eine Audioverbindung mit Silence Suppression etabliert. Teilnehmer 4 und 5 bauen keine Verbindungen auf da sie sich nicht in Hörreichweite befinden. 
 
 \begin{figure}[htbp]
 	\centering
@@ -28,61 +40,75 @@
 	\label{fig:partialmesh}
 \end{figure}
 
+Der  Bandbreitenverbrauch wurde auch hier aus Sicht des Teilnehmers 1. Betritt Spieler 2 das Spiel, so wird mit ihm eine Audioverbindung aufgebaut die zwischen 10-15kbps verbraucht. Betritt dagegen Spieler 3 das Spiel werden nur zusätzlich ca. 1-2kbps zur Aufrechterhaltung der RTP Verbindung benötigt. Würde sich Teilnehmer 3 nun auf Spieler 1 zubewegen, würde die Silence Suppression aufgehoben und auch ein normaler Audiostrom von 10-15kbs fließen. Spieler 4 und 5 verursachen keinen zusätzlichen Bandbreitenverbrauch, da sie sich außerhalb der öffentlichen Zone befinden.
 
 \begin{figure}[htbp]
 	\centering
-		\includegraphics[width=1.00\textwidth]{grafiken/partialmeshchart.eps}
+		\includegraphics[width=.70\textwidth]{grafiken/partialmeshchart.eps}
 	\label{fig:partialmeshchart}
 \end{figure}
 
-
-\subsubsection{Ballungszentrum}
-
--- Ballungszentren führen zu fullmesh --> zeigen
-
---> Müsste zeigen dass im Schnitt bei einer gleichmäßigen Avatarverteilung die der Verbrauch geringer ist.
---> Messung mit Wireshark
-
-\subsection{Bandbreite vs. Entfernung}
-Um zu zeigen, dass das Verfahren auch tatsächlich Bandbreite einsparen kann, haben wir in einem Versuchsaufbau die Bandbreite in den verschiedenen Kommunikationszonen gemessen. Dabei ist klar ersichtlich dass durch ein Herausnehmen beider Teilnehmer aus der Konferenz somit kein Audio mehr übertragen wird und der VAD die silence detection einschaltet.
-
-\subsection{ohne Alles}
+\subsubsection{Partial-Mesh Worst Case}
+Im Worst-Case Fall, befinden sich alle Avatare im gegenseitigen Hörradius, was dazu führt, dass auch ein Full-Mesh zwischen den Teilnehmern aufgebaut wird. Hier kann keine Bandbreite eingespart werden, und das vorgestellte Verfahren ist verliert seinen Vorteil.
 
 \begin{figure}[htbp]
 	\centering
+		\includegraphics[width=0.70\textwidth]{grafiken/fullmesh-worstcase.eps}
+	\label{fig:fullmesh-worstcase}
+\end{figure}
+
+\section{Zonenkonzepte}
+Um den Bandbreitenverbrauch in den einzelnen Zonen zu verdeutlichen, wurde ein einfaches Szenario erstellt, bei dem sich 2 Spieler zunächst am gleichen Punkt befinden und dann voneinander entfernen. Während sie die einzelnen Zonen durchlaufen wurde ihr Bandbreitenverbrauch gemessen. Dabei wurde nicht nur zwischen dem Up- und Downloadverbrauch sondern auch zwischen dem der SIP und RTP Protokolle unterschieden. 
+Die Messungen entsprechen den 3 vorgestellten Zonen Variationen, die bereits in Kapitel 7 erläutert wurden. 
+
+\subsection{Ohne Unterscheidung}
+Hier entfernen sich beide Spieler voneinander, es wird in der öffentlichen Zone jedoch keine Silence Supression, Änderung des Codecs oder "`Hold"' vorgenommen. Man kann an der Abbildung \ref{ohnevadupdown} erkennen, dass die Bandbreite sich in allen Zonen gleichmäßig verhält. 
+
+\begin{figure}[htbp]
+	\centering
+	\label{ohnevadupdown}
 	\caption{Der Up- und Downstream}
 		\includegraphics[width=1.00\textwidth]{grafiken/ohnevpn1.eps}
 	\label{fig:NOVADrtpsip}
 \end{figure}
 
+Beim Vergleich des RTP und SIP Protokolls in Abbildung \ref{ohnevadsiprtp} sieht man, dass SIP nur zum Signalisieren des Anrufs benutzt wird, da es nur am Anfang und Ende des SIP Anrufs Bandbreite erzeugt, während das RTP Protokoll für den reinen Audiostrom zuständig ist. 
+
 \begin{figure}[htbp]
 	\centering
-	\caption{Gegenüberstellung der SIP und RTP}
+	\label{ohnevadsiprtp}
+	\caption{Signalisierung mit SIP, Audiostrom mit RTP}
 		\includegraphics[width=1.00\textwidth]{grafiken/ohnevpn2.eps}
 	\label{fig:NoVADupdown}
 \end{figure}
 
 
-\subsection{mit RTP manual Silence Supression}
+\subsection{Zonen mit RTP Silence Supression}
+
+Hier wird in der Öffentlichen Zone eine Silence Supression durchgeführt. In der Abbildung \ref{mitvadupdown} ist zu erkennen, dass der sich hier der Bandbreitenverbrauch auf unter 2kbps reduziert, während er in der Privaten und Sozialen Zone knapp das 6fache beträgt. 
 
 \begin{figure}[htbp]
 	\centering
+	\label{mitvadupdown}
 	\caption{Der Up- und Downstream mit der VAD - Technik}
 		\includegraphics[width=1.00\textwidth]{grafiken/mitvadupdown.eps}
 	\label{fig:VADupdown}
 \end{figure}
 
+In der Abbildung \ref{mitvadsiprtp} wurden die SIP und RTP Protokolle dargestellt. Man kann erkennen, dass bei der Silence Supression beim RTP Protokoll die Bandbreite drastisch sinkt. Es wird auch deutlich, dass in diesem Fall nicht das SIP Protokoll eingesetzt wird, um diese Änderung zu bewirken, sondern es sich um eine Eigenschaft des RTP Protokolls handelt.
+
 \begin{figure}[htbp]
 	\centering
+	\label{mitvadsiprtp}
 		\caption{Gegenüberstellung der SIP und RTP Traffics mit der VAD - Technik}
 		\includegraphics[width=1.00\textwidth]{grafiken/mitvadrtpsip.eps}
 	\label{fig:VADRTPSIP}
 \end{figure}
 
+\subsection{Zonen mit SIP HOLD}
 
-
-
-\subsection{mit SIP HOLD}
+Eine weitere Unterscheidung der Zonen wurde mit dem SIP "`Hold Call"' Ansatz versucht, bei dem in der öffentlichen Zone, mittels des SIP Protokolls der logische Anruf gehalten wird, aber auf RTP Ebene keine Übertragung der Pakete stattfindet.
+Dieser Ansatz kann sogar noch mehr Bandbreite in der öffentlichen Zone einsparen, da praktisch kein Datenaustausch stattfindet. Allerdings konnte er sich in der Praxis nicht bewähren, da beim Halten und Wiederaufnehmen des Gesprächs, die Sitzungsparameter wieder neu verhandelt werden, was zu einer spürbaren Verzögerung geführt hatte. Es ist vorstellbar, dass der SIP Anruf schon etwas früher wiederaufgenommen wird, um diese Verzögerung auszugleichen. 
 
 \begin{figure}[htbp]
 	\centering
@@ -91,6 +117,8 @@ Um zu zeigen, dass das Verfahren auch tatsächlich Bandbreite einsparen kann, hab
 	\label{fig:mitholdupanddown}
 \end{figure}
 
+Beim Bandbreitenvergleich der SIP und RTP Protokolle sieht man diesmal, dass beim Übergang in die öffentliche Zone eine Signalisierung mittels SIP stattfindet. 
+
 \begin{figure}[htbp]
 	\centering
 	\caption{Gegenüberstellung des SIP und RTP Traffics mit der SIP HOLD - Technik}
@@ -98,24 +126,35 @@ Um zu zeigen, dass das Verfahren auch tatsächlich Bandbreite einsparen kann, hab
 	\label{fig:mithold1}
 \end{figure}
 
+\subsection{Zonen mit unterschiedlichen Audiocodecs}
+Die dritte Variante beinhaltete den Einsatz von 2 verschiedenen Codecs für die Private und Soziale Zone. In der Privaten Zone wurde der qualitativ hohe Speex Codec mit einer Abtastrate von 16kHz verwendet, während in der sozialen Zone nur der Speex Codec mit einer Abtastrate von 8kHz verwendet wurde. 
 
--- Verbrauch der Bandbreite mit zunehmender Entfernung
---> Müsste zeigen dass beim "`silencen"' der RTP Session weniger Bandbreite verbraucht wird.
---> Messung mit Wireshark
--->DONE
+Da erwartet wird, dass mehr Verbindungen in der Sozialen Zone als in der Privaten Zone aufgebaut werden, wird hier auch ein Codec mit einer niedrigeren Bitrate verwendet, um die eine größere Anzahl an Verbindungen zu ermöglichen. In der Öffentlichen Zone wurde wie bereits im oberen Beispiel die Silence Supression angewendet. Unter diesen Annahmen ergab sich die folgende Datenreihe \ref{mitvdaund2codes}, in der eindeutig zu sehen ist, dass der Bandbreitenverbrauch in der Sozialen Zone im Vergleich zur Privaten Zone reduziert wird und in der öffentlichen Zone sehr gering ausfällt.
 
-\subsection{Mixing}
--- Verbrauch der CPU Last mit Zunehmender Nutzerzahl beim Full Mesh 
--- Verbrauch der CPU Last mit Zunehmender Nutzerzahl beim Partial Mesh
---> Müsste zeigen dass weniger Streams gemischt werden müssen und somit Last eingespart werden kann. ( Wie messe ich das?)
-MESSUNG: einfach nur die conference bridge messen.
+\begin{figure}[htbp]
+	\centering
+	\label{mitvdaund2codes}
+	\caption{Speex mit 32kHz in der Privaten Zone und Speex 8khZ in der Sozialen Zone}
+		\includegraphics[width=\textwidth]{grafiken/mitvadund2codecs.eps}
+	\label{fig:mitvadund2codecs}
+\end{figure}
 
-\subsection{Ende-zu-Ende Verzögerung (Delay)}
--- delay über zeit bei mehreren verteilten stationen
-\subsection{Verzögerungsschwankung (Jitter)}
--- jitter über zeit bei mehreren verteilten stationen
-\subsection{Paketverlust (Packet Loss)}
--- packetloss über zeit bei mehreren verteilten stationen
+Im Vergleich \ref{mitvadundrtpsip} der beiden SIP und RTP Protokolle ist beim SIP Protokoll sowohl der Ruf -auf und -abbau zu erkennen als auch die Signalisierung eines anderen Sprachcodecs beim Übergang von der Privaten in die Soziale Zone. Beim RTP Protokoll ist die Übertragung des Audiostroms zu erkennen und die reduzierte Bitrate in der Sozialen und Öffentlichen Zone.
+
+\begin{figure}[htbp]
+	\centering
+	\caption{Rufauf und -abbau, sowie Signalisierung eines anderen Codecs mit SIP, Reduktion des Audiostroms mit RTP}
+	\label{mitvadundrtpsip}
+		\includegraphics[width=\textwidth]{grafiken/mitvadundrtpsip.eps}
+	\label{fig:mitvadundrtpsip}
+\end{figure}
+
+%\subsection{SIP Benchmarks}
+%\subsection{Mixing}
+%-- Verbrauch der CPU Last mit Zunehmender Nutzerzahl beim Full Mesh 
+%-- Verbrauch der CPU Last mit Zunehmender Nutzerzahl beim Partial Mesh
+%--> Müsste zeigen dass weniger Streams gemischt werden müssen und somit Last eingespart werden %kann. ( Wie messe ich das?)
+%MESSUNG: einfach nur die conference bridge messen.
 
 \section{Tests von SIP als Netzwerkschnitstelle}
 -- RTT über die zeit bei konstanten benutzern vs. Resultat mit Multicast Sockets oder Skype.
