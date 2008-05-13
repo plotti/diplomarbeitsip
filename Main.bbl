@@ -1,4 +1,4 @@
-\begin{thebibliography}{113}
+\begin{thebibliography}{112}
 % this bibliography was produced with the style dinat.bst v2.5
 \makeatletter
 \newcommand{\dinatlabel}[1]%
@@ -812,12 +812,6 @@ dy\_2007}
 \newblock Life on the Screen: Identity in the Age of the Internet.
 \newblock In: \emph{Touchstone}
 \newblock 3 (1995)
-
-\bibitem[Valin(Retrieved March 2008)]{speex08}
-\dinatlabel{Valin Retrieved March 2008} \textsc{Valin}, Jean-Marc:
-\newblock Speex.
-\newblock In: \emph{http://www.speex.org/}
-\newblock (Retrieved March 2008)
 
 \bibitem[Walther(2002)]{walther02}
 \dinatlabel{Walther 2002} \textsc{Walther}, J.B.:

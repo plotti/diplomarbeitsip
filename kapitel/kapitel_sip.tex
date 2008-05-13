@@ -1,6 +1,6 @@
 \chapter{VoIP Grundlagen}
 
-Unter der IP-Telefonie, eine Kurzform für die Internet-Protokoll-Telefonie, auch Voice over IP (kurz VoIP) genannt, versteht man das Telefonieren über Computernetzwerke, welche nach Internet-Standards aufgebaut sind. Dabei werden für Telefonie typische Informationen, d.h. Sprache und Steuerinformationen z.B. für den Verbindungsaufbau, über ein auch für Datenübertragung nutzbares Netz übertragen. Bei den Gesprächsteilnehmern können sowohl Computer, für IP-Telefonie spezialisierte Telefonendgeräte, als auch über spezielle Adapter angeschlossene klassische Telefone die Verbindung ins Telefonnetz herstellen.
+Unter der IP-Telefonie, einer Kurzform für die Internet-Protokoll-Telefonie, auch Voice over IP (kurz VoIP) genannt, versteht man das Telefonieren über Computernetzwerke, welche nach Internet-Standards aufgebaut sind. Dabei werden für Telefonie typische Informationen, d.h. Sprache und Steuerinformationen z.B. für den Verbindungsaufbau, über ein auch für Datenübertragung nutzbares Netz übertragen. Bei den Gesprächsteilnehmern können sowohl Computer, für IP-Telefonie spezialisierte Telefonendgeräte, als auch über spezielle Adapter angeschlossene klassische Telefone die Verbindung ins Telefonnetz herstellen.
 
 \section{Protokolle zur Echtzeitkommunikation}
 	Voice-over-IP beinhaltet unterschiedliche Protokolle. Zur reinen Signalisierung werden hauptsächlich das Session Initiation Protocol (SIP) \cite{sip02} bzw. Protokolle aus der H.323-Protokollfamilie verwendet. Bei VoIP sind generell folgende Klassen der Protokolle zu unterscheiden:
@@ -9,9 +9,9 @@ Unter der IP-Telefonie, eine Kurzform für die Internet-Protokoll-Telefonie, auch
 	\item Signalisierungsprotokolle: Es handelt sich hier um Protokolle für den Auf- und Abbau von Verbindungen zwischen IP-Telefonen.
 \end{itemize}
 
-Vorgänge wie die Vermittlung von Gesprächen, der Rufaufbau oder -abbau sowie die Aushandlung von Parametern, z.B. die Verwendung eines gemeinsamen Codecs, der entsprechenden Bitrate oder der maximal zulässigen Bandbreite werden in diesen Protokollen kontrolliert. Speziell für diese Zwecke wurde das Session Description Protocol (SDP) \cite{sdp98} entwickelt um den Medienstrom zu kontrollieren. SIP basiert auf den gleichen Prinzipien, die man beim HTTP(HyperText Transfer Protocol) nutzt. 
+Vorgänge wie die Vermittlung von Gesprächen, der Rufaufbau oder -abbau sowie die Aushandlung von Parametern, z.B. die Verwendung eines gemeinsamen Codecs, der entsprechenden Bitrate oder der maximal zulässigen Bandbreite werden in diesen Protokollen kontrolliert. Speziell für diese Zwecke wurde das Session Description Protocol (SDP) \cite{sdp98} entwickelt um den Medienstrom zu kontrollieren. SIP basiert auf den gleichen Prinzipien, die man beim HTTP (HyperText Transfer Protocol) nutzt. 
 
-Für die Sprachübertragung wird das Echtzeit Transport Protokoll (Realtime Transport Protocol (RTP)) \cite{rtp96} ver\-wen\-det, das dem Empfänger der Pakete erlaubt, trotz unzuverlässiger Übertragung über UDP \cite{udp80}, einen Paketverlust festzustellen und die ursprüngliche Reihenfolge der Daten wiederherzustellen. RTP ist ein Transprotokoll, ist also nicht nur für Sprache, sondern für alle Echtzeitmedien, wie Video verwendbar. Da RTP keine Bestätigungen verwendet, kann der Empfänger dem Sender nicht mitteilen, ob überhaupt bzw. wie die Sprache in Form von IP-Paketen bei ihm ankommt. Das RTCP Protokoll \cite{rtcp03} gleicht diesen Nachteil aus: Mit Hilfe des RTP Control Protocols (RTCP) können zusätzlich zu den reinen Mediendaten auch Kontrollinformationen, wie die Anzahl der verlorenen Pakete oder der gemessene Jitter der RTP-Verbindung übertragen werden und so Übertragungsparameter angepasst werden. 
+Für die Sprachübertragung wird das Echtzeit Transport Protokoll (Realtime Transport Protocol (RTP)) \cite{rtp96} ver\-wen\-det, das dem Empfänger der Pakete erlaubt, trotz unzuverlässiger Übertragung über UDP \cite{udp80}, einen Paketverlust festzustellen und die ursprüngliche Reihenfolge der Daten wiederherzustellen. RTP ist ein Transportprotokoll, ist also nicht nur für Sprache, sondern für alle Echtzeitmedien, wie Video verwendbar. Da RTP keine Bestätigungen verwendet, kann der Empfänger dem Sender nicht mitteilen, ob überhaupt bzw. wie die Sprache in Form von IP-Paketen bei ihm ankommt. Das RTCP Protokoll \cite{rtcp03} gleicht diesen Nachteil aus: Mit Hilfe des RTP Control Protocols (RTCP) können zusätzlich zu den reinen Mediendaten auch Kontrollinformationen, wie die Anzahl der verlorenen Pakete oder der gemessene Jitter der RTP-Verbindung übertragen werden und so Übertragungsparameter angepasst werden. 
 
 \begin{figure}
 	\centering
@@ -20,7 +20,7 @@ Für die Sprachübertragung wird das Echtzeit Transport Protokoll (Realtime Transp
 	\label{fig:voipprotokolle}
 \end{figure}
 
-Neben den bisher erwähnten Protokollen zur Hauptfunktionalität gibt es noch noch wei\-te\-re, die sich mit allen angrenzenden Bereichen von VoIP beschäftigen. So wird mit Hilfe des STUN (Simple Traversal of User Datagram Protocol Through Network Address Translators) \cite{stun03} ermöglicht seine IP-Adresse zu ermitteln, falls man sich hinter einem NAT Router befindet und die interne IP-Adresse nicht der externen entspricht. Dies ist vor allem notwendig, da die IP-Kontakt\-in\-for\-mationen in SIP und SDP in der Anwendungsschicht übertragen werden und somit ein Client ohne Kentniss richtigen Adresse falsche Informationen liefern würde. Ein weiteres Protokoll mit dem Ziel der Überbrückung eines NATs ist TURN(Traversal Using Relay NAT) \cite{turn06}. Bei TURN bekommt ein Client von einem TURN-Server eine öffentlich erreichbares IP-Adressen- und Port-Paar zugewiesen und leitet alle an diese öffentliche Adresse ankommenden Pakete an den Client weiter. 
+Neben den bisher erwähnten Protokollen zur Hauptfunktionalität gibt es noch noch wei\-te\-re, die sich mit allen angrenzenden Bereichen von VoIP beschäftigen. So wird mit Hilfe des STUN (Simple Traversal of User Datagram Protocol Through Network Address Translators) \cite{stun03} ermöglicht seine IP-Adresse zu ermitteln, falls man sich hinter einem NAT Router befindet und die interne IP-Adresse nicht der externen entspricht. Dies ist vor allem notwendig, da die IP-Kontakt\-in\-for\-mationen in SIP und SDP in der Anwendungsschicht übertragen werden und somit ein Client ohne Kenntnis richtigen Adresse falsche Informationen liefern würde. Ein weiteres Protokoll mit dem Ziel der Überbrückung eines NATs ist TURN(Traversal Using Relay NAT) \cite{turn06}. Bei TURN bekommt ein Client von einem TURN-Server eine öffentlich erreichbares IP-Adressen- und Port-Paar zugewiesen und leitet alle an diese öffentliche Adresse ankommenden Pakete an den Client weiter. 
 
 Für die Ansteuerung von VoIP-Gateways stehen die Protokolle MGCP(Media Gateway Control Protocol) \cite{mgcp99} und Megaco (Media Gateway Control) \cite{megaco00} zur Verfügung, die im Rahmen der Arbeit jedoch nicht weiter erläutert werden. 
 
@@ -39,12 +39,12 @@ Die wichtigsten QoS-Anforderungen, die VoIP an IP-Netze stellt, betreffen:
 \begin{itemize}
 	\item die Bandbreite von virtuellen Verbindungen zwischen IP-Telefonen,
 	\item die Ende-zu-Ende-Verzögerung des Sprachsignals (Delay),
-	\item die Schankung der Übermittlungszeit (Jitter) und
+	\item die Schwankung der Übermittlungszeit (Jitter) und
 	\item die Paketverlustrate (Packet Loss Rate)
 \end{itemize}
 
 \subsubsection{Ende-zu-Ende-Verzögerung (Delay)}
-Da bei VoIP die Sprache zuerst digitalisiert und dann enstsprechend codiert wird, ist dabei die Qualität des übertragenen codierten Sprachsignals abhängig von der Bandbreite für die virtuelle Verbindung zwischen den IP-Telefonen. Ein wichtiger Faktor ist auch die Ende-zu-Ende-Verzögerung des Sprachsignals. Darunter versteht man die Zeitspanne, die ein Sprachsignal vom Mund eines Sprechers bis zum Ohr eines Hörers benötigt. Die Ende-Zu-Ende-Verzögerung entsteht vor allem durch die Zwischenspeicherung der IP-Pakete in den Routern, die sie auf ihren Wegen durch das Netz zu durchalufen haben. Jeder Router benötigt Zeit, um den Header im IP-Paket zu interpretieren und die entsprechende Routing-Entscheidung zu treffen. Trifft ein Paket unterwegs auf einen überlasteten Router, muss es einige Zeit in der Warteschlnage vor der Leitung verbringen und wird im Extremfall sogar ganz verworfen. Eine große Ende-zu-Ende-Verzögerung beinträchtigt den Charakter eines Telefongespräches stark. 
+Da bei VoIP die Sprache zuerst digitalisiert und dann entsprechend codiert wird, ist dabei die Qualität des übertragenen codierten Sprachsignals abhängig von der Bandbreite für die virtuelle Verbindung zwischen den IP-Telefonen. Ein wichtiger Faktor ist auch die Ende-zu-Ende-Verzögerung des Sprachsignals. Darunter versteht man die Zeitspanne, die ein Sprachsignal vom Mund eines Sprechers bis zum Ohr eines Hörers benötigt. Die Ende-Zu-Ende-Verzögerung entsteht vor allem durch die Zwischenspeicherung der IP-Pakete in den Routern, die sie auf ihren Wegen durch das Netz zu durchlaufen haben. Jeder Router benötigt Zeit, um den Header im IP-Paket zu interpretieren und die entsprechende Routing-Entscheidung zu treffen. Trifft ein Paket unterwegs auf einen überlasteten Router, muss es einige Zeit in der Warteschlange vor der Leitung verbringen und wird im Extremfall sogar ganz verworfen. Eine große Ende-zu-Ende-Verzögerung beinträchtigt den Charakter eines Telefongespräches stark. 
 
 Da die Sprachkommunikation in Echtzeit verläuft, gilt die Wiedergabe eines Sprachsignals am Ziel als qualitativ schlecht, wenn sie einem zu großen Zeitverzug erfolgt. Für die Ende-zu-Ende-Verzögerung $T_{EE}$(End-to-End-Delay) des Sprachsignals werden daher Grenzwerte gesetzt. Nach dem ITU-T-Dokument G.114 wird die VoIP-Qualität wie flogt klassifiziert:
 \begin{itemize}
@@ -61,14 +61,14 @@ Die Verluste von IP-Paketen mit Sprache während der Übermittlung mindern die Qua
 
 
 
-\subsection{VoIP-relevante Sprachcodierungsverfahren}
+\subsection{VoIP-relevante Sprachkodierungsverfahren}
 
 %TODO enter all Codecs
 %\cite{speex08}
 
-Es gibt mehrere Sprachcodierungsverfahren, die bei Voice over IP verwendet werden können. Man unterscheidet zwischen Abtastwert-orientierten Codierungsverfahren, die zwar gute Sprachqualität garantieren aber Bitraten haben die größer als 16 Kbit/s sind und Segment-orientierten Codierungsverfahren die zwar geringe Bitraten haben aber dafür nur eine schlechte bis gute Sprachqualität bieten. 
+Es gibt mehrere Sprachkodierungsverfahren, die bei Voice over IP verwendet werden können. Man unterscheidet zwischen abtastwert-orientierten Kodierungsverfahren, die zwar gute Sprachqualität garantieren aber Bitraten haben die größer als 16 Kbit/s sind und segment-orientierten Kodierungsverfahren die zwar geringe Bitraten haben aber dafür nur eine schlechte bis gute Sprachqualität bieten. 
 
-Obwohl die Qualität quantitativ durch Parameter, wie die Laufzeit der IP-Pakete (Delay), die Laufzeitunterschiede(Jitter) und die Verlustrate von IP-Paketen im Netz beinflusst wird, sagen diese Parameter nichts über die eigentliche Sprachqualität aus. Die eigentliche Sprachqualität wird nach der MOS (Mean Opinion Score) - Skala  gemessen. Diese unterscheidet Aspekte wie Verständlichkeit der Sprache, Akzeptanz der Lautstärke sowie die Akzeptanz der Laufzeitschwankungen und Echos. 
+Obwohl die Qualität quantitativ durch Parameter, wie die Laufzeit der IP-Pakete (Delay), die Laufzeitunterschiede(Jitter) und die Verlustrate von IP-Paketen im Netz beeinflusst wird, sagen diese Parameter nichts über die eigentliche Sprachqualität aus. Die eigentliche Sprachqualität wird nach der MOS (Mean Opinion Score) \cite{mtu96} - Skala  gemessen. Diese unterscheidet Aspekte wie Verständlichkeit der Sprache, Akzeptanz der Lautstärke sowie die Akzeptanz der Laufzeitschwankungen und Echos. 
 
 %TODO Tabelle mit Codecs
 \begin{table}[htbp]
@@ -90,11 +90,11 @@ Obwohl die Qualität quantitativ durch Parameter, wie die Laufzeit der IP-Pakete 
 		\end{tabular}
 \end{table}
 
-Eine Analoge Sprachübertragung kommt auf einen MOS-Wert von 3.5 bis 4. Hochwertige VoIP-Implementierungen bieten eine Sprachqualität zwischen 3.8 und 4.4 je nach verwendeter Sprachcodierung. Dabei bieten VoIP-Systeme mindestens die Qualität eines herkömmlichen analogen Telefonnetzes. 
+Eine Analoge Sprachübertragung kommt auf einen MOS-Wert von 3.5 bis 4. Hochwertige VoIP-Implementierungen bieten eine Sprachqualität zwischen 3.8 und 4.4 je nach verwendeter Sprachkodierung. Dabei bieten VoIP-Systeme mindestens die Qualität eines herkömmlichen analogen Telefonnetzes. 
 
 
 \section{Session Initiation Protokoll (SIP)}
-Das \textit{Session Initiation Protocol} wurde zuerst im Jahr 1999 als RFC 2543 eingeführt und im Jahr 2002 in den RFCs 3262-3265 weiter spezifiziert. Das SIP Protokoll ermöglicht es zwischen kommunizierenden Rechner über ein IP-Netz eine \textit{Session (Sitzung)} für die Übermittlung von Echtzeitmedien aufzubauen. Die Session stellt einen logischen Kanal dar, über den die Echtzeitmedien mit Hilfe des RTP Protokolls transportiert werden. SIP wurde bisher weitgehend nur als \textit{Signalisierungsprotokoll} in VoIP Systemen benutzt. SIP definiert bestimmte Nachrichten für den Auf- und Abbau von Sitzungen. Es ist einfach konzipiert und für Menschen leicht lesbar, da es in Anlehnung an das erfolgreiche Internet Protokoll HTTP entwickelt worden ist. 
+Das \textit{Session Initiation Protocol} wurde zuerst im Jahr 1999 als RFC 2543 eingeführt und im Jahr 2002 in den RFCs 3262-3265 weiter spezifiziert. Das SIP Protokoll ermöglicht es zwischen kommunizierenden Rechner über ein IP-Netz eine \textit{Session (Sitzung)} für die Übermittlung von Echtzeitmedien aufzubauen. Die Session stellt einen logischen Kanal dar, über den die Echtzeitmedien mit Hilfe des RTP Protokolls transportiert werden. SIP wurde bisher weitgehend nur als \textit{Signalisierungsprotokoll} in VoIP Systemen benutzt. Es definiert bestimmte Nachrichten für den Auf- und Abbau von Sitzungen, ist einfach konzipiert und für Menschen leicht lesbar, da es in Anlehnung an das erfolgreiche Internet Protokoll HTTP entwickelt worden ist. 
 
 \subsection{SIP Building Blocks}
 % Über komponenten eines SIP Systems schreiben
@@ -106,11 +106,11 @@ In der Architektur sind folgende Systemkomponenten definiert:
 	\item Registrar
 \end{itemize}
 
-\textbf{User Agent (UA):}User Agents sind alle SIP-fähigen Endgeräte. Diese sind SIP-Telefone, Softphones oder andere Anwendungen und Hardware die nach dem SIP Protokoll kommunizieren. Dabei besteht ein UA intern aus einem User Agent Client (UAC), der Anfragen mittels Nachrichten stellt und einem User Agent Server (UAS), der Anfragen entgegennimmt. Für die einfachste Form des Verbindungsaufbaus genügen zwei User Agents. Wobei jeder der UAS jeweils ein UAS und UAC sein kann. 
+\textbf{User Agent (UA):}User Agents sind alle SIP-fähigen Endgeräte. Diese sind SIP-Telefone, Softphones oder andere Anwendungen und Hardware, die nach dem SIP Protokoll kommunizieren. Dabei besteht ein UA intern aus einem User Agent Client (UAC), der Anfragen mittels Nachrichten stellt und einem User Agent Server (UAS), der Anfragen entgegen nimmt. Für die einfachste Form des Verbindungsaufbaus genügen zwei User Agents. Wobei jeder der UAS jeweils ein UAS und UAC sein kann. 
 
-\textbf{Proxy Server:} Proxy Server dienen primär dem Routing und der Weiterleitung der SIP-Nachrichten. Zwischen zwei UA können beliebig viele Proxy Server liegen. Proxy Server können Rechtemanagement durchführen und ermitteln ob ein Benutzer berechtigt ist einen Anruf durchzuführen (Authentification). Es werden zwei Arten von Proxy Servern unterschieden, zum einen der statful Proxy, der Verbindungszustände zwischen den UA speichert und zum anderen der stateless Proxy, der SIP Nachrichten lediglich weiterleitet.  Der Verbindungsauf- und Abbau läuft bei SIP in der Regel über einen SIP Proxy Server ab, vor allem wenn sich Benutzer in Verschiedenen Domänen befinden. Der eigentliche Medienfluss findet jedoch direkt zwischen den User Agents ab. 
+\textbf{Proxy Server:} Proxy Server dienen primär dem Routing und der Weiterleitung der SIP-Nachrichten. Zwischen zwei UA können beliebig viele Proxy Server liegen. Proxy Server können Rechtemanagement durchführen und ermitteln ob ein Benutzer berechtigt ist einen Anruf durchzuführen (Authentification). Es werden zwei Arten von Proxy Servern unterschieden, zum einen der stateful Proxy, der Verbindungszustände zwischen den UA speichert und zum anderen der stateless Proxy, der SIP Nachrichten lediglich weiterleitet.  Der Verbindungsauf- und abbau läuft bei SIP in der Regel über einen SIP Proxy Server ab, vor allem wenn sich Benutzer in Verschiedenen Domänen befinden. Der eigentliche Medienfluss findet jedoch direkt zwischen den User Agents ab. 
 
-\textbf{Redirect Server:} Ein Redirect Server dient selber als UAS und beantwortet Lokationsanfragen eines UAC indem er diese aus einer angeschlossen Lokationsdatenbank bezieht. Im Unterschied zum Proxy Server leitet er ankommende Anfragen nicht an einen UAC weiter sondern, verweist per Nachricht lediglich auf eine mögliche Lokation des gesuchten UAC. 
+\textbf{Redirect Server:} Ein Redirect Server dient selber als UAS und beantwortet Lokationsanfragen eines UAC, indem er diese aus einer angeschlossen Lokationsdatenbank bezieht. Im Unterschied zum Proxy Server leitet er ankommende Anfragen nicht an einen UAC weiter sondern, verweist per Nachricht lediglich auf eine mögliche Lokation des gesuchten UAC. 
 
 \textbf{Registrar:} Der Registrar oder Location Server, speichert lediglich Aufenthaltsorte in Form von SIP-Adressen, nimmt aber an der SIP-Kommunikation zwischen den User Agents nicht teil. User Agents registrieren sich mit ihrem Aufenthaltsort bei einem Proxy Server, der die Information dann an den Registrar übermittelt. Somit kann die Mobilität von Teilnehmern ermöglicht werden. 
 
@@ -161,7 +161,7 @@ In der Spezifikation RFC 3261 werden sechs Request-Typen definiert, die jedoch i
 	\item INVITE: Mit INVITE initiiert ein IP-Telefon einen neuen Anruf. Eine INVITE Nachricht enthält die SIP-Adresse von beiden Teilnehmern, einen Subject (Grund) und dessen Priorität.
 	\item BYE: Mit BYE wird der Abbau der bestehenden VoIP-Verbindung zwischen zwei Teilnehmern initiiert.
 	\item ACK: ACK dient als "`positive"' Bestätigung mit der die Annahme eines ankommenden Anrufes bestätigt wird.
-	\item OPTIONS: Mit dieser Nachricht kann man die Fähigkeiten eines Teilnehmers befragen (\textit{Media Capabilities}), die aussagen welche Arten von Medien empfangen werden können und welche Verfahren zu Codierung dieser Medien unterstützt werden.
+	\item OPTIONS: Mit dieser Nachricht kann man die Fähigkeiten eines Teilnehmers befragen (\textit{Media Capabilities}), die aussagen welche Arten von Medien empfangen werden können und welche Verfahren zu Kodierung dieser Medien unterstützt werden.
 	\item CANCEL: Mit CANCEL kann eine bereits initiierte VoIP-Verbindung abgebrochen werden und vorzeitig beendet werden. 
 	\item REGISTER: Mit REGISTER werden dem \textit{Registrar} Informationen über die Lokation des Teilnehmers mitgeteilt. 
 \end{itemize}
@@ -170,28 +170,27 @@ Ausgewählte erweiterte Request-Typen, die in zusätzlichen RFCs (3428,3265) nach\
 
 \begin{itemize}
 	\item MESSAGE: Mit MESSAGE Nachrichten kann Inhalt in der Form von MIME (\textit{Multi\-media Internet Message Extensions}) Nachrichten über\-tragen werden.  MESSAGE Nachrichten initiieren keinen SIP Dialog und werden üblicherweise wie normale Kurz\-nachrichten verstanden. 
-	\item SUBSCRIBE, PUBLISH und NOTIFY: SIP kann verwendet werden, um bestimmt Ereignisse zu übermitteln. Hierfür sind die Nachrichten SUBSCRIBE, PUBLISH  und NOTIFY eingeführt worden. So kann z.B. die Anwesenheit eines Teilnehmers von weiteren Teilnehmern mit einer SUBSCRIBE Nachricht abonniert werden. Geht dieser Teilnehmer online so benachrichtigt er alle anderen Teilnehmer mit einer PUBLISH Nachricht, an den REGISTRAR. Dieser sendet NOTIFY Nachrichten an alle Abonnenten des Anwenders.  
+	\item SUBSCRIBE, PUBLISH und NOTIFY: SIP kann verwendet werden, um bestimmte Ereignisse zu übermitteln. Hierfür sind die Nachrichten SUBSCRIBE, PUBLISH  und NOTIFY eingeführt worden. So kann z.B. die Anwesenheit eines Teilnehmers von weiteren Teilnehmern mit einer SUBSCRIBE Nachricht abonniert werden. Geht dieser Teilnehmer online so benachrichtigt er alle anderen Teilnehmer mit einer PUBLISH Nachricht, an den REGISTRAR. Dieser sendet NOTIFY Nachrichten an alle Abonnenten des Anwenders.  
 \end{itemize}
 
 \subsubsection{Response Typen}
 \small
 Im RFC 3261 werden ebenfalls sechs Response Klassen spezifiziert, bei denen dem Absender des Requests eine Response signalisiert wird.
 \begin{itemize}
-	\item \textit{Informational}: Eine 1xx Nachricht wird teilt mit dass der Request weiter bearbeitet wird.
+	\item \textit{Informational}: Eine 1xx Nachricht teilt mit, dass der Request weiter bearbeitet wird.
 	\subitem 100: Trying - der Empfänger ist dabei die Empfangene Nachricht zu verarbeiten und eine endgültige Antwort steht noch aus.
 	\subitem 180: Ringing - dem Anrufenden wird mitgeteilt dass der eingehende Anruf über einen Klingelton signalisiert wird.
 	\item \textit{Success}: Eine 2xx Nachricht teilt mit dass der Request erfolgreich empfangen und akzeptiert wurde. Der Response besteht nur aus der 200 OK Nachricht
 	\item \textit{Redirection}: Eine 3xx Nachricht signalisiert dem Absender eines Requests, dass weitere Aktionen bei der Bearbeitung des Requests nötig sind und enthält folgende Subtypen:
 	\subitem 301 Moved Permanently 
 	\subitem 302 Moved Temporarily 
-	\item \textit{Client Error:} Eine 4xx Nachricht teilt mit dass der Request eine falsche Synax hat oder nicht ausgeführt werden kann. 
+	\item \textit{Client Error:} Eine 4xx Nachricht teilt mit, dass der Request eine falsche Syntax hat oder nicht ausgeführt werden kann. 
 	\subitem 400 Bad Request
 	\subitem 401 Unauthorized  
 	\subitem 403 Forbidden - Der Anruf ist nicht zulässig.
-	\subitem 404 Not Found - Der Benutzer ist nicht erreichbar oder kann nicht gefunden
-	werden.
+	\subitem 404 Not Found - Der Benutzer kann nicht gefunden werden.
 	\subitem 486 Busy Here - Indiziert dass der Angerufene gerade in einem Gespräch ist und den Anruf nicht annehmen kann.
-	\item \textit{Server Error}: Eine 5xx Nachricht teilt mit dass der Server nicht in der Lage war den Request auszuführen. Einige Beispiele sind:
+	\item \textit{Server Error}: Eine 5xx Nachricht teilt mit, dass der Server nicht in der Lage war den Request auszuführen. Einige Beispiele sind:
 	\subitem 500 Internal Server Error
 	\subitem 505 SIP Version not supported
 	\item \textit{Global Failure}: Eine 6xx Nachricht teilt mit dass der Request auf keinem der Server des Netzes ausgeführt werden konnte. 
@@ -231,22 +230,22 @@ Möchte ein Teilnehmer mit der SIP Adresse thomasp@uni-mannheim.de in seiner Heim
 Als Instant Messaging wird im allgemeinen ein Dienst zur sofortigen Übermittlung von Nachrichten zwischen Teilnehmern eines Netzwerks verstanden. Es existieren viele proprietäre Protokolle wie IRC, XMPP, SLC, OSCAR. Auch bei SIP wurde in den RFCs 3860,3428 und 3265 ein Protokoll für das Instant Messaging definiert: SIMPLE (SIP for Instant Messaging and Presence). Eine SIP MESSAGE Transaktion kann sowohl über einen PROXY laufen als auch direkt zwischen den UACs stattfinden. Möchte Teilnehmer A eine Nachricht an Teilnehmer B verschicken so wird diese mittels der MESSAGE Nachricht versendet und vom Empfänger mit einer ACK Nachricht bestätigt. Die wichtigsten Felder der MESSAGE Nachricht sind das Empfänger Feld(To) der Typ des Inhalts(Content-Type), dessen Länge(Content-Length) und der Inhalt selbst(Body). 
 
 \begin{figure}
-\caption{Teilnehmer A schickt Teilnehmer B eine Nachricht. Beide sind Teil der gleichen Domäne sind, und benutzen den gleichen Proxy.}
+\caption{Teilnehmer A schickt Teilnehmer B eine Nachricht. Beide sind Teil der gleichen Domäne und benutzen den gleichen Proxy.}
 	\centering
 		\includegraphics[width=1.00\textwidth]{grafiken/sipmessage.eps}
 	\label{fig:sipmessage}
 \end{figure}
 
-Der Grundlegende Unterschied zum SIP Protokoll besteht darauf dass es hier kein separater Medienstrom existiert. Die Textnachrichten werden in einem SIP Paket über die Knoten übertragen die den Signalisierungspfad bilden. Dies erfordert eine größeres Bedürfniss nach Sicherheit als bei anderen SIP Anfragen da der der Benutzer allen dem Proxy vertrauen muss. Unverschlüsselte Nachrichten liegen diesem offen und auch eventuelles Forking ohne Wissen des Benutzers ist hier möglich. 
+Der Grundlegende Unterschied zum SIP Protokoll beruht darauf, dass es hier kein separater Medienstrom existiert. Die Textnachrichten werden in einem SIP Paket über die Knoten übertragen die den Signalisierungspfad bilden. Dies erfordert eine größeres Bedürfnis nach Sicherheit als bei anderen SIP Anfragen da der Benutzer dem Proxy vertrauen muss. Unverschlüsselte Nachrichten liegen diesem offen und auch eventuelles Forking ohne Wissen des Benutzers ist hier möglich. 
 
 %RFC 3428
 \subsection{Präsenzfunktion von Teilnehmern}
 
 % Grafik über Publish Subscribe
 
-Die SIP Präsenzfunktion dient zur Anzeige des Präsenzstatus anderer Teilnehmer. Die Verwendung eines Präsenzstatus ist in vielen Instant Messaging Anwenungen weit verbreitet jedoch und in verschiedenen Protokolle etabliert IMPS, XMPP. SIP besitzt eine Eigene Erweiterung für Ereignisse die in den RFCs 3265 und 3903 definiert wurde. Diese Beinhaltet die Nachrichtentypen PUBLISH, SUBSCRIBE und NOTIFY. 
+Die SIP Präsenzfunktion dient zur Anzeige des Präsenzstatus anderer Teilnehmer. Die Verwendung eines Präsenzstatus ist in vielen Instant Messaging Anwendungen weit verbreitet und in verschiedenen Protokolle etabliert IMPS, XMPP. SIP besitzt eine eigene Erweiterung für Ereignisse, die in den RFCs 3265 und 3903 definiert wurde. Diese beinhaltet die Nachrichtentypen PUBLISH, SUBSCRIBE und NOTIFY. 
 
-Möchte ein Teilnehmer ein Ereignis wie z.B. seine Statusänderung veröffentlichen, so schickt er eine PUBLISH Nachricht an den Presence-Server, der üblicherweise Teil eines Proxys ist. Dabei enthält die Nachricht den Event Typ im Header, die relevanten PUBLISH Informationen im XML Format im Body Feld. Grundsätzlich sind beliebige Formate nutzbar wobei ein Standard speziell für die Präsenzinformation PIDF (Presence Information Data Format) existiert. Ein solches PIDF Tupel kann Beispielsweise den Namen des Teilnehmers, seinen Status und eine NTP Zeit enthalten. 
+Möchte ein Teilnehmer ein Ereignis wie z.B. seine Statusänderung veröffentlichen, so schickt er eine PUBLISH Nachricht an den Presence-Server, der üblicherweise Teil eines Proxys ist. Dabei enthält die Nachricht den Event Typ im Header, die relevanten PUBLISH Informationen im XML Format im Body Feld. Grundsätzlich sind beliebige Formate nutzbar, wobei ein Standard speziell für die Präsenz\-information PIDF (Presence Information Data Format) existiert. Ein solches PIDF Tupel kann Beispielsweise den Namen des Teilnehmers, seinen Status und eine NTP Zeit enthalten. 
 
 Möchte ein Teilnehmer die Ereignisse eines bestimmten Typs abonnieren z.B. der Präsenz bestimmter Teilnehmer (SIP-URI) so versendet er an den Presence-Server eine SUBSCRIBE Nachricht.Die Länge des Dialogs wird durch das Laufzeit-Feld deklariert(Expires). Möchte der Teilnehmer sein Abonnement vorzeitig kündigen so kann er eine SUBSCRIBE Nachricht mit der Laufzeit 0s verschicken. Der Erhalt einer solchen Nachricht führt dazu dass ein Dialog zwischen Presence Server und dem Teilnehmer eingeleitet wird. 
 Eine NOTIFY Transaktion informiert nun den Abonnenten über seine abonnierten Ereignisse wie z.B. den Präsenzstatus eines Teilnehmers. 
@@ -259,7 +258,7 @@ Eine NOTIFY Transaktion informiert nun den Abonnenten über seine abonnierten Ere
 \end{figure}
 
 \section{Session Description Protokoll}
-Das Session Description Protokoll wird vom Signalisierungsprotokoll SIP dazu verwendet, die Eigenschaften des Medienstroms sowie den Verwendeten Codec , Transportprotokoll und Zieladresse mit Port festzulegen. 
+Das Session Description Protokoll wird vom Signalisierungsprotokoll SIP dazu benutzt, die Eigenschaften des Medienstroms sowie den verwendeten Codec , Transportprotokoll und Zieladresse mit Port festzulegen. 
 
 \subsection{Aufbau}
 SDP ist ein textbasiertes Format in dem die Eigenschaft und der Wert in Textform in der Nachricht festgehalten werden. Der Message Body enthält die Besonderheiten der RTP-Session, die durch das SDP (Session Description Protocol) festgelegt wird. Der Message Body setzt sich aus der Spezifikation der RTP-Session, der Zeitbeschreibung und der Medienbeschreibung zusammen. 
@@ -303,11 +302,11 @@ Die Beschreibung der RTP-Session wird mit den folgenden Parametern definiert:
 
 \begin{table}
 \centering
-\caption{Einige Sprachcodierungsverfahren und ihre PT-Nummern}
+\caption{Einige Sprachkodierungsverfahren ihre PT-Nummern und Bitraten}
 \label{pt-tabelle}
 \begin{tabular}{lllr}
 \toprule
-PT-Nr. & Codierungsname & Codierungsart & Bitrate (kbit/s) \\
+PT-Nr. & Kodierungsname & Kodierungsart & Bitrate (kbit/s) \\
 \midrule
 0  & PCM $\mu-Law$ & Abtastwert-orientiert & 64 \\
 4  & G723 & Segment-orientiert & 5.3-6.3 \\
@@ -321,12 +320,12 @@ dyn & G726-16 & Abtastwert-orientiert & 16 \\
 \end{tabular}
 \end{table}
 
-Eine Übersicht üblicher Codecs ist in der Tabelle \ref{pt-tabelle} dargestellt. Den "`klassischen"' Audio Formaten sind feste Nummern zugeordnet. Weiter Typen befinden sich im dynamischen Bereich und können für jede Sitzung zu beliebigen Medienformaten vereinbart werden.
+Eine Übersicht üblicher Codecs ist in der Tabelle \ref{pt-tabelle} dargestellt. Den "`klassischen"' Audio Formaten sind feste Nummern zugeordnet. Weitere Typen befinden sich im dynamischen Bereich und können für jede Sitzung zu beliebigen Medienformaten vereinbart werden.
 
 \subsection{Aushandeln der Sitzungsparameter}
 Die unter dem Parameter \textbf{"`a"'} ausgetauschte Liste der Medienformate entspricht in der Reihenfolge der Präferenzen des des Senders. Der Empfänger eines solchen SDP Nachricht Angebots beantwortet jedes empfangene Medienformat mit einer Korrespondierenden Antwort falls er dieses Medienformat unterstützt. Ein Medienstrom kann vom Empfänger abgelehnt werden, wenn keines der aufgelisteten Medienformate unterstützt wird, indem als Port eine Null gesendet wird. Nach Möglichkeit sollte die Reihenfolge die unterstützten Medienformate aus dem Angebot beibehalten und nicht unterstützte Formate sollten ausgeblendet werden.
 
-Nachdem sich beide Teilnehmer auf die unterstützte Formate geeinigt haben wurden, können beide Seite damit beginnen, die Mediendaten zu senden. Beide Seiten sollten jeweils das bevorzugte Format senden. Während einer Sitzung können die Parameter neu verhandelt werden, indem der gleiche Ablauf mit entsprechend modifizierten SDP-Beschreibungen durchgeführt wird. 
+Nachdem sich beide Teilnehmer auf die unterstützten Formate geeinigt haben, können beide Seiten damit beginnen, die Mediendaten zu senden. Beide Seiten sollten jeweils das bevorzugte Format senden. Während einer Sitzung können die Parameter neu verhandelt werden, indem der gleiche Ablauf mit entsprechend modifizierten SDP-Beschreibungen durchgeführt wird. 
 
 \section{Real-Time Transport Protokoll}
 Speziell für die Übermittlung von Sprache, Audio und Video über IP-Netze wurde RTP (Real-time Transport Protocol) bei der IETF entwickelt (RFC 2550). Einerseits stellt RTP ein Transportprotokoll für die Echtzeitmedien dar, anderseits kann es als eine Anwendungsart oberhalb des verbindungslosen Protokolls UDP angesehen werden. 
@@ -335,13 +334,13 @@ Die Wichtigsten Besonderheiten von RTP sind:
 
 \begin{itemize}
 	\item Übermittlung von Echtzeitmedien in RTP-Paketen: Echtzeitmedien werden in RTP als eine zusammenhängende Folge von RTP-Paketen über eine RTP-Session übermittelt. 
-	\item Garantie der Reihenfolge von RTP-Paketen: RTP nummeriert die über\-tra\-genen Pakete mit Echtzeit\-medien, sodass ihre richtige Reihenfolge am Ziel wiederhergestellt werden kann, falls sie durch den Transport über das IP-Netz verädert wurde. 
+	\item Garantie der Reihenfolge von RTP-Paketen: RTP nummeriert die über\-tra\-genen Pakete mit Echtzeit\-medien, sodass ihre richtige Reihenfolge am Ziel wiederhergestellt werden kann, falls sie durch den Transport über das IP-Netz verändert wurde. 
 	\item Garantie der Synchronität: RTP vergibt den übertragenen Paketen einen Zeitstempel, sodass die gleichen Zeitabstände am Ziel wiederhergestellt werden können, die beim Absender bestanden. 
 	\item Transport unterschiedlicher Formate: Es können unterschiedliche Formate wie Audio, Sprache und Video übertragen werden, die in unterschiedlichen Profiles genau bezeichnet werden. 
 \end{itemize}
 
 \subsection{Aufbau von RTP-Paketen}
-RTP übermittelt ein Echtzeitmedium als Folge von RTP Paketen , die mit einem vorangestellten UDP-Header in den IP-Paketen transportiert werden. Jedes RTP-Paket enthält einen RTP-Header und einen Payload-Teil. Die Wesentlichen angaben im RTP-Header sind:
+RTP übermittelt ein Echtzeitmedium als Folge von RTP Paketen, die mit einem vorangestellten UDP-Header in den IP-Paketen transportiert werden. Jedes RTP-Paket enthält einen RTP-Header und einen \textit{Payload}-Teil. Die wesentlichen Angaben im RTP-Header sind:
 
 \begin{figure}
 	\centering
@@ -351,11 +350,11 @@ RTP übermittelt ein Echtzeitmedium als Folge von RTP Paketen , die mit einem vor
 \end{figure}
 
 \begin{itemize}
-	\item PT: Payload Type: Es wird angegeben, um welches Format es sich beim transportierten Medium handelt, dh. nach welchem Verfahren codiert wurde. Die Möglichen Codierungsarten sind in RFC 3551 festgelegt. 
-	\item Timestamp: Der Zeitstempel dient dazu, den Zeitpunkt der Generierung von Payload zu markieren. Der Zeitstempel ist nötig, um die Schwankungen der Übertragungszeit (Jitter) von RTP-Paketen beim Empfänger auszugleichen. 
+	\item PT: \textit{Payload} Type: Es wird angegeben, um welches Format es sich beim transportierten Medium handelt, dh. nach welchem Verfahren codiert wurde. Die Möglichen Kodierungsarten sind in RFC 3551 festgelegt. 
+	\item Timestamp: Der Zeitstempel dient dazu, den Zeitpunkt der Generierung vom \textit{Payload} zu markieren. Der Zeitstempel ist nötig, um die Schwankungen der Übertragungszeit (Jitter) von RTP-Paketen beim Empfänger auszugleichen. 
 	\item Sequence Number: Jedes RTP-Paket wird mit einer Sequenznummer versehen, die es dem Empfänger erlaubt, den Verlust von Paketen festzustellen, bzw. die Reihenfolge wiederherzustellen, falls sie in einer falschen Reihenfolge angekommen sind. 
-	\item SSRC: Zur Identifikation der Quelle(Mikrofon, Kamera) dient der SSRC. Zwei verschiedene Quellen unterschiedliche SSRCs haben, um für den Empfänger unterscheidbar zu sein. 
-	\item CSRC: Wird optional verwendet un enthält die "`Orginal"'-Quellen der Bitströme falls der SSRC von einem Mixer verändert wurde.
+	\item SSRC: Zur Identifikation der Quelle(Mikrofon, Kamera) dient der SSRC. Zwei verschiedene Quellen müssen unterschiedliche SSRCs haben, um für den Empfänger unterscheidbar zu sein. 
+	\item CSRC: Wird optional verwendet und enthält die "`Orginal"'-Quellen der Bitströme falls der SSRC von einem Mixer verändert wurde.
 \end{itemize}
 
 Die PT Nummern dienen zur Identifikation der einzelnen Audio- und Video-Formate. Da der Nummernraum nicht komplett belegt ist können weitere Nummern vergeben werden (dynamische PT-Nummern). Bei der Verwendung von dynamischen PT-Nummern wird die Kompatibilität zwischen Empfänger und Sender mit Hilfe des SDP Protokolls vereinbart. (siehe Tabelle \ref{pt-tabelle})
@@ -376,7 +375,7 @@ Beim RTCP werden folgende RTCP-Pakete als Nachrichten verwendet.
 \end{itemize}
 
 RTCP Pakete beginnen mit einem Header und können unabhängig von anderen bearbeitet werden. Die Reihenfolge der Pakete in einem IP-Paket kann beliebig sein. 
-Das SR Paket enthält einen Zeitstempel gemäß der NTP (Network Time Prococol) und beschreibt die Qualität der Übermittlung aus Sicht des Senders. So kann z.B. dem Empfänger die Sende-Datenrate mitgeteilt werden, damit dieser sich im Voraus auf die ankommende Datenmenge einstellen kann. 
+Das SR Paket enthält einen Zeitstempel gemäß der NTP (Network Time Prococol) und beschreibt die Qualität der Übermittlung aus Sicht des Senders. So kann z.B. dem Empfänger die Sendedatenrate mitgeteilt werden, damit dieser sich im Voraus auf die ankommende Datenmenge einstellen kann. 
 
 In einem Sender Report sind immer enthalten:
 \begin{itemize}
@@ -385,7 +384,7 @@ In einem Sender Report sind immer enthalten:
 	\item Gesendete Pakete: Die Anzahl der gesendeten Pakete sowie Bytes.
 \end{itemize}
 
-Bei RR Paket werden Werte wie Jitter, Round-Trip-Delay (Hin und Zurück Verzögerung)  oder Paketverlust aus Sicht des Empfängers berechnet und abgeschätzt. 
+Beim RR Paket werden Werte wie Jitter, Round-Trip-Delay (Hin und Zurück Verzögerung)  oder Paketverlust aus Sicht des Empfängers berechnet und abgeschätzt. 
 
 In einem Receiver Report sind unter anderem folgende Informationen enthalten:
 \begin{enumerate}
@@ -397,7 +396,7 @@ In einem Receiver Report sind unter anderem folgende Informationen enthalten:
 Die SDES Pakete ermöglichen es, die Quellen mit Namen zu kennzeichnen. Diese Kennzeichnung wird vom Empfänger dazu verwendet mehrere Bitströme einer Quelle, die in getrennten RTP-Sessions übertragen werden wieder zusammenzuführen. Das BYE Paket dient dazu das Ende der Teilnahme an einer Kommunikation anzuzeigen. 
 
 \subsection{Silence Supression}
-Teilnehmer einer Audio Verbindung müssen nicht unbedingt Audiopakete über den RTP Stream senden, falls gerade bei den Teilnehmern Stille herrscht. Diese Funktion wurde im RFT 3389 spezifiziert.
+Teilnehmer einer Audio Verbindung müssen nicht unbedingt Audiopakete über den RTP Strom senden, falls gerade bei den Teilnehmern Stille herrscht. Diese Funktion wurde im RFT 3389 spezifiziert.
 
 Die Möglichkeit den RTP Paketversand während Stilleperioden zu unterbrechen wird als Stille Unterdrückung ("`Silence Suppression"') oder Stimm-Aktivitäts-Erkennung("`Voice Activity Detection"') bezeichnet. Silcence Suppression kann vom Empfänger erkannt werden, wenn der RTP Zeitstempel nicht mit dem Intervall übereinstimmt, das vom letzten Paket abgedeckt wurde, obwohl die RTP Sequenznummer sich nur um 1 erhöht hat. Ob Silence Suppression eingesetzt wird hängt normalerweise von der Konfiguration der beiden Endpunkte ab.
 
@@ -405,9 +404,9 @@ Die Möglichkeit den RTP Paketversand während Stilleperioden zu unterbrechen wird
 Unter NAT Traversal versteht man das Erkennen und Durchdringen von Firewalls und NAT-Routern. Hier gibt es mehrere Ansätze wie TURN (Traversal Using Relay NAT) \cite{turn08}, ICE (Interactive Connectivity Establishment) \cite{ice08} und STUN (Simple Traversal of User Datagram Protocol Through Network Adress Translators) \cite{stun03}. 
 Diese Protokolle helfen vor allem Peer-to-Peer Protokollfamilien, die durch NATs in ihrer Funktionsweise behindert werden. Beispiele solcher Protokolle sind generell alle Peer-to-Peer Protokolle die Multimediakommunikation, Datenaustausch oder Spielen ermöglichen. 
 
-Unter STUN versteht man ein einfaches Protokoll das es erlaubt Anwendungen festzustellen ob sie sich hinter einer Firewall oder einem Router mit NAT (Network Adress Translator) befinden und um welche Kategorie von Router es sich handelt. Ebenso ist es mit STUN möglich seine öffentliche IP Adresse herauszufinden. 
+Unter STUN versteht man ein einfaches Protokoll, das es erlaubt Anwendungen festzustellen ob sie sich hinter einer Firewall oder einem Router mit NAT (Network Adress Translator) befinden und um welche Kategorie von Router es sich handelt. Ebenso ist es mit STUN möglich seine öffentliche IP Adresse herauszufinden. 
 
-Die typische STUN Konfiguration beinhaltet einen STUN Client, der in einem privaten Netzwerk beheimatet ist. Dieses Netzwerk wird mit dem Internet durch einen NAT verbunden. Ein weiteres privates Netzwerk das ebenfalls durch einen NAT verbunden ist, beheimatet einen weiteren STUN Client. Der STUN Server befindet sich im öffentlichen Internet. Möchte nun eine Client- Anwendung seine öffentliche IP Adresse und Port erfahren auf der sie Daten empfangen kann sendet der STUN Client in der Anwendung einen STUN "`Shared Secret Request"' an den STUN Server und dann einen Binding Request. Dafür muss dem Client mindestens die Adresse eines öffentlichen STUN Servers bekannt sein. Ein Binding Request wird benutzt um die Anwesenheit eines NATs festzustellen und um die öffentliche IP Adresse und Port zu erfahren, die der NAT generiert hat. Vom STUN Server wird ein solcher Request wird mit einer Binding Response beantwortet die genau diese Daten zurück an den Client schickt. Erhält nun ein STUN-Client eine Binding Response vergleicht er die IP-Adresse und den Port mit seiner lokalen IP Adresse und Sendereport und kann so feststellen ob es sich hinter einem NAT befindet. Nachdem beide Clients ihre öffentlichen IP-Adressen und Port Paare kennen sind sie in der Lage direkt miteinander zu kommunizieren. 
+Die typische STUN Konfiguration beinhaltet einen STUN Client, der in einem privaten Netzwerk beheimatet ist. Dieses Netzwerk wird mit dem Internet durch einen NAT verbunden. Ein weiteres privates Netzwerk das ebenfalls durch einen NAT verbunden ist, beheimatet einen weiteren STUN Client. Der STUN Server befindet sich im öffentlichen Internet. Möchte nun eine Client- Anwendung seine öffentliche IP Adresse und Port erfahren auf der sie Daten empfangen kann, sendet der STUN Client in der Anwendung einen STUN "`Shared Secret Request"' an den STUN Server und dann einen \textit{Binding Request}. Dafür muss dem Client mindestens die Adresse eines öffentlichen STUN Servers bekannt sein. Ein \textit{Binding Request} wird benutzt, um die Anwesenheit eines NATs festzustellen und um die öffentliche IP Adresse und Port zu erfahren, die der NAT generiert hat. Vom STUN Server wird ein solcher Request wird mit einer \textit{Binding Response} beantwortet die genau diese Daten zurück an den Client schickt. Erhält nun ein STUN-Client eine \textit{Binding Response} vergleicht er die IP-Adresse und den Port mit seiner lokalen IP Adresse und Sendereport und kann so feststellen ob es sich hinter einem NAT befindet. Nachdem beide Clients ihre öffentlichen IP-Adressen und Port Paare kennen sind sie in der Lage direkt miteinander zu kommunizieren. 
 
 \begin{figure}[htbp]
 	\centering

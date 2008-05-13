@@ -17,21 +17,21 @@
 \contentsline {figure}{\numberline {4.2}{\ignorespaces Beispiel eines typischen SIP-Requests}}{45}
 \contentsline {figure}{\numberline {4.3}{\ignorespaces Sip Anruf ohne Proxy}}{48}
 \contentsline {figure}{\numberline {4.4}{\ignorespaces Einsatz eines Proxy Servers mit Registrar}}{49}
-\contentsline {figure}{\numberline {4.5}{\ignorespaces Teilnehmer A schickt Teilnehmer B eine Nachricht. Beide sind Teil der gleichen Dom\"ane sind, und benutzen den gleichen Proxy.}}{51}
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Teilnehmer A schickt Teilnehmer B eine Nachricht. Beide sind Teil der gleichen Dom\"ane und benutzen den gleichen Proxy.}}{51}
 \contentsline {figure}{\numberline {4.6}{\ignorespaces Teilnehmer A m\"ochte die Pr\"asenz von Teilnehmer B abonnieren. Teilnehmer B aktualisiert seine Information.}}{52}
 \contentsline {figure}{\numberline {4.7}{\ignorespaces Beispiel einer SDP Nachricht}}{53}
 \contentsline {figure}{\numberline {4.8}{\ignorespaces Header eines RTP-Pakets}}{55}
 \contentsline {figure}{\numberline {4.9}{\ignorespaces Ein schematischer Ablauf von STUN}}{58}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {6.1}{\ignorespaces P2P Architektur mit direkten Verbindungen der Spieler untereinander in den entsprechenden Spielezonen}}{67}
-\contentsline {figure}{\numberline {6.2}{\ignorespaces Client Server Architektur, mit zentralem Mischserver}}{68}
-\contentsline {figure}{\numberline {6.3}{\ignorespaces Eine Proxy Architektur. In schwarz ist die Verbindung von Spieler 3 mit Spieler 7 dargestellt.}}{69}
-\contentsline {figure}{\numberline {6.4}{\ignorespaces Verteile Server S1...S4. Die Verbindungen der Spielewelt S3 wird in schwarz dargestellt. }}{71}
+\contentsline {figure}{\numberline {6.1}{\ignorespaces P2P Architektur mit direkten Verbindungen der Spieler untereinander in den entsprechenden Spielezonen}}{66}
+\contentsline {figure}{\numberline {6.2}{\ignorespaces Client Server Architektur, mit zentralem Mischserver}}{67}
+\contentsline {figure}{\numberline {6.3}{\ignorespaces Eine Proxy Architektur. In schwarz ist die Verbindung von Spieler 3 mit Spieler 7 dargestellt.}}{68}
+\contentsline {figure}{\numberline {6.4}{\ignorespaces Verteile Server S1...S4. Die Verbindungen der Spielewelt S3 wird in schwarz dargestellt. }}{69}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {9.1}{\ignorespaces Unn\"otige Audiverbindungen im Full-Mesh Ansatz}}{108}
+\contentsline {figure}{\numberline {9.1}{\ignorespaces Audiverbindungen im Full-Mesh Ansatz}}{108}
 \contentsline {figure}{\numberline {9.2}{\ignorespaces Bandbreitenverbrauch beim Full Mesh Ansatz}}{108}
 \contentsline {figure}{\numberline {9.3}{\ignorespaces Der Up- und Downstream}}{111}
 \contentsline {figure}{\numberline {9.4}{\ignorespaces Signalisierung mit SIP, Audiostrom mit RTP}}{112}

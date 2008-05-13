@@ -1,10 +1,8 @@
-\chapter{Folgerungen und Ziele}
+\chapter{Resultierende Probleme und Herausforderungen}
 
 Wie wir bereits in vielen vorgestellten Studien der Text- Sprachkommunikation in Computerspielen gesehen haben, besteht an vielen Stellen ein großer Bedarf die bisherigen Unzulänglichkeiten der Kommunikationsmedien zu beheben. In diesem Kapitel sollen bisher vorgestellten Grundlagen der Kommunikation genutzt werden um Folgerungen und Ziele abzuleiten, die auch anhand dieser modelliert werden sollen. Somit soll der bisherige theoretische Ansatz helfen bisherige Problemfelder einzuordnen und daraus sukzessive praktische Empfehlungen für eine bessere Sprach\-kommunikations\-lösung abzuleiten. In der zweiten Hälfte des Kapitels, sollen anhand der gestellten Anforderungen grundlegende Entscheidungen zur Wahl der 3-D Engine, Audioengine und VoIP Lösungen getroffen werden.
 
-\section{Ziele}
-
-\subsection{Mehrkanal Modell}
+\section{Mehrkanal Modell}
 
 Wie in den vorgestellten Studien gezeigt wurde, basieren viele der der genannten Probleme auf der Verwendung von genau einem Kanal zur Sprachübertragung, der von mehreren Sendern und Empfängern gleichzeitig genutzt wird. Diese Beobachtung stützt sich auf das vorgestellte Kommunikationsmodell von Shannon und Weaver, das es uns erlaubt diesen Sachverhalt etwas anschaulicher zu verdeutlichen:
 
@@ -48,7 +46,7 @@ Ersetzen wir einen Kanal durch mehrere parallele Kanäle so können wir viele der 
 In diesem Modell kann auch das Feedback entsprechend dem Modell von Schramm \cite{schramm54} gezielt erfolgen. 
 %BILD vom Mehrkanal System
 
-\subsection{Gleichzeitige Interpersonelle und Massenkommunikation}
+\section{Gleichzeitige Interpersonelle und Massenkommunikation}
 
 Die fehlende Unterscheidung in eine Interpersonelle und Massenkommunikation resultiert auch aus der Benutzung eines einzigen Kanals für alle Teilnehmer was zu folgenden Problemen führt:
 Spieler sind nicht in der Lage selbst zu bestimmen an wen ihre Nachrichten gehen sollen, da der einzige Übertragungsmodus oft nur die Massenkommunikation ist. Jeder Teilnehmer der Gruppe hört sämtliche Konversationen der Mitglieder und hat keinen Einfluss darauf ob er manche Teilnehmer nicht hören möchte. Dies führt dazu dass das Medium entweder stark reglementiert werden muss und nur die allerwichtigsten Informationen über den Kanal ausgetauscht werden oder so genannte Channel Leader über Sprachrechte verfügen während alle anderen Spieler nur zuhören können. So ist es zwar möglich, dass alle Teilnehmer auf einem gemeinsamen Kanal kommunizieren was aber gleichzeitig  eine personliche Gespräche Kommunikation auf diesem Kanal ausschließt, sei es aus den entstehenden Interferenzen oder vorherrschenden Normen. 
@@ -64,7 +62,7 @@ Einige kommerzielle Lösungen verfügen über einen "`Flüstermodus"', der es erlaub
 
 Deswegen wird in der Umsetzung einer besseren Sprachkommunikation ein Ansatz gesucht, der es Teilnehmern ermöglichen soll sowohl persönliche Gespräche zu führen, als auch an der Massenkommunikation teilzunehmen. Dies soll durch einen erweiterten Mischvorgang ermöglicht werden, der die Teilnahme an einem Kanal nicht binär definiert, sondern einen fließenden Übergang zwischen Kanälen ermöglicht.
 
-\subsection {Erweitertes Audio Mixing}
+\section {Erweitertes Audio Mixing}
 Wie wir festgestellt haben ist die Teilnahme an einer Konferenz bisher binär gelöst worden. Spieler sind entweder Teil einer Konferenz oder nicht. So ist in einer Konferenz mit \textit{n} Teilnehmern ${p_{1},p_{2},...,p_{n}}$, mit Audioströmen ${V_{1},V_{2},...,V_{n}}$, das von einem Teilnehmer $p_{i}$ zu einer Zeit \textit{t} empfangene Signal definiert durch:
 
 \begin{align}
@@ -79,7 +77,7 @@ Das Szenario das wir aber vorstellen soll über den binären Status einer Konferen
 
 Der Distanzvektor wird dabei immer vom Spieler anhand der Spielerinformationen berechnet und die Lautstärke des entsprechenden Audiostroms  mit diesem Vektor reguliert.
 
-\subsection{Hohe Mediarichness}
+\section{Hohe Mediarichness}
 
 Wie Studien der Texkommunikation gezeigt haben, besteht ein großes Interesse nach einem Medium für Kommunikation in Spielen, das eine ausreichend hohe Mediarichness besitzt. 
 Textkommunikation dagegen enthält außer der ursprünglichen Nachricht viele Akronyme und Emoticons, die nur unzulänglich die soziale Komponente einer Kommunikation widerspiegeln können und ist für durch die Nutzung von eines einzigen gemeinsamen öffentlichen Kommunikationskanals nicht für persönliche Gespräche tauglich. 
@@ -205,14 +203,14 @@ Somit bietet Skype als einziger tatsächlicher dezentralisierter Client nicht all
 \subsection{Instant Messanging Anwendungen}
 Andere peer-to-peer Programme wie Microsoft Netmeeting, Microsoft Messenger, GoogleTalk sind nicht modifizierbar und bieten keinerlei Konferenzmöglichkeiten. 
 
-\subsection{SIP Protokoll als Lösung}
+\subsection{SIP Protokoll}
 Das im folgenden Kapitel vorgestellte SIP Protokoll erfüllt gleich mehrere Anforderungen an den Prototypen. Dadurch dass SIP ein sehr generisches offenes Protokoll ist, kann es kann benutzt werden, um beliebige Sessions mit einem oder mehreren Teilnehmern zu verwalten. Dabei ist es nicht auf Internet-Telefonie beschränkt, und kann Sessions zwischen beliebige Multimediaströmen, Konferenzen, Computerspiele usw. herstellen.Zahlreiche standardisierungs Organisationen wie IETF, PINT, 3GPP, International Packet Communications Consortium, IMTC und PacketCable unterstützen bereits den Einsatz von SIP.
 %http://www.cs.columbia.edu/sip/
 In der open source Gemeinde wird das SIP Protokoll auch zunehmend unterstützt. So existieren bereits etliche Clientanwendungen als auch zentrale Komponenten wie Proxys und Registrare, die der zunehmenden globalen Verbreitung von SIP dienen. Zusätzlich werden etliche SIP Stacks, Client Anwendungen und SDKs bishin zu Komplettlösungen angeboten. Es existieren auch Referenzimplementierungen, wie SIP JAIN-SIP, welches vom National Insitute of Standards and Technology (NIST) entwickelt wurde, die sowohl in kommerziellen Projekten aber auch zu Forschungszwecken eingesetzt werden. Der wichtigste Grund für den Einsatz von SIP ist, dass es alle Anforderungen für die Umsetzung des Protyps unterstützt:
 
 \begin{itemize}
 	\item Generische Einsatzmöglichkeiten	auch für Computerspiele
-	\item Verwaltung mehrerere Audioströme
+	\item Verwaltung mehrerer Audioströme
 	\item Kontrolle über jeden einzelnen Audiostrom
 	\item Serverbasierte Lösungen
 	\item Dezentralisierte Lösungen
