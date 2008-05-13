@@ -1,11 +1,11 @@
 \chapter{SIP als Netzwerkgrundlage in Spielen}
 
 \section{SIP als Netzwerkschicht}
-Wie schon im Kapitel 7 beobachtet, sind die Herausforderungen an die Verwaltung einesr Sprachkommunikation mit der darunter liegenden Netzwerkarchitektur verbunden. Vor allem in Kaptiel 6 wurde deutlich, dass die Signalisierung und Lokation der Teilnehmer einer Konferenz, genauso wichtig ist wiede der Austausch der Audiodaten selbst. Es liegt daher nahe, die bereits evalulierten Komponenten nicht nur dazu zu Nutzen um Teilnehmer zu Lokalisieren und Konferenzen zu steuern, sondern sich zu fragen wie diese im SIP Protokoll zusätzlich auch als Netzwerkschicht zum Austausch von Spieledaten verwendet werden können. 
+Wie schon im Kapitel 7 beobachtet, sind die Herausforderungen an die Verwaltung einer Sprachkommunikation mit der darunter liegenden Netzwerkarchitektur verbunden. Vor allem in Kaptiel 6 wurde deutlich, dass die Signalisierung und Lokation der Teilnehmer einer Konferenz, genauso wichtig ist wie der Austausch der Audiodaten selbst. Es liegt daher nahe, die bereits evalulierten Komponenten nicht nur dazu zu Nutzen um Teilnehmer zu Lokalisieren und Konferenzen zu steuern, sondern sich zu fragen wie diese im SIP Protokoll zusätzlich auch als Netzwerkschicht zum Austausch von Spieledaten verwendet werden können. 
 
-Da SIP ein generisches Protokoll ist, ist es prinzipiell nicht nur für die Sprachkommunikation einsetzbar sondern auch um Daten zwischen Clients auszutauschen. Diese Kapitel soll klären welche der bestehenden Architekturen sich mit SIP umsetzen lassen. Dabei wollen wir nicht bestehende Probleme der einzelnen Architekturen lösen, nur indem wir das SIP Protokoll verwenden, sondern zeigen das SIP es uns ermöglicht bestehende Architekturen umzusetzen. Der resultierende Vorteil besteht vor allem in einer standardisierten Addressierung,  Signalisierung und hoher Abstraktionsebene.
+Da SIP ein generisches Protokoll ist, ist es prinzipiell nicht nur für die Sprachkommunikation einsetzbar sondern auch um Daten zwischen Clients auszutauschen. Diese Kapitel soll zeigen, welche der bestehenden Architekturen sich mit SIP umsetzen lassen. Dabei wollen wir nicht bestehende Probleme der einzelnen Architekturen lösen, indem wir das SIP Protokoll verwenden, sondern zeigen das SIP es uns ermöglicht bestehende Architekturen umzusetzen. Der resultierende Vorteil besteht vor allem in einer standardisierten Addressierung,  Signalisierung und hoher Abstraktionsebene.
 
-Experimentell haben wir eine einfache Client-Server Architektur implementiert, die aus dem Prototypen somit ein völlig auf dem SIP Protokoll basiertes Spiel macht. 
+Experimentell wurde eine einfache Client-Server Architektur implementiert, die aus dem Prototypen ein völlig auf dem SIP Protokoll basiertes Spiel macht. Im zweiten Teil wird das Konzept von P2P SIP erklärt, da es eine komplett dezentrale P2P Umsetzung erlaubt.
 
 \section{Anforderungen an die Netzwerkschicht}
 

@@ -1,20 +1,20 @@
-This is pdfTeX, Version 3.141592-1.40.7 (MiKTeX 2.7) (preloaded format=latex 2008.3.12)  8 MAY 2008 18:01
+This is pdfTeX, Version 3.141592-1.40.4 (MiKTeX 2.7 Beta 5) (preloaded format=latex 2008.3.16)  12 MAY 2008 17:31
 entering extended mode
 **Main.tex
 (Main.tex
 LaTeX2e <2005/12/01>
 Babel <v3.8h> and hyphenation patterns for english, dumylang, nohyphenation, ge
 rman, ngerman, french, loaded.
-("C:\Programme\MiKTeX 2.7\tex\latex\koma-script\scrbook.cls"
+("D:\Programme\MiKTeX 2.7\tex\latex\koma-script\scrbook.cls"
 Document Class: scrbook 2007/12/24 v2.98 KOMA-Script document class (book)
-("C:\Programme\MiKTeX 2.7\tex\latex\koma-script\scrkbase.sty"
+("D:\Programme\MiKTeX 2.7\tex\latex\koma-script\scrkbase.sty"
 Package: scrkbase 2007/12/24 v2.98 KOMA-Script package (basics and keyval use)
 
-("C:\Programme\MiKTeX 2.7\tex\latex\graphics\keyval.sty"
+("D:\Programme\MiKTeX 2.7\tex\latex\graphics\keyval.sty"
 Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
 \KV@toks@=\toks14
 )
-("C:\Programme\MiKTeX 2.7\tex\latex\koma-script\scrlfile.sty"
+("D:\Programme\MiKTeX 2.7\tex\latex\koma-script\scrlfile.sty"
 Package: scrlfile 2007/12/18 v2.98 KOMA-Script package (loading files)
 
 Package scrlfile, 2007/12/18 v2.98 KOMA-Script package (loading files)
@@ -33,10 +33,10 @@ Package scrkbase Info: You've used obsolete option `12pt'.
 (scrkbase)             by `fontsize=12pt'.
 Class scrbook Info: File `bk12.clo' used to setup font sizes on input line 953.
 
- ("C:\Programme\MiKTeX 2.7\tex\latex\base\bk12.clo"
+ ("D:\Programme\MiKTeX 2.7\tex\latex\base\bk12.clo"
 File: bk12.clo 2005/09/16 v1.4f Standard LaTeX file (size option)
 )
-("C:\Programme\MiKTeX 2.7\tex\latex\koma-script\typearea.sty"
+("D:\Programme\MiKTeX 2.7\tex\latex\koma-script\typearea.sty"
 Package: typearea 2007/12/24 v2.98 KOMA-Script package (type area)
 
 Package typearea, 2007/12/24 v2.98 KOMA-Script package (type area)
@@ -84,22 +84,22 @@ Package typearea Info: These are the values describing the layout:
 \c@figure=\count87
 \c@table=\count88
 \bibindent=\dimen102
-) ("C:\Programme\MiKTeX 2.7\tex\latex\ntgclass\a4.sty"
+) ("D:\Programme\MiKTeX 2.7\tex\latex\ntgclass\a4.sty"
 Package: a4 2004/04/15 v1.2g A4 based page layout
 )
-("C:\Programme\MiKTeX 2.7\tex\generic\babel\babel.sty"
+("D:\Programme\MiKTeX 2.7\tex\generic\babel\babel.sty"
 Package: babel 2005/11/23 v3.8h The Babel package
 
 *************************************
 * Local config file bblopts.cfg used
 *
-("C:\Programme\MiKTeX 2.7\tex\latex\00miktex\bblopts.cfg"
+("D:\Programme\MiKTeX 2.7\tex\latex\00miktex\bblopts.cfg"
 File: bblopts.cfg 2006/07/31 v1.0 MiKTeX 'babel' configuration
 )
-("C:\Programme\MiKTeX 2.7\tex\generic\babel\ngermanb.ldf"
+("D:\Programme\MiKTeX 2.7\tex\generic\babel\ngermanb.ldf"
 Language: ngermanb 2004/02/20 v2.6m new German support from the babel system
 
-("C:\Programme\MiKTeX 2.7\tex\generic\babel\babel.def"
+("D:\Programme\MiKTeX 2.7\tex\generic\babel\babel.def"
 File: babel.def 2005/11/23 v3.8h Babel common definitions
 \babel@savecnt=\count89
 \U@D=\dimen103
@@ -107,7 +107,7 @@ File: babel.def 2005/11/23 v3.8h Babel common definitions
 \l@naustrian = a dialect from \language\l@ngerman 
 Package babel Info: Making " an active character on input line 92.
 )
-("C:\Programme\MiKTeX 2.7\tex\generic\babel\english.ldf"
+("D:\Programme\MiKTeX 2.7\tex\generic\babel\english.ldf"
 Language: english 2005/03/30 v3.3o English support from the babel system
 \l@british = a dialect from \language\l@english 
 \l@UKenglish = a dialect from \language\l@english 
@@ -115,32 +115,32 @@ Language: english 2005/03/30 v3.3o English support from the babel system
 \l@australian = a dialect from \language\l@british 
 \l@newzealand = a dialect from \language\l@british 
 ))
-("C:\Programme\MiKTeX 2.7\tex\latex\base\inputenc.sty"
+("D:\Programme\MiKTeX 2.7\tex\latex\base\inputenc.sty"
 Package: inputenc 2006/05/05 v1.1b Input encoding file
 \inpenc@prehook=\toks15
 \inpenc@posthook=\toks16
 
-("C:\Programme\MiKTeX 2.7\tex\latex\base\ansinew.def"
+("D:\Programme\MiKTeX 2.7\tex\latex\base\ansinew.def"
 File: ansinew.def 2006/05/05 v1.1b Input encoding file
 ))
-("C:\Programme\MiKTeX 2.7\tex\latex\amsmath\amsmath.sty"
+("D:\Programme\MiKTeX 2.7\tex\latex\amsmath\amsmath.sty"
 Package: amsmath 2000/07/18 v2.13 AMS math features
 \@mathmargin=\skip47
 
 For additional information on amsmath, use the `?' option.
-("C:\Programme\MiKTeX 2.7\tex\latex\amsmath\amstext.sty"
+("D:\Programme\MiKTeX 2.7\tex\latex\amsmath\amstext.sty"
 Package: amstext 2000/06/29 v2.01
 
-("C:\Programme\MiKTeX 2.7\tex\latex\amsmath\amsgen.sty"
+("D:\Programme\MiKTeX 2.7\tex\latex\amsmath\amsgen.sty"
 File: amsgen.sty 1999/11/30 v2.0
 \@emptytoks=\toks17
 \ex@=\dimen104
 ))
-("C:\Programme\MiKTeX 2.7\tex\latex\amsmath\amsbsy.sty"
+("D:\Programme\MiKTeX 2.7\tex\latex\amsmath\amsbsy.sty"
 Package: amsbsy 1999/11/29 v1.2d
 \pmbraise@=\dimen105
 )
-("C:\Programme\MiKTeX 2.7\tex\latex\amsmath\amsopn.sty"
+("D:\Programme\MiKTeX 2.7\tex\latex\amsmath\amsopn.sty"
 Package: amsopn 1999/12/14 v2.01 operator names
 )
 \inf@bad=\count90
@@ -181,7 +181,7 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 568.
 LaTeX Info: Redefining \[ on input line 2666.
 LaTeX Info: Redefining \] on input line 2667.
 )
-("C:\Programme\MiKTeX 2.7\tex\latex\subfigure\subfigure.sty"
+("D:\Programme\MiKTeX 2.7\tex\latex\subfigure\subfigure.sty"
 Package: subfigure 2002/07/30 v2.1.4 subfigure package
 \subfigtopskip=\skip50
 \subfigcapskip=\skip51
@@ -197,28 +197,28 @@ Package: subfigure 2002/07/30 v2.1.4 subfigure package
 ****************************************
 * Local config file subfigure.cfg used *
 ****************************************
-("C:\Programme\MiKTeX 2.7\tex\latex\subfigure\subfigure.cfg")
+("D:\Programme\MiKTeX 2.7\tex\latex\subfigure\subfigure.cfg")
 \subfig@top=\skip54
 \subfig@bottom=\skip55
 )
-("C:\Programme\MiKTeX 2.7\tex\latex\graphics\epsfig.sty"
+("D:\Programme\MiKTeX 2.7\tex\latex\graphics\epsfig.sty"
 Package: epsfig 1999/02/16 v1.7a (e)psfig emulation (SPQR)
 
-("C:\Programme\MiKTeX 2.7\tex\latex\graphics\graphicx.sty"
+("D:\Programme\MiKTeX 2.7\tex\latex\graphics\graphicx.sty"
 Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
 
-("C:\Programme\MiKTeX 2.7\tex\latex\graphics\graphics.sty"
+("D:\Programme\MiKTeX 2.7\tex\latex\graphics\graphics.sty"
 Package: graphics 2006/02/20 v1.0o Standard LaTeX Graphics (DPC,SPQR)
 
-("C:\Programme\MiKTeX 2.7\tex\latex\graphics\trig.sty"
+("D:\Programme\MiKTeX 2.7\tex\latex\graphics\trig.sty"
 Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
 )
-("C:\Programme\MiKTeX 2.7\tex\latex\00miktex\graphics.cfg"
+("D:\Programme\MiKTeX 2.7\tex\latex\00miktex\graphics.cfg"
 File: graphics.cfg 2007/01/18 v1.5 graphics configuration of teTeX/TeXLive
 )
 Package graphics Info: Driver file: dvips.def on input line 90.
 
-("C:\Programme\MiKTeX 2.7\tex\latex\graphics\dvips.def"
+("D:\Programme\MiKTeX 2.7\tex\latex\graphics\dvips.def"
 File: dvips.def 1999/02/16 v3.0i Driver-dependant file (DPC,SPQR)
 ))
 \Gin@req@height=\dimen115
@@ -227,94 +227,92 @@ File: dvips.def 1999/02/16 v3.0i Driver-dependant file (DPC,SPQR)
 \epsfxsize=\dimen117
 \epsfysize=\dimen118
 )
-("C:\Programme\MiKTeX 2.7\tex\latex\multirow\multirow.sty"
+("D:\Programme\MiKTeX 2.7\tex\latex\multirow\multirow.sty"
 \bigstrutjot=\dimen119
 )
-("C:\Programme\MiKTeX 2.7\tex\latex\ltxmisc\framed.sty"
-Package: framed 2007/10/04 v 0.95: framed or shaded text with page breaks
-\fb@frw=\dimen120
-\fb@frh=\dimen121
-\FrameRule=\dimen122
-\FrameSep=\dimen123
+("D:\Programme\MiKTeX 2.7\tex\latex\ltxmisc\framed.sty"
+Package: framed 2003/07/21 v 0.8a: framed or shaded text with page breaks
+\FrameRule=\dimen120
+\FrameSep=\dimen121
 )
-("C:\Programme\MiKTeX 2.7\tex\latex\koma-script\scrpage2.sty"
+("D:\Programme\MiKTeX 2.7\tex\latex\koma-script\scrpage2.sty"
 Package: scrpage2 2007/07/23 v2.2e LaTeX2e KOMA-Script package
 LaTeX Info: Redefining \pagemark on input line 147.
 )
-("C:\Programme\MiKTeX 2.7\tex\latex\natbib\natbib.sty"
+("D:\Programme\MiKTeX 2.7\tex\latex\natbib\natbib.sty"
 Package: natbib 2007/10/30 8.1 (PWD)
 \bibhang=\skip56
 \bibsep=\skip57
 LaTeX Info: Redefining \cite on input line 602.
 \c@NAT@ctr=\count106
 )
-("C:\Programme\MiKTeX 2.7\tex\latex\listings\listings.sty"
+("D:\Programme\MiKTeX 2.7\tex\latex\listings\listings.sty"
 \lst@mode=\count107
 \lst@gtempboxa=\box29
 \lst@token=\toks22
 \lst@length=\count108
-\lst@currlwidth=\dimen124
+\lst@currlwidth=\dimen122
 \lst@column=\count109
 \lst@pos=\count110
-\lst@lostspace=\dimen125
-\lst@width=\dimen126
+\lst@lostspace=\dimen123
+\lst@width=\dimen124
 \lst@newlines=\count111
 \lst@lineno=\count112
-\lst@maxwidth=\dimen127
+\lst@maxwidth=\dimen125
 
-("C:\Programme\MiKTeX 2.7\tex\latex\listings\lstmisc.sty"
+("D:\Programme\MiKTeX 2.7\tex\latex\listings\lstmisc.sty"
 File: lstmisc.sty 2007/02/22 1.4 (Carsten Heinz)
 \c@lstnumber=\count113
 \lst@skipnumbers=\count114
 \lst@framebox=\box30
 )
-("C:\Programme\MiKTeX 2.7\tex\latex\listings\listings.cfg"
+("D:\Programme\MiKTeX 2.7\tex\latex\listings\listings.cfg"
 File: listings.cfg 2007/02/22 1.4 listings configuration
 ))
 Package: listings 2007/02/22 1.4 (Carsten Heinz)
 
-("C:\Programme\MiKTeX 2.7\tex\latex\setspace\setspace.sty"
+("D:\Programme\MiKTeX 2.7\tex\latex\setspace\setspace.sty"
 Package: setspace 2000/12/01 6.7 Contributed and Supported LaTeX2e package
 
 Package: `setspace' 6.7 <2000/12/01>
-) ("C:\Programme\MiKTeX 2.7\tex\latex\booktabs\booktabs.sty"
+) ("D:\Programme\MiKTeX 2.7\tex\latex\booktabs\booktabs.sty"
 Package: booktabs 2005/04/14 v1.61803 publication quality tables
-\heavyrulewidth=\dimen128
-\lightrulewidth=\dimen129
-\cmidrulewidth=\dimen130
-\belowrulesep=\dimen131
-\belowbottomsep=\dimen132
-\aboverulesep=\dimen133
-\abovetopsep=\dimen134
-\cmidrulesep=\dimen135
-\cmidrulekern=\dimen136
-\defaultaddspace=\dimen137
+\heavyrulewidth=\dimen126
+\lightrulewidth=\dimen127
+\cmidrulewidth=\dimen128
+\belowrulesep=\dimen129
+\belowbottomsep=\dimen130
+\aboverulesep=\dimen131
+\abovetopsep=\dimen132
+\cmidrulesep=\dimen133
+\cmidrulekern=\dimen134
+\defaultaddspace=\dimen135
 \@cmidla=\count115
 \@cmidlb=\count116
-\@aboverulesep=\dimen138
-\@belowrulesep=\dimen139
+\@aboverulesep=\dimen136
+\@belowrulesep=\dimen137
 \@thisruleclass=\count117
 \@lastruleclass=\count118
-\@thisrulewidth=\dimen140
+\@thisrulewidth=\dimen138
 )
-("C:\Programme\MiKTeX 2.7\tex\latex\microtype\microtype.sty"
-Package: microtype 2007/12/23 v2.3 Micro-typography with pdfTeX (RS)
+("D:\Programme\MiKTeX 2.7\tex\latex\microtype\microtype.sty"
+Package: microtype 2008/02/29 v2.3a Micro-typography with pdfTeX (RS)
 \MT@toks=\toks23
 \MT@count=\count119
-LaTeX Info: Redefining \lsstyle on input line 1591.
-LaTeX Info: Redefining \lslig on input line 1591.
+LaTeX Info: Redefining \lsstyle on input line 1542.
+LaTeX Info: Redefining \lslig on input line 1542.
 \MT@outer@space=\skip58
-LaTeX Info: Redefining \textls on input line 1592.
-\MT@outer@kern=\dimen141
-LaTeX Info: Redefining \textmicrotypecontext on input line 2119.
+LaTeX Info: Redefining \textls on input line 1543.
+\MT@outer@kern=\dimen139
+LaTeX Info: Redefining \textmicrotypecontext on input line 2070.
 Package microtype Info: Loading configuration file microtype.cfg.
 
-("C:\Programme\MiKTeX 2.7\tex\latex\microtype\microtype.cfg"
-File: microtype.cfg 2007/12/23 v2.3 microtype main configuration file (RS)
+("D:\Programme\MiKTeX 2.7\tex\latex\microtype\microtype.cfg"
+File: microtype.cfg 2008/02/29 v2.3a microtype main configuration file (RS)
 ))
-("C:\Programme\MiKTeX 2.7\tex\latex\ltxmisc\url.sty"
+("D:\Programme\MiKTeX 2.7\tex\latex\ltxmisc\url.sty"
 \Urlmuskip=\muskip11
-Package: url 2006/04/12  ver 3.3  Verb mode for urls, etc.
+Package: url 2005/06/27  ver 3.2  Verb mode for urls, etc.
 )
 Class scrbook Info: You've told me to redefine the font selection of the
 (scrbook)           element `sectioning' that is an alias of element
@@ -356,9 +354,9 @@ Package microtype Info: No tracking.
 Package microtype Info: No adjustment of interword spacing.
 Package microtype Info: No adjustment of character kerning.
 
-("C:\Programme\MiKTeX 2.7\tex\latex\microtype\mt-cmr.cfg"
-File: mt-cmr.cfg 2005/11/07 v1.9 microtype config. file: Computer Modern Roman 
-(RS)
+("D:\Programme\MiKTeX 2.7\tex\latex\microtype\mt-cmr.cfg"
+File: mt-cmr.cfg 2008/02/29 v1.9a microtype config. file: Computer Modern Roman
+ (RS)
 ) (kapitel/titel.tex
 File: grafiken/unilogo.eps Graphic file (type eps)
 
@@ -423,7 +421,7 @@ Class scrbook Info: You've told me to use the font selection of the element
 (scrbook)            on input line 205.
 Class scrbook Info: You've told me to use the font selection of the element
 (scrbook)           `sectioning' that is an alias of element `disposition'
-(scrbook)            on input line 220.
+(scrbook)            on input line 217.
 )
 \tf@toc=\write3
  [6] (kapitel/stichwortverzeichnis.tex) [7
@@ -462,7 +460,7 @@ Overfull \hbox (4.77881pt too wide) in paragraph at lines 8--9
 
 ] [2]
 LaTeX Font Info:    Try loading font information for OMS+cmr on input line 47.
- ("C:\Programme\MiKTeX 2.7\tex\latex\base\omscmr.fd"
+ ("D:\Programme\MiKTeX 2.7\tex\latex\base\omscmr.fd"
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
@@ -686,6 +684,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 140--140
  []
 
 
+Underfull \hbox (badness 1755) in paragraph at lines 140--141
+[]\OT1/cmr/m/n/12 ($\OML/cmm/m/it/12 A[]$\OT1/cmr/m/n/12 ) De-di-zier-te
+ []
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 142--142
 []\OT1/cmr/m/n/12 ($\OML/cmm/m/it/12 A[]$\OT1/cmr/m/n/12 ) VoIP
  []
@@ -706,7 +709,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 142--142
  []
 
 
-Underfull \hbox (badness 5817) in paragraph at lines 142--143
+Underfull \hbox (badness 8189) in paragraph at lines 142--143
 []\OT1/cmr/m/n/12 ($\OML/cmm/m/it/12 A[]$\OT1/cmr/m/n/12 ) Kom-plett
  []
 
@@ -778,31 +781,47 @@ Kapitel 9.
 File: grafiken/fullmesh.eps Graphic file (type eps)
 <grafiken/fullmesh.eps>
 File: grafiken/fullmeshchart.eps Graphic file (type eps)
- <grafiken/fullmeshchart.eps>
-File: grafiken/partialmesh.eps Graphic file (type eps)
-
-<grafiken/partialmesh.eps>
-File: grafiken/partialmeshchart.eps Graphic file (type eps)
- <grafiken/partialmeshchart.eps> [107
+ <grafiken/fullmeshchart.eps> [107
 
 
 
 ] [108]
-File: grafiken/ohnevpn1.eps Graphic file (type eps)
+File: grafiken/partialmesh.eps Graphic file (type eps)
 
-<grafiken/ohnevpn1.eps>
+<grafiken/partialmesh.eps>
+File: grafiken/partialmeshchart.eps Graphic file (type eps)
+ <grafiken/partialmeshchart.eps> [109]
+File: grafiken/fullmesh-worstcase.eps Graphic file (type eps)
+
+<grafiken/fullmesh-worstcase.eps>
+File: grafiken/ohnevpn1.eps Graphic file (type eps)
+ <grafiken/ohnevpn1.eps>
 File: grafiken/ohnevpn2.eps Graphic file (type eps)
- <grafiken/ohnevpn2.eps>
+
+<grafiken/ohnevpn2.eps> [110] [111]
 File: grafiken/mitvadupdown.eps Graphic file (type eps)
  <grafiken/mitvadupdown.eps>
 File: grafiken/mitvadrtpsip.eps Graphic file (type eps)
 
 <grafiken/mitvadrtpsip.eps>
 File: grafiken/mitholdupanddown.eps Graphic file (type eps)
- <grafiken/mitholdupanddown.eps>
+ <grafiken/mitholdupanddown.eps> [112] [113]
 File: grafiken/mithold1.eps Graphic file (type eps)
 
-<grafiken/mithold1.eps> [109] [110] [111] [112]) [113] (Main.bbl
+<grafiken/mithold1.eps>
+
+LaTeX Warning: Reference `mitvdaund2codes' on page 114 undefined on input line 
+132.
+
+File: grafiken/mitvadund2codecs.eps Graphic file (type eps)
+<grafiken/mitvadund2codecs.eps>
+
+LaTeX Warning: Reference `mitvadundrtpsip' on page 114 undefined on input line 
+142.
+
+[114] [115]
+File: grafiken/mitvadundrtpsip.eps Graphic file (type eps)
+ <grafiken/mitvadundrtpsip.eps>) [116] (Main.bbl
 Underfull \hbox (badness 6063) in paragraph at lines 49--54
 [][]\OT1/cmr/m/sc/12 Arango\OT1/cmr/m/n/12 , M. ; \OT1/cmr/m/sc/12 Du-gan\OT1/c
 mr/m/n/12 , A. ; \OT1/cmr/m/sc/12 El-liott\OT1/cmr/m/n/12 , I. ; \OT1/cmr/m/sc/
@@ -815,7 +834,7 @@ Underfull \hbox (badness 3078) in paragraph at lines 49--54
 -col (MG-CP).  In:
  []
 
-[114
+[117
 
 
 
@@ -831,7 +850,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 198--204
 ]Studien[]-
  []
 
-[115]
+[118]
 Underfull \hbox (badness 10000) in paragraph at lines 220--224
 [][]\OT1/cmr/m/sc/12 Gebhardt\OT1/cmr/m/n/12 , Ni-ko-laus:  irr-Klang.  In:
  []
@@ -842,7 +861,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 226--230
 ne.  In:
  []
 
-[116]
+[119]
 Underfull \hbox (badness 10000) in paragraph at lines 338--344
 [][]\OT1/cmr/m/sc/12 Ipoque\OT1/cmr/m/n/12 :  In-ter-net Stu-die 2007.  In:
  []
@@ -859,7 +878,7 @@ Underfull \hbox (badness 1062) in paragraph at lines 368--373
 \OT1/cmr/m/n/12 , Gwen-dal:  So-lip-sis: A Mas-si-ve-ly Multi-
  []
 
-[117]
+[120]
 Underfull \hbox (badness 1112) in paragraph at lines 449--456
 [][]\OT1/cmr/m/sc/12 Miladinovic\OT1/cmr/m/n/12 , I. ; \OT1/cmr/m/sc/12 Stad-le
 r\OT1/cmr/m/n/12 , J.:  Mul-ti-par-ty Con-fe-rence Si-gnal-ling
@@ -877,7 +896,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 493--497
 In:
  []
 
-[118]
+[121]
 Underfull \hbox (badness 10000) in paragraph at lines 527--531
 [][]\OT1/cmr/m/sc/12 Reichswald\OT1/cmr/m/n/12 , R. ; \OT1/cmr/m/sc/12 M[]oslei
 n\OT1/cmr/m/n/12 , K. ; \OT1/cmr/m/sc/12 Sa-chen-ba-che-rand\OT1/cmr/m/n/12 , K
@@ -890,7 +909,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 540--544
 In:
  []
 
-[119]
+[122]
 Underfull \hbox (badness 3229) in paragraph at lines 681--686
 [][]\OT1/cmr/m/sc/12 Schulzrinne\OT1/cmr/m/n/12 , H. ; \OT1/cmr/m/sc/12 Cas-ner
 \OT1/cmr/m/n/12 , S. ; \OT1/cmr/m/sc/12 Fre-de-rick\OT1/cmr/m/n/12 , R. ; \OT1/
@@ -903,13 +922,13 @@ Underfull \hbox (badness 1259) in paragraph at lines 681--686
 ns.  In:
  []
 
-[120]
+[123]
 Underfull \hbox (badness 10000) in paragraph at lines 757--761
 [][]\OT1/cmr/m/sc/12 SonyEntertainment\OT1/cmr/m/n/12 :  Play-Sta-ti-on Ho-me. 
  In:
  []
 
-[121]
+[124]
 Underfull \hbox (badness 10000) in paragraph at lines 782--786
 [][]\OT1/cmr/m/sc/12 TeamSpeakSystemsGmbH\OT1/cmr/m/n/12 :  Teams-peak.  In:
  []
@@ -926,7 +945,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 831--835
 In:
  []
 
-) [122] (kapitel/erklaerung.tex) [123
+) [125] (kapitel/erklaerung.tex) [126
 
 
 ]
@@ -941,16 +960,19 @@ Package natbib Warning: There were undefined citations.
 (kapitel/kapitel_implementierung.aux) (kapitel/kapitel_network.aux)
 (kapitel/kapitel_benchmarking.aux) (kapitel/erklaerung.aux))
 
+LaTeX Warning: There were undefined references.
+
+
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 6600 strings out of 95338
- 94194 string characters out of 1184228
- 206911 words of memory out of 1500000
- 9582 multiletter control sequences out of 110000
+ 6603 strings out of 95351
+ 94365 string characters out of 1184568
+ 206711 words of memory out of 1500000
+ 9581 multiletter control sequences out of 110000
  10300 words of font info for 37 fonts, out of 1200000 for 2000
  14 hyphenation exceptions out of 8191
  36i,11n,37p,2156b,1115s stack positions out of 5000i,500n,10000p,200000b,5000s
 
-Output written on Main.dvi (134 pages, 464988 bytes).
+Output written on Main.dvi (137 pages, 473976 bytes).
