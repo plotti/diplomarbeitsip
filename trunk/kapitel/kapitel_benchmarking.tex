@@ -1,24 +1,26 @@
 \chapter{Evaluation}
 
-\section{Fullmesh vs. Partialmesh}
+\section{Fullmesh vs. Partialmesh Szenario}
 
-Im Full-Mesh Ansatz verbindet sich jeder Teilnehmer mit allen anderen 
-Teilnehmern. Im vom mir vorgeschlagenen Partial-Mesh Ansatz verbindet sich der Teilnehmer nur mit Spielern die sich in seiner unmittelbaren Nähe befinden. Um zu vergleichen, wie mit dem umgesetzte Ansatz Bandbreite eingespart werden kann, wurde ein Szenario entwicklt, in dem beide Ansätze ausprobiert werden.
+Um zu verdeutlichen wie der umgesetzte Ansatz, zu Einsparungen beim Verbrauch der Bandbreite eingesetzt werden kann, wird er mit einem gewöhlichem Full-Mesh Ansatz verglichen. Im diesem baut jeder Teilnehmer des Spiels mit allen anderen 
+Teilnehmern Audioverbindungen auf, unabhängig davon wo sich diese im Spiel befinden.
 
-In diesem Szenario sind 5 Spieler in der Spielewelt anwesend, wobei sich Spieler 1,2 und 3 in Hörnähe befinden, während Spieler 5 und 6 isolierte Positionen einnehmen.
+Im vorgeschlagenen Partial-Mesh Ansatz verbindet sich der Teilnehmer nur mit Spielern die sich in seiner unmittelbaren Nähe befinden. Dies entspricht dem Proximitätskonzept, in dem nur Audioverbindungen nur mit Spielern aufgebaut werden, die sich mindestens in der Öffentlichen Zone befinden.
+
+Um zu vergleichen, wie mit dem umgesetzten Ansatz Bandbreite eingespart werden kann, wurde ein Szenario entwickelt, in dem beide Ansätze ausprobiert werden: In diesem betreten 5 Spieler nacheinander die Spielewelt, wobei sich Spieler 1,2 und 3 in Hörnähe befinden, während Spieler 5 und 6 isolierte Positionen einnehmen.
 
 \subsection{Full Mesh}
-Die Abbildung \ref{fullmeshszenario} verdeutlicht, wie im Full-Mesh Ansatz jeder Teilnehmer Verbindungen zu allen anderen Teilnehmern etabliert. Dabei ist die Abbildung folgend zu lesen: Zunächst betritt Teilnehmer 1 an Position 1 das Spielfeld, danach Teilnehmer 2 an seiner Position usw.. Jeder Teilnehmer baut beim Betreten der Spielewelt Verbindungen zu allen andern Teilnehmern auf.
+Die Abbildung \ref{fullmeshszenario} verdeutlicht, wie im Full-Mesh Ansatz jeder Teilnehmer Verbindungen zu allen anderen Teilnehmern etabliert hat. Dabei entspricht die Nummer des Teilnehmers auch dem Zeitpunkt seiner Teilnahme am Spiel: Zunächst betritt Teilnehmer 1 das Spielfeld, danach Teilnehmer 2, usw... Jeder Teilnehmer baut beim Betreten der Spielewelt Verbindungen zu allen andern Spielern auf.
 
 \begin{figure}[htbp]
 	\centering
-	\caption{Unnötige Audiverbindungen im Full-Mesh Ansatz}
+	\caption{Audiverbindungen im Full-Mesh Ansatz}
 	\label{fullmeshszenario}
-		\includegraphics[width=.70\textwidth]{grafiken/fullmesh.eps}
+		\includegraphics[width=.60\textwidth]{grafiken/fullmesh.eps}
 	\label{fig:fullmesh}
 \end{figure}
 
-Der Bandbreitenverbrauch wurde aus Sicht des Teilnehmers 1 gemessen. Da ca. alle 10 Sekunden ein weiterer Teilnehmer das Spielfeld betritt, wird auch entsprechend eine Audioverbindung mit diesem Spieler aufgebaut. Dies führt dazu, dass der Verbrauch der Bandbreite sich jeweils um weitere 10kb erhöht. Bei allen Messungen wurde der Speex Codec mit einer Abtastrate von 16kHz benutzt, der eine mittlere Bitrate von 10 - 15 kbps besitzt.
+Der Bandbreitenverbrauch wurde aus Sicht des Teilnehmers 1 gemessen. Da alle 10 Sekunden ein weiterer Spieler das Spielfeld betritt, wird auch entsprechend eine Audioverbindung mit diesem Spieler aufgebaut. Dies führt dazu, dass der Verbrauch der Bandbreite sich jeweils um weitere 10kb erhöht. Bei allen Messungen wurde der Speex Codec mit einer Abtastrate von 16kHz benutzt, der eine mittlere Bitrate von 10 - 15 kbps besitzt.
 
 \begin{figure}[htbp]
 	\centering
@@ -30,7 +32,7 @@ Der Bandbreitenverbrauch wurde aus Sicht des Teilnehmers 1 gemessen. Da ca. alle
 \subsection{Partial Mesh}
 Im gleichen Szenario wurde nun die Partial-Mesh Technik eingesetzt, bei der nur noch Verbindungen mit Teilnehmern aufgebaut wurden, die sich tatsächlich auch in der Reichweite des Spielers befinden. 
 
-Dabei wurde zunächst immer dann ein SIP Call zwischen den Teilnehmern etabliert, wenn sie die Öffentliche Zone betraten. In dieser Zone wird der Anruf ausgeführt und eine Silence Supression durchgeführt, bis der Teilnehmer sich in die soziale Zone begibt. In der Sozialen Zone findet wird der volle RTP Audiostrom zwischen den Teilnehmern iniitiert. 
+Dabei wurde zunächst immer dann ein SIP Call zwischen den Teilnehmern etabliert, wenn sie sich in der die Öffentliche Zone befanden. In dieser Zone wird der Anruf ausgeführt und eine Silence Supression durchgeführt, bis der Teilnehmer sich in die Soziale Zone begibt. In der Sozialen Zone findet wird der volle RTP Audiostrom zwischen den Teilnehmern iniitiert. 
 
 Diese Technik führt dazu, dass im vorgestellten Szenario Spieler 1 zunächst zwei logische SIP Verbindungen mit Spieler 2 und 3 etabliert. Während mit Spieler 2 ein voller RTP Audiostrom fließt, wird mit Spieler 3 nur eine Audioverbindung mit Silence Suppression etabliert. Teilnehmer 4 und 5 bauen keine Verbindungen auf da sie sich nicht in Hörreichweite befinden. 
 
@@ -40,7 +42,7 @@ Diese Technik führt dazu, dass im vorgestellten Szenario Spieler 1 zunächst zwei
 	\label{fig:partialmesh}
 \end{figure}
 
-Der  Bandbreitenverbrauch wurde auch hier aus Sicht des Teilnehmers 1. Betritt Spieler 2 das Spiel, so wird mit ihm eine Audioverbindung aufgebaut die zwischen 10-15kbps verbraucht. Betritt dagegen Spieler 3 das Spiel werden nur zusätzlich ca. 1-2kbps zur Aufrechterhaltung der RTP Verbindung benötigt. Würde sich Teilnehmer 3 nun auf Spieler 1 zubewegen, würde die Silence Suppression aufgehoben und auch ein normaler Audiostrom von 10-15kbs fließen. Spieler 4 und 5 verursachen keinen zusätzlichen Bandbreitenverbrauch, da sie sich außerhalb der öffentlichen Zone befinden.
+Der  Bandbreitenverbrauch wurde auch hier aus Sicht des Teilnehmers 1 gemessen. In dem Moment in dem Spieler 2 das Spiel betritt, wird mit ihm eine Audioverbindung aufgebaut, die zwischen 10-15kbps verbraucht. Betritt Spieler 3 dagegen das Spiel werden nur zusätzlich ca. 1-2kbps zur Aufrechterhaltung der Grundkonnektivität der RTP Verbindung benötigt. Würde sich Teilnehmer 3 nun auf Spieler 1 zubewegen, würde die Silence Suppression aufgehoben und auch ein normaler Audiostrom von 10-15kbs fließen. Spieler 4 und 5 verursachen keinen zusätzlichen Bandbreitenverbrauch, da sie sich außerhalb der öffentlichen Zone befinden.
 
 \begin{figure}[htbp]
 	\centering
