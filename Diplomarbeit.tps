@@ -4,8 +4,8 @@ Version=2
 
 [SessionInfo]
 ActiveTab=0
-FrameCount=15
-ActiveFrame=9
+FrameCount=16
+ActiveFrame=3
 
 [Frame0]
 Columns=1
@@ -32,8 +32,8 @@ cxCur=751
 cxMin=10
 
 [Frame0_View0,0]
-Cursor.row=75
-Cursor.column=449
+Cursor.row=0
+Cursor.column=0
 TopSubLine=227
 
 [Frame1]
@@ -97,8 +97,8 @@ TopSubLine=485
 [Frame3]
 Columns=1
 Rows=1
-Flags=0
-ShowCmd=1
+Flags=2
+ShowCmd=3
 MinPos.x=-1
 MinPos.y=-1
 MaxPos.x=-4
@@ -111,16 +111,16 @@ Class=CLatexEdit
 Document=kapitel\stichwortverzeichnis.tex
 
 [Frame3_Row0]
-cyCur=346
+cyCur=378
 cyMin=10
 
 [Frame3_Col0]
-cxCur=751
+cxCur=848
 cxMin=10
 
 [Frame3_View0,0]
-Cursor.row=6
-Cursor.column=0
+Cursor.row=12
+Cursor.column=8
 TopSubLine=0
 
 [Frame4]
@@ -148,9 +148,9 @@ cxCur=751
 cxMin=10
 
 [Frame4_View0,0]
-Cursor.row=235
-Cursor.column=16
-TopSubLine=721
+Cursor.row=210
+Cursor.column=306
+TopSubLine=621
 
 [Frame5]
 Columns=1
@@ -177,9 +177,9 @@ cxCur=751
 cxMin=10
 
 [Frame5_View0,0]
-Cursor.row=10
-Cursor.column=17
-TopSubLine=10
+Cursor.row=69
+Cursor.column=39
+TopSubLine=64
 
 [Frame6]
 Columns=1
@@ -235,9 +235,9 @@ cxCur=751
 cxMin=10
 
 [Frame7_View0,0]
-Cursor.row=12
-Cursor.column=27
-TopSubLine=7
+Cursor.row=0
+Cursor.column=0
+TopSubLine=0
 
 [Frame8]
 Columns=1
@@ -271,8 +271,8 @@ TopSubLine=55
 [Frame9]
 Columns=1
 Rows=1
-Flags=2
-ShowCmd=3
+Flags=0
+ShowCmd=1
 MinPos.x=-1
 MinPos.y=-1
 MaxPos.x=-4
@@ -285,17 +285,17 @@ Class=CLatexEdit
 Document=kapitel\kapitel_benchmarking.tex
 
 [Frame9_Row0]
-cyCur=554
+cyCur=346
 cyMin=10
 
 [Frame9_Col0]
-cxCur=902
+cxCur=796
 cxMin=10
 
 [Frame9_View0,0]
 Cursor.row=44
 Cursor.column=501
-TopSubLine=73
+TopSubLine=67
 
 [Frame10]
 Columns=1
@@ -411,7 +411,7 @@ cxMin=10
 [Frame13_View0,0]
 Cursor.row=308
 Cursor.column=111
-TopSubLine=733
+TopSubLine=751
 
 [Frame14]
 Columns=1
@@ -438,7 +438,36 @@ cxCur=787
 cxMin=10
 
 [Frame14_View0,0]
-Cursor.row=422
-Cursor.column=35
-TopSubLine=807
+Cursor.row=0
+Cursor.column=0
+TopSubLine=0
+
+[Frame15]
+Columns=1
+Rows=1
+Flags=0
+ShowCmd=1
+MinPos.x=-1
+MinPos.y=-1
+MaxPos.x=-4
+MaxPos.y=-30
+NormalPos.left=66
+NormalPos.top=87
+NormalPos.right=825
+NormalPos.bottom=422
+Class=CLatexEdit
+Document=kapitel\abkuerzungen.tex
+
+[Frame15_Row0]
+cyCur=280
+cyMin=10
+
+[Frame15_Col0]
+cxCur=730
+cxMin=10
+
+[Frame15_View0,0]
+Cursor.row=12
+Cursor.column=47
+TopSubLine=63
 
