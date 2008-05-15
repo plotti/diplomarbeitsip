@@ -4,8 +4,8 @@ Version=2
 
 [SessionInfo]
 ActiveTab=0
-FrameCount=16
-ActiveFrame=3
+FrameCount=13
+ActiveFrame=12
 
 [Frame0]
 Columns=1
@@ -97,8 +97,8 @@ TopSubLine=485
 [Frame3]
 Columns=1
 Rows=1
-Flags=2
-ShowCmd=3
+Flags=0
+ShowCmd=1
 MinPos.x=-1
 MinPos.y=-1
 MaxPos.x=-4
@@ -111,11 +111,11 @@ Class=CLatexEdit
 Document=kapitel\stichwortverzeichnis.tex
 
 [Frame3_Row0]
-cyCur=378
+cyCur=346
 cyMin=10
 
 [Frame3_Col0]
-cxCur=848
+cxCur=751
 cxMin=10
 
 [Frame3_View0,0]
@@ -150,7 +150,7 @@ cxMin=10
 [Frame4_View0,0]
 Cursor.row=210
 Cursor.column=306
-TopSubLine=621
+TopSubLine=639
 
 [Frame5]
 Columns=1
@@ -177,9 +177,9 @@ cxCur=751
 cxMin=10
 
 [Frame5_View0,0]
-Cursor.row=69
-Cursor.column=39
-TopSubLine=64
+Cursor.row=84
+Cursor.column=16
+TopSubLine=72
 
 [Frame6]
 Columns=1
@@ -206,9 +206,9 @@ cxCur=751
 cxMin=10
 
 [Frame6_View0,0]
-Cursor.row=93
+Cursor.row=33
 Cursor.column=0
-TopSubLine=278
+TopSubLine=97
 
 [Frame7]
 Columns=1
@@ -219,19 +219,19 @@ MinPos.x=-1
 MinPos.y=-1
 MaxPos.x=-4
 MaxPos.y=-30
-NormalPos.left=132
-NormalPos.top=174
-NormalPos.right=912
-NormalPos.bottom=575
+NormalPos.left=0
+NormalPos.top=0
+NormalPos.right=869
+NormalPos.bottom=401
 Class=CLatexEdit
-Document=kapitel\titel.tex
+Document=kapitel\erklaerung.tex
 
 [Frame7_Row0]
 cyCur=346
 cyMin=10
 
 [Frame7_Col0]
-cxCur=751
+cxCur=840
 cxMin=10
 
 [Frame7_View0,0]
@@ -248,25 +248,25 @@ MinPos.x=-1
 MinPos.y=-1
 MaxPos.x=-4
 MaxPos.y=-30
-NormalPos.left=88
-NormalPos.top=116
-NormalPos.right=913
-NormalPos.bottom=517
+NormalPos.left=0
+NormalPos.top=0
+NormalPos.right=830
+NormalPos.bottom=401
 Class=CLatexEdit
-Document=kapitel\kapitel_network.tex
+Document=kapitel\abstract.tex
 
 [Frame8_Row0]
 cyCur=346
 cyMin=10
 
 [Frame8_Col0]
-cxCur=796
+cxCur=801
 cxMin=10
 
 [Frame8_View0,0]
-Cursor.row=27
-Cursor.column=332
-TopSubLine=55
+Cursor.row=1
+Cursor.column=2
+TopSubLine=0
 
 [Frame9]
 Columns=1
@@ -277,25 +277,25 @@ MinPos.x=-1
 MinPos.y=-1
 MaxPos.x=-4
 MaxPos.y=-30
-NormalPos.left=110
-NormalPos.top=145
-NormalPos.right=935
-NormalPos.bottom=546
+NormalPos.left=22
+NormalPos.top=29
+NormalPos.right=852
+NormalPos.bottom=430
 Class=CLatexEdit
-Document=kapitel\kapitel_benchmarking.tex
+Document=kapitel\kapitel_konstruktion.tex
 
 [Frame9_Row0]
 cyCur=346
 cyMin=10
 
 [Frame9_Col0]
-cxCur=796
+cxCur=801
 cxMin=10
 
 [Frame9_View0,0]
-Cursor.row=44
-Cursor.column=501
-TopSubLine=67
+Cursor.row=308
+Cursor.column=111
+TopSubLine=733
 
 [Frame10]
 Columns=1
@@ -306,19 +306,19 @@ MinPos.x=-1
 MinPos.y=-1
 MaxPos.x=-4
 MaxPos.y=-30
-NormalPos.left=0
-NormalPos.top=0
-NormalPos.right=869
-NormalPos.bottom=401
+NormalPos.left=44
+NormalPos.top=58
+NormalPos.right=860
+NormalPos.bottom=459
 Class=CLatexEdit
-Document=kapitel\erklaerung.tex
+Document=kapitel\kapitel_sip.tex
 
 [Frame10_Row0]
 cyCur=346
 cyMin=10
 
 [Frame10_Col0]
-cxCur=840
+cxCur=787
 cxMin=10
 
 [Frame10_View0,0]
@@ -335,122 +335,6 @@ MinPos.x=-1
 MinPos.y=-1
 MaxPos.x=-4
 MaxPos.y=-30
-NormalPos.left=132
-NormalPos.top=174
-NormalPos.right=901
-NormalPos.bottom=575
-Class=CLatexEdit
-Document=literatur\da.bib
-
-[Frame11_Row0]
-cyCur=346
-cyMin=10
-
-[Frame11_Col0]
-cxCur=740
-cxMin=10
-
-[Frame11_View0,0]
-Cursor.row=1400
-Cursor.column=12
-TopSubLine=1582
-
-[Frame12]
-Columns=1
-Rows=1
-Flags=0
-ShowCmd=1
-MinPos.x=-1
-MinPos.y=-1
-MaxPos.x=-4
-MaxPos.y=-30
-NormalPos.left=0
-NormalPos.top=0
-NormalPos.right=830
-NormalPos.bottom=401
-Class=CLatexEdit
-Document=kapitel\abstract.tex
-
-[Frame12_Row0]
-cyCur=346
-cyMin=10
-
-[Frame12_Col0]
-cxCur=801
-cxMin=10
-
-[Frame12_View0,0]
-Cursor.row=1
-Cursor.column=2
-TopSubLine=0
-
-[Frame13]
-Columns=1
-Rows=1
-Flags=0
-ShowCmd=1
-MinPos.x=-1
-MinPos.y=-1
-MaxPos.x=-4
-MaxPos.y=-30
-NormalPos.left=22
-NormalPos.top=29
-NormalPos.right=852
-NormalPos.bottom=430
-Class=CLatexEdit
-Document=kapitel\kapitel_konstruktion.tex
-
-[Frame13_Row0]
-cyCur=346
-cyMin=10
-
-[Frame13_Col0]
-cxCur=801
-cxMin=10
-
-[Frame13_View0,0]
-Cursor.row=308
-Cursor.column=111
-TopSubLine=751
-
-[Frame14]
-Columns=1
-Rows=1
-Flags=0
-ShowCmd=1
-MinPos.x=-1
-MinPos.y=-1
-MaxPos.x=-4
-MaxPos.y=-30
-NormalPos.left=44
-NormalPos.top=58
-NormalPos.right=860
-NormalPos.bottom=459
-Class=CLatexEdit
-Document=kapitel\kapitel_sip.tex
-
-[Frame14_Row0]
-cyCur=346
-cyMin=10
-
-[Frame14_Col0]
-cxCur=787
-cxMin=10
-
-[Frame14_View0,0]
-Cursor.row=0
-Cursor.column=0
-TopSubLine=0
-
-[Frame15]
-Columns=1
-Rows=1
-Flags=0
-ShowCmd=1
-MinPos.x=-1
-MinPos.y=-1
-MaxPos.x=-4
-MaxPos.y=-30
 NormalPos.left=66
 NormalPos.top=87
 NormalPos.right=825
@@ -458,16 +342,45 @@ NormalPos.bottom=422
 Class=CLatexEdit
 Document=kapitel\abkuerzungen.tex
 
-[Frame15_Row0]
+[Frame11_Row0]
 cyCur=280
 cyMin=10
 
-[Frame15_Col0]
+[Frame11_Col0]
 cxCur=730
 cxMin=10
 
-[Frame15_View0,0]
-Cursor.row=12
-Cursor.column=47
-TopSubLine=63
+[Frame11_View0,0]
+Cursor.row=0
+Cursor.column=0
+TopSubLine=0
+
+[Frame12]
+Columns=1
+Rows=1
+Flags=2
+ShowCmd=3
+MinPos.x=-1
+MinPos.y=-1
+MaxPos.x=-4
+MaxPos.y=-30
+NormalPos.left=44
+NormalPos.top=58
+NormalPos.right=835
+NormalPos.bottom=459
+Class=CLatexEdit
+Document=kapitel\kapitel_conclusion.tex
+
+[Frame12_Row0]
+cyCur=554
+cyMin=10
+
+[Frame12_Col0]
+cxCur=902
+cxMin=10
+
+[Frame12_View0,0]
+Cursor.row=9
+Cursor.column=0
+TopSubLine=9
 
