@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592-1.40.4 (MiKTeX 2.7) (preloaded format=latex 2008.3.3)  15 MAY 2008 16:48
+This is pdfTeX, Version 3.141592-1.40.4 (MiKTeX 2.7) (preloaded format=latex 2008.3.3)  15 MAY 2008 18:08
 entering extended mode
 **Main.tex
 (Main.tex
@@ -862,7 +862,19 @@ ichkeiten adres-siert und L[]osungen
 
 
 
-] [118]) [119] (Main.bbl
+] [118]
+Overfull \hbox (22.66391pt too wide) in paragraph at lines 27--29
+\OT1/cmr/m/n/12 Over-lay soll-ten so-wohl der Aus-tausch an Au-diostr[]omen als
+ auch jeg-li-che Signalisieruns-
+ []
+
+
+Overfull \hbox (1.4016pt too wide) in paragraph at lines 27--29
+\OT1/cmr/m/n/12 , Rechte- und Lokations-Anfragen v[]ollig de-zen-tral statt-fin
+-den. Mo-men-tan ben[]otigt
+ []
+
+) [119] (Main.bbl
 Underfull \hbox (badness 6063) in paragraph at lines 49--54
 [][]\OT1/cmr/m/sc/12 Arango\OT1/cmr/m/n/12 , M. ; \OT1/cmr/m/sc/12 Du-gan\OT1/c
 mr/m/n/12 , A. ; \OT1/cmr/m/sc/12 El-liott\OT1/cmr/m/n/12 , I. ; \OT1/cmr/m/sc/
@@ -1014,4 +1026,4 @@ Here is how much of TeX's memory you used:
  14 hyphenation exceptions out of 8191
  36i,11n,37p,2156b,1115s stack positions out of 5000i,500n,10000p,200000b,5000s
 
-Output written on Main.dvi (141 pages, 499460 bytes).
+Output written on Main.dvi (141 pages, 500844 bytes).
