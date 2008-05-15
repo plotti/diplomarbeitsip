@@ -214,4 +214,7 @@
 \contentsline {subsection}{\numberline {9.2.3}Zonen mit SIP HOLD}{112}
 \contentsline {subsection}{\numberline {9.2.4}Zonen mit unterschiedlichen Audiocodecs}{114}
 \contentsline {section}{\numberline {9.3}Tests von SIP als Netzwerkschnitstelle}{116}
-\contentsline {chapter}{Literaturverzeichnis}{117}
+\contentsline {chapter}{\numberline {10}Fazit und Ausblick}{117}
+\contentsline {section}{\numberline {10.1}Fazit}{117}
+\contentsline {section}{\numberline {10.2}Ausblick}{118}
+\contentsline {chapter}{Literaturverzeichnis}{119}
