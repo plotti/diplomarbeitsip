@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592-1.40.7 (MiKTeX 2.7) (preloaded format=latex 2008.3.12)  15 MAY 2008 11:34
+This is pdfTeX, Version 3.141592-1.40.4 (MiKTeX 2.7) (preloaded format=latex 2008.3.3)  15 MAY 2008 16:48
 entering extended mode
 **Main.tex
 (Main.tex
@@ -298,19 +298,19 @@ Package: booktabs 2005/04/14 v1.61803 publication quality tables
 \@thisrulewidth=\dimen140
 )
 ("C:\Programme\MiKTeX 2.7\tex\latex\microtype\microtype.sty"
-Package: microtype 2007/12/23 v2.3 Micro-typography with pdfTeX (RS)
+Package: microtype 2008/02/29 v2.3a Micro-typography with pdfTeX (RS)
 \MT@toks=\toks23
 \MT@count=\count119
-LaTeX Info: Redefining \lsstyle on input line 1591.
-LaTeX Info: Redefining \lslig on input line 1591.
+LaTeX Info: Redefining \lsstyle on input line 1542.
+LaTeX Info: Redefining \lslig on input line 1542.
 \MT@outer@space=\skip58
-LaTeX Info: Redefining \textls on input line 1592.
+LaTeX Info: Redefining \textls on input line 1543.
 \MT@outer@kern=\dimen141
-LaTeX Info: Redefining \textmicrotypecontext on input line 2119.
+LaTeX Info: Redefining \textmicrotypecontext on input line 2070.
 Package microtype Info: Loading configuration file microtype.cfg.
 
 ("C:\Programme\MiKTeX 2.7\tex\latex\microtype\microtype.cfg"
-File: microtype.cfg 2007/12/23 v2.3 microtype main configuration file (RS)
+File: microtype.cfg 2008/02/29 v2.3a microtype main configuration file (RS)
 ))
 ("C:\Programme\MiKTeX 2.7\tex\latex\ltxmisc\url.sty"
 \Urlmuskip=\muskip11
@@ -333,7 +333,8 @@ LaTeX Warning: Label `SIP-Message' multiply defined.
 
 ) (kapitel/kapitel_recentwork.aux) (kapitel/kapitel_konstruktion.aux)
 (kapitel/kapitel_implementierung.aux) (kapitel/kapitel_network.aux)
-(kapitel/kapitel_benchmarking.aux) (kapitel/erklaerung.aux))
+(kapitel/kapitel_benchmarking.aux) (kapitel/kapitel_conclusion.aux)
+(kapitel/erklaerung.aux))
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 63.
 LaTeX Font Info:    ... okay on input line 63.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 63.
@@ -357,8 +358,8 @@ Package microtype Info: No adjustment of interword spacing.
 Package microtype Info: No adjustment of character kerning.
 
 ("C:\Programme\MiKTeX 2.7\tex\latex\microtype\mt-cmr.cfg"
-File: mt-cmr.cfg 2005/11/07 v1.9 microtype config. file: Computer Modern Roman 
-(RS)
+File: mt-cmr.cfg 2008/02/29 v1.9a microtype config. file: Computer Modern Roman
+ (RS)
 ) (kapitel/titel.tex
 File: grafiken/unilogo.eps Graphic file (type eps)
 
@@ -424,6 +425,9 @@ Class scrbook Info: You've told me to use the font selection of the element
 Class scrbook Info: You've told me to use the font selection of the element
 (scrbook)           `sectioning' that is an alias of element `disposition'
 (scrbook)            on input line 217.
+Class scrbook Info: You've told me to use the font selection of the element
+(scrbook)           `sectioning' that is an alias of element `disposition'
+(scrbook)            on input line 220.
 )
 \tf@toc=\write3
  [6] (kapitel/stichwortverzeichnis.tex) [7
@@ -699,6 +703,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 141--141
  []
 
 
+Underfull \hbox (badness 1755) in paragraph at lines 141--142
+[]\OT1/cmr/m/n/12 ($\OML/cmm/m/it/12 A[]$\OT1/cmr/m/n/12 ) De-di-zier-te
+ []
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 143--143
 []\OT1/cmr/m/n/12 ($\OML/cmm/m/it/12 A[]$\OT1/cmr/m/n/12 ) VoIP
  []
@@ -719,7 +728,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 143--143
  []
 
 
-Underfull \hbox (badness 5817) in paragraph at lines 143--144
+Underfull \hbox (badness 8189) in paragraph at lines 143--144
 []\OT1/cmr/m/n/12 ($\OML/cmm/m/it/12 A[]$\OT1/cmr/m/n/12 ) Kom-plett
  []
 
@@ -844,16 +853,16 @@ File: grafiken/mitvadundrtpsip.eps Graphic file (type eps)
 <grafiken/mitvadundrtpsip.eps>) [116] (kapitel/kapitel_conclusion.tex
 Kapitel 10.
 
-Overfull \hbox (6.73894pt too wide) in paragraph at lines 14--15
-\OT1/cmr/m/n/12 SIP Pro-to-koll nicht nur als rei-nes Si-gna-li-sie-rungs-pro-t
-o-koll f[]ur Sprach[]ubertragungen
+Overfull \hbox (12.18462pt too wide) in paragraph at lines 10--11
+[][]\OT1/cmr/m/n/12 In die-ser Ar-beit wer-den ge-nau die-se Un-zul[]angl[]angl
+ichkeiten adres-siert und L[]osungen
  []
 
 [117
 
 
 
-]) [118] (Main.bbl
+] [118]) [119] (Main.bbl
 Underfull \hbox (badness 6063) in paragraph at lines 49--54
 [][]\OT1/cmr/m/sc/12 Arango\OT1/cmr/m/n/12 , M. ; \OT1/cmr/m/sc/12 Du-gan\OT1/c
 mr/m/n/12 , A. ; \OT1/cmr/m/sc/12 El-liott\OT1/cmr/m/n/12 , I. ; \OT1/cmr/m/sc/
@@ -866,7 +875,7 @@ Underfull \hbox (badness 3078) in paragraph at lines 49--54
 -col (MG-CP).  In:
  []
 
-[119
+[120
 
 
 
@@ -882,7 +891,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 198--204
 ]Studien[]-
  []
 
-[120]
+[121]
 Underfull \hbox (badness 10000) in paragraph at lines 220--224
 [][]\OT1/cmr/m/sc/12 Gebhardt\OT1/cmr/m/n/12 , Ni-ko-laus:  irr-Klang.  In:
  []
@@ -893,7 +902,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 226--230
 ne.  In:
  []
 
-[121]
+[122]
 Underfull \hbox (badness 10000) in paragraph at lines 338--344
 [][]\OT1/cmr/m/sc/12 Ipoque\OT1/cmr/m/n/12 :  In-ter-net Stu-die 2007.  In:
  []
@@ -910,7 +919,7 @@ Underfull \hbox (badness 1062) in paragraph at lines 368--373
 \OT1/cmr/m/n/12 , Gwen-dal:  So-lip-sis: A Mas-si-ve-ly Multi-
  []
 
-[122]
+[123]
 Underfull \hbox (badness 1112) in paragraph at lines 449--456
 [][]\OT1/cmr/m/sc/12 Miladinovic\OT1/cmr/m/n/12 , I. ; \OT1/cmr/m/sc/12 Stad-le
 r\OT1/cmr/m/n/12 , J.:  Mul-ti-par-ty Con-fe-rence Si-gnal-ling
@@ -928,7 +937,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 493--497
 In:
  []
 
-[123]
+[124]
 Underfull \hbox (badness 10000) in paragraph at lines 527--531
 [][]\OT1/cmr/m/sc/12 Reichswald\OT1/cmr/m/n/12 , R. ; \OT1/cmr/m/sc/12 M[]oslei
 n\OT1/cmr/m/n/12 , K. ; \OT1/cmr/m/sc/12 Sa-chen-ba-che-rand\OT1/cmr/m/n/12 , K
@@ -941,7 +950,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 540--544
 In:
  []
 
-[124]
+[125]
 Underfull \hbox (badness 3229) in paragraph at lines 681--686
 [][]\OT1/cmr/m/sc/12 Schulzrinne\OT1/cmr/m/n/12 , H. ; \OT1/cmr/m/sc/12 Cas-ner
 \OT1/cmr/m/n/12 , S. ; \OT1/cmr/m/sc/12 Fre-de-rick\OT1/cmr/m/n/12 , R. ; \OT1/
@@ -954,13 +963,13 @@ Underfull \hbox (badness 1259) in paragraph at lines 681--686
 ns.  In:
  []
 
-[125]
+[126]
 Underfull \hbox (badness 10000) in paragraph at lines 757--761
 [][]\OT1/cmr/m/sc/12 SonyEntertainment\OT1/cmr/m/n/12 :  Play-Sta-ti-on Ho-me. 
  In:
  []
 
-[126]
+[127]
 Underfull \hbox (badness 10000) in paragraph at lines 782--786
 [][]\OT1/cmr/m/sc/12 TeamSpeakSystemsGmbH\OT1/cmr/m/n/12 :  Teams-peak.  In:
  []
@@ -977,7 +986,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 825--829
 In:
  []
 
-) [127] (kapitel/erklaerung.tex) [128
+) [128] (kapitel/erklaerung.tex) [129
 
 
 ]
@@ -997,12 +1006,12 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 6625 strings out of 95338
- 94793 string characters out of 1184228
- 207012 words of memory out of 1500000
- 9599 multiletter control sequences out of 110000
+ 6621 strings out of 95341
+ 94818 string characters out of 1184307
+ 207294 words of memory out of 1500000
+ 9593 multiletter control sequences out of 110000
  10300 words of font info for 37 fonts, out of 1200000 for 2000
  14 hyphenation exceptions out of 8191
  36i,11n,37p,2156b,1115s stack positions out of 5000i,500n,10000p,200000b,5000s
 
-Output written on Main.dvi (140 pages, 494288 bytes).
+Output written on Main.dvi (141 pages, 499460 bytes).

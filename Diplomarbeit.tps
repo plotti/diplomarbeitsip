@@ -34,7 +34,7 @@ cxMin=10
 [Frame0_View0,0]
 Cursor.row=0
 Cursor.column=0
-TopSubLine=227
+TopSubLine=0
 
 [Frame1]
 Columns=1
@@ -92,7 +92,7 @@ cxMin=10
 [Frame2_View0,0]
 Cursor.row=201
 Cursor.column=0
-TopSubLine=485
+TopSubLine=0
 
 [Frame3]
 Columns=1
@@ -206,9 +206,9 @@ cxCur=751
 cxMin=10
 
 [Frame6_View0,0]
-Cursor.row=33
-Cursor.column=0
-TopSubLine=97
+Cursor.row=48
+Cursor.column=230
+TopSubLine=120
 
 [Frame7]
 Columns=1
@@ -295,7 +295,7 @@ cxMin=10
 [Frame9_View0,0]
 Cursor.row=308
 Cursor.column=111
-TopSubLine=733
+TopSubLine=0
 
 [Frame10]
 Columns=1
@@ -372,15 +372,15 @@ Class=CLatexEdit
 Document=kapitel\kapitel_conclusion.tex
 
 [Frame12_Row0]
-cyCur=554
+cyCur=310
 cyMin=10
 
 [Frame12_Col0]
-cxCur=902
+cxCur=797
 cxMin=10
 
 [Frame12_View0,0]
-Cursor.row=9
-Cursor.column=0
-TopSubLine=9
+Cursor.row=5
+Cursor.column=327
+TopSubLine=0
 
