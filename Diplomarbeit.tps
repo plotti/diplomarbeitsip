@@ -206,9 +206,9 @@ cxCur=751
 cxMin=10
 
 [Frame6_View0,0]
-Cursor.row=48
-Cursor.column=230
-TopSubLine=120
+Cursor.row=31
+Cursor.column=0
+TopSubLine=83
 
 [Frame7]
 Columns=1
@@ -380,7 +380,7 @@ cxCur=797
 cxMin=10
 
 [Frame12_View0,0]
-Cursor.row=5
-Cursor.column=327
-TopSubLine=0
+Cursor.row=29
+Cursor.column=673
+TopSubLine=95
 
