@@ -5,7 +5,7 @@ Version=2
 [SessionInfo]
 ActiveTab=0
 FrameCount=13
-ActiveFrame=12
+ActiveFrame=2
 
 [Frame0]
 Columns=1
@@ -68,8 +68,8 @@ TopSubLine=11
 [Frame2]
 Columns=1
 Rows=1
-Flags=0
-ShowCmd=1
+Flags=2
+ShowCmd=3
 MinPos.x=-1
 MinPos.y=-1
 MaxPos.x=-4
@@ -82,17 +82,17 @@ Class=CLatexEdit
 Document=kapitel\kapitel_folgerungundziele.tex
 
 [Frame2_Row0]
-cyCur=346
+cyCur=554
 cyMin=10
 
 [Frame2_Col0]
-cxCur=751
+cxCur=909
 cxMin=10
 
 [Frame2_View0,0]
-Cursor.row=201
+Cursor.row=68
 Cursor.column=0
-TopSubLine=0
+TopSubLine=113
 
 [Frame3]
 Columns=1
@@ -322,9 +322,9 @@ cxCur=787
 cxMin=10
 
 [Frame10_View0,0]
-Cursor.row=0
-Cursor.column=0
-TopSubLine=0
+Cursor.row=68
+Cursor.column=181
+TopSubLine=160
 
 [Frame11]
 Columns=1
@@ -358,8 +358,8 @@ TopSubLine=0
 [Frame12]
 Columns=1
 Rows=1
-Flags=2
-ShowCmd=3
+Flags=0
+ShowCmd=1
 MinPos.x=-1
 MinPos.y=-1
 MaxPos.x=-4
@@ -372,15 +372,15 @@ Class=CLatexEdit
 Document=kapitel\kapitel_conclusion.tex
 
 [Frame12_Row0]
-cyCur=310
+cyCur=346
 cyMin=10
 
 [Frame12_Col0]
-cxCur=797
+cxCur=762
 cxMin=10
 
 [Frame12_View0,0]
-Cursor.row=29
-Cursor.column=673
-TopSubLine=95
+Cursor.row=0
+Cursor.column=0
+TopSubLine=0
 
