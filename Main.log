@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592-1.40.4 (MiKTeX 2.7) (preloaded format=latex 2008.3.3)  15 MAY 2008 18:08
+This is pdfTeX, Version 3.141592-1.40.7 (MiKTeX 2.7) (preloaded format=latex 2008.3.12)  16 MAY 2008 17:10
 entering extended mode
 **Main.tex
 (Main.tex
@@ -298,19 +298,19 @@ Package: booktabs 2005/04/14 v1.61803 publication quality tables
 \@thisrulewidth=\dimen140
 )
 ("C:\Programme\MiKTeX 2.7\tex\latex\microtype\microtype.sty"
-Package: microtype 2008/02/29 v2.3a Micro-typography with pdfTeX (RS)
+Package: microtype 2007/12/23 v2.3 Micro-typography with pdfTeX (RS)
 \MT@toks=\toks23
 \MT@count=\count119
-LaTeX Info: Redefining \lsstyle on input line 1542.
-LaTeX Info: Redefining \lslig on input line 1542.
+LaTeX Info: Redefining \lsstyle on input line 1591.
+LaTeX Info: Redefining \lslig on input line 1591.
 \MT@outer@space=\skip58
-LaTeX Info: Redefining \textls on input line 1543.
+LaTeX Info: Redefining \textls on input line 1592.
 \MT@outer@kern=\dimen141
-LaTeX Info: Redefining \textmicrotypecontext on input line 2070.
+LaTeX Info: Redefining \textmicrotypecontext on input line 2119.
 Package microtype Info: Loading configuration file microtype.cfg.
 
 ("C:\Programme\MiKTeX 2.7\tex\latex\microtype\microtype.cfg"
-File: microtype.cfg 2008/02/29 v2.3a microtype main configuration file (RS)
+File: microtype.cfg 2007/12/23 v2.3 microtype main configuration file (RS)
 ))
 ("C:\Programme\MiKTeX 2.7\tex\latex\ltxmisc\url.sty"
 \Urlmuskip=\muskip11
@@ -358,8 +358,8 @@ Package microtype Info: No adjustment of interword spacing.
 Package microtype Info: No adjustment of character kerning.
 
 ("C:\Programme\MiKTeX 2.7\tex\latex\microtype\mt-cmr.cfg"
-File: mt-cmr.cfg 2008/02/29 v1.9a microtype config. file: Computer Modern Roman
- (RS)
+File: mt-cmr.cfg 2005/11/07 v1.9 microtype config. file: Computer Modern Roman 
+(RS)
 ) (kapitel/titel.tex
 File: grafiken/unilogo.eps Graphic file (type eps)
 
@@ -403,31 +403,31 @@ Class scrbook Info: You've told me to use the font selection of the element
 ]
 Class scrbook Info: You've told me to use the font selection of the element
 (scrbook)           `sectioning' that is an alias of element `disposition'
-(scrbook)            on input line 73.
+(scrbook)            on input line 72.
 Class scrbook Info: You've told me to use the font selection of the element
 (scrbook)           `sectioning' that is an alias of element `disposition'
-(scrbook)            on input line 99.
+(scrbook)            on input line 98.
+Class scrbook Info: You've told me to use the font selection of the element
+(scrbook)           `sectioning' that is an alias of element `disposition'
+(scrbook)            on input line 109.
  [4]
 Class scrbook Info: You've told me to use the font selection of the element
 (scrbook)           `sectioning' that is an alias of element `disposition'
-(scrbook)            on input line 110.
-Class scrbook Info: You've told me to use the font selection of the element
-(scrbook)           `sectioning' that is an alias of element `disposition'
-(scrbook)            on input line 136.
+(scrbook)            on input line 135.
 
 [5]
 Class scrbook Info: You've told me to use the font selection of the element
 (scrbook)           `sectioning' that is an alias of element `disposition'
-(scrbook)            on input line 177.
+(scrbook)            on input line 176.
 Class scrbook Info: You've told me to use the font selection of the element
 (scrbook)           `sectioning' that is an alias of element `disposition'
-(scrbook)            on input line 206.
+(scrbook)            on input line 205.
 Class scrbook Info: You've told me to use the font selection of the element
 (scrbook)           `sectioning' that is an alias of element `disposition'
-(scrbook)            on input line 217.
+(scrbook)            on input line 216.
 Class scrbook Info: You've told me to use the font selection of the element
 (scrbook)           `sectioning' that is an alias of element `disposition'
-(scrbook)            on input line 220.
+(scrbook)            on input line 219.
 )
 \tf@toc=\write3
  [6] (kapitel/stichwortverzeichnis.tex) [7
@@ -438,15 +438,10 @@ Class scrbook Info: You've told me to use the font selection of the element
 
 ])
 \tf@lof=\write4
- [9] (Main.lot
-Overfull \hbox (7.17389pt too wide) in paragraph at lines 8--8
- [][][] []\OT1/cmr/m/n/12 Eine Ge-gen[]uberstellung der Media-Richness Ei-gen-s
-chaf-ten von Spra- 
- []
-
-)
+ [9] (Main.lot)
 \tf@lot=\write5
- [10
+
+[10
 
 ] (kapitel/abkuerzungen.tex
 ! Argument of \@item has an extra }.
@@ -567,9 +562,9 @@ Overfull \hbox (23.74086pt too wide) in paragraph at lines 251--252
 Kapitel 3.
 File: grafiken/singlekanal-kommunikationsmodell.eps Graphic file (type eps)
 <grafiken/singlekanal-kommunikationsmodell.eps>
-Overfull \hbox (0.38142pt too wide) in paragraph at lines 15--16
-[]\OT1/cmr/m/n/12 Ubertragungskanals meh-re-re gleich-zei-ti-ge Au-diostr[]ome 
-zu []ubertragen. Dies f[]uhrte
+Overfull \hbox (64.49103pt too wide) in paragraph at lines 15--16
+[][]\OT1/cmr/m/n/12 Ein Gro-teil der St[]orungen re-sul-tiert aus der Un-taug-
+lich-keit ei-nes ein-zi-gen []Ubertragungskanals
  []
 
 [26
@@ -577,18 +572,29 @@ zu []ubertragen. Dies f[]uhrte
 
 
 ]
+Overfull \hbox (9.63232pt too wide) in paragraph at lines 21--22
+[][]\OT1/cmr/bx/n/12 St[]orungen durch In-ter-fe-ren-zen\OT1/cmr/m/n/12 : Durch
+ []Uberlagerung von meh-re-ren gleich-
+ []
+
+
+Overfull \hbox (1.29715pt too wide) in paragraph at lines 21--22
+\OT1/cmr/m/n/12 bis zu dem Punkt, an dem vie-le Spie-ler die Sprach-kom-mu-ni-k
+a-ti-on als st[]orend
+ []
+
 File: grafiken/multi-kommunikationsmodell.eps Graphic file (type eps)
- <grafiken/multi-kommunikationsmodell.eps> [27]
+<grafiken/multi-kommunikationsmodell.eps> [27]
 File: grafiken/ventrillo.eps Graphic file (type eps)
  <grafiken/ventrillo.eps>
 [28] [29] [30]
-Underfull \hbox (badness 10000) in paragraph at lines 102--103
-[]\OT1/cmr/m/n/12 nur mit Emo-ti-cons
- []
 
-[31] [32]
+Package natbib Warning: Citation `schulzrinnesomething...' on page 31 undefined
+ on input line 124.
+
+[31]
 File: grafiken/lautstaerke.eps Graphic file (type eps)
- <grafiken/lautstaerke.eps> [33] [34] [35] [36] [37]) [38]
+ <grafiken/lautstaerke.eps> [32] [33] [34] [35] [36] [37]) [38]
 (kapitel/kapitel_sip.tex
 Kapitel 4.
 [39
@@ -703,11 +709,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 141--141
  []
 
 
-Underfull \hbox (badness 1755) in paragraph at lines 141--142
-[]\OT1/cmr/m/n/12 ($\OML/cmm/m/it/12 A[]$\OT1/cmr/m/n/12 ) De-di-zier-te
- []
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 143--143
 []\OT1/cmr/m/n/12 ($\OML/cmm/m/it/12 A[]$\OT1/cmr/m/n/12 ) VoIP
  []
@@ -728,7 +729,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 143--143
  []
 
 
-Underfull \hbox (badness 8189) in paragraph at lines 143--144
+Underfull \hbox (badness 5817) in paragraph at lines 143--144
 []\OT1/cmr/m/n/12 ($\OML/cmm/m/it/12 A[]$\OT1/cmr/m/n/12 ) Kom-plett
  []
 
@@ -1018,12 +1019,12 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 6621 strings out of 95341
- 94818 string characters out of 1184307
- 207294 words of memory out of 1500000
- 9593 multiletter control sequences out of 110000
- 10300 words of font info for 37 fonts, out of 1200000 for 2000
+ 6631 strings out of 95338
+ 94942 string characters out of 1184228
+ 207393 words of memory out of 1500000
+ 9602 multiletter control sequences out of 110000
+ 10659 words of font info for 38 fonts, out of 1200000 for 2000
  14 hyphenation exceptions out of 8191
  36i,11n,37p,2156b,1115s stack positions out of 5000i,500n,10000p,200000b,5000s
 
-Output written on Main.dvi (141 pages, 500844 bytes).
+Output written on Main.dvi (141 pages, 501020 bytes).

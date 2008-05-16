@@ -50,26 +50,24 @@
 \contentsline {subsubsection}{Standardisierung}{25}
 \contentsline {chapter}{\numberline {3}Resultierende Probleme und Herausforderungen}{26}
 \contentsline {section}{\numberline {3.1}Mehrkanal Modell}{26}
-\contentsline {section}{\numberline {3.2}Gleichzeitige Interpersonelle und Massenkommunikation}{28}
+\contentsline {section}{\numberline {3.2}Gleichzeitige interpersonelle- und Massenkommunikation}{28}
 \contentsline {section}{\numberline {3.3}Erweitertes Audio Mixing}{30}
-\contentsline {section}{\numberline {3.4}Hohe Mediarichness}{30}
-\contentsline {subsection}{\numberline {3.4.1}Luft als Medium}{31}
-\contentsline {subsection}{\numberline {3.4.2}Proxemik als Steuerung von Konferenzen}{32}
-\contentsline {subsection}{\numberline {3.4.3}Art des Spiels}{33}
-\contentsline {section}{\numberline {3.5}Wahl des 3D Frameworks}{34}
-\contentsline {subsection}{\numberline {3.5.1}3D Spieleengines}{34}
-\contentsline {subsection}{\numberline {3.5.2}3D Engines}{34}
-\contentsline {subsubsection}{Irrlicht}{35}
-\contentsline {subsubsection}{Irrklang}{35}
-\contentsline {section}{\numberline {3.6}Wahl der VoIP Anwendung}{35}
-\contentsline {subsection}{\numberline {3.6.1}Serverbasierte Sprachkommunikationsl\"osungen}{36}
-\contentsline {subsubsection}{Ventrillo}{36}
-\contentsline {subsubsection}{Teamspeak}{36}
-\contentsline {subsubsection}{Mumble}{36}
-\contentsline {subsection}{\numberline {3.6.2}Dezentralisierte Sprachkommunikationsl\"osungen}{37}
-\contentsline {subsubsection}{Skype}{37}
-\contentsline {subsection}{\numberline {3.6.3}Instant Messanging Anwendungen}{37}
-\contentsline {subsection}{\numberline {3.6.4}SIP Protokoll}{37}
+\contentsline {section}{\numberline {3.4}Methaphern zur Sprach\"ubertragung}{30}
+\contentsline {section}{\numberline {3.5}Proxemik als Steuerung von Konferenzen}{31}
+\contentsline {section}{\numberline {3.6}Wahl der Art des Prototyps}{33}
+\contentsline {subsection}{\numberline {3.6.1}3D Spieleengines}{34}
+\contentsline {subsection}{\numberline {3.6.2}3D Engines}{34}
+\contentsline {subsubsection}{\textit {Irrlicht}}{34}
+\contentsline {subsubsection}{\textit {Irrklang}}{35}
+\contentsline {section}{\numberline {3.7}Wahl der VoIP Anwendung}{35}
+\contentsline {subsection}{\numberline {3.7.1}Serverbasierte Sprachkommunikationsl\"osungen}{35}
+\contentsline {subsubsection}{\textit {Ventrillo}}{35}
+\contentsline {subsubsection}{\textit {Teamspeak}}{36}
+\contentsline {subsubsection}{\textit {Mumble}}{36}
+\contentsline {subsection}{\numberline {3.7.2}Dezentralisierte Sprachkommunikationsl\"osungen}{36}
+\contentsline {subsubsection}{\textit {Skype}}{37}
+\contentsline {subsection}{\numberline {3.7.3}Instant Messanging Anwendungen}{37}
+\contentsline {subsection}{\numberline {3.7.4}SIP Protokoll}{37}
 \contentsline {chapter}{\numberline {4}VoIP Grundlagen}{39}
 \contentsline {section}{\numberline {4.1}Protokolle zur Echtzeitkommunikation}{39}
 \contentsline {subsection}{\numberline {4.1.1}Einfaches VoIP System}{41}
