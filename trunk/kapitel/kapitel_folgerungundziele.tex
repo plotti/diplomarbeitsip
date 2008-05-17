@@ -1,4 +1,4 @@
-\chapter{Resultierende Probleme und Herausforderungen}
+\chapter{Resultierende Probleme und Verbesserungsvorschläge}
 
 Wie bereits die vorgestellten Studien der Text- und Sprachkommunikation im Kapitel 2    gezeigt haben, besteht an vielen Stellen noch ein großer Bedarf die bisherigen Unzulänglichkeiten der Kommunikationsmedien zu beheben. In diesem Kapitel sollen die bisher dargestellten Grundlagen der Kommunikation genutzt werden, um die dargestellten Probleme zu einzuordnen, gemeinsame Ursachen zu finden und Verbesserungsvorschläge abzuleiten. Der bisherige theoretische Ansatz soll helfen neue Konzepte zu entwickeln und aus diesen sukzessive praktische Empfehlungen für eine bessere Sprach\-kommunikations\-lösung abzugeben. In der zweiten Hälfte des Kapitels werden grundlegende Entscheidungen zur Wahl der Spieleumgebung, Audioumgebung und möglichen VoIP Lösungen getroffen.
 
@@ -149,7 +149,7 @@ Im besonderen bedeutet es, dass der Raum um den Spieler in drei Distanzzonen ein
 	\label{fig:lautstaerke}
 \end{figure}
 
-\section{Wahl der Art des Prototyps}
+\section{Wahl der Art des Spieleprototyps}
 Eine in Kapitel 2 vorgestellte klassische Unterteilung von Spielen in Spielegenre zeigt, dass in Abhängigkeit vom Genre des Spiels der Kommunikationsaspekt unterschiedlich stark ausgeprägt ist. Da gerade 3D-Actionspiele und Echtzeit-Rollenspiele den größten Bedarf an einer ausgeprägten Sprachkommunikation haben, soll auch der Prototyp des Spiels in einer 3D Umgebung stattfinden. 
  Der Spieler soll die Möglichkeit haben in einer virtuellen, detaillierten und realistischen 3D Welt zu navigieren und mit anderen Spielern in Interaktion treten zu können.
 
@@ -157,88 +157,8 @@ Im Viereck aus Spielerlebniss, Spielsimulation, erzählerischem Aspekt und der Sp
  
  %BILD der Einordnung des Spiels.
  %BILD der Einordnung eines Actionspiels
- %Bild der Einordnung eines Rollenspiels
- 
-\subsection{3D Spieleengines}
-Da die Entwicklung eines realistisches Spieles weit über das Thema der Arbeit hinaus geht, und diese Aufgabe normalerweise von ganzen Teams über mehrere Monate oder Jahre bewältigt wird, sollen nach Möglichkeit bestehende Komponenten eingesetzt werden.
+ %Bild der Einordnung eines Rollenspiels 
 
-Deswegen habe ich mich entschlossen bestehende Frameworks zu nutzen. Diese sollten dazu eingesetzt werden einen Prototypen zu erstellen, in dem ein Avatar in einer möglichst realistischen 3D Umgebung gesteuert werden kann. 
-
-Viele der bestehenden Frameworks für 3D orientierte Spiele basieren meist auf Eigenenwicklungen großer Softwarestudios wie \textit{Idsoftware}\cite{idsof08} oder \textit{Epic Games} \cite{unreal2008}. Diese setzten Standards, indem sie den Quellcode ihrer bisher erfolgreichsten Spiele wie z.B.\textit{ Quake II}, \textit{Quake III} oder \textit{Unreal I} öffentlich anboten. Da meist mit dem Aufkommen einer neuen Generation kommerzieller Titel die Entwicklung eines neuen Frameworks mit einher geht, existieren von den Haupvertretern großer Frameworks gleich mehrere Versionen und Derrivate. 
-
-Seit einigen Jahren sind auch komplette Neuentwicklungen wie \textit{Sauerbraten} \cite{sauerbraten08} oder \textit{Nexuiz} \cite{nexuiz08} speziell für 3D-Actionspiele geschrieben worden. Obwohl diese eine opulente Grafik, ausgereifte Spielbalance und durchdachte Steuerung bieten, ist die Modifikation der darunter liegenden Hauptbestandteile schwer. Technische Details der Netzwerk- und Audiokomponenten oder der eigentlichen Spielelogik sind teilweise nicht ausführlich dokumentiert und machen Änderungen sehr mühsam oder sehen diese gar nicht vor. 
-
-\subsection{3D Engines}
-Eine Alternative zu reinen Spiele-Engines bieten offene generische 3D-Engines, deren Fokus nicht auf der kompletten Entwicklung eines speziellen Spiels liegt. Stattdessen sollen sie ermöglichen möglichst komfortabel 3D-Grafiken interaktiv darzustellen. Dazu werden meist die Details von Systembibliotheken wie \textit{Direct3D} oder \textit{OpenGL} abstrahiert und dem Entwickler ein Interface angeboten, das auf höheren Abstraktionsklassen basiert. Bekannte Vertreter sind \textit{Ogre3D} \cite{ogre08} oder \textit{Irrlicht} \cite{irrlicht08}. 
-
-\subsubsection{\textit{Irrlicht}}
-\textit{Irrlicht} ist ein einfaches gut dokumentiertes open source Framework das in C++ geschrieben wurde. Alle üblichen 3D Features wie \textit{Collision Detection}, Animationen, \textit{Shading} und Texturen werden sowohl unter \textit{Windows}, \textit{Linux} als auch \textit{Mac OS} unterstützt. Aufgrund der bestehenden Arbeit von Triebel \cite{triebel07g}, war es mir möglich bereits bestehende Konzepte zu verwenden und somit eine schnelle Entwicklung des Prototyps zu gewährleisten.
-
-\subsubsection{\textit{Irrklang}}
-Speziell für die Sprachkommunikation musste das 3D-Framework um eine Audio-Engine erweitert werden, die eine gezielte Audioausgabe ermöglicht. Speziell für Irrlicht existiert \textit{IrrKlang}\cite{irrklang08}, eine einfache plattform-übergreifende Audiobibliothek. Sie unterstützt Audioverarbeitung auf der untersten Ebene, realistisches \textit{3D-Audio-Rendering}, \textit{Multithreading} und kann über \textit{Plugins} erweitert werden. Zusätzlich verfügt sie über eine einfache API, die eine schnelle Einarbeitung und Entwicklung ermöglicht. All diese Gründe waren ausschlaggebend diese Bibliothek zu benutzen. 
-
-\section{Wahl der VoIP Anwendung}
-
-Zwecks der Implementierung einer Sprachkommunikationslösung stehen mehrere Alternativen zur Verfügung: 
-
-\begin{itemize}
-	\item Bestehende Drittanbieter Lösungen können abgeändert werden, um den gestellten Ansprüchen zu genügen.
-	\item Existierende VoIP Programme können durch Nutzung ihrer API genutzt werden, um während dem Spiel Audioinformationen zu übertragen.
-	\item Bestehende Bibliotheken oder \textit{Protokollstacks}, können genutzt werden um eigene VoIP Lösungen zu entwickeln.
-\end{itemize}
-
-Bisher werden im Spielebereich fast ausschließlich serverbasierte Drittanbieter Lösungen eingesetzt. Sie alle bieten Unterstützung für effiziente Audiocodecs und besitzen einen vergleichbaren Funktionsumfang. Im privaten VoIP Telefoniebereich werden oft kommerzielle Produkte wie \textit{Skype} eingesetzt. Es existieren kaum offene Sprachkommunikationslösungen. Gleichzeitig existieren viele bestehende offene Protokollstacks, mit denen eigene Lösungen implementiert werden können.
-
-\subsection{Serverbasierte Sprachkommunikationslösungen}
-%http://www.tentonhammer.com/index.php?q=node/102
-
-\subsubsection{\textit{Ventrillo}}
-%http://www.ventrilo.com/
-Die unter Spielern beliebteste Lösung \textit{Ventrillo} (Version 3.0.1) \cite{ventrillo08} ist eine serverbasierte proprietäre VoIP Anwendung. Die Software besteht aus einem Server- und Client-Modul, wobei die Clientsoftware frei erhältlich ist, für die Serverkomponente jedoch eine kostenpflichtige Lizenz zu erwerben ist. Benutzer des Ventrillo Clients melden sich vor Beginn des eigentlichen Spieles auf einem der kostenpflichtigen Ventrillo Server an und können dort einen Kanal betreten. Benutzer des gleichen Kanals auf dem gleichen Server können sich gegenseitig hören. Durch das Lizenzmodell ist es nicht möglich im privaten Bereich eigene Server zu betreiben oder die Software nach eigenen Vorstellungen anzupassen. 
-
-\subsubsection{\textit{Teamspeak}}
-%http://www.goteamspeak.com
-Teamspeak (Version 2.0.33.7) \cite{teamspeak08}ist ebenfalls ein serverbasiertes proprietäres VoIP Programm.Die Software besteht ebenfalls aus Server und Client Komponenten. Benutzer des kostenlosen \textit{Teamspeak} Clients können sich mit dem kostenpflichtigem \textit{TeamSpeak} Server ihrer Wahl verbinden und dort einen Kanal betreten. Benutzer des gleichen Kanals auf dem gleichen Server können gegenseitig gehört werden. Zusätzlich existieren Plugins die es erlauben Kanäle während der Spielesitzung per Tastaturkombination zu wechseln. 
-
-
-\subsubsection{\textit{Mumble}}
-%http://mumble.sourceforge.net
-\textit{Mumble} (Version 1.1.3) ist eine offene serverbasierte VoIP Anwendung, die primär von Computerspielern für Sprachkommunikation genutzt wird. \textit{Mumble} versucht die soziale Komponente der Sprachkommunikation zu betonen, indem es für den Endanwender sehr wenige administrative Elemente besitzt und das Hauptaugenmerk auf der Sprachqualität liegt. Seine Verwendung gleicht den anderen bisher vorgestellten Programmen.
-
-Obwohl die kommerziellen Lösungen bei einer optimalen Konfiguration hunderte von Benutzern unterstützen können und eine gute Sprachqualität bieten haben sie den entscheidenden Nachteil, dass sie nicht modifizierbar sind, die Serverkomponenten nicht frei verfügbar sind, und somit deren Nutzung für eine Umsetzung des Prototypen nicht brauchbar ist. 
-
-\textit{Mumble} ist zwar als einziges dank seiner freien Lizenz modifizierbar, jedoch aufgrund der komplizierten Serverkonfiguration und einem komplexen Rechtesystem, das auf Gruppen und Regeln basiert, nicht einfach an die neuen Konzepte anzupassen. 
-Zusätzlich zu den vorhandenen Problemen sind die drei Lösungen untereinander nicht kompatibel und bieten somit nur Insellösungen. 
-
-\subsection{Dezentralisierte Sprachkommunikationslösungen}
-
-Prinzipiell existiert eine Myriade an verschiedenen VoIP Programmen, die alle als dezentralisierte Lösungen eingesetzt werden können. Ein Teil der möglichen Kandidaten wird später in Kapitel 7 besprochen. Eine tatsächlich dezentrale Architektur kann jedoch bisher nur \textit{Skype} liefern. 
-
-\subsubsection{\textit{Skype}}
-
-Die Skype Technologie ermöglicht als einziges ein völlig dezentrales VoIP. Der Einsatz des Skype Dienstes und Clients ist kostenlos. Über das Skype-API ist es auch für externe Programme möglich, auf die Funktionalitäten des Skype-Clients und Teilen des Netzwerkes zuzugreifen.
-
-Trotz der Vorteile bietet Skype auch einige Nachteile: Da das Skype Protokoll proprietär ist, kann es nur mit der originalen Skype-Software genutzt werden. In der kostenlosen Version sind nur Konferenzen mit bis zu 5 gleichzeitigen Teilnehmern möglich. In einer kostenpflichtigen Version werden nur bis zu 10 gleichzeitige Konferenzteilnehmer unterstützt. 
-
-Beide Versionen jedoch bieten keine Kontrolle über die einzelnen Audioströme auf der Clientseite. So kann man nur die Summe aller Audioströme empfangen. Die Clients sind nicht in der Lage die Lautstärke einzelner Teilnehmer zu ändern noch einzelnen Audioströme komplett stumm zuschalten. Zudem bietet die Skype API nur zwei spezielle Interfaces an um entweder Anrufe zu tätigen oder Nachrichten zu verschicken. Eine Architektur für weitere Dienste ist nicht vorgesehen \cite{schulzrinne05}.
-
-Somit bietet Skype als einziger tatsächlicher dezentralisierter Client nicht alle Eigenschaften um als mögliche Ausgangsgrundlage zu dienen. 
-
-
-\subsection{Instant Messanging Anwendungen}
-Andere peer-to-peer Programme wie Microsoft Netmeeting, Microsoft Messenger, GoogleTalk sind nicht modifizierbar und bieten keinerlei Konferenzmöglichkeiten. 
-
-\subsection{SIP Protokoll}
-Das im folgenden Kapitel vorgestellte SIP Protokoll erfüllt gleich mehrere Anforderungen an den Prototypen. Dadurch dass SIP ein sehr generisches offenes Protokoll ist, kann es kann benutzt werden, um beliebige Sessions mit einem oder mehreren Teilnehmern zu verwalten. Dabei ist es nicht auf Internet-Telefonie beschränkt, und kann Sessions zwischen beliebige Multimediaströmen, Konferenzen, Computerspiele usw. herstellen.Zahlreiche standardisierungs Organisationen wie IETF, PINT, 3GPP, International Packet Communications Consortium, IMTC und PacketCable unterstützen bereits den Einsatz von SIP.
-%http://www.cs.columbia.edu/sip/
-In der open source Gemeinde wird das SIP Protokoll auch zunehmend unterstützt. So existieren bereits etliche Clientanwendungen als auch zentrale Komponenten wie Proxys und Registrare, die der zunehmenden globalen Verbreitung von SIP dienen. Zusätzlich werden etliche SIP Stacks, Client Anwendungen und SDKs bishin zu Komplettlösungen angeboten. Es existieren auch Referenzimplementierungen, wie SIP JAIN-SIP, welches vom National Insitute of Standards and Technology (NIST) entwickelt wurde, die sowohl in kommerziellen Projekten aber auch zu Forschungszwecken eingesetzt werden. Der wichtigste Grund für den Einsatz von SIP ist, dass es alle Anforderungen für die Umsetzung des Protyps unterstützt:
-
-\begin{itemize}
-	\item Generische Einsatzmöglichkeiten	auch für Computerspiele
-	\item Verwaltung mehrerer Audioströme
-	\item Kontrolle über jeden einzelnen Audiostrom
-	\item Serverbasierte Lösungen
-	\item Dezentralisierte Lösungen
-	\item Offener Standard
-\end{itemize}
-
+\begin{sloppypar}
+Bevor jedoch eine konkrete Umsetzung erläutert wird werden im darauf folgenden Kapitel Grundlagen im Bereich der IP-Telefonie vermittelt.	
+\end{sloppypar}

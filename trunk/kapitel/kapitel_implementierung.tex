@@ -1,51 +1,168 @@
 \chapter{Implementierung}
 
+Bei der Implementierung bestand die Herausforderung darin eine virtuelle 3D-Welt zu erzeugen und sie mit VoIP Funktionalität zu kombinieren. Dabei sollten die einzelnen Komponenten so gewählt werden, dass die in Kapitel 3 präsentierten Verbesserungsvorschläge für eine bessere Sprachkommunikation tatsächlich praktisch umgesetzt werden können. Außerdem sollten die gewählten Komponenten auch die in Kapitel 6 gewählte Architektur unterstützen.
+ 
+\section{3D Umgebung}
+Da die Entwicklung eines realistisches Spieles weit über das Thema der Arbeit hinaus geht, und diese Aufgabe normalerweise von ganzen Teams über mehrere Monate oder Jahre bewältigt wird, sollen nach Möglichkeit bestehende Komponenten eingesetzt werden.
 
-\section{Entwicklungsumgebung}
-\subsection{Programmiersprache}
-// TODO
+Deswegen habe ich mich entschlossen bestehende Frameworks zu nutzen. Diese sollten dazu eingesetzt werden einen Prototypen zu erstellen, in dem ein Avatar in einer möglichst realistischen 3D Umgebung gesteuert werden kann. 
 
-\subsection{Build und Testumgeung}
+Viele der bestehenden Frameworks für 3D orientierte Spiele basieren meist auf Eigenenwicklungen großer Softwarestudios wie \textit{Idsoftware} \footnote{IdSoftware, Version 21.03.2008, http://www.idsoftware.com/} oder \textit{Epic Games} \footnote{Epic Games, Version 21.03.2008, http://www.unrealtechnology.com}. Diese setzten Standards, indem sie den Quellcode ihrer bisher erfolgreichsten Spiele wie z.B.\textit{Quake II}, \textit{Quake III} oder \textit{Unreal I} öffentlich anboten. Da meist mit dem Aufkommen einer neuen Generation kommerzieller Titel die Entwicklung eines neuen Frameworks mit einher geht, existieren von den Haupvertretern großer Frameworks gleich mehrere Versionen und Derrivate \footnote{Wikipedia, Version: 21.03.2008,  http://en.wikipedia.org/wiki/Quake\_series}. 
 
-//TODO \cite{schulzrinne05} -- Peer-to-Peer SIP Assumptions
+Seit einigen Jahren sind auch komplette Neuentwicklungen wie \textit{Sauerbraten} \footnote{W. Oortmerssen, Version 21.03.2008, http://sauerbraten.org} oder \textit{Nexuiz} \footnote{Alientrap, Version 21.03.2008, http://www.alientrap.org/nexuiz/} speziell für 3D-Actionspiele geschrieben worden. Obwohl diese eine opulente Grafik, ausgereifte Spielbalance und durchdachte Steuerung bieten, ist die Modifikation der darunter liegenden Hauptbestandteile schwer. Technische Details der Netzwerk- und Audiokomponenten oder der eigentlichen Spielelogik sind teilweise nicht ausführlich dokumentiert und machen Änderungen sehr mühsam oder sehen diese gar nicht vor. 
 
-Um eine funktionierende Implementierung in kürzester Zeit umzusetzen, habe ich einige existierende offene SIP Stacks in Betracht gezogen.
+\subsection{3D Engines}
+Eine Alternative zu reinen Spiele-Engines bieten offene generische 3D-Engines, deren Fokus nicht auf der kompletten Entwicklung eines speziellen Spiels liegt. Stattdessen sollen sie ermöglichen möglichst komfortabel 3D-Grafiken interaktiv darzustellen. Dazu werden meist die Details von Systembibliotheken wie \textit{Direct3D} oder \textit{OpenGL} abstrahiert und dem Entwickler ein Interface angeboten, das auf höheren Abstraktionsklassen basiert. Bekannte Vertreter sind \textit{Ogre3D} \footnote{TheOGRETeam, Version. 22.03.2008,  http://www.ogre3d.org/} oder \textit{Irrlicht} \footnote{N. Gebhardt, Version. 22.03.2008, http://irrlicht.sourceforge.net/}. 
 
-\subsection{SIP Server}
-Für den Einsatz als Server bieten sich zwei große Pakete an die beide den SIP Standard nach RFC 3265 unterstützen. 
-Asterisk (Version 1.4.19) unterstützt Voice-over-IP mit unterschiedlichen Protokollen  darunter sowohl SIP als auch das H323 Protokoll und bietet alle Möglichkeiten einer Anbindung an das Telefonnetz. 
-Die Serveranwendung OpenSer (Version 1.3.1) bietet ähnliche Funktionalität kann als SIP-Proxy, Registrar, aber auch als Location- und Application-Server betrieben werden und bietet zusätzlich das Unterstüztung für das SIP-SIMPLE Protokoll, was den Ausschlag gegeben hat diesen SIP Server zu benutzen. OpenSER ist sowohl von eingebetteten System wie DSL-Routern bis zu großen Installationen mit mehreren Millionen Benutzern bei Internet Service Providern flexibel einsetzbar.
-Darüber hinaus existieren noch etliche open source als auch proprietäre SIP Server Lösungen, die hier nicht weiter erläutert werden. 
+\subsubsection{\textit{Irrlicht}}
+\textit{Irrlicht} ist ein einfaches gut dokumentiertes open source Framework das in C++ geschrieben wurde. Alle üblichen 3D Features wie \textit{Collision Detection}, Animationen, \textit{Shading} und Texturen werden sowohl unter \textit{Windows}, \textit{Linux} als auch \textit{Mac OS} unterstützt. Aufgrund der bestehenden Arbeit von Triebel \cite{triebel07g}, war es mir möglich bereits bestehende Konzepte zu verwenden und somit eine schnelle Entwicklung des Prototyps zu gewährleisten.
 
-\subsection{Existierende SIP Clients}
-%Linux
-%http://sourceforge.net/projects/kphone
-%www.linphone.org
-%Windows
-%www.xten.com 
-%http://www.minisip.org
-%http://gizmo5.com/
+\subsubsection{\textit{Irrklang}}
+Speziell für die Sprachkommunikation musste das 3D-Framework um eine Audio-Engine erweitert werden, die eine gezielte Audioausgabe ermöglicht. Speziell für Irrlicht existiert \textit{IrrKlang} \footnote{N. Gebhardt, Version 22.03.2008, http://www.ambiera.com/irrklang/index.html}, eine einfache plattform-übergreifende Audiobibliothek. Sie unterstützt Audioverarbeitung auf der untersten Ebene, realistisches \textit{3D-Audio-Rendering}, \textit{Multithreading} und kann über \textit{Plugins} erweitert werden. Zusätzlich verfügt sie über eine einfache API, die eine schnelle Einarbeitung und Entwicklung ermöglicht. All diese Gründe waren ausschlaggebend diese Bibliothek zu benutzen. 
 
-Bei den SIP Clients existiert mittlerweile eine Vielzahl an speziellen ausgereiften kostenlosen Softphone Lösungen Lösungen. Einige der bekanntesten open source Softphones für Linux und Windows sind das Ekiga, KPhone, Linophone oder Minisip. Bei diesen Softphones handelt es sich um kostenlose Projekte die frei eingesetzt und modifiziert werden können. Zusätzlich existieren zwar freie Softphones, die von Infrastruktur Betreibern kostenlos werden um den eigenen Marktanteil am VoIP Markt zu erhöhen. Dazu gehören Programme wie X-Lite, Gizmo5 oder OpenWengo, deren Einsatz meist mit der Nutzung der Infrastruktur eines bestimmten Betreibers empfohlen oder vorgesehen wird. Zusätzlich zu kompletten Softphones existieren Plattform-übergreifende SIP Stacks, die die Funktionalität von SIP in größeren Anwendungen ermöglichen sollen. Dazu zählen Stacks wie OpenSipStack, sipXtackLib, reSIProcate oder PJSIP.Eine ausführliche Übersicht über viele der auf dem Markt erhältlichen SIP Clients und Server Anwendungen findet sich unter \cite{sipsoftware08}.
+\section{VoIP Lösung}
 
-\subsubsection{Pjsip}
-Meine persönliche Wahl fiel aus den folgenden Gründen auf den offenen SIP Stack PJSIP:
+Zwecks der Implementierung einer Sprachkommunikationslösung stehen mehrere Alternativen zur Verfügung: 
+
 \begin{itemize}
-	\item Platformunabhängigkeit
-	\item Mögliche Integration mit Irrlicht wegen C und C++ als Programiersprache
-	\item Gute Dokumentation 
-	\item Unterstützung des SIP und SIP-SIMPLE Standards 
-	\item Unterstützung für STUN, TURN und ICE
-	\item Unterstützung von Asterisk und Openser
-	\item Möglicher Einsatz auf Mobilen Endgeräten
-	\item Unterstützung für moderne Audiocodecs wie z.B. Speex oder G.711
-	\item Bereits existierender Mediastack mit einer logischen Conference Bridge
-	\item Möglichkeit der Anpassung der Lautstärke der einzelnen Audiostreams
+	\item Bestehende Drittanbieter Lösungen können abgeändert werden, um den gestellten Ansprüchen zu genügen.
+	\item Existierende VoIP Programme können durch Nutzung ihrer API genutzt werden, um während dem Spiel Audioinformationen zu übertragen.
+	\item Bestehende Bibliotheken oder \textit{Protokollstapel}, können genutzt werden um eigene VoIP Lösungen zu entwickeln.
 \end{itemize}
 
-%Bild PJSIP
+Bisher werden im Spielebereich fast ausschließlich serverbasierte Drittanbieter Lösungen eingesetzt. Sie alle bieten Unterstützung für effiziente Audiocodecs und besitzen einen vergleichbaren Funktionsumfang. Im privaten VoIP Telefoniebereich werden oft kommerzielle Produkte wie \textit{Skype} eingesetzt. Es existieren kaum offene Sprachkommunikationslösungen. Gleichzeitig existieren viele bestehende offene Protokollstapel, mit denen eigene Lösungen implementiert werden können.
 
-Viele der existierenden SIP Stacks kamen für den Prototypen auch deshalb nicht in Frage, weil sie in einer anderen Programiersprache als C oder C++ geschrieben waren und so mit der 3D-Engine nicht integriert werden konnten. 
+\subsection{Serverbasierte Sprachkommunikationslösungen}
+%http://www.tentonhammer.com/index.php?q=node/102
+
+\subsubsection{\textit{Ventrillo}}
+%http://www.ventrilo.com/
+Die unter Spielern beliebteste Lösung \textit{Ventrillo} \footnote{Flagship Industries, Inc. Programmversion 3.0.1, http://www.ventrilo.com} ist eine serverbasierte proprietäre VoIP Anwendung. Die Software besteht aus einem Server- und Client-Modul, wobei die Clientsoftware frei erhältlich ist, für die Serverkomponente jedoch eine kostenpflichtige Lizenz zu erwerben ist. Benutzer des Ventrillo Clients melden sich vor Beginn des eigentlichen Spieles auf einem der kostenpflichtigen Ventrillo Server an und können dort einen Kanal betreten. Benutzer des gleichen Kanals auf dem gleichen Server können sich gegenseitig hören. Durch das Lizenzmodell ist es nicht möglich im privaten Bereich eigene Server zu betreiben oder die Software nach eigenen Vorstellungen anzupassen. 
+
+\subsubsection{\textit{Teamspeak}}
+%http://www.goteamspeak.com
+Teamspeak \footnote{TeamSpeak Systems GmbH, Programmversion 2.0.33.7, http://www.goteamspeak.com} ist ebenfalls ein serverbasiertes proprietäres VoIP Programm. Die Software besteht ebenfalls aus Server und Client Komponenten. Benutzer des kostenlosen \textit{Teamspeak} Clients können sich mit dem kostenpflichtigem \textit{TeamSpeak} Server ihrer Wahl verbinden und dort einen Kanal betreten. Benutzer des gleichen Kanals auf dem gleichen Server können gegenseitig gehört werden. Zusätzlich existieren Plugins die es erlauben Kanäle während der Spielesitzung per Tastaturkombination zu wechseln. 
+
+
+\subsubsection{\textit{Mumble}}
+%http://mumble.sourceforge.net
+\textit{Mumble} \footnote{Thorvald Natvig,Programmversion 1.1.3, http://mumble.sourceforge.net} ist eine offene serverbasierte VoIP Anwendung, die primär von Computerspielern für Sprachkommunikation genutzt wird. \textit{Mumble} versucht die soziale Komponente der Sprachkommunikation zu betonen, indem es für den Endanwender sehr wenige administrative Elemente besitzt und das Hauptaugenmerk auf der Sprachqualität liegt. Seine Verwendung gleicht den anderen bisher vorgestellten Programmen.
+
+Obwohl die kommerziellen Lösungen bei einer optimalen Konfiguration hunderte von Benutzern unterstützen können und eine gute Sprachqualität bieten haben sie den entscheidenden Nachteil, dass sie nicht modifizierbar sind, die Serverkomponenten nicht frei verfügbar sind, und somit deren Nutzung für eine Umsetzung des Prototypen nicht brauchbar ist. 
+
+\textit{Mumble} ist zwar als einziges dank seiner freien Lizenz modifizierbar, jedoch aufgrund der komplizierten Serverkonfiguration und einem komplexen Rechtesystem, das auf Gruppen und Regeln basiert, nicht einfach an die neuen Konzepte anzupassen. 
+Zusätzlich zu den vorhandenen Problemen sind die drei Lösungen untereinander nicht kompatibel und bieten somit nur Insellösungen. 
+
+\subsection{Dezentralisierte Sprachkommunikationslösungen}
+
+Prinzipiell existiert eine Myriade an verschiedenen VoIP Programmen, die alle als dezentralisierte Lösungen eingesetzt werden können. Eine tatsächlich dezentrale Architektur kann jedoch bisher nur \textit{Skype} liefern. 
+
+\subsubsection{\textit{Skype}}
+
+Einen ganz anderen Ansatz verfolgt das Unternehmen Skype Technologies \footnote{Skype Technologies, Version 23.03.2008, http://www.skype.com}. Programm \textit{Skype} bietet innerhalb des eigenen Netzwerkes von registrierten Skype Benutzern die Möglichkeit des Instant Messaging, des Dateitransfers, der kostenlosen Telefonie über das Internet.
+Von den Mitbegründern der Tauschbörse \textit{Kazaa} ins Leben gerufen, basiert Skype wie das Filesharingprogramm auf dem Peer-to-Peer Prinzip. Die Vermittlung, die Gespräche und auch Dienste wie das Teilnehmerverzeichnis werden nicht von einem zentralen Server angeboten, sondern werden auf alle gleichberechtigten Teilnehmer (den so genannten Peers) verteilt. Lediglich für die Authentifizierung und die Abrechnung bedient sich Skype eines zentralen Back-End-Servers. Das Skype Netzwerk unterscheidet zwischen einfachen Benutzern (Ordinary Hosts genannt) und den Super Nodes. 
+
+Super Nodes sind Ordinary Hosts mit einer öffentlichen IP-Adresse und ausreichender Bandbreite, CPU-Leistung und Hauptspeicher und dienen als Endpunkte für die anderen
+Hosts. Der Benutzer selber hat keinen Einfluss auf die Entscheidung, ob sein Rechner als Super Node fungiert oder nicht. In diesem Zusammenhang kann man bei Skype nicht von einer
+reinen P2P Architektur sprechen, da nicht alle beteiligten Rechner gleiche Aufgaben übernehmen. 
+
+Die \textit{Skype} Technologie ermöglicht als einziges ein völlig dezentrales VoIP. Der Einsatz des \textit{Skype} Dienstes und Clients ist kostenlos. Über das \textit{Skype-API }ist es auch für externe Programme möglich, auf die Funktionalitäten des \textit{Skype-Clients} und Teilen des Netzwerkes zuzugreifen.
+
+Trotz der Vorteile bietet \textit{Skype} auch einige Nachteile: Über die Technik, die von der Skype Anwendung verwendet wird, ist nicht viel bekannt, da die gesamte Kommunikation per AES mit 256 Bit verschlüsselt wird, somit nicht zu analysieren ist und das Protokoll eine proprietäre Entwicklung von Skype Technologies ist. Somit kann das Protokoll nur mit der Originalsoftware genutzt werden. In der kostenlosen Version sind nur Konferenzen mit bis zu 5 gleichzeitigen Teilnehmern möglich. In einer kostenpflichtigen Version werden nur bis zu 10 gleichzeitige Konferenzteilnehmer unterstützt. 
+
+Beide Versionen jedoch bieten auf Clientseite keine Kontrolle über die einzelnen Audioströme. So kann nur die Summe aller Audioströme empfangen werden. Die Clientanwendung ist nicht in der Lage einzelne Audioströme auszublenden oder die Lautstärke einzelner Teilnehmer zu ändern. Zudem bietet die \textit{Skype API} nur zwei spezielle Interfaces an um entweder Anrufe zu tätigen oder Nachrichten zu verschicken. Eine Architektur für weitere Dienste ist nicht vorgesehen \cite{schulzrinne05}.
+
+Somit bietet \textit{Skype} als einziger tatsächlicher dezentralisierter Client nicht alle Eigenschaften um als mögliche Ausgangsgrundlage zu dienen. 
+
+\subsection{Instant Messaging Anwendungen}
+Andere Peer-to-Peer Programme wie \textit{Microsoft Netmeeting}\footnote{Microsoft, Version 20.03.2008, http://de.wikipedia.org/wiki/NetMeeting}, \textit{Microsoft Messenger}\footnote{Microsoft, Version 20.03.2008, http://messenger.live.com}, \textit{Google Talk}\footnote{Google, Version 20.03.2008, http://www.google.com/talk} sind nicht modifizierbar und nur sehr eingeschränkte Konferenzmöglichkeiten. 
+
+\subsection{SIP Protokoll}
+Das im darauf folgenden Kapitel vorgestellte SIP Protokoll und existierende Protokollstapel erfüllen die gestellten Anforderungen an den Prototypen. Da SIP ein generisches und offenes Protokoll ist, kann es kann benutzt werden, um beliebige Sitzungen mit einem oder mehreren Teilnehmern zu verwalten. Dabei ist es nicht auf Internet-Telefonie beschränkt sondern kann Sitzungen zwischen beliebigen Multimediaströmen, Konferenzen oder Computerspielen herstellen. Zahlreiche Standardisierungsorganisationen wie \textit{IETF \footnote{IETF, Version 22.03.2008, http://www.ietf.org/html.charters/sip-charter.html}, PINT, 3GPP\footnote{3GPP,Version 22.03.2008, http://www.3gpp.org/}, International Packet Communications Consortium \footnote{IPCC,Version 22.03.2008, http://www.imsforum.org/}, IMTC\footnote{ITMC, Version 22.03.2008, http://www.imtc.org/} und PacketCable \footnote{PacketCable, Version 22.03.2008, http://www.packetcable.com/}} unterstützen bereits den Einsatz von SIP.
+%http://www.cs.columbia.edu/sip/
+
+In der open-source Gemeinde wird das SIP Protokoll auch zunehmend unterstützt. So existieren bereits etliche Clientanwendungen und zentrale Komponenten wie \textit{Proxys} und \textit{Registrare}. Darüber hinaus finden sich zahlreiche gut dokumentierte SIP Protokollstapel und \textit{SDKs}. Es existieren auch Referenzimplementierungen, wie \textit{JAIN-SIP} \footnote{Sun Microsystems, Version 24.03.2008, http://jain-sip.dev.java.net} welches vom \textit{National Insitute of Standards and Technology \footnote{NIST, Version 24.03.2008, http://www.nist.gov}}entwickelt wurde, die sowohl in kommerziellen Projekten aber auch zu Forschungszwecken eingesetzt werden. Der wichtigste Grund für den Einsatz von SIP ist, dass es alle Anforderungen für die Umsetzung des Prototyps unterstützt:
+
+\begin{itemize}
+	\item Offener Standard
+	\item Generisches Protokoll um Sitzungen zu verwalten
+	\item Detaillierte Signalisierung von RTP Audioströmen
+	\item Kontrolle über jeden einzelnen Audiostrom auf clientseite
+	\item Serverbasierte Lösungen möglich
+	\item Dezentralisierte Lösungen möglich
+\end{itemize}
+
+Um eine funktionierende Implementierung in kürzester Zeit umzusetzen, habe ich existierende offene SIP Protokollstapel in Betracht gezogen. Dabei wurde zwischen server- und clientbasierten Komponenten unterschieden. 
+
+\subsubsection{SIP Server}
+Für den Einsatz als Server bieten sich zwei große Pakete an die beide den SIP Standard nach RFC 3265 unterstützen. \textit{Asterisk}\footnote{Digium Inc, Programmversion 1.4.19, http://www.asterisk.org} unterstützt Voice-over-IP mit unterschiedlichen Protokollen  darunter sowohl SIP als auch das \textit{H323} Protokoll und bietet alle Möglichkeiten einer Anbindung an das Telefonnetz. 
+
+Die Serveranwendung \textit{OpenSer}\footnote{AG Projects, Programmversion 1.3.1, http://www.openser.org} bietet ähnliche Funktionalität und kann als SIP-Proxy, Registrar, aber auch als Location- und Application-Server betrieben werden und bietet zusätzlich Unterstüztung für das SIP-SIMPLE Protokoll. \textit{OpenSer} ist sowohl von eingebetteten System wie DSL-Routern bis zu großen Installationen mit mehreren Millionen Benutzern bei Internet Service Providern flexibel einsetzbar. Diese Eigenschaften haben für mich den den Ausschlag gegeben Openser als SIP Server einzusetzen. 
+
+Darüber hinaus existieren noch etliche open source als auch proprietäre SIP Server Lösungen, die hier nicht weiter erläutert werden. 
+
+\subsubsection{SIP Clients}
+
+Bei den SIP Clients existiert mittlerweile eine Vielzahl an speziellen ausgereiften kostenlosen \textit{Softphone} Lösungen Lösungen. Einige der bekanntesten open source Softphones für Linux und Windows sind \textit{Ekiga}\footnote{Damien Sandras, Version 24.03.2008, http://www.gnomemeeting.org/}, \textit{KPhone}\footnote{Jan Janak, Version 24.03.2008, http://sourceforge.net/projects/kphone} \textit{Linophone}\footnote{Antisip, Version 24.03.2008, http://www.linphone.org} oder \textit{Minisip}\footnote{
+Telecommunications System Laboratory, Version 25.03.2008, http://www.minisip.org}. Bei diesen Softphones handelt es sich um kostenlose Projekte die frei eingesetzt und modifiziert werden können. 
+
+Zusätzlich existieren zwar freie Softphones, die von Infrastruktur Betreibern kostenlos angeboten werden, um den eigenen Marktanteil am VoIP Markt zu erhöhen. Dazu gehören Programme wie \textit{X-Lite}\footnote{Counterpath, Version 21.03.2008, http://www.xten.com}, \textit{Gizmo5}\footnote{SIPphone Inc, Version 21.03.2008, http://gizmo5.com} oder \textit{OpenWengo}\footnote{OpenWengo Inc, Version 21.03.2008, http://www.openwengo.org}. Diese haben meist einen großen Funktionsumfang, lassen sich jedoch nicht modifizieren. Zudem sind sie an die Nutzung der Infrastruktur eines bestimmten Betreibers gebunden.
+
+Eine ausführliche Übersicht über viele der auf dem Markt erhältlichen SIP Clients und Server Anwendungen findet sich unter \cite{sipsoftware08}.
+
+\subusbsection{SIP Protokollstapel}
+Neben kompletten Softphones existieren plattform-übergreifende SIP Protokollstapel, die die Funktionalität von SIP in größeren Anwendungen ermöglichen. Dazu zählen Protokollstapel wie \textit{OpenSipStack}\footnote{Joegen Baclor, Version 22.03.2008, http://www.opensipstack.org} \textit{sipXtackLib}\footnote{SIPfoundry, Version 22.03.2008, http://www.sipfoundry.org} \textit{reSIProcate}\footnote{B. Kampen, Version 22.03.2008, http://www.resiprocate.org} oder \textit{PJSIP}\footnote{B. Prijono, Version 22.03.2008, http://www.pjsip.org}
+
+\subsubsection{Pjsip}
+Meine persönliche Wahl fiel aus den folgenden Gründen auf den offenen SIP Protokollstapel \textit{PJSIP}:
+
+\begin{itemize}
+	\item Platformunabhängigkeit
+	\item Mögliche Integration mit \textit{Irrlicht} dank C und C++ als Programmiersprache 
+	\item Gute Dokumentation 
+	\item Unterstützung des SIP Standards (PJSIP-CORE)
+	\item Unterstützung des SIP-SIMPLE Standards (PJSIP-SIMPLE)
+	\item Unterstützung für STUN, TURN und ICE (PJLIB-UTIL)
+	\item Unterstützung moderner Audiocodecs wie z.B. \textit{Speex}(PJMEDIA-CODEC)
+	\item Bereits existierender Mediastapel (PJMEDIA)
+	\item Unterstützung von \textit{Asterisk} und \textit{Openser}
+	\item Möglicher Einsatz auf mobilen Endgeräten
+	\item Kontrolle jedes einzelnen Audiostroms (PJSUA-LIB)
+\end{itemize}
+
+\begin{figure}[htbp]
+	\centering
+		\includegraphics[width=0.70\textwidth]{grafiken/pjsip.eps}
+	\caption{Übersicht der Komponenten des PJSIP Protokollstacks}
+	\label{fig:pjsip}
+\end{figure}
+
+Viele der existierenden SIP Clientanwendungen und Protokollstapel kamen für den Prototypen auch deshalb nicht in Frage, weil sie in einer anderen Programiersprache als C oder C++ geschrieben waren und so nicht in das 3D-Framework integriert werden konnten. 
+
+\section{Entwicklungsumgebung}
+
+\subsection[Programmiersprache}
+Ich habe mich für den Einsatz von C und C++ aus mehreren Gründen entschieden. Die Darstellung der virtuellen 3D Welt und die die Etablierung, Verarbeitung und Wiedergabe der Audioströme bilden zusammen ein Echtzeitsystem. Da in so einem System der gleichzeitige Ablauf mehrerer Prozesse erforderlich ist, wird eine sehr performante Programmiersprache benötigt. Es sind vor allem kurze Reaktionszeiten erforderlich, um für den Spieler eine glaubwürdige Illusion zu erzeugen. Beim Audiosignal reichen bereits Verzögerungen von mehr als 300ms aus, um eine Verständigung unverständlich zu machen. 
+
+Da C und C++ maschinennahe Sprachen sind, und keine Interpretation während der Laufzeit benötigen besitzen sie einen Effizienzvorteil gegenüber Sprachen wie JAVA. Gerade deswegen liegen fast alle bisher vorgestellten Protokollstapel und Bibliotheken für VoIP oder 3-D Grafik ausschließlich in C oder C++ vor. 
+
+\subsection{Entwicklungsumgebung}
+Die Entwicklung des Sourcecodes und der übrigen Teile dieser Arbeit wurden unter \textit{Windows XP} und \textit{Microsoft Visual Studio 8.0} durchgeführt. 
+
+\subsection{Testumgebung}
+Die immer wiederkehrenden Tests habe ich auf diversen mir zur Verfügung stehenden Systemen
+durchgeführt.
+Als MMPGP2P-Server kam mein Rechner anaconda zum Zuge, ein AMD Athlon(tm)
+XP 2200+ mit DSL-Anbindung und fester IP-Adresse 213.146.116.174. Der Server läuft eben-
+alls unter Debian GNU/Linux 3.1-Sarge mit Kernel 2.4.27. Ich habe den MMPGP2P-Server
+tändig auf diesem System laufen lassen und nur während der Weiterentwicklung der Klassen
+neu gestartet.
+Für die Simulation von Clients habe ich zum einen meinen Rechner media einge-
+setzt, eine Multimedia-Station mit Intel(R) Pentium(R) 4 CPU 2.40GHz und 100MBit-
+Netzwerkanbindung an den Server. Auf diesem System lief Debian GNU/Linux 3.1-Sarge aller-
+dings mit Kernel 2.6.11.6. Als weitere Clients kamen diverse Testumgebungen unter VMware
+Workstation 3.2.0 build-2230 zum Einsatz, darunter Windows XP und Windows 98.
+Weiteres ist im Kapitel 7 über Performanzmessungen beschrieben.
 
 \section{Verbindungauf- und abbau}
 \subsection{Verbindungsaufbau}
@@ -60,9 +177,9 @@ Baut Teilnehmer jedoch noch keine Verbindung zu Teilnehmer A auf und ist auch ni
 \subsubsection{Das Problem der doppelten Verbindung}
 Da Teilnehmer zwar zentral Lokalisiert werden jedoch unabhängig von einer zentralen Instanz Verbindungen aufbauen können, kann der Fall auftreten, dass beide Teilnehmer zeitgleich eine Verbindung miteinander aufbauen wollen. Dieser Fall tritt immer dann auf, wenn beide Spieler im Spiel die erforderliche Nähe zueinander erreicht haben. Dann versucht sowohl Teilnehmer A eine Verbindung zu Teilnehmer B aufzubauen, als auch Teilnehmer B eine Verbindung zu Teilnehmer A aufzubauen. Dies entspricht dem Problem im Alltag, wenn zwei Personen sich versuchen zur exakt gleichen Zeit anzurufen und jeder nur ein Besetztzeichen hört. 
 
-Bei diesem Szenarion können zwei verschiedene Fälle auftreten. Der einfache Fall liegt vor, wenn eine INVITE Nachricht von A eintritt und B bereits mit A verbunden ist. Dann kann er den zweiten Dialog einfach verwerfen, da ja bereits eine bestehende Verbindung existiert.
+Bei diesem Szenario können zwei verschiedene Fälle auftreten. Der einfache Fall liegt vor, wenn eine INVITE Nachricht von A eintritt und B bereits mit A verbunden ist. Dann kann er den zweiten Dialog einfach verwerfen, da ja bereits eine bestehende Verbindung existiert.
 
-Der kompliziertere Fall ist der symetrische Fall: Dieser tritt dann ein wenn B, während er selbst eine Verbindung mit A aufbaut, die INVITE Nachricht erhält. Hier hat B hat ebenfalls eine INVITE Nachricht an A geschickt, während A zur gleichen Zeit auch eine INVITE Nachricht an B geschickt hat. Lehnen nun beide Teilnehmer die Verbindung ab, so führt es dazu dass in diesem Fall überhaupt keine Verbindung zwischen den Teilnehmern zustande kommt. 
+Der kompliziertere Fall ist der symmetrische Fall: Dieser tritt dann ein wenn B, während er selbst eine Verbindung mit A aufbaut, die INVITE Nachricht erhält. Hier hat B hat ebenfalls eine INVITE Nachricht an A geschickt, während A zur gleichen Zeit auch eine INVITE Nachricht an B geschickt hat. Lehnen nun beide Teilnehmer die Verbindung ab, so führt es dazu dass in diesem Fall überhaupt keine Verbindung zwischen den Teilnehmern zustande kommt. 
 
 Hierbei ist es wichtig, dass eine gemeinsame Regel für alle Teilnehmer existiert nach der beim Dialog Aufbau vorgehen. Ich habe mich dafür entschieden, dass in diesem Fall beide Teilnehmer die Verbindung ablehnen, und solange versuchen ein eine neue Verbindung zu etablieren bis der unsymmetrische Fall auftritt. Diese Vorgehensweise hat sich in der Praxis bewährt, da meist ein Teilnehmer schneller akzeptiert als der andere. Zudem braucht man keine lexikalische Sortierung der Teilnehmer vorzunehmen um einen dominierenden Peer zu ermitteln. 
 
@@ -134,7 +251,7 @@ Der Spieler ist in der Lage sich in alle Richtungen zu Bewegen und zu springen.
 %TODO Bild von Springbrunnen
 Das Level wurde zusätzlich mit mehreren lokalen Audioquellen ausgestattet, die eine realistische Audioumgebung simulieren. So sind Wind, Springbrunnen und die Fahrzeuge des Levels mit Audiodateien unterlegt, die durch die Irrklangengine  gerendert werden. Diese Audioszene wird lokal erzeugt und muss nicht im Gegensatz zur Sprachkommunikation über das Netzwerk übertragen werden. Die Sprachkommunikation und die lokale Audioszene existieren gleichzeitig und erzeugen so für den Spieler ein eine realistische Audioszene. 
 
-\section{Zusammenarbeit von Irrlicht und VoiP}
+\section{Zusammenarbeit von Irrlicht und VoIP}
 
 \subsection{Aktualisierung der VoIP Instanz}
 
