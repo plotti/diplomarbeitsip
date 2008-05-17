@@ -13,32 +13,33 @@
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {3.1}{\ignorespaces Komplizierte Kanalstruktur einer Spielesitzung, in der Gruppen, Rechte und komplizierte Tastenk\"urzel, eine intuitive Sprachkommunikation ausschlie\IeC {\ss }en.}}{29}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Eine \"Ubersicht \"uber die VoIP Protokollfamilie}}{40}
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Beispiel eines typischen SIP-Requests}}{45}
-\contentsline {figure}{\numberline {4.3}{\ignorespaces Sip Anruf ohne Proxy}}{48}
-\contentsline {figure}{\numberline {4.4}{\ignorespaces Einsatz eines Proxy Servers mit Registrar}}{49}
-\contentsline {figure}{\numberline {4.5}{\ignorespaces Teilnehmer A schickt Teilnehmer B eine Nachricht. Beide sind Teil der gleichen Dom\"ane und benutzen den gleichen Proxy.}}{51}
-\contentsline {figure}{\numberline {4.6}{\ignorespaces Teilnehmer A m\"ochte die Pr\"asenz von Teilnehmer B abonnieren. Teilnehmer B aktualisiert seine Information.}}{52}
-\contentsline {figure}{\numberline {4.7}{\ignorespaces Beispiel einer SDP Nachricht}}{53}
-\contentsline {figure}{\numberline {4.8}{\ignorespaces Header eines RTP-Pakets}}{55}
-\contentsline {figure}{\numberline {4.9}{\ignorespaces Ein schematischer Ablauf von STUN}}{58}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Eine \"Ubersicht \"uber die VoIP Protokollfamilie}}{35}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Beispiel eines typischen SIP-Requests}}{40}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Sip Anruf ohne Proxy}}{43}
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Einsatz eines Proxy Servers mit Registrar}}{44}
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Teilnehmer A schickt Teilnehmer B eine Nachricht. Beide sind Teil der gleichen Dom\"ane und benutzen den gleichen Proxy.}}{46}
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Teilnehmer A m\"ochte die Pr\"asenz von Teilnehmer B abonnieren. Teilnehmer B aktualisiert seine Information.}}{47}
+\contentsline {figure}{\numberline {4.7}{\ignorespaces Beispiel einer SDP Nachricht}}{48}
+\contentsline {figure}{\numberline {4.8}{\ignorespaces Header eines RTP-Pakets}}{50}
+\contentsline {figure}{\numberline {4.9}{\ignorespaces Ein schematischer Ablauf von STUN}}{53}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {6.1}{\ignorespaces P2P Architektur mit direkten Verbindungen der Spieler untereinander in den entsprechenden Spielezonen}}{66}
-\contentsline {figure}{\numberline {6.2}{\ignorespaces Client Server Architektur, mit zentralem Mischserver}}{67}
-\contentsline {figure}{\numberline {6.3}{\ignorespaces Eine Proxy Architektur. In schwarz ist die Verbindung von Spieler 3 mit Spieler 7 dargestellt.}}{68}
-\contentsline {figure}{\numberline {6.4}{\ignorespaces Verteile Server S1...S4. Die Verbindungen der Spielewelt S3 wird in schwarz dargestellt. }}{69}
+\contentsline {figure}{\numberline {6.1}{\ignorespaces P2P Architektur mit direkten Verbindungen der Spieler untereinander in den entsprechenden Spielezonen}}{61}
+\contentsline {figure}{\numberline {6.2}{\ignorespaces Client Server Architektur, mit zentralem Mischserver}}{62}
+\contentsline {figure}{\numberline {6.3}{\ignorespaces Eine Proxy Architektur. In schwarz ist die Verbindung von Spieler 3 mit Spieler 7 dargestellt.}}{63}
+\contentsline {figure}{\numberline {6.4}{\ignorespaces Verteile Server S1...S4. Die Verbindungen der Spielewelt S3 wird in schwarz dargestellt. }}{64}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {7.1}{\ignorespaces \"Ubersicht der Komponenten des PJSIP Protokollstacks}}{84}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\addvspace {10\p@ }
-\contentsline {figure}{\numberline {9.1}{\ignorespaces Audiverbindungen im Full-Mesh Ansatz}}{108}
-\contentsline {figure}{\numberline {9.2}{\ignorespaces Bandbreitenverbrauch beim Full Mesh Ansatz}}{108}
-\contentsline {figure}{\numberline {9.3}{\ignorespaces Der Up- und Downstream}}{111}
-\contentsline {figure}{\numberline {9.4}{\ignorespaces Signalisierung mit SIP, Audiostrom mit RTP}}{112}
-\contentsline {figure}{\numberline {9.5}{\ignorespaces Der Up- und Downstream mit der VAD - Technik}}{113}
-\contentsline {figure}{\numberline {9.6}{\ignorespaces Gegen\"uberstellung der SIP und RTP Traffics mit der VAD - Technik}}{113}
-\contentsline {figure}{\numberline {9.7}{\ignorespaces Der Up- und Downstream mit der SIP HOLD - Technik}}{114}
-\contentsline {figure}{\numberline {9.8}{\ignorespaces Gegen\"uberstellung des SIP und RTP Traffics mit der SIP HOLD - Technik}}{115}
-\contentsline {figure}{\numberline {9.9}{\ignorespaces Speex mit 32kHz in der Privaten Zone und Speex 8khZ in der Sozialen Zone}}{115}
-\contentsline {figure}{\numberline {9.10}{\ignorespaces Rufauf und -abbau, sowie Signalisierung eines anderen Codecs mit SIP, Reduktion des Audiostroms mit RTP}}{116}
+\contentsline {figure}{\numberline {9.1}{\ignorespaces Audiverbindungen im Full-Mesh Ansatz}}{110}
+\contentsline {figure}{\numberline {9.2}{\ignorespaces Bandbreitenverbrauch beim Full Mesh Ansatz}}{110}
+\contentsline {figure}{\numberline {9.3}{\ignorespaces Der Up- und Downstream}}{113}
+\contentsline {figure}{\numberline {9.4}{\ignorespaces Signalisierung mit SIP, Audiostrom mit RTP}}{114}
+\contentsline {figure}{\numberline {9.5}{\ignorespaces Der Up- und Downstream mit der VAD - Technik}}{115}
+\contentsline {figure}{\numberline {9.6}{\ignorespaces Gegen\"uberstellung der SIP und RTP Traffics mit der VAD - Technik}}{115}
+\contentsline {figure}{\numberline {9.7}{\ignorespaces Der Up- und Downstream mit der SIP HOLD - Technik}}{116}
+\contentsline {figure}{\numberline {9.8}{\ignorespaces Gegen\"uberstellung des SIP und RTP Traffics mit der SIP HOLD - Technik}}{117}
+\contentsline {figure}{\numberline {9.9}{\ignorespaces Speex mit 32kHz in der Privaten Zone und Speex 8khZ in der Sozialen Zone}}{117}
+\contentsline {figure}{\numberline {9.10}{\ignorespaces Rufauf und -abbau, sowie Signalisierung eines anderen Codecs mit SIP, Reduktion des Audiostroms mit RTP}}{118}
 \addvspace {10\p@ }

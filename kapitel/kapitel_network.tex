@@ -142,7 +142,7 @@ In Voronoibasierten Systemen ermittelt jeder Knoten Anhand eines Voronoi Diagram
 
 Im Voronoi Schema \cite{hu04} von Hu aktualisiert jeder Teilnehmer bei jeder seiner Bewegungen seine Nachbarn. Nachbarn, die sich an der Grenze der Area of Interest befinden überprüfen wiederum ob der Knoten sich in den Bereich ihrer Nachbarn bewegt und versorgen diese mit neuen Topologieinformationen. 
 
-\subsection{Regionsbasierte P2P-Systeme}
+\subsection{Regionsbasierte Peer-to-Peer Systeme}
 Regionsbasierte Systeme unterteilen die Welt in geometrische Formen wie Quadrate oder Sechsecke. Regionen können dabei dynamisch oder statisch sein, der Einfachheit halber werden oft statische Regionen eingesetzt. Für jede Region wird ein Koordinator oder Superpeer bestimmt. Dieser Knoten verwaltet Spieler die diese Region betreten und verlassen. Solche Regionen sind dafür verantwortlich, worüber der Spieler informiert wird - alle Ereignisse die in einer Region generiert werden, werden auch nur an Knoten der gleichen Region propagiert. Die einzige Ausnahme bildet der Fall, wenn sich eine Knoten von einer Region in die nächste bewegt und so Ereignisse des Knotens an zwei Regionen propagiert werden. Dabei muss der Koordinator einer solchen Region nicht unbedingt Teilnehmer des aktiven Spiels sein. Das ermöglicht den einsatz von dedizierten Rechnern mit großen Kapazitäten die speziell nur diesen Zweck erfüllen. Regionsbasierte Systeme benutzen verteilte Hash Tabellen ( Distributed Hash Tables (DHT)) um weitere Knoten zu finden. 
 
 Die Regionsgröße ein wichtiger Faktor, wenn man eine regionsbasierte Architekturen entwirft. Einerseits führt eine Verkleinerung der Region dazu, dass weniger Ereignisse verwaltet und gesendet werden müssen. Andererseits führen zu kleine Regionen dazu, dass Avatare schnell zwischen Regionen wechseln und so zusätzliche Nachrichten an benachbarte Regionen gesendet werden müssen. 
@@ -210,7 +210,7 @@ Verlassen Knoten das Overlay so müssen sie ihre Information an andere Knoten wei
 
 Bryan, Lowekamp und Jennings schlagen im SOSIMPLE Prototyp \cite{bryan05s} eine Kombination vom SIP und SIMPLE Protokoll vor, in dem Knoten mittels eines auf Chord basierten DHT in einem Overlay verwaltet werden. Dabei sind alle Nachrichten die benötigt werden um das DHT aufrechzuerhalten, Benutzer zu Registrieren, Ressourcen zu lokalisieren, Sitzungen zu verwalten reine SIP Nachrichten. Dadurch das SIP als generisches Protokoll entworfen wurde müssen keine neuen Methoden hinzugefügt werden sondern die Nachrichtentypen um zusätzliche Header ergänzt werden. 
 
-Alternativ analysieren Singh und Schulzrinne verschiedene VoiP Peer-to-Peer Alternativen und schlagen ebenfalls ein Konzept für P2P basierte SIP Telefonie auf Basis eines Chord basierten DHT vor \cite{schulzrinne05}.
+Alternativ analysieren Singh und Schulzrinne verschiedene VoIP Peer-to-Peer Alternativen und schlagen ebenfalls ein Konzept für P2P basierte SIP Telefonie auf Basis eines Chord basierten DHT vor \cite{schulzrinne05}.
 
 \subsection{Architektur Variationen}
 Es bestehen drei alternative Architektur Möglichkeiten im Einsatz mit DHT. 

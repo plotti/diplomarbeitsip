@@ -1,4 +1,4 @@
-\begin{thebibliography}{112}
+\begin{thebibliography}{105}
 % this bibliography was produced with the style dinat.bst v2.5
 \makeatletter
 \newcommand{\dinatlabel}[1]%
@@ -26,13 +26,6 @@
 \newblock \emph{Massively Multiplayer Game Development (Game Development
   Series)}.
 \newblock Charles River Media, 2003
-
-\bibitem[Alientrap(2008)]{nexuiz08}
-\dinatlabel{Alientrap 2008} \textsc{Alientrap}:
-\newblock Nexuiz.
-\newblock In: \emph{http://www.alientrap.org/nexuiz/}
-\newblock (2008). --
-\newblock [Online; abgerufen am 01-Feburar-2008]
 
 \bibitem[Anderson u.\,a.(1995)Anderson, Barrus, Howard, Rich, Shen und
   Waters]{anderson95}
@@ -188,12 +181,6 @@
 \newblock In: \emph{http://www.uo.com}
 \newblock (2008)
 
-\bibitem[EpicGames(2008)]{unreal2008}
-\dinatlabel{EpicGames 2008} \textsc{EpicGames}:
-\newblock Unreal Engine.
-\newblock In: \emph{http://www.unrealtechnology.com/}
-\newblock (2008)
-
 \bibitem[Ernst\&Young(2007)]{ErnstYoung:07}
 \dinatlabel{Ernst\&Young 2007} \textsc{Ernst\&Young}:
 \newblock Digitale Spiele in Deutschland.
@@ -214,18 +201,6 @@
 \dinatlabel{FlagshipIndustriesInc 2008} \textsc{FlagshipIndustriesInc}:
 \newblock Ventrillo.
 \newblock In: \emph{http://www.ventrilo.com/}
-\newblock (2008)
-
-\bibitem[Gebhardt(2008{\natexlab{a}})]{irrklang08}
-\dinatlabel{Gebhardt 2008{\natexlab{a}}} \textsc{Gebhardt}, Nikolaus:
-\newblock irrKlang.
-\newblock In: \emph{http://www.ambiera.com/irrklang/index.html}
-\newblock (2008)
-
-\bibitem[Gebhardt(2008{\natexlab{b}})]{irrlicht08}
-\dinatlabel{Gebhardt 2008{\natexlab{b}}} \textsc{Gebhardt}, Nikolaus:
-\newblock Irrlicht 3D Engine.
-\newblock In: \emph{http://irrlicht.sourceforge.net/}
 \newblock (2008)
 
 \bibitem[Gerhard(1998)]{maletzke98}
@@ -318,12 +293,6 @@
   Protocol (SDP).
 \newblock In: \emph{http://tools.ietf.org/html/rfc3605}
 \newblock (2003)
-
-\bibitem[IdSoftware(2008)]{idsof08}
-\dinatlabel{IdSoftware 2008} \textsc{IdSoftware}:
-\newblock Quake II / III Open Source.
-\newblock In: \emph{http://www.idsoftware.com/}
-\newblock (2008)
 
 \bibitem[Iimura u.\,a.(2004)Iimura, Hazeyama und Kadobayashi]{Iimura04}
 \dinatlabel{Iimura u.\,a. 2004} \textsc{Iimura}, Takuji~; \textsc{Hazeyama},
@@ -466,12 +435,6 @@ dy\_2007}
 \newblock
 \newblock (1996), Nr.~ICS-TR-96-27, S.~17. --
 \newblock URL \url{citeseer.ist.psu.edu/morse96interest.html}
-
-\bibitem[Oortmerssen(2008)]{sauerbraten08}
-\dinatlabel{Oortmerssen 2008} \textsc{Oortmerssen}, Wouter:
-\newblock Sauerbraten.
-\newblock In: \emph{http://sauerbraten.org}
-\newblock (2008)
 
 \bibitem[Pena-Herborn und Hancock(2004)]{pena04}
 \dinatlabel{Pena-Herborn und Hancock 2004} \textsc{Pena-Herborn}, Jorge~;
@@ -782,12 +745,6 @@ dy\_2007}
 \dinatlabel{TeamSpeakSystemsGmbH 2008} \textsc{TeamSpeakSystemsGmbH}:
 \newblock Teamspeak.
 \newblock In: \emph{http://www.goteamspeak.com/}
-\newblock (2008)
-
-\bibitem[TheOGRETeam(2008)]{ogre08}
-\dinatlabel{TheOGRETeam 2008} \textsc{TheOGRETeam}:
-\newblock Ogre3D.
-\newblock In: \emph{http://www.ogre3d.org/}
 \newblock (2008)
 
 \bibitem[Thon(2006)]{thon06}
