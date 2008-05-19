@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592-1.40.7 (MiKTeX 2.7) (preloaded format=latex 2008.3.12)  19 MAY 2008 15:01
+This is pdfTeX, Version 3.141592-1.40.7 (MiKTeX 2.7) (preloaded format=latex 2008.3.12)  19 MAY 2008 15:47
 entering extended mode
 **Main.tex
 (Main.tex
@@ -458,18 +458,18 @@ Class scrbook Info: You've told me to use the font selection of the element
 (scrbook)            on input line 121.
 Class scrbook Info: You've told me to use the font selection of the element
 (scrbook)           `sectioning' that is an alias of element `disposition'
-(scrbook)            on input line 162.
+(scrbook)            on input line 177.
 
 [5]
 Class scrbook Info: You've told me to use the font selection of the element
 (scrbook)           `sectioning' that is an alias of element `disposition'
-(scrbook)            on input line 191.
+(scrbook)            on input line 206.
 Class scrbook Info: You've told me to use the font selection of the element
 (scrbook)           `sectioning' that is an alias of element `disposition'
-(scrbook)            on input line 202.
+(scrbook)            on input line 217.
 Class scrbook Info: You've told me to use the font selection of the element
 (scrbook)           `sectioning' that is an alias of element `disposition'
-(scrbook)            on input line 205.
+(scrbook)            on input line 220.
 )
 \tf@toc=\write3
  [6] (kapitel/stichwortverzeichnis.tex) [7
@@ -819,13 +819,13 @@ n-dungs-stu-fen re-pr[]asentieren.
 [87] [88]
 File: grafiken/gamestart-screenshot.eps Graphic file (type eps)
  <grafiken/gamestart-screenshot.eps> [89] [90] [91]
-Overfull \hbox (4.08553pt too wide) in paragraph at lines 264--265
+Overfull \hbox (4.08553pt too wide) in paragraph at lines 262--263
 \OT1/cmr/m/n/12 Ver-bun-den sind aber noch kei-ne Au-di-oda-ten aus-tau-schen. 
 In die-ser []Ubergangphase
  []
 
 [92] [93] [94]
-Overfull \hbox (1.5541pt too wide) in paragraph at lines 296--297
+Overfull \hbox (1.5541pt too wide) in paragraph at lines 294--295
 \OT1/cmr/m/n/12 auch die Me-ta-pher des Festnetz-Telephons um-ge-setzt, dass de
 m Spie-ler tats[]achlich
  []
@@ -1046,4 +1046,4 @@ Here is how much of TeX's memory you used:
  14 hyphenation exceptions out of 8191
  37i,11n,37p,2156b,1115s stack positions out of 5000i,500n,10000p,200000b,5000s
 
-Output written on Main.dvi (145 pages, 513264 bytes).
+Output written on Main.dvi (145 pages, 515308 bytes).

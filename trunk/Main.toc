@@ -166,7 +166,7 @@
 \contentsline {subsection}{\numberline {7.7.1}\"Offentliche Zone}{92}
 \contentsline {subsubsection}{Eingang und Verlassen der \"Offentlichen Zone}{93}
 \contentsline {subsubsection}{RTP - Silence Supression}{93}
-\contentsline {subsubsection}{SIP - HOLD}{94}
+\contentsline {subsubsection}{SIP - HOLD}{93}
 \contentsline {subsection}{\numberline {7.7.2}Soziale Zone}{94}
 \contentsline {subsubsection}{Lautst\"arkenanpassung}{94}
 \contentsline {subsubsection}{Audiocodec}{94}
