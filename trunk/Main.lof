@@ -11,7 +11,9 @@
 \contentsline {figure}{\numberline {2.5}{\ignorespaces Proxemikmodell mit einer pers\"onlichen, sozialen und \"offentlichen Zone}}{12}
 \contentsline {figure}{\numberline {2.6}{\ignorespaces Viereck aus Spielerlebniss, Simulation, erz\"ahlerischem Aspekt und Spielerinteraktion}}{14}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Komplizierte Kanalstruktur einer Spielesitzung, in der Gruppen, Rechte und komplizierte Tastenk\"urzel, eine intuitive Sprachkommunikation ausschlie\IeC {\ss }en.}}{29}
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Ein einziger Kanal b\"undelt alle \"ubertragenen Signale und f\"uhrt so zu Adressierungsproblemen}}{28}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Einsatz von jeweils direkten Kommunikationskan\"alen zwischen Teilnehmern}}{29}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Konfiguration von Kan\"alen, Gruppen und Rechten in kommerziellen Sprach\discretionary {-}{}{}kommunikations\discretionary {-}{}{}programmen}}{31}
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {4.1}{\ignorespaces Eine \"Ubersicht \"uber die VoIP Protokollfamilie}}{35}
 \contentsline {figure}{\numberline {4.2}{\ignorespaces Beispiel eines typischen SIP-Requests}}{40}
@@ -31,16 +33,17 @@
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {7.1}{\ignorespaces \"Ubersicht der Komponenten des PJSIP Protokollstacks}}{84}
 \contentsline {figure}{\numberline {7.2}{\ignorespaces Realistische 3D Spielewelt mit Radar}}{86}
+\contentsline {figure}{\numberline {7.3}{\ignorespaces Ablauf einer symmetrischen Verbindung}}{92}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {9.1}{\ignorespaces Audiverbindungen im Full-Mesh Ansatz}}{112}
-\contentsline {figure}{\numberline {9.2}{\ignorespaces Bandbreitenverbrauch beim Full Mesh Ansatz}}{112}
-\contentsline {figure}{\numberline {9.3}{\ignorespaces Der Up- und Downstream}}{115}
-\contentsline {figure}{\numberline {9.4}{\ignorespaces Signalisierung mit SIP, Audiostrom mit RTP}}{116}
-\contentsline {figure}{\numberline {9.5}{\ignorespaces Der Up- und Downstream mit der VAD - Technik}}{117}
-\contentsline {figure}{\numberline {9.6}{\ignorespaces Gegen\"uberstellung der SIP und RTP Traffics mit der VAD - Technik}}{117}
-\contentsline {figure}{\numberline {9.7}{\ignorespaces Der Up- und Downstream mit der SIP HOLD - Technik}}{118}
-\contentsline {figure}{\numberline {9.8}{\ignorespaces Gegen\"uberstellung des SIP und RTP Traffics mit der SIP HOLD - Technik}}{119}
-\contentsline {figure}{\numberline {9.9}{\ignorespaces Speex mit 32kHz in der Privaten Zone und Speex 8khZ in der Sozialen Zone}}{119}
-\contentsline {figure}{\numberline {9.10}{\ignorespaces Rufauf und -abbau, sowie Signalisierung eines anderen Codecs mit SIP, Reduktion des Audiostroms mit RTP}}{120}
+\contentsline {figure}{\numberline {9.1}{\ignorespaces Audiverbindungen im Full-Mesh Ansatz}}{114}
+\contentsline {figure}{\numberline {9.2}{\ignorespaces Bandbreitenverbrauch beim Full Mesh Ansatz}}{114}
+\contentsline {figure}{\numberline {9.3}{\ignorespaces Der Up- und Downstream}}{117}
+\contentsline {figure}{\numberline {9.4}{\ignorespaces Signalisierung mit SIP, Audiostrom mit RTP}}{118}
+\contentsline {figure}{\numberline {9.5}{\ignorespaces Der Up- und Downstream mit der VAD - Technik}}{119}
+\contentsline {figure}{\numberline {9.6}{\ignorespaces Gegen\"uberstellung der SIP und RTP Traffics mit der VAD - Technik}}{119}
+\contentsline {figure}{\numberline {9.7}{\ignorespaces Der Up- und Downstream mit der SIP HOLD - Technik}}{120}
+\contentsline {figure}{\numberline {9.8}{\ignorespaces Gegen\"uberstellung des SIP und RTP Traffics mit der SIP HOLD - Technik}}{121}
+\contentsline {figure}{\numberline {9.9}{\ignorespaces Speex mit 32kHz in der Privaten Zone und Speex 8khZ in der Sozialen Zone}}{121}
+\contentsline {figure}{\numberline {9.10}{\ignorespaces Rufauf und -abbau, sowie Signalisierung eines anderen Codecs mit SIP, Reduktion des Audiostroms mit RTP}}{122}
 \addvspace {10\p@ }

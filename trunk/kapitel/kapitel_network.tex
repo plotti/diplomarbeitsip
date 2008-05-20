@@ -1,25 +1,27 @@
 \chapter{SIP als Netzwerkgrundlage in Spielen}
 
 \section{SIP als Netzwerkschicht}
-Wie schon im Kapitel 7 beobachtet, sind die Herausforderungen an die Verwaltung einer Sprachkommunikation mit der darunter liegenden Netzwerkarchitektur verbunden. Vor allem in Kaptiel 6 wurde deutlich, dass die Signalisierung und Lokation der Teilnehmer einer Konferenz, genauso wichtig ist wie der Austausch der Audiodaten selbst. Es liegt daher nahe, die bereits evalulierten Komponenten nicht nur dazu zu Nutzen um Teilnehmer zu Lokalisieren und Konferenzen zu steuern, sondern sich zu fragen wie diese im SIP Protokoll zusätzlich auch als Netzwerkschicht zum Austausch von Spieledaten verwendet werden können. 
+Wie schon im Kapitel 7 beobachtet, sind die Herausforderungen an die Verwaltung einer Sprachkommunikation mit der darunter liegenden Netzwerkarchitektur verbunden. Vor allem in Kaptiel 6 wurde deutlich, dass die Signalisierung und Lokation der Teilnehmer einer Konferenz, genauso wichtig ist wie der Austausch der Audiodaten selbst. Es liegt daher nahe, die bereits eingesetzten Komponenten nicht nur dazu zu Nutzen um Teilnehmer zu Lokalisieren und Konferenzen zu steuern, sondern auch um Spieleinformationen zu übertragen. 
 
-Da SIP ein generisches Protokoll ist, ist es prinzipiell nicht nur für die Sprachkommunikation einsetzbar sondern auch um Daten zwischen Clients auszutauschen. Diese Kapitel soll zeigen, welche der bestehenden Architekturen sich mit SIP umsetzen lassen. Dabei wollen wir nicht bestehende Probleme der einzelnen Architekturen lösen, indem wir das SIP Protokoll verwenden, sondern zeigen das SIP es uns ermöglicht bestehende Architekturen umzusetzen. Der resultierende Vorteil besteht vor allem in einer standardisierten Addressierung,  Signalisierung und hoher Abstraktionsebene.
+Da SIP ein generisches Protokoll ist, ist es prinzipiell nicht nur für die Sprachkommunikation einsetzbar sondern auch um Daten zwischen Clients auszutauschen. Diese Kapitel soll zeigen, welche der bestehenden client-server und Peer-to-Peer Architekturen sich mit SIP umsetzen lassen. Es ist dabei nicht Ziel bestehende Probleme der einzelnen Architekturen lösen, indem das SIP Protokoll verwendet wird, sondern zu zeigen, dass SIP es ermöglicht bestehende Architekturen umzusetzen. Der resultierende Vorteil besteht vor allem in einer standardisierten Addressierung,  Signalisierung und hoher Abstraktionsebene.
 
-Experimentell wurde eine einfache Client-Server Architektur implementiert, die aus dem Prototypen ein völlig auf dem SIP Protokoll basiertes Spiel macht. Im zweiten Teil wird das Konzept von P2P SIP erklärt, da es eine komplett dezentrale P2P Umsetzung erlaubt.
+In diesem Kapitel werden zunächst Client-Server Konzepte vorgestellt und dann eine die Implementierung einer einfache Client-Server Architektur auf Basis des SIP Protokolls vorgestellt. Diese soll zeigen, dass sehr einfach ein Spielprototyp gebaut werden kann, der SIP nicht nur für die Sprachkommunikation einsetzt sondern auch die Grundlage für eine Netzwerkschnittstelle bietet. 
+
+Im zweiten Teil werden bisherige Konzepte für Peer-to-Peer spiele dargestellt und abschließend die Funktionsweise von P2PSIP Näher erläutert, um zu zeigen wie dieser Ansatz eine komplett dezentrale P2P Spieleumsetzung erlaubt.
 
 \section{Anforderungen an die Netzwerkschicht}
 
 Mehrspieler Spiele besitzen vielfältige Anforderungen an eine Netzwerkarchitektur. Abhängig von der gewählten Architektur lassen sich einige der Anforderungen leichter umsetzen als andere.
 
-\textbf{Sicherheit:} Dadurch dass Spieler gegeneinander antreten, sollte Manipulation ausgeschlossen werden. Dazu benötigt man eine sichere Kommunikation zwischen den Spielern. 
+\textbf{Sicherheit:} Da Spieler gegeneinander antreten, sollte Manipulation ausgeschlossen werden. Dazu benötigt man eine sichere Kommunikation zwischen den Spielern. 
 
-\textbf{Persistenz:} Dadurch dass der Inhalt des Spieles Spieler und Objekte enthalten kann die genau nur einmal existieren, muss zwischen den einzelnen Sitzungen dafür gesorgt werden dass diese persistent gespeichert werden.
+\textbf{Persistenz:} Der Inhalt des Spieles kann Objekte die genau nur einmal existieren. Deswegen muss zwischen den einzelnen Sitzungen dafür gesorgt werden, dass diese persistent gespeichert werden.
 
 \textbf{Zuverlässigkeit:} Durch einen zu häufigen Ausfall des Spielesystems, wird die Erfahrung des Spielens negativ beeinflusst. 
 
 \textbf{Konsistenz:} Um eine sinnvolle Interaktion zwischen Spielern zu ermöglichen, muss die Erfahrung dieser Welt für jeden Mitspieler konsistent sein. Dies beinhaltet das Aufrechterhalten von Spielezuständen und die Synchronisation von Ereignissen. Um eine Konsistenz der Spielewelt zu Erreichen müssen Ereignisse der Spieler mittels Nachrichten im System ausgetauscht werden. 
 
-\textbf{Durchsatz:} Dadurch dass viele Spiele die echte Welt simulieren, hat der Durchsatz des Systems großen Einfluss darauf wie Echt diese Illusion wahrgenommen wird. Werden durch große Verzögerungen Ereignisse verzögert dargestellt, so wird die Spielmechanik gestört. 
+\textbf{Reaktionsfreudigkeit:} Da Spiele oft die echte Welt simulieren, hat die Reaktionsfreudigkeit des Systems großen Einfluss darauf, für wie echt diese Illusion wahrgenommen wird. Werden durch zu große Verzögerungen Ereignisse zu spät dargestellt , so wird die Spielmechanik gestört. 
 
 \textbf{Skalierbarkeit:} Eine skalierbare Architektur sollte sowohl eine große Anzahl an gleichzeitigen Benutzern, als auch einen starken Anstieg der Benutzer unterstützen, ohne dass die Last des Systems dramatisch ansteigt. 
 
