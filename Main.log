@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592-1.40.7 (MiKTeX 2.7) (preloaded format=latex 2008.3.12)  19 MAY 2008 15:47
+This is pdfTeX, Version 3.141592-1.40.7 (MiKTeX 2.7) (preloaded format=latex 2008.3.12)  20 MAY 2008 17:51
 entering extended mode
 **Main.tex
 (Main.tex
@@ -458,37 +458,49 @@ Class scrbook Info: You've told me to use the font selection of the element
 (scrbook)            on input line 121.
 Class scrbook Info: You've told me to use the font selection of the element
 (scrbook)           `sectioning' that is an alias of element `disposition'
-(scrbook)            on input line 177.
+(scrbook)            on input line 175.
 
 [5]
 Class scrbook Info: You've told me to use the font selection of the element
 (scrbook)           `sectioning' that is an alias of element `disposition'
-(scrbook)            on input line 206.
+(scrbook)            on input line 204.
 Class scrbook Info: You've told me to use the font selection of the element
 (scrbook)           `sectioning' that is an alias of element `disposition'
-(scrbook)            on input line 217.
+(scrbook)            on input line 215.
 Class scrbook Info: You've told me to use the font selection of the element
 (scrbook)           `sectioning' that is an alias of element `disposition'
-(scrbook)            on input line 220.
+(scrbook)            on input line 218.
 )
 \tf@toc=\write3
  [6] (kapitel/stichwortverzeichnis.tex) [7
 
 
-] (Main.lof [8
+] (Main.lof
+Overfull \hbox (1.8753pt too wide) in paragraph at lines 15--15
+ [][][] []\OT1/cmr/m/n/12 Einsatz von je-weils di-rek-ten Kom-mu-ni-ka-ti-ons-k
+an[]alen zwi-schen Teil- 
+ []
+
+
+Overfull \hbox (52.67332pt too wide) in paragraph at lines 16--16
+ [][][] []\OT1/cmr/m/n/12 Konfiguration von Kan[]alen, Grup-pen und Rech-ten in
+ Sprach-kommunikations- 
+ []
+
+[8
 
 
 ])
 \tf@lof=\write4
  [9] (Main.lot)
 \tf@lot=\write5
-
-[10
+ [10
 
 ] (kapitel/abkuerzungen.tex [11
 
 
-]) [12] (kapitel/einleitung.tex
+]) [12]
+(kapitel/einleitung.tex
 Kapitel 1.
 
 Overfull \hbox (4.77881pt too wide) in paragraph at lines 8--9
@@ -578,41 +590,37 @@ Overfull \hbox (23.74086pt too wide) in paragraph at lines 251--252
 
 [24]) [25] (kapitel/kapitel_folgerungundziele.tex
 Kapitel 3.
-File: grafiken/singlekanal-kommunikationsmodell.eps Graphic file (type eps)
-<grafiken/singlekanal-kommunikationsmodell.eps>
-Overfull \hbox (64.49103pt too wide) in paragraph at lines 15--16
-[][]\OT1/cmr/m/n/12 Ein Gro-teil der St[]orungen re-sul-tiert aus der Un-taug-
-lich-keit ei-nes ein-zi-gen []Ubertragungskanals
- []
-
 [26
 
 
 
-]
-Overfull \hbox (9.63232pt too wide) in paragraph at lines 21--22
+] [27]
+File: grafiken/singlekanal-kommunikationsmodell.eps Graphic file (type eps)
+ <grafiken/singlekanal-kommunikationsmodell.eps>
+Overfull \hbox (9.63232pt too wide) in paragraph at lines 44--45
 [][]\OT1/cmr/bx/n/12 St[]orungen durch In-ter-fe-ren-zen\OT1/cmr/m/n/12 : Durch
  []Uberlagerung von meh-re-ren gleich-
  []
 
 
-Overfull \hbox (1.29715pt too wide) in paragraph at lines 21--22
+Overfull \hbox (1.29715pt too wide) in paragraph at lines 44--45
 \OT1/cmr/m/n/12 bis zu dem Punkt, an dem vie-le Spie-ler die Sprach-kom-mu-ni-k
 a-ti-on als st[]orend
  []
 
+[28]
 File: grafiken/multi-kommunikationsmodell.eps Graphic file (type eps)
-<grafiken/multi-kommunikationsmodell.eps> [27]
+ <grafiken/multi-kommunikationsmodell.eps> [29]
 File: grafiken/ventrillo.eps Graphic file (type eps)
  <grafiken/ventrillo.eps>
-[28] [29] [30]
+[30]
 
 Package natbib Warning: Citation `schulzrinnesomething...' on page 31 undefined
- on input line 124.
+ on input line 140.
 
-[31]
+[31] [32]
 File: grafiken/lautstaerke.eps Graphic file (type eps)
- <grafiken/lautstaerke.eps> [32]) [33] (kapitel/kapitel_sip.tex
+ <grafiken/lautstaerke.eps>) [33] (kapitel/kapitel_sip.tex
 Kapitel 4.
 [34
 
@@ -805,38 +813,82 @@ Kapitel 7.
 
 
 
-] [78] [79] [80] [81] [82] [83]
+] [78]
+! Undefined control sequence.
+<argument> \textit {Ventrillo},\texit 
+                                      {Teamspeak},\texit {Mumble}
+l.38 ...ntrillo},\texit{Teamspeak},\texit{Mumble}}
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> ...entrillo},\texit {Teamspeak},\texit 
+                                                  {Mumble}
+l.38 ...ntrillo},\texit{Teamspeak},\texit{Mumble}}
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> ...ame }\fi \textit {Ventrillo},\texit 
+                                                  {Teamspeak},\texit {Mumble...
+l.38 ...ntrillo},\texit{Teamspeak},\texit{Mumble}}
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> ...entrillo},\texit {Teamspeak},\texit 
+                                                  {Mumble}}{\thepage }}
+l.38 ...ntrillo},\texit{Teamspeak},\texit{Mumble}}
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+[79] [80] [81] [82] [83]
 File: grafiken/pjsip.eps Graphic file (type eps)
- <grafiken/pjsip.eps> [84] [85]
+ <grafiken/pjsip.eps> [84]
 File: grafiken/spielewelt-screenshot.eps Graphic file (type eps)
 
-<grafiken/spielewelt-screenshot.eps> [86]
-Overfull \hbox (1.95097pt too wide) in paragraph at lines 184--185
-\OT1/cmr/m/n/12 Ra-dar verf[]ugt []uber drei Zo-nen, die die ein-zel-nen Ver-bi
-n-dungs-stu-fen re-pr[]asentieren.
+<grafiken/spielewelt-screenshot.eps> [85] [86] [87]
+Overfull \hbox (0.2514pt too wide) in paragraph at lines 199--200
+\OT1/cmr/m/n/12 der Ent-fer-nung von-ein-an-der wer-den die ent-spre-chen-den Z
+o-nen-me-cha-nis-men durch
  []
 
-[87] [88]
+[88]
 File: grafiken/gamestart-screenshot.eps Graphic file (type eps)
  <grafiken/gamestart-screenshot.eps> [89] [90] [91]
-Overfull \hbox (4.08553pt too wide) in paragraph at lines 262--263
-\OT1/cmr/m/n/12 Ver-bun-den sind aber noch kei-ne Au-di-oda-ten aus-tau-schen. 
-In die-ser []Ubergangphase
- []
+File: grafiken/sipanruf_403.eps Graphic file (type eps)
 
-[92] [93] [94]
-Overfull \hbox (1.5541pt too wide) in paragraph at lines 294--295
+<grafiken/sipanruf_403.eps> [92] [93] [94]
+File: grafiken/siphold.eps Graphic file (type eps)
+ <grafiken/siphold.eps> [95] [96])
+Overfull \hbox (1.5541pt too wide) in paragraph at lines 316--83
 \OT1/cmr/m/n/12 auch die Me-ta-pher des Festnetz-Telephons um-ge-setzt, dass de
 m Spie-ler tats[]achlich
  []
 
-) [95] (kapitel/kapitel_network.tex
+[97] (kapitel/kapitel_network.tex
 Kapitel 8.
-[96
+[98
 
 
 
-] [97] [98] [99] [100] [101] [102] [103] [104] [105] [106] [107]
+] [99] [100] [101] [102] [103] [104] [105] [106] [107] [108] [109]
 File: grafiken/p2psipregisterandjoin.eps Graphic file (type eps)
 
 <grafiken/p2psipregisterandjoin.eps>
@@ -844,21 +896,21 @@ File: grafiken/p2psipregisterandjoin_user.eps Graphic file (type eps)
  <grafiken/p2psipregisterandjoin_user.eps>
 File: grafiken/p2psipcall.eps Graphic file (type eps)
 
-<grafiken/p2psipcall.eps> [108] [109]) [110] (kapitel/kapitel_benchmarking.tex
+<grafiken/p2psipcall.eps> [110] [111]) [112] (kapitel/kapitel_benchmarking.tex
 Kapitel 9.
 File: grafiken/fullmesh.eps Graphic file (type eps)
 <grafiken/fullmesh.eps>
 File: grafiken/fullmeshchart.eps Graphic file (type eps)
- <grafiken/fullmeshchart.eps> [111
+ <grafiken/fullmeshchart.eps> [113
 
 
 
-] [112]
+] [114]
 File: grafiken/partialmesh.eps Graphic file (type eps)
 
 <grafiken/partialmesh.eps>
 File: grafiken/partialmeshchart.eps Graphic file (type eps)
- <grafiken/partialmeshchart.eps> [113]
+ <grafiken/partialmeshchart.eps> [115]
 File: grafiken/fullmesh-worstcase.eps Graphic file (type eps)
 
 <grafiken/fullmesh-worstcase.eps>
@@ -866,22 +918,22 @@ File: grafiken/ohnevpn1.eps Graphic file (type eps)
  <grafiken/ohnevpn1.eps>
 File: grafiken/ohnevpn2.eps Graphic file (type eps)
 
-<grafiken/ohnevpn2.eps> [114] [115]
+<grafiken/ohnevpn2.eps> [116] [117]
 File: grafiken/mitvadupdown.eps Graphic file (type eps)
  <grafiken/mitvadupdown.eps>
 File: grafiken/mitvadrtpsip.eps Graphic file (type eps)
 
 <grafiken/mitvadrtpsip.eps>
 File: grafiken/mitholdupanddown.eps Graphic file (type eps)
- <grafiken/mitholdupanddown.eps> [116] [117]
+ <grafiken/mitholdupanddown.eps> [118] [119]
 File: grafiken/mithold1.eps Graphic file (type eps)
 
 <grafiken/mithold1.eps>
 File: grafiken/mitvadund2codecs.eps Graphic file (type eps)
- <grafiken/mitvadund2codecs.eps> [118] [119]
+ <grafiken/mitvadund2codecs.eps> [120] [121]
 File: grafiken/mitvadundrtpsip.eps Graphic file (type eps)
 
-<grafiken/mitvadundrtpsip.eps>) [120] (kapitel/kapitel_conclusion.tex
+<grafiken/mitvadundrtpsip.eps>) [122] (kapitel/kapitel_conclusion.tex
 Kapitel 10.
 
 Overfull \hbox (12.18462pt too wide) in paragraph at lines 10--11
@@ -889,11 +941,11 @@ Overfull \hbox (12.18462pt too wide) in paragraph at lines 10--11
 ichkeiten adres-siert und L[]osungen
  []
 
-[121
+[123
 
 
 
-] [122]
+] [124]
 Overfull \hbox (22.66391pt too wide) in paragraph at lines 27--29
 \OT1/cmr/m/n/12 Over-lay soll-ten so-wohl der Aus-tausch an Au-diostr[]omen als
  auch jeg-li-che Signalisieruns-
@@ -905,7 +957,7 @@ Overfull \hbox (1.4016pt too wide) in paragraph at lines 27--29
 -den. Mo-men-tan ben[]otigt
  []
 
-) [123] (Main.bbl
+) [125] (Main.bbl
 Underfull \hbox (badness 6063) in paragraph at lines 42--47
 [][]\OT1/cmr/m/sc/12 Arango\OT1/cmr/m/n/12 , M. ; \OT1/cmr/m/sc/12 Du-gan\OT1/c
 mr/m/n/12 , A. ; \OT1/cmr/m/sc/12 El-liott\OT1/cmr/m/n/12 , I. ; \OT1/cmr/m/sc/
@@ -918,7 +970,7 @@ Underfull \hbox (badness 3078) in paragraph at lines 42--47
 -col (MG-CP).  In:
  []
 
-[124
+[126
 
 
 
@@ -934,7 +986,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 185--191
 ]Studien[]-
  []
 
-[125] [126]
+[127] [128]
 Underfull \hbox (badness 10000) in paragraph at lines 307--313
 [][]\OT1/cmr/m/sc/12 Ipoque\OT1/cmr/m/n/12 :  In-ter-net Stu-die 2007.  In:
  []
@@ -951,7 +1003,7 @@ Underfull \hbox (badness 1062) in paragraph at lines 337--342
 \OT1/cmr/m/n/12 , Gwen-dal:  So-lip-sis: A Mas-si-ve-ly Multi-
  []
 
-[127]
+[129]
 Underfull \hbox (badness 1112) in paragraph at lines 418--425
 [][]\OT1/cmr/m/sc/12 Miladinovic\OT1/cmr/m/n/12 , I. ; \OT1/cmr/m/sc/12 Stad-le
 r\OT1/cmr/m/n/12 , J.:  Mul-ti-par-ty Con-fe-rence Si-gnal-ling
@@ -982,7 +1034,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 503--507
 In:
  []
 
-[128] [129]
+[130] [131]
 Underfull \hbox (badness 3229) in paragraph at lines 644--649
 [][]\OT1/cmr/m/sc/12 Schulzrinne\OT1/cmr/m/n/12 , H. ; \OT1/cmr/m/sc/12 Cas-ner
 \OT1/cmr/m/n/12 , S. ; \OT1/cmr/m/sc/12 Fre-de-rick\OT1/cmr/m/n/12 , R. ; \OT1/
@@ -995,7 +1047,7 @@ Underfull \hbox (badness 1259) in paragraph at lines 644--649
 ns.  In:
  []
 
-[130]
+[132]
 Underfull \hbox (badness 10000) in paragraph at lines 720--724
 [][]\OT1/cmr/m/sc/12 SonyEntertainment\OT1/cmr/m/n/12 :  Play-Sta-ti-on Ho-me. 
  In:
@@ -1012,13 +1064,13 @@ Underfull \hbox (badness 1178) in paragraph at lines 751--758
 a-ti-on to Pre-sence  \OT1/cmr/m/n/12 9
  []
 
-[131]
+[133]
 Underfull \hbox (badness 10000) in paragraph at lines 782--786
 [][]\OT1/cmr/m/sc/12 Wikipedia\OT1/cmr/m/n/12 :  Over-view of SIP Soft-wa-re.  
 In:
  []
 
-) [132] (kapitel/erklaerung.tex) [133
+) [134] (kapitel/erklaerung.tex) [135
 
 
 ]
@@ -1038,12 +1090,12 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 6719 strings out of 95338
- 96022 string characters out of 1184228
- 210233 words of memory out of 1500000
- 9683 multiletter control sequences out of 110000
+ 6728 strings out of 95338
+ 96163 string characters out of 1184228
+ 210279 words of memory out of 1500000
+ 9690 multiletter control sequences out of 110000
  11465 words of font info for 41 fonts, out of 1200000 for 2000
  14 hyphenation exceptions out of 8191
  37i,11n,37p,2156b,1115s stack positions out of 5000i,500n,10000p,200000b,5000s
 
-Output written on Main.dvi (145 pages, 515308 bytes).
+Output written on Main.dvi (147 pages, 519452 bytes).

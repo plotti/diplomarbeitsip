@@ -3,7 +3,7 @@
 Bei der Implementierung bestand die Herausforderung darin eine virtuelle 3D-Welt zu erzeugen und sie mit VoIP Funktionalität zu kombinieren. Dabei sollten die einzelnen Komponenten so gewählt werden, dass die in Kapitel 3 präsentierten Verbesserungsvorschläge für eine bessere Sprachkommunikation tatsächlich praktisch umgesetzt werden können. Außerdem sollten die gewählten Komponenten auch die in Kapitel 6 gewählte Architektur unterstützen.
  
 \section{3D Umgebung}
-Da die Entwicklung eines realistisches Spieles weit über das Thema der Arbeit hinaus geht, und diese Aufgabe normalerweise von ganzen Teams über mehrere Monate oder Jahre bewältigt wird, sollen nach Möglichkeit bestehende Komponenten eingesetzt werden.
+Da die Entwicklung eines realistisches Spieles weit über das Thema der Arbeit hinaus geht und diese Aufgabe normalerweise von ganzen Teams über mehrere Monate oder Jahre bewältigt wird, sollen nach Möglichkeit bestehende Komponenten eingesetzt werden.
 
 Deswegen habe ich mich entschlossen bestehende Frameworks zu nutzen. Diese sollten dazu eingesetzt werden einen Prototypen zu erstellen, in dem ein Avatar in einer möglichst realistischen 3D Umgebung gesteuert werden kann. 
 
@@ -18,7 +18,7 @@ Eine Alternative zu reinen Spiele-Engines bieten offene generische 3D-Engines, d
 \textit{Irrlicht} ist ein einfaches gut dokumentiertes open source Framework das in C++ geschrieben wurde. Alle üblichen 3D Features wie \textit{Collision Detection}, Animationen, \textit{Shading} und Texturen werden sowohl unter \textit{Windows}, \textit{Linux} als auch \textit{Mac OS} unterstützt. Aufgrund der bestehenden Arbeit von Triebel \cite{triebel07g}, war es mir möglich bereits bestehende Konzepte zu verwenden und somit eine schnelle Entwicklung des Prototyps zu gewährleisten.
 
 \subsubsection{\textit{Irrklang}}
-Speziell für die Sprachkommunikation musste das 3D-Framework um eine Audio-Engine erweitert werden, die eine gezielte Audioausgabe ermöglicht. Speziell für Irrlicht existiert \textit{IrrKlang} \footnote{N. Gebhardt, Version 22.03.2008, http://www.ambiera.com/irrklang/index.html}, eine einfache plattform-übergreifende Audiobibliothek. Sie unterstützt Audioverarbeitung auf der untersten Ebene, realistisches \textit{3D-Audio-Rendering}, \textit{Multithreading} und kann über \textit{Plugins} erweitert werden. Zusätzlich verfügt sie über eine einfache API, die eine schnelle Einarbeitung und Entwicklung ermöglicht. All diese Gründe waren ausschlaggebend diese Bibliothek zu benutzen. 
+Speziell für die Sprachkommunikation musste das 3D-Framework um eine Audio-Engine erweitert werden, die eine gezielte Audioausgabe ermöglicht. Speziell für Irrlicht existiert \textit{IrrKlang} \footnote{N. Gebhardt, Version 22.03.2008, http://www.ambiera.com/irrklang/index.html}, eine einfache plattform-übergreifende Audiobibliothek. Sie unterstützt Audioverarbeitung auf der nativen Ebene, realistisches \textit{3D-Audio-Rendering}, \textit{Multithreading} und kann über \textit{Plugins} erweitert werden. Zusätzlich verfügt sie über eine einfache API, die eine schnelle Einarbeitung und Entwicklung ermöglicht. All diese Gründe waren ausschlaggebend diese Bibliothek zu benutzen. 
 
 \section{VoIP Lösung}
 
@@ -35,7 +35,7 @@ Bisher werden im Spielebereich fast ausschließlich serverbasierte Drittanbieter 
 \subsection{Serverbasierte Sprachkommunikationslösungen}
 %http://www.tentonhammer.com/index.php?q=node/102
 
-\subsubsection{\textit{Ventrillo}}
+\subsubsection{\textit{Ventrillo},\texit{Teamspeak},\texit{Mumble}}
 %http://www.ventrilo.com/
 Die unter Spielern beliebtesten Lösungen sind 
 \begin{itemize}
@@ -46,7 +46,7 @@ Die unter Spielern beliebtesten Lösungen sind
  
  Bei allen drei Produkten handelt es sich um serverbasierte proprietäre VoIP Anwendungen. Die Software besteht aus einem Server- und Client-Modul, wobei die Clientsoftware frei erhältlich ist, für die Serverkomponente jedoch eine kostenpflichtige Lizenz zu erwerben ist. Benutzer des Clients melden sich vor Beginn des eigentlichen Spieles auf einem der kostenpflichtigen Server an und können dort einen Kanal betreten. Benutzer des gleichen Kanals auf dem gleichen Server können sich gegenseitig hören. Zusätzlich existieren Plugins die es erlauben Kanäle während der Spielesitzung per Tastaturkombination zu wechseln. Durch das Lizenzmodell ist es nicht möglich im privaten Bereich eigene Server zu betreiben oder die Software nach eigenen Vorstellungen anzupassen. 
 
-Einzig \textit{Mumble} ist eine offene VoIP Anwendung. Seine Verwendung gleicht den anderen bisher vorgestellten Programmen. Der einzige Unterschied liegt in der Betonung der sozialen Komponente der Sprachkommunikation. Durch sehr wenige administrative Elemente eine hohe Sprachqualität, soll die Kommunikation zwischen Spielern besonders einfach und gut verständlich sein.
+Einzig \textit{Mumble} ist eine offene VoIP Anwendung. Ihre Verwendung gleicht den anderen bisher vorgestellten Programmen. Der einzige Unterschied liegt in der Betonung der sozialen Komponente der Sprachkommunikation. Durch sehr wenige administrative Elemente eine hohe Sprachqualität, soll die Kommunikation zwischen Spielern besonders einfach und gut verständlich sein.
 
 Obwohl die kommerziellen Lösungen bei einer optimalen Konfiguration hunderte von Benutzern unterstützen können und eine gute Sprachqualität bieten, haben sie den entscheidenden Nachteil, dass sie nicht modifizierbar sind, die Serverkomponenten nicht frei verfügbar sind, und somit deren Nutzung für eine Umsetzung des Prototypen nicht brauchbar ist. 
 
@@ -54,33 +54,33 @@ Obwohl die kommerziellen Lösungen bei einer optimalen Konfiguration hunderte von
 
 \subsection{Dezentralisierte Sprachkommunikationslösungen}
 
-Prinzipiell existiert eine Myriade an verschiedenen VoIP Programmen, die alle als dezentralisierte Lösungen eingesetzt werden können. Eine tatsächlich dezentrale Architektur kann jedoch bisher nur \textit{Skype} liefern. 
+Prinzipiell existiert eine Myriade an verschiedenen VoIP Programmen, die alle als dezentralisierte Lösungen eingesetzt werden können. Eine tatsächlich dezentrale Architektur kann jedoch bisher nur \textit{Skype} bieten. 
 
 \subsubsection{\textit{Skype}}
 
-Einen ganz anderen Ansatz verfolgt das Unternehmen Skype Technologies \footnote{Skype Technologies, Version 23.03.2008, http://www.skype.com}. Programm \textit{Skype} bietet innerhalb des eigenen Netzwerkes von registrierten Skype Benutzern die Möglichkeit des Instant Messaging, des Dateitransfers, der kostenlosen Telefonie über das Internet.
-Von den Mitbegründern der Tauschbörse \textit{Kazaa} ins Leben gerufen, basiert Skype wie das Filesharingprogramm auf dem Peer-to-Peer Prinzip. Die Vermittlung, die Gespräche und auch Dienste wie das Teilnehmerverzeichnis werden nicht von einem zentralen Server angeboten, sondern werden auf alle gleichberechtigten Teilnehmer (den so genannten Peers) verteilt. Lediglich für die Authentifizierung und die Abrechnung bedient sich Skype eines zentralen Back-End-Servers. Das Skype Netzwerk unterscheidet zwischen einfachen Benutzern (Ordinary Hosts genannt) und den Super Nodes. 
+Das Programm \textit{Skype} des Unternehmens Skype Technologies \footnote{Skype Technologies, Version 23.03.2008, http://www.skype.com} bietet innerhalb des eigenen Netzwerkes von registrierten Skype Benutzern die Möglichkeit des Instant Messaging, des Dateitransfers und der kostenlosen Telefonie über das Internet.
+Von den Mitbegründern der Tauschbörse \textit{Kazaa} ins Leben gerufen, basiert Skype wie das Filesharingprogramm auf dem Peer-to-Peer Prinzip. Die Vermittlung, die Gespräche und auch Dienste wie das Teilnehmerverzeichnis werden nicht von einem zentralen Server angeboten, sondern auf alle gleichberechtigten Teilnehmer (den so genannten Peers) verteilt. Lediglich für die Authentifizierung und die Abrechnung bedient sich Skype eines zentralen Back-End-Servers. Das Skype Netzwerk unterscheidet zwischen einfachen Benutzern (Ordinary Hosts genannt) und den Super Nodes. 
 
 Super Nodes sind Ordinary Hosts mit einer öffentlichen IP-Adresse und ausreichender Bandbreite, CPU-Leistung und Hauptspeicher und dienen als Endpunkte für die anderen
 Hosts. Der Benutzer selber hat keinen Einfluss auf die Entscheidung, ob sein Rechner als Super Node fungiert oder nicht. In diesem Zusammenhang kann man bei Skype nicht von einer
 reinen P2P Architektur sprechen, da nicht alle beteiligten Rechner gleiche Aufgaben übernehmen. 
 
-Die \textit{Skype} Technologie ermöglicht als einziges ein völlig dezentrales VoIP. Der Einsatz des \textit{Skype} Dienstes und Clients ist kostenlos. Über das \textit{Skype-API }ist es auch für externe Programme möglich, auf die Funktionalitäten des \textit{Skype-Clients} und Teilen des Netzwerkes zuzugreifen.
+Die \textit{Skype} Technologie ermöglicht als einziges ein völlig dezentrales VoIP. Der Einsatz des \textit{Skype} Dienstes und Clients ist kostenlos. Über das \textit{Skype-API }ist es auch für externe Programme möglich, auf die Funktionalitäten des \textit{Skype-Clients} zu nutzen.
 
-Trotz der Vorteile bietet \textit{Skype} auch einige Nachteile: Über die Technik, die von der Skype Anwendung verwendet wird, ist nicht viel bekannt, da die gesamte Kommunikation per AES mit 256 Bit verschlüsselt wird, somit nicht zu analysieren ist und das Protokoll eine proprietäre Entwicklung von Skype Technologies ist. Somit kann das Protokoll nur mit der Originalsoftware genutzt werden. In der kostenlosen Version sind nur Konferenzen mit bis zu 5 gleichzeitigen Teilnehmern möglich. In einer kostenpflichtigen Version werden nur bis zu 10 gleichzeitige Konferenzteilnehmer unterstützt. 
+Trotz dieser Vorteile bietet \textit{Skype} auch einige Nachteile: Über die Technik, die von der Skype Anwendung verwendet wird, ist nicht viel bekannt, da die gesamte Kommunikation per AES mit 256 Bit verschlüsselt wird, somit nicht zu analysieren ist und das Protokoll eine proprietäre Entwicklung von Skype Technologies ist. Somit kann das Protokoll nur mit der Originalsoftware genutzt werden. In der kostenlosen Version sind nur Konferenzen mit bis zu 5 gleichzeitigen Teilnehmern möglich. Auch in einer kostenpflichtigen Version werden nur bis zu 10 gleichzeitige Konferenzteilnehmer unterstützt. 
 
 Beide Versionen jedoch bieten auf Clientseite keine Kontrolle über die einzelnen Audioströme. So kann nur die Summe aller Audioströme empfangen werden. Die Clientanwendung ist nicht in der Lage einzelne Audioströme auszublenden oder die Lautstärke einzelner Teilnehmer zu ändern. Zudem bietet die \textit{Skype API} nur zwei spezielle Interfaces an um entweder Anrufe zu tätigen oder Nachrichten zu verschicken. Eine Architektur für weitere Dienste ist nicht vorgesehen \cite{schulzrinne05}.
 
 Somit bietet \textit{Skype} als einziger tatsächlicher dezentralisierter Client nicht alle Eigenschaften um als mögliche Ausgangsgrundlage zu dienen. 
 
 \subsection{Instant Messaging Anwendungen}
-Andere Peer-to-Peer Programme wie \textit{Microsoft Netmeeting}\footnote{Microsoft, Version 20.03.2008, http://de.wikipedia.org/wiki/NetMeeting}, \textit{Microsoft Messenger}\footnote{Microsoft, Version 20.03.2008, http://messenger.live.com}, \textit{Google Talk}\footnote{Google, Version 20.03.2008, http://www.google.com/talk} sind nicht modifizierbar und nur sehr eingeschränkte Konferenzmöglichkeiten. 
+Andere Peer-to-Peer Programme wie \textit{Microsoft Netmeeting}\footnote{Microsoft, Version 20.03.2008, http://de.wikipedia.org/wiki/NetMeeting}, \textit{Microsoft Messenger}\footnote{Microsoft, Version 20.03.2008, http://messenger.live.com}, \textit{Google Talk}\footnote{Google, Version 20.03.2008, http://www.google.com/talk} sind nicht modifizierbar und bieten nur sehr eingeschränkte Konferenzmöglichkeiten. 
 
 \subsection{SIP Protokoll}
 Das im darauf folgenden Kapitel vorgestellte SIP Protokoll und existierende Protokollstapel erfüllen die gestellten Anforderungen an den Prototypen. Da SIP ein generisches und offenes Protokoll ist, kann es kann benutzt werden, um beliebige Sitzungen mit einem oder mehreren Teilnehmern zu verwalten. Dabei ist es nicht auf Internet-Telefonie beschränkt sondern kann Sitzungen zwischen beliebigen Multimediaströmen, Konferenzen oder Computerspielen herstellen. Zahlreiche Standardisierungsorganisationen wie \textit{IETF \footnote{IETF, Version 22.03.2008, http://www.ietf.org/html.charters/sip-charter.html}, PINT, 3GPP\footnote{3GPP,Version 22.03.2008, http://www.3gpp.org/}, International Packet Communications Consortium \footnote{IPCC,Version 22.03.2008, http://www.imsforum.org/}, IMTC\footnote{ITMC, Version 22.03.2008, http://www.imtc.org/} und PacketCable \footnote{PacketCable, Version 22.03.2008, http://www.packetcable.com/}} unterstützen bereits den Einsatz von SIP.
 %http://www.cs.columbia.edu/sip/
 
-In der open-source Gemeinde wird das SIP Protokoll auch zunehmend unterstützt. So existieren bereits etliche Clientanwendungen und zentrale Komponenten wie \textit{Proxys} und \textit{Registrare}. Darüber hinaus finden sich zahlreiche gut dokumentierte SIP Protokollstapel und \textit{SDKs}. Es existieren auch Referenzimplementierungen, wie \textit{JAIN-SIP} \footnote{Sun Microsystems, Version 24.03.2008, http://jain-sip.dev.java.net} welches vom \textit{National Insitute of Standards and Technology \footnote{NIST, Version 24.03.2008, http://www.nist.gov}}entwickelt wurde, die sowohl in kommerziellen Projekten aber auch zu Forschungszwecken eingesetzt werden. Der wichtigste Grund für den Einsatz von SIP ist, dass es alle Anforderungen für die Umsetzung des Prototyps unterstützt:
+In der open-source Gemeinde wird das SIP Protokoll auch zunehmend unterstützt. So existieren bereits etliche Clientanwendungen und zentrale Komponenten wie \textit{Proxys} und \textit{Registrare}. Darüber hinaus finden sich zahlreiche gut dokumentierte SIP Protokollstapel und \textit{SDKs}. Es existieren auch Referenzimplementierungen, wie \textit{JAIN-SIP} \footnote{Sun Microsystems, Version 24.03.2008, http://jain-sip.dev.java.net}, die sowohl in kommerziellen Projekten aber auch zu Forschungszwecken eingesetzt werden. Der wichtigste Grund für den Einsatz von SIP ist, dass es alle Anforderungen für die Umsetzung des Prototyps unterstützt:
 
 \begin{itemize}
 	\item Offener Standard
@@ -94,11 +94,11 @@ In der open-source Gemeinde wird das SIP Protokoll auch zunehmend unterstützt. S
 Um eine funktionierende Implementierung in kürzester Zeit umzusetzen, habe ich existierende offene SIP Protokollstapel in Betracht gezogen. Dabei wurde zwischen server- und clientbasierten Komponenten unterschieden. 
 
 \subsubsection{SIP Server}
-Für den Einsatz als Server bieten sich zwei große Pakete an die beide den SIP Standard nach RFC 3265 unterstützen. \textit{Asterisk}\footnote{Digium Inc, Programmversion 1.4.19, http://www.asterisk.org} unterstützt Voice-over-IP mit unterschiedlichen Protokollen  darunter sowohl SIP als auch das \textit{H323} Protokoll und bietet alle Möglichkeiten einer Anbindung an das Telefonnetz. 
+Für den Einsatz als Server bieten sich zwei große Pakete an, die beide den SIP Standard nach RFC 3265 unterstützen. \textit{Asterisk}\footnote{Digium Inc, Programmversion 1.4.19, http://www.asterisk.org} unterstützt Voice-over-IP mit unterschiedlichen Protokollen  darunter sowohl SIP als auch das \textit{H323} Protokoll und bietet alle Möglichkeiten einer Anbindung an das Telefonnetz. 
 
 Die Serveranwendung \textit{OpenSer}\footnote{AG Projects, Programmversion 1.3.1, http://www.openser.org} bietet ähnliche Funktionalität und kann als SIP-Proxy, Registrar, aber auch als Location- und Application-Server betrieben werden und bietet zusätzlich Unterstüztung für das SIP-SIMPLE Protokoll. \textit{OpenSer} ist sowohl von eingebetteten System wie DSL-Routern bis zu großen Installationen mit mehreren Millionen Benutzern bei Internet Service Providern flexibel einsetzbar. Diese Eigenschaften haben für mich den den Ausschlag gegeben Openser als SIP Server einzusetzen. 
 
-Darüber hinaus existieren noch etliche open source als auch proprietäre SIP Server Lösungen, die hier nicht weiter erläutert werden. 
+Darüber hinaus existieren noch etliche open-source und proprietäre SIP Server Lösungen, die hier nicht weiter erläutert werden. 
 
 \subsubsection{SIP Clients}
 
@@ -122,7 +122,7 @@ Meine persönliche Wahl fiel aus den folgenden Gründen auf den offenen SIP Protok
 	\item Unterstützung des SIP Standards (PJSIP-CORE)
 	\item Unterstützung des SIP-SIMPLE Standards (PJSIP-SIMPLE)
 	\item Unterstützung für STUN, TURN und ICE (PJLIB-UTIL)
-	\item Unterstützung moderner Audiocodecs wie z.B. \textit{Speex}(PJMEDIA-CODEC)
+	\item Unterstützung moderner Audiocodecs wie z.B. \textit{Speex} (PJMEDIA-CODEC)
 	\item Bereits existierender Mediastapel (PJMEDIA)
 	\item Unterstützung von \textit{Asterisk} und \textit{Openser}
 	\item Möglicher Einsatz auf mobilen Endgeräten
@@ -150,9 +150,9 @@ Die Entwicklung des Sourcecodes und der übrigen Teile dieser Arbeit wurden unter
 
 \subsection{Testumgebung}
 Die wiederkehrenden Tests wurden auf diversen mir zur Verfügung stehenden Systemen
-durchgeführt. Als Clients kamen, zwei \textit{AMD Athlon(tm)} X2Dual 4200+, \textit{IBM} \textit{Thinkpad }T42 1,6GHz, \textit{Sony Vaio }CR 1,6GHz und \textit{HP Compaq }6710b 2,1GHz zum Einsatz. Um möglichst realistische Bedingungen zu schaffen, wurden die Rechner auf verschiedene Art und Weise an das Internet angebunden. Zwei Laptops nutzten ein 54Mbit WLAN mit VPN Anschluss, ein Laptop befand sich hinter einem NAT-Router mit WLAN, die stationären Rechner verfügten über einen direkten 100Mbit LAN Anschluss. In den Tests nutzten alle Rechner den Breitbandanschluss der Universität Mannheim der über 33 MBit Down- und 16 MBit Upload verfügt. 
+durchgeführt. Als Clients kamen, zwei \textit{AMD Athlon(tm)} X2Dual 4200+, \textit{IBM} \textit{Thinkpad }T42 1,6GHz, \textit{Sony Vaio }CR 1,6GHz und \textit{HP Compaq }6710b 2,1GHz zum Einsatz. Um möglichst realistische Bedingungen zu schaffen, wurden die Rechner auf verschiedene Art und Weise an das Internet angebunden. Zwei Laptops nutzten ein 54Mbit WLAN mit VPN Anschluss, ein Laptop befand sich hinter einem NAT-Router mit WLAN, die stationären Rechner verfügten über einen direkten 100Mbit LAN Anschluss. In den Tests nutzten alle Rechner den Breitbandanschluss der Universität Mannheim, der über 33 MBit Down- und 16 MBit Upload verfügt. 
 
-Auf den folgenden Seiten soll nun die Umsetzung, der in Kapitel 2 erarbeiteten Konzepte und Verbesserungsvorschläge erläutert werden. Es werden ausgewählte Probleme und Lösungswege beschrieben, die in dieser Phase der Arbeit aufgetreten sind. 
+Auf den folgenden Seiten soll nun die Umsetzung, der in Kapitel 3 erarbeiteten Konzepte und Verbesserungsvorschläge erläutert werden. Es werden ausgewählte Probleme und Lösungswege beschrieben, die in dieser Phase der Arbeit aufgetreten sind. 
 
 \section{3D-Spielewelt mit Irrlicht und Irrklang}
 
@@ -170,7 +170,7 @@ Zu Beginn des Spieles werden die \textit{Irrlicht} und VoIP Instanzen initialisi
 	\label{fig:spielewelt-screenshot}
 \end{figure}
 
-Für eine möglichst realistische Umsetzung wurde ein Level benutzt, das einen Park zeigt in dem Spieler die Möglichkeit haben sich frei zu bewegen. Die Vorstellung, dass Menschen in hier spontane Gesprächen führen, liegt nahe. Ebenso erscheint in diesem Szenario die Übertragung der Sprache per Luft sehr natürlich. Eine frühe Alternative sah vor, Raumschiffe auf einem Planeten umherfliegen zu lassen, war aber für die Sprachübertragung per Luft nicht wirklich passend, da man intuitiv vermutet, dass die Kommunikation zwischen Raumschiffen eher mit einem Funksprechgerät stattfindet.
+Für eine möglichst realistische Umsetzung wurde ein Level benutzt, das einen Park zeigt in dem Spieler die Möglichkeit haben sich frei zu bewegen. Die Vorstellung, dass Menschen in hier spontane Gesprächen führen liegt nahe. Ebenso erscheint in diesem Szenario die Übertragung der Sprache per Luft sehr natürlich. Eine frühe Alternative sah vor, Raumschiffe auf einem Planeten umherfliegen zu lassen, war aber für die Sprachübertragung per Luft nicht wirklich passend, da man intuitiv vermutet, dass die Kommunikation zwischen Raumschiffen eher mit einem Funksprechgerät stattfindet.
 
 \subsubsection{Collision Detection}
 Der Spieler kann in der Implementierung mit andern Spielern des Levels und dem Level selbst interagieren. Dabei ist es wichtig, dass eine Berechnung der Kollision des Spielers mit dem Level oder anderen Spielern stattfindet, da ohne eine solche der Spieler alle Gegenstände durchdringen könnte und das Szenario unnatürlich erscheint. Diese Berechnung wird "`\textit{Collision Detection}"' genannt und wird ebenfalls mit im Irrlicht Framework umgesetzt. 
@@ -180,7 +180,7 @@ Der Spieler ist in der Lage sich in alle Richtungen zu Bewegen und zu springen. 
 
 \subsubsection{Radar}
 
-In einem Radar werden für den Spieler alle Teilnehmer des Spiels angezeigt. Der Radar verfügt über drei Zonen, die die einzelnen Verbindungsstufen repräsentieren. Spieler werden mit einem Icon und ihrem zugehörigen Namen angezeigt. In der öffentlichen Zone wird der Icon gräulich dargestellt, betreten sie die soziale Zone wird dieser grün gefärbt und in der privaten Zone ist ihr Icon gelb. Die Metapher der Luftübertragung gepaart mit dem Radar als Orientierungshilfe unterstützt den Spieler bei der Adressierung von anderen Teilnehmern. Spieler sind direkt in der Lage zu sehen, an wen ihre Sprachnachrichten übertragen werden und welche Teilnehmer sie gerade hören. 
+In einem Radar am oberen Bildschirmrand werden für den Spieler alle Teilnehmer des Spiels angezeigt. Der Radar verfügt über drei Zonen, die die einzelnen Verbindungsstufen repräsentieren. Spieler werden mit einem Icon und ihrem zugehörigen Namen angezeigt. In der öffentlichen Zone wird der Icon gräulich dargestellt, betreten sie die soziale Zone wird dieser grün gefärbt und in der privaten Zone ist ihr Icon gelb. Die Metapher der Luftübertragung gepaart mit dem Radar als Orientierungshilfe unterstützt den Spieler bei der Adressierung von anderen Teilnehmern. Spieler sind direkt in der Lage zu sehen, an wen ihre Sprachnachrichten übertragen werden und welche Teilnehmer sie gerade hören. 
 
 \subsection{Irrklang}
 
@@ -191,7 +191,7 @@ Das Level wurde zusätzlich mit mehreren lokalen Audioquellen ausgestattet, die e
 
 \subsection{Aktualisierung der VoIP Instanz}
 
-Im Spiel selbst ist der \textit{Irrlicht Scene Manager} für eine Verwaltung aller Objekte der Spielewelt verantwortlich. Er verfügt sowohl über die Koordinaten des Spielers und aller lokalen Objekte, als auch über die (X,Y,Z) Koordinaten aller anderen anwesenden Spieler im Spiel. Erhält der Spieler neue Positionsinformationen von anderen Teilnehmern, werden diese im \textit{Scene Manager} aktualisiert. Genauso versendet der Spieler selbst seine eigenen Koordinaten an alle teilnehmenden Spieler.
+Im Spiel selbst ist der \textit{Irrlicht Scene Manager} für eine Verwaltung aller Objekte der Spielewelt verantwortlich. Er verfügt sowohl über die Koordinaten des Spielers und aller lokalen Objekte, als auch über die Koordinaten aller anderen anwesenden Spieler im Spiel. Erhält der Spieler neue Positionsinformationen von anderen Teilnehmern, werden diese im \textit{Scene Manager} aktualisiert. Genauso versendet der Spieler selbst seine eigenen Koordinaten an alle teilnehmenden Spieler.
 
 Die Aktualisierung aller Positionsinformationen findet (alle 10ms) in der Hauptschleife von Irrlicht statt, in der sowohl die 3D Welt als auch die lokale VoIP Instanz aktualisiert wird. 
 Anhand der Koordinaten aller aktiven Spieler des Scene Managers kann die die VoIP Instanz die entsprechenden Distanzvektoren berechnen. 
@@ -228,25 +228,32 @@ Betritt ein neuer Spieler das Spiel, so wird er von diesem Zeitpunkt ab vom loka
 Jeder Spieler ist in der Lage sich frei im Level zu bewegen. Jede Bewegung wird allen anderen Teilnehmern mitgeteilt, damit sie in der Lage sind ihre Spielewelt konsistent zu halten. Auf die gleiche Weise erhält der Spieler selbst ebenfalls Bewegungsinformationen aller Spieler des aktiven Spiels. Diese Aktualisierung wird alle 10ms vorgenommen. Anhand der Positionsinformationen der Spieler wird die Sprachkommunikation entsprechend des Zonenkonzepts eingeleitet.
 
 \subsection{Spieler beendet sein Spiel}
-Beendet ein Spieler sein Spiel, so bedeutet es für die übrigen Spieler nicht, dass das komplette Spiel für sie auch zu Ende ist. Das Verlassen eines Teilnehmers hat zur Folge, dass dieser seine Positionsinformationen nicht mehr versendet und auch keine weiteren empfangen soll. Alle aktiven Gespräche mit diesem Spieler werden ebenfalls beendet. Eine frühe Implementierung nutzte spezielle Nachrichtentypen, um dies zu signalisieren. In einer späteren Version wurde jedoch der SIP Presänzdienst dazu eingesetzt\footnote{Eine genaue Beschreibung dieses Dienstes findet sich in Kapitel 4. Die Implementierung wird in Kapitel 9 erläutert.}.
+Beendet ein Spieler sein Spiel, so bedeutet es für die übrigen Spieler nicht, dass das komplette Spiel für sie auch zu Ende ist. Das Verlassen eines Teilnehmers hat zur Folge, dass dieser seine Positionsinformationen nicht mehr versendet und auch keine weiteren mehr empfängt. Alle aktiven Gespräche mit diesem Spieler werden ebenfalls beendet. Eine frühe Implementierung nutzte spezielle Nachrichtentypen, um dies zu signalisieren. In einer späteren Version wurde jedoch der SIP Presänzdienst dazu eingesetzt\footnote{Eine genaue Beschreibung dieses Dienstes findet sich in Kapitel 4. Die Implementierung wird in Kapitel 9 erläutert.}.
 
 \subsection{Verbindungsaufbau}
-Befinden sich zwei Teilnehmer in einer entsprechenden Hörnähe, wir diese sie dazu veranlassen eine Verbindung untereinander aufzubauen. Dabei findet der Verbindungsaufbau entsprechend des SIP Protokolls statt, besitzt jedoch einen signifikanten Unterschied, der im folgenden erklärt werden soll:
+Befinden sich zwei Teilnehmer in einer entsprechenden Hörnähe, wir diese Bedingung sie dazu veranlassen eine Verbindung untereinander aufzubauen. Dabei findet der Verbindungsaufbau entsprechend des SIP Protokolls statt, besitzt jedoch einen signifikanten Unterschied, der im folgenden erklärt werden soll:
 
-Möchte Teilnehmer A möchte zu Teilnehmer B eine Verbindung herstellen sendet er eine SIP-Nachricht INVITE an Teilnehmer B. Die Nachricht enthält die Beschreibung der RTP-Session nach dem SDP Protokoll und alle notwendigen Angaben. 
+Möchte Teilnehmer A möchte zu Teilnehmer B eine Verbindung herstellen, sendet er eine SIP-Nachricht INVITE an Teilnehmer B. Die Nachricht enthält die Beschreibung der RTP-Session nach dem SDP Protokoll und alle notwendigen Angaben. Da Teilnehmer B sendet die gleiche Nachricht da er auch eine Verbindung herstellen möchte.
 
-Falls Teilnehmer B die Verbindung annehmen kann, prüft er, ob er gerade eine Verbindung zu A aufbaut, oder bereits eine Verbindung aufgebaut hat. Ist das der Fall so antwortet er auf den ankommenden Anruf mit der Response Nachricht 403 Forbidden. Diese Vorgehenswiese weicht vom SIP Standard ab und wird im anschließenden Abschnitt behandelt.
+Falls ein Teilnehmer die INIVTE Nachricht erhält, prüft er ob er gerade eine Verbindung zum anderen Teilnehmer aufbaut, oder bereits eine Verbindung aufgebaut hat. Ist das der Fall so antwortet er auf den ankommenden Anruf mit der Response Nachricht 403 Forbidden. Diese Vorgehenswiese weicht vom SIP Standard ab und wird im anschließenden Abschnitt behandelt.
 
-Baut Teilnehmer jedoch noch keine Verbindung zu Teilnehmer A auf und ist auch nicht mit ihm verbunden, so funktioniert der Rufaufbau wie gewohnt. Hat B den die Verbindung  akzeptiert, sendet er einen SIP-Response 200 OK der vom Teilnehmer A mit der Nachricht ACK bestätigt wird. Mit dem Empfang der ACK Nachricht von Teilnehmer B, ist die logische Verbindung abgeschlossen. Nun kann eine Verbindung nach dem Protokoll RTP verlaufen und es besteht eine Session zwischen den Teilnehmern. 
+Baut Teilnehmer jedoch noch keine Verbindung zum anderen Teilnehmer auf und ist auch nicht mit ihm verbunden, so funktioniert der Rufaufbau wie gewohnt. Hat ein Teilnehmer die Verbindung akzeptiert, sendet er einen SIP-Response 200 OK der vom anderen Teilnehmer mit der Nachricht ACK bestätigt wird. Mit dem Empfang der ACK Nachricht, ist die logische Verbindung abgeschlossen. Nun kann eine Verbindung nach dem Protokoll RTP verlaufen und es besteht eine Sitzung zwischen den Teilnehmern. 
 
 \subsubsection{Das Problem der doppelten Verbindung}
-Da Teilnehmer zwar zentral Lokalisiert werden jedoch unabhängig von einer zentralen Instanz Verbindungen aufbauen können, kann der Fall auftreten, dass beide Teilnehmer zeitgleich eine Verbindung miteinander aufbauen wollen. Dieser Fall tritt immer dann auf, wenn beide Spieler im Spiel die erforderliche Nähe zueinander erreicht haben. Dann versucht sowohl Teilnehmer A eine Verbindung zu Teilnehmer B aufzubauen, als auch Teilnehmer B eine Verbindung zu Teilnehmer A aufzubauen. Dies entspricht dem Problem im Alltag, wenn zwei Personen sich versuchen zur exakt gleichen Zeit anzurufen und jeder nur ein Besetztzeichen hört. 
+Da Teilnehmer zwar zentral lokalisiert werden jedoch unabhängig von einer zentralen Instanz Verbindungen signalisieren können, kann der Fall auftreten, dass beide Teilnehmer zeitgleich eine Verbindung miteinander aufbauen wollen. Dieser Fall tritt immer dann auf, wenn beide Spieler im Spiel die erforderliche Nähe zueinander erreicht haben. Dann versucht sowohl Teilnehmer A eine Verbindung zu Teilnehmer B aufzubauen, als auch Teilnehmer B eine Verbindung zu Teilnehmer A aufzubauen. Dies entspricht dem Problem im Alltag, wenn zwei Personen sich versuchen zur exakt gleichen Zeit anzurufen und jeder nur ein Besetztzeichen hört. 
 
-Bei diesem Szenario können zwei verschiedene Fälle auftreten. Der einfache Fall liegt vor, wenn eine INVITE Nachricht von A eintritt und B bereits mit A verbunden ist. Dann kann er den zweiten Dialog einfach verwerfen, da ja bereits eine bestehende Verbindung existiert.
+\begin{figure}[htbp]
+	\centering
+	\caption{Ablauf einer symmetrischen Verbindung}
+		\includegraphics[width=0.60\textwidth]{grafiken/sipanruf_403.eps}
+	\label{fig:sipanruf_403}
+\end{figure}
+
+Bei diesem Szenario können zwei verschiedene Fälle auftreten. Der einfache Fall liegt vor, wenn bei Teilnehmer B eine INVITE Nachricht von A eintrifft und B bereits mit A verbunden ist. Dann kann er den zweiten Dialog einfach verwerfen, da ja bereits eine bestehende Verbindung existiert.
 
 Der kompliziertere Fall ist der symmetrische Fall: Dieser tritt dann ein wenn B, während er selbst eine Verbindung mit A aufbaut, die INVITE Nachricht erhält. Hier hat B hat ebenfalls eine INVITE Nachricht an A geschickt, während A zur gleichen Zeit auch eine INVITE Nachricht an B geschickt hat. Lehnen nun beide Teilnehmer die Verbindung ab, so führt es dazu dass in diesem Fall überhaupt keine Verbindung zwischen den Teilnehmern zustande kommt. 
 
-Hierbei ist es wichtig, dass eine gemeinsame Regel für alle Teilnehmer existiert nach der beim Dialog Aufbau vorgehen. Ich habe mich dafür entschieden, dass in diesem Fall beide Teilnehmer die Verbindung ablehnen, und solange versuchen ein eine neue Verbindung zu etablieren bis der unsymmetrische Fall auftritt. Diese Vorgehensweise hat sich in der Praxis bewährt, da meist ein Teilnehmer schneller akzeptiert als der andere. Zudem braucht man keine lexikalische Sortierung der Teilnehmer vorzunehmen um einen dominierenden Peer zu ermitteln. 
+Es ist also wichtig, dass eine gemeinsame Regel für alle Teilnehmer existiert nach der beim Dialog Aufbau vorgehen. Ich habe mich dafür entschieden, dass in diesem Fall beide Teilnehmer die Verbindung ablehnen, und solange versuchen ein eine neue Verbindung zu etablieren bis der unsymmetrische Fall auftritt. Diese Vorgehensweise hat sich in der Praxis bewährt, da meist ein Teilnehmer die INVITE Nachricht früher versendet als der andere und so der unsymetrische Fall sehr selten auftritt. Dies haben auch Messungen gezeigt in denen die SIP Nachrichten analysiert wurden. 
 
 \subsection{Verbindungsabbau}
 Der Verbindungsabbau findet wie gewohnt statt: Befindet sich Teilnehmer B nicht mehr in Verbindungsreichweite zu Teilnehmer A so beenden beide die Verbindung zueinander. Dazu senden sie eine BYE Nachricht an den anderen Teilnehmer, die mit einer ACK Nachricht bestätigt wird. 
@@ -254,40 +261,56 @@ Der Verbindungsabbau findet wie gewohnt statt: Befindet sich Teilnehmer B nicht 
 \section{Zonen}
 Die Umgebung des Spielers wurde wie gefordert in drei Zonen unterteilt. 
 
-\subsection{Öffentliche Zone}
-Die Öffentliche Zone dient zum initiieren von SIP Verbindungen des Spielers mit anderen Teilnehmern, die sich in seiner Öffentlichen Zone befinden. Da der Verbindungsaufbau mitunter bis zu 1 oder 2 Sekunden betragen kann, wird diese Zone dazu genutzt bereits vorab Verbindungen zu etablieren, bevor die Teilnehmer tatsächlich in der Lage sind miteinander zu sprechen. So soll die entstehende Latenz beim Verbindungsaufbau für den Spieler nicht erkennbar sein. 
+\subsection{öffentliche Zone}
+Die öffentliche Zone wird genutzt, um SIP Verbindungen des Spielers mit anderen Teilnehmern zu initiieren und so eine Grundkonnektivität zwischen diesen herzustellen. Da der Verbindungsaufbau mitunter bis zu 1 oder 2 Sekunden betragen kann, wird diese Zone dazu genutzt um vorab die gesamte Signalisierung vorzunehmen, bevor die Teilnehmer tatsächlich die nötige Hörnähe eingenommen haben, um miteinander zu sprechen. So soll die entstehende Latenz beim Verbindungsaufbau für den Spieler nicht erkennbar sein. 
 
-Durch die Existenz der öffentlichen Zone herrscht ein gradueller Übergang von nicht Verbundenen Teilnehmern, über Teilnehmer die bereits auf logischer Ebene Verbunden sind aber noch keine Audiodaten austauschen. In dieser Übergangphase werden logische SIP Verbindungen aus dem Grund aufrechterhalten, weil es sehr wahrscheinlich ist, dass die Teilnehmer die bereits diese Entfernung eingenommen haben die soziale Zone betreten werden, in der tatsächlich eine Audioverbindung stattfindet. Da Spielergruppen in virtuellen Welten der Erfahrung nach meist in größeren Anzahlen miteinander in die gleiche Richtung wandern, soll durch eien Öffentliche Zone sichergestellt werden, dass bereits eine Konnektivität zwischen allen Teilnehmern herrrscht, damit ohne Verzögerungen eine Sprachkommunikation etabliert werden kann. Diese Konnektivität soll eine minimale Bandbreite beanspruchen, trotzdem aber einen schnellen Verbindungsaufbau ermöglichen. 
+Durch die Existenz der öffentlichen Zone findet ein stufenweiser Übergang von nicht verbundenen Teilnehmern, über Teilnehmer die bereits auf logischer Ebene verbunden sind, hin zu Teilnehmern, die tatsächlich Audiodaten austauschen statt. 
+
+In dieser Zone werden logische SIP Verbindungen aus dem Grund aufgebaut, weil es sehr wahrscheinlich ist, dass die Teilnehmer die bereits diese Entfernung eingenommen haben auch die soziale Zone betreten werden, in der tatsächlich eine Audioverbindung stattfindet. 
+
+Da Spielergruppen in virtuellen Welten, der Erfahrung nach, während der Spielesitzung eine geringe Entfernung zu anderen Mitgliedern der gleichen Gruppe beibehalten, soll durch eine öffentliche Zone sichergestellt werden, dass bereits eine Konnektivität zwischen allen Teilnehmern herrscht, damit eine Sprachkommunikation zwischen diesen Spielern verzögerungsfrei stattfinden kann. Diese Grundkonnektivität beansprucht dabei eine minimale Bandbreite, gewährleistet aber einen raschen Aufbau der Audiokommunikation. 
 
 \subsubsection{Eingang und Verlassen der Öffentlichen Zone}
-Die öffentliche Zone kann aus zwei Richtungen betreten werden. Wird sie von außen betreten, wird eine SIP Verbindung zwischen den Teilnehmern aufgebaut. Der Verbindungsaufbau und die damit eingehenden Probleme wurden oben bereits beschrieben. Wird die Zone von innen betreten. dh. findet ein Übergang von der sozialen Zone zur öffentlichen Zone statt, so findet auf Protokollebene folgender Ablauf statt:
+Die öffentliche Zone kann aus zwei Richtungen betreten werden. Wird sie von außen betreten, wird eine logische SIP Verbindung zwischen den Teilnehmern aufgebaut. Der doppelte Verbindungsaufbau und die entstehenden Probleme wurden oben bereits beschrieben. Findet ein Wechsel von der sozialen Zone zur öffentlichen Zone statt, muss nur dafür gesorgt werden dass die Bandbreite reduziert wird, während der logische SIP Anruf erhalten bleibt.
+
+In der Implementierung wurden zwei Mechanismen ausprobiert, um einen geringen Bandbreitenverbrauch in dieser Zone zu gewährleisten ohne jedoch die logische SIP Verbindung zu beenden. Dabei wurden die speziellen Eigenschaften der verwendeten Protokolle SIP und RTP ausgenutzt.
 
 \subsubsection{RTP - Silence Supression}
-Der logische SIP Anruf bleibt weiterhin erhalten, während auf auf RTP Ebene kein weiteres Audiosignal mehr übertragen wird. Dies geschieht indem der Teilnehmer aus der internen Conference Bridge genommen wird. Das bedeutet dass beide Spieler das gegenseitige Audiosignal nicht mehr empfangen da beide Teilnehmer eine Silence Suppression vornehmen. Dies entspricht der im Kapitel 3 geschilderten Eigenschaften von Silence Supression von RTP und RTCP, nur dass sie hier nicht in Abhängigkeit der tatsächlichen Stille im Mikrofon, sondern der Enfernung der Teilnehmer zueinander stattfindet. Durch diese Methode bietet die Möglichkeit, einerseits den Bandbreitenverbrauch in dieser Zone minimal zu halten, aber gleichzeitig in den Teilnehmern einen verzögerungsfreien Wechsel zurück in die soziale Zone zu ermöglichen, da der Wechsel von Silence Supression zurück zu normaler übertragung kein neues aushandeln der Parameter benötigt. 
+Während der logische SIP Anruf weiterhin erhalten bleibt, wird auf auf RTP Ebene kein weiteres Audiosignal mehr übertragen. Dies geschieht, in dem die Teilnehmer aus den jeweils lokalen lokalen Konferenz genommen werden und so das Mikrofonsignal nicht mehr übermittelt wird. 
+
+Da kein Audiosignal mehr an die gegenseitigen Spieler übertragen wird, wird von nun an eine \textit{Silence Suppression} vorgenommen. Dieses Verhalten entspricht der im Kapitel 3 geschilderten Eigenschaften der \textit{Silence Supression} des RTP Protokolls. Das geschilderte Verhalten hat aber den Unterschied, dass die \textit{Silence Supression} nicht von der tatsächlichen Stille im Mikrofon abhängt, sondern von der Entfernung der Teilnehmer untereinander. 
+
+Diese Methode bietet die Möglichkeit, den Bandbreitenverbrauch in dieser Zone auf unter 1kB \footnote{Messungen zum Bandbreitenverbrauchs in dieser Zone finden sich in Kapitel 10.} zu reduzieren. Der große Vorteil dieses Verfahrens besteht darin, dass der Wechsel zwischen der öffentlichen und sozialen Zone verzögerungsfrei stattfinden kann, da kein neues Aushandeln der Parameter benötigt wird.
 
 \subsubsection{SIP - HOLD}
-Das gleiche Prinzip wurde ebenfalls mit der SIP HOLD Funktionalität ausprobiert, was wie in den Messergebnissen zu sehen ist, zwar zu einer noch größeren Einsparung der Bandbreite geführt hat, aber als Nachteil eine Verzögerung beim wiederaufnehmen des Calls bewirkte, da die Verbindungsparameter beim Wiederaufnehmen des Gesprächs wieder neu verhandelt wurden.
-%TODO Ablaufdiagrapp SIP HOLD
+Eine Reduzierung des Bandbreitenverbrauch wurde auch mit der SIP HOLD Funktionalität ausprobiert. Hierbei signalisiert das SIP Protokoll, dass der Anruf geparkt werden soll und die RTP Verbindung während des Hold Vorgangs beendet wird. Wird der Hold aufgehoben, wird die RTP Verbindung wieder neu etabliert. Die Messergebnisse\footnote{Siehe Kapitel 9} und eigene Erfahrungen haben gezeigt, dass zwar eine noch größere Einsparung der Bandbreite als bei der RTP Silence Supression stattfindet da praktisch keine Daten mehr übertragen werden. Der Nachteil jedoch besteht darin, dass beim Wiederaufnehmen des Anrufs eine spürbare Verzögerung auftritt, da die Verbindungsparameter des Gesprächs wieder neu verhandelt werden müssen.
+
+\begin{figure}[htbp]
+	\centering
+		\includegraphics[width=0.60\textwidth]{grafiken/siphold.eps}
+	\label{fig:siphold}
+\end{figure}
 
 \subsection{Soziale Zone}
-In der Sozialen Zone werden die Teilnehmer, der bereits aufgebauten Verbindungen unserer eigenen lokalen Konferenz hinzugefügt. Innerhalb der Konferenz wird die Lautstärke der Teilnehmer gemäß ihrer Entfernung angepasst. Audiosignale von Teilnehmern, die sich am inneren Rand der Sozialen Zone des Spielers befinden werden ungedämpft mit einer Lautstärke von 100\% abgemischt. Die Lautstärke der Spieler nimmt linear in Abhängigkeit der Entfernung ab, bis sie am äußersten Rand der Zone 0\% beträgt. 
+In der Sozialen Zone werden die Teilnehmer, der bereits aufgebauten Verbindungen der  eigenen lokalen Konferenz hinzugefügt. Innerhalb dieser Konferenz wird die Lautstärke der Teilnehmer gemäß ihrer Entfernung angepasst. Audiosignale von Teilnehmern, die sich am inneren Rand der sozialen Zone des Spielers befinden werden ungedämpft mit einer Lautstärke von 100\% abgemischt. Diese nimmt linear in Abhängigkeit der Entfernung zu den Spielern ab, bis sie am äußersten Rand der Zone 0\% beträgt. 
 
 \subsubsection{Lautstärkenanpassung}
-Da die Lautstärke der Übertragenen Stimme bei einer Übertragung durch Luft mit zunehmender Entfernung abnimmt haben wir ein einfaches physikalisches Modell benutzt: Generell gilt, dass Schalldruck bei zunehmender Entfernung r  mit 1/r abnimmt. Da sich die Schallintensität auf eine immer größer werdende gedachte Kugeloberfläche (proportional zur Entfernung r) verteilt, nimmt sie mit der Entfernung quadratisch ab. 
+Da die Lautstärke der Übertragenen Stimme bei einer Übertragung durch Luft mit zunehmender Entfernung abnimmt wurde ein einfaches physikalisches Modell der Schallübertragung benutzt: Generell gilt, dass Schalldruck bei zunehmender Entfernung $r$  mit $1/r$ abnimmt. Da sich die Schallintensität auf eine immer größer werdende gedachte Kugeloberfläche (proportional zur Entfernung $r$) verteilt, nimmt sie mit der Entfernung quadratisch ab. 
 
-Wir haben zu Testzwecken sowohl die lineare Abnahme der Schallintensität als auch die quadratische Abnahme der Schallintensität modelliert, um festzustellen welche Veränderung in einer Konferenz natürlicher erscheint. Ein Problem bei der Implementierung bleibt, dass Mikrofone eine unterschiedliche Aufnahmelautstärke haben, so dass manche Spieler ein lauteres Signal besitzen als andere. In einem fertigen Produkt, sollte auf das Mikrofon dynamisch auf einen bestimmten Pegel normiert werden, bevor das Spiel beginnt. Solche Verfahren sind Standard bei VoIP Telefonen und könnten später leicht nachgerüstet werden. %http://www.sengpielaudio.com/Rechner-entfernung.htm
+Zu Testzwecken wurden sowohl die lineare als auch die quadratische Abnahme der Schallintensität modelliert, um festzustellen welche Veränderung natürlicher erscheint. Die lineare Abnahme erwies sich sich als transparenter für den Benutzer, da eine einfachere Relation zwischen Lautstärke und Entfernung hergestellt werden konnte. 
+
+Als ein Problem bei der Lautstärkenanpassung erwies sich die unterschiedliche Aufnahmelautstärke der Mikrofone. Da verschiedene Mikrofone eine unterschiedliche Sensibilität haben, senden Spieler unter Umständen bei gleicher Entfernung verschieden laute Signale. In einem fertigen Produkt, sollte das Mikrofon dynamisch auf einen bestimmten Pegel normiert werden, bevor das Spiel beginnt. Solche Verfahren sind Standard bei VoIP Telefonen und könnten später leicht nachgerüstet werden. %http://www.sengpielaudio.com/Rechner-entfernung.htm
 
 \subsubsection{Audiocodec}
-In der sozialen Zone wird ein Audiocodec mit einer niedrigen Bitrate eingesetzt, um eine größere Anzahl an möglichen Mitspielern zu ermöglichen. Ich habe mich für den Speex Codec mit einer Abtastrate von 16kHz und einer Bitrate von 11 Kbps entschieden, der einen MOS Wert von über 4 liefert. Es ist natürlich vorstellbar auch qualitativ schlechtere Codecs mit einer noch geringeren Bitrate einzusetzen, um dem Spieler noch mehr Verbindungen zu ermöglichen. Diese Entscheidung kann in einem fertigen Produkt entweder dem Spieler überlassen bei einer manuellen Konfiguration überlassen werden oder automatisch anhand der verfügbaren Bandbreite bestimmt werden. So könnten Spieler mit einer höheren Bandbreite auch ein besseres Audiosignal verbreiten, während Spieler mit einer schwachen Anbindung nur Codecs mit einer niedrigen Bitrate einsetzen könnten.
+In der sozialen Zone wird ein Audiocodec mit einer niedrigen Bitrate eingesetzt, um eine größere Anzahl an möglichen Mitspielern zu ermöglichen. In den Testszenarios habe ich mich für den Speex Codec mit einer Abtastrate von 16kHz und einer Bitrate von 11 Kbps entschieden, der einen MOS Wert von über 4 liefert. Es ist natürlich vorstellbar auch qualitativ schlechtere Codecs mit einer noch geringeren Bitrate einzusetzen, um dem Spieler noch mehr Verbindungen zu ermöglichen. Diese Entscheidung kann in einem fertigen Produkt entweder dem Spieler selbst - bei einer manuellen Konfiguration - überlassen werden oder automatisch anhand der verfügbaren Bandbreite bestimmt werden. So könnten Spieler mit einer höheren Bandbreite auch ein besseres Audiosignal verbreiten, während Spieler mit einer schwachen Anbindung nur Codecs mit einer niedrigen Bitrate einsetzen könnten.
 
 \subsection{Private Zone}
 
 \subsubsection{Lautstärke}
-In der privaten Zone A variiert die Laut\-stärke der Teilnehmer nicht in Ab\-hän\-gig\-keit von ihrer Distanz. Hier wird die sie konstant auf 100\% gehalten, um den Teilnehmern zu ermöglichen sich in einem kleinen Radius untereinander zubewegen, aber immer noch mit einer optimalen Lautstärke zu kommunizieren. 
+In der privaten Zone A bleibt die Laut\-stärke der Teilnehmer konstant bei 100\%. Dies ermöglicht den Teilnehmern sich in einem kleinen Radius umeinander zu bewegen, unt trotzdem immer noch mit einer optimalen Lautstärke zu kommunizieren. 
 
 \subsubsection{Audiocodec}
-In der Audiocodec Variante wird für die Private Zone ein höherwertigerer Codec mit einem größeren MOS Wert gewählt. Diese Vorgehensweise soll dafür sorgen, das Mitspieler in unmittelbarer Nähe besonders gut verständlich sind. Im Gegensatz zur Sozialen Zone werden nur wenige Spieler erwartet die sich in dieser Zone befinden, da man speziell auf den Spieler zulaufen muss um sich in diese Zone zu begeben und dann meist der Wunsch besteht mit diesem Spieler zu kommunizieren. In der Implementierung wurde für die Private Zone der Speex Codec mit einer Abtastrate von 32 kHz verwendet, während in der Sozialen Zone der Speex Codec mit einer geringen Abtastrate von 8kHz eingesetzt wurde. 
+Zusätzlich dazu ist in einem Testszenario eine weitere Unterscheidung zur sozialen Zone getroffen worden, indem in der privaten Zone ein qualitativ höherwertiger Codec mit einem größeren MOS Wert verwendet wird. Diese Vorgehensweise soll dafür sorgen, das Mitspieler in unmittelbarer Nähe besonders gut verständlich sind. Im Gegensatz zur Sozialen Zone wird erwartet, dass nur wenige Spieler diese Zone betreten, da angelehnt an die Erkentnisse aus Kapitel 2 Menschen in virtuellen Welten ähnliche Distanzzonen einnehmen wie im realen Leben. In der Implementierung wurde in einem Testszenario für die private Zone der Speex Codec mit einer Abtastrate von 32 kHz verwendet, während in der Sozialen Zone der Speex Codec mit einer geringen Abtastrate von 8kHz eingesetzt wurde. 
 
 \subsection{PTSN Netzwerke}
-Durch die Möglichkeit SIP Server mit externen Gateways zu verbinden, wurde auch die Metapher des Festnetz-Telephons umgesetzt, dass dem Spieler tatsächlich erlaubt aus der virtuellen Welt in die reale Welt zu telefonieren. Hier wurde eine Telefonzelle auf dem Spielfeld platziert. Befindet sich der Spieler in unmittelbarer Nähe zu dieser Zelle, findet ein Anruf an eine beliebige Telefonnumer statt. Dieser Proof of Concept zeigt, dass mit Hilfe eines standartisierten Protokolls auch solche Möglichkeiten offen stehen. 
-
+Durch die Möglichkeit SIP Server mit externen Gateways zu verbinden, wurde auch die Metapher des Festnetz-Telephons umgesetzt, dass dem Spieler tatsächlich erlaubt aus der virtuellen Welt in die reale Welt zu telefonieren. Dazu wurde das Modell einer Telefonzelle auf dem Spielfeld platziert. Befindet sich der Spieler in unmittelbarer Nähe zu dieser Telefonzelle, findet ein Anruf an eine beliebige Telefonnumer statt. Dieses \textit{Proof of Concept} zeigt, dass mit Hilfe eines standardisierten Protokolls solche Möglichkeiten sehr einfach realisiert werden können. 
