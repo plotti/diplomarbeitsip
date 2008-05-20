@@ -37,21 +37,20 @@ Bisher werden im Spielebereich fast ausschließlich serverbasierte Drittanbieter 
 
 \subsubsection{\textit{Ventrillo}}
 %http://www.ventrilo.com/
-Die unter Spielern beliebteste Lösung \textit{Ventrillo} \footnote{Flagship Industries, Inc. Programmversion 3.0.1, http://www.ventrilo.com} ist eine serverbasierte proprietäre VoIP Anwendung. Die Software besteht aus einem Server- und Client-Modul, wobei die Clientsoftware frei erhältlich ist, für die Serverkomponente jedoch eine kostenpflichtige Lizenz zu erwerben ist. Benutzer des Ventrillo Clients melden sich vor Beginn des eigentlichen Spieles auf einem der kostenpflichtigen Ventrillo Server an und können dort einen Kanal betreten. Benutzer des gleichen Kanals auf dem gleichen Server können sich gegenseitig hören. Durch das Lizenzmodell ist es nicht möglich im privaten Bereich eigene Server zu betreiben oder die Software nach eigenen Vorstellungen anzupassen. 
+Die unter Spielern beliebtesten Lösungen sind 
+\begin{itemize}
+	\item \textit{Ventrillo} \footnote{Flagship Industries, Inc. Programmversion 3.0.1, http://www.ventrilo.com}
+	\item Teamspeak \footnote{TeamSpeak Systems GmbH, Programmversion 2.0.33.7, http://www.goteamspeak.com} 
+	\item \textit{Mumble} \footnote{Thorvald Natvig,Programmversion 1.1.3, http://mumble.sourceforge.net}
+\end{itemize}
+ 
+ Bei allen drei Produkten handelt es sich um serverbasierte proprietäre VoIP Anwendungen. Die Software besteht aus einem Server- und Client-Modul, wobei die Clientsoftware frei erhältlich ist, für die Serverkomponente jedoch eine kostenpflichtige Lizenz zu erwerben ist. Benutzer des Clients melden sich vor Beginn des eigentlichen Spieles auf einem der kostenpflichtigen Server an und können dort einen Kanal betreten. Benutzer des gleichen Kanals auf dem gleichen Server können sich gegenseitig hören. Zusätzlich existieren Plugins die es erlauben Kanäle während der Spielesitzung per Tastaturkombination zu wechseln. Durch das Lizenzmodell ist es nicht möglich im privaten Bereich eigene Server zu betreiben oder die Software nach eigenen Vorstellungen anzupassen. 
 
-\subsubsection{\textit{Teamspeak}}
-%http://www.goteamspeak.com
-Teamspeak \footnote{TeamSpeak Systems GmbH, Programmversion 2.0.33.7, http://www.goteamspeak.com} ist ebenfalls ein serverbasiertes proprietäres VoIP Programm. Die Software besteht ebenfalls aus Server und Client Komponenten. Benutzer des kostenlosen \textit{Teamspeak} Clients können sich mit dem kostenpflichtigem \textit{TeamSpeak} Server ihrer Wahl verbinden und dort einen Kanal betreten. Benutzer des gleichen Kanals auf dem gleichen Server können gegenseitig gehört werden. Zusätzlich existieren Plugins die es erlauben Kanäle während der Spielesitzung per Tastaturkombination zu wechseln. 
+Einzig \textit{Mumble} ist eine offene VoIP Anwendung. Seine Verwendung gleicht den anderen bisher vorgestellten Programmen. Der einzige Unterschied liegt in der Betonung der sozialen Komponente der Sprachkommunikation. Durch sehr wenige administrative Elemente eine hohe Sprachqualität, soll die Kommunikation zwischen Spielern besonders einfach und gut verständlich sein.
 
+Obwohl die kommerziellen Lösungen bei einer optimalen Konfiguration hunderte von Benutzern unterstützen können und eine gute Sprachqualität bieten, haben sie den entscheidenden Nachteil, dass sie nicht modifizierbar sind, die Serverkomponenten nicht frei verfügbar sind, und somit deren Nutzung für eine Umsetzung des Prototypen nicht brauchbar ist. 
 
-\subsubsection{\textit{Mumble}}
-%http://mumble.sourceforge.net
-\textit{Mumble} \footnote{Thorvald Natvig,Programmversion 1.1.3, http://mumble.sourceforge.net} ist eine offene serverbasierte VoIP Anwendung, die primär von Computerspielern für Sprachkommunikation genutzt wird. \textit{Mumble} versucht die soziale Komponente der Sprachkommunikation zu betonen, indem es für den Endanwender sehr wenige administrative Elemente besitzt und das Hauptaugenmerk auf der Sprachqualität liegt. Seine Verwendung gleicht den anderen bisher vorgestellten Programmen.
-
-Obwohl die kommerziellen Lösungen bei einer optimalen Konfiguration hunderte von Benutzern unterstützen können und eine gute Sprachqualität bieten haben sie den entscheidenden Nachteil, dass sie nicht modifizierbar sind, die Serverkomponenten nicht frei verfügbar sind, und somit deren Nutzung für eine Umsetzung des Prototypen nicht brauchbar ist. 
-
-\textit{Mumble} ist zwar als einziges dank seiner freien Lizenz modifizierbar, jedoch aufgrund der komplizierten Serverkonfiguration und einem komplexen Rechtesystem, das auf Gruppen und Regeln basiert, nicht einfach an die neuen Konzepte anzupassen. 
-Zusätzlich zu den vorhandenen Problemen sind die drei Lösungen untereinander nicht kompatibel und bieten somit nur Insellösungen. 
+\textit{Mumble} ist zwar als einziges dank seiner freien Lizenz modifizierbar, jedoch aufgrund der komplizierten Serverkonfiguration und einem komplexen Rechtesystem, das auf Gruppen und Regeln basiert, nicht einfach an die neuen Konzepte anzupassen. Zusätzlich zu den vorhandenen Problemen sind die drei Lösungen untereinander nicht kompatibel und bieten somit nur Insellösungen. 
 
 \subsection{Dezentralisierte Sprachkommunikationslösungen}
 
@@ -192,18 +191,17 @@ Das Level wurde zusätzlich mit mehreren lokalen Audioquellen ausgestattet, die e
 
 \subsection{Aktualisierung der VoIP Instanz}
 
-Im Spiel selbst ist der \textit{Irrlicht Scene Manager} für eine Verwaltung aller Objekte der Spielewelt verantwortlich. Er verfügt nicht nur über Koordinaten des Spielers und aller Objekte des Spiels, sondern auch über die die (X,Y,Z) Koordinaten aller anwesenden Spieler im Spiel.
+Im Spiel selbst ist der \textit{Irrlicht Scene Manager} für eine Verwaltung aller Objekte der Spielewelt verantwortlich. Er verfügt sowohl über die Koordinaten des Spielers und aller lokalen Objekte, als auch über die (X,Y,Z) Koordinaten aller anderen anwesenden Spieler im Spiel. Erhält der Spieler neue Positionsinformationen von anderen Teilnehmern, werden diese im \textit{Scene Manager} aktualisiert. Genauso versendet der Spieler selbst seine eigenen Koordinaten an alle teilnehmenden Spieler.
 
-Erhält der Spieler neue Positionsinformationen von anderen Teilnehmern, werden die Positionen der entsprechenden Spieler im SceneManager aktualisiert. Genauso versendet der Spieler selbst seine eigenen Koordinaten an alle Teilnehmenden Spieler.
-
-Die lokale VoIP Instanz fragt periodisch (alle 10ms) beim SceneManager die Koordinaten aller aktiven Spieler ab, um die entsprechenden Distanzvektoren zu berechnen. Anhand dieser nimmt sie das Mischen der Audioströme der Spieler vor. Dies geschieht in der Hauptschleife von Irrlicht die hier auch alle Koordinaten der Spieler aktualisiert und das Bild neu zeichnet.
-
-Unterschreitet ein Spieler die benötigte Entfernung zu einem anderen Spieler veranlasst die VoIP Instanz einen entsprechenden Anruf zu diesem Spieler. In Abhängigkeit von der Entfernung werden die Zonenkonzepte realisiert und durch die VoIP Instanz im Hintergrund eingeleitet.
+Die Aktualisierung aller Positionsinformationen findet (alle 10ms) in der Hauptschleife von Irrlicht statt, in der sowohl die 3D Welt als auch die lokale VoIP Instanz aktualisiert wird. 
+Anhand der Koordinaten aller aktiven Spieler des Scene Managers kann die die VoIP Instanz die entsprechenden Distanzvektoren berechnen. 
+ 
+Unterschreitet ein Spieler die Entfernung zu einem anderen Spieler, veranlasst die VoIP Instanz einen entsprechenden Anruf zu diesem Teilnehmer. In Abhängigkeit der Entfernung voneinander werden die entsprechenden Zonenmechanismen durch die VoIP Instanz im Hintergrund eingeleitet.
 
 \subsection{Buddy Konzept}
 
 Die Spieler im Spiel werden durch Avatare repräsentiert. Jedem Avatar im Spiel ist ein entsprechender "`Buddy"' in der VoIP Instanz gegenübergestellt.
-Diese hält somit eine lokale Liste von eigenen \textit{Buddies} vor. Sämtliche Sprachkommunikation findet durch einen Anruf zum entsprechendem Buddy statt. Falls sich mehrere Personen in der Hörnähe des Spielers befinden, werden auch mehrere Anrufe zu den entsprechenden "`Buddies"' veranlasst. Da für jeden Teilnehmer ein eigener Anruf getätigt und separat verwaltet wird, ist der Spieler in der Lage die Parameter, wie Lautstärke oder Bitrate und Codec jedes einzelnen Anrufs zu verändern und neu auszuhandeln.
+Diese hält somit eine lokale Liste von eigenen \textit{Buddies} vor. Sämtliche Sprachkommunikation findet durch einen Anruf zum entsprechendem Buddy statt. Falls sich mehrere Personen in der Hörnähe des Spielers befinden, werden auch mehrere Anrufe zu den entsprechenden "`Buddies"' veranlasst. Da für jeden Teilnehmer ein eigener Anruf getätigt und separat verwaltet wird, ist der Spieler in der Lage die Parameter wie Lautstärke, Bitrate und Codec jedes einzelnen Anrufs zu verändern und neu auszuhandeln.
 
 \section{Spielablauf}
 
@@ -211,9 +209,9 @@ Diese hält somit eine lokale Liste von eigenen \textit{Buddies} vor. Sämtliche S
 Bevor das eigentliche Spiel stattfindet, registriert sich der Spieler bei einem voreingestellten Registrar. Dazu sendet er seine Anmeldung gemäß dem im Kapitel 3 vorgestellten Registrierungsprozess. Ist die Registrierung abgeschlossen ist der Registrar in der Lage diesen Spieler erfolgreich zu lokalisieren.
 
 \subsection{NAT Traversal}
-Sowohl VoiP Anwendungen, als auch reguläre Spiele haben oft mit dem Problem zu kämpfen, dass einzelne Rechner hinter Routern und NATs nicht von außen erreichbar sind. Bei Spielen wurde das Problem bisher meistens manuell gelöst, indem Änderungen an Router, Firewall und NAT auf Clientseite vorgenommen worden sind, um entsprechende Ports freizugeben. 
+Sowohl VoiP Anwendungen, als auch reguläre Spiele haben oft mit dem Problem zu kämpfen, dass einzelne Rechner hinter Routern und NATs nicht von außen erreichbar sind. Bei Spielen wurde das Problem bisher manuell gelöst, indem Änderungen an Router, Firewall und NAT auf Clientseite nötig waren, um entsprechende Ports freizugeben. 
 
-Indem das STUN Protokoll eingesetzt wird, ist eine Teilnahme am Spiel von Spielern die Router einsetzen möglich, ohne dass sie Änderungen am Router vornehmen müssten. Die im Kapitel 4 vorgestellte Funktionsweise von STUN wird hier entsprechend direkt im Spiel angewandt. Dazu wird während der Registrierungsphase ein öffentlicher STUN kontaktiert, der es dem Spieler erlaubt seine öffentliche IP Adresse und den Typ des eingesetzten Routers herauszufinden. 
+Indem das STUN Protokoll eingesetzt wird, ist eine Teilnahme am Spiel von Spielern die Router einsetzen möglich, ohne dass sie Änderungen am Router ausführen müssten. Die im Kapitel 4 vorgestellte Funktionsweise von STUN wird hier entsprechend direkt im Spiel angewandt. Dazu wird während der Registrierungsphase ein öffentlicher STUN-Server kontaktiert, der es dem Spieler erlaubt seine öffentliche IP Adresse und den Typ des eingesetzten Routers herauszufinden. 
 
 \begin{figure}
 	\centering
@@ -221,16 +219,16 @@ Indem das STUN Protokoll eingesetzt wird, ist eine Teilnahme am Spiel von Spiele
 \end{figure}
 
 \subsection{Spieler startet das Spiel}
-Auf dem Startbildschirm findet der Spieler seine bisherigen Freunde vor und kann ihren Status ablesen: Freunde können entweder offline, online oder gerade im Spiel sein. Möchte der Spieler das Spiel betreten, kann er einen aktiven Spieler anwählen und mit dem Drücken des \textit{Join}-Knopfs am Spiel teilnehmen. Möchte er ein neues Spiel starten, kann er mit dem Betätigen des \textit{Create}-Knopfes ein neues Spiel anlegen. 
+Auf dem Startbildschirm findet der Spieler seine bisherigen Freunde vor und kann ihren aktuellen Status ablesen: Diese können entweder offline, online oder gerade im Spiel sein. Möchte der Spieler das Spiel betreten, kann er einen aktiven Spieler anwählen und mit dem Drücken des \textit{Join}-Knopfs am Spiel teilnehmen. Möchte er ein neues Spiel starten, kann er mit dem Betätigen des \textit{Create}-Knopfes ein neues Spiel anlegen. 
 
 \subsection{Neuer Spieler betritt das Spiel}
-Betritt ein neuer Spieler das Spiel, so wird er von diesem Zeitpunkt an vom \textit{Scene Manager} verwaltet und in der 3D Welt als neuer Avatar dargestellt. Dieser wird für jeden neuen Spieler an einer festgelegten Einstiegskoordinate erzeugt. Gleichzeitig wird die SIP Adresse des neuen Teilnehmers in die lokale \textit{Buddyliste} des Spielers aufgenommen. Befindet sich der entsprechende Spieler in Hörnähe, wird ein Anruf zu diesem Teilnehmer in der VoIP Instanz ausgeführt.
+Betritt ein neuer Spieler das Spiel, so wird er von diesem Zeitpunkt ab vom lokalen \textit{Scene Manager} verwaltet und in der 3D Welt als neuer Avatar dargestellt. Dieser wird für jeden neuen Spieler an einer festgelegten Einstiegskoordinate erzeugt. Gleichzeitig wird die SIP Adresse des neuen Teilnehmers in die lokale \textit{Buddyliste} des Spielers aufgenommen. Befindet sich der entsprechende Spieler in Hörnähe, wird ein Anruf zu diesem Teilnehmer in der VoIP Instanz ausgeführt.
 
 \subsection{Spieler bewegt sich im Spiel}
-Jeder Spieler ist in der Lage sich frei im Level zu bewegen. Jede Bewegung wird allen anderen Teilnehmern mitgeteilt, damit sie in der Lage sind ihre Spielewelt konsitent zu halten. Auf die gleiche Weise erhält der Spieler selbst erhält ebenfalls Bewegungsinformationen aller Spieler des aktiven Spiels. Diese Aktualisierung wird alle 10ms vorgenommen. Anhand der Positionsinformationen der Spieler wird die Sprachkommunikation entsprechend des Zonenkonzepts eingeleitet.
+Jeder Spieler ist in der Lage sich frei im Level zu bewegen. Jede Bewegung wird allen anderen Teilnehmern mitgeteilt, damit sie in der Lage sind ihre Spielewelt konsistent zu halten. Auf die gleiche Weise erhält der Spieler selbst ebenfalls Bewegungsinformationen aller Spieler des aktiven Spiels. Diese Aktualisierung wird alle 10ms vorgenommen. Anhand der Positionsinformationen der Spieler wird die Sprachkommunikation entsprechend des Zonenkonzepts eingeleitet.
 
 \subsection{Spieler beendet sein Spiel}
-Beendet ein Spieler sein Spiel, so bedeutet es für die übrigen Spieler nicht, dass das komplette Spiel für sie auch zu Ende ist. Das Verlassen eines Teilnehmers hat zur Folge, dass dieser seine Positionsinformationen nicht mehr versendet und auch keine weiteren empfangen soll. Alle aktiven Gespräche mit diesem Spieler werden ebenfalls beendet. Eine frühe Implementierung nutzte spezielle Nachrichtentypen, um dies zu signalisieren, in einer späteren Version wurde jedoch der SIP Presänzdienst dazu eingesetzt\footnote{Eine genaue Beschreibung dieses Dienstes findet sich in Kapitel 4. Die Implementierung wird in Kapitel 9 erläutert.}.
+Beendet ein Spieler sein Spiel, so bedeutet es für die übrigen Spieler nicht, dass das komplette Spiel für sie auch zu Ende ist. Das Verlassen eines Teilnehmers hat zur Folge, dass dieser seine Positionsinformationen nicht mehr versendet und auch keine weiteren empfangen soll. Alle aktiven Gespräche mit diesem Spieler werden ebenfalls beendet. Eine frühe Implementierung nutzte spezielle Nachrichtentypen, um dies zu signalisieren. In einer späteren Version wurde jedoch der SIP Presänzdienst dazu eingesetzt\footnote{Eine genaue Beschreibung dieses Dienstes findet sich in Kapitel 4. Die Implementierung wird in Kapitel 9 erläutert.}.
 
 \subsection{Verbindungsaufbau}
 Befinden sich zwei Teilnehmer in einer entsprechenden Hörnähe, wir diese sie dazu veranlassen eine Verbindung untereinander aufzubauen. Dabei findet der Verbindungsaufbau entsprechend des SIP Protokolls statt, besitzt jedoch einen signifikanten Unterschied, der im folgenden erklärt werden soll:
