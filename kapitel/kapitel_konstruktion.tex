@@ -26,7 +26,7 @@ Dabei beschreibt $d(m,n_{i})$ den auftretenden Delay bei der Audioverbindung des
 Die Dichte der Avatare $A_{d}$ gibt an, wie viele Avatare sich in der Hörnähe des Spielers befinden. Hier gilt auch, dass verschiedene Architekturen unterschiedlich gut mit einer zunehmenden Avatardichte skalieren.  
 
 \subsubsection{Avatar-Verteilung}
-Die Verteilung der Avatare kann entweder uniform sein, bei der die Spieler zufällig gleichmäßig in der virtuellen Welt verteilt sind oder auch einzelne Ballungszentren besitzen. Um dieses Szenario zu simulieren wurden künstlich zufällig Ballungszentren angelegt und um diese eine hohe Avatardichte erzeugt. Eine nicht uniforme Avatarverteilung ist ein oft beobachtetes Phänomen in virtuellen Welten, in denen einige Hotspots eine hohe Avatardichte aufweisen, während diese an anderen Orten sehr gering sein kann.
+Die Verteilung der Avatare kann entweder uniform sein, bei der die Spieler zufällig gleichmäßig in der virtuellen Welt verteilt sind oder auch einzelne Ballungszentren besitzen. Um dieses Szenario zu simulieren wurden künstlich zufällig Ballungszentren angelegt und um diese eine hohe Avatardichte erzeugt. Eine nicht uniforme Avatarverteilung ist ein oft beobachtetes Phänomen in virtuellen Welten, in denen einige \textit{Hotspots} eine hohe Avatardichte aufweisen, während diese an anderen Orten sehr gering sein kann.
 
 \subsubsection{Korrelation}
 Die Korrelation $K_{physisch-virtuell}$ zwischen der physischen und virtuellen Welt, die den Wert zwischen 0 und 1 annehmen kann, gibt an wie hoch die Wahrscheinlichkeit ist, dass Spieler sowohl physikalisch als auch virtuell sich in der Nähe befinden. Eine Korrelation von 0 bedeutet, dass die Avatare in der virtuellen Welt nicht mit der Lokation der Spieler in der physischen Welt korreliert ist. Ist auf einem Server eine hohe Korelation vorhanden, so können alle Spieler von einem niedrigen Delay ausgehen, da sich alle Spieler auch in Entfernung in der realen Welt befinden. 
@@ -49,7 +49,7 @@ Bezogen auf den interaktiven Delay dominiert die Peer-to-Peer Architektur grunds
 \subsection{Client-Server}
 In einer zentralisierten Lösung wird der Audiostrom von jedem der Teilnehmer an einen zentralen Server gesendet. Mithilfe der Positionsdaten der Spieler wird die Audioszene zentral abgemischt. Diese wird danach an die jeweiligen Spieler gesendet. Der Hauptvorteil besteht darin, dass jeder Client auch mit beschränkter Bandbreite in der Lage ist an solchen Konferenzen teilzunehmen. Der Nachteil einer zentralen Komponente ist, dass für die Teilnehmer große Delays auftreten können, wenn sie physikalisch weit vom Server entfernt sind. Findet jedoch kein Mischvorgang auf dem Server statt erschöpft sich schnell seine Kapazität, da er für N eingehende Audioströme $O(N^2)$ ausgehende Ströme verschicken muss. 
 
-Die Simulationen konnten zeigen, dass bei einem zentralisiertem Modell weder die Zunahme der der Avatardichte, noch deren Verteilung einen Einfluss auf den interaktiven Delay hatte. Dieser hängt bei einem zentralisierten System stark vom dessen Standort und kann bei einem falsch positioniertem Server schlecht ausfallen. Beide Parameter hatten auch keinen keinen Einfluss auf die Netzwerklast auf dem Server, die einzig von der Gesamtspieleranzahl abhängig ist. Diese bildet auch den kritischen Punkt eines solchen Systems. Deswegen wurden zwei alternative Systeme vorgestellt, um die Last zu verteilen. 
+Die Simulationen konnten zeigen, dass bei einem zentralisiertem Modell weder die Zunahme der der Avatardichte, noch deren Verteilung einen Einfluss auf den interaktiven Delay hatte. Dieser hängt bei einem zentralisierten System stark von dessen Standort ab und kann bei einem falsch positioniertem Server entsprechend schlecht ausfallen. Beide Parameter hatten auch keinen Einfluss auf die Netzwerklast auf dem Server, die einzig von der Gesamtspieleranzahl abhängig ist. Diese bildet auch den kritischen Punkt eines solchen Systems. Deswegen wurden zwei alternative Systeme vorgestellt, um die Last zu verteilen. 
 
 \begin{figure}[htbp]
 	\centering
@@ -189,7 +189,7 @@ Der Hauptnachteil von Multicast Konferenzen ist jedoch, dass jeder Router die Id
 % In the loosely coupled model, there is no signaling relationship between participants in the conference.  There is no central point of control or conference server.  Participation is gradually learned through control information that is passed as partof the conference (using the Real Time Control Protocol (RTCP) [2], for example).  Loosely coupled conferences are easily supported in SIP by using multicast addresses within its session descriptions. 
 
 \subsubsection{P2P SIP}
-Bei einem völlig dezentralisierten P2P SIP mittels DHT findet die Lokation und Signalisierung als auch die Sprachkommunikation nur zwischen den einzelnen Clients statt. Die zentrale Komponente des Registrars wird mit Hilfe eines DHT auf die einzelnen Clients verteilt. Dieser interessante Ansatz ist bisher nur theoretisch möglich, da keine geeignete SIP Implementierung existiert, die einen verteilten Registrar umsetzt. Zudem ist das Problem einer verteilten Spielkontrolle nicht trivial, da kein Teilnehmer über komplette Informationen über die Spielewelt verfügt. Wir werden dieses Problem später genauer in Kapitel 9 behandeln. Sollte in Zukunft eine Implementierung eines funktionierenden P2PSIP Overlays existieren, könnte diese Option in Zukunft durchaus vorstellbar sein. 
+Bei einem völlig dezentralisierten P2P SIP mittels verteilter \textit{Hashtabellen} findet die Lokation und Signalisierung als auch die Sprachkommunikation nur zwischen den einzelnen Clients statt. Die zentrale Komponente des Registrars wird auf die einzelnen Clients verteilt. Dieser interessante Ansatz ist bisher nur theoretisch möglich, da keine geeignete SIP Implementierung existiert, die einen verteilten Registrar umsetzt. Zudem ist das Problem einer verteilten Spielkontrolle nicht trivial, da kein Teilnehmer über komplette Informationen über die Spielewelt verfügt. Wir werden dieses Problem später genauer in Kapitel 9 behandeln. Sollte in Zukunft eine Implementierung eines funktionierenden P2PSIP Overlays existieren, könnte diese Option in Zukunft durchaus vorstellbar sein. 
 
 \subsubsection{Fullmesh}
 In einem "`FullMesh"' Modell kommuniziert jeder Endpunkt direkt mit jedem anderen Endpunkt. Alle Teilnehmer in der Konferenz sind "`gleich"' - es gibt keinen Benutzer der topologisch besonders ist oder über zusätzlichen Rechte oder Fähigkeiten verfügt. Jeder Teilnehmer kann jederzeit eine Konferenz betreten und verlassen. 
@@ -214,17 +214,17 @@ Die Grundlage für eine einfache Berechnung der verbrauchten Bandbreite versteht 
 
 Befinden sich beispielsweise 12 Personen im Spiel, empfängt der Server Audioströme von 12 Personen und sendet einen bereits abgemischten Audiostrom an jede der 12 Personen. 
 
-Sendet jeder Spieler seinen Audiostrom mit einer Speex 16 Kbit/s Kodierung an den Server, der nach dem heutigem Standard mit einer 100MBit Anbindung für den Upload und Download ausgestattet ist, würde sich folgende theoretische maximale Anzahl an gleichzeitigen Audioverbindungen ergeben:
+Sendet jeder Spieler seinen Audiostrom mit einer Speex\footnote{Xiph.Org, Version 22.05.2008, http://speex.org/} 16 Kbit/s Kodierung an den Server, der nach dem heutigem Standard mit einer 100MBit Anbindung für den Upload und Download ausgestattet ist, würde sich folgende theoretische maximale Anzahl an gleichzeitigen Audioverbindungen ergeben:
 
 \[
- \frac{100000 \frac{Kbit}{s}}{16 \frac{Kbit}{s}} = 6250 Spieler
+ \frac{100000 \frac{Kbit}{s}}{16 \frac{Kbit}{s}} = 6250 \, Spieler
 \]
 
 Der Client selbst muss also nur in der Lage sein seinen eigenen Audiostrom zu senden und einen Audiostrom mit gleicher Bitrate zu empfangen. 
 
 Prinzipiell ist dieser Ansatz allen den dezentralisierten Ansätzen überlegen, da die zentralisierte Komponente in der Regel über genügend Bandbreite verfügt, um viele Audioströme zu empfangen und zu versenden, während dies bei einfachen Clients oft zu Problemen führt. Zudem haben wir die Möglichkeit die Lokation und Signalisierung der Teilnehmer zentral zu verwalten. 
 
-Die Nachteile dieser Architektur liegen jedoch beim interaktiven Delay, der abhängig von der Position des Servers "`schlecht"' sein kann. Zudem ergeben sich Schwierigkeiten bei der Skalierbarkeit eines einzigen der zentrale Mischservers, dessen Bandbreite und Rechnerkapazität begrenzt sind. 
+Die Nachteile dieser Architektur liegen jedoch beim interaktiven Delay, der abhängig von der Position des Servers entsprechend schlecht ausfallen kann. Zudem ergeben sich Schwierigkeiten bei der Skalierbarkeit eines einzigen zentralen Mischservers, dessen Bandbreite und Rechnerkapazität begrenzt sind. 
 
 \subsection{Verteiltes dediziertes Audiomixing}
 
@@ -303,7 +303,7 @@ Hier ist eindeutig eine Reduzierung der Bandbreite möglich. Natürlich kann im sc
 
 \subsection{Einsatz mehrerer Server}
 
-Die vorgestellten Alternativen $A_{5}$ und $A_{6}$, gehen davon aus dass wir in der Lage sind die zentrale Komponente des Registrars zu verteilen. Von einer Verteilung des Registrars und Proxy können auch die vorgestellten Alternativen $A_{1}$, $A_{2}$, $A_{3}$ profitieren, da sich damit die Fault Tolerance des Systems erhöht. Falls wir mehrere Registrare einsetzen bestehen folgende Alternativen:
+Die vorgestellten Alternativen $A_{5}$ und $A_{6}$, gehen davon aus dass wir in der Lage sind die zentrale Komponente des Registrars zu verteilen. Von einer Verteilung des Registrars und Proxy können auch die vorgestellten Alternativen $A_{1}$, $A_{2}$, $A_{3}$ profitieren, da sich damit die \textit{Fault Tolerance} des Systems erhöht. Falls mehrere Registrare eingesetzt werden, bestehen folgende Alternativen:
 
 \begin{itemize}
 	\item Die Registrierung des Benutzers findet auf einem Registrar statt und wird dann auf mehreren Registraren repliziert. Die Suche findet bei einem beliebigen Registrar statt.

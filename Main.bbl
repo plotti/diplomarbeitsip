@@ -1,4 +1,4 @@
-\begin{thebibliography}{105}
+\begin{thebibliography}{101}
 % this bibliography was produced with the style dinat.bst v2.5
 \makeatletter
 \newcommand{\dinatlabel}[1]%
@@ -207,14 +207,6 @@
 \dinatlabel{Gerhard 1998} \textsc{Gerhard}, Maletzke:
 \newblock \emph{Kommunikationswissenschaft im Überblick}.
 \newblock VS VERLAG, 1998
-
-\bibitem[Gibbs u.\,a.(2003)Gibbs, Wadley, Hew und Graham]{gibbs03}
-\dinatlabel{Gibbs u.\,a. 2003} \textsc{Gibbs}, M.~; \textsc{Wadley}, Greg~;
-  \textsc{Hew}, Kevin~; \textsc{Graham}, C.:
-\newblock Computer supported cooperative play 'third places' and online
-  videogames.
-\newblock In: \emph{OzCHI}
-\newblock (2003), S.~238--241
 
 \bibitem[Gibbs u.\,a.(2004{\natexlab{a}})Gibbs, Hew und Wadley]{gibbs04}
 \dinatlabel{Gibbs u.\,a. 2004{\natexlab{a}}} \textsc{Gibbs}, Martin~;
@@ -526,13 +518,6 @@ dy\_2007}
 \newblock In: \emph{http://tools.ietf.org/html/draft-ietf-mmusic-ice-19}
 \newblock (2008)
 
-\bibitem[Rosenberg und H.~Schulzrinne(2002)]{rosenberg02}
-\dinatlabel{Rosenberg und H.~Schulzrinne 2002} \textsc{Rosenberg}, J.~;
-  \textsc{H.~Schulzrinne}, H.:
-\newblock Models for multi party conferencing in SIP - Internet Draft.
-\newblock In: \emph{Internet Engineering Task Force}
-\newblock Work in Progress (2002)
-
 \bibitem[Rosenberg u.\,a.(2008)Rosenberg, Mahy und Huitema]{turn08}
 \dinatlabel{Rosenberg u.\,a. 2008} \textsc{Rosenberg}, J.~; \textsc{Mahy}, R.~;
   \textsc{Huitema}, C.:
@@ -710,16 +695,10 @@ dy\_2007}
 \newblock ACM Press Addison-Wesley Publishing Co., 1999. --
 \newblock ISBN 0-201-32557-8
 
-\bibitem[SonyEntertainment(2008{\natexlab{a}})]{everquest08}
-\dinatlabel{SonyEntertainment 2008{\natexlab{a}}} \textsc{SonyEntertainment}:
+\bibitem[SonyEntertainment(2008)]{everquest08}
+\dinatlabel{SonyEntertainment 2008} \textsc{SonyEntertainment}:
 \newblock Everquest.
 \newblock In: \emph{http://eqplayers.station.sony.com/}
-\newblock (2008)
-
-\bibitem[SonyEntertainment(2008{\natexlab{b}})]{home08}
-\dinatlabel{SonyEntertainment 2008{\natexlab{b}}} \textsc{SonyEntertainment}:
-\newblock PlayStation Home.
-\newblock In: \emph{http://en.wikipedia.org/wiki/PlayStation\_Home}
 \newblock (2008)
 
 \bibitem[Stoica u.\,a.(2001)Stoica, Morris, Karger, Kaashoek und
@@ -732,14 +711,6 @@ dy\_2007}
 \newblock
 \newblock (2001), S.~149--160. --
 \newblock URL \url{citeseer.ist.psu.edu/stoica01chord.html}
-
-\bibitem[Stutzbach u.\,a.(2005)Stutzbach, Rejaie und Sen]{stutzbach05b}
-\dinatlabel{Stutzbach u.\,a. 2005} \textsc{Stutzbach}, Daniel~;
-  \textsc{Rejaie}, Reza~; \textsc{Sen}, Subhabrata:
-\newblock Characterizing unstructured overlay topologies in modern P2P
-  file-sharing systems.
-\newblock
-\newblock (2005), S.~1--14
 
 \bibitem[TeamSpeakSystemsGmbH(2008)]{teamspeak08}
 \dinatlabel{TeamSpeakSystemsGmbH 2008} \textsc{TeamSpeakSystemsGmbH}:
