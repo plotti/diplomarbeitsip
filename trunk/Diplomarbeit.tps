@@ -5,7 +5,7 @@ Version=2
 [SessionInfo]
 ActiveTab=0
 FrameCount=17
-ActiveFrame=14
+ActiveFrame=9
 
 [Frame0]
 Columns=1
@@ -24,11 +24,11 @@ Class=CLatexEdit
 Document=kapitel\kapitel_recentwork.tex
 
 [Frame0_Row0]
-cyCur=351
+cyCur=346
 cyMin=10
 
 [Frame0_Col0]
-cxCur=752
+cxCur=751
 cxMin=10
 
 [Frame0_View0,0]
@@ -53,11 +53,11 @@ Class=CLatexEdit
 Document=kapitel\kapitel_implementierung.tex
 
 [Frame1_Row0]
-cyCur=351
+cyCur=346
 cyMin=10
 
 [Frame1_Col0]
-cxCur=752
+cxCur=751
 cxMin=10
 
 [Frame1_View0,0]
@@ -73,7 +73,7 @@ ShowCmd=1
 MinPos.x=-1
 MinPos.y=-1
 MaxPos.x=-4
-MaxPos.y=-26
+MaxPos.y=-30
 NormalPos.left=0
 NormalPos.top=0
 NormalPos.right=780
@@ -82,17 +82,17 @@ Class=CLatexEdit
 Document=kapitel\kapitel_folgerungundziele.tex
 
 [Frame2_Row0]
-cyCur=351
+cyCur=346
 cyMin=10
 
 [Frame2_Col0]
-cxCur=752
+cxCur=751
 cxMin=10
 
 [Frame2_View0,0]
-Cursor.row=2
-Cursor.column=85
-TopSubLine=0
+Cursor.row=140
+Cursor.column=338
+TopSubLine=334
 
 [Frame3]
 Columns=1
@@ -111,11 +111,11 @@ Class=CLatexEdit
 Document=kapitel\stichwortverzeichnis.tex
 
 [Frame3_Row0]
-cyCur=351
+cyCur=346
 cyMin=10
 
 [Frame3_Col0]
-cxCur=752
+cxCur=751
 cxMin=10
 
 [Frame3_View0,0]
@@ -131,7 +131,7 @@ ShowCmd=1
 MinPos.x=-1
 MinPos.y=-1
 MaxPos.x=-4
-MaxPos.y=-26
+MaxPos.y=-30
 NormalPos.left=66
 NormalPos.top=87
 NormalPos.right=846
@@ -140,17 +140,17 @@ Class=CLatexEdit
 Document=kapitel\kapitel_kommunikation.tex
 
 [Frame4_Row0]
-cyCur=351
+cyCur=346
 cyMin=10
 
 [Frame4_Col0]
-cxCur=752
+cxCur=751
 cxMin=10
 
 [Frame4_View0,0]
-Cursor.row=12
+Cursor.row=235
 Cursor.column=0
-TopSubLine=8
+TopSubLine=727
 
 [Frame5]
 Columns=1
@@ -169,11 +169,11 @@ Class=CLatexEdit
 Document=Main.tex
 
 [Frame5_Row0]
-cyCur=351
+cyCur=346
 cyMin=10
 
 [Frame5_Col0]
-cxCur=752
+cxCur=751
 cxMin=10
 
 [Frame5_View0,0]
@@ -198,11 +198,11 @@ Class=CLatexEdit
 Document=kapitel\einleitung.tex
 
 [Frame6_Row0]
-cyCur=351
+cyCur=346
 cyMin=10
 
 [Frame6_Col0]
-cxCur=752
+cxCur=751
 cxMin=10
 
 [Frame6_View0,0]
@@ -227,11 +227,11 @@ Class=CLatexEdit
 Document=kapitel\erklaerung.tex
 
 [Frame7_Row0]
-cyCur=351
+cyCur=346
 cyMin=10
 
 [Frame7_Col0]
-cxCur=841
+cxCur=840
 cxMin=10
 
 [Frame7_View0,0]
@@ -256,11 +256,11 @@ Class=CLatexEdit
 Document=kapitel\abstract.tex
 
 [Frame8_Row0]
-cyCur=351
+cyCur=346
 cyMin=10
 
 [Frame8_Col0]
-cxCur=802
+cxCur=801
 cxMin=10
 
 [Frame8_View0,0]
@@ -271,12 +271,12 @@ TopSubLine=0
 [Frame9]
 Columns=1
 Rows=1
-Flags=0
-ShowCmd=1
+Flags=2
+ShowCmd=3
 MinPos.x=-1
 MinPos.y=-1
 MaxPos.x=-4
-MaxPos.y=-26
+MaxPos.y=-30
 NormalPos.left=22
 NormalPos.top=29
 NormalPos.right=852
@@ -285,17 +285,17 @@ Class=CLatexEdit
 Document=kapitel\kapitel_konstruktion.tex
 
 [Frame9_Row0]
-cyCur=351
+cyCur=607
 cyMin=10
 
 [Frame9_Col0]
-cxCur=802
+cxCur=909
 cxMin=10
 
 [Frame9_View0,0]
-Cursor.row=0
-Cursor.column=0
-TopSubLine=0
+Cursor.row=301
+Cursor.column=6
+TopSubLine=650
 
 [Frame10]
 Columns=1
@@ -314,11 +314,11 @@ Class=CLatexEdit
 Document=kapitel\kapitel_sip.tex
 
 [Frame10_Row0]
-cyCur=351
+cyCur=346
 cyMin=10
 
 [Frame10_Col0]
-cxCur=788
+cxCur=787
 cxMin=10
 
 [Frame10_View0,0]
@@ -343,11 +343,11 @@ Class=CLatexEdit
 Document=kapitel\abkuerzungen.tex
 
 [Frame11_Row0]
-cyCur=285
+cyCur=280
 cyMin=10
 
 [Frame11_Col0]
-cxCur=731
+cxCur=730
 cxMin=10
 
 [Frame11_View0,0]
@@ -372,11 +372,11 @@ Class=CLatexEdit
 Document=kapitel\kapitel_conclusion.tex
 
 [Frame12_Row0]
-cyCur=351
+cyCur=346
 cyMin=10
 
 [Frame12_Col0]
-cxCur=763
+cxCur=762
 cxMin=10
 
 [Frame12_View0,0]
@@ -401,11 +401,11 @@ Class=CLatexEdit
 Document=kapitel\kapitel_entwurf.tex
 
 [Frame13_Row0]
-cyCur=167
+cyCur=162
 cyMin=10
 
 [Frame13_Col0]
-cxCur=1001
+cxCur=1000
 cxMin=10
 
 [Frame13_View0,0]
@@ -416,12 +416,12 @@ TopSubLine=306
 [Frame14]
 Columns=1
 Rows=1
-Flags=2
-ShowCmd=3
+Flags=0
+ShowCmd=1
 MinPos.x=-1
 MinPos.y=-1
 MaxPos.x=-4
-MaxPos.y=-26
+MaxPos.y=-30
 NormalPos.left=88
 NormalPos.top=100
 NormalPos.right=1117
@@ -430,17 +430,17 @@ Class=CLatexEdit
 Document=kapitel\kapitel_network.tex
 
 [Frame14_Row0]
-cyCur=648
+cyCur=162
 cyMin=10
 
 [Frame14_Col0]
-cxCur=908
+cxCur=1000
 cxMin=10
 
 [Frame14_View0,0]
-Cursor.row=86
-Cursor.column=203
-TopSubLine=188
+Cursor.row=246
+Cursor.column=333
+TopSubLine=562
 
 [Frame15]
 Columns=1
@@ -450,7 +450,7 @@ ShowCmd=1
 MinPos.x=-1
 MinPos.y=-1
 MaxPos.x=-4
-MaxPos.y=-26
+MaxPos.y=-30
 NormalPos.left=0
 NormalPos.top=0
 NormalPos.right=1029
@@ -459,11 +459,11 @@ Class=CLatexEdit
 Document=kapitel\titel.tex
 
 [Frame15_Row0]
-cyCur=167
+cyCur=162
 cyMin=10
 
 [Frame15_Col0]
-cxCur=1001
+cxCur=1000
 cxMin=10
 
 [Frame15_View0,0]
@@ -479,7 +479,7 @@ ShowCmd=1
 MinPos.x=-1
 MinPos.y=-1
 MaxPos.x=-4
-MaxPos.y=-26
+MaxPos.y=-30
 NormalPos.left=154
 NormalPos.top=175
 NormalPos.right=929
@@ -488,15 +488,15 @@ Class=CLatexEdit
 Document=kapitel\kapitel_benchmarking.tex
 
 [Frame16_Row0]
-cyCur=418
+cyCur=413
 cyMin=10
 
 [Frame16_Col0]
-cxCur=747
+cxCur=746
 cxMin=10
 
 [Frame16_View0,0]
 Cursor.row=145
 Cursor.column=0
-TopSubLine=226
+TopSubLine=253
 
