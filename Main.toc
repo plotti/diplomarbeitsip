@@ -180,7 +180,7 @@
 \contentsline {subsubsection}{Sharding}{100}
 \contentsline {subsubsection}{Clustering}{100}
 \contentsline {subsubsection}{Interest Management}{100}
-\contentsline {section}{\numberline {8.4}SIP im Client-Server Modus}{101}
+\contentsline {section}{\numberline {8.4}Implementierung einer Client-Server Architektur mit SIP}{101}
 \contentsline {subsection}{\numberline {8.4.1}SIP SIMPLE Protokoll}{101}
 \contentsline {subsubsection}{Nachrichtendienst}{102}
 \contentsline {subsubsection}{Buddy Konzept}{103}
@@ -188,9 +188,9 @@
 \contentsline {subsection}{\numberline {8.4.2}Skalierbarkeit}{104}
 \contentsline {subsection}{\numberline {8.4.3}Tauglichkeit als Peer-to-Peer Ansatz}{104}
 \contentsline {section}{\numberline {8.5}Peer-to-Peer}{104}
-\contentsline {subsection}{\numberline {8.5.1}Distributed Hash Tables}{104}
+\contentsline {subsection}{\numberline {8.5.1}Distributed Hash Tables}{105}
 \contentsline {subsection}{\numberline {8.5.2}Peer-to-Peer in Netzwerkspielen}{105}
-\contentsline {subsection}{\numberline {8.5.3}Nachbarbasierte P2P-Systeme}{105}
+\contentsline {subsection}{\numberline {8.5.3}Nachbarbasierte P2P-Systeme}{106}
 \contentsline {subsubsection}{Voronoibasierte P2P Systeme}{106}
 \contentsline {subsection}{\numberline {8.5.4}Regionsbasierte Peer-to-Peer Systeme}{106}
 \contentsline {subsection}{\numberline {8.5.5}Hybride P2P-Systeme}{107}
