@@ -295,7 +295,7 @@ cxMin=10
 [Frame9_View0,0]
 Cursor.row=301
 Cursor.column=6
-TopSubLine=650
+TopSubLine=649
 
 [Frame10]
 Columns=1
@@ -305,7 +305,7 @@ ShowCmd=1
 MinPos.x=-1
 MinPos.y=-1
 MaxPos.x=-4
-MaxPos.y=-26
+MaxPos.y=-30
 NormalPos.left=44
 NormalPos.top=58
 NormalPos.right=860
@@ -334,7 +334,7 @@ ShowCmd=1
 MinPos.x=-1
 MinPos.y=-1
 MaxPos.x=-4
-MaxPos.y=-26
+MaxPos.y=-30
 NormalPos.left=66
 NormalPos.top=87
 NormalPos.right=825
@@ -363,7 +363,7 @@ ShowCmd=1
 MinPos.x=-1
 MinPos.y=-1
 MaxPos.x=-4
-MaxPos.y=-26
+MaxPos.y=-30
 NormalPos.left=44
 NormalPos.top=58
 NormalPos.right=835
@@ -382,7 +382,7 @@ cxMin=10
 [Frame12_View0,0]
 Cursor.row=29
 Cursor.column=558
-TopSubLine=118
+TopSubLine=138
 
 [Frame13]
 Columns=1
@@ -392,7 +392,7 @@ ShowCmd=1
 MinPos.x=-1
 MinPos.y=-1
 MaxPos.x=-4
-MaxPos.y=-26
+MaxPos.y=-30
 NormalPos.left=66
 NormalPos.top=75
 NormalPos.right=1095
@@ -411,7 +411,7 @@ cxMin=10
 [Frame13_View0,0]
 Cursor.row=127
 Cursor.column=0
-TopSubLine=306
+TopSubLine=307
 
 [Frame14]
 Columns=1
@@ -498,5 +498,5 @@ cxMin=10
 [Frame16_View0,0]
 Cursor.row=145
 Cursor.column=0
-TopSubLine=253
+TopSubLine=232
 
