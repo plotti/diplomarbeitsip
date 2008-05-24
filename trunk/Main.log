@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592-1.40.7 (MiKTeX 2.7) (preloaded format=latex 2008.3.12)  23 MAY 2008 17:52
+This is pdfTeX, Version 3.141592-1.40.7 (MiKTeX 2.7) (preloaded format=latex 2008.3.12)  24 MAY 2008 18:05
 entering extended mode
 **Main.tex
 (Main.tex
@@ -1088,10 +1088,10 @@ LaTeX Warning: There were multiply-defined labels.
 Here is how much of TeX's memory you used:
  6737 strings out of 95338
  96424 string characters out of 1184228
- 210104 words of memory out of 1500000
+ 210105 words of memory out of 1500000
  9696 multiletter control sequences out of 110000
  11465 words of font info for 41 fonts, out of 1200000 for 2000
  14 hyphenation exceptions out of 8191
  37i,11n,37p,1709b,1115s stack positions out of 5000i,500n,10000p,200000b,5000s
 
-Output written on Main.dvi (146 pages, 512424 bytes).
+Output written on Main.dvi (146 pages, 512432 bytes).
