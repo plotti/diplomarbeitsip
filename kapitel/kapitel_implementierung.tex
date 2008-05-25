@@ -18,7 +18,7 @@ Eine Alternative zu reinen Spiele-Engines bieten offene generische 3D-Engines, d
 \textit{Irrlicht} ist ein einfaches gut dokumentiertes open source Framework das in C++ geschrieben wurde. Alle üblichen 3D Features wie \textit{Collision Detection}, Animationen, \textit{Shading} und Texturen werden sowohl unter \textit{Windows}, \textit{Linux} als auch \textit{Mac OS} unterstützt. Aufgrund der bestehenden Arbeit von Triebel \cite{triebel07g}, war es mir möglich bereits bestehende Konzepte zu verwenden und somit eine schnelle Entwicklung des Prototyps zu gewährleisten.
 
 \subsubsection{\textit{Irrklang}}
-Speziell für die Sprachkommunikation musste das 3D-Framework um eine Audio-Engine erweitert werden, die eine gezielte Audioausgabe ermöglicht. Speziell für Irrlicht existiert \textit{IrrKlang} \footnote{N. Gebhardt, Version 22.03.2008, http://www.ambiera.com/irrklang/index.html}, eine einfache plattform-übergreifende Audiobibliothek. Sie unterstützt Audioverarbeitung auf der nativen Ebene, realistisches \textit{3D-Audio-Rendering}, \textit{Multithreading} und kann über \textit{Plugins} erweitert werden. Zusätzlich verfügt sie über eine einfache API, die eine schnelle Einarbeitung und Entwicklung ermöglicht. All diese Gründe waren ausschlaggebend diese Bibliothek zu benutzen. 
+Speziell für die Sprachkommunikation musste das 3D-Framework um eine Audio-Engine erweitert werden, die eine gezielte Audioausgabe ermöglicht. Speziell für Irrlicht existiert \textit{IrrKlang} \footnote{Nikolaus Gebhardt, Version 15.04.2008, http://www.ambiera.com/irrklang}, eine einfache plattform-übergreifende Audiobibliothek. Sie unterstützt Audioverarbeitung auf der nativen Ebene, realistisches \textit{3D-Audio-Rendering}, \textit{Multithreading} und kann über \textit{Plugins} erweitert werden. Zusätzlich verfügt sie über eine einfache API, die eine schnelle Einarbeitung und Entwicklung ermöglicht. All diese Gründe waren ausschlaggebend diese Bibliothek zu benutzen. 
 
 \section{VoIP Lösung}
 
@@ -107,10 +107,10 @@ Telecommunications System Laboratory, Version 25.03.2008, http://www.minisip.org
 
 Zusätzlich existieren zwar freie Softphones, die von Infrastruktur Betreibern kostenlos angeboten werden, um den eigenen Marktanteil am VoIP Markt zu erhöhen. Dazu gehören Programme wie \textit{X-Lite}\footnote{Counterpath, Version 21.03.2008, http://www.xten.com}, \textit{Gizmo5}\footnote{SIPphone Inc, Version 21.03.2008, http://gizmo5.com} oder \textit{OpenWengo}\footnote{OpenWengo Inc, Version 21.03.2008, http://www.openwengo.org}. Diese haben meist einen großen Funktionsumfang, lassen sich jedoch nicht modifizieren. Zudem sind sie an die Nutzung der Infrastruktur eines bestimmten Betreibers gebunden.
 
-Eine ausführliche Übersicht über viele der auf dem Markt erhältlichen SIP Clients und Server Anwendungen findet sich unter \cite{sipsoftware08}.
+Eine ausführliche und aktuelle Übersicht vieler auf auf dem Markt erhältlichen SIP Clients und Server Anwendungen ist im Internet verfügbar\footnote{Wikipedia:Overview of SIP Software, Version 22.03.2008, http://en.wikipedia.org/wiki/List\_of\_SIP\_software}
 
 \subsubsection{SIP Protokollstapel}
-Neben kompletten Softphones existieren plattform-übergreifende SIP Protokollstapel, die die Funktionalität von SIP in größeren Anwendungen ermöglichen. Dazu zählen Protokollstapel wie \textit{OpenSipStack}\footnote{Joegen Baclor, Version 22.03.2008, http://www.opensipstack.org} \textit{sipXtackLib}\footnote{SIPfoundry, Version 22.03.2008, http://www.sipfoundry.org} \textit{reSIProcate}\footnote{B. Kampen, Version 22.03.2008, http://www.resiprocate.org} oder \textit{PJSIP}\footnote{B. Prijono, Version 22.03.2008, http://www.pjsip.org}
+Neben kompletten Softphones existieren plattform-übergreifende SIP Protokollstapel, die die Funktionalität von SIP in größeren Anwendungen ermöglichen. Dazu zählen Protokollstapel wie \textit{OpenSipStack}\footnote{Joegen Baclor, Version 22.03.2008, http://www.opensipstack.org} \textit{sipXtackLib}\footnote{SIPfoundry, Version 22.03.2008, http://www.sipfoundry.org} \textit{reSIProcate}\footnote{B. Kampen, Version 22.03.2008, http://www.resiprocate.org} oder \textit{PJSIP}\footnote{Benjamin Prijono, Version 22.03.2008, http://www.pjsip.org}
 
 \subsubsection{Pjsip}
 Meine persönliche Wahl fiel aus den folgenden Gründen auf den offenen SIP Protokollstapel \textit{PJSIP}:
@@ -172,8 +172,8 @@ Zu Beginn des Spieles werden die \textit{Irrlicht} und VoIP Instanzen initialisi
 
 Für eine möglichst realistische Umsetzung wurde ein Level benutzt, das einen Park zeigt in dem Spieler die Möglichkeit haben sich frei zu bewegen. Die Vorstellung, dass Menschen in hier spontane Gesprächen führen liegt nahe. Ebenso erscheint in diesem Szenario die Übertragung der Sprache per Luft sehr natürlich. Eine frühe Alternative sah vor, Raumschiffe auf einem Planeten umherfliegen zu lassen, war aber für die Sprachübertragung per Luft nicht wirklich passend, da man intuitiv vermutet, dass die Kommunikation zwischen Raumschiffen eher mit einem Funksprechgerät stattfindet.
 
-\subsubsection{Collision Detection}
-Der Spieler kann in der Implementierung mit andern Spielern des Levels und dem Level selbst interagieren. Dabei ist es wichtig, dass eine Berechnung der Kollision des Spielers mit dem Level oder anderen Spielern stattfindet, da ohne eine solche der Spieler alle Gegenstände durchdringen könnte und das Szenario unnatürlich erscheint. Diese Berechnung wird "`\textit{Collision Detection}"' genannt und wird ebenfalls mit im Irrlicht Framework umgesetzt. 
+\subsubsection{\textit{Collision Detection}}
+Der Spieler kann in der Implementierung mit andern Spielern des Levels und dem Level selbst interagieren. Dabei ist es wichtig, dass eine Berechnung der Kollision des Spielers mit dem Level oder anderen Spielern stattfindet, da ohne eine solche der Spieler alle Gegenstände durchdringen könnte und das Szenario unnatürlich erscheint. Diese Berechnung wird "`\textit{Collision Detection}"' genannt und wird ebenfalls mit im \textit{Irrlicht} Framework umgesetzt. 
 
 \subsubsection{Steuerung}
 Der Spieler ist in der Lage sich in alle Richtungen zu Bewegen und zu springen. Dies erlaubt es ihm sich anderen Spielern zu nähern, um so die Sprachkommunikation einzuleiten. Bis auf die Steuerung des Avatars sind keine weiteren Tastenkombinationen nötig, um Sprachkommunikation zu beginnen. Diese findet automatisch statt, wenn der Spieler die entsprechende Distanz zum anderen Spieler unterschritten hat. Dies wird in einem Radar, der die verschiedenen Verbindungsstufen abbildet oben links auf dem Bildschirm angezeigt. Eine Liste unten links zeigt zusätzlich alle Teilnehmer des Spiels und die Teilnehmer der persönlichen Konferenz an.
@@ -182,19 +182,18 @@ Der Spieler ist in der Lage sich in alle Richtungen zu Bewegen und zu springen. 
 
 In einem Radar am oberen Bildschirmrand werden für den Spieler alle Teilnehmer des Spiels angezeigt. Der Radar verfügt über drei Zonen, die die einzelnen Verbindungsstufen repräsentieren. Spieler werden mit einem Icon und ihrem zugehörigen Namen angezeigt. In der öffentlichen Zone wird der Icon gräulich dargestellt, betreten sie die soziale Zone wird dieser grün gefärbt und in der privaten Zone ist ihr Icon gelb. Die Metapher der Luftübertragung gepaart mit dem Radar als Orientierungshilfe unterstützt den Spieler bei der Adressierung von anderen Teilnehmern. Spieler sind direkt in der Lage zu sehen, an wen ihre Sprachnachrichten übertragen werden und welche Teilnehmer sie gerade hören. 
 
-\subsection{Irrklang}
+\subsection{\textit{Irrklang}}
 
 \subsubsection{Lokale Audioszene}
 Das Level wurde zusätzlich mit mehreren lokalen Audioquellen ausgestattet, die eine realistische Audioumgebung simulieren. So sind der Wind, der Springbrunnen und die Fahrzeuge des Levels mit entsprechenden Audiodateien unterlegt, die mit Hilfe der Irrklang Engine für das Ohr dreidimensional positioniert werden können. Die Audioszene wird lokal erzeugt und muss im Gegensatz zur Sprachkommunikation nicht über das Netzwerk übertragen werden. Die Sprachkommunikation und die lokale Audioszene existieren simultan und erzeugen so für den Spieler ein eine realistische Illusion. 
 
-\section{Zusammenarbeit von Irrlicht und VoIP}
+\section{Zusammenarbeit von \textit{Irrlicht} und VoIP}
 
 \subsection{Aktualisierung der VoIP Instanz}
 
 Im Spiel selbst ist der \textit{Irrlicht Scene Manager} für eine Verwaltung aller Objekte der Spielewelt verantwortlich. Er verfügt sowohl über die Koordinaten des Spielers und aller lokalen Objekte, als auch über die Koordinaten aller anderen anwesenden Spieler im Spiel. Erhält der Spieler neue Positionsinformationen von anderen Teilnehmern, werden diese im \textit{Scene Manager} aktualisiert. Genauso versendet der Spieler selbst seine eigenen Koordinaten an alle teilnehmenden Spieler.
 
-Die Aktualisierung aller Positionsinformationen findet (alle 10ms) in der Hauptschleife von Irrlicht statt, in der sowohl die 3D Welt als auch die lokale VoIP Instanz aktualisiert wird. 
-Anhand der Koordinaten aller aktiven Spieler des Scene Managers kann die die VoIP Instanz die entsprechenden Distanzvektoren berechnen. 
+Die Aktualisierung aller Positionsinformationen findet (alle 10ms) in der Hauptschleife von \textit{Irrlicht} statt, in der sowohl die 3D Welt als auch die lokale VoIP Instanz aktualisiert wird. Anhand der Koordinaten aller aktiven Spieler des Scene Managers kann die die VoIP Instanz die entsprechenden Distanzvektoren berechnen. 
  
 Unterschreitet ein Spieler die Entfernung zu einem anderen Spieler, veranlasst die VoIP Instanz einen entsprechenden Anruf zu diesem Teilnehmer. In Abhängigkeit der Entfernung voneinander werden die entsprechenden Zonenmechanismen durch die VoIP Instanz im Hintergrund eingeleitet.
 
