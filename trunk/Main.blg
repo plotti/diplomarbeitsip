@@ -1,4 +1,4 @@
-This is BibTeX, Version 0.99cThe top-level auxiliary file: C:\Dokumente und Einstellungen\plotti\Eigene Dateien\Diplom\Main.aux
+This is BibTeX, Version 0.99cThe top-level auxiliary file: J:\Diplomarbeit\Main.aux
 A level-1 auxiliary file: kapitel/titel.aux
 A level-1 auxiliary file: kapitel/abstract.aux
 A level-1 auxiliary file: kapitel/stichwortverzeichnis.aux
@@ -16,7 +16,9 @@ A level-1 auxiliary file: kapitel/kapitel_conclusion.aux
 The style file: dinat.bst
 A level-1 auxiliary file: kapitel/erklaerung.aux
 Database file #1: literatur/da.bib
+Warning--I didn't find a database entry for "uo08"
 Warning--I didn't find a database entry for "schulzrinnesomething..."
-Warning--I didn't find a database entry for "turn06"
 Warning--empty pages in gibbs04
-(There were 3 warnings)
+Warning--empty pages in manninen03
+Warning--empty note in rtp96
+(There were 5 warnings)
