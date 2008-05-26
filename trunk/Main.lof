@@ -19,10 +19,10 @@
 \contentsline {figure}{\numberline {4.2}{\ignorespaces Beispiel eines typischen SIP-Requests}}{38}
 \contentsline {figure}{\numberline {4.3}{\ignorespaces Sip Anruf ohne Proxy}}{41}
 \contentsline {figure}{\numberline {4.4}{\ignorespaces Einsatz eines Proxy Servers mit Registrar}}{42}
-\contentsline {figure}{\numberline {4.5}{\ignorespaces Teilnehmer A schickt Teilnehmer B eine Nachricht. Beide sind Teil der gleichen Dom\"ane und benutzen den gleichen Proxy.}}{44}
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Teilnehmer A schickt Teilnehmer B eine Nachricht. Beide sind Teil der gleichen Dom\"ane und benutzen den gleichen Proxy.}}{43}
 \contentsline {figure}{\numberline {4.6}{\ignorespaces Teilnehmer A m\"ochte die Pr\"asenz von Teilnehmer B abonnieren. Teilnehmer B aktualisiert seine Information.}}{45}
-\contentsline {figure}{\numberline {4.7}{\ignorespaces Beispiel einer SDP Nachricht}}{46}
-\contentsline {figure}{\numberline {4.8}{\ignorespaces Header eines RTP-Pakets}}{48}
+\contentsline {figure}{\numberline {4.7}{\ignorespaces Beispiel einer SDP Nachricht}}{45}
+\contentsline {figure}{\numberline {4.8}{\ignorespaces Header eines RTP-Pakets}}{47}
 \contentsline {figure}{\numberline {4.9}{\ignorespaces Ein schematischer Ablauf von STUN}}{51}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
