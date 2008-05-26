@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592-1.40.4 (MiKTeX 2.7 Beta 5) (preloaded format=latex 2008.3.16)  25 MAY 2008 14:37
+This is pdfTeX, Version 3.141592-1.40.4 (MiKTeX 2.7 Beta 5) (preloaded format=latex 2008.3.16)  25 MAY 2008 14:39
 entering extended mode
 **Main.tex
 (Main.tex
@@ -741,4 +741,312 @@ Underfull \hbox (badness 10000) in paragraph at lines 143--143
 
 
 Underfull \hbox (badness 8189) in paragraph at lines 143--144
-[]\OT1/cmr/m/n/12 ($\OML/cmm/m/it/12 A[]$\OT1/cmr/m/n/12 ) Ko
+[]\OT1/cmr/m/n/12 ($\OML/cmm/m/it/12 A[]$\OT1/cmr/m/n/12 ) Kom-plett
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 143--144
+\OT1/cmr/m/n/12 de-zen-tra-le
+ []
+
+[64] [65]
+Overfull \hbox (38.82602pt too wide) in paragraph at lines 156--157
+\OT1/cmr/m/n/12 die Si-gna-li-sie-rung und Lo-ka-ti-on von ver-teil-ten Proxys 
+und Re-gis-tra-ren []ubernommen
+ []
+
+[66] [67] [68]
+Overfull \hbox (8.83041pt too wide) in paragraph at lines 215--216
+[][]\OT1/cmr/m/n/12 Befinden sich bei-spiels-wei-se 12 Per-so-nen im Spiel, emp
+f[]angt der Ser-ver Au-diostr[]ome
+ []
+
+
+Overfull \hbox (11.11095pt too wide) in paragraph at lines 227--228
+[][]\OT1/cmr/m/n/12 Die Nach-tei-le die-ser Ar-chi-tek-tur lie-gen je-doch beim
+ in-ter-ak-ti-ven De-lay, der abh[]angig
+ []
+
+[69] [70]
+Overfull \hbox (0.79585pt too wide) in paragraph at lines 251--252
+[][]\OT1/cmr/m/n/12 Da der Band-brei-ten-ver-brauch bei ei-nem de-zen-tra-len A
+us-tausch von Au-diostr[]omen
+ []
+
+
+Overfull \hbox (12.14702pt too wide) in paragraph at lines 271--272
+\OT1/cmr/m/n/12 Spie-lern je-der Spie-ler min-des-tens []uber einen Uploa-d/-Do
+w-n-load von $256[]$ verf[]ugen
+ []
+
+[71]
+Overfull \hbox (18.43317pt too wide) in paragraph at lines 290--291
+\OT1/cmr/m/n/12 Teil-neh-mers be-fin-den. Die-ser Wert kann ver[]andert wer-den
+, in dem die H[]orerreichweite
+ []
+
+[72] [73])
+Overfull \vbox (10.87498pt too high) has occurred while \output is active []
+
+
+[74] (kapitel/kapitel_implementierung.tex
+Kapitel 7.
+[75
+
+
+
+] [76]
+! Undefined control sequence.
+<argument> \textit {Ventrillo},\texit 
+                                      {Teamspeak},\texit {Mumble}
+l.38 ...ntrillo},\texit{Teamspeak},\texit{Mumble}}
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> ...entrillo},\texit {Teamspeak},\texit 
+                                                  {Mumble}
+l.38 ...ntrillo},\texit{Teamspeak},\texit{Mumble}}
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> ...ame }\fi \textit {Ventrillo},\texit 
+                                                  {Teamspeak},\texit {Mumble...
+l.38 ...ntrillo},\texit{Teamspeak},\texit{Mumble}}
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> ...entrillo},\texit {Teamspeak},\texit 
+                                                  {Mumble}}{\thepage }}
+l.38 ...ntrillo},\texit{Teamspeak},\texit{Mumble}}
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+[77] [78] [79] [80]
+Underfull \hbox (badness 10000) in paragraph at lines 110--110
+[][]\OT1/cmr/m/n/10 Wikipedia:Overview of SIP Soft-wa-re, Ver-si-on 22.03.2008,
+
+ []
+
+[81]
+File: grafiken/pjsip.eps Graphic file (type eps)
+ <grafiken/pjsip.eps> [82]
+File: grafiken/spielewelt-screenshot.eps Graphic file (type eps)
+ <grafiken/spielewelt-screenshot.eps> [83]
+[84] [85]
+Overfull \hbox (0.2514pt too wide) in paragraph at lines 198--199
+\OT1/cmr/m/n/12 der Ent-fer-nung von-ein-an-der wer-den die ent-spre-chen-den Z
+o-nen-me-cha-nis-men durch
+ []
+
+[86]
+File: grafiken/gamestart-screenshot.eps Graphic file (type eps)
+ <grafiken/gamestart-screenshot.eps> [87] [88]
+File: grafiken/sipanruf_403.eps Graphic file (type eps)
+ <grafiken/sipanruf_403.eps>
+[89] [90] [91] [92]
+File: grafiken/siphold.eps Graphic file (type eps)
+ <grafiken/siphold.eps> [93] [94])
+Overfull \hbox (1.5541pt too wide) in paragraph at lines 315--83
+\OT1/cmr/m/n/12 auch die Me-ta-pher des Festnetz-Telephons um-ge-setzt, dass de
+m Spie-ler tats[]achlich
+ []
+
+[95] (kapitel/kapitel_network.tex
+Kapitel 8.
+[96
+
+
+
+] [97] [98]
+Overfull \hbox (0.12033pt too wide) in paragraph at lines 52--53
+\OT1/cmr/m/n/12 Ent-wick-lung ei-nes sol-chen []uber den Rah-men der Ar-beit hi
+n-aus-geht. Da-zu m[]ussten
+ []
+
+[99] [100] [101] [102] [103] [104] [105] [106]
+
+LaTeX Warning: Reference `p2psipregisterandjoin_user' on page 107 undefined on 
+input line 202.
+
+
+Overfull \hbox (1.76497pt too wide) in paragraph at lines 202--203
+[][]\OT1/cmr/m/n/12 Aus dem Na-men des Teil-neh-mers ei-ne \OT1/cmr/m/it/12 Res
+-sour-ce ID\OT1/cmr/m/n/12 gebildet. In ei-ner Nach-richt,die
+ []
+
+File: grafiken/p2psipregisterandjoin.eps Graphic file (type eps)
+<grafiken/p2psipregisterandjoin.eps>
+File: grafiken/p2psipregisterandjoin_user.eps Graphic file (type eps)
+ <grafiken/p2psipregisterandjoin_user.eps>
+
+LaTeX Warning: Reference `p2psipcall' on page 107 undefined on input line 220.
+
+[107] [108]
+File: grafiken/p2psipcall.eps Graphic file (type eps)
+ <grafiken/p2psipcall.eps> [109]
+File: grafiken/registrar-dediziert.eps Graphic file (type eps)
+ <grafiken/registrar-dediziert.eps>
+File: grafiken/registrar-client.eps Graphic file (type eps)
+
+<grafiken/registrar-client.eps> [110]
+File: grafiken/registrar-supernode.eps Graphic file (type eps)
+ <grafiken/registrar-supernode.eps>)
+[111] (kapitel/kapitel_benchmarking.tex
+Kapitel 9.
+File: grafiken/fullmesh.eps Graphic file (type eps)
+<grafiken/fullmesh.eps>
+File: grafiken/fullmeshchart.eps Graphic file (type eps)
+ <grafiken/fullmeshchart.eps> [112
+
+
+
+] [113]
+File: grafiken/partialmesh.eps Graphic file (type eps)
+
+<grafiken/partialmesh.eps>
+File: grafiken/partialmeshchart.eps Graphic file (type eps)
+ <grafiken/partialmeshchart.eps> [114]
+File: grafiken/fullmesh-worstcase.eps Graphic file (type eps)
+
+<grafiken/fullmesh-worstcase.eps>
+File: grafiken/ohnevpn1.eps Graphic file (type eps)
+ <grafiken/ohnevpn1.eps>
+File: grafiken/ohnevpn2.eps Graphic file (type eps)
+
+<grafiken/ohnevpn2.eps> [115] [116]
+File: grafiken/mitvadupdown.eps Graphic file (type eps)
+ <grafiken/mitvadupdown.eps>
+File: grafiken/mitvadrtpsip.eps Graphic file (type eps)
+
+<grafiken/mitvadrtpsip.eps>
+File: grafiken/mitholdupanddown.eps Graphic file (type eps)
+ <grafiken/mitholdupanddown.eps> [117] [118]
+File: grafiken/mithold1.eps Graphic file (type eps)
+
+<grafiken/mithold1.eps>
+File: grafiken/mitvadund2codecs.eps Graphic file (type eps)
+ <grafiken/mitvadund2codecs.eps> [119] [120]
+File: grafiken/mitvadundrtpsip.eps Graphic file (type eps)
+
+<grafiken/mitvadundrtpsip.eps>) [121] (kapitel/kapitel_conclusion.tex
+Kapitel 10.
+
+Overfull \hbox (12.18462pt too wide) in paragraph at lines 10--11
+[][]\OT1/cmr/m/n/12 In die-ser Ar-beit wer-den ge-nau die-se Un-zul[]angl[]angl
+ichkeiten adres-siert und L[]osungen
+ []
+
+[122
+
+
+
+] [123]
+Overfull \hbox (22.66391pt too wide) in paragraph at lines 27--29
+\OT1/cmr/m/n/12 Over-lay soll-ten so-wohl der Aus-tausch an Au-diostr[]omen als
+ auch jeg-li-che Signalisieruns-
+ []
+
+
+Overfull \hbox (1.4016pt too wide) in paragraph at lines 27--29
+\OT1/cmr/m/n/12 , Rechte- und Lokations-Anfragen v[]ollig de-zen-tral statt-fin
+-den. Mo-men-tan ben[]otigt
+ []
+
+) [124] (Main.bbl
+Underfull \hbox (badness 7397) in paragraph at lines 36--41
+[][]\OT1/cmr/m/sc/12 Arango\OT1/cmr/m/n/12 , M. ; \OT1/cmr/m/sc/12 Du-gan\OT1/c
+mr/m/n/12 , A. ; \OT1/cmr/m/sc/12 El-liott\OT1/cmr/m/n/12 , I. ; \OT1/cmr/m/sc/
+12 Hui-te-ma\OT1/cmr/m/n/12 , C. ;
+ []
+
+
+Underfull \hbox (badness 3954) in paragraph at lines 36--41
+\OT1/cmr/m/sc/12 Pickett\OT1/cmr/m/n/12 , S.:  Me-dia Ga-te-way Con-trol Pro-to
+-col (MG-CP).  In:
+ []
+
+[125
+
+
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 151--157
+[][]\OT1/cmr/m/sc/12 Ernst&Young\OT1/cmr/m/n/12 :  Di-gi-ta-le Spie-le in Deuts
+ch-land.  In:
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 151--157
+\OT1/cmr/m/it/12 http://www.ey.com/global/content.nsf/Germany/Publikationen[]-[
+]Studien[]-
+ []
+
+[126]
+Underfull \hbox (badness 10000) in paragraph at lines 259--265
+[][]\OT1/cmr/m/sc/12 Ipoque\OT1/cmr/m/n/12 :  In-ter-net Stu-die 2007.  In:
+ []
+
+
+Overfull \hbox (1.91747pt too wide) in paragraph at lines 259--265
+\OT1/cmr/m/it/12 http://www.ipoque.com/news[]&[]events/internet[]studies/intern
+et[]study[]2007
+ []
+
+[127] [128]
+Underfull \hbox (badness 10000) in paragraph at lines 431--435
+[][]\OT1/cmr/m/sc/12 Reichswald\OT1/cmr/m/n/12 , R. ; \OT1/cmr/m/sc/12 M[]oslei
+n\OT1/cmr/m/n/12 , K. ; \OT1/cmr/m/sc/12 Sa-chen-ba-che-rand\OT1/cmr/m/n/12 , K
+. ;
+ []
+
+[129] [130] [131] [132]) [133] (kapitel/erklaerung.tex) [134
+
+
+]
+
+Package natbib Warning: There were undefined citations.
+
+(Main.aux (kapitel/titel.aux) (kapitel/abstract.aux)
+(kapitel/stichwortverzeichnis.aux) (kapitel/abkuerzungen.aux)
+(kapitel/einleitung.aux) (kapitel/kapitel_kommunikation.aux)
+(kapitel/kapitel_folgerungundziele.aux) (kapitel/kapitel_sip.aux)
+(kapitel/kapitel_recentwork.aux) (kapitel/kapitel_konstruktion.aux)
+(kapitel/kapitel_implementierung.aux) (kapitel/kapitel_network.aux)
+(kapitel/kapitel_benchmarking.aux) (kapitel/kapitel_conclusion.aux)
+(kapitel/erklaerung.aux))
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: There were multiply-defined labels.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 6714 strings out of 95351
+ 96181 string characters out of 1184568
+ 209351 words of memory out of 1500000
+ 9672 multiletter control sequences out of 110000
+ 11824 words of font info for 42 fonts, out of 1200000 for 2000
+ 14 hyphenation exceptions out of 8191
+ 37i,11n,37p,1694b,1115s stack positions out of 5000i,500n,10000p,200000b,5000s
+
+Output written on Main.dvi (146 pages, 515660 bytes).
