@@ -1,4 +1,4 @@
-\begin{thebibliography}{89}
+\begin{thebibliography}{87}
 % this bibliography was produced with the style dinat.bst v2.5
 \makeatletter
 \newcommand{\dinatlabel}[1]%
@@ -30,14 +30,6 @@
 \newblock In: \emph{IEEE MultiMedia3}
 \newblock 2 (1995), Nr.~4, S.~77--82. --
 \newblock ISSN 1070-986X
-
-\bibitem[Arango u.\,a.(1999)Arango, Dugan, Elliott, Huitema und
-  Pickett]{mgcp99}
-\dinatlabel{Arango u.\,a. 1999} \textsc{Arango}, M.~; \textsc{Dugan}, A.~;
-  \textsc{Elliott}, I.~; \textsc{Huitema}, C.~; \textsc{Pickett}, S.:
-\newblock Media Gateway Control Protocol (MGCP).
-\newblock In: \emph{http://www.ietf.org/rfc/rfc2705.txt}
-\newblock (1999)
 
 \bibitem[Bailenson u.\,a.(2002)Bailenson, Beall und Blascovich]{bailenson02}
 \dinatlabel{Bailenson u.\,a. 2002} \textsc{Bailenson}, J.~N.~; \textsc{Beall},
@@ -121,15 +113,6 @@
 \newblock The European e-Business Report 2006/07.
 \newblock In: \emph{http://www.ebusiness-watch.org/studies/}
 \newblock (2007)
-
-\bibitem[Cuervo u.\,a.(2000)Cuervo, Greene, Rayhan, Huitema, Rosen und
-  Segers]{megaco00}
-\dinatlabel{Cuervo u.\,a. 2000} \textsc{Cuervo}, F.~; \textsc{Greene}, N.~;
-  \textsc{Rayhan}, A.~; \textsc{Huitema}, C.~; \textsc{Rosen}, B.~;
-  \textsc{Segers}, J.:
-\newblock Megaco Protocol.
-\newblock In: \emph{http://www.ietf.org/rfc/rfc3015.txt}
-\newblock (2000)
 
 \bibitem[Diot und Gautier(1999)]{diot99}
 \dinatlabel{Diot und Gautier 1999} \textsc{Diot}, C.~; \textsc{Gautier}, L.:
