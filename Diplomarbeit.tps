@@ -5,7 +5,7 @@ Version=2
 [SessionInfo]
 ActiveTab=0
 FrameCount=20
-ActiveFrame=2
+ActiveFrame=7
 
 [Frame0]
 Columns=1
@@ -68,8 +68,8 @@ TopSubLine=110
 [Frame2]
 Columns=1
 Rows=1
-Flags=2
-ShowCmd=3
+Flags=0
+ShowCmd=1
 MinPos.x=-1
 MinPos.y=-1
 MaxPos.x=-4
@@ -82,17 +82,17 @@ Class=CLatexEdit
 Document=kapitel\kapitel_implementierung.tex
 
 [Frame2_Row0]
-cyCur=561
+cyCur=351
 cyMin=10
 
 [Frame2_Col0]
-cxCur=926
+cxCur=752
 cxMin=10
 
 [Frame2_View0,0]
-Cursor.row=109
-Cursor.column=258
-TopSubLine=246
+Cursor.row=2
+Cursor.column=335
+TopSubLine=0
 
 [Frame3]
 Columns=1
@@ -121,7 +121,7 @@ cxMin=10
 [Frame3_View0,0]
 Cursor.row=80
 Cursor.column=0
-TopSubLine=195
+TopSubLine=208
 
 [Frame4]
 Columns=1
@@ -179,7 +179,7 @@ cxMin=10
 [Frame5_View0,0]
 Cursor.row=199
 Cursor.column=16
-TopSubLine=559
+TopSubLine=577
 
 [Frame6]
 Columns=1
@@ -213,8 +213,8 @@ TopSubLine=0
 [Frame7]
 Columns=1
 Rows=1
-Flags=0
-ShowCmd=1
+Flags=2
+ShowCmd=3
 MinPos.x=-1
 MinPos.y=-1
 MaxPos.x=-4
@@ -227,17 +227,17 @@ Class=CLatexEdit
 Document=kapitel\einleitung.tex
 
 [Frame7_Row0]
-cyCur=351
+cyCur=273
 cyMin=10
 
 [Frame7_Col0]
-cxCur=752
+cxCur=598
 cxMin=10
 
 [Frame7_View0,0]
-Cursor.row=20
+Cursor.row=6
 Cursor.column=0
-TopSubLine=58
+TopSubLine=17
 
 [Frame8]
 Columns=1
@@ -324,7 +324,7 @@ cxMin=10
 [Frame10_View0,0]
 Cursor.row=216
 Cursor.column=192
-TopSubLine=533
+TopSubLine=535
 
 [Frame11]
 Columns=1
@@ -353,7 +353,7 @@ cxMin=10
 [Frame11_View0,0]
 Cursor.row=22
 Cursor.column=186
-TopSubLine=40
+TopSubLine=46
 
 [Frame12]
 Columns=1
@@ -411,7 +411,7 @@ cxMin=10
 [Frame13_View0,0]
 Cursor.row=29
 Cursor.column=558
-TopSubLine=136
+TopSubLine=118
 
 [Frame14]
 Columns=1
@@ -469,7 +469,7 @@ cxMin=10
 [Frame15_View0,0]
 Cursor.row=35
 Cursor.column=116
-TopSubLine=77
+TopSubLine=70
 
 [Frame16]
 Columns=1
@@ -527,7 +527,7 @@ cxMin=10
 [Frame17_View0,0]
 Cursor.row=22
 Cursor.column=330
-TopSubLine=39
+TopSubLine=43
 
 [Frame18]
 Columns=1
