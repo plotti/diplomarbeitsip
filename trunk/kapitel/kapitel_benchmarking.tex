@@ -12,7 +12,7 @@ Um zu vergleichen, wie mit dem umgesetzten Ansatz Bandbreite eingespart werden k
 \subsection{Full Mesh}
 Die Abbildung \ref{fullmeshszenario} verdeutlicht, wie im Full-Mesh Ansatz jeder Teilnehmer Verbindungen zu allen anderen Teilnehmern etabliert hat. Dabei entspricht die Nummer des Teilnehmers auch dem Zeitpunkt seiner Teilnahme am Spiel: Zunächst betritt Teilnehmer 1 das Spielfeld, danach Teilnehmer 2, usw... Jeder Teilnehmer baut beim Betreten der Spielewelt Verbindungen zu allen andern Spielern auf.
 
-\begin{figure}[htbp]
+\begin{figure}[tbh]
 	\centering
 	\caption{Audiverbindungen im Full-Mesh Ansatz}
 	\label{fullmeshszenario}
@@ -22,7 +22,7 @@ Die Abbildung \ref{fullmeshszenario} verdeutlicht, wie im Full-Mesh Ansatz jeder
 
 Der Bandbreitenverbrauch wurde aus Sicht des Teilnehmers 1 gemessen. Da alle 10 Sekunden ein weiterer Spieler das Spielfeld betritt, wird auch entsprechend eine Audioverbindung mit diesem Spieler aufgebaut. Dies führt dazu, dass der Verbrauch der Bandbreite sich jeweils um weitere 10kb erhöht. Bei allen Messungen wurde der Speex Codec mit einer Abtastrate von 16kHz benutzt, der eine mittlere Bitrate von 10 - 15 kbps besitzt.
 
-\begin{figure}[htbp]
+\begin{figure}[tbh]
 	\centering
 		\includegraphics[width=.70\textwidth]{grafiken/fullmeshchart.eps}
 	\caption{Bandbreitenverbrauch beim Full Mesh Ansatz}
@@ -36,7 +36,7 @@ Dabei wurde zunächst immer dann ein SIP Call zwischen den Teilnehmern etabliert,
 
 Diese Technik führt dazu, dass im vorgestellten Szenario Spieler 1 zunächst zwei logische SIP Verbindungen mit Spieler 2 und 3 etabliert. Während mit Spieler 2 ein voller RTP Audiostrom fließt, wird mit Spieler 3 nur eine Audioverbindung mit Silence Suppression etabliert. Teilnehmer 4 und 5 bauen keine Verbindungen auf da sie sich nicht in Hörreichweite befinden. 
 
-\begin{figure}[htbp]
+\begin{figure}[tbh]
 	\centering
 		\includegraphics[width=.70\textwidth]{grafiken/partialmesh.eps}
 	\label{fig:partialmesh}
@@ -44,7 +44,7 @@ Diese Technik führt dazu, dass im vorgestellten Szenario Spieler 1 zunächst zwei
 
 Der  Bandbreitenverbrauch wurde auch hier aus Sicht des Teilnehmers 1 gemessen. In dem Moment in dem Spieler 2 das Spiel betritt, wird mit ihm eine Audioverbindung aufgebaut, die zwischen 10-15kbps verbraucht. Betritt Spieler 3 dagegen das Spiel werden nur zusätzlich ca. 1-2kbps zur Aufrechterhaltung der Grundkonnektivität der RTP Verbindung benötigt. Würde sich Teilnehmer 3 nun auf Spieler 1 zubewegen, würde die Silence Suppression aufgehoben und auch ein normaler Audiostrom von 10-15kbs fließen. Spieler 4 und 5 verursachen keinen zusätzlichen Bandbreitenverbrauch, da sie sich außerhalb der öffentlichen Zone befinden.
 
-\begin{figure}[htbp]
+\begin{figure}[tbh]
 	\centering
 		\includegraphics[width=.70\textwidth]{grafiken/partialmeshchart.eps}
 	\label{fig:partialmeshchart}
@@ -53,7 +53,7 @@ Der  Bandbreitenverbrauch wurde auch hier aus Sicht des Teilnehmers 1 gemessen. 
 \subsubsection{Partial-Mesh Worst Case}
 Im Worst-Case Fall, befinden sich alle Avatare im gegenseitigen Hörradius, was dazu führt, dass auch ein Full-Mesh zwischen den Teilnehmern aufgebaut wird. Hier kann keine Bandbreite eingespart werden, und das vorgestellte Verfahren ist verliert seinen Vorteil.
 
-\begin{figure}[htbp]
+\begin{figure}[tbh]
 	\centering
 		\includegraphics[width=0.70\textwidth]{grafiken/fullmesh-worstcase.eps}
 	\label{fig:fullmesh-worstcase}
@@ -66,7 +66,7 @@ Die Messungen entsprechen den 3 vorgestellten Zonen Variationen, die bereits in 
 \subsection{Ohne Unterscheidung}
 Hier entfernen sich beide Spieler voneinander, es wird in der öffentlichen Zone jedoch keine Silence Supression, Änderung des Codecs oder "`Hold"' vorgenommen. Man kann an der Abbildung \ref{ohnevadupdown} erkennen, dass die Bandbreite sich in allen Zonen gleichmäßig verhält. 
 
-\begin{figure}[htbp]
+\begin{figure}[tbh]
 	\centering
 	\label{ohnevadupdown}
 	\caption{Der Up- und Downstream}
@@ -76,7 +76,7 @@ Hier entfernen sich beide Spieler voneinander, es wird in der öffentlichen Zone 
 
 Beim Vergleich des RTP und SIP Protokolls in Abbildung \ref{ohnevadsiprtp} sieht man, dass SIP nur zum Signalisieren des Anrufs benutzt wird, da es nur am Anfang und Ende des SIP Anrufs Bandbreite erzeugt, während das RTP Protokoll für den reinen Audiostrom zuständig ist. 
 
-\begin{figure}[htbp]
+\begin{figure}[tbh]
 	\centering
 	\label{ohnevadsiprtp}
 	\caption{Signalisierung mit SIP, Audiostrom mit RTP}
@@ -89,7 +89,7 @@ Beim Vergleich des RTP und SIP Protokolls in Abbildung \ref{ohnevadsiprtp} sieht
 
 Hier wird in der Öffentlichen Zone eine Silence Supression durchgeführt. In der Abbildung \ref{mitvadupdown} ist zu erkennen, dass der sich hier der Bandbreitenverbrauch auf unter 2kbps reduziert, während er in der Privaten und Sozialen Zone knapp das 6fache beträgt. 
 
-\begin{figure}[htbp]
+\begin{figure}[tbh]
 	\centering
 	\label{mitvadupdown}
 	\caption{Der Up- und Downstream mit der VAD - Technik}
@@ -99,7 +99,7 @@ Hier wird in der Öffentlichen Zone eine Silence Supression durchgeführt. In der 
 
 In der Abbildung \ref{mitvadsiprtp} wurden die SIP und RTP Protokolle dargestellt. Man kann erkennen, dass bei der Silence Supression beim RTP Protokoll die Bandbreite drastisch sinkt. Es wird auch deutlich, dass in diesem Fall nicht das SIP Protokoll eingesetzt wird, um diese Änderung zu bewirken, sondern es sich um eine Eigenschaft des RTP Protokolls handelt.
 
-\begin{figure}[htbp]
+\begin{figure}[tbh]
 	\centering
 	\label{mitvadsiprtp}
 		\caption{Gegenüberstellung der SIP und RTP Traffics mit der VAD - Technik}
@@ -112,7 +112,7 @@ In der Abbildung \ref{mitvadsiprtp} wurden die SIP und RTP Protokolle dargestell
 Eine weitere Unterscheidung der Zonen wurde mit dem SIP "`Hold Call"' Ansatz versucht, bei dem in der öffentlichen Zone, mittels des SIP Protokolls der logische Anruf gehalten wird, aber auf RTP Ebene keine Übertragung der Pakete stattfindet.
 Dieser Ansatz kann sogar noch mehr Bandbreite in der öffentlichen Zone einsparen, da praktisch kein Datenaustausch stattfindet. Allerdings konnte er sich in der Praxis nicht bewähren, da beim Halten und Wiederaufnehmen des Gesprächs, die Sitzungsparameter wieder neu verhandelt werden, was zu einer spürbaren Verzögerung geführt hatte. Es ist vorstellbar, dass der SIP Anruf schon etwas früher wiederaufgenommen wird, um diese Verzögerung auszugleichen. 
 
-\begin{figure}[htbp]
+\begin{figure}[tbh]
 	\centering
 	\caption{Der Up- und Downstream mit der SIP HOLD - Technik}
 		\includegraphics[width=1.00\textwidth]{grafiken/mitholdupanddown.eps}
@@ -121,7 +121,7 @@ Dieser Ansatz kann sogar noch mehr Bandbreite in der öffentlichen Zone einsparen
 
 Beim Bandbreitenvergleich der SIP und RTP Protokolle sieht man diesmal, dass beim Übergang in die öffentliche Zone eine Signalisierung mittels SIP stattfindet. 
 
-\begin{figure}[htbp]
+\begin{figure}[tbh]
 	\centering
 	\caption{Gegenüberstellung des SIP und RTP Traffics mit der SIP HOLD - Technik}
 		\includegraphics[width=1.00\textwidth]{grafiken/mithold1.eps}
@@ -133,7 +133,7 @@ Die dritte Variante beinhaltete den Einsatz von 2 verschiedenen Codecs für die P
 
 Da erwartet wird, dass mehr Verbindungen in der Sozialen Zone als in der Privaten Zone aufgebaut werden, wird hier auch ein Codec mit einer niedrigeren Bitrate verwendet, um die eine größere Anzahl an Verbindungen zu ermöglichen. In der Öffentlichen Zone wurde wie bereits im oberen Beispiel die Silence Supression angewendet. Unter diesen Annahmen ergab sich die folgende Datenreihe \ref{mitvdaund2codes}, in der eindeutig zu sehen ist, dass der Bandbreitenverbrauch in der Sozialen Zone im Vergleich zur Privaten Zone reduziert wird und in der öffentlichen Zone sehr gering ausfällt.
 
-\begin{figure}[htbp]
+\begin{figure}[tbh]
 	\centering
 	\label{mitvdaund2codes}
 	\caption{Speex mit 32kHz in der Privaten Zone und Speex 8khZ in der Sozialen Zone}
@@ -143,7 +143,7 @@ Da erwartet wird, dass mehr Verbindungen in der Sozialen Zone als in der Private
 
 Im Vergleich \ref{mitvadundrtpsip} der beiden SIP und RTP Protokolle ist beim SIP Protokoll sowohl der Ruf -auf und -abbau zu erkennen als auch die Signalisierung eines anderen Sprachcodecs beim Übergang von der Privaten in die Soziale Zone. Beim RTP Protokoll ist die Übertragung des Audiostroms zu erkennen und die reduzierte Bitrate in der Sozialen und Öffentlichen Zone.
 
-\begin{figure}[htbp]
+\begin{figure}[tbh]
 	\centering
 	\caption{Rufauf und -abbau, sowie Signalisierung eines anderen Codecs mit SIP, Reduktion des Audiostroms mit RTP}
 	\label{mitvadundrtpsip}

@@ -51,7 +51,7 @@ In einer zentralisierten Lösung wird der Audiostrom von jedem der Teilnehmer an 
 
 Die Simulationen konnten zeigen, dass bei einem zentralisiertem Modell weder die Zunahme der der Avatardichte, noch deren Verteilung einen Einfluss auf den interaktiven Delay hatte. Dieser hängt bei einem zentralisierten System stark von dessen Standort ab und kann bei einem falsch positioniertem Server entsprechend schlecht ausfallen. Beide Parameter hatten auch keinen Einfluss auf die Netzwerklast auf dem Server, die einzig von der Gesamtspieleranzahl abhängig ist. Diese bildet auch den kritischen Punkt eines solchen Systems. Deswegen wurden zwei alternative Systeme vorgestellt, um die Last zu verteilen. 
 
-\begin{figure}[htbp]
+\begin{figure}[tbh]
 	\centering
 		\includegraphics[width=1.00\textwidth]{grafiken/entwurf-server.eps}
 	\caption{Client Server Architektur, mit zentralem Mischserver}
@@ -129,7 +129,7 @@ Aus den vorgestellten Komponeten wird ersichtlich, dass die Architektur der Spra
 %TODO DEDICATED CLIENT VS DEDICATED SERVER
 Geht man davon aus dass sowohl der Datenverkehr, als auch die Audioströme zwischen den Spielen entweder komplett zentral, verteilt oder komplett dezentral stattfinden können ergeben sich 9 mögliche Kombinationen die in Tabelle \ref{audiodatenmatrix} dargestellt wurden: 
 
-\begin{table}[htbp]
+\begin{table}[tbh]
 	\centering
 	\label{audiodatenmatrix}
 	\caption{Mögliche Kombinationen bei Unterscheidung zwischen Daten- und Audioströmen}	\begin{tabular}{p{0.2\textwidth}|p{0.2\textwidth}|p{0.2\textwidth}|p{0.2\textwidth}}		

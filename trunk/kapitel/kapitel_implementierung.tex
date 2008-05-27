@@ -129,7 +129,7 @@ Meine persönliche Wahl fiel aus den folgenden Gründen auf den offenen SIP Protok
 	\item Kontrolle jedes einzelnen Audiostroms (PJSUA-LIB)
 \end{itemize}
 
-\begin{figure}[htbp]
+\begin{figure}[tbh]
 	\centering
 		\includegraphics[width=0.70\textwidth]{grafiken/pjsip.eps}
 	\caption{Übersicht der Komponenten des PJSIP Protokollstacks}
@@ -163,7 +163,7 @@ Zu Beginn des Spieles werden die \textit{Irrlicht} und VoIP Instanzen initialisi
 
 \subsubsection{Level}
 %Todo bild vom Level
-\begin{figure}[htbp]
+\begin{figure}[tbh]
 	\centering
 		\includegraphics[width=1.00\textwidth]{grafiken/spielewelt-screenshot.eps}
 	\caption{Realistische 3D Spielewelt mit Radar}
@@ -241,7 +241,7 @@ Baut Teilnehmer jedoch noch keine Verbindung zum anderen Teilnehmer auf und ist 
 \subsubsection{Das Problem der doppelten Verbindung}
 Da Teilnehmer zwar zentral lokalisiert werden jedoch unabhängig von einer zentralen Instanz Verbindungen signalisieren können, kann der Fall auftreten, dass beide Teilnehmer zeitgleich eine Verbindung miteinander aufbauen wollen. Dieser Fall tritt immer dann auf, wenn beide Spieler im Spiel die erforderliche Nähe zueinander erreicht haben. Dann versucht sowohl Teilnehmer A eine Verbindung zu Teilnehmer B aufzubauen, als auch Teilnehmer B eine Verbindung zu Teilnehmer A aufzubauen. Dies entspricht dem Problem im Alltag, wenn zwei Personen sich versuchen zur exakt gleichen Zeit anzurufen und jeder nur ein Besetztzeichen hört. 
 
-\begin{figure}[htbp]
+\begin{figure}[tbh]
 	\centering
 	\caption{Ablauf einer symmetrischen Verbindung}
 		\includegraphics[width=0.60\textwidth]{grafiken/sipanruf_403.eps}
@@ -284,7 +284,7 @@ Diese Methode bietet die Möglichkeit, den Bandbreitenverbrauch in dieser Zone au
 \subsubsection{SIP - HOLD}
 Eine Reduzierung des Bandbreitenverbrauch wurde auch mit der SIP HOLD Funktionalität ausprobiert. Hierbei signalisiert das SIP Protokoll, dass der Anruf geparkt werden soll und die RTP Verbindung während des Hold Vorgangs beendet wird. Wird der Hold aufgehoben, wird die RTP Verbindung wieder neu etabliert. Die Messergebnisse\footnote{Siehe Kapitel 9} und eigene Erfahrungen haben gezeigt, dass zwar eine noch größere Einsparung der Bandbreite als bei der RTP Silence Supression stattfindet da praktisch keine Daten mehr übertragen werden. Der Nachteil jedoch besteht darin, dass beim Wiederaufnehmen des Anrufs eine spürbare Verzögerung auftritt, da die Verbindungsparameter des Gesprächs wieder neu verhandelt werden müssen.
 
-\begin{figure}[htbp]
+\begin{figure}[tbh]
 	\centering
 		\includegraphics[width=0.60\textwidth]{grafiken/siphold.eps}
 	\label{fig:siphold}
