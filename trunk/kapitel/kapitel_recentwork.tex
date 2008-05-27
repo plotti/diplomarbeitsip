@@ -1,5 +1,6 @@
 \chapter{Verwandte Arbeiten}
 
+Dieses Kapitel liefert eine Übersicht über bisherige akademische Ansätze Sprachkommunikation in Computerspielen umzusetzen. Die vorgestellten Ansätze unterscheiden sich Hauptsächlich darin, ob sie Signalisierung und das Abmischen des Audiosignals serverbasiert oder dezentralisiert stattfindet. 
 
 \section{Historische Ansätze}
 Erste Arbeiten, die sich mit Audio in Mehrspieler Computerspielen auseinander setzen, haben ihren Ursprung in den SPLINE \cite{carlsson93} und DIVER \cite{anderson95} Systemen. Diese sahen vor, dass sich Clients mit einem zentralen Server verbinden, um Spielerpositionen auszutauschen. Spieler erhielten zwar eine lokalisierte Audioszene entsprechend ihrer Position, konnten jedoch keine Sprachkommunikation untereinander aufbauen. 
@@ -23,7 +24,7 @@ Der Scene Creation Server wird dabei vom drunter liegenden Control Server verwal
 Das MICE System \cite{safei06b} von Safei und Boustead ist der Entwurf einer serverbasierten Sprachkommunikation für Mehrspieler Spiele, die auf mobilen Endgeräten zum Einsatz kommen. Die spezielle Herausforderung besteht darin, dass solche Geräte über eine geringe Bandbreite und Rechenleistung verfügen. Dabei ähnelt der Ansatz dem DICE System, da auch jeder Spieler seine Monoquelle an den Server sendet. Der Unterschied zum DICE System besteht darin, dass die Erzeugung der Audioszene komplett auf dem Server geschieht und nur das fertige Resultat als stereo Aduiostrom an den Client übertragen wird. 
 Dazu wird Mittels HRTF (Head Related Transfer Function) \cite{bergault94}, einer Technik die es erlaubt Klänge im dreidimensionalen Raum zu positionieren eine Audioszene erzeugt. Für das rechte und linke Ohr werden jeweils zwei verschiedene Signale erzeugt, aus deren Unterschied das menschliche Ohr die Quelle im Raum positionieren kann. Für die Berechnung der HRTF Funktion benötigt man die Richtungsvektoren aller Quellen. Ähnlich wie im DICE Ansatz schlagen Safei und Boustead vor ein Clustering vorzunehmen und für Spieler mit ähnlicher Position und Richtungsvektor einen Gesamtrichtungsvektor zu benutzen. Dadurch entsteht auch wie beim DICE System ein Distanz- und Winkelfehler der jedoch mit Hilfe eines linearen Optimierungsproblems unter einen expermimentell festgelegten Schwellwert minimiert wird. Dieser Schwellwert wird für Audioquellen niedriger gesetzt als für Quellen die weit entfernt sind da Untersuchungen gezeigt haben, dass in Abhängigkeit von der Entfernung ein verschieden großer Fehler von Probanten akzeptiert wird \cite{safei06} \cite{safei07}. 
 
-Dazu wurden die Erfahrungen von 27 Probanden Anhand des Standardisierten Mean Opition Score \cite{mtu96} analysiert und es wurde festgestellt, dass Unterschiede bis zu 35 $\circ$ Grad akzeptiert werden. In einer weiteren Studie schlagen Safaei und Downlatshahi vor die zentralisierte Server Architektur durch eine Anzahl an lokalen Proxies zu ersetzen, die selbst in einem Multicast Overlay verbunden sind \cite{safaei06}. 
+%Dazu wurden die Erfahrungen von 27 Probanden Anhand des Standardisierten Mean Opition Score \cite{mtu96} analysiert und es wurde festgestellt, dass Unterschiede bis zu 35 $\circ$ Grad akzeptiert werden. In einer weiteren Studie schlagen Safaei und Downlatshahi vor die zentralisierte Server Architektur durch eine Anzahl an lokalen Proxies zu ersetzen, die selbst in einem Multicast Overlay verbunden sind \cite{safaei06}. 
 
 \subsection{Session Initiation Protocol for Multiplayer Networked Games}
 
@@ -57,7 +58,7 @@ In \cite{schulzrinne03}, \cite{schulzrinne99} schlagen Schulzrinne et. Al ein ve
 \subsection{Distributed Partial Mixing}
 
 Radenkovic, Grennhalgh und Benford diskutieren  in \cite{radenkovic02} den Einsatz 
-eines DPM (Distributed Partial Mixing), das auf Basis des RTP und RTCP Protokolls und Multicast Gruppen funktioniert. Hier werden mehrere dedizierte Mixer eingesetzt, die nur solche Audiostroms abmischen, die tatsächlich auch vom Teilnehmer benutzt werden. Dies soll einerseits ermöglichen eine Vielzahl an Audioströmen zu verwalten und andererseits die Überlastung Netzwerks verhindern. 
+eines DPM (Distributed Partial Mixing), das auf Basis des RTP und RTCP Protokolls und Multicast Gruppen funktioniert. Hier werden mehrere dedizierte Mixer eingesetzt, die nur solche Audioströme abmischen, die tatsächlich auch vom Teilnehmer benutzt werden. Dies soll einerseits ermöglichen eine Vielzahl an Audioströmen zu verwalten und andererseits die Überlastung Netzwerks verhindern. 
 
 Der Ansatz sieht vor, dass die dedizierten Mixer zunächst die Audioströme der Clients entgegennehmen. Die Mixer selbst sind alle miteinander in einer Baumstruktur verbunden und in der Lage Audioströme untereinander weiterzuleiten. Je nach Konnektivität und Bandbreite der Mixer untereinander entscheiden diese, ob ein Zusammenmischen der Audioströme notwendig ist, oder alle Audioströme ungemischt weitergeleitet werden können. Da der Ansatz auf Multicast Gruppen basiert ist er zwar in LANs umsetzbar im Internet jedoch aufgrund der fehlenden Multicast Unterstützung nicht realisierbar. 
 
@@ -71,6 +72,6 @@ Der Hauptnachteil dieser Methode ist, dass jederzeit alle Knoten über die Topolo
 
 \subsection{SIP Konferenz Extension}
 
-In \cite{miladinovic-multiparty} diskutieren Stadler and Miladinovic sowohl den serverbasierten als auch eine dezentralen Einsatz von SIP für Konferenzen vor. Dazu führen sie einen SIP Nachrichtentyp CONF ein der vom Initiator der Konferenz an alle Teilnehmer der Konferenz verschickt wird und alle Namen und den Status aller Konferenzteilnehmer enthält. 
+In \cite{miladinovic-multiparty} diskutieren Stadler and Miladinovic sowohl einen serverbasierten als auch einen dezentralen Einsatz von SIP für Konferenzen. Dazu führen sie einen SIP Nachrichtentyp CONF ein der vom Initiator der Konferenz an alle Teilnehmer der Konferenz verschickt wird und alle Namen und den Status aller Konferenzteilnehmer enthält. 
 
 Im serverbasierten Ansatz werden die Audioströme auf einem Konferenzserver gemischt und an die Teilnehmer versendet, im dezentralen Ansatz wird zwischen den Teilnehmern eine full-mesh Topologie aufgebaut. Problematisch bei diesem Ansatz ist jedoch dass Clients nur Teilnehmer einer einzigen Konferenz sein können und ein nahtloser Wechsel zwischen Konferenzen nicht möglich ist. Zudem ist die Einführung eines neuen SIP Nachrichtentyps erforderlich.

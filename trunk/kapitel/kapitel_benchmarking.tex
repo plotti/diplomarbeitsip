@@ -14,9 +14,8 @@ Die Abbildung \ref{fullmeshszenario} verdeutlicht, wie im Full-Mesh Ansatz jeder
 
 \begin{figure}[tbh]
 	\centering
-	\caption{Audiverbindungen im Full-Mesh Ansatz}
-	\label{fullmeshszenario}
 		\includegraphics[width=.60\textwidth]{grafiken/fullmesh.eps}
+			\caption{Audioverbindungen im Full-Mesh Ansatz}
 	\label{fig:fullmesh}
 \end{figure}
 
@@ -39,6 +38,7 @@ Diese Technik führt dazu, dass im vorgestellten Szenario Spieler 1 zunächst zwei
 \begin{figure}[tbh]
 	\centering
 		\includegraphics[width=.70\textwidth]{grafiken/partialmesh.eps}
+	\caption{Ein Partial-Mesh der Audioverbindungen der Teilnehmer}
 	\label{fig:partialmesh}
 \end{figure}
 
@@ -47,6 +47,7 @@ Der  Bandbreitenverbrauch wurde auch hier aus Sicht des Teilnehmers 1 gemessen. 
 \begin{figure}[tbh]
 	\centering
 		\includegraphics[width=.70\textwidth]{grafiken/partialmeshchart.eps}
+	\caption{Bandbreiteneinsparungen beim Partial-Mesh, da nicht mehr alle Verbindungen aufgebaut werden müssen}
 	\label{fig:partialmeshchart}
 \end{figure}
 
@@ -56,6 +57,7 @@ Im Worst-Case Fall, befinden sich alle Avatare im gegenseitigen Hörradius, was d
 \begin{figure}[tbh]
 	\centering
 		\includegraphics[width=0.70\textwidth]{grafiken/fullmesh-worstcase.eps}
+	\caption{Partial-Mesh Worstcase Szenario gleicht dem Fullmesh Ansatz}
 	\label{fig:fullmesh-worstcase}
 \end{figure}
 
@@ -79,8 +81,8 @@ Beim Vergleich des RTP und SIP Protokolls in Abbildung \ref{ohnevadsiprtp} sieht
 \begin{figure}[tbh]
 	\centering
 	\label{ohnevadsiprtp}
-	\caption{Signalisierung mit SIP, Audiostrom mit RTP}
 		\includegraphics[width=1.00\textwidth]{grafiken/ohnevpn2.eps}
+		\caption{Signalisierung mit SIP, Audiostrom mit RTP}
 	\label{fig:NoVADupdown}
 \end{figure}
 
@@ -92,8 +94,8 @@ Hier wird in der Öffentlichen Zone eine Silence Supression durchgeführt. In der 
 \begin{figure}[tbh]
 	\centering
 	\label{mitvadupdown}
-	\caption{Der Up- und Downstream mit der VAD - Technik}
 		\includegraphics[width=1.00\textwidth]{grafiken/mitvadupdown.eps}
+		\caption{Der Up- und Downstream mit der VAD - Technik}
 	\label{fig:VADupdown}
 \end{figure}
 
@@ -101,9 +103,8 @@ In der Abbildung \ref{mitvadsiprtp} wurden die SIP und RTP Protokolle dargestell
 
 \begin{figure}[tbh]
 	\centering
-	\label{mitvadsiprtp}
-		\caption{Gegenüberstellung der SIP und RTP Traffics mit der VAD - Technik}
 		\includegraphics[width=1.00\textwidth]{grafiken/mitvadrtpsip.eps}
+		\caption{Gegenüberstellung der SIP und RTP Traffics mit der VAD - Technik}
 	\label{fig:VADRTPSIP}
 \end{figure}
 
@@ -114,8 +115,8 @@ Dieser Ansatz kann sogar noch mehr Bandbreite in der öffentlichen Zone einsparen
 
 \begin{figure}[tbh]
 	\centering
-	\caption{Der Up- und Downstream mit der SIP HOLD - Technik}
 		\includegraphics[width=1.00\textwidth]{grafiken/mitholdupanddown.eps}
+		\caption{Der Up- und Downstream mit der SIP HOLD - Technik}
 	\label{fig:mitholdupanddown}
 \end{figure}
 
@@ -136,18 +137,17 @@ Da erwartet wird, dass mehr Verbindungen in der Sozialen Zone als in der Private
 \begin{figure}[tbh]
 	\centering
 	\label{mitvdaund2codes}
-	\caption{Speex mit 32kHz in der Privaten Zone und Speex 8khZ in der Sozialen Zone}
 		\includegraphics[width=\textwidth]{grafiken/mitvadund2codecs.eps}
+		\caption{Speex mit 32kHz in der Privaten Zone und Speex 8khZ in der Sozialen Zone}
 	\label{fig:mitvadund2codecs}
 \end{figure}
 
-Im Vergleich \ref{mitvadundrtpsip} der beiden SIP und RTP Protokolle ist beim SIP Protokoll sowohl der Ruf -auf und -abbau zu erkennen als auch die Signalisierung eines anderen Sprachcodecs beim Übergang von der Privaten in die Soziale Zone. Beim RTP Protokoll ist die Übertragung des Audiostroms zu erkennen und die reduzierte Bitrate in der Sozialen und Öffentlichen Zone.
+Im Vergleich (siehe Abbildung \ref{fig:mitvadundrtpsip}) der beiden SIP und RTP Protokolle ist beim SIP Protokoll sowohl der Ruf -auf und -abbau zu erkennen als auch die Signalisierung eines anderen Sprachcodecs beim Übergang von der Privaten in die Soziale Zone. Beim RTP Protokoll ist die Übertragung des Audiostroms zu erkennen und die reduzierte Bitrate in der Sozialen und Öffentlichen Zone.
 
 \begin{figure}[tbh]
 	\centering
-	\caption{Rufauf und -abbau, sowie Signalisierung eines anderen Codecs mit SIP, Reduktion des Audiostroms mit RTP}
-	\label{mitvadundrtpsip}
 		\includegraphics[width=\textwidth]{grafiken/mitvadundrtpsip.eps}
+		\caption{Rufauf und -abbau, sowie Signalisierung eines anderen Codecs mit SIP, Reduktion des Audiostroms mit RTP}
 	\label{fig:mitvadundrtpsip}
 \end{figure}
 

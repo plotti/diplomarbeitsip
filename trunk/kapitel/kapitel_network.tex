@@ -203,16 +203,15 @@ Aus dem Namen des Teilnehmers eine \textit{Ressource ID}gebildet. In einer Nachr
 
 \begin{figure}[tbh]
 	\centering
-	\caption{Registrierung neuen Knotens bei Knoten C}
-	\label{p2psipregisterandjoin}
 		\includegraphics[width=1.00\textwidth]{grafiken/p2psipregisterandjoin.eps}
+	\caption{Registrierung neuen Knotens bei Knoten C}
 	\label{fig:p2psipregisterandjoin}
 \end{figure}
 
 \begin{figure}[tbh]
 	\centering
-	\caption{Registrierung des Benutzers}
 		\includegraphics[width=1.00\textwidth]{grafiken/p2psipregisterandjoin_user.eps}
+		\caption{Registrierung des Benutzers}
 	\label{fig:p2psipregisterandjoin_user}
 \end{figure}
 
@@ -224,6 +223,7 @@ Verlassen Knoten das Overlay so müssen sie ihre Information an andere Knoten wei
 \begin{figure}[tbh]
 	\centering
 		\includegraphics[width=1.00\textwidth]{grafiken/p2psipcall.eps}
+	\caption{Ein schematischer Ablauf eines Anrufs bei P2P SIP}
 	\label{fig:p2psipcall}
 \end{figure}
 
@@ -241,6 +241,7 @@ Der DHT kann auf eine dedizierte Server Farm limitiert werden. Für die Registrie
 \begin{figure}[tbh]
 	\centering
 		\includegraphics[width=0.60\textwidth]{grafiken/registrar-dediziert.eps}
+	\caption{Ein Registrar wurde auf dedizierte Server verteilt}
 	\label{fig:registrar-dediziert}
 \end{figure}
 
@@ -249,6 +250,7 @@ Eine andere Möglichkeit besteht darin, dass jeder Client auch als Server arbeite
 \begin{figure}[tbh]
 	\centering
 		\includegraphics[width=0.60\textwidth]{grafiken/registrar-client.eps}
+	\caption{Ein Registrar wird zwischen allen Teilnehmern verteilt}
 	\label{fig:registrar-client}
 \end{figure}
 
@@ -257,5 +259,6 @@ Im dritten Ansatz kann eine Mischung aus den zwei Ansätzen gewählt werden, in de
 \begin{figure}[tbh]
 	\centering
 		\includegraphics[width=0.60\textwidth]{grafiken/registrar-supernode.eps}
+	\caption{Ein Registrar wird nur zwischen Teilnehmern mit hoher Kapazität  (Bandbreite, CPU, Speicher) verteilt}
 	\label{fig:registrar-supernode}
 \end{figure}
