@@ -215,6 +215,7 @@ Indem das STUN Protokoll eingesetzt wird, ist eine Teilnahme am Spiel von Spiele
 \begin{figure}
 	\centering
 		\includegraphics[width=0.3\textwidth]{grafiken/gamestart-screenshot.eps}
+		\caption{Startbildschirm des Spiels}
 \end{figure}
 
 \subsection{Spieler startet das Spiel}
@@ -243,8 +244,8 @@ Da Teilnehmer zwar zentral lokalisiert werden jedoch unabhängig von einer zentra
 
 \begin{figure}[tbh]
 	\centering
-	\caption{Ablauf einer symmetrischen Verbindung}
 		\includegraphics[width=0.60\textwidth]{grafiken/sipanruf_403.eps}
+		\caption{Ablauf einer symmetrischen Verbindung}
 	\label{fig:sipanruf_403}
 \end{figure}
 
@@ -258,6 +259,7 @@ Es ist also wichtig, dass eine gemeinsame Regel für alle Teilnehmer existiert na
 Der Verbindungsabbau findet wie gewohnt statt: Befindet sich Teilnehmer B nicht mehr in Verbindungsreichweite zu Teilnehmer A so beenden beide die Verbindung zueinander. Dazu senden sie eine BYE Nachricht an den anderen Teilnehmer, die mit einer ACK Nachricht bestätigt wird. 
 
 \section{Zonen}
+\label{Zonen-Implementierung}
 Die Umgebung des Spielers wurde wie gefordert in drei Zonen unterteilt. 
 
 \subsection{öffentliche Zone}
@@ -287,6 +289,7 @@ Eine Reduzierung des Bandbreitenverbrauch wurde auch mit der SIP HOLD Funktional
 \begin{figure}[tbh]
 	\centering
 		\includegraphics[width=0.60\textwidth]{grafiken/siphold.eps}
+	\caption{Schematischer Ablauf des SIP-HOLD Nachrichtenverlaufs}
 	\label{fig:siphold}
 \end{figure}
 

@@ -1,4 +1,4 @@
-\begin{thebibliography}{83}
+\begin{thebibliography}{84}
 % this bibliography was produced with the style dinat.bst v2.5
 \makeatletter
 \newcommand{\dinatlabel}[1]%
@@ -553,6 +553,16 @@ dy\_2007}
   Network and operating systems support for digital audio and video}.
 \newblock New York, NY, USA~: ACM, 2005, S.~63--68. --
 \newblock ISBN 1-58113-987-X
+
+\bibitem[Schulzrinne u.\,a.(2002)Schulzrinne, Wu und
+  Koskelainen]{schulzrinne02}
+\dinatlabel{Schulzrinne u.\,a. 2002} \textsc{Schulzrinne}, Henning~;
+  \textsc{Wu}, Xiaotao~; \textsc{Koskelainen}, Petri:
+\newblock A SIP-based conference control framework.
+\newblock In: \emph{NOSSDAV '02: Proceedings of the 12th international workshop
+  on Network and operating systems support for digital audio and video}.
+\newblock New York, NY, USA~: ACM, 2002, S.~53--61. --
+\newblock ISBN 1-58113-512-2
 
 \bibitem[Shannon und Weaver(1963)]{shannon48}
 \dinatlabel{Shannon und Weaver 1963} \textsc{Shannon}, Claude~E.~;

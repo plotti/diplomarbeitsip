@@ -5,7 +5,7 @@ Version=2
 [SessionInfo]
 ActiveTab=0
 FrameCount=20
-ActiveFrame=11
+ActiveFrame=10
 
 [Frame0]
 Columns=1
@@ -15,7 +15,7 @@ ShowCmd=1
 MinPos.x=-1
 MinPos.y=-1
 MaxPos.x=-4
-MaxPos.y=-26
+MaxPos.y=-30
 NormalPos.left=0
 NormalPos.top=0
 NormalPos.right=748
@@ -32,9 +32,9 @@ cxCur=719
 cxMin=10
 
 [Frame0_View0,0]
-Cursor.row=19
-Cursor.column=11
-TopSubLine=0
+Cursor.row=71
+Cursor.column=18
+TopSubLine=56
 
 [Frame1]
 Columns=1
@@ -44,7 +44,7 @@ ShowCmd=1
 MinPos.x=-1
 MinPos.y=-1
 MaxPos.x=-4
-MaxPos.y=-26
+MaxPos.y=-30
 NormalPos.left=110
 NormalPos.top=145
 NormalPos.right=890
@@ -61,9 +61,9 @@ cxCur=751
 cxMin=10
 
 [Frame1_View0,0]
-Cursor.row=29
-Cursor.column=96
-TopSubLine=110
+Cursor.row=76
+Cursor.column=449
+TopSubLine=239
 
 [Frame2]
 Columns=1
@@ -73,7 +73,7 @@ ShowCmd=1
 MinPos.x=-1
 MinPos.y=-1
 MaxPos.x=-4
-MaxPos.y=-26
+MaxPos.y=-30
 NormalPos.left=132
 NormalPos.top=174
 NormalPos.right=912
@@ -90,9 +90,9 @@ cxCur=751
 cxMin=10
 
 [Frame2_View0,0]
-Cursor.row=2
-Cursor.column=335
-TopSubLine=0
+Cursor.row=214
+Cursor.column=0
+TopSubLine=560
 
 [Frame3]
 Columns=1
@@ -102,7 +102,7 @@ ShowCmd=1
 MinPos.x=-1
 MinPos.y=-1
 MaxPos.x=-4
-MaxPos.y=-26
+MaxPos.y=-30
 NormalPos.left=0
 NormalPos.top=0
 NormalPos.right=780
@@ -119,9 +119,9 @@ cxCur=751
 cxMin=10
 
 [Frame3_View0,0]
-Cursor.row=80
+Cursor.row=94
 Cursor.column=0
-TopSubLine=208
+TopSubLine=232
 
 [Frame4]
 Columns=1
@@ -131,7 +131,7 @@ ShowCmd=1
 MinPos.x=-1
 MinPos.y=-1
 MaxPos.x=-4
-MaxPos.y=-26
+MaxPos.y=-30
 NormalPos.left=44
 NormalPos.top=58
 NormalPos.right=824
@@ -160,7 +160,7 @@ ShowCmd=1
 MinPos.x=-1
 MinPos.y=-1
 MaxPos.x=-4
-MaxPos.y=-26
+MaxPos.y=-30
 NormalPos.left=66
 NormalPos.top=87
 NormalPos.right=846
@@ -177,9 +177,9 @@ cxCur=751
 cxMin=10
 
 [Frame5_View0,0]
-Cursor.row=199
-Cursor.column=16
-TopSubLine=577
+Cursor.row=45
+Cursor.column=0
+TopSubLine=68
 
 [Frame6]
 Columns=1
@@ -235,9 +235,9 @@ cxCur=751
 cxMin=10
 
 [Frame7_View0,0]
-Cursor.row=14
-Cursor.column=435
-TopSubLine=26
+Cursor.row=0
+Cursor.column=0
+TopSubLine=0
 
 [Frame8]
 Columns=1
@@ -293,15 +293,15 @@ cxCur=801
 cxMin=10
 
 [Frame9_View0,0]
-Cursor.row=1
-Cursor.column=2
+Cursor.row=0
+Cursor.column=0
 TopSubLine=0
 
 [Frame10]
 Columns=1
 Rows=1
-Flags=0
-ShowCmd=1
+Flags=2
+ShowCmd=3
 MinPos.x=-1
 MinPos.y=-1
 MaxPos.x=-4
@@ -314,23 +314,23 @@ Class=CLatexEdit
 Document=kapitel\kapitel_konstruktion.tex
 
 [Frame10_Row0]
-cyCur=346
+cyCur=378
 cyMin=10
 
 [Frame10_Col0]
-cxCur=801
+cxCur=932
 cxMin=10
 
 [Frame10_View0,0]
-Cursor.row=216
-Cursor.column=192
-TopSubLine=544
+Cursor.row=171
+Cursor.column=347
+TopSubLine=373
 
 [Frame11]
 Columns=1
 Rows=1
-Flags=2
-ShowCmd=3
+Flags=0
+ShowCmd=1
 MinPos.x=-1
 MinPos.y=-1
 MaxPos.x=-4
@@ -343,17 +343,17 @@ Class=CLatexEdit
 Document=kapitel\kapitel_sip.tex
 
 [Frame11_Row0]
-cyCur=607
+cyCur=346
 cyMin=10
 
 [Frame11_Col0]
-cxCur=909
+cxCur=787
 cxMin=10
 
 [Frame11_View0,0]
-Cursor.row=429
-Cursor.column=0
-TopSubLine=766
+Cursor.row=26
+Cursor.column=1
+TopSubLine=72
 
 [Frame12]
 Columns=1
@@ -409,9 +409,9 @@ cxCur=762
 cxMin=10
 
 [Frame13_View0,0]
-Cursor.row=22
-Cursor.column=100
-TopSubLine=78
+Cursor.row=6
+Cursor.column=0
+TopSubLine=4
 
 [Frame14]
 Columns=1
@@ -467,9 +467,9 @@ cxCur=1000
 cxMin=10
 
 [Frame15_View0,0]
-Cursor.row=0
-Cursor.column=0
-TopSubLine=0
+Cursor.row=213
+Cursor.column=39
+TopSubLine=495
 
 [Frame16]
 Columns=1
@@ -496,9 +496,9 @@ cxCur=1000
 cxMin=10
 
 [Frame16_View0,0]
-Cursor.row=18
-Cursor.column=28
-TopSubLine=10
+Cursor.row=7
+Cursor.column=0
+TopSubLine=7
 
 [Frame17]
 Columns=1
@@ -525,9 +525,9 @@ cxCur=746
 cxMin=10
 
 [Frame17_View0,0]
-Cursor.row=22
-Cursor.column=330
-TopSubLine=44
+Cursor.row=136
+Cursor.column=0
+TopSubLine=222
 
 [Frame18]
 Columns=1

@@ -13,7 +13,7 @@ Für die Signalisierung werden das Session Description Protocol (SDP)\cite{sdp98}
 
 Für die Sprachübertragung wird das Echtzeit Transport Protokoll (Realtime Transport Protocol (RTP)) \cite{rtp96} ver\-wen\-det, das dem Empfänger der Pakete erlaubt, trotz unzuverlässiger Übertragung über UDP \cite{udp80}, einen Paketverlust festzustellen und die ursprüngliche Reihenfolge der Daten wiederherzustellen. RTP ist nicht nur für Sprache, sondern auch für alle anderen Echtzeitmedien, wie Video verwendbar. Da RTP keine Kontrollinformationen versendet, kann der Empfänger dem Sender nicht mitteilen, ob überhaupt bzw. wie die Sprache in Form von IP-Paketen bei ihm ankommt. Das RTP Control Protocol (RTCP) \cite{rtcp03} gleicht diesen Nachteil aus: Mit Hilfe von RTCP können zusätzlich zu den reinen Mediendaten auch Kontrollinformationen, wie die Anzahl der verlorenen Pakete oder der gemessene Jitter der RTP-Verbindung übertragen werden und so Übertragungsparameter angepasst werden. 
 
-\begin{figure}
+\begin{figure}[tbh]
 	\centering
 		\includegraphics[width=.60\textwidth]{grafiken/voipprotokolle.eps}
 	\caption{Eine Übersicht über die VoIP Protokollfamilie}
@@ -35,7 +35,7 @@ Im SIP-Protokoll wird dieses Problem von Komponenten (\textit{Proxys}), die die 
 
 
 \subsection{Einflussfaktoren auf die VoIP-Qualität}
-Die wichtigsten QoS-Anforderungen, die VoIP an IP-Netze stellt, betreffen:
+Die wichtigsten \textit{Quality-of-Service}-Anforderungen, die VoIP an IP-Netze stellt, betreffen:
 \begin{itemize}
 	\item die Bandbreite von virtuellen Verbindungen zwischen IP-Telefonen,
 	\item die Ende-zu-Ende-Verzögerung des Sprachsignals (Delay),
@@ -147,8 +147,7 @@ Die SIP-Nachrichten werden textbasiert aufgebaut. Jede Nachricht setzt sich aus 
 Sowohl \textit{SIP-Responses}, als auch \textit{SIP-Requests} sind ähnlich aufgebaut und haben die folgende Struktur:
 
 % Bild vom SIP Message
-\begin{figure}
-\caption{Beispiel eines typischen SIP-Requests}
+\begin{figure}[tbh]
 \lstset{frame=single}
 	\begin{lstlisting}[label={SIP-Message}]
 INVITE sip:8495302002@192.168.2.25 SIP/2.0
@@ -163,6 +162,7 @@ Content-Length: 202
 Supported: 100rel
 Content-Type: application/sdp
 \end{lstlisting}
+\caption{Beispiel eines typischen SIP-Requests}
 \end{figure}
 
 Die Start-Zeile (\textit{Status-Line}) besteht bei den Requests aus einer Angabe des Request-Typs z.B. INVITE, einer \textit{Request-URI}(z.B. sip:8495302002@192.168.2.25) als Ziel-Adresse und der SIP-Version. Bei einem Response enthält die \textit{Status-Line} die SIP-Version und einen \textit{Status-Code} der den Typ der Nachricht definiert. Beide Typen von Nachrichten enthalten mehrere Header-Felder, von den folgende besonders hervorzuheben sind:
@@ -245,16 +245,18 @@ SIP definiert eine spezielle Komponente, die als Registrar bezeichnet wird. Ein 
 
 Dadurch, dass ein Teilnehmer mobil sein kann und verschiedene Clients benutzen kann, können ihm auch verschiedene Lokationen zugeordnet werden und so kann er seine aktuelle Lokation beim Registrar anmelden. Hierfür wird die Request Nachricht REGISTER verwendet. Mit dieser Nachricht kann jeder Teilnehmer die Umleitung der bei ihm ankommenden Anrufe selbst veranlassen. 
 
-Möchte ein Teilnehmer mit der SIP Adresse \textit{sip:thomasp@uni-mannheim.de} in seiner Heimat-Domain \textit{uni-mannheim.de} Anrufe entgegennehmen, so wird an den Registrar, z.B. \textit{registrar.uni-mannheim.de}, mit der Request Nachricht REGISTER, dieser Wunsch mitgeteilt. Relevante Felder der Nachricht enthalten die Herkunft (From), die Lokation des Benutzers(Contact) und die Gültigkeit der Nachricht(Expires). Wechselt der Benutzer vor Ablauf der Expire Zeit seine Lokation, so wird der Registrar mit einer weiteren Nachricht darüber aktualisiert. Der Registrar bestätigt den Empfang der Nachrichten jeweils mit einer ACK Nachricht. Ebenso ist eine Registrierung über eine andere Person möglich, so kann z.B. die Sekretärin die aktuelle Lokation ihres Chefs aktualisieren. 
+Möchte ein Teilnehmer mit der SIP Adresse \textit{sip:bob@uni-mannheim.de} in seiner Heimat-Domain \textit{uni-mannheim.de} Anrufe entgegennehmen, so wird an den Registrar, z.B. \textit{registrar.uni-mannheim.de}, mit der Request Nachricht REGISTER, dieser Wunsch mitgeteilt. Relevante Felder der Nachricht enthalten die Herkunft (From), die Lokation des Benutzers(Contact) und die Gültigkeit der Nachricht(Expires). Wechselt der Benutzer vor Ablauf der Expire Zeit seine Lokation, so wird der Registrar mit einer weiteren Nachricht darüber aktualisiert. Der Registrar bestätigt den Empfang der Nachrichten jeweils mit einer ACK Nachricht. Ebenso ist eine Registrierung über eine andere Person möglich, so kann z.B. die Sekretärin die aktuelle Lokation ihres Chefs aktualisieren. 
 
 \subsection{Instant Messaging zwischen Teilnehmern}
 
-Als Instant Messaging wird im allgemeinen ein Dienst zur sofortigen Übermittlung von Nachrichten zwischen Teilnehmern eines Netzwerks verstanden. Es existieren viele proprietäre Protokolle wie IRC, XMPP, SLC, OSCAR. Auch bei SIP wurde in den RFCs 3860,3428 und 3265 ein Protokoll für das Instant Messaging definiert: SIMPLE (SIP for Instant Messaging and Presence). Eine SIP MESSAGE Transaktion kann sowohl über einen PROXY laufen als auch direkt zwischen den UACs stattfinden. Möchte Teilnehmer A eine Nachricht an Teilnehmer B verschicken, so wird diese mittels der MESSAGE Nachricht versendet und vom Empfänger mit einer ACK Nachricht bestätigt. Die wichtigsten Felder der MESSAGE Nachricht sind das Empfänger Feld(To), der Typ des Inhalts(Content-Type), dessen Länge(Content-Length) und der Inhalt selbst(Body). 
+Als Instant Messaging wird im allgemeinen ein Dienst zur sofortigen Übermittlung von Nachrichten zwischen Teilnehmern eines Netzwerks verstanden. Es existieren viele proprietäre Protokolle wie IRC(Internet Relay Chat), XMPP(Extensible Messaging and Presence Protocol) und OSCAR(Open System for CommunicAtion in Realtime). Auch bei SIP wurde in den RFCs 3860, 3428 und 3265 ein Protokoll für das Instant Messaging definiert: SIMPLE (SIP for Instant Messaging and Presence). 
+
+Eine SIP MESSAGE Transaktion kann sowohl über einen PROXY laufen als auch direkt zwischen den UACs stattfinden. Möchte Teilnehmer A eine Nachricht an Teilnehmer B verschicken, so wird diese mittels der MESSAGE Nachricht versendet und vom Empfänger mit einer ACK Nachricht bestätigt. Die wichtigsten Felder der MESSAGE Nachricht sind das Empfänger Feld(To), der Typ des Inhalts(Content-Type), dessen Länge(Content-Length) und der Inhalt selbst(Body). 
 
 \begin{figure}
-\caption{Teilnehmer A schickt Teilnehmer B eine Nachricht. Beide sind Teil der gleichen Domäne und benutzen den gleichen Proxy.}
 	\centering
 		\includegraphics[width=1.00\textwidth]{grafiken/sipmessage.eps}
+	\caption{Teilnehmer A schickt Teilnehmer B eine Nachricht. Beide sind Teil der gleichen Domäne und benutzen den gleichen Proxy.}
 	\label{fig:sipmessage}
 \end{figure}
 
@@ -265,11 +267,11 @@ Der Grundlegende Unterschied zum SIP Protokoll beruht darauf, dass hier kein sep
 
 % Grafik über Publish Subscribe
 
-Die SIP Präsenzfunktion dient zur Anzeige des Präsenzstatus anderer Teilnehmer. Die Verwendung eines Präsenzstatus ist in vielen Instant Messaging Anwendungen weit verbreitet und in verschiedenen Protokolle etabliert IMPS, XMPP. SIP besitzt eine eigene Erweiterung für Ereignisse, die in den RFCs 3265 und 3903 definiert wurde. Diese beinhaltet die Nachrichtentypen PUBLISH, SUBSCRIBE und NOTIFY. 
+Die SIP Präsenzfunktion dient zur Anzeige des Präsenzstatus anderer Teilnehmer. Die Verwendung eines Präsenzstatus ist in vielen Instant Messaging Anwendungen weit verbreitet und in verschiedenen Protokollen wie IMPS, XMPP etabliert. SIP besitzt eine eigene Erweiterung für Ereignisse, die in den RFCs 3265 und 3903 definiert wurde. Diese beinhaltet die Nachrichtentypen PUBLISH, SUBSCRIBE und NOTIFY. 
 
-Möchte ein Teilnehmer ein Ereignis wie z.B. seine Statusänderung veröffentlichen, so schickt er eine PUBLISH Nachricht an den Presence-Server, der üblicherweise Teil eines Proxys ist. Dabei enthält die Nachricht den Event Typ im Header, die relevanten PUBLISH Informationen im XML Format im Body Feld. Grundsätzlich sind beliebige Formate nutzbar, wobei ein Standard speziell für die Präsenz\-information PIDF (Presence Information Data Format) existiert. Ein solches PIDF Tupel kann Beispielsweise den Namen des Teilnehmers, seinen Status und eine NTP Zeit enthalten. 
+Will ein Teilnehmer ein Ereignis wie z.B. seine Statusänderung veröffentlichen, so schickt er eine PUBLISH Nachricht an den Presence-Server, der üblicherweise Teil eines Proxys ist. Dabei enthält die Nachricht den Event Typ im Header, die relevanten PUBLISH Informationen im XML Format im Body Feld. Grundsätzlich sind beliebige Formate nutzbar, wobei ein Standard speziell für die Präsenz\-information PIDF (Presence Information Data Format) existiert. Ein solches PIDF Tupel kann Beispielsweise den Namen des Teilnehmers, seinen Status und eine NTP Zeit enthalten. 
 
-Möchte ein Teilnehmer die Ereignisse eines bestimmten Typs abonnieren z.B. der Präsenz bestimmter Teilnehmer, so versendet er an den Presence-Server eine SUBSCRIBE Nachricht. Die Länge des Dialogs wird durch das Laufzeit-Feld deklariert (Expires). Möchte der Teilnehmer sein Abonne\-ment vorzeitig kündigen, so kann er eine SUBSCRIBE Nachricht mit der Laufzeit 0s verschicken. Der Erhalt einer solchen Nachricht führt dazu, dass ein Dialog zwischen Presence Server und dem Teilnehmer eingeleitet wird. Eine NOTIFY Transaktion informiert nun den Abonnenten über seine abonnierten Ereignisse wie z.B. den Präsenzstatus eines Teilnehmers. 
+ Um z.B. die Präsenz bestimmter Teilnehmer zu abonnieren versendet der Benutzer eine SUBSCRIBE Nachricht an den Presence-Server. Die Länge des Dialogs wird durch das Laufzeit-Feld deklariert (Expires). Soll ein Abonne\-ment vorzeitig gekündigt werden, so eine SUBSCRIBE Nachricht mit der Laufzeit 0s verschickt werden. Der Erhalt einer solchen Nachricht führt dazu, dass ein Dialog zwischen Presence Server und dem Teilnehmer eingeleitet wird. Eine NOTIFY Transaktion informiert nun den Abonnenten über seine abonnierten Ereignisse wie z.B. den Präsenzstatus eines Teilnehmers. 
 
 \begin{figure}[tbh]
 	\centering
@@ -289,7 +291,6 @@ SDP ist ein textbasiertes Format, in dem die Eigenschaft und der Wert in Textfor
 % Bild der SDP message
 % Bild vom SIP Message
 \begin{figure}
-\caption{Beispiel einer SDP Nachricht}
 \lstset{frame=single}
 	\begin{lstlisting}[label={SIP-Message}]
 v=0
@@ -301,21 +302,22 @@ a=rtpmap:8 PCMA/8000
 a=rtpmap:3 GSM/8000
 a=rtpmap:0 PCMU/8000
 \end{lstlisting}
+\caption{Beispiel einer SDP Nachricht}
 \end{figure}
 
 
 Die Beschreibung der RTP-Session wird mit den folgenden Parametern definiert:
 \begin{itemize}
-	\item v: Die Zeile gibt die verwendete RTP Version an.
-	\item o: Die Zeile enthält den Initiator der Nachricht an:
+	\item v: Gibt die verwendete RTP Version an.
+	\item o: Enthält den Initiator der Nachricht an:
 	\subitem $\left\langle username \right\rangle$: den Namen des Initiators der Session
 	\subitem $\left\langle session id \right\rangle$: die Identifikation der Session, meistens der NTP-Stempel.
 	\subitem $\left\langle network type \right\rangle$: der Netztyp
 	\subitem $\left\langle address type \right\rangle$: der Typ der Quell-IP-Adresse
 	\subitem $\left\langle adress \right\rangle$: die Quell-IP-Adresse
-	\item s: Die Zeile gibt eine genauere Bezeichnung der Session an z.B. den Namen
-	\item t: Die Zeile gibt die Start und Endzeit der Session an. 
-	\item m: In der Media Zeile wird angegeben:
+	\item s: Gibt eine genauere Bezeichnung der Session an z.B. den Namen
+	\item t: Bestimmt die Start und Endzeit der Session. 
+	\item m: In der Media Zeile werden folgende Parameter angegeben:
 	\subitem $\left\langle media \right\rangle$: Hier wird die Medienart (z.B. Audio) definiert.
 	\subitem $\left\langle port \right\rangle$: Die Portnummer über den das Medium empfangen wird.
 	\subitem $\left\langle transport \right\rangle$: Das verwendete Transportprotokoll
@@ -396,12 +398,12 @@ In einem Receiver Report sind unter anderem folgende Informationen enthalten:
 	\item Letzter Report: Die verstrichene Zeit seit dem Empfang des letzten Reports.
 \end{enumerate}
 
-Die SDES Pakete ermöglichen es, die Quellen mit Namen zu kennzeichnen. Diese Kennzeichnung wird vom Empfänger dazu verwendet mehrere Bitströme einer Quelle, die in getrennten RTP-Sessions übertragen werden, wieder zusammenzuführen. Das BYE Paket dient dazu das Ende der Teilnahme an einer Kommunikation anzuzeigen. 
+Die SDES Pakete ermöglichen es, die Quellen mit Namen zu kennzeichnen. Diese Kennzeichnung wird vom Empfänger dazu verwendet, mehrere Bitströme einer Quelle, die in getrennten RTP-Sessions übertragen werden, wieder zusammenzuführen. Das BYE Paket dient dazu das Ende der Teilnahme an einer Kommunikation anzuzeigen. 
 
 \subsection{Silence Supression}
 Teilnehmer einer Audio Verbindung müssen nicht unbedingt Audiopakete über den RTP Strom senden, falls gerade bei den Teilnehmern Stille herrscht. Diese Funktion wurde im RFC 3389 spezifiziert.
 
-Die Möglichkeit den RTP Paketversand während Stilleperioden zu unterbrechen wird als Stille Unterdrückung (\textit{Silence Suppression}) oder Stimm-Aktivitäts-Erkennung(\textit{Voice Activity Detection}) bezeichnet. Silcence Suppression kann vom Empfänger erkannt werden, wenn der RTP Zeitstempel nicht mit dem Intervall übereinstimmt, das vom letzten Paket abgedeckt wurde, obwohl die RTP Sequenznummer sich nur um 1 erhöht hat. Ob Silence Suppression eingesetzt wird, hängt normalerweise von der Konfiguration der beiden Endpunkte ab.
+Die Möglichkeit, den RTP Paketversand während Stilleperioden zu unterbrechen wird als Stille Unterdrückung (\textit{Silence Suppression}) oder Stimm-Aktivitäts-Erkennung(\textit{Voice Activity Detection}) bezeichnet. Silcence Suppression kann vom Empfänger erkannt werden, wenn der RTP Zeitstempel nicht mit dem Intervall übereinstimmt, das vom letzten Paket abgedeckt wurde, obwohl die RTP Sequenznummer sich nur um 1 erhöht hat. Ob Silence Suppression eingesetzt wird, hängt normalerweise von der Konfiguration der beiden Endpunkte ab.
 
 \section{NAT Traversal} 
 Unter NAT Traversal versteht man das Erkennen und Durchdringen von Firewalls und NAT-Routern. Hier gibt es mehrere Ansätze wie TURN (Traversal Using Relay NAT) \cite{turn08}, ICE (Interactive Connectivity Establishment) \cite{ice08} und STUN (Simple Traversal of User Datagram Protocol Through Network Adress Translators) \cite{stun03}. 

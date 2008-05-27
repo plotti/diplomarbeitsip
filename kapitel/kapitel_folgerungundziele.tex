@@ -30,9 +30,9 @@ wird. Diese Beobachtung stützt sich auf dem vorgestellten Kommunikationsmodell v
 
 \begin{figure}[tbh]
 	\centering
-	\caption{Ein einziger Kanal bündelt alle übertragenen Signale und führt so zu Adressierungsproblemen}
-		\label{fig:einkanalsystem}	\includegraphics[width=1.00\textwidth]{grafiken/singlekanal-kommunikationsmodell.eps}
-	\label{fig:singlekanal-kommunikationsmodell}
+	\includegraphics[width=1.00\textwidth]{grafiken/singlekanal-kommunikationsmodell.eps}
+		\caption{Ein einziger Kanal bündelt alle übertragenen Signale und führt so zu Adressierungsproblemen}
+		\label{fig:einkanalsystem}
 \end{figure}
 
 Ein Großteil der Störungen resultiert aus der Untauglichkeit eines einzigen Über\-tragungs\-kanals mehrere gleichzeitige Audioströme zu transportieren. Dies führt zu folgenden Hauptproblemen:
@@ -51,21 +51,20 @@ Ein Großteil der Störungen resultiert aus der Untauglichkeit eines einzigen Über
 		
 \end{itemize}
 \begin{figure}[tbh]
-	\caption{Einsatz von jeweils direkten Kommunikationskanälen zwischen Teilnehmern}
-		\label{fig:mehrkanalsystem}
 	\centering
 		\includegraphics[width=1.00\textwidth]{grafiken/multi-kommunikationsmodell.eps}
-	\label{fig:multi-kommunikationsmodell}
+	\caption{Einsatz von jeweils direkten Kommunikationskanälen zwischen Teilnehmern}
+	\label{fig:mehrkanalsystem}
 \end{figure}
 
 Das Einkanalsystem hat aber auch einige Vorteile:
 \begin{itemize}
-	\item Linear ansteigender Bandbreitenverbrauch: Da der Audiostrom zentral gemischt wird, muss der Server der der den Kanal betreibt, bei N Teilnehmern genau N Ströme engegennehmen und N Audioströme verschicken.
-	\item Einfache Kanaladministration: Existiert nur ein einziger Kanal ist seine Administration denkbar einfach. Alle Spieler die den Kanal betreten erhalten die Summe aller Signale und versenden auch ihr eigenes Signal an den Kanal.
+	\item Linear ansteigender Bandbreitenverbrauch: Da der Audiostrom zentral gemischt wird, muss der Server der der den Kanal betreibt, bei N Teilnehmern genau N Ströme engegennehmen und N Audioströme verschicken. Dieses Verhalten wird genauer in Kapitel \ref{Architektur-Entwurf} behandelt.
+	\item Einfache Kanaladministration: Existiert nur ein einziger Kanal ist seine Administration denkbar einfach. Alle Spieler die den Kanal betreten erhalten die Summe aller Signale und versenden auch ihr eigenes Signal an den Kanal. 
 	\item 
 \end{itemize}
 
-Wird ein einziger Kanal durch mehrere parallele direkte Kanäle zwischen den Teilnehmern ersetzt (siehe Abbildung \ref{fig:mehrkanalsystem}), so können viele der genannten Probleme gelöst werden, indem jeder Spieler eine bessere Kontrolle über das Medium erhält. Er kann dann für jede Audioquelle selbst entscheiden, wie er mit ihr verfahren will. Es resultieren auch einige Nachteile aus der verwendung von mehreren Kanälen, die nicht unerwähnt bleiben sollen.
+Wird ein einziger Kanal durch mehrere parallele direkte Kanäle zwischen den Teilnehmern ersetzt (siehe Abbildung \ref{fig:mehrkanalsystem}), so können viele der genannten Probleme gelöst werden, indem jeder Spieler eine bessere Kontrolle über das Medium erhält. Er kann dann für jede Audioquelle selbst entscheiden, wie er mit ihr verfahren will. 
 
 \begin{itemize}
 	\item  Wird zwischen jedem Spielerpaar jeweils ein Kanal genutzt, können keine Interferenzen durch Überlagerungen von Audioquellen auftreten.
@@ -77,36 +76,42 @@ Wird ein einziger Kanal durch mehrere parallele direkte Kanäle zwischen den Teil
 
 In diesem Modell kann auch das Feedback entsprechend dem Modell von Schramm \cite{schramm54} gezielt erfolgen, indem es immer nur an die entsprechende Person erfolgt und nicht mehr an alle Teilnehmer des Spiels.
  
+Es resultieren auch einige, vor allem technische Nachteile aus der Verwendung von mehreren Kanälen, die hier nicht unerwähnt bleiben sollen, jedoch erst in Kapitel \ref{Architektur-Entwurf} detailliert behandelt werden.
+
+\begin{itemize}
+	\item Kanaladministration: Da für jede Audioverbindung ein separater Kanal benutzt wird, muss auf Clientseite eine ausgefeilte Steuerung dafür sorgen, dass der Spieler mit den richtigen Kanälen verbunden wird. Mit genau diesem Problem befasst sich das Unterkapitel \ref{proxemikalssteuerungvonkonferenzen}.	
+	\item Quadratisch ansteigender Bandbreitenverbrauch: Da der Audiostrom von jedem Teilnehmer lokal gemischt wird, muss auch jeder Teilnehmer alle anderen Audioströme empfangen und seinen Audiostrom an alle Teilnehmer verschicken. Dieses Problem wird ausführlich in Kapitel  
+\end{itemize}
+ 
 \section{Gleichzeitige interpersonelle- und Massenkommunikation}
 
 Die fehlende Unterscheidung in eine interpersonelle- und Massenkommunikation resultiert auch aus der Benutzung eines einzigen Kanals für alle Teilnehmer. 
 Spieler können ihre Nachrichten nur an alle Teilnehmer des Kanals senden, da der einzige Übertragungsmodus oft nur die Massenkommunikation ist. Jeder Teilnehmer des Kanals hört sämtliche Konversationen der Mitglieder und hat keinen Einfluss darauf, ob er manche Teilnehmer nicht hören möchte. 
 
-Dies führt dazu, dass das Medium stark reglementiert werden muss und nur die allerwichtigsten Informationen über den Kanal ausgetauscht werden. In der Praxis werden oft auch so genannte \textit{Channel Leader} ernannt, die über Sprachrechte verfügen während alle anderen Spieler nur zuhören können. 
+Dies führt dazu, dass das Medium stark reglementiert werden muss und nur die allerwichtigsten Informationen über den Kanal ausgetauscht werden. In der Praxis werden oft auch so genannte \textit{Channel Leader} (siehe Abbildung \ref{fig:ventrillo}) ernannt, die über Sprachrechte verfügen während alle anderen Spieler nur zuhören können. 
 
 Es ist prinzipiell zwar möglich, dass Teilnehmer auf dem Kanal ein persönliches Gespräch führen. Dieses Verhalten wird aber nicht gerne von anderen Teilnehmern gesehen, wie Studien in aus Kapitel 2 gezeigt haben. Deswegen verfügen einige Hilfsprogramme\footnote{Blizzard Entertainment: World of Warcraft Communication Basics, Version 22.03.2008, http://worlfofwarcraft.com/info/basics/voicechat.html} über einen "`Flüstermodus"', der eine private Konversation mit einzelnen Spielern ermöglicht. Eine solche Verbindung muss jedoch bereits vor der Teilnahme am eigentlichen Spiel in der Konfiguration des Hilfsprogramms definiert werden. Somit ist ein spontanes Gespräch mit einem beliebigem Spieler deshalb nicht ohne weiteres möglich. Zudem werden Teilnehmer eines solchen "`Flüstergesprächs"' vom restlichen Geschehen ausgegrenzt, da sie nicht gleichzeitig beide Kanäle benutzen können.
 
 \begin{figure}[tbh]
 	\centering
-	\label{ventrillo}
-	\caption{Konfiguration von Kanälen, Gruppen und Rechten in kommerziellen Sprach\-kommunikations\-programmen}
 		\includegraphics[width=0.40\textwidth]{grafiken/ventrillo.eps}
+		\caption{Konfiguration von Kanälen, Gruppen und Rechten in kommerziellen Sprach\-kommunikations\-programmen}
 	\label{fig:ventrillo}
 \end{figure}
 
 Der Verbesserungsvorschlag sieht vor, dass Teilnehmer sowohl persönliche Gespräche führen können, als auch an der Massenkommunikation teilnehmen können. Dies soll durch einen erweiterten Mischvorgang ermöglicht werden, der die Teilnahme an einem Kanal nicht binär definiert, sondern einen fließenden Übergang zwischen Kanälen ermöglicht.
 
 \section {Erweitertes Audio Mixing}
-Da bisher die Teilnahme an einer Konferenz binär gelöst wurde, waren Spieler entweder Teil einer solchen oder nicht. So ist das in einer Konferenz mit \textit{n} Teilnehmern ${p_{1},p_{2},...,p_{n}}$, mit Audioströmen ${V_{1},V_{2},...,V_{n}}$, von einem Teilnehmer $p_{i}$ zu einer Zeit \textit{t} empfangene Signal $R_{i}$ definiert durch:
+Da bisher die Teilnahme an einer Konferenz binär gelöst wurde, waren Spieler entweder Teil einer solchen oder nicht. So ist das in einer Konferenz mit \textit{n} Teilnehmern ${p_{1},p_{2},...,p_{n}}$, mit Audioströmen ${V_{1}(t),V_{2}(t),...,V_{n}(t)}$, von einem Teilnehmer $i$ zu einer Zeit \textit{t} empfangene Signal $R_{i}(t)$ aller Teilnehmer $j$ definiert durch:
 
 \begin{align}
-	R_{i}(t) = \sum{V_{j}(t)} \ \ \mbox{wobei} \  1 \geq j \geq n \ \mbox{und} \  j \neq i
+	R_{i}(t) = \sum \limits_{j=1}^n {V_{j}(t)}  \ \ \mbox{wobei} \  1 \geq j \geq n \ \mbox{und} \  j \neq i
 \end{align}
 
-Der Verbesserungsvorschlag sieht vor den binären Teilnahmestatus durch eine stetige Teilnahmefunktion zu ersetzen.  Die Teilnahme an einer Konferenz soll von der Distanz $d_{j}$ zum anderen Teilnehmer abhängig sein und somit alle Werte zwischen 0 und 1 annehmen. Das empfangene Signal $R_{i}$ wird somit definiert als:
+Der Verbesserungsvorschlag sieht vor den binären Teilnahmestatus durch eine stetige Teilnahmefunktion zu ersetzen.  Die Teilnahme an einer Konferenz soll von der Distanz $d_{j}$ zum anderen Teilnehmer abhängig sein und somit alle Werte zwischen 0 und 1 annehmen. Das empfangene Signal $R_{i}(t)$ wird somit definiert als:
 
 \begin{align}
-	R_{i}(t) = \sum{d_{j} \cdot V_{j}(t)} \ \ \mbox{wobei} \ 1 \geq j \geq n \ \mbox{und} \ j \neq i
+	R_{i}(t) = \sum \limits_{j=1}^n {d_{j} \cdot V_{j}(t)} \ \ \mbox{wobei} \ 1 \geq j \geq n \ \mbox{und} \ j \neq i
 \end{align}
 
 In einer 3D Umgebung, in der die Spieler beliebige Positionen zueinander einnehmen können, wird vom Spieler ein Distanzvektor zu den übrigen Spielerpositionen berechnet und die Lautstärke des entsprechenden Audiostroms anhand diesem angepasst. Ein solcher Ansatz ermöglicht es für den Spieler eine eigene Konferenz zu erstellen, in der die Teilnehmer nur zu einem bestimmten Prozentsatz, repräsentiert durch ihre Lautstärke, anwesend sind. 
@@ -146,7 +151,7 @@ Personen die sich in der Nähe befinden sind besser zu hören, als Personen die si
 
 \section{Proxemik als Steuerung von Konferenzen}
 \label{proxemikalssteuerungvonkonferenzen}
-Obwohl die Verwaltung von Telefonkonferenzen seit Jahren erforscht wird, \cite{schulzrinnesomething...} existieren bisher wenige intuitive Methoden zu ihrer Steuerung. Alle Studien zur Konferenzsteuerung zeigen, dass die Einführung von mehreren Kanälen ein entsprechend kompliziertes Konferenz-Management (siehe Abbildung \ref{ventrillo} erfordert, da Teilnehmer in der Lage sein müssen zu entscheiden was sie hören wollen und was nicht. 
+Obwohl die Verwaltung von Telefonkonferenzen seit Jahren erforscht wird, \cite{schulzrinne02} existieren bisher wenige intuitive Methoden zu ihrer Steuerung. Alle Studien zur Konferenzsteuerung zeigen, dass die Einführung von mehreren Kanälen ein entsprechend kompliziertes Konferenz-Management (siehe Abbildung \ref{ventrillo} erfordert, da Teilnehmer in der Lage sein müssen zu entscheiden was sie hören wollen und was nicht. 
 
 Die in der Arbeit vorgeschlagene Lösung besteht aus der Reduzierung dieses Problems zu einem Nachbarschaftsproblem, in dem Spieler durch ihre Distanz zueinander entscheiden können welche Kanäle sie hören möchten und welche nicht. 
 
@@ -156,7 +161,7 @@ Nonverbale Kommunikation in Form der Bewegung der Avatare, trägt somit nicht nur
 
 Durch die Repräsentation der Konferenzteilnehmer durch Avatare im 3D Raum, kann jeder selbst bestimmen welche Entfernung er zu seinen Nachbarn einnehmen will. Diese entscheidet wie im realen Leben, ob er jemanden hört oder nicht. 
 
-Im besonderen bedeutet es, dass der Raum um den Spieler in drei Distanzzonen eingeteilt wird, in denen verschiedene Ausprägungen der Sprachkommunikation möglich sein sollen. Dieser Vorschlag ist angelehnt an die Proxemikforschung \cite{hall05}, deren Grundlagen aufgegriffen und neu interpretiert werden: 
+Im besonderen bedeutet es, dass der Raum um den Spieler in drei Distanzzonen eingeteilt wird, in denen verschiedene Ausprägungen der Sprachkommunikation möglich sein sollen. Dieser Vorschlag ist angelehnt an die Proxemikforschung \cite{hall05}, deren Grundlagen aufgegriffen und neu interpretiert werden. Eine Ausführliche Beschreibung der technischen Vorgänge in diesen Zonen findet sich in Absatz \ref{Zonen-Implementierung}. 
 
 \begin{itemize}
 	\item \textbf{Persönliche Distanz}: Hier sollen Spieler in der Lage sein persönlich miteinander zu kommunizieren. Vorstellbar sind drei Alternativen:
@@ -173,6 +178,7 @@ Im besonderen bedeutet es, dass der Raum um den Spieler in drei Distanzzonen ein
 \begin{figure}[tbh]
 	\centering
 		\includegraphics[width=1.00\textwidth]{grafiken/lautstaerke.eps}
+		\caption{Distanzbasierte Veränderung der Lautstärke in Abhängigkeit der gewählten Zone}
 	\label{fig:lautstaerke}
 \end{figure}
 
