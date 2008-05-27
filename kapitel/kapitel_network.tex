@@ -201,7 +201,7 @@ Ist der Knoten einmal Teil des Overlays, so wird er auch für einen Teil der Regi
 
 Aus dem Namen des Teilnehmers eine \textit{Ressource ID}gebildet. In einer Nachricht,die die \textit{Ressource ID} und den Namen des Teilnehmers beinhaltet, registriert sich der Knoten nun am Netz (siehe Abbildung \ref{p2psipregisterandjoin_user}).Im konventionellen SIP Protokoll würde diese Nachricht an einen zentralen Server weitergeleitet werden. Hier jedoch wird die Nachricht so lange vom Overlay weitergeleitet bis sie ihren Zielort erreicht, wo sie von einem zuständigen Knoten gespeichert wird. 
 
-\begin{figure}[htbp]
+\begin{figure}[tbh]
 	\centering
 	\caption{Registrierung neuen Knotens bei Knoten C}
 	\label{p2psipregisterandjoin}
@@ -209,7 +209,7 @@ Aus dem Namen des Teilnehmers eine \textit{Ressource ID}gebildet. In einer Nachr
 	\label{fig:p2psipregisterandjoin}
 \end{figure}
 
-\begin{figure}[htbp]
+\begin{figure}[tbh]
 	\centering
 	\caption{Registrierung des Benutzers}
 		\includegraphics[width=1.00\textwidth]{grafiken/p2psipregisterandjoin_user.eps}
@@ -221,7 +221,7 @@ Möchte ein Benutzer nun einen anderen Benutzer kontaktieren, so wird eine Suchan
 
 Verlassen Knoten das Overlay so müssen sie ihre Information an andere Knoten weitergeben. Oft wird auch die Information mehrfach repliziert, um Datenverlust zu vermeiden. 
 
-\begin{figure}[htbp]
+\begin{figure}[tbh]
 	\centering
 		\includegraphics[width=1.00\textwidth]{grafiken/p2psipcall.eps}
 	\label{fig:p2psipcall}
@@ -238,7 +238,7 @@ Es bestehen drei alternative Architektur Variationen beim Einsatz mit DHT zur Ve
 
 Der DHT kann auf eine dedizierte Server Farm limitiert werden. Für die Registrierung verbinden die Teilnehmer sich zu einem der Server. Wie bereits geschildert implementieren die Server selbst eine skalierbare Datenstruktur wie DHT, um den entsprechenden Eintrag zu finden. Der Teilnehmer muss jedoch mindestens einen Server finden und zu ihm verbinden. Diese Option beinhaltet keine Modifizierung der Clients, bietet aber eine zuverlässige Server Farm Architektur. 
 
-\begin{figure}[htbp]
+\begin{figure}[tbh]
 	\centering
 		\includegraphics[width=0.60\textwidth]{grafiken/registrar-dediziert.eps}
 	\label{fig:registrar-dediziert}
@@ -246,7 +246,7 @@ Der DHT kann auf eine dedizierte Server Farm limitiert werden. Für die Registrie
 
 Eine andere Möglichkeit besteht darin, dass jeder Client auch als Server arbeitet. Das Problem hierbei ist, dass nicht alle Knoten eine gleiche Verfügbarkeit und Bandbreiten Kapazität besitzen. Ein Knoten mit geringer Bandbreite und einer schlechten Anbindung z.B. hinter einer NAT besitzt eventuell nicht ausreichende Ressourcen um im DHT funktionieren. 
 
-\begin{figure}[htbp]
+\begin{figure}[tbh]
 	\centering
 		\includegraphics[width=0.60\textwidth]{grafiken/registrar-client.eps}
 	\label{fig:registrar-client}
@@ -254,7 +254,7 @@ Eine andere Möglichkeit besteht darin, dass jeder Client auch als Server arbeite
 
 Im dritten Ansatz kann eine Mischung aus den zwei Ansätzen gewählt werden, in der Knoten mit hoher Kapazität  (Bandbreite, CPU, Speicher) und Verfügbarkeit (öffentlich erreichbar) zu \textit{SuperPeers} ernannt werden. Solche Peers können für die Registrierung von anderen Teilnehmern genutzt werden. Dabei entscheidet jeder Knoten aufgrund seiner Eigenschaften selbst ob ein SuperPeer werden will oder nicht.
 
-\begin{figure}[htbp]
+\begin{figure}[tbh]
 	\centering
 		\includegraphics[width=0.60\textwidth]{grafiken/registrar-supernode.eps}
 	\label{fig:registrar-supernode}

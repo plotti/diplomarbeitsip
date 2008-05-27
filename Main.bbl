@@ -1,4 +1,4 @@
-\begin{thebibliography}{87}
+\begin{thebibliography}{83}
 % this bibliography was produced with the style dinat.bst v2.5
 \makeatletter
 \newcommand{\dinatlabel}[1]%
@@ -46,14 +46,6 @@
   virtual environments.
 \newblock In: \emph{Presence}
 \newblock 10 (2001), S.~583--598
-
-\bibitem[Bales(1950)]{bales50}
-\dinatlabel{Bales 1950} \textsc{Bales}, R.F.~; \textsc{Press}, Addison-Wesley
-  (Hrsg.):
-\newblock \emph{Interaction process analysis: A method for the study of small
-  groups.}
-\newblock Interaction process analysis: A method for the study of small
-  groups., 1950
 
 \bibitem[Begault(1994)]{bergault94}
 \dinatlabel{Begault 1994} \textsc{Begault}, Durand~R.:
@@ -277,11 +269,6 @@ dy\_2007}
   Applications}
 \newblock (2003), S.~262--268
 
-\bibitem[Kiesler(1997)]{kiesler97}
-\dinatlabel{Kiesler 1997} \textsc{Kiesler}, Sara:
-\newblock \emph{Culture of the Internet}.
-\newblock Lawrence Erlbaum Associates, 1997
-
 \bibitem[Knutsson u.\,a.(2004)Knutsson, Lu, Xu und Hopkins]{knutsson04}
 \dinatlabel{Knutsson u.\,a. 2004} \textsc{Knutsson}, B.~; \textsc{Lu}, H.~;
   \textsc{Xu}, W.~; \textsc{Hopkins}, B.:
@@ -358,14 +345,6 @@ dy\_2007}
   online multiplayer videogame.
 \newblock In: \emph{International Communication Association}
 \newblock (2004), S.~80
-
-\bibitem[Porter und Susmanw(2000)]{porter00}
-\dinatlabel{Porter und Susmanw 2000} \textsc{Porter}, Tom~; \textsc{Susmanw},
-  Galyn:
-\newblock On site: creating lifelike characters in Pixar movies.
-\newblock In: \emph{Commun. ACM}
-\newblock 43 (2000), Nr.~1, S.~25. --
-\newblock ISSN 0001-0782
 
 \bibitem[Postel(1980)]{udp80}
 \dinatlabel{Postel 1980} \textsc{Postel}, J.:
@@ -541,14 +520,6 @@ dy\_2007}
   Network and system support for games}.
 \newblock New York, NY, USA~: ACM, 2006, S.~31. --
 \newblock ISBN 1-59593-589-4
-
-\bibitem[Schulze(1999)]{schulze99}
-\dinatlabel{Schulze 1999} \textsc{Schulze}, M.:
-\newblock Substitution of paraverbal and nonverbal cues in the written medium
-  of IRC.
-\newblock In: \emph{Dialogue analysis and the mass media: Proceedings of the
-  international conference in Erlangen}
-\newblock 2 (1999), S.~65--82
 
 \bibitem[Schulzrinne u.\,a.(1996)Schulzrinne, Casner, Frederick und
   Jacobson]{rtp96}
