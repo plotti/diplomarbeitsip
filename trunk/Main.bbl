@@ -1,4 +1,4 @@
-\begin{thebibliography}{84}
+\begin{thebibliography}{83}
 % this bibliography was produced with the style dinat.bst v2.5
 \makeatletter
 \newcommand{\dinatlabel}[1]%
@@ -456,13 +456,6 @@ dy\_2007}
   Large-Scale Peer-to-Peer Systems.
 \newblock In: \emph{Lecture Notes in Computer Science}
 \newblock 2218 (2001), S.~329--??
-
-\bibitem[Safaei und Dowlatshahi(9--12 July 2006)]{safaei06}
-\dinatlabel{Safaei und Dowlatshahi 9--12 July 2006} \textsc{Safaei}, F.~;
-  \textsc{Dowlatshahi}, M.:
-\newblock Mobility Management for Untethered Immersive Communications.
-\newblock In: \emph{Multimedia and Expo, 2006 IEEE International Conference on}
-\newblock (9-12 July 2006), S.~1213--1216
 
 \bibitem[Safaei u.\,a.(2004)Safaei, Nguyen und Platt]{safei04b}
 \dinatlabel{Safaei u.\,a. 2004} \textsc{Safaei}, F.~; \textsc{Nguyen},
