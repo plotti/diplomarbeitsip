@@ -1,11 +1,12 @@
 \chapter{SIP als Netzwerkschicht für Spiele}
 
-\section{SIP als Netzwerkschicht}
 Wie schon im Kapitel 7 beobachtet, sind die Herausforderungen an die Verwaltung einer Sprachkommunikation mit der darunter liegenden Netzwerkarchitektur verbunden. Vor allem in Kaptiel 6 wurde deutlich, dass die Signalisierung und Lokation der Teilnehmer einer Konferenz, genauso wichtig ist wie der Austausch der Audiodaten selbst. Es liegt daher nahe, die bereits eingesetzten Komponenten nicht nur dazu zu Nutzen, um Teilnehmer zu Lokalisieren und Konferenzen zu steuern, sondern auch um Spieleinformationen zu übertragen. 
+
+\section{SIP als Netzwerkschicht}
 
 Da es sich bei SIP um generisches Protokoll handelt, ist es prinzipiell nicht nur für die Sprachkommunikation einsetzbar sondern auch, um beliebige Sitzungen zwischen Clients zu etablieren und Daten in Echtzeit auszutauschen. Dieses Kapitel soll zeigen, welche der bestehenden Client-Server und Peer-to-Peer Architekturen sich mit SIP umsetzen lassen. Es ist keineswegs das Ziel bestehende Probleme der einzelnen Architekturen lösen, indem das SIP Protokoll verwendet wird, sondern vielmehr eine standardisierte Addressierung,  Signalisierung und hohe Abstraktionsebene zu erreichen.
 
-In diesem Kapitel werden zunächst Client-Server Konzepte vorgestellt und dann eine die Implementierung einer Client-Server Architektur auf Basis des SIP Protokolls vorgestellt. Diese soll zeigen, dass es sehr einfach ist einen Spielprototyp zu bauen,  bei dem SIP für die Sprachkommunikation und als Netzwerkschnittstelle eingesetzt wird. 
+In diesem Kapitel werden zunächst Client-Server Konzepte und dann eine die Implementierung einer Client-Server Architektur auf Basis des SIP Protokolls vorgestellt. Diese soll zeigen, dass es sehr einfach ist einen Spielprototyp zu bauen,  bei dem SIP für die Sprachkommunikation und als Netzwerkschnittstelle eingesetzt wird. 
 
 Im zweiten Teil werden bisherige Konzepte für Peer-to-Peer Spiele dargestellt und abschließend die Funktionsweise von P2PSIP näher erläutert, um zu zeigen wie dieser Ansatz eine komplett dezentrale P2P Spieleumsetzung erlaubt.
 
@@ -15,7 +16,7 @@ Mehrspieler Spiele besitzen vielfältige Anforderungen an eine Netzwerkarchitektu
 
 \textbf{Sicherheit:} Da Spieler gegeneinander antreten, sollte Manipulation ausgeschlossen werden. Dazu benötigt man eine sichere Kommunikation zwischen den Spielern. 
 
-\textbf{Persistenz:} Das Spiel kann Objekte enthalten die nur genau einmal existieren. Deswegen muss zwischen den einzelnen Sitzungen dafür gesorgt werden, dass diese dauerhaft gespeichert werden.
+\textbf{Spielstand:} Das Spiel kann Objekte enthalten die nur genau einmal existieren. Deswegen muss zwischen den einzelnen Sitzungen dafür gesorgt werden, dass diese dauerhaft gespeichert werden.
 
 \textbf{Zuverlässigkeit:} Durch einen zu häufigen Ausfall des gesamten Systems, wird die Spielerfahrung negativ beeinflusst. 
 
@@ -25,7 +26,7 @@ Mehrspieler Spiele besitzen vielfältige Anforderungen an eine Netzwerkarchitektu
 
 \textbf{Skalierbarkeit:} Eine skalierbare Architektur sollte eine große Anzahl und  Anstieg an gleichzeitigen Benutzern unterstützen, ohne dass die Last des Systems dramatisch ansteigt. 
 
-Während Client- Server Basierte Systeme eine hohe Sicherheit, Persistenz und Konsistenz bieten, ist ihre Zuverlässigkeit und Skalierbarkeit durch den Einsatz einzelner zentralen Komponenten limitiert. Peer-to-Peer basierte Systeme dagegen bieten eine hohe Skalierbarkeit und Zuverlässigkeit, sind aber Anfällig in ihrer Sicherheit, Persistenz und Performanz. 
+Während Client- Server Basierte Systeme eine hohe Sicherheit, Persistenz und Konsistenz bieten, ist ihre Zuverlässigkeit und Skalierbarkeit durch den Einsatz einzelner zentralen Komponenten limitiert. Peer-to-Peer basierte Systeme dagegen bieten eine hohe Skalierbarkeit und Zuverlässigkeit, sind aber Anfällig in ihrer Sicherheit, Persistenz und Skalierbarkeit. 
 
 In der Forschung werden beide Architekturen bezüglich der oben genannten Aspekte untersucht. So existieren viele Studien \cite{lau06} zur Skalierbarkeit von Client-Server und Peer-to-Peer Architekturen die bezüglich ihrer Bandbreite, Last und des Delay verglichen werden. Auch Inhalte des Netzwerkverkehrs in Spielen \cite{lau05b}, oder die Auswirkungen der geografische Verteilung von Spieleservern und Spielern wurden untersucht \cite{feng03}. 
 
@@ -41,17 +42,17 @@ Da die Tendenz zum Spiel als Kommunikationsplattform geht, bei der mehrere Milli
 Um das Problem der unzureichenden Skalierbarkeit zu umgehen wird von vielen Entwicklern das so genannte "`Sharding"' eingesetzt \cite{brandt05}. Ein "`Shard"' ist eine komplette und unabhängige Instanz der Spielewelt. Die maximale Anzahl an Spielern einer solchen Welt ist limitiert.  Durch das Hinzufügen von Shards können Entwickler zwar mehr Spieler aufnehmen, die aber in verschiedenen Spielewelten existieren und nicht miteinander interagieren können. Das derzeit größte MMOG \textit{World of Warcraft (WoW)} \footnote{Blizzard Entertainment, Version 22.03.2008, http://blizzard.co.uk/} weltweit setzt erfolgreich Sharding ein um Spieler in mehreren gleichzeitig existierenden Spielewelten zu verwalten.
 
 \subsubsection{Clustering}
-Eine zusätzliche Möglichkeit besteht daraus Cluster von Computern einzusetzen, die als gemeinsame Server-Plattform nach außen auftreten. Solche Systeme werden als \textit{federated Client-Server}Systeme bezeichnet. Diese Methode wird erfolgreich von Spielen wie EVE Online\footnote{CCP hf., Version 04.05.2008, http://www.eve-online.com} eingesetzt, die den Rekord für die größte Anzahl an gleichzeitigen Spielern auf einem Cluster mit 23000 Spielern hält \cite{brandt05}. Dabei ist jeder Server in diesem Cluster für eine andere Portion der virtuellen Welt verantwortlich. Durch \textit{Load Balancing} werden Spieler zwischen Servern im Cluster transferiert, um die maximale Bandbreite und Last einer Maschine nicht zu überschreiten. Studien von Lau \cite{lau06} in denen das \textit{Client-Server federating} simuliert wurde, zeigten jedoch, dass diese Technologie auch ihre Grenzen hat .
+Eine zusätzliche Möglichkeit besteht daraus Cluster von Computern einzusetzen, die als gemeinsame Server-Plattform nach außen auftreten. Solche Systeme werden als \textit{federated Client-Server}Systeme bezeichnet. Diese Methode wird erfolgreich von Spielen wie EVE Online\footnote{CCP hf., Version 04.05.2008, http://www.eve-online.com} eingesetzt, die den Rekord für die größte Anzahl an gleichzeitigen Spielern auf einem Cluster mit 23000 Spielern hält \cite{brandt05}. Dabei ist jeder Server in diesem Cluster für eine andere Portion der virtuellen Welt verantwortlich. Durch \textit{Load Balancing} werden Spieler zwischen Servern im Cluster transferiert, um die maximale Bandbreite und Last einer Maschine nicht zu überschreiten. Studien von Lau \cite{lau06} in denen das \textit{Client-Server federating} simuliert wurde, zeigten jedoch, dass diese Technologie ihre Grenzen hat .
 
 \subsubsection{Interest Management}
 Um eine konsistente Spielewelt zu erzeugen, die performant und skalierbar ist, wird  das \textit{Interest Management} eingesetzt \cite{morse96}. Unter \textit{Interest Management} versteht man, dass Individuen nur einen begrenzten Wahrnehmungsradius besitzen und nur an Dingen interessiert sind, die in einer limitierten lokalen Umgebung geschehen, welche auch als \textit{Area of Interest} bezeichnet wird. 
 
-Eine übliche Technik im \textit{Interest Management }besteht daraus die Spielewelt in Regionen aufzuteilen, wobei der Spieler immer nur Mitglied einer Region ist und auch nur Nachrichten dieser Region erhält. \textit{Interest Management} ist in einer Client-Server Architektur sehr einfach umsetzbar, da der Server alle eingehenden Nachrichten vor dem weiterleiten filtern kann, was jedoch in einem P2P System nicht ohne weiteres möglich ist, da keine solche zentrale Komponente existiert \cite{yu05}.
+Eine übliche Technik im \textit{Interest Management }besteht daraus, die Spielewelt in Regionen aufzuteilen, wobei der Spieler immer nur Mitglied einer Region ist und auch nur Nachrichten dieser Region erhält. \textit{Interest Management} ist in einer Client-Server Architektur sehr einfach umsetzbar, da der Server alle eingehenden Nachrichten vor dem weiterleiten filtern kann, was jedoch in einem P2P System nicht ohne weiteres möglich ist, da keine solche zentrale Komponente existiert \cite{yu05}.
 
 \section{Implementierung einer Client-Server Architektur mit SIP}
 Der Spieleprototyp verfügt über keinen ausgefeilten Spielemechanismus, da die Entwicklung eines solchen über den Rahmen der Arbeit hinausgeht. Dazu müssten die oben angesprochenen Punkte der Persistenz, Sicherheit, Konsitenz und Fairness detailliert behandelt werden. 
 
-Stattdessen werden im Prototyp nur Änderungen der Positionen der Spieler periodisch (alle 10ms) übertragen und die Spielewelt lokal aktualisiert. Das einzige "`Ziel"' des Spiels besteht darin, sich mit anderen Spielern zu unterhalten. Jeder Teilnehmer ist in der Lage sich in einer 3D Umgebung zu bewegen, und mit den Gegenständen und Spielern eines Spieles zu kollidieren. Mit Hilfe der SIP Netzwerkschicht sollen alle Spieler über Ereignisse anderer Spieler informiert werden. 
+Stattdessen werden im Prototyp nur Änderungen der Positionen der Spieler periodisch (alle 100ms) übertragen und die Spielewelt lokal aktualisiert. Das einzige "`Ziel"' des Spiels besteht darin, sich mit anderen Spielern zu unterhalten. Jeder Teilnehmer ist in der Lage sich in einer 3D Umgebung zu bewegen, und mit den Gegenständen und Spielern eines Spieles zu kollidieren. Mit Hilfe der SIP Netzwerkschicht sollen alle Spieler über Ereignisse anderer Spieler informiert werden. 
 
 Bei der Implementierung einer SIP Netzwerkschicht wurde versucht bereits bestehende Komponenten einzusetzen. Proxy und Registrar wurden als eine zentrale Einheit eingesetzt, die als Serverinstanz fungiert. Die Registrierung der Benutzer wird vom Registrar vorgenommen und der Proxy wird genutzt, um alle Nachrichten zu empfangen und an die entsprechenden Teilnehmer weiterzuleiten. 
 
@@ -68,7 +69,7 @@ Hat sich ein Spieler erfolgreich auf dem Registrar angemeldet, so wird bei einge
 % http://www.ietf.org/rfc/rfc4353.txt
 
 \subsubsection{Nachrichtendienst}
-Beim SIP SIMPLE Protokoll handelt sich um ein offenes, weit verbreitetes Protokoll der SIP Protokollfamilie, für das viele open-source Implementierungen existieren. Auch der \textit{MSN Messenger}\footnote{Microsoft, Version 20.03.2008, http://messenger.live.com}, die weltweit verbreitetste \textit{Instant Messenging} Applikation, beruht auf der Grundlage des SIP SIMPLE Protokolls. 
+Beim SIP SIMPLE Protokoll handelt sich um ein offenes, weit verbreitetes Protokoll der SIP Protokollfamilie, für das viele open-source Implementierungen existieren und auch in kommerziellen Lösungen wie dem  \textit{MSN Messenger}\footnote{Microsoft, Version 20.03.2008, http://messenger.live.com}, eingesetzt werden. 
 
 Der Einsatz des Standards als Netzwerkschicht, um Spieledaten auszutauschen, ist deshalb möglich, weil es sich bei SIP SIMPLE um ein generisches Protokoll handelt, das für verschiedene Zwecke genutzt werden kann. Obwohl es ursprünglich vorgesehen wurde, um Instant Messenging im SIP Standard zu ermöglichen, kann es genauso genutzt werden um Spieledaten auszutauschen. Die \textit{MESSAGE} Nachrichtentypen enthalten im Body Teil statt Textnachrichten die Koordinaten der Spieler oder deren Status. 
 
@@ -113,7 +114,7 @@ Hierbei ist zu erwähnen, dass Teilnehmer nur die Präsenz von Teilnehmern abonnie
 
 \subsection{Skalierbarkeit}
 Die oben vorgestellten Skalierungskonzepte, sind mit diesem Ansatz in einer einfachen Form auch vorstellbar:
-Um das Konzept des Sharding umzusetzen, kann bei einem solchen Aufbau für jede Spielewelt ein zentralen SIP Server eingesetzt werden, der eine maximale Anzahl an Spielern erhält. Möchte man Clustering einsetzen, so ist vorstellbar, dass für eine Region der Spielwelt jeweils ein SIP Server eingesetzt wird, an dem sich die Clients anmelden und Nachrichten der Spieler empfangen die am gleichen Registrar angemeldet sind. Da Registrare und Proxys untereinander routen können ist möglich Nachrichten von Benutzern zu empfangen, die sich bei anderen Servern angemeldet haben. Um Interestmanagement umzusetzen, können beim Proxy Nachrichten gefiltert werden.
+Um das Konzept des Sharding umzusetzen, kann bei einem solchen Aufbau für jede Spielewelt ein zentralen SIP Server eingesetzt werden, der eine maximale Anzahl an Spielern erhält. Möchte man Clustering einsetzen, so ist vorstellbar, dass für eine Region der Spielwelt jeweils ein SIP Server eingesetzt wird, an dem sich die Clients anmelden und Nachrichten der Spieler empfangen die am gleichen Registrar angemeldet sind. Da Registrare und Proxys untereinander routen können ist es möglich Nachrichten von Benutzern zu empfangen, die sich bei anderen Servern angemeldet haben. Um Interestmanagement umzusetzen, können beim Proxy Nachrichten gefiltert werden.
 
 \subsection{Tauglichkeit als Peer-to-Peer Ansatz}
 Der implementierte Ansatz braucht einzig die zentrale Komponente des Registrars, der für die Lokation der Teilnehmer verantwortlich ist. Diese SIP Komponente lässt sich theoretisch auch verteilt realisieren, was den Einsatz von SIP als Netzwerkgrundlage für Peer-to-Peer Spiele ermöglicht. Bevor der theoretische Einsatz von P2P SIP beschrieben wird, sollen zunächst bestehende Ansätze für P2P Spiele vorgestellt werden.
@@ -153,9 +154,9 @@ Regionsbasierte Systeme unterteilen die Welt in geometrische Formen wie Quadrate
 
 Ein Koordinator einer solchen Region muss dazu nicht unbedingt Teilnehmer des aktiven Spiels sein. Das ermöglicht den Einsatz von dedizierten Rechnern mit großen Kapazitäten die speziell nur diesen Zweck erfüllen.
 
-Die Regionsgröße ein wichtiger Faktor, beim Entwurf von regionsbasierten Architekturen. Einerseits führt eine Verkleinerung der Region dazu, dass weniger Ereignisse verwaltet und gesendet werden müssen. Andererseits führen zu kleine Regionen dazu, dass Avatare schnell zwischen Regionen wechseln und so zusätzliche Nachrichten an benachbarte Regionen gesendet werden müssen. 
+Die Regionsgröße ist ein wichtiger Faktor, beim Entwurf von regionsbasierten Architekturen. Einerseits führt eine Verkleinerung der Region dazu, dass weniger Ereignisse verwaltet und gesendet werden müssen. Andererseits führen zu kleine Regionen dazu, dass Avatare schnell zwischen Regionen wechseln und so zusätzliche Nachrichten an benachbarte Regionen gesendet werden müssen. 
 
-Studien von Knutsson, Lu, Xu und Hoptkins \cite{knutsson04} in denen die DHT Architektur auf ihren Einsatz in Mehrspieler Spielen untersucht zeigten, dass die Erzeugung einer übergangsloser Welt problematisch sein kann. Gerade bei Übergängen von einem Koordinator zum Nächsten, kann das Problem auftreten, dass Avatare kurzzeitig nicht mit den nötigen Informationen über die neue Region versorgt werden. Indem Spieler auch die Informationen von benachbarten Regionen abonnieren, können nahtlose Übergänge zwischen den einzelnen Regionen ermöglicht werden, wie sie auch im Prototyp \textit{SimMud} demonstrieren. 
+Studien von Knutsson, Lu, Xu und Hoptkins \cite{knutsson04} in denen die DHT Architektur auf ihren Einsatz in Mehrspieler Spielen untersucht zeigten, dass die Erzeugung einer übergangslosen Welt problematisch sein kann. Gerade bei Übergängen von einem Koordinator zum Nächsten, kann das Problem auftreten, dass Avatare kurzzeitig nicht mit den nötigen Informationen über die neue Region versorgt werden. Indem Spieler auch die Informationen von benachbarten Regionen abonnieren, können nahtlose Übergänge zwischen den einzelnen Regionen ermöglicht werden, wie sie auch im Prototyp \textit{SimMud} demonstrieren. 
 
 Limura, Hazeyama und Kadobayashi \cite{Iimura04} unterteilen die Spielewelt in Spiele- Zonen, die von \textit{Koordinatoren} verwaltet werden. Diese sind Teil einer "`Föderation"' von \textit{Koordinatoren}, die alle untereinander Spielezustände mit Hilfe von DHT austauschen. DHT hilft auch Spielern, die neu hinzukommen oder sich bewegen, ihren zuständigen Koordinator zu finden. Die Kommunikation zwischen Spielern findet immer ausschließlich mittels eines \textit{Koordinators} statt. 
 
@@ -171,7 +172,7 @@ Für jede Region wird mit Hilfe der Skype Chatraum Funktion festgehalten, welche 
 \section{Hybride Systeme}
 Hybride Systeme benutzen einen zentralen Server um Knoten zu lokalisieren. Der Service selbst wiederum, findet direkt zwischen den Knoten statt. Das beste Beispiel eines hybriden P2P Systems sind Dateiaustauschdienste wie \textit{BitTorrent}\footnote{BitTorrent, Inc, Version 22.05.2008, http://www.bittorrent.com}. Jeder Knoten veröffentlicht eine Liste seiner Dateien an einen zentralen öffentlichen Server. Ein Benutzer der nach einer speziellen Datei sucht, kontaktiert zunächst den öffentlichen Server, um den entsprechenden Knoten zu bestimmen. Der Dateiaustausch hingegen findet zwischen den einzelnen Knoten statt. Ein anderes Beispiel ist der Einsatz von öffentlichen Registraren beim SIP Protokoll, die für die Lokalisierung und Verwaltung der Benutzer verantwortlich sind. Das Telefongespräch selbst findet aber zwischen den einzelnen Knoten direkt statt. 
 
-Beide Systeme sind sehr gute Beispiele dafür, dass der hybride Ansatz funktioniert und sehr gut skaliert. Sie haben jedoch den Nachteil, dass sie im Gegensatz zu komplett dezentralisierten Systemen einen \textit{Single Point of Failure} besitzen. Einen neuen Ansatz, bietet der Peer-to-Peer SIP Ansatz, der die Abstraktion von zentralisierten Lokationsdiensten beibehält, aber praktisch diese Instanz verteilt. Dieser Ansatz soll nun im folgenden Abschnitt vorgestellt werden.
+Beide Systeme sind sehr gute Beispiele dafür, dass der hybride Ansatz funktioniert und sehr gut skaliert. Sie haben jedoch den Nachteil, dass sie im Gegensatz zu komplett dezentralisierten Systemen einen \textit{Single Point of Failure} besitzen. Einen neuen Ansatz, bietet der Peer-to-Peer SIP Ansatz, der die Abstraktion von zentralisierten Lokationsdiensten beibehält, aber praktisch diese Instanz verteilt.  Ein sehr ähnliches Konzept wird auch seit einiger Zeit im Bittorrent Protokoll für sog. \textit{trackerlose Torrents} verfolgt. Dieser Ansatz soll nun im folgenden Abschnitt vorgestellt werden.
 
 \section{Peer-to-Peer SIP}
 \subsection{Motivation für Peer-to-Peer SIP}
@@ -188,7 +189,7 @@ Als Peer-to-Peer SIP wird verstanden, dass die einzige zentrale Komponente des S
 
 Dazu werden zwei 2 Arten von IDs verwendet: Eine \textit{Peer ID}, die den Rechner identifiziert und eine \textit{Ressource ID}, die den Benutzer identifiziert. 
 
-Die Information darüber, wo man eine Person gefunden werden kann, wird in der \textit{Peer ID} abgespeichert. Jedem Knoten im Overlay wird eine \textit{Peer ID} zugewiesen, die durch einen eindeutigen \textit{Hash} aus seiner IP Adresse gebildet wird.
+Die Information darüber, wo eine Person gefunden werden kann, wird in der \textit{Peer ID} abgespeichert. Jedem Knoten im Overlay wird eine \textit{Peer ID} zugewiesen, die durch einen eindeutigen \textit{Hash} aus seiner IP Adresse gebildet wird.
 
 Der Name des Benutzers des Knotens wird ebenfalls als ein eindeutiger \textit{Hash} in der \textit{Resource ID} gespeichert. Dabei ist jeder Knoten für die Speicherung eines Teils der gesamten Information zuständig. 
 
@@ -199,12 +200,12 @@ Möchte ein Knoten dem Overlay beitreten, so ermittelt er zunächst seine \textit{
 
 Ist der Knoten einmal Teil des Overlays, so wird er auch für einen Teil der Registrierungsinformationen verantwortlich. Dabei übernimmt er einen Teil der Informationen vom Knoten, der bisher für den Lokalisationsraum zuständig war. 
 
-Aus dem Namen des Teilnehmers eine \textit{Ressource ID}gebildet. In einer Nachricht,die die \textit{Ressource ID} und den Namen des Teilnehmers beinhaltet, registriert sich der Knoten nun am Netz (siehe Abbildung \ref{p2psipregisterandjoin_user}).Im konventionellen SIP Protokoll würde diese Nachricht an einen zentralen Server weitergeleitet werden. Hier jedoch wird die Nachricht so lange vom Overlay weitergeleitet bis sie ihren Zielort erreicht, wo sie von einem zuständigen Knoten gespeichert wird. 
+Aus dem Namen des Teilnehmers wird eine \textit{Ressource ID}gebildet. In einer Nachricht,die die \textit{Ressource ID} und den Namen des Teilnehmers beinhaltet, registriert sich der Knoten nun am Netz (siehe Abbildung \ref{p2psipregisterandjoin_user}).Im konventionellen SIP Protokoll würde diese Nachricht an einen zentralen Server weitergeleitet werden. Hier jedoch wird die Nachricht so lange vom Overlay weitergeleitet bis sie ihren Zielort erreicht, wo sie von einem zuständigen Knoten gespeichert wird. 
 
 \begin{figure}[tbh]
 	\centering
 		\includegraphics[width=1.00\textwidth]{grafiken/p2psipregisterandjoin.eps}
-	\caption{Registrierung neuen Knotens bei Knoten C}
+	\caption{Registrierung eines neuen Knotens bei Knoten C}
 	\label{fig:p2psipregisterandjoin}
 \end{figure}
 
@@ -230,7 +231,7 @@ Verlassen Knoten das Overlay so müssen sie ihre Information an andere Knoten wei
 Bryan, Lowekamp und Jennings schlagen im SOSIMPLE Prototyp \cite{bryan05s} eine Kombination vom SIP und SIMPLE Protokoll vor, in dem Knoten mittels eines auf Chord basierten DHT in einem Overlay verwaltet werden. Alle Nachrichten, die benötigt werden um das DHT aufrecht zu erhalten, Benutzer zu registrieren, Ressourcen zu lokalisieren, Sitzungen zu verwalten sind reine SIP Nachrichten. Da SIP als generisches Protokoll entworfen wurde, müssen nur die Nachrichtentypen um zusätzliche Header ergänzt werden. Ein Ähnliches Konzept für SIP Telefonie auf Basis eines Chord basierten DHT, schlagen auch Singh und Schulzrinne vor \cite{schulzrinne05}.
 
 \subsection{Einsatz von P2P-SIP für Spiele}
-P2P-SIP lässt sich auch für Spiele einsetzen und ist vor allem deswegen interessant, da es Vorteile von Peer-to-Peer mit der hohen Abstraktion von SIP kombiniert. Da die Komponente des Registrars logisch immer noch vorhanden ist, kann der zuvor vorgestellte Client-Server Ansatz ohne Veränderungen direkt eingesetzt werden. Nur mit dem Unterschied, dass es sich nicht mehr, um eine Client Server Architektur handelt, da der Registrar nun verteilt realisiert wurde. Die Daten- und Sprachkommunikation der Spieler könnten direkt untereinander geschehen, während die für die Verwaltung der Teilnehmer eines Spiels der Lokationsdienst des Registrars verwendet werden könnte. Auch die Präsenz der Teilnehmer könnte direkt untereinander stattfinden. Indem man darüber entscheidet auf welche Knoten die Komponente des Registrars verteilt wird, kann auch das Konzept von Supernodes umgesetzt werden.
+P2P-SIP lässt sich auch für Spiele einsetzen und ist vor allem deswegen interessant, da es Vorteile von Peer-to-Peer mit der hohen Abstraktion von SIP kombiniert. Da die Komponente des Registrars logisch immer noch vorhanden ist, kann der zuvor vorgestellte Client-Server Ansatz ohne Veränderungen direkt eingesetzt werden. Nur mit dem Unterschied, dass es sich nun um eine reine Peer-to-Peer Architektur handelt. Die Daten- und Sprachkommunikation der Spieler könnten direkt untereinander geschehen, während die für die Verwaltung der Teilnehmer eines Spiels der Lokationsdienst des Registrars verwendet werden könnte. Auch die Präsenz der Teilnehmer könnte direkt untereinander stattfinden. Indem man darüber entscheidet auf welche Knoten die Komponente des Registrars verteilt wird, kann auch das Konzept von Supernodes umgesetzt werden.
 
 \subsection{Architektur Variationen}
 Es bestehen drei alternative Architektur Variationen beim Einsatz mit DHT zur Verfügung. 
@@ -238,27 +239,34 @@ Es bestehen drei alternative Architektur Variationen beim Einsatz mit DHT zur Ve
 
 Der DHT kann auf eine dedizierte Server Farm limitiert werden. Für die Registrierung verbinden die Teilnehmer sich zu einem der Server. Wie bereits geschildert implementieren die Server selbst eine skalierbare Datenstruktur wie DHT, um den entsprechenden Eintrag zu finden. Der Teilnehmer muss jedoch mindestens einen Server finden und zu ihm verbinden. Diese Option beinhaltet keine Modifizierung der Clients, bietet aber eine zuverlässige Server Farm Architektur. 
 
-\begin{figure}[tbh]
+\begin{figure}
 	\centering
-		\includegraphics[width=0.60\textwidth]{grafiken/registrar-dediziert.eps}
-	\caption{Ein Registrar wurde auf dedizierte Server verteilt}
-	\label{fig:registrar-dediziert}
+		\includegraphics[width=1.00\textwidth]{grafiken/3in1registrar.eps}
+	\caption{Verschiede Registrar Variationen}
+	\label{fig:3in1registrar}
 \end{figure}
+
+%\begin{figure}[tbh]
+%	\centering
+%		\includegraphics[width=0.60\textwidth]{grafiken/registrar-dediziert.eps}
+%	\caption{Ein Registrar wurde auf dedizierte Server verteilt}
+%	\label{fig:registrar-dediziert}
+%\end{figure}
 
 Eine andere Möglichkeit besteht darin, dass jeder Client auch als Server arbeitet. Das Problem hierbei ist, dass nicht alle Knoten eine gleiche Verfügbarkeit und Bandbreiten Kapazität besitzen. Ein Knoten mit geringer Bandbreite und einer schlechten Anbindung z.B. hinter einer NAT besitzt eventuell nicht ausreichende Ressourcen um im DHT funktionieren. 
 
-\begin{figure}[tbh]
-	\centering
-		\includegraphics[width=0.60\textwidth]{grafiken/registrar-client.eps}
-	\caption{Ein Registrar wird zwischen allen Teilnehmern verteilt}
-	\label{fig:registrar-client}
-\end{figure}
+%\begin{figure}[tbh]
+	%\centering
+	%	\includegraphics[width=0.60\textwidth]{grafiken/registrar-client.eps}
+	%\caption{Ein Registrar wird zwischen allen Teilnehmern verteilt}
+	%\label{fig:registrar-client}
+%\end{figure}
 
 Im dritten Ansatz kann eine Mischung aus den zwei Ansätzen gewählt werden, in der Knoten mit hoher Kapazität  (Bandbreite, CPU, Speicher) und Verfügbarkeit (öffentlich erreichbar) zu \textit{SuperPeers} ernannt werden. Solche Peers können für die Registrierung von anderen Teilnehmern genutzt werden. Dabei entscheidet jeder Knoten aufgrund seiner Eigenschaften selbst ob ein SuperPeer werden will oder nicht.
 
-\begin{figure}[tbh]
-	\centering
-		\includegraphics[width=0.60\textwidth]{grafiken/registrar-supernode.eps}
-	\caption{Ein Registrar wird nur zwischen Teilnehmern mit hoher Kapazität  (Bandbreite, CPU, Speicher) verteilt}
-	\label{fig:registrar-supernode}
-\end{figure}
+%\begin{figure}[tbh]
+%	\centering
+%		\includegraphics[width=0.60\textwidth]{grafiken/registrar-supernode.eps}
+%	\caption{Ein Registrar wird nur zwischen Teilnehmern mit hoher Kapazität  (Bandbreite, CPU, Speicher) verteilt}
+%	\label{fig:registrar-supernode}
+%\end{figure}
