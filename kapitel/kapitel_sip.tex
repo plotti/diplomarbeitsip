@@ -11,7 +11,7 @@ Voice-over-IP (auch VoIP, IP-Telefonie) bezeichnet die Telefonie über das Intern
 
 Für die Signalisierung werden das Session Description Protocol (SDP)\cite{sdp98} und das Session Initiation Protocol (SIP) eingesetzt. Diese übernehmen die Vermittlung von Gesprächen, den Rufauf- oder -abbau, sowie die Aushandlung von Parametern. Die Verwendung eines gemeinsamen Codecs, der entsprechenden Bitrate oder der maximal zulässigen Bandbreite werden in diesen Protokollen kontrolliert. 
 
-Für die Sprachübertragung wird das Echtzeit Transport Protokoll (Realtime Transport Protocol (RTP)) \cite{rtp96} ver\-wen\-det, das dem Empfänger der Pakete erlaubt, trotz unzuverlässiger Übertragung über UDP \cite{udp80}, einen Paketverlust festzustellen und die ursprüngliche Reihenfolge der Daten wiederherzustellen. RTP ist nicht nur für Sprache, sondern auch für alle anderen Echtzeitmedien, wie Video verwendbar. Da RTP keine Kontrollinformationen versendet, kann der Empfänger dem Sender nicht mitteilen, ob überhaupt bzw. wie die Sprache in Form von IP-Paketen bei ihm ankommt. Das RTP Control Protocol (RTCP) \cite{rtcp03} gleicht diesen Nachteil aus: Mit Hilfe von RTCP können zusätzlich zu den reinen Mediendaten auch Kontrollinformationen, wie die Anzahl der verlorenen Pakete oder der gemessene Jitter der RTP-Verbindung übertragen werden und so Übertragungsparameter angepasst werden. 
+Für die Sprachübertragung wird das Echtzeit-Transport-Protokoll (Realtime Transport Protocol (RTP)) \cite{rtp96} ver\-wen\-det, das dem Empfänger der Pakete erlaubt, trotz unzuverlässiger Übertragung über UDP \cite{udp80}, einen Paketverlust festzustellen und die ursprüngliche Reihenfolge der Daten wiederherzustellen. RTP ist nicht nur für Sprache, sondern auch für alle anderen Echtzeitmedien, wie Video verwendbar. Da RTP keine Kontrollinformationen versendet, kann der Empfänger dem Sender nicht mitteilen, ob überhaupt bzw. wie die Sprache in Form von IP-Paketen bei ihm ankommt. Das RTP Control Protocol (RTCP) \cite{rtcp03} gleicht diesen Nachteil aus: Mit Hilfe von RTCP können zusätzlich zu den reinen Mediendaten auch Kontrollinformationen, wie die Anzahl der verlorenen Pakete oder der gemessene Jitter der RTP-Verbindung übertragen werden und so Übertragungsparameter angepasst werden. 
 
 \begin{figure}[tbh]
 	\centering
@@ -27,9 +27,9 @@ Für die Sprachübertragung wird das Echtzeit Transport Protokoll (Realtime Transp
 %Dieses Kapitel soll zunächst den Aufbau eines VoIP Systems beschreiben um anschließend die Protokolle SIP, SDP, RTP und RTCP zu behandeln. Da SIP die ältere H.323 Protokollfamilie in langfristig verdrängen wird, wird diese nicht behandelt. %Im Abschluss wird ein Überblick über das propriätere Protokoll von Skype gegeben, dessen Funktionsweise und Details zwar nicht offen sind, es jedoch eine Alternative zu den offenen Protokollen bietet. 
 
 \subsection{Einfaches VoIP System}
-Der einfache Aufbau eines funktionierenden VoIP Systems kann prinzipiell mit einer bestehenden IP-Infrastruktur und Computerprogrammen, die Telefonie ermöglichen (\textit{Softphones}), funktionieren. Die Teilnehmer müssen jedoch bei einer solchen Konfiguration die IP-Adressen der gewünschten Ge\-sprächs\-partner kennen, um einen direkten Anruf auszuführen. Bei einer Adress\-änderung der IP Adresse eines Gesprächspartners, müssten jedoch alle Einträge der Gesprächspartner entsprechend abgeändert werden, weil sich die Teilnehmer sonst nicht mehr erreichen könnten. Der gleiche Aufwand müsste auch beim Hinzufügen weiterer Teilnehmer erfolgen. %Ein solcher Aufbau wird daher als unflexibel angesehen. 
+Der einfache Aufbau eines einfachen VoIP-Systems kann prinzipiell mit einer bestehenden IP-Infrastruktur und Computerprogrammen, die Telefonie ermöglichen (\textit{Softphones}), funktionieren. Die Teilnehmer müssen jedoch bei einer solchen Konfiguration die IP-Adressen der gewünschten Ge\-sprächs\-partner kennen, um einen direkten Anruf auszuführen. Bei einer Adress\-änderung der IP Adresse eines Gesprächspartners, müssten jedoch alle Einträge der Gesprächspartner entsprechend abgeändert werden, weil sich die Teilnehmer sonst nicht mehr erreichen könnten. Der gleiche Aufwand müsste auch beim Hinzufügen weiterer Teilnehmer erfolgen. %Ein solcher Aufbau wird daher als unflexibel angesehen. 
 
-Im SIP-Protokoll wird dieses Problem von Komponenten (\textit{Proxys}), die die Aufgabe einer Vermittlungsstelle einnehmen, übernommen. Ein Proxy kann einen Lokationsdienst(\textit{Location Service}) enthalten, der ankommende SIP-Pakete an das Telefon des angerufenen Teilnehmers weiterleitet oder an einen anderen Proxy weiterleitet, falls sich der Benutzer außerhalb des eigenen Adressbereichs befindet. Zusätzlich können Konferenzen, Voice-Mail und Anrufweiterleitungen Teil eines VoIP Systems sein. 
+Im SIP-Protokoll wird dieses Problem von Komponenten (\textit{Proxys}), die die Aufgabe einer Vermittlungsstelle einnehmen, übernommen. Ein Proxy kann einen Lokationsdienst(\textit{Location Service}) enthalten, der ankommende SIP-Pakete an das Telefon des angerufenen Teilnehmers oder an einen anderen Proxy weiterleitet, falls sich der Benutzer außerhalb des eigenen Adressbereichs befindet. Zusätzlich können Konferenzen, Voice-Mail und Anrufweiterleitungen Teil eines VoIP Systems sein. 
 
 %Da die klassische Telefonie weiterhin neben VoIP Bestand hat, wird versucht mit zusätzlichen Komponenten, den Gateways, eine Verbindung zwischen den beiden Telefonsystemen herzustellen. 
 
@@ -37,8 +37,8 @@ Im SIP-Protokoll wird dieses Problem von Komponenten (\textit{Proxys}), die die 
 \subsection{Einflussfaktoren auf die VoIP-Qualität}
 Die wichtigsten \textit{Quality-of-Service}-Anforderungen, die VoIP an IP-Netze stellt, betreffen:
 \begin{itemize}
-	\item die Bandbreite von virtuellen Verbindungen zwischen IP-Telefonen,
-	\item die Ende-zu-Ende-Verzögerung des Sprachsignals (Delay),
+	\item die Bandbreite von virtuellen Verbindungen zwischen IP-Telefonen
+	\item die Ende-zu-Ende-Verzögerung des Sprachsignals (Delay)
 	\item die Schwankung der Übermittlungszeit (Jitter) und
 	\item die Paketverlustrate (Packet Loss Rate)
 \end{itemize}
@@ -49,7 +49,7 @@ Da bei VoIP die Sprache zuerst digitalisiert und dann entsprechend codiert wird,
 \subsubsection{Ende-zu-Ende-Verzögerung (Delay)}
 Unter der Ende-zu-Ende-Verzögerung des Sprachsignals versteht man die Zeitspanne, die ein Sprachsignal vom Mund eines Sprechers bis zum Ohr eines Hörers benötigt. Die Ende-Zu-Ende-Verzögerung entsteht vor allem durch die Zwischenspeicherung der IP-Pakete in den Routern, die sie auf ihren Wegen durch das Netz zu durchlaufen haben. Jeder Router benötigt Zeit, um den Header im IP-Paket zu interpretieren und die entsprechende Routing-Entscheidung zu treffen. Trifft ein Paket unterwegs auf einen überlasteten Router, muss es einige Zeit in der Warteschlange vor der Leitung verbringen und wird im Extremfall sogar ganz verworfen. Eine große Ende-zu-Ende-Verzögerung beeinträchtigt den Charakter eines Telefongespräches stark. 
 
-Da die Sprachkommunikation in Echtzeit verläuft, gilt die Wiedergabe eines Sprachsignals am Ziel als qualitativ schlecht, wenn sie einem zu großen Zeitverzug erfolgt. Für die Ende-zu-Ende-Verzögerung $T_{EE}$(End-to-End-Delay) des Sprachsignals werden daher Grenzwerte gesetzt. Nach dem ITU-T-Dokument G.114 wird die VoIP-Qualität wie flogt klassifiziert:
+Da die Sprachkommunikation in Echtzeit verläuft, gilt die Wiedergabe eines Sprachsignals am Ziel als qualitativ schlecht, wenn sie in einem zu großen Zeitverzug erfolgt. Für die Ende-zu-Ende-Verzögerung $T_{EE}$ (End-to-End-Delay) des Sprach\-signals werden daher Grenzwerte gesetzt. Nach dem ITU-T-Dokument G.114 wird die VoIP-Qualität wie folgt klassifiziert:
 \begin{itemize}
 	\item $T_{EE}$ kleiner als 150ms: akzeptabel für alle Benutzer,
 	\item $T_{EE}$ zwischen 150ms und 300ms: akzeptabel, aber mit Einschränkungen (nicht für empfindliche Benutzer), 
@@ -60,14 +60,14 @@ Da die Sprachkommunikation in Echtzeit verläuft, gilt die Wiedergabe eines Sprac
 Da die einzelnen IP-Pakete auf einer Verbindung zwischen IP-Telefonen auf unterschiedlichen Wegen übermittelt werden, kann ihre Übermittlungszeit divergieren. Die Schwankungen der Übermittlungszeit werden Jitter genannt. Die \textit{Synchronität} dh. die zeitlich konstante Frequenz der übertragenen Signale bei VoIP lässt jedoch kein Jitter zu. Um die Schwankungen auszugleichen, wird beim Empfänger ein spezieller Puffer verwendet. Man bezeichnet einen derartigen Puffer als Jitter-Ausgleichspuffer (\textit{Playout Buffer}).
 
 \subsubsection{Paketverlustrate (Packet Loss Rate)}
-Die Verluste von IP-Paketen mit Sprache während der Übermittlung mindern die Qualität. Die Anzahl der Paketverluste in einer bestimmten Zeitperiode wird mit dem Parameter Paketverlustrate angegeben. Paketverluste können durch überlastete Router im IP-Netz oder auch durch einen "`schlecht"'  dimensionierten Jitter-Ausgleichspuffer entstehen. Im Gegensatz zu reinen Datenanwendungen, ist der Verlust eines IP-Pakets bei der Sprachübertragung nicht besonders tragisch. Zu viele Paketverluste jedoch machen sich in einem Telefongespräch allerdings sehr störend als Unterbrechungen bemerkbar. 
+Die Verluste von IP-Paketen mit Sprache während der Übermittlung mindern die Qualität. Die Anzahl der Paketverluste in einer bestimmten Zeitperiode wird mit dem Parameter Paketverlustrate angegeben. Paketverluste können durch überlastete Router im IP-Netz oder auch durch einen "`schlecht"'  dimensionierten Jitter-Ausgleichspuffer entstehen. Im Gegensatz zu reinen Datenanwendungen ist der Verlust eines IP-Pakets bei der Sprachübertragung nicht besonders tragisch. Zu viele Paketverluste machen sich jedoch in einem Telefongespräch allerdings sehr störend als Unterbrechungen bemerkbar. 
 
 \subsection{VoIP-relevante Sprachkodierungsverfahren}
 
 %TODO enter all Codecs
 %\cite{speex08}
 
-Obwohl die Qualität der Sprachübertragung durch Parameter, wie die Laufzeit der IP-Pakete (Delay), die Laufzeitunterschiede(Jitter) und die Verlustrate von IP-Paketen im Netz (Packet Loss) beeinflusst wird, sagen diese Parameter nichts über die eigentliche Sprachqualität aus. Diese wird nach der MOS (Mean Opinion Score) \cite{mtu96} - Skala  gemessen. Sie unterscheidet Aspekte wie Verständlichkeit der Sprache, Akzeptanz der Lautstärke sowie die Akzeptanz der Laufzeitschwankungen und Echos. 
+Obwohl die Qualität der Sprachübertragung durch Parameter, wie die Laufzeit der IP-Pakete (Delay), die Laufzeitunterschiede (Jitter) und die Verlustrate von IP-Paketen im Netz (Packet Loss) beeinflusst wird, sagen diese Parameter nichts über die eigentliche Sprachqualität aus. Diese wird nach der MOS (Mean Opinion Score) \cite{mtu96} - Skala  gemessen. Sie unterscheidet Aspekte wie Verständlichkeit der Sprache, Akzeptanz der Lautstärke sowie die Akzeptanz der Laufzeitschwankungen und Echos. 
 
 %TODO Tabelle mit Codecs
 \begin{table}[tbh]
@@ -91,7 +91,7 @@ Obwohl die Qualität der Sprachübertragung durch Parameter, wie die Laufzeit der 
 
 Eine analoge Sprachübertragung kommt auf einen MOS-Wert von 3.5 bis 4. Hochwertige VoIP-Implementierungen bieten eine Sprachqualität zwischen 3.8 und 4.4 je nach verwendeter Sprachkodierung. Dabei bieten VoIP-Systeme mindestens die Qualität eines herkömmlichen analogen Telefonnetzes. 
 
-Es gibt mehrere Sprachkodierungsverfahren, die bei Voice over IP verwendet werden können. Man unterscheidet zwischen abtastwert-orientierten Kodierungsverfahren, die zwar gute Sprachqualität garantieren aber Bitraten haben, die größer als 16 Kbit/s sind und segment-orientierten Kodierungsverfahren die zwar geringe Bitraten haben aber dafür nur eine schwache bis gute Sprachqualität bieten. Eine Übersicht üblicher Codecs findet sich in Tabelle \ref{pt-tabelle}.
+Es gibt mehrere Sprachkodierungsverfahren, die bei Voice over IP verwendet werden können. Man unterscheidet zwischen abtastwert-orientierten Kodierungsverfahren, die zwar gute Sprachqualität garantieren aber Bitraten haben, die größer als 16 Kbit/s sind und segment-orientierten Kodierungsverfahren die zwar geringe Bitraten haben, aber dafür nur eine schwache bis gute Sprachqualität bieten. Eine Übersicht üblicher Codecs findet sich in Tabelle \ref{pt-tabelle}.
 
 \begin{table}
 \centering
@@ -114,7 +114,7 @@ dyn & G726-16 & Abtastwert-orientiert & 16 \\
 \end{table}
 
 \section{Session Initiation Protokoll (SIP)}
-Das \textit{Session Initiation Protocol} wurde zuerst im Jahr 1999 als RFC 2543 eingeführt und im Jahr 2002 in den RFCs 3262-3265 weiter spezifiziert. Das SIP Protokoll ermöglicht es zwischen kommunizierenden Rechnern über ein IP-Netz eine Sitzung (\textit{Session}) für die Übermittlung von Echtzeitmedien aufzubauen. Die Session stellt einen logischen Kanal dar, über den die Echtzeitmedien mit Hilfe des RTP Protokolls transportiert werden. SIP definiert bestimmte Nachrichten für den Auf- und Abbau von Sitzungen, ist einfach konzipiert und für Menschen leicht lesbar, da es in Anlehnung an das Internet Protokoll HTTP entwickelt worden ist. 
+Das \textit{Session Initiation Protocol} wurde zuerst im Jahr 1999 als RFC 2543 eingeführt und im Jahr 2002 in den RFCs 3262-3265 weiter spezifiziert. Das SIP-Protokoll ermöglicht es, zwischen kommunizierenden Rechnern über ein IP-Netz eine Sitzung (\textit{Session}) für die Übermittlung von Echtzeitmedien aufzubauen. Die Session stellt einen logischen Kanal dar, über den die Echtzeitmedien mit Hilfe des RTP-Protokolls transportiert werden. SIP definiert bestimmte Nachrichten für den Auf- und Abbau von Sitzungen, ist einfach konzipiert und für Menschen leicht lesbar, da es in Anlehnung an das Internet-Protokoll HTTP entwickelt worden ist. 
 
 \subsection{SIP Komponenten}
 % Über komponenten eines SIP Systems schreiben
@@ -128,13 +128,13 @@ In der Architektur sind folgende Systemkomponenten definiert:
 
 Obwohl zwischen den Komponenten unterschieden wird, können sie alle in einem Rechner untergebracht werden oder auf verschiedene Computer verteilt werden. Eine typische Konfiguration sieht vor, dass in ein SIP Server die Proxy- und Registrarkomponentene enthält, während der Clients nur über den User Agent verfügen.
 
-\textbf{User Agent (UA):}User Agents sind alle SIP-fähigen Endgeräte. Diese sind SIP-Telefone, Softphones oder andere Anwendungen und Hardware, die nach dem SIP Protokoll kommunizieren. Dabei besteht ein UA intern aus einem User Agent Client (UAC), der Anfragen mittels Nachrichten stellt und einem User Agent Server (UAS), der Anfragen entgegen nimmt. Für die einfachste Form des Verbindungsaufbaus genügen zwei User Agents. Wobei jeder der UAS jeweils ein UAS und UAC sein kann. 
+\textbf{User Agent (UA)}: User Agents sind alle SIP-fähigen Endgeräte. Diese sind SIP-Telefone, Softphones oder andere Anwendungen und Hardware, die nach dem SIP Protokoll kommunizieren. Dabei besteht ein UA intern aus einem User Agent Client (UAC), der Anfragen mittels Nachrichten stellt und einem User Agent Server (UAS), der Anfragen entgegen nimmt. Für die einfachste Form des Verbindungsaufbaus genügen zwei User Agents. Wobei jeder der UAS jeweils ein UAS und UAC sein kann. 
 
-\textbf{Proxy Server:} Proxy Server dienen primär dem Routing und der Weiterleitung der SIP-Nachrichten. Zwischen zwei UA können beliebig viele Proxy Server liegen. Proxy Server können Rechtemanagement durchführen und ermitteln ob ein Benutzer berechtigt ist einen Anruf durchzuführen (Authentification). Es werden zwei Arten von Proxy Servern unterschieden, zum einen der stateful Proxy, der Verbindungszustände zwischen den UA speichert und zum anderen der stateless Proxy, der SIP Nachrichten lediglich weiterleitet.  Der Verbindungsauf- und abbau läuft bei SIP in der Regel über einen SIP Proxy Server ab, vor allem wenn sich Benutzer in Verschiedenen Domänen befinden. Der eigentliche Medienfluss findet jedoch direkt zwischen den User Agents ab. 
+\textbf{Proxy Server:} Proxy Server dienen primär dem Routing und der Weiterleitung der SIP-Nachrichten. Zwischen zwei UA können beliebig viele Proxy Server liegen. Proxy Server können Rechtemanagement durchführen und ermitteln, ob ein Benutzer berechtigt ist einen Anruf durchzuführen (Authentification). Es werden zwei Arten von Proxy Servern unterschieden, zum einen der \textit{Stateful Proxy}, der Verbindungszustände zwischen den UA speichert und zum anderen der \textit{Stateless Proxy}, der SIP-Nachrichten lediglich weiterleitet.  Der Verbindungsauf- und Abbau läuft bei SIP in der Regel über einen SIP Proxy Server ab, vor allem wenn sich Benutzer in verschiedenen Domänen befinden. Der eigentliche Medienfluss findet jedoch direkt zwischen den User Agents ab. 
 
 \textbf{Redirect Server:} Ein Redirect Server dient selber als UAS und beantwortet Lokationsanfragen eines UAC, indem er diese aus einer angeschlossen Lokationsdatenbank bezieht. Im Unterschied zum Proxy Server leitet er ankommende Anfragen nicht an einen UAC weiter, sondern verweist per Nachricht lediglich auf eine mögliche Lokation des gesuchten UAC. 
 
-\textbf{Registrar:} Der Registrar oder Location Server, speichert ausschließlich die  Aufenthaltsorte in Form von SIP-Adressen, nimmt aber an der SIP-Kommunikation zwischen den User Agents nicht teil. User Agents registrieren sich mit ihrem Aufenthaltsort bei einem Proxy Server, der die Information dann an den Registrar übermittelt. Somit kann die Mobilität von Teilnehmern ermöglicht werden. 
+\textbf{Registrar:} Der Registrar oder Location Server speichert ausschließlich die  Aufenthaltsorte in Form von SIP-Adressen, nimmt aber an der SIP-Kommunikation zwischen den User Agents nicht teil. User Agents registrieren sich mit ihrem Aufenthaltsort bei einem Proxy Server, der die Information dann an den Registrar übermittelt. Somit kann die Mobilität von Teilnehmern ermöglicht werden. 
 
 \subsection{Aufbau einer SIP Nachricht}
 Die SIP-Nachrichten werden textbasiert aufgebaut. Jede Nachricht setzt sich aus einer Start-Zeile, einem \textit{Message Header} und einem \textit{Message Body} zusammen, wobei der \textit{Message Body} optional ist. Eine SIP-Nachricht stellt entweder eine Anforderung (\textit{Request}) von einem Initiator der Kommunikation oder eine Antwort (\textit{Response}) vom Partner an den Initiator dar. Somit gibt es nur zwei Arten von SIP Nachrichten:
@@ -165,44 +165,43 @@ Content-Type: application/sdp
 \caption{Beispiel eines typischen SIP-Requests}
 \end{figure}
 
-Die Start-Zeile (\textit{Status-Line}) besteht bei den Requests aus einer Angabe des Request-Typs z.B. INVITE, einer \textit{Request-URI}(z.B. sip:8495302002@192.168.2.25) als Ziel-Adresse und der SIP-Version. Bei einem Response enthält die \textit{Status-Line} die SIP-Version und einen \textit{Status-Code} der den Typ der Nachricht definiert. Beide Typen von Nachrichten enthalten mehrere Header-Felder, von den folgende besonders hervorzuheben sind:
+Die Start-Zeile (\textit{Status-Line}) besteht bei den Requests aus einer Angabe des Request-Typs z.B. INVITE, einer \textit{Request-URI}(z.B. sip:8495302002@192.168.2.25) als Ziel-Adresse und der SIP-Version. Bei einem Response enthält die \textit{Status-Line} die SIP-Version und einen \textit{Status-Code}, der den Nachrichtentyp definiert. Beide Typen von Nachrichten enthalten mehrere Header-Felder, von den folgende besonders hervorzuheben sind:
 \begin{itemize}
 	\item From: Dieses Feld enthält einen Namen und eine SIP-URI, die den Absender eindeutig identifiziert. 
 	\item To: Der To-Header identifiziert den logischen Empfänger der Anfrage und entspricht der URL in der Anfragezeile. Diese Headerzeile ist ähnlich der des From-Headers aufgebaut.
 	\item Contact: Contact gibt eine SIP-URI an, unter der die Gegenstelle für weitere
-Anfragen erreicht werden kann. Das Format entspricht dem der To- und From-
-Header. Ein Parameter für diese Headerzeile ist \textit{expires}, der die Zeit in Sekunden angibt, bis der Kontakt nicht mehr verfügbar ist.
-	\item Call-ID: Diese identifiziert den Anruf. Jeder Anruf enthält eine ID, die sich aus einer Zufallszahl und dem Namen des Anrufenden zusammen setzt. 
+Anfragen erreicht werden kann. Das Format entspricht dem der To- und From-Header. Ein Parameter für diese Headerzeile ist \textit{expires}, der die Zeit in Sekunden angibt, bis der Kontakt nicht mehr verfügbar ist.
+	\item Call-ID: Diese identifiziert den Anruf. Jeder Anruf enthält eine ID, die sich aus einer Zufallszahl und den Namen des Anrufenden zusammensetzt. 
 \end{itemize}
 
-\subsubsection{Request Typen}
+\subsubsection{Request-Typen}
 In der Spezifikation RFC 3261 werden sechs Request-Typen definiert, die jedoch inzwischen um weitere Request Typen erweitert wurden:
 \small
 \begin{itemize}
 	\item INVITE: Mit INVITE initiiert ein IP-Telefon einen neuen Anruf. Eine INVITE Nachricht enthält die SIP-Adresse von beiden Teilnehmern, einen Grund(Subject) und dessen Priorität.
 	\item BYE: Mit BYE wird der Abbau der bestehenden VoIP-Verbindung zwischen zwei Teilnehmern initiiert.
 	\item ACK: ACK dient als "`positive"' Bestätigung mit der die Annahme eines ankommenden Anrufes bestätigt wird.
-	\item OPTIONS: Mit dieser Nachricht kann man die Fähigkeiten eines Teilnehmers befragen (\textit{Media Capabilities}), die aussagen welche Arten von Medien empfangen werden können und welche Verfahren zu Kodierung dieser Medien unterstützt werden.
-	\item CANCEL: Mit CANCEL kann eine bereits initiierte VoIP-Verbindung abgebrochen werden und vorzeitig beendet werden. 
+	\item OPTIONS: Mit dieser Nachricht kann man die Fähigkeiten eines Teilnehmers befragen (\textit{Media Capabilities}), die bestimmen welche Arten von Medien empfangen werden können und welche Verfahren zur Kodierung dieser Medien unterstützt werden.
+	\item CANCEL: Mit CANCEL kann eine bereits initiierte VoIP-Verbindung abgebrochen und vorzeitig beendet werden. 
 	\item REGISTER: Mit REGISTER werden dem \textit{Registrar} Informationen über die Lokation des Teilnehmers mitgeteilt. 
 \end{itemize}
 
 Ausgewählte erweiterte Request-Typen, die in zusätzlichen RFCs (3428,3265) nach\-träg\-lich definiert wurden:
 
 \begin{itemize}
-	\item MESSAGE: Mit MESSAGE Nachrichten kann Inhalt in der Form von \textit{Multi\-media Internet Message Extensions}(MIME) Nachrichten über\-tragen werden.  MESSAGE Nachrichten initiieren keinen SIP Dialog und werden üblicherweise wie normale Kurz\-nachrichten verstanden. 
-	\item SUBSCRIBE, PUBLISH und NOTIFY: SIP kann verwendet werden, um bestimmte Ereignisse zu übermitteln. Hierfür sind die Nachrichten SUBSCRIBE, PUBLISH  und NOTIFY eingeführt worden. So kann z.B. die Anwesenheit eines Teilnehmers von weiteren Teilnehmern mit einer SUBSCRIBE Nachricht abonniert werden. Geht dieser Teilnehmer online, so benachrichtigt er alle anderen Teilnehmer mit einer PUBLISH Nachricht, an den REGISTRAR. Dieser sendet NOTIFY Nachrichten an alle Abonnenten des Anwenders.  
+	\item MESSAGE: Mit MESSAGE Nachrichten kann Inhalt in der Form von \textit{Multi\-media Internet Message Extensions}(MIME) Nachrichten über\-tragen werden.  MESSAGE-Nachrichten initiieren keinen SIP-Dialog und werden üblicherweise wie normale Kurz\-nachrichten verstanden. 
+	\item SUBSCRIBE, PUBLISH und NOTIFY: SIP kann verwendet werden, um bestimmte Ereignisse zu übermitteln. Hierfür sind die Nachrichten SUBSCRIBE, PUBLISH  und NOTIFY eingeführt worden. So kann z.B. die Anwesenheit eines Teilnehmers von weiteren Teilnehmern mit einer SUBSCRIBE-Nachricht abonniert werden. Geht dieser Teilnehmer online, so benachrichtigt er alle anderen Teilnehmer mit einer PUBLISH-Nachricht an den Presence-Server. Dieser sendet NOTIFY-Nachrichten an alle Abonnenten des Anwenders.  
 \end{itemize}
 
-\subsubsection{Response Typen}
+\subsubsection{Response-Typen}
 \small
-Im RFC 3261 werden ebenfalls sechs Response Klassen spezifiziert, die dem Absender des Requests eine Response signalisieren. Diese Klassen sind in die Nummernräume von 100 bis 600 unterteilt.
+Im RFC 3261 werden ebenfalls sechs Response-Klassen spezifiziert, die dem Absender des Requests eine Response signalisieren. Diese Klassen sind in die Nummernräume von 100 bis 600 unterteilt.
 
 \begin{itemize}
 	\item \textbf{100er Klasse (Information)}: Nachrichten dieser Klasse teilen mit, dass der Request weiter bearbeitet wird.
-	\subitem 100: Trying - der Empfänger ist dabei die Empfangene Nachricht zu verarbeiten. Eine endgültige Antwort steht noch aus.
+	\subitem 100: Trying - der Empfänger ist dabei, die empfangene Nachricht zu verarbeiten. Eine endgültige Antwort steht noch aus.
 	\subitem 180: Ringing - dem Anrufenden wird mitgeteilt, dass der eingehende Anruf über einen Klingelton signalisiert wird.
-	\item \textbf{200er Klasse (Erfolg)}: Eine Nachricht dieser Klasse teilt mit, dass der Request erfolgreich empfangen und akzeptiert wurde. Der Response besteht nur aus der 200 OK Nachricht.
+	\item \textbf{200er Klasse (Erfolg)}: Eine Nachricht dieser Klasse teilt mit, dass der Request erfolgreich empfangen und akzeptiert wurde. Der Response besteht nur aus der 200-OK-Nachricht.
 	\item \textbf{300er Klasse (Weiterleitung}): Hier wird mit dem Absender eines Requests signalisiert, dass weitere Aktionen bei der Bearbeitung des Requests nötig sind. Beispielhafte Weiterleitungen:
 	\subitem 301 Moved Permanently 
 	\subitem 302 Moved Temporarily 
@@ -222,14 +221,13 @@ Im RFC 3261 werden ebenfalls sechs Response Klassen spezifiziert, die dem Absend
 
 % Grafik über Rufaufbau
 
-Teilnehmer A möchte zu Teilnehmer B eine Verbindung herstellen. Dazu sendet er eine SIP-Nachricht INVITE an Teilnehmer B. Die Nachricht enthält die Beschreibung der RTP-Session nach dem SDP Protokoll und alle notwendigen Angaben, wie z.B. die Sprachkodierung, damit Teilnehmer B Prüfen kann ob eine Session hergestellt werden kann. 
-Falls Teilnehmer B die Verbindung annehmen kann, klingelt das angerufene IP-Telefon von Teilnehmer B, dies wird mit der SIP-Response 180 Ringing signalisiert. 
-Hat nun Teilnehmer B den Hörer abgehoben, sendet er einen SIP-Response 200 OK, der vom Teilnehmer A mit der Nachricht ACK bestätigt wird. Mit dem Empfang der ACK Nachricht von Teilnehmer B, ist die logische Verbindung abgeschlossen. Nun kann eine Verbindung nach dem Protokoll RTP verlaufen und es besteht eine Session zwischen den Teilnehmern. 
-Die bestehende RTP-Session kann von beiden Seiten beendet werden. Beendet Teilnehmer A durch das Absenden der SIP Nachricht BYE die Session, bestätigt Teilnehmer B den Empfang der Nachricht mit der SIP-Response 200 OK. Mit dem Empfang von 200 OK beim IP Telefon des Teilnehmers A wird die Session beendet. 
+Teilnehmer A möchte zu Teilnehmer B eine Verbindung herstellen. Dazu sendet er eine SIP-Nachricht INVITE an Teilnehmer B. Die Nachricht enthält die Beschreibung der RTP-Session nach dem SDP-Protokoll und alle notwendigen Angaben, wie z.B. die Sprachkodierung, damit Teilnehmer B prüfen kann, ob eine Session hergestellt werden kann. Falls Teilnehmer B die Verbindung annehmen kann, klingelt das angerufene IP-Telefon von Teilnehmer B, dies wird mit der SIP-Response 180 Ringing signalisiert. 
+Hat nun Teilnehmer B den Hörer abgehoben, sendet er einen SIP-Response 200 OK, der vom Teilnehmer A mit der Nachricht ACK bestätigt wird. Mit dem Empfang der ACK-Nachricht von Teilnehmer B, ist die logische Verbindung abgeschlossen. Nun kann eine Verbindung nach dem Protokoll RTP verlaufen und es besteht eine Session zwischen den Teilnehmern. 
+Die bestehende RTP-Session kann von beiden Seiten beendet werden. Beendet Teilnehmer A durch das Absenden der SIP-Nachricht BYE die Session, bestätigt Teilnehmer B den Empfang der Nachricht mit der SIP-Response 200 OK. Mit dem Empfang von 200 OK beim IP-Telefon des Teilnehmers A wird die Session beendet. 
 \begin{figure}[tbh]
 	\centering
 		\includegraphics[width=.60\textwidth]{grafiken/sipanruf.eps}
-	\caption{Sip Anruf ohne Proxy}
+	\caption{SIP-Anruf ohne Proxy}
 	\label{fig:sipanruf}
 \end{figure}
 \subsection{Registrierung der Lokation von Teilnehmern}
@@ -243,7 +241,7 @@ Die bestehende RTP-Session kann von beiden Seiten beendet werden. Beendet Teilne
 
 SIP definiert eine spezielle Komponente, die als Registrar bezeichnet wird. Ein Registrar enthält die Angaben hinsichtlich der Lokation von Teilnehmern in einer Domain. 
 
-Dadurch, dass ein Teilnehmer mobil sein kann und verschiedene Clients benutzen kann, können ihm auch verschiedene Lokationen zugeordnet werden und so kann er seine aktuelle Lokation beim Registrar anmelden. Hierfür wird die Request Nachricht REGISTER verwendet. Mit dieser Nachricht kann jeder Teilnehmer die Umleitung der bei ihm ankommenden Anrufe selbst veranlassen. 
+Dadurch, dass ein Teilnehmer mobil sein und verschiedene Clients benutzen kann, können ihm auch verschiedene Lokationen zugeordnet werden und so kann er seine aktuelle Lokation beim Registrar anmelden. Hierfür wird die Request Nachricht REGISTER verwendet. Mit dieser Nachricht kann jeder Teilnehmer die Umleitung der bei ihm ankommenden Anrufe selbst veranlassen. 
 
 Möchte ein Teilnehmer mit der SIP Adresse \textit{sip:bob@uni-mannheim.de} in seiner Heimat-Domain \textit{uni-mannheim.de} Anrufe entgegennehmen, so wird an den Registrar, z.B. \textit{registrar.uni-mannheim.de}, mit der Request Nachricht REGISTER, dieser Wunsch mitgeteilt. Relevante Felder der Nachricht enthalten die Herkunft (From), die Lokation des Benutzers(Contact) und die Gültigkeit der Nachricht(Expires). Wechselt der Benutzer vor Ablauf der Expire Zeit seine Lokation, so wird der Registrar mit einer weiteren Nachricht darüber aktualisiert. Der Registrar bestätigt den Empfang der Nachrichten jeweils mit einer ACK Nachricht. Ebenso ist eine Registrierung über eine andere Person möglich, so kann z.B. die Sekretärin die aktuelle Lokation ihres Chefs aktualisieren. 
 
@@ -292,7 +290,7 @@ SDP ist ein textbasiertes Format, in dem die Eigenschaft und der Wert in Textfor
 % Bild vom SIP Message
 \begin{figure}
 \lstset{frame=single}
-	\begin{lstlisting}[label={SIP-Message}]
+	\begin{lstlisting}[label={SDP-Message}]
 v=0
 o=Anonymous 1234567890 1234567890 IN IP4 192.168.3.250
 s=Testing the SDP Message
@@ -302,7 +300,7 @@ a=rtpmap:8 PCMA/8000
 a=rtpmap:3 GSM/8000
 a=rtpmap:0 PCMU/8000
 \end{lstlisting}
-\caption{Beispiel einer SDP Nachricht}
+\caption{Beispiel einer SDP-Nachricht}
 \end{figure}
 
 

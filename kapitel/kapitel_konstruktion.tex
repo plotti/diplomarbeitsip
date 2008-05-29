@@ -36,7 +36,7 @@ Dadurch, dass eine direkte Verbindung zu jedem Spieler aufgebaut wird, fällt die
 \begin{figure}[tbh]
 	\centering
 		\includegraphics[width=1.00\textwidth]{grafiken/entwurf-p2p.eps}
-		\caption{P2P Architektur mit direkten Audioverbindungen der Spieler untereinander in den entsprechenden Spielezonen}
+		\caption{Peer-to-Peer-Architektur mit direkten Audioverbindungen der Spieler untereinander in den entsprechenden Spielezonen}
 	\label{fig:entwurf-p2p}
 \end{figure}
 
@@ -75,7 +75,7 @@ So können nur bei einer starken Korrelation Spieler, die den gleichen Proxy benu
 \begin{figure}[tbh]
 	\centering
 		\includegraphics[width=1.00\textwidth]{grafiken/entwurf-proxy.eps}
-	\caption{Eine Proxy Architektur. In schwarz ist die Verbindung von Spieler 3 mit Spieler 7 dargestellt.}
+	\caption{Eine Proxy-Architektur. In schwarz ist die Verbindung von Spieler 3 mit Spieler 7 dargestellt.}
 	\label{fig:entwurf-proxy}
 \end{figure}
 
@@ -92,7 +92,7 @@ Neue Probleme entstehen beim Übergang von einem Server zum anderen: Wenn Teilneh
 \begin{figure}
 	\centering
 		\includegraphics[width=1.00\textwidth]{grafiken/entwurf-verteilteserver.eps}
-	\caption{Verteile Server S1...S4. Die Verbindungen der Spielewelt S3 wird in schwarz dargestellt. }
+	\caption{Verteilte Server S1...S4. Die Verbindungen der Spielewelt S3 werden in schwarz dargestellt. }
 	\label{fig:entwurf-verteilteserver}
 \end{figure}
 
@@ -180,7 +180,7 @@ Die verbleibenden Alternativen lassen sich in 4 Gruppen gliedern:
 \end{itemize}
 
 
-\subsection{Komplett Dezentralisierte Ansätze}
+\subsection{Komplett dezentralisierte Ansätze}
 Ansätze der Alternative $A_{9}$ haben alle gemeinsam, dass sowohl der Audiostrom, als auch der Datenstrom nur zwischen den einzelnen Knoten fließt und keine zentrale Komponente benötigt wird. Sie unterscheiden sich jedoch darin, in welchen Topologien die einzelnen Clients miteinander verbunden werden und auf welche Art und weise die Signalisierung stattfindet. 
 
 \subsubsection{Multicast}
@@ -209,7 +209,7 @@ In einer N-Teilnehmer Konferenz muss jedoch jeder Teilnehmer über genügend Bandb
 
 Das größte Problem bei diesem Ansatz stellt die fehlende strukturierte Signalisierung und Lokalisierung der Teilnehmer dar, da kein Knoten eine vollständige Information darüber besitzt, wer Teil einer Konferenz sein soll. Schulzrinne stellen im Kapitel 5 vorgestellten Full-Mesh Ansatz genau diese Problematik fest.
 
-\subsection{Komplett Zentralisierte Ansätze}
+\subsection{Komplett zentralisierte Ansätze}
 \label{zentralansatz}
 Die in Kapitel 5 von Singh und Acharya vorgestellte Methode kann man als zentralisiertes SIP bezeichnen. Hier wird die Signalisierung und Lokation der Teilnehmer und das Abmischen der Audioströme zentral vorgenommen. Den komplett zentralisierten Ansatz verfolgen auch Safei und Boustead im vorgestellten MICE System. Diese Architektur bietet zunächst eine sehr gute Ausgangsbasis für Sprachkommunikationslösungen mit einer begrenzten Anzahl an Teilnehmern, da es auch Knoten mit geringer Bandbreite eine Teilnahme ermöglicht. 
 
@@ -347,7 +347,7 @@ Im Anderen Fall ist die Verbindungslatenz höher, da erst eine Reihe von Schritte
 
 Beide Ansätze können jedoch fehlschlagen wenn die Anzahl an Benutzern sehr groß wird.
 
-\section{Gründe für die Entscheidung eine Hybride Architektur zu benutzen}
+\section{Implementierung einer hybriden Architektur}
 Im darauf folgendem Kapitel wird die Umsetzung der Alternative $A_{3}$ besprochen, da diese Kombination es erlaubt die in Kapitel 3 gestellten Ziele zu realisieren und gleichzeitig wie gesehen Möglichkeiten Bandbreite einzusparen, die Peer-to-Peer sehr kostbar ist. Außerdem sprechen noch viele weitere Vorteile für die Präferenz dieser Alternative:
 
 \begin{itemize}

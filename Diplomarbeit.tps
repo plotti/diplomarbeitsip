@@ -5,7 +5,7 @@ Version=2
 [SessionInfo]
 ActiveTab=0
 FrameCount=20
-ActiveFrame=16
+ActiveFrame=11
 
 [Frame0]
 Columns=1
@@ -61,9 +61,9 @@ cxCur=751
 cxMin=10
 
 [Frame1_View0,0]
-Cursor.row=0
-Cursor.column=0
-TopSubLine=239
+Cursor.row=11
+Cursor.column=39
+TopSubLine=17
 
 [Frame2]
 Columns=1
@@ -73,7 +73,7 @@ ShowCmd=1
 MinPos.x=-1
 MinPos.y=-1
 MaxPos.x=-4
-MaxPos.y=-26
+MaxPos.y=-30
 NormalPos.left=132
 NormalPos.top=174
 NormalPos.right=912
@@ -90,9 +90,9 @@ cxCur=751
 cxMin=10
 
 [Frame2_View0,0]
-Cursor.row=346
-Cursor.column=359
-TopSubLine=896
+Cursor.row=189
+Cursor.column=368
+TopSubLine=499
 
 [Frame3]
 Columns=1
@@ -102,7 +102,7 @@ ShowCmd=1
 MinPos.x=-1
 MinPos.y=-1
 MaxPos.x=-4
-MaxPos.y=-26
+MaxPos.y=-30
 NormalPos.left=0
 NormalPos.top=0
 NormalPos.right=780
@@ -119,9 +119,9 @@ cxCur=751
 cxMin=10
 
 [Frame3_View0,0]
-Cursor.row=152
+Cursor.row=7
 Cursor.column=0
-TopSubLine=337
+TopSubLine=11
 
 [Frame4]
 Columns=1
@@ -177,9 +177,9 @@ cxCur=751
 cxMin=10
 
 [Frame5_View0,0]
-Cursor.row=224
-Cursor.column=825
-TopSubLine=702
+Cursor.row=263
+Cursor.column=375
+TopSubLine=821
 
 [Frame6]
 Columns=1
@@ -218,7 +218,7 @@ ShowCmd=1
 MinPos.x=-1
 MinPos.y=-1
 MaxPos.x=-4
-MaxPos.y=-26
+MaxPos.y=-30
 NormalPos.left=110
 NormalPos.top=145
 NormalPos.right=890
@@ -235,9 +235,9 @@ cxCur=751
 cxMin=10
 
 [Frame7_View0,0]
-Cursor.row=0
-Cursor.column=0
-TopSubLine=0
+Cursor.row=83
+Cursor.column=176
+TopSubLine=245
 
 [Frame8]
 Columns=1
@@ -322,15 +322,15 @@ cxCur=801
 cxMin=10
 
 [Frame10_View0,0]
-Cursor.row=316
-Cursor.column=562
-TopSubLine=776
+Cursor.row=94
+Cursor.column=77
+TopSubLine=224
 
 [Frame11]
 Columns=1
 Rows=1
-Flags=0
-ShowCmd=1
+Flags=2
+ShowCmd=3
 MinPos.x=-1
 MinPos.y=-1
 MaxPos.x=-4
@@ -343,17 +343,17 @@ Class=CLatexEdit
 Document=kapitel\kapitel_sip.tex
 
 [Frame11_Row0]
-cyCur=346
+cyCur=432
 cyMin=10
 
 [Frame11_Col0]
-cxCur=787
+cxCur=940
 cxMin=10
 
 [Frame11_View0,0]
-Cursor.row=26
-Cursor.column=1
-TopSubLine=61
+Cursor.row=237
+Cursor.column=25
+TopSubLine=414
 
 [Frame12]
 Columns=1
@@ -474,8 +474,8 @@ TopSubLine=0
 [Frame16]
 Columns=1
 Rows=1
-Flags=2
-ShowCmd=3
+Flags=0
+ShowCmd=1
 MinPos.x=-1
 MinPos.y=-1
 MaxPos.x=-4
@@ -488,17 +488,17 @@ Class=CLatexEdit
 Document=kapitel\titel.tex
 
 [Frame16_Row0]
-cyCur=432
+cyCur=162
 cyMin=10
 
 [Frame16_Col0]
-cxCur=940
+cxCur=1000
 cxMin=10
 
 [Frame16_View0,0]
-Cursor.row=35
-Cursor.column=32
-TopSubLine=16
+Cursor.row=17
+Cursor.column=18
+TopSubLine=0
 
 [Frame17]
 Columns=1
@@ -525,9 +525,9 @@ cxCur=746
 cxMin=10
 
 [Frame17_View0,0]
-Cursor.row=0
-Cursor.column=0
-TopSubLine=0
+Cursor.row=124
+Cursor.column=70
+TopSubLine=195
 
 [Frame18]
 Columns=1
