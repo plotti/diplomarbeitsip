@@ -304,9 +304,9 @@ Befinden sich beispielsweise 16 Personen im Spiel und nimmt man an, dass sich im
 
 Dabei gibt $P_{Hoernaehe}$ an, wie viele Personen, sich im Schnitt in der Hörnähe des Teilnehmers befinden. Dieser Wert kann verändert werden, in dem die \textit{Hörerreichweite}\footnote{Radius, in dem die Stimmen anderer Teilnehmer abonniert werden} des Spielers vergrößert oder verkleinert wird. 
 
-Generell gilt je größer die Hörerreichweite, desto mehr Personen können sich in der Hörnähe des Teilnehmers befinden. In diesem Fall wird bei sich bei festgelegten Hörerreichweite von 10 m, eine theoretische Wahrscheinlichkeit von 30\% angenommen, dass eine Person in diesem Hörradius befindet. 
+Generell gilt je größer die Hörerreichweite, desto mehr Personen können sich in der Hörnähe des Teilnehmers befinden. In diesem Fall wird bei einer Hörerreichweite von 10 m, eine theoretische Wahrscheinlichkeit von 30\% angenommen, dass eine Person sich in diesem Hörradius befindet. 
 
-Nun wird die Gleichung um diese Wahrscheinlichkeit ergänzt, und immer noch angenommen, dass sich 16 Spieler im Spiel befinden. 
+Nun wird die Gleichung um diese Wahrscheinlichkeit ergänzt und immer noch angenommen, dass sich 16 Spieler im Spiel befinden. 
 
 Upstream/Downstream
 
@@ -314,7 +314,7 @@ Upstream/Downstream
 	\mbox{16 Spieler} \cdot 16 \frac{Kbit}{s} \cdot 30\% = 76,8\frac{Kbit}{s}
 \]
 
-Hier ist eindeutig eine Reduzierung der Bandbreite möglich. Natürlich kann im schlechtesten Fall, bei einer hohen Avatardichte, der Fall eintreten, dass wieder alle 16 Teilnehmer sich in der Hörnähe des Spielers befinden. Dann ist diese Lösung genauso effizient wie die Full-Mesh Topologie, da der Spieler mit allen Teilnehmern Verbindungen aufbauen muss. Im schnitt kann jedoch ein großer Prozentsatz der Bandbreite eingespart werden, wenn man davon ausgeht, dass Spieler nur an Audioverbindungen mit Spielern interessiert sind, die sich in ihrer Nähe befinden.
+Hier ist eindeutig eine Reduzierung der Bandbreite möglich. Natürlich kann im schlechtesten Fall, bei einer hohen Avatardichte, der Fall eintreten, dass wieder alle 16 Teilnehmer sich in der Hörnähe des Spielers befinden. Dann ist diese Lösung genauso effizient wie die Full-Mesh Topologie, da der Spieler mit allen Teilnehmern Verbindungen aufbauen muss. Im Schnitt kann jedoch ein großer Prozentsatz der Bandbreite eingespart werden, wenn man davon ausgeht, dass Spieler nur an Audioverbindungen mit Spielern interessiert sind, die sich in ihrer Nähe befinden.
 
 Es lässt sich sogar noch mehr Bandbreite einsparen, wenn man die Hörreichweite in zwei Zonen (entsprechend Abschnitt \label{proxemikalssteuerungvonkonferenzen}) mit verschiedenen Audiocodecs unterteilt wird. In einer private Zone wird ein hochwertige Audiocodec mit einer größeren Bandbreite benutzt und in einer sozialen Zone ein wird ein Codec mit einer niedrigeren Bandbreite benutzt. 
 
