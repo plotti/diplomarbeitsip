@@ -24,7 +24,7 @@ Der Bandbreitenverbrauch wurde aus Sicht des Teilnehmers 1 gemessen. Da alle 10 
 \begin{figure}[tbh]
 	\centering
 		\includegraphics[width=.70\textwidth]{grafiken/fullmeshchart.eps}
-	\caption{Bandbreitenverbrauch beim Full Mesh Ansatz}
+	\caption{Bandbreitenverbrauch beim Full-Mesh-Ansatz}
 	\label{fig:fullmesh-withchart}
 \end{figure}
 
@@ -93,7 +93,7 @@ Hier wird in der öffentlichen Zone eine Silence Supression durchgeführt. In der 
 \begin{figure}[tbh]
 	\centering
 		\includegraphics[width=1.00\textwidth]{grafiken/mitvadupdown.eps}
-		\caption{Der Up- und Downstream mit der VAD - Technik}
+		\caption{Der Up- und Downstream mit der VAD-Technik}
 	\label{fig:VADupdown}
 \end{figure}
 
@@ -122,7 +122,7 @@ Beim Bandbreitenvergleich der SIP und RTP Protokolle sieht man diesmal, dass bei
 
 \begin{figure}[tbh]
 	\centering
-	\caption{Gegenüberstellung des SIP und RTP Traffics mit der SIP HOLD - Technik}
+	\caption{Gegenüberstellung des SIP und RTP Traffics mit der SIP HOLD-Technik}
 		\includegraphics[width=1.00\textwidth]{grafiken/mithold1.eps}
 	\label{fig:mithold1}
 \end{figure}
@@ -155,5 +155,9 @@ Im Vergleich (siehe Abbildung \ref{fig:mitvadundrtpsip}) der beiden SIP und RTP 
 %--> Müsste zeigen dass weniger Streams gemischt werden müssen und somit Last eingespart werden %kann. ( Wie messe ich das?)
 %MESSUNG: einfach nur die conference bridge messen.
 
-\section{Tests von SIP als Netzwerkschnitstelle}
+\section{Tests von SIP als Netzwerkschnittstelle}
 -- RTT über die zeit bei konstanten benutzern vs. Resultat mit Multicast Sockets oder Skype.
+-- bzw. Vergleich des Traffics bei Zunehmender Benutzeranzahl
+
+\section{Test der Conference-Bridge}
+-- CPU vs Anzahl gleichzeitig abgemischter Audioströme.
