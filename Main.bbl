@@ -1,4 +1,4 @@
-\begin{thebibliography}{83}
+\begin{thebibliography}{84}
 % this bibliography was produced with the style dinat.bst v2.5
 \makeatletter
 \newcommand{\dinatlabel}[1]%
@@ -143,6 +143,14 @@
 \dinatlabel{Gerhard 1998} \textsc{Gerhard}, Maletzke:
 \newblock \emph{Kommunikationswissenschaft im Überblick}.
 \newblock VS VERLAG, 1998
+
+\bibitem[Gibbs u.\,a.(2003)Gibbs, Wadley, Hew und Graham]{gibbs03}
+\dinatlabel{Gibbs u.\,a. 2003} \textsc{Gibbs}, M.~; \textsc{Wadley}, Greg~;
+  \textsc{Hew}, Kevin~; \textsc{Graham}, C.:
+\newblock Computer supported cooperative play 'third places' and online
+  videogames.
+\newblock In: \emph{OzCHI}
+\newblock (2003), S.~238--241
 
 \bibitem[Gibbs u.\,a.(2004{\natexlab{a}})Gibbs, Hew und Wadley]{gibbs04}
 \dinatlabel{Gibbs u.\,a. 2004{\natexlab{a}}} \textsc{Gibbs}, Martin~;
