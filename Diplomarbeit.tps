@@ -5,7 +5,7 @@ Version=2
 [SessionInfo]
 ActiveTab=0
 FrameCount=20
-ActiveFrame=11
+ActiveFrame=10
 
 [Frame0]
 Columns=1
@@ -61,9 +61,9 @@ cxCur=751
 cxMin=10
 
 [Frame1_View0,0]
-Cursor.row=11
-Cursor.column=39
-TopSubLine=17
+Cursor.row=79
+Cursor.column=450
+TopSubLine=257
 
 [Frame2]
 Columns=1
@@ -90,9 +90,9 @@ cxCur=751
 cxMin=10
 
 [Frame2_View0,0]
-Cursor.row=189
-Cursor.column=368
-TopSubLine=499
+Cursor.row=0
+Cursor.column=0
+TopSubLine=0
 
 [Frame3]
 Columns=1
@@ -177,8 +177,8 @@ cxCur=751
 cxMin=10
 
 [Frame5_View0,0]
-Cursor.row=263
-Cursor.column=375
+Cursor.row=0
+Cursor.column=0
 TopSubLine=821
 
 [Frame6]
@@ -235,8 +235,8 @@ cxCur=751
 cxMin=10
 
 [Frame7_View0,0]
-Cursor.row=83
-Cursor.column=176
+Cursor.row=0
+Cursor.column=0
 TopSubLine=245
 
 [Frame8]
@@ -300,8 +300,8 @@ TopSubLine=0
 [Frame10]
 Columns=1
 Rows=1
-Flags=0
-ShowCmd=1
+Flags=2
+ShowCmd=3
 MinPos.x=-1
 MinPos.y=-1
 MaxPos.x=-4
@@ -314,23 +314,23 @@ Class=CLatexEdit
 Document=kapitel\kapitel_konstruktion.tex
 
 [Frame10_Row0]
-cyCur=346
+cyCur=432
 cyMin=10
 
 [Frame10_Col0]
-cxCur=801
+cxCur=940
 cxMin=10
 
 [Frame10_View0,0]
-Cursor.row=94
-Cursor.column=77
-TopSubLine=224
+Cursor.row=310
+Cursor.column=51
+TopSubLine=672
 
 [Frame11]
 Columns=1
 Rows=1
-Flags=2
-ShowCmd=3
+Flags=0
+ShowCmd=1
 MinPos.x=-1
 MinPos.y=-1
 MaxPos.x=-4
@@ -343,17 +343,17 @@ Class=CLatexEdit
 Document=kapitel\kapitel_sip.tex
 
 [Frame11_Row0]
-cyCur=432
+cyCur=346
 cyMin=10
 
 [Frame11_Col0]
-cxCur=940
+cxCur=787
 cxMin=10
 
 [Frame11_View0,0]
-Cursor.row=237
-Cursor.column=25
-TopSubLine=414
+Cursor.row=420
+Cursor.column=11
+TopSubLine=826
 
 [Frame12]
 Columns=1
@@ -409,9 +409,9 @@ cxCur=762
 cxMin=10
 
 [Frame13_View0,0]
-Cursor.row=39
-Cursor.column=390
-TopSubLine=159
+Cursor.row=43
+Cursor.column=0
+TopSubLine=171
 
 [Frame14]
 Columns=1
@@ -496,8 +496,8 @@ cxCur=1000
 cxMin=10
 
 [Frame16_View0,0]
-Cursor.row=17
-Cursor.column=18
+Cursor.row=0
+Cursor.column=0
 TopSubLine=0
 
 [Frame17]
@@ -527,7 +527,7 @@ cxMin=10
 [Frame17_View0,0]
 Cursor.row=124
 Cursor.column=70
-TopSubLine=195
+TopSubLine=214
 
 [Frame18]
 Columns=1

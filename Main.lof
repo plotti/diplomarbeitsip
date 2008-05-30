@@ -6,9 +6,9 @@
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {2.1}{\ignorespaces Kommunikationsmodell nach Shannon und Weaver}}{8}
 \contentsline {figure}{\numberline {2.2}{\ignorespaces Kommunikationsmodell nach Schramm}}{9}
-\contentsline {figure}{\numberline {2.3}{\ignorespaces Interaktivitat vs. Lebendigkeit}}{10}
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Interaktivit\"at vs. Lebendigkeit}}{11}
 \contentsline {figure}{\numberline {2.4}{\ignorespaces Proxemikmodell mit einer pers\"onlichen, sozialen und \"offentlichen Zone}}{12}
-\contentsline {figure}{\numberline {2.5}{\ignorespaces Viereck aus Spielerlebniss, Simulation, erz\"ahlerischem Aspekt und Spielerinteraktion}}{14}
+\contentsline {figure}{\numberline {2.5}{\ignorespaces Viereck aus Spielerlebnis, Simulation, erz\"ahlerischem Aspekt und Spielerinteraktion}}{15}
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {3.1}{\ignorespaces Ein einziger Kanal b\"undelt alle \"ubertragenen Signale und f\"uhrt so zu Adressierungsproblemen}}{25}
 \contentsline {figure}{\numberline {3.2}{\ignorespaces Einsatz von jeweils direkten Kommunikationskan\"alen zwischen Teilnehmern}}{26}
@@ -17,19 +17,19 @@
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {4.1}{\ignorespaces Eine \"Ubersicht \"uber die VoIP Protokollfamilie}}{33}
 \contentsline {figure}{\numberline {4.2}{\ignorespaces Beispiel eines typischen SIP-Requests}}{38}
-\contentsline {figure}{\numberline {4.3}{\ignorespaces Sip Anruf ohne Proxy}}{41}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces SIP-Anruf ohne Proxy}}{41}
 \contentsline {figure}{\numberline {4.4}{\ignorespaces Einsatz eines Proxy Servers mit Registrar}}{49}
 \contentsline {figure}{\numberline {4.5}{\ignorespaces Teilnehmer A schickt Teilnehmer B eine Nachricht. Beide sind Teil der gleichen Dom\"ane und benutzen den gleichen Proxy.}}{50}
 \contentsline {figure}{\numberline {4.6}{\ignorespaces Teilnehmer A m\"ochte die Pr\"asenz von Teilnehmer B abonnieren. Teilnehmer B aktualisiert seine Information.}}{50}
-\contentsline {figure}{\numberline {4.7}{\ignorespaces Beispiel einer SDP Nachricht}}{51}
+\contentsline {figure}{\numberline {4.7}{\ignorespaces Beispiel einer SDP-Nachricht}}{51}
 \contentsline {figure}{\numberline {4.8}{\ignorespaces Header eines RTP-Pakets}}{51}
 \contentsline {figure}{\numberline {4.9}{\ignorespaces Ein schematischer Ablauf von STUN}}{51}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {6.1}{\ignorespaces P2P Architektur mit direkten Audioverbindungen der Spieler untereinander in den entsprechenden Spielezonen}}{59}
-\contentsline {figure}{\numberline {6.2}{\ignorespaces Client Server Architektur, mit zentralem Mischserver in Nordamerika}}{60}
-\contentsline {figure}{\numberline {6.3}{\ignorespaces Eine Proxy Architektur. In schwarz ist die Verbindung von Spieler 3 mit Spieler 7 dargestellt.}}{62}
-\contentsline {figure}{\numberline {6.4}{\ignorespaces Verteile Server S1...S4. Die Verbindungen der Spielewelt S3 wird in schwarz dargestellt. }}{63}
+\contentsline {figure}{\numberline {6.1}{\ignorespaces Peer-to-Peer-Architektur mit direkten Audioverbindungen der Spieler untereinander in den entsprechenden Spielezonen}}{59}
+\contentsline {figure}{\numberline {6.2}{\ignorespaces Client Server Architektur mit zentralem Mischserver in Nordamerika}}{60}
+\contentsline {figure}{\numberline {6.3}{\ignorespaces Eine Proxy-Architektur. In schwarz ist die Verbindung von Spieler 3 mit Spieler 7 dargestellt.}}{62}
+\contentsline {figure}{\numberline {6.4}{\ignorespaces Verteilte Server S1...S4. Die Verbindungen der Spielewelt S3 werden in schwarz dargestellt. }}{63}
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {7.1}{\ignorespaces \"Ubersicht der Komponenten des PJSIP Protokollstacks}}{84}
 \contentsline {figure}{\numberline {7.2}{\ignorespaces Realistische 3D Spielewelt mit Radar}}{86}
@@ -45,16 +45,16 @@
 \contentsline {figure}{\numberline {8.4}{\ignorespaces Verschiede Registrar Variationen}}{114}
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {9.1}{\ignorespaces Audioverbindungen im Full-Mesh Ansatz}}{116}
-\contentsline {figure}{\numberline {9.2}{\ignorespaces Bandbreitenverbrauch beim Full Mesh Ansatz}}{117}
+\contentsline {figure}{\numberline {9.2}{\ignorespaces Bandbreitenverbrauch beim Full-Mesh-Ansatz}}{117}
 \contentsline {figure}{\numberline {9.3}{\ignorespaces Ein Partial-Mesh der Audioverbindungen der Teilnehmer}}{118}
 \contentsline {figure}{\numberline {9.4}{\ignorespaces Bandbreiteneinsparungen beim Partial-Mesh, da nicht mehr alle Verbindungen aufgebaut werden m\"ussen}}{119}
 \contentsline {figure}{\numberline {9.5}{\ignorespaces Partial-Mesh Worstcase Szenario gleicht dem Fullmesh Ansatz}}{120}
 \contentsline {figure}{\numberline {9.6}{\ignorespaces Der Up- und Downstream}}{121}
 \contentsline {figure}{\numberline {9.7}{\ignorespaces Signalisierung mit SIP, Audiostrom mit RTP}}{121}
-\contentsline {figure}{\numberline {9.8}{\ignorespaces Der Up- und Downstream mit der VAD - Technik}}{122}
+\contentsline {figure}{\numberline {9.8}{\ignorespaces Der Up- und Downstream mit der VAD-Technik}}{122}
 \contentsline {figure}{\numberline {9.9}{\ignorespaces Gegen\"uberstellung der SIP und RTP Traffics mit der VAD - Technik}}{122}
 \contentsline {figure}{\numberline {9.10}{\ignorespaces Der Up- und Downstream mit der SIP HOLD - Technik}}{123}
-\contentsline {figure}{\numberline {9.11}{\ignorespaces Gegen\"uberstellung des SIP und RTP Traffics mit der SIP HOLD - Technik}}{123}
+\contentsline {figure}{\numberline {9.11}{\ignorespaces Gegen\"uberstellung des SIP und RTP Traffics mit der SIP HOLD-Technik}}{123}
 \contentsline {figure}{\numberline {9.12}{\ignorespaces Speex mit 32kHz in der Privaten Zone und Speex 8khZ in der Sozialen Zone}}{124}
 \contentsline {figure}{\numberline {9.13}{\ignorespaces Rufauf und -abbau, sowie Signalisierung eines anderen Codecs mit SIP, Reduktion des Audiostroms mit RTP}}{124}
 \addvspace {10\p@ }

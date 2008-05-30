@@ -1,15 +1,15 @@
 \chapter{Architektur-Entwurf}
 \label{Architektur-Entwurf}
 
-Bevor im Entwurf mögliche Szenarien gegenüber gestellt werden, soll abgegrenzt werden was nicht Aufgabe dieses Kapitels sein soll: Da Probleme der Kontrolle von Konferenzen der Einsatz von Multicast Gruppen und deren Kontroll-Mechanismen in den letzten Jahren umfangreich erforscht wurden, sollen diese hier nicht weiter erläutert werden. Der Schwerpunkt des Entwurfs soll sich mit der Analyse bestehender Architekturen für Sprachübertragung in Computerspielen befassen und den Einsatz von SIP in diesen Szenarien erläutern. 
+Bevor im Entwurf mögliche Szenarien gegenüber gestellt werden, soll abgegrenzt werden was nicht Aufgabe dieses Kapitels sein soll: Da Probleme der Kontrolle von Konferenzen, der Einsatz von Multicast-Gruppen und deren Kontroll-Mechanismen in den letzten Jahren umfangreich erforscht wurden, sollen diese hier nicht weiter erläutert werden. Der Schwerpunkt des Entwurfs soll sich mit der Analyse bestehender Architekturen für Sprachübertragung in Computerspielen befassen und den Einsatz von SIP in diesen Szenarien erläutern. 
 
 \section {Analyse der bestehenden Architekturen für Audioübertragung}
 
-In vergleichenden Studien \cite{safei04}, \cite{safei04b} analysieren Safei und Boustead Architekturen für Sprachkommunikation in Mehrspieler Netzwerk Spielen. Dazu treffen sie die Annahme, dass jeder Spieler eine Mischung aus Stimmen hören soll, die speziell auf seine Position im Spiel angepasst ist. Dies erfordert ein Abmischen der vorhandenen Audioquellen und eine Anpassung der Lautstärke der Audiosignale an deren Position in der Audioszene. Bei einer Simulation der bestehenden Architektur konzentrierten sie sich dabei auf die Fragestellung welche Auswirkungen die Wahl einer Architektur auf das Abmischen der Audioströme hat und somit implizit auf die resultierende Netzwerklast und entstehende Verzögerungen.
+In vergleichenden Studien \cite{safei04}, \cite{safei04b} analysieren Safei und Boustead Architekturen für Sprachkommunikation in Mehrspieler-Spielen. Dazu treffen sie die Annahme, dass jeder Spieler eine Mischung aus Stimmen hören soll, die speziell auf seine Position im Spiel angepasst wird. Dies erfordert ein Abmischen der vorhandenen Audioquellen und eine Anpassung der Lautstärke der Audiosignale an deren Position in der Audioszene. Bei einer Simulation der bestehenden Architektur konzentrierten sie sich dabei auf die Fragestellung, welche Auswirkungen die Wahl einer Architektur auf das Abmischen der Audioströme hat und somit implizit auf die resultierende Netzwerklast und entstehende Verzögerungen.
 
-Dabei führen sie auch neue Einfluss- und Messgrößen ein, die speziell im Bereich der Sprachübertragung in Spielen relevant sind: Den Begriff des Interaktiven Delays, die Parameter der Korrelation zwischen der physischen und virtuellen Welt sowie der Dichte und Verteilung von Avataren. 
+Dabei führen sie auch neue Einfluss- und Messgrößen ein, die speziell im Bereich der Sprachübertragung in Spielen relevant sind: Den Begriff des "`interaktiven Delays"', die Parameter der Korrelation zwischen der physischen und der virtuellen Welt sowie der Dichte und Verteilung von Avataren. 
 
-Die durchgeführten Simulationen sollen hier als Ausgangsgrundlage dienen und helfen grundlegende Aussagen darüber zu treffen, wie diese Einflussgrößen die Vor und Nachteile dieser Architekturen bestimmen.
+Die durchgeführten Simulationen sollen hier als Ausgangsgrundlage dienen und helfen, grundlegende Aussagen darüber zu treffen, wie diese Einflussgrößen die Vor- und Nachteile dieser Architekturen bestimmen.
 
 \subsubsection{Interaktiver Delay}
 
@@ -24,14 +24,14 @@ Dabei beschreibt $d(m,n_{i})$ den auftretenden Delay bei der Audioverbindung des
 Die Dichte der Avatare $A_{d}$ gibt an, wie viele Avatare sich in der Hörnähe des Spielers befinden. Hier gilt auch, dass verschiedene Architekturen unterschiedlich gut mit einer zunehmenden Avatardichte skalieren.  
 
 \subsubsection{Avatar-Verteilung}
-Die Verteilung der Avatare kann entweder uniform sein, bei der die Spieler zufällig gleichmäßig in der virtuellen Welt verteilt sind oder auch einzelne Ballungszentren besitzen. Um dieses Szenario zu simulieren wurden künstlich zufällig Ballungszentren angelegt und um diese eine hohe Avatardichte erzeugt. Eine nicht uniforme Avatarverteilung ist ein oft beobachtetes Phänomen in virtuellen Welten, in denen einige \textit{Hotspots} eine hohe Avatardichte aufweisen, während diese an anderen Orten sehr gering sein kann.
+Die Verteilung der Avatare kann entweder uniform sein, bei der die Spieler zufällig gleichmäßig in der virtuellen Welt verteilt sind oder auch einzelne Ballungszentren besitzen. Um dieses Szenario zu simulieren, wurden künstlich zufällig Ballungszentren angelegt und um diese eine hohe Avatardichte erzeugt. Eine nicht uniforme Avatarverteilung ist ein oft beobachtetes Phänomen in virtuellen Welten, in denen einige \textit{Hotspots} eine hohe Avatardichte aufweisen, während diese an anderen Orten sehr gering sein kann.
 
 \subsubsection{Korrelation}
-Die Korrelation $K_{physisch-virtuell}$ zwischen der physischen und virtuellen Welt, die den Wert zwischen 0 und 1 annehmen kann, gibt an wie hoch die Wahrscheinlichkeit ist, dass Spieler sowohl physikalisch als auch virtuell sich in der Nähe befinden. Eine Korrelation von 0 bedeutet, dass die Avatare in der virtuellen Welt nicht mit der Lokation der Spieler in der physischen Welt korreliert ist. Ist auf einem Server eine hohe Korelation vorhanden, so können alle Spieler von einem niedrigen Delay ausgehen, da sich alle Spieler auch in Entfernung in der realen Welt befinden. 
+Die Korrelation $K_{physisch-virtuell}$ zwischen der physischen und virtuellen Welt, die den Wert zwischen 0 und 1 annehmen kann, gibt an wie hoch die Wahrscheinlichkeit ist, dass Spieler sowohl physikalisch als auch virtuell sich in der Nähe befinden. Eine Korrelation von 0 bedeutet, dass die Avatare in der virtuellen Welt nicht mit der Lokation der Spieler in der physischen Welt korrelieren. Ist auf einem Server eine hohe Korelation vorhanden, so können alle Spieler von einem niedrigen Delay ausgehen, da alle Spieler eine kurze Entfernung zum Server besitzen. 
 
 \subsection{Peer-to-Peer}
 In einer Peer-to-Peer Architektur wird die Audioszene lokal erzeugt, nachdem man sämtliche Sprachquellen der anderen Spieler erhalten hat. Der Hauptvorteil dieser Architektur liegt darin, dass ein niedriger interaktiver Delay auftritt.
-Dadurch, dass eine direkte Verbindung zu jedem Spieler aufgebaut wird, fällt dieser im Vergleich mit anderen Architekturen am geringsten aus. Dies muss nicht unbedingt heißen, dass der interaktive Delay automatisch niedrig sein muss, denn das hängt davon ab, ob die Spielewelt und reale Welt korreliert sind. Wie in der Abbildung \ref{fig:entwurf-p2p} zu sehen ist, können hohe Delays auftreten, wenn Spieler auf verschiedenen Kontinenten Teil der gleichen Spielewelt sind. Ein weiterer Vorteil liegt darin, dass man die freie Rechenleistung in den Knoten nutzt, um das Abmischen der Audioszene vorzunehmen und man über eine Architektur verfügt, die keinen Single Point of Failure besitzt, da kein zentraler Mischserver eingesetzt wird. 
+Dadurch, dass eine direkte Verbindung zu jedem Spieler aufgebaut wird, fällt dieser im Vergleich mit anderen Architekturen am geringsten aus. Dies muss nicht unbedingt heißen, dass der interaktive Delay automatisch niedrig sein muss, denn das hängt davon ab, ob die Spielewelt und reale Welt korreliert sind. Wie in der Abbildung \ref{fig:entwurf-p2p} zu sehen ist, können hohe Delays auftreten, wenn Spieler auf verschiedenen Kontinenten Teil der gleichen Spielewelt sind. Ein weiterer Vorteil liegt darin, dass man die freie Rechenleistung in den Knoten nutzt, um das Abmischen der Audioszene vorzunehmen und keinen Single Point of Failure besitzt, da kein zentraler Mischserver eingesetzt wird. 
 
 \begin{figure}[tbh]
 	\centering
@@ -41,36 +41,35 @@ Dadurch, dass eine direkte Verbindung zu jedem Spieler aufgebaut wird, fällt die
 \end{figure}
 
 Der Hauptnachteil dieser Topologie liegt darin, dass die Bandbreite der einzelnen Knoten im Peer-to-Peer Ansatz die Anzahl der maximal möglichen Verbindungen limitiert.
-Der zweite negative Punkt besteht darin, dass die Zunahme der Avatardichte in einer Region zunächst zu einem quadratischen Anstieg der Netzwerklast führt. Dieser Punkt kann aber auch als Vorteil von Peer-to-Peer basierten Systemen verstanden werden, da zwar Avatardichte Einfluss auf die Netzwerklast hat, aber nicht die Gesamtanzahl der Spieler. Gegeben den Fall, dass jeder Client nur seinen Teil der Spielewelt verwaltet und nur benötigte Audioverbindungen aufbaut, bleibt das Problem, dass bei einer zu hohen Avatardichte diese Architektur nicht skaliert. 
+Der zweite negative Punkt besteht darin, dass die Zunahme der Avatardichte in einer Region zunächst zu einem quadratischen Anstieg der Netzwerklast führt. Dieser Punkt kann aber auch als Vorteil von Peer-to-Peer basierten Systemen verstanden werden, da zwar Avatardichte Einfluss auf die Netzwerklast hat, aber nicht die Gesamtanzahl der Spieler. Obwohl jeder Client nur seinen Teil der Spielewelt verwaltet und nur benötigte Audioverbindungen aufbaut, bleibt das Problem, dass bei einer zu hohen Avatardichte diese Architektur nicht skaliert. 
 
 \subsection{Client-Server}
 In einer zentralisierten Lösung wird der Audiostrom von jedem der Teilnehmer an einen zentralen Audioserver gesendet. Mithilfe der Positionsdaten der Spieler wird die Audioszene dort zentral abgemischt. Diese wird danach an die jeweiligen Spieler gesendet. 
 
-Der Hauptvorteil besteht darin, dass jeder Client auch mit beschränkter Up-und Down- Bandbreite in der Lage ist an solchen Konferenzen teilzunehmen. Auch die Anforderungen an die Rechenkapazität bei den Clients sind minimal, da kein lokaler Abmischvorgang stattfinden muss.  Wie Simulationen zeigen konnten verhält sich der Interaktive Delay bei einem zentralen Audioserver stabil, da weder die Zunahme der der Avatardichte, noch deren Verteilung einen Einfluss auf den interaktiven Delay haben. 
+Der Hauptvorteil besteht darin, dass jeder Client auch mit beschränkter Up-und Down- Bandbreite in der Lage ist an solchen Konferenzen teilzunehmen. Auch die Anforderungen an die Rechenkapazität bei den Clients sind minimal, da kein lokaler Abmischvorgang stattfinden muss.  Wie Simulationen zeigen konnten verhält sich der Interaktive Delay bei einem zentralen Audioserver stabil, da weder die Zunahme der der Avatardichte, noch deren Verteilung einen Einfluss auf ihn haben. 
 
 \begin{figure}[tbh]
 	\centering
 		\includegraphics[width=1.00\textwidth]{grafiken/entwurf-server.eps}
-	\caption{Client Server Architektur, mit zentralem Mischserver in Nordamerika}
+	\caption{Client Server Architektur mit zentralem Mischserver in Nordamerika}
 	\label{fig:entwurf-server}
 \end{figure}
 
  Der Nachteil einer zentralen Komponente ist, dass für die Teilnehmer große Delays auftreten können, wenn sie sich physikalisch weit vom Server befinden. Diese hängen bei einem zentralisierten System  stark von dessen Standort ab und können bei einem falsch positioniertem Server entsprechend schlecht ausfallen (siehe Abbildung \ref{fig:entwurf-server} Teilnehmer 6,7 und 8)
  
- Möchte man den Teilnehmern die Kontrolle über alle Audioströme überlassen und findet kein Mischvorgang auf dem Server statt,erschöpft sich schnell seine Kapazität, da für $N$ eingehende Audioströme $N^2$ ausgehende Ströme verschickt werden müssen. 
+ Möchte man den Teilnehmern die Kontrolle über alle Audioströme überlassen und findet kein Mischvorgang auf dem Server statt, erschöpft sich schnell seine Kapazität, da für $N$ eingehende Audioströme $N^2$ ausgehende Ströme verschickt werden müssen. 
 
 Ein fundamentaler Nachteil des Systems bleibt jedoch seine fehlende Skalierbarkeit, da ab ab einer zu großen Gesamtspieleranzahl sich sowohl die Leistungs- als auch die Bandbreitenkapazitäten des Servers erschöpfen. Um die Last zu verteilen, wurden zwei alternative Systeme vorgestellt.
 
-Spieler der gleichen Umgebung der realen Welt werden an den gleichen Audioserver verweisen, was dem "`Audio-Proxy"' Konzept entspricht. Das Konzept der "`verteilten Audioserver"' sieht vor, dass Spieler der gleichen Umgebung der virtuellen Welt dem gleichen Server zugeteilt werden.
+Spieler der gleichen Umgebung der realen Welt werden an den gleichen Audioserver verwiesen, was dem "`Audio-Proxy"'-Konzept entspricht. Das Konzept der "`verteilten Audioserver"' sieht vor, dass Spieler der gleichen Umgebung der virtuellen Welt dem gleichen Server zugeteilt werden.
 
 \subsubsection{Audio-Proxy}
 \label{Audio-Proxy}
-Zunächst muss festgehalten werden, dass der Begriff Proxy hier anders als in der Literatur üblich verwendet wird. Als Proxy, werden normalerweise in Rechnernetzen Vermittler bezeichnet, die auf der einen Seite Anfragen entgegennehmen, um dann über seine eigene Adresse eine Verbindung zur anderen Seite herzustellen. Wenn hier vom Audio-Proxy gesprochen wird, ist nicht nur diese Funktionalität gemeint, sondern auch die Funktion, dass der Proxy Audioströme abmischen und an Clients oder andere Proxys verschicken kann.
+Zunächst muss festgehalten werden, dass der Begriff Proxy hier anders als in der Literatur üblich verwendet wird. Als Proxy, werden normalerweise in Rechnernetzen Vermittler bezeichnet, die auf der einen Seite Anfragen entgegennehmen, um dann über seine eigene Adresse eine Verbindung zur anderen Seite herzustellen. Wenn hier vom Audio-Proxy gesprochen wird, ist nicht nur diese Funktionalität gemeint, sondern auch die Funktion, dass der Audio-Proxy Audioströme abmischen und an Clients oder andere Proxys verschicken kann.
 
 In einer Audio-Proxy Lösung existieren Server, die weltweit verteilt sind und so immer eine geringe Entfernung zum Teilnehmer ermöglichen sollen. Diese empfangen die Audioströme der Clients, mischen diese ab und schicken sie an die jeweiligen Spieler zurück. Proxys untereinander können ebenfalls Audioströme an weitere Proxys weiterleiten, falls diese benötigt werden. 
 
-Die Vorteile dieses Konzepts liegen darin, dass im Gegensatz zur Peer-to-Peer Architektur durch den Einsatz von dedizierten Proxys mit guter Anbindung Bandbreitenprobleme minimiert werden. Bei einer Zunahme der Gesamtanzahl der Spieler helfen Proxys auch die Last des zentralisierten Systems zu verteilen, da sie Audioströme verteilt entgegennehmen und mischen können. Gegeben den Fall, dass eine starke Korrelation zwischen der realen und virtuellen Welt herrscht, können Audio-Proxys durch ihre ebenso guten Bandbreiten und Leistungskapazitäten auch Änderungen der Avatardichte, oder der Avatarverteilung gut handhaben. 
-So können nur bei einer starken Korrelation Spieler, die den gleichen Proxy benutzen und sich im Spiel in der gleichen Audioumgebung befinden von dieser Lösung profitieren. Eine Zunahme der Korrelation führt bei Proxys also deswegen zu kleineren interaktiven Delays, da Spieler der gleichen Umgebung in der Spielewelt sich auch in räumlicher Nähe befinden und so eine kurze Verbindung zueinander besitzen. 
+Die Vorteile dieses Konzepts liegen darin, dass im Gegensatz zur Peer-to-Peer Architektur durch den Einsatz von dedizierten Proxys mit guter Anbindung Bandbreitenprobleme minimiert werden. Bei einer Zunahme der Gesamtanzahl der Spieler helfen Proxys auch die Last des zentralisierten Systems zu verteilen, da sie Audioströme verteilt entgegennehmen und mischen können. Gegeben den Fall, dass eine starke Korrelation zwischen der realen und virtuellen Welt herrscht, können Audio-Proxys durch ihre ebenso guten Bandbreiten und Leistungskapazitäten auch Änderungen der Avatardichte, oder der Avatarverteilung gut handhaben. Nur bei einer starken Korrelation können Spieler, die den gleichen Proxy benutzen und sich im Spiel in der gleichen Audioumgebung befinden von dieser Lösung profitieren. Eine hohe Korrelation führt bei Proxys deswegen zu kleineren interaktiven Delays, weil Spieler der gleichen Umgebung in der Spielewelt sich auch in räumlicher Nähe befinden und so eine kurze Verbindung zueinander besitzen. 
 
 \begin{figure}[tbh]
 	\centering
@@ -79,15 +78,15 @@ So können nur bei einer starken Korrelation Spieler, die den gleichen Proxy benu
 	\label{fig:entwurf-proxy}
 \end{figure}
 
-Obwohl diese Architektur bei einer starken Korrelation beider Welten gut funktioniert, kann diese nicht erzwungen werden, was auch den Hauptnachteil dieses Systems ausmacht. Man kann durch das Proxy Konzept zwar erzwingen, dass Spieler der gleichen Umgebung in der realen Welt den gleichen Proxy benutzen, kann sie aber nicht in der Bewegung in der virtuellen Welt einschränken, da sie sich ja frei bewegen sollen. Umso mehr Teilnehmer sich in der Umgebung des Spielers befinden und so die Avatardichte erhöhen, desto mehr steigt die Wahrscheinlichkeit, dass auch mehrere verschiedene Proxys eingesetzt werden müssen, um die Audioszene zu mischen. Dies führt wiederum dazu das mehr Nachrichten zwischen den Proxys untereinander weitergeleitet werden müssen, was letztendlich zu einer Verschlechterung des interaktiven Delays führt.
+Obwohl diese Architektur bei einer starken Korrelation beider Welten gut funktioniert, kann diese nicht erzwungen werden, was auch den Hauptnachteil dieses Systems ausmacht. Man kann durch das Proxy Konzept zwar erzwingen, dass Spieler der gleichen Umgebung in der realen Welt den gleichen Proxy benutzen, kann sie aber nicht in der Bewegung in der virtuellen Welt einschränken, da sie sich ja frei bewegen sollen. Umso mehr Teilnehmer sich in der Umgebung des Spielers befinden und so die Avatardichte erhöhen, desto mehr steigt die Wahrscheinlichkeit, dass auch mehrere verschiedene Proxys eingesetzt werden müssen, um die Audioszene zu mischen. Dies führt wiederum dazu, dass mehr Nachrichten zwischen den Proxys untereinander weitergeleitet werden müssen, was letztendlich zu einer Verschlechterung des interaktiven Delays führt.
 
 \subsubsection{Verteilte Audioserver}
 \label{verteilteaudioserver}
-In einer verteilten Server Lösung ist jeder zentrale Server nur für einen Teil der Spielewelt verantwortlich. So nutzen Spieler, die sich in der gleichen virtuellen Umgebung befinden den gleichen Server, der ihre Audioströme abmischt. Dieser Ansatz kann die auftretenden Kapazitätsprobleme einer zentralisierten Lösung zwar reduzieren, in dem die Last auf mehrere Server verteilt wird. Diese hängt auch hier wie bei allen Serversystemen nur von der Gesamtspieleranzahl ab. 
+In einer verteilten Server-Lösung ist jeder zentrale Server nur für einen Teil der Spielewelt verantwortlich. So nutzen Spieler, die sich in der gleichen virtuellen Umgebung befinden den gleichen Server, der ihre Audioströme abmischt. Dieser Ansatz kann die auftretenden Kapazitätsprobleme einer zentralisierten Lösung reduzieren, in dem die Last auf mehrere Server verteilt wird. Die Netzwerklast hängt auch hier wie bei allen Serversystemen von der Gesamtspieleranzahl auf dem jeweiligen Server ab. 
 
-Verteilte Audioserver bieten die gleichen Vorteile wie Audio-Proxys, besitzen jedoch auch die gleichen Nachteile. Wie bei den Audio-Proxys gilt auch hier, dass dieses System bei einer starken Korrelation beider Welten gut funktioniert, diese aber auch durch den Einsatz von verteilten Servern nicht erzwungen werden kann. Man kann zwar durch das Verteilte Server Konzept erzwingen, dass Spieler der gleichen Umgebung in der virtuellen Welt den gleichen Server benutzen, hat dann keinen Einfluss darauf wie ihre Verteilung in der realen Welt ist, da man von überall am Spiel teilnehmen kann. 
+Verteilte Audioserver bieten die gleichen Vorteile wie Audio-Proxys, besitzen jedoch auch die gleichen Nachteile. Wie bei den Audio-Proxys gilt auch hier, dass dieses System bei einer starken Korrelation beider Welten gut funktioniert, diese aber nicht erzwungen werden kann. Man kann zwar durch das Verteilte Server-Konzept erzwingen, dass Spieler der gleichen Umgebung in der virtuellen Welt den gleichen Server benutzen, hat dann aber keinen Einfluss darauf, wie ihre Verteilung in der realen Welt ist, da man von überall am Spiel teilnehmen kann. 
 
-Neue Probleme entstehen beim Übergang von einem Server zum anderen: Wenn Teilnehmer während dem Spiel die Spielzone wechseln und dieser nun von einem anderen Server abgemischt werden soll, können unterschiedlich Server je nach ihrer Lage unterschiedlich hohe Delays besitzen. 
+Neue Probleme entstehen beim Übergang von einem Server zum anderen: Wenn Teilnehmer während des Spiels die Spielzone wechseln und ihre Audioströme nun von einem anderen Server abgemischt werden sollen, können unterschiedliche Server je nach ihrer Lage unterschiedlich hohe Delays liefern. 
 
 \begin{figure}
 	\centering
@@ -96,15 +95,15 @@ Neue Probleme entstehen beim Übergang von einem Server zum anderen: Wenn Teilneh
 	\label{fig:entwurf-verteilteserver}
 \end{figure}
 
-Hier zeigt sich auch wie beim Proxy Konzept, dass eine Zunahme der Avatardichte einen negativen Einfluss auf den interaktive Delay hat. Mit einer Zunahme erhöht sich die Chance dass Spieler der gleichen Spielregion aus verschiedenen Teilen der Welt stammen können. Diese Tatsache erhöht die Wahrscheinlichkeit, dass der entsprechende Server sich nicht im "`Schwerpunkt"' aller Spieler befindet. Das führt dazu dass der jeweilige Delay für einige Spieler sehr gut ausfallen kann, für andere jedoch sehr schlecht. 
+Ähnlich wie beim Proxy Konzept, hat hier eine Zunahme der Avatardichte einen negativen Einfluss auf den interaktive Delay. Mit einer Zunahme erhöht sich die Chance, dass Spieler der gleichen Spielregion aus verschiedenen Teilen der Welt stammen können. Diese Tatsache erhöht die Wahrscheinlichkeit, dass der entsprechende Server sich nicht im "`Schwerpunkt"' aller Spieler befindet. Somit kann der jeweilige Delay für einige Spieler sehr gut ausfallen, für andere jedoch sehr schlecht. 
 
 \subsection{Hybrid}
-Im Ansatz einer Hybrid Architektur senden die Teilnehmer ihre Audioströme zwar an einen zentralisierten Server, können aber bei Bedarf ihre Audioströme direkt austauschen, wenn die indirekte Route über den Server zu zu hohen Delays führen würde. Der Hybride Ansatz könnte zwar alle Vorteile von Peer-to-Peer Systemen mit zentralisierten Systemen kombinieren, ist allerdings nicht einfach umzusetzen, da nicht klar definiert ist, wann ein Teilnehmer zentral abgemischt werden soll und wann der Audiostrom direkt zwischen den Clients ausgetauscht wird und zudem eine hohe Koordination zwischen den Teilnehmern erfordert.
+Im Ansatz einer Hybrid Architektur senden die Teilnehmer ihre Audioströme zwar an einen zentralisierten Server, können sie aber bei Bedarf auch direkt austauschen, wenn die indirekte Route über den Server zu zu hohen Delays führen würde. Der Hybride Ansatz könnte zwar alle Vorteile von Peer-to-Peer-Systemen mit zentralisierten Systemen kombinieren, ist allerdings nicht einfach umzusetzen, da nicht klar definiert ist, wann ein Teilnehmer zentral abgemischt werden soll und wann der Audiostrom direkt zwischen den Clients ausgetauscht wird und zudem eine hohe Koordination zwischen den Teilnehmern erfordert.
 
 \section {Architekturen mit SIP Komponenten}
 Entsprechend der vorgestellten Architekturen gibt mehrere Möglichkeiten Konferenzen mit mehreren Teilnehmern in SIP zu realisieren. 
 
-Prinzipiell müssen aber bei einer Umsetzung zwei 2 Fragen gestellt werden:
+Prinzipiell müssen aber bei einer Umsetzung zwei 2 Fragen beantwortet werden:
 
 \begin{itemize}
 	\item Wie und wo findet die Signalisierung der Konferenzen und die Lokation der Teilnehmer statt?
@@ -114,7 +113,7 @@ Prinzipiell müssen aber bei einer Umsetzung zwei 2 Fragen gestellt werden:
 %Auch interessant:
 %http://www.ietf.org/internet-drafts/draft-ietf-simple-simple-02.txt
 
-Diese zwei Aspekte können nicht getrennt voneinander betrachtet werden, da immer die Wahl einer Architektur Einfluss auf beide Probleme hat. In einer Peer-to-Peer basierten Architektur ist es z.B. zunächst keine triviale Aufgabe eine Lokation aller Teilnehmer vorzunehmen, da jeder Peer nur einen Teil der Spielewelt verwaltet und keine zentralisierte Instanz existiert, die über alle Positionen aller Spieler verfügt. So muss für Konferenzen nicht nur die Frage beantwortet werden wo der Audiostrom abgemischt wird, sondern wie die Teilnehmer informiert werden, dass sie Teil einer Konferenz sind. Genauso ergeht es dem zentralisiertem System, in dem die Lokation und Signalisierung der Teilnehmer zwar durch eine zentrale Komponente einfach ist, aber eine Verteilung des Audiostroms, problematisch ist. 
+Diese zwei Aspekte können nicht getrennt voneinander betrachtet werden, da immer die Wahl einer Architektur Einfluss auf beide Probleme hat. In einer Peer-to-Peer basierten Architektur ist es z.B. zunächst keine triviale Aufgabe, eine Lokation aller Teilnehmer vorzunehmen, da jeder Peer nur einen Teil der Spielewelt verwaltet und keine zentralisierte Instanz existiert, die über alle Positionen aller Spieler verfügt. So muss für Konferenzen nicht nur die Frage beantwortet werden wo der Audiostrom abgemischt wird, sondern wie die Teilnehmer informiert werden, dass sie Teil einer Konferenz sind. Genauso ergeht es dem zentralisierten System, in dem die Lokation und Signalisierung der Teilnehmer zwar durch eine zentrale Komponente einfach ist, aber eine Verteilung des Audiostroms, problematisch ist. 
 
 Deswegen werden die Komponenten zur Lokation, Signalisierung der Konferenzen und Mischen des Audiostroms zwar gleichzeitig betrachtet, aber unter ihnen unterschieden.
 
@@ -122,16 +121,15 @@ Deswegen werden die Komponenten zur Lokation, Signalisierung der Konferenzen und
 Es können vier Hauptkomponenten eines Systems definiert werden, die je nach ihrer Verteilung verschiedene Architekturen bilden können:
 
 \begin{itemize}
-	\item Mixer: Ein Mixer empfängt eine Gruppe von Audioströmen und verenigt ihre Medien nach einer spezifischen Art, um das Ergebniss an jeden Teilnehmer zu schicken. Dies beinhaltet Medien die mittels des RTP Protokolls übertragen wurden.
-	\item Konferenz-Server: Ein Konferenz Server ist die logische Instanz, die darüber entscheidet welche Audioströme miteinander gemischt werden und an wen sie verteilt werden. 
-	\item Teilnehmer: Ein Software Element, das einen Benutzer mit einer Konferenz verbindet. Dieses implementiert mindestens einen SIP User Agent kann aber auch nicht SIP Spezifische Mechanismen für zusätzliche Funktionalität beherbergen. 
+	\item Mixer: Ein Mixer empfängt eine Gruppe von Audioströmen und vereinigt ihre Medien nach einer spezifischen Art, um das Ergebnis an jeden Teilnehmer zu schicken. Dies beinhaltet Medien, die mittels des RTP-Protokolls übertragen wurden.
+	\item Konferenz-Server: Ein Konferenz-Server ist die logische Instanz, die darüber entscheidet welche Audioströme miteinander gemischt werden und an wen sie verteilt werden. 
+	\item Teilnehmer-Client: Eine Client Anwendung, die einen Benutzer mit einer Konferenz verbindet. Diese implementiert mindestens einen SIP-User-Agent kann aber auch nicht SIP spezifische Mechanismen für zusätzliche Funktionalität beherbergen. 
 	\item Spieleserver: Eine optionale Komponente, die die Daten der Spieler entgegen nimmt, um sie auszuwerten und an die anderen Teilnehmer zu verteilen. Diese kann, muss aber nicht, die Spielelogik enthalten und teilt dem Konferenz-Server mit, welche Spieler Teil einer Konferenz werden. Um mit den anderen Komponenten zu kommunizieren unterstützt sie das SIP Protokoll. 
 \end{itemize}
 
-Aus den vorgestellten Komponeten wird ersichtlich, dass die Architektur der Sprachkommunikation nicht getrennt von der Architektur des darunter liegenden Spieles gesehen wird. Da die Signalisierung darüber, ob und wann Spieler Teil einer Audiokonferenz sind vom darunter liegenden Spiel entschieden wird, sollte man beide Datenflüsse gleichzeitig betrachten. Während die Signalisierung und der reine Austausch an Spielerinformationen und Konferenzinformationen relativ wenig Bandbreite benötigt, kann eine eine Audioverbindung aufgrund ihres reinen Datenvoluments bereits das 10fache der Bandbreite benötigen. 
+Aus den vorgestellten Komponeten wird ersichtlich, dass die Architektur der Sprachkommunikation nicht getrennt von der Architektur des darunter liegenden Spieles gesehen wird. Während die Signalisierung und der reine Austausch an Spielerinformationen und Konferenzinformationen relativ wenig Bandbreite benötigt, kann eine Audioverbindung aufgrund ihres reinen Datenvoluments bereits das 10fache der Bandbreite benötigen. 
 
-%TODO DEDICATED CLIENT VS DEDICATED SERVER
-Geht man davon aus dass sowohl der Datenverkehr, als auch die Audioströme zwischen den Spielen entweder komplett zentral, verteilt oder komplett dezentral stattfinden können ergeben sich 9 mögliche Kombinationen die in Tabelle \ref{audiodatenmatrix} dargestellt werden: 
+Geht man davon aus, dass sowohl der Datenverkehr, als auch die Audioströme zwischen den Spielen entweder komplett zentral, verteilt oder komplett dezentral stattfinden können, ergeben sich 9 mögliche Kombinationen, die in Tabelle \ref{audiodatenmatrix} dargestellt werden: 
 
 \begin{table}[tbh]
 	\centering
@@ -149,32 +147,32 @@ Geht man davon aus dass sowohl der Datenverkehr, als auch die Audioströme zwisch
 		\end{tabular}
 \end{table}
 
-Prinzipiell sind alle Alternativen vorstellbar. In erster Linie sollen bei einer Implementierung einer einsatzfähigen Sprachkommunikationslösung vor allem Alternativen bevorzugt werden, die sowohl umsetzbar, als auch sinnvoll erscheinen.  
+Prinzipiell sind alle Alternativen vorstellbar. In erster Linie sollen bei einer Implementierung einer einsatzfähigen Sprachkommunikationslösung vor allem Alternativen bevorzugt werden, die sowohl umsetzbar als auch sinnvoll erscheinen.  
 
 \begin{itemize}
-	\item ($A_{1}$) Hier findet sowohl die Signalisierung und Lokation der Teilnehmer als auch das Mischen des Audiostroms zentral statt. Darunter versteht man ein SIP Netzwerk, das mit einem zentralen Server ausgestattet ist, der sämtliche Daten der Spieleclients entgegen nimmt und verteilt. Das Abmischen der Audioströme findet ebenfalls in einer zentralen Konferenz statt, die auf dem Server verwaltet wird. 	
+	\item ($A_{1}$) Hier findet sowohl die Signalisierung und Lokation der Teilnehmer als auch das Mischen des Audiostroms zentral statt. Darunter versteht man ein SIP Netzwerk, das mit einem zentralen Server ausgestattet ist, der sämtliche Daten der Spielerclients entgegen nimmt und verteilt. Das Abmischen der Audioströme findet ebenfalls in einer zentralen Konferenz statt, die auf dem Server verwaltet wird. 	
 	\item ($A_{2}$) Behält man eine zentrale Konferenzkomponente bei, geht aber von einem verteilten Abmischen der Audioströme aus, kann man entweder mehrere dedizierte Mixer einsetzen oder auch einzelne Clients mit genügend Bandbreite (Superpeers) nutzen, um den Audiostrom zu mischen und dann zu verteilen (siehe Abschnitt \ref{verteilteaudioserver} und \label{Audio-Proxy})
-	\item ($A_{3}$) Im Hybriden Modell besitzt das System einen zentralen Proxy und Registrar, der die Signalisierung und Lokation der Teilnehmer vornimmt; das Abmischen der Audioströme findet dagegen dezentral statt. Dies entspricht dem ursprünglichen SIP Aufbau, bei dem die Sprachkommunikation zwischen den einzelnen Peers stattfindet und das Audiosignal lokal von jedem Teilnehmer abgemischt wird.
-	\item ($A_{4}$) Setzt man mehrere Proxys oder verteilte Server für den Datenaustausch ein, mischt aber die Audioströme zentral ab, so braucht man einen dedizierten Mixer, der alle Audioströme entgegen nimmt, während die Signalisierung über mehrere Proxys verteilt wird. 
-	\item ($A_{5}$): Realisiert man sowohl den Datenaustausch als auch das Mischen des Audiostroms verteilt, kann man davon ausgehen dass entweder dedizierte Audio- und Datenkomponenten zusammenarbeiten oder auch ein Netzwerk aus Client Superpeers gebildet wird. Hier wird von gut angebundenen Knoten das Mischen des Audiostroms vorgenommen, und dann verteilt. 
-	\item ($A_{6}$): Diese Alternative entspricht der vorhergehenden Alternative nur dass, hier der Audiostrom direkt zwischen den einzelnen Clients fließt, während die Signalisierung und Lokation von verteilten Proxys und Registraren übernommen wird.
-	\item ($A_{7}$): Ein komplett dezentraler Datenaustausch mit einem zentralen Audioserver.
-	\item ($A_{8}$): Ein komplett dezentraler Datenaustausch mit mehreren Audioservern.  
-	\item ($A_{9}$): Realisiert man sowohl den Datenaustausch als auch das Mischen des Audiostroms komplett dezentral, 	spricht man vom Einsatz eines dezentralisierten SIP Netzwerkes dass mittels P2PSIP, Multicast oder Fullmesh Ansätzen realisiert werden kann. 
+	\item ($A_{3}$) Im Hybriden Modell besitzt das System einen zentralen Proxy und Registrar, der die Signalisierung und Lokation der Teilnehmer vornimmt; das Abmischen der Audioströme findet dagegen dezentral statt. Dies entspricht dem ursprünglichen SIP-Aufbau, bei dem die Sprachkommunikation zwischen den einzelnen Peers stattfindet und das Audiosignal lokal von jedem Teilnehmer abgemischt wird.
+	\item ($A_{4}$) Setzt man mehrere Proxys oder verteilte Server für den Datenaustausch ein, mischt aber die Audioströme zentral ab, so braucht man einen dedizierten Mixer, der alle Audioströme entgegen nimmt, während die Sig\-nali\-sierung über mehrere Proxys verteilt wird. 
+	\item ($A_{5}$): Realisiert man sowohl den Datenaustausch als auch das Mischen des Audiostroms verteilt, kann man davon ausgehen dass entweder dedizierte Audio- und Datenkomponenten zusammenarbeiten oder auch ein Netzwerk aus Client Superpeers gebildet wird. Hier wird von gut angebundenen Knoten das Mischen des Audiostroms vorgenommen und dann verteilt. 
+	\item ($A_{6}$): Diese Alternative entspricht der vorhergehenden Alternative, nur dass hier der Audiostrom direkt zwischen den einzelnen Clients fließt, während die Signalisierung und Lokation von verteilten Proxys und Registraren übernommen wird.
+	\item ($A_{7}$): Ein komplett dezentraler Datenaustausch mit einem zentralen Audioserver
+	\item ($A_{8}$): Ein komplett dezentraler Datenaustausch mit mehreren Audioservern  
+	\item ($A_{9}$): Realisiert man sowohl den Datenaustausch als auch das Mischen des Audiostroms komplett dezentral, 	spricht man vom Einsatz eines dezentralisierten SIP-Netzwerkes, das mittels P2PSIP, Multicast oder Full-Mesh Ansätzen realisiert werden kann. 
 \end{itemize}
 
-Geht man dazu über den Datenaustausch des Spiels auf mehrere Server zu verteilen (siehe Alternativen $A_{7}$,$A_{8}$,$A_{9}$), so tut man das aus zwei Gründen: Erstens um einen Single Point of Failure zu vermieden und zweitens um eine bessere Skalierbarkeit zu erreichen. 
+Geht man dazu über, den Datenaustausch des Spiels auf mehrere Server zu verteilen (siehe Alternativen $A_{7}$,$A_{8}$,$A_{9}$), so tut man das aus zwei Gründen: Erstens um einen Single Point of Failure zu vermeiden und zweitens um eine bessere Skalierbarkeit zu erreichen. 
 
-Prinzipiell ist dieses Vorgehen solange praktikabel wie noch einige zentrale Komponenten bestehen die hierarchisch höher gestellt sind als andere Knoten. Dies ist schon aus Gründen wie z.B.der Konferenzsteuerung notwendig, da Knoten existieren müssen, die die Lokationen der einzelnen Teilnehmer kennen, Rechte in Konferenzen überwachen, oder eine Liste an aktiven Teilnehmern führen.
+Prinzipiell ist dieses Vorgehen solange praktikabel wie noch einige zentrale Komponenten bestehen, die hierarchisch höher gestellt sind als andere Knoten. Dies ist schon aus Gründen wie z.B.der Konferenzsteuerung notwendig, da Knoten existieren müssen, die die Lokationen der einzelnen Teilnehmer kennen, Rechte in Konferenzen überwachen, oder eine Liste an aktiven Teilnehmern führen.
 
- Ansätze zu einer komplett dezentralen Signalisierung, werden später im Kapitel 8 vorgestellt, es darf aber schon vorab festgehalten werden, dass ein hoher Aufwand betrieben werden muss, um skalierbare dezentrale Systeme zu konstruieren. Nimmt man  diesen Aufwand tatsächlich auf sich, so erscheint es unlogisch noch zentrale Audioserver Komponenten zu behalten, da man so wieder einen Single Point of Failure besitzt. Das führt zur logischen Entscheidung alle Kombinationen, die eine dezentrale Signalisierung besitzen, die aber trotzdem zentrale Audioserver einsetzen nicht weiter zu analysieren. Davon sind die Alternativen ($A_{7}$) und ($A_{8}$) betroffen.
+ Ansätze zu einer komplett dezentralen Signalisierung werden später im Kapitel 8 vorgestellt, es darf aber schon vorab festgehalten werden, dass ein hoher Aufwand betrieben werden muss, um skalierbare dezentrale Systeme zu konstruieren. Nimmt man  diesen Aufwand tatsächlich auf sich, so erscheint es unlogisch, noch zentrale Audioserver Komponenten zu behalten, da man so wieder einen Single Point of Failure besitzt. Das führt zur logischen Entscheidung, alle Kombinationen, die eine dezentrale Signalisierung besitzen, die aber trotzdem zentrale Audioserver einsetzen, nicht weiter zu analysieren. Davon sind die Alternativen ($A_{7}$) und ($A_{8}$) betroffen.
 
-Genauso verhält es sich bei der Skalierbarkeit: Der Grund mehre Server einzusetzen liegt - wie bereits erwähnt - darin die ansteigende Netzwerklast zu verteilen. Behält man jedoch einen einzigen zentralen Audioserver bei, bildet dieser schnell den Flaschenhals. Deswegen wird die Alternative ($A_{4}$), die verteilte Spieleserver, aber zentralen Audioserver einsetzt, vorerst nicht weiter untersucht.
+Genauso verhält es sich bei der Skalierbarkeit: Der Grund mehrere Server einzusetzen liegt - wie bereits erwähnt - darin die ansteigende Netzwerklast zu verteilen. Behält man jedoch einen einzigen zentralen Audioserver bei, bildet dieser schnell den Flaschenhals. Deswegen wird die Alternative ($A_{4}$), die verteilte Spieleserver, aber einen zentralen Audioserver einsetzt, vorerst nicht weiter untersucht.
 
 Die verbleibenden Alternativen lassen sich in 4 Gruppen gliedern:
 \begin{itemize}
-	\item Komplett Dezentralisierte Ansätze (Alternative $A_{9}$)
-	\item Komplett Zentralisierte (Alternative $A_{1}$)
+	\item Komplett dezentralisierte Ansätze (Alternative $A_{9}$)
+	\item Komplett zentralisierte Ansätze (Alternative $A_{1}$)
 	\item Ansätze, die verteiltes dediziertes Audiomixing vornehmen (Alternativen $A_{2}$ und $A_{5}$)
 	\item Ansätze, die komplett dezentrales Audiomixing vornehmen (Alternativen $A_{3}$ und $A_{6}$)
 \end{itemize}
@@ -184,90 +182,89 @@ Die verbleibenden Alternativen lassen sich in 4 Gruppen gliedern:
 Ansätze der Alternative $A_{9}$ haben alle gemeinsam, dass sowohl der Audiostrom, als auch der Datenstrom nur zwischen den einzelnen Knoten fließt und keine zentrale Komponente benötigt wird. Sie unterscheiden sich jedoch darin, in welchen Topologien die einzelnen Clients miteinander verbunden werden und auf welche Art und weise die Signalisierung stattfindet. 
 
 \subsubsection{Multicast}
-Groß angelegte Multicast Konferenzen waren die ursprüngliche Motivation für die Entwicklung von SIP. In solchen Konferenzen werden eine oder mehrere Multicast Konferenzen zu einer Konferenz vereint. Jeder Teilnehmer tritt einer Multicast Gruppe bei und sendet sein Medium an diese Gruppe. 
+Groß angelegte Multicast-Konferenzen waren die ursprüngliche Motivation für die Entwicklung von SIP. In solchen Konferenzen werden eine oder mehrere Multicast Konferenzen zu einer Konferenz vereint. Jeder Teilnehmer tritt einer Multicast Gruppe bei und sendet sein Medium an diese Gruppe. 
 
-Multicast Konferenzen haben den Vorteil, dass sie keine Koordination zwischen den Endsystemen benötigen. Konferenzteilnehmer können unabhängig eine Konferenz beitreten und sie verlassen. 
+Multicast-Konferenzen haben den Vorteil, dass sie keine Koordination zwischen den Endsystemen benötigen. Konferenzteilnehmer können unabhängig einer Konferenz beitreten und sie verlassen. 
 
-Der Hauptnachteil von Multicast ist jedoch, dass es nur in einem Local Area Network funktioniert und im Internet nicht allgemein Verfügbar ist. Zudem müssen bei solchen Konferenzen Router die Identitäten der Gruppe speichern und es ist beliebigen Teilnehmern möglich solche Gruppen ohne Authentifizierung beizutreten. 
+Der Hauptnachteil von Multicast ist jedoch, dass es nur in einem Local Area Network funktioniert und im Internet nicht allgemein verfügbar ist. Zudem müssen bei solchen Konferenzen Router die Identitäten der Gruppe speichern und es ist beliebigen Teilnehmern möglich solche Gruppen ohne Authentifizierung beizutreten. 
 
-So verlieren die Teilnehmer die Kontrolle darüber wer an Konferenzen teilnehmen kann und sind auch nicht in der Lage zu wissen, wer ihnen gerade zuhört. Ist bereits ein System falsch konfiguriert könnte alle existierenden Multicast Gruppen abonnieren und so das Netz schnell fluten. Gerade wegen dieser Probleme wird Multicast in wenigen Internet Hauptleitungen unterstützt. So können Multicast Konferenzen zwar in LANs nützlich sein, sind jedoch im kommerziellen Internet nicht umsetzbar.
+So verlieren die Teilnehmer die Kontrolle darüber, wer an Konferenzen teilnehmen kann und sind auch nicht in der Lage zu wissen, wer ihnen gerade zuhört. Ist bereits ein System falsch konfiguriert könnte alle existierenden Multicast Gruppen abonnieren und so das Netz schnell fluten. Gerade wegen dieser Probleme wird Multicast in wenigen Internet Hauptleitungen unterstützt. So können Multicast Konferenzen zwar in LANs nützlich sein, sind jedoch im kommerziellen Internet nicht umsetzbar.
 
 % In the loosely coupled model, there is no signaling relationship between participants in the conference.  There is no central point of control or conference server.  Participation is gradually learned through control information that is passed as partof the conference (using the Real Time Control Protocol (RTCP) [2], for example).  Loosely coupled conferences are easily supported in SIP by using multicast addresses within its session descriptions. 
 
 \subsubsection{Peer-to-Peer Unicast}
-Bei einem völlig dezentralisierten P2P SIP mittels verteilter \textit{Hashtabellen} findet die Lokation und Signalisierung als auch die Sprachkommunikation nur zwischen den einzelnen Clients statt. Die zentrale Komponente des Registrars wird auf die einzelnen Clients verteilt. Die Audioverbindung wird direkt mit peer-to-peer unicast aufgebaut. 
+Bei einem völlig dezentralisierten P2P SIP mittels verteilter \textit{Hashtabellen} findet sowohl die Lokation und Signalisierung als auch die Sprachkommunikation nur zwischen den einzelnen Clients statt. Die zentrale Komponente des Registrars wird auf die einzelnen Clients verteilt. Für jede Audioverbindung wird ein Peer-to-Peer Unicast eingesetzt. 
 
 Dieser interessante Ansatz ist bisher nur theoretisch möglich, da keine geeignete SIP Implementierung existiert, die einen verteilten Registrar umsetzt. Zudem ist das Problem einer verteilten Spielkontrolle nicht trivial, da kein Teilnehmer über komplette Informationen über die Spielewelt verfügt. Dieses dieses Problem wird später genauer in Kapitel 9 behandelt. Sollte in Zukunft eine Implementierung eines funktionierenden P2PSIP Overlays existieren, könnte diese Option in Zukunft durchaus vorstellbar sein. Dieses Konzept würde ein komplett dezentrales Abmischen der Audioströme erfordern, dessen Vor- und Nachteile in Abschnitt \ref{siphybrid} besprochen werden.
 
-\subsubsection{Fullmesh}
-In einem "`FullMesh"' Modell kommuniziert jeder Endpunkt direkt mit jedem anderen Endpunkt. Alle Teilnehmer in der Konferenz sind "`gleich"' - es gibt keinen Benutzer der topologisch besonders ist oder über zusätzlichen Rechte oder Fähigkeiten verfügt. Jeder Teilnehmer kann jederzeit eine Konferenz betreten und verlassen. 
-Das Audiosignal wird nur von den Endpunkten abgemischt.
+\subsubsection{Full-Mesh}
+In einem "`Full-Mesh"' Modell kommuniziert jeder Endpunkt direkt mit jedem anderen Endpunkt. Alle Teilnehmer in der Konferenz sind "`gleich"' - es gibt keinen Benutzer, der topologisch besonders ist oder über zusätzlichen Rechte oder Fähigkeiten verfügt. Jeder Teilnehmer kann jederzeit eine Konferenz betreten und verlassen. Das Audiosignal wird nur von den Endpunkten abgemischt.
 
-Der Hauptvorteil ist, dass kein Endsystem mehr als einen Audiostrom encodieren muss. Jeder Benutzer dekodiert bis zu N-1 Audioströme einer N-Teilnehmer Konferenz, muss aber nur einen Audiostrom encodieren. Für die meisten Sprach Codecs verursacht das Encodieren mehr Last als das Dekodieren, was also zunächst nicht problematisch ist. 
+Der Hauptvorteil ist, dass kein Endsystem mehr als einen Audiostrom encodieren muss. Jeder Benutzer dekodiert bis zu N-1 Audioströme einer N-Teilnehmer Konferenz, muss aber nur einen Audiostrom enkodieren. Für die meisten Sprach Codecs verursacht das Enkodieren mehr Last als das Dekodieren, was also zunächst nicht problematisch ist. 
 
-In einer N-Teilnehmer Konferenz muss jedoch jeder Teilnehmer über genügend Bandbreite verfügen um N-1 simultane Audioströme zu verschicken. Dadurch ist dieser Mechanismus für Systeme mit limitierten Bandbreite wie analog Modems oder asymmetrische DSL Leitungen mit einem schwachen Upload nicht besonders gut anwendbar.
+In einer N-Teilnehmer Konferenz muss jedoch jeder Teilnehmer über genügend Bandbreite verfügen, um N-1 simultane Audioströme zu verschicken. Dadurch ist dieser Mechanismus für Systeme mit limitierten Bandbreiten wie analoge Modems oder asymmetrische DSL-Leitungen mit einem schwachen Upload nicht besonders gut anwendbar.
 
-Das größte Problem bei diesem Ansatz stellt die fehlende strukturierte Signalisierung und Lokalisierung der Teilnehmer dar, da kein Knoten eine vollständige Information darüber besitzt, wer Teil einer Konferenz sein soll. Schulzrinne stellen im Kapitel 5 vorgestellten Full-Mesh Ansatz genau diese Problematik fest.
+Das größte Problem bei diesem Ansatz stellt die fehlende strukturierte Signalisierung und Lokalisierung der Teilnehmer dar, da kein Knoten eine vollständige Information darüber besitzt, wer Teil einer Konferenz sein soll. Schulzrinne stellt in dem in Kapitel 5 vorgestellten Full-Mesh-Ansatz genau diese Problematik fest.
 
 \subsection{Komplett zentralisierte Ansätze}
 \label{zentralansatz}
-Die in Kapitel 5 von Singh und Acharya vorgestellte Methode kann man als zentralisiertes SIP bezeichnen. Hier wird die Signalisierung und Lokation der Teilnehmer und das Abmischen der Audioströme zentral vorgenommen. Den komplett zentralisierten Ansatz verfolgen auch Safei und Boustead im vorgestellten MICE System. Diese Architektur bietet zunächst eine sehr gute Ausgangsbasis für Sprachkommunikationslösungen mit einer begrenzten Anzahl an Teilnehmern, da es auch Knoten mit geringer Bandbreite eine Teilnahme ermöglicht. 
+Die in Kapitel 5 von Singh und Acharya vorgestellte Methode kann man als zentralisiertes SIP bezeichnen. Hier wird die Signalisierung und Lokation der Teilnehmer und das Abmischen der Audioströme zentral vorgenommen. Den komplett zentralisierten Ansatz verfolgen auch Safei und Boustead im vorgestellten MICE-System. Diese Architektur bietet zunächst eine sehr gute Ausgangsbasis für Sprachkommunikationslösungen mit einer begrenzten Anzahl an Teilnehmern, da es auch Knoten mit geringer Bandbreite eine Teilnahme ermöglicht. 
 
 Die Grundlage für eine einfache Berechnung der verbrauchten Bandbreite versteht sich unter folgenden Voraussetzungen:
 
 \begin{itemize}
 	\item Jeder Spieler sendet einen Audiostrom zum Server.
 	\item Jeder Spieler im gleichen Spiel möchte die gesprochenen Daten aller Spieler empfangen.
-	\item Da Spieleserver, Konferenzserver und Mixer zentralisiert sind, kann der Mixer die Audioströme zentral abmischen, da er auch die Positionen der Teilnehmer kennt. 
+	\item Weil Spieleserver, Konferenzserver und Mixer zentralisiert sind, kann der Mixer die Audioströme zentral abmischen, da er auch die Positionen der Teilnehmer kennt. 
 \end{itemize}
 
-Befinden sich beispielsweise 16 Personen im Spiel, empfängt der Server Audioströme von 16 Personen und sendet einen bereits abgemischten Audiostrom an jede der 16 Personen. 
+Befinden sich beispielsweise 16 Personen im Spiel, empfängt der Server Audio\-ströme von 16 Personen und sendet einen bereits abgemischten Audiostrom an jede der 16 Personen. 
 
-Sendet jeder Spieler seinen Audiostrom mit einem Speex\footnote{Patentfreies Audio-Kompressions-Format (Xiph OSC) , Version 22.03.2008, http://speex.org} Audiocodec mit einer 16 Kbit/s Bitrate an den Server, der nach dem heutigem Standard mit einer 100MBit Anbindung für den Upload und Download ausgestattet ist, würde sich folgende theoretische maximale Anzahl an gleichzeitigen Audioverbindungen ergeben:
+Sendet jeder Spieler seinen Audiostrom mit einem Speex\footnote{Patentfreies Audio-Kompressions-Format (Xiph OSC) , Version 22.03.2008, http://speex.org} Audiocodec mit einer 16 Kbit/s Bitrate an den Server, der nach dem heutigem Standard mit einer 100MBit-Anbindung für den Upload und Download ausgestattet ist, würde sich folgende theoretische maximale Anzahl an gleichzeitigen Audioverbindungen ergeben:
 
 \[
  \frac{100000 \frac{Kbit}{s}}{16 \frac{Kbit}{s}} = 6250 \, Spieler
 \]
 
-Der Client selbst muss also nur in der Lage sein seinen eigenen Audiostrom zu senden und einen Audiostrom mit gleicher Bitrate zu empfangen. 
+Der Client selbst muss also nur in der Lage sein, seinen eigenen Audiostrom zu senden und einen Audiostrom mit gleicher Bitrate zu empfangen. 
 
-Zusätzlich zur Bandbreite wirkt auch die Rechenkapazität des Servers limitierend, der jedes der ankommenden Signale dekodieren, mischen und enkodieren muss. Eine Auswertung\footnote{Siehe Kapitel 10 evaluation.} der CPU Belastung des Mixers, die Anhand der Implementierung vorgenommen wurde zeigt, dass die theoretische Grenze vom 6250 Spielern schon viel früher erreicht wird und die theoretische Mögliche Anzahl vor allem durch die hohe CPU-Belastung des Mixers limitiert wird. 
+Zusätzlich zur Bandbreite wirkt auch die Rechenkapazität des Servers limitierend, da jedes der ankommenden Signale dekodiert, abgemischt und enkodiert werden muss. Eine Auswertung\footnote{Siehe Kapitel 10 evaluation.} der CPU Belastung des Mixers, die Anhand der Implementierung vorgenommen wurde, zeigt dass die Grenze von 6250 Spielern schon viel früher erreicht wird und so die theoretisch mögliche Anzahl an Spielern vor allem durch die hohe CPU-Belastung des Mixers begrenzt wird. 
 
-Prinzipiell ist dieser Ansatz aber allen den dezentralisierten Ansätzen überlegen, da die zentralisierte Komponente in der Regel über genügend Bandbreite verfügt, um viele Audioströme zu empfangen und zu versenden, während dies bei einfachen Clients oft zu Problemen führt. Zudem haben wir die Möglichkeit die Lokation und Signalisierung der Teilnehmer zentral zu verwalten. Diese Architektur wird vor allem bei Telefonkonferenzen verwendet, bei denen die Endgeräte (VoIP Telefone) die über eine geringe Rechenleistung verfügen und auf das Abmischen des Audiosignals durch einen Konferenzserver angewiesen sind. 
+Prinzipiell ist dieser Ansatz aber allen dezentralisierten Ansätzen überlegen, da die zentralisierte Komponente in der Regel über genügend Bandbreite verfügt, um viele Audioströme zu empfangen und zu versenden, während dies bei einfachen Clients oft zu Problemen führt. Zudem haben wir die Möglichkeit, die Lokation und Signalisierung der Teilnehmer zentral zu verwalten. Diese Architektur wird vor allem bei Telefonkonferenzen verwendet, bei denen die Endgeräte (VoIP Telefone) die über eine geringe Rechenleistung verfügen und auf das Abmischen des Audiosignals durch einen Konferenzserver angewiesen sind. 
 
-Die Nachteile eines Mischservers liegen jedoch beim interaktiven Delay, der abhängig von der Position des Servers entsprechend schlecht ausfallen kann. Zudem ergeben sich Schwierigkeiten bei der Skalierbarkeit eines einzigen zentralen Audioservers, dessen Bandbreite und Rechnerkapazität begrenzt sind. Dabei bietet es sich gerade im Spielebereich an, die hohe Rechenleistung von gut ausgestatteten Spielecomputern auszunutzen, um die zentrale Komponente zu entlasten. 
+Die Nachteile eines Mischservers liegen jedoch beim interaktiven Delay, der abhängig von der Position des Servers entsprechend schlecht ausfallen kann. Zudem ergeben sich Schwierigkeiten bei der Skalierbarkeit eines einzigen zentralen Audioservers, da dessen Bandbreite und Rechnerkapazität begrenzt sind. Dabei bietet es sich gerade im Spielebereich an, die hohe Rechenleistung von gut ausgestatteten Spielecomputern auszunutzen, um die zentrale Komponente zu entlasten. 
 
 \subsection{Verteiltes dediziertes Audiomixing}
 
 \subsubsection{Dedicated Node Mixing}
-Die Konsequenz aus einer fehlenden Skalierbarkeit eines Audioservers führt zum logischen Entschluss diesen zu verteilen. Ein Ansatz verteilte Konferenzen zu betreiben besteht darin mehrere dedizierte SIP Endpunkte zu ernennen, mit denen sich Teilnehmern  verbinden. Diese Mixer nehmen die Audioströme entgegen, mischen sie ab und leiten sie an die entsprechenden Spieler weiter. 
+Die Konsequenz aus einer fehlenden Skalierbarkeit eines Audioservers führt zum logischen Entschluss diesen zu verteilen. Ein Ansatz verteilte Konferenzen zu betreiben, besteht darin, mehrere dedizierte SIP-Endpunkte zu ernennen, mit denen sich Teilnehmern  verbinden. Diese Mixer nehmen die Audioströme entgegen, mischen sie ab und leiten sie an die entsprechenden Spieler weiter. 
 
-Dabei gibt es zwei mögliche Varianten dieses Modells: In einem End-System-Mixing übernimmt ein Teilnehmer die Verantwortung für das Mischen des Audiostroms und in einem Server-Basiertem Mixing übernehmen unabhängige dedizierte Knoten diese Verantwortung ohne aktiv am Gespräch teilzunehmen. 
+Dabei gibt es zwei mögliche Varianten dieses Modells: In einem End-System-Mixing übernimmt ein Teilnehmer die Verantwortung für das Mischen des Audiostroms und in einem Server-basierten Mixing übernehmen unabhängige dedizierte Knoten diese Verantwortung, ohne aktiv am Gespräch teilzunehmen. 
 
-Dieses Modell bietet Vorteile, indem die Bandbreitenbelastung und Kapazitätsbelastung auf mehrere Maschinen verteilt wird. 
+Die Vorteile liegen vor allem in der Verteilung der Bandbreiten- und Kapazitätsbelastung auf mehrere Maschinen. 
 
-Dieses Modell hat jedoch einige Nachteile: Die Existenz einer Konferenz ist ab\-hän\-gig von dem Vorhandensein eines Mix-Servers und die Last auf dem Mixer selbst kann sehr hoch sein, was der Abschnitt \ref{zentralansatz} gezeigt hat. Was die maximale Anzahl an Spielern angeht ergeben sich hier prinzipiell für jeden Mischknoten die gleichen Berechnungen wie bei einem einzigen Server System. Deshalb muss von Knoten ausgegangen werden, die über genügend Bandbreite und Rechenkapazität verfügen, um für andere Spieler das Mischen vorzunehmen. 
+Dieses Modell hat jedoch einige Nachteile: Die Existenz einer Konferenz ist ab\-hän\-gig von dem Vorhandensein eines Mix-Servers und die Last auf dem Mixer selbst kann sehr hoch sein, was der Abschnitt \ref{zentralansatz} gezeigt hat. Was die maximale Anzahl an Spielern angeht, ergeben sich hier prinzipiell für jeden Mischknoten die gleichen Berechnungen wie bei einem einzigen Server System. Deshalb muss von Knoten ausgegangen werden, die über genügend Bandbreite und Rechenkapazität verfügen, um für andere Spieler das Mischen vorzunehmen. 
 
-Ebenfalls Problematisch gestaltet sich der Übergang von einem einfachen Telefongespräch zwischen zwei Teilnehmern zu einer Konferenz, da zuerst erst alle Teilnehmer den gleichen Server aufsuchen müssen, um diesen dann die Kontrolle über die Konferenz zu übergeben. Dies ist keine einfache Aufgabe und erfordert ein ausgeklügeltes Vorgehen. Der im Kapitel 5 vorgestellte Ansatz von Gu beschäftigt sich mit der Kontrolle von dedizierten \textit{Superpeers}, die das Mischen vornehmen, geht jedoch nicht auf das Problem ein, wie Teilnehmer lokalisiert werden sollen und wie Übergänge zwischen Konferenzen stattfinden sollen.
+Ebenfalls problematisch gestaltet sich der Übergang von einem einfachen Telefongespräch zwischen zwei Teilnehmern zu einer Konferenz, da zuerst alle Teilnehmer den gleichen Server aufsuchen müssen, um diesem dann die Kontrolle über die Konferenz zu übergeben. Dies ist keine einfache Aufgabe und erfordert ein ausgeklügeltes Vorgehen. Der im Kapitel 5 vorgestellte Ansatz von Gu beschäftigt sich mit der Kontrolle von dedizierten \textit{Superpeers}, die das Mischen vornehmen, geht jedoch nicht auf das Problem ein, wie Teilnehmer lokalisiert werden sollen und wie die Übergänge zwischen Konferenzen stattfinden sollen.
 
 Erschwerend hinzu kommt das Problem der Korrelation zwischen den Lokationen der Spieler und der Lokation solcher Mischserver, das in Abschnitt \label{Audio-Proxy} behandelt wurde. 
 
-Grundsätztlich jedoch funktioniert das dedizierte Mischen besser als das End-System basierte, da die Systeme meist zuverlässiger sind und über eine bessere Anbindung verfügen. Für größere Konferenzen bietet sich diese Art des Mischens an, für kleinere jedoch bedeutet sie einen erheblichen Aufwand.
+Grundsätztlich jedoch funktioniert das dedizierte Mischen besser als das End-System-basierte, da die Systeme meist zuverlässiger sind und über eine bessere Anbindung verfügen. Für größere Konferenzen bietet sich diese Art des Mischens an, für kleinere jedoch bedeutet sie einen erheblichen Aufwand.
 % Grafik End-System-Mixing
 % Grafik Server-Based-Mixing
 
 \subsection{Dezentrales Audiomixing}
-\subsubsection{SIP Hybrid Modell}
+\subsubsection{SIP-Hybrid-Modell}
 
-Das SIP Hybrid Modell nutzt die zentrale Komponente des Registrars, bei dem sich jeder Teilnehmer des Spiels zuerst anmeldet. Der Registrar verfügt so über eine komplette Liste aller Teilnehmer. Der Datenaustausch findet über den Proxy statt, der bei jeder Nachricht die Adresse des Empfängers bestimmt. Die Sprach\-kommunikation jedoch findet nicht über die zentrale Komponente statt, sondern direkt zwischen den einzelnen Spielern. Im einfachsten Fall wird der eigene Audiostrom an alle Teilnehmer des Spieles gesendet, und man selbst empfängt auch den Audiostrom aller Teilnehmer. In einer dh-hoc peer-to-peer Telekonferenz nutzt jeder Teilnehmer unicast, um seine Stimme an alle anderen Teilnehmer der Konferenz zu übertragen und um Stimmen aller Konferenzeilnehmer zu empfangen. In einer Konferenz mit $n$ Teilnehmern müssen so $n^2-n$ Audioströme ausgetauscht werden. 
+Das SIP-Hybrid-Modell nutzt die zentrale Komponente des Registrars, bei dem sich jeder Teilnehmer des Spiels zuerst anmeldet. Der Registrar verfügt so über eine komplette Liste aller Teilnehmer. Der Datenaustausch findet über den Proxy statt, der bei jeder Nachricht die Adresse des Empfängers bestimmt. Die Sprach\-kommunikation jedoch findet nicht über die zentrale Komponente statt, sondern direkt zwischen den einzelnen Spielern. Im einfachsten Fall wird der eigene Audiostrom an alle Teilnehmer des Spieles gesendet, und man selbst empfängt auch den Audiostrom aller Teilnehmer. In einer dh-hoc peer-to-peer Telekonferenz nutzt jeder Teilnehmer unicast, um seine Stimme an alle anderen Teilnehmer der Konferenz zu übertragen und um Stimmen aller Konferenzeilnehmer zu empfangen. In einer Konferenz mit $n$ Teilnehmern müssen so $n^2-n$ Audioströme ausgetauscht werden. 
 
-Dies entspricht dem Full-Mesh Anatz von Schulzrinne \cite{schulzrinne03}, der jedoch in einem völlig dezentralisierten Ansatz damit zu kämpfen hatte, die Teilnehmer einer Konferenz zu bestimmen. Hier kann die Bestimmung der Teilnehmer einer Konferenz mit Hilfe des Registrars zentral geschehen und vereinfacht das Problem. 
+Dies entspricht dem Full-Mesh-Anatz von Schulzrinne \cite{schulzrinne03}, der jedoch in einem völlig dezentralisierten Ansatz damit zu kämpfen hatte, die Teilnehmer einer Konferenz zu bestimmen. Hier kann die Bestimmung der Teilnehmer einer Konferenz mit Hilfe des Registrars zentral geschehen und vereinfacht das Problem. 
 
-Indem nun die einzelnen Knoten für das Abmischen verantwortlich sind, kann die Kapazitätsbelastung eines Mischservers auf die Clientmaschinen verlagert werden, die gerade im Spielebereich sehr gut ausgesattet sind. Da allerdings der Bandbreitenverbrauch bei einem dezentralen Austausch von Audioströmen quadratisch von der Anzahl der Teilnehmer abhängt, soll eine Plausibilitätsrechnung prüfen, welche Mindestvorraussetzungen die Teilnehmer eines solchen Systems erfüllen müssen.
+Indem nun die einzelnen Knoten für das Abmischen verantwortlich sind, kann die Kapazitätsbelastung eines Mischservers auf die Clientmaschinen verlagert werden, die gerade im Spielebereich sehr gut ausgesattet sind. Da allerdings der Bandbreitenverbrauch bei einem dezentralen Austausch von Audioströmen quadratisch von der Anzahl der Teilnehmer abhängt, soll eine Plausibilitätsrechnung prüfen, welche Mindestvoraussetzungen die Teilnehmer eines solchen Systems erfüllen müssen.
 
-Es wird gefordert, dass mindestens 16 Spieler in der Lage sein sollen miteinander zu kommunizieren. Sendet jeder Spieler seinen Audiostrom mit 16 Kbit/s an die anderen Spieler, kann leicht errechnet werden über welche Anbindung die Spieler mindestens verfügen müssen, um diese Anforderung zu erfüllen. 
+Es wird gefordert, dass mindestens 16 Spieler in der Lage sein sollen, miteinander zu kommunizieren. Sendet jeder Spieler seinen Audiostrom mit 16 Kbit/s an die anderen Spieler, kann leicht errechnet werden, über welche Anbindung die Spieler mindestens verfügen müssen, um diese Anforderung zu erfüllen. 
 
-Die Grundlage für eine einfache Berechnung bieten die folgenden Vorraussetzungen:
+Die Grundlage für eine einfache Berechnung bieten die folgenden Voraussetzungen:
 
 \begin{itemize}
 	\item Jeder Spieler sendet einen Audiostrom an alle Clients.
@@ -275,20 +272,20 @@ Die Grundlage für eine einfache Berechnung bieten die folgenden Vorraussetzungen
 	\item Jeder Spieler mischt die Audioströme lokal ab, da er auch die Positionen der Teilnehmer kennt. 
 \end{itemize}
 
-Befinden sich beispielsweise 16 Personen im Spiel, empfängt jede dieser 16 Personen 16 Audioströme und sendet auch seinen eigenen Audiostrom an an jede der 16 Personen. 
+Befinden sich beispielsweise 16 Personen im Spiel, empfängt jede dieser 16 Personen 16 Audioströme und sendet auch seinen eigenen Audiostrom an jede der 16 Personen. 
 
-Upstream/Downstream
+Upstream/Downstream:
 
 \[	
 	\mbox{16 Spieler} \cdot 16 \frac{Kbit}{s} = 256 \frac{Kbit}{s}
 \]
 
-Das würde für dieses Szenario bedeuten, dass theoretisch bei 16 gleichzeitigen Spielern jeder Spieler mindestens über einen Upload/Download von $256 \frac{Kbit}{s}$ verfügen muss um in einem Full-Mesh miteinander kommunizieren zu können. Der Full-Mesh Ansatz hat das Problem, dass sich die Kapazität der Bandbreite relativ schnell erschöpft, da jeder Spieler seinen Audiostrom an alle anderen Spieler senden muss. Geht man davon aus, dass jeder Client heutzutage mit einem Upload von 128 Kbit/s ausgestattet ist, zeigen sich bereits bei 16 Spielern, die Grenzen dieses Systems. Mit entsprechenden Audiocodecs ist vielleicht eine Verdopplung der Teilnehmer möglich, ändert aber nichts am Problem, dass dieser Ansatz bedingt durch seine Architektur seine Grenzen hat. 
+Das würde für dieses Szenario bedeuten, dass theoretisch bei 16 gleichzeitigen Spielern jeder Spieler mindestens über einen Upload/Download von $256 \frac{Kbit}{s}$ verfügen muss, um in einem Full-Mesh miteinander kommunizieren zu können. Der Full-Mesh Ansatz hat das Problem, dass sich die Kapazität der Bandbreite relativ schnell erschöpft, da jeder Spieler seinen Audiostrom an alle anderen Spieler senden muss. Geht man davon aus, dass jeder Client heutzutage mit einem Upload von 128 Kbit/s ausgestattet ist, zeigen sich bereits bei 16 Spielern, die Grenzen dieses Systems. Mit entsprechenden Audiocodecs ist vielleicht eine Verdopplung der Teilnehmer möglich, sie ändern aber nichts an den architekturbedingten Grenzen dieses Ansatzes.
 
-Dies liegt vor allem darin, dass die Verbreitung des Audiostroms nicht besonders effizient ist. Es ist vorstellbar, dass nicht nicht jeder Spieler des Spiels am Audiostrom aller Mitspieler interessiert ist. Trotzdem werden mit allen Teilnehmer Verbindungen aufgebaut.
+Die Gründe dafür liegen unter anderem in einer uneffizienten Verbreitung des Audiostroms. Es ist vorstellbar, dass nicht nicht jeder Spieler des Spiels am Audiostrom aller Mitspieler interessiert ist. Trotzdem werden mit allen Teilnehmern Verbindungen aufgebaut.
 
 \subsection{Hörnähe vs. Area of Interest}
-Da bereits in Kapitel 2 und 3 festgestellt wurde, dass Spieler nur an manchen  Audioströmen von Spielern interessiert sind, wird versucht diese Beobachtung in die Modellierung einfließen zu lassen. Muss jeder Teilnehmer seinen Audiostrom nicht an alle anderen Teilnehmer verschicken, sondern nur an Teilnehmer seiner unmittelbaren Umgebung, kann so Bandbreite eingespart werden. Außerdem kann in Abhängigkeit der Entfernung der Teilnehmer zueinander unterschieden werden mit welcher Audiocodec eingesetzt wird. 
+Da bereits in Kapitel 2 und 3 festgestellt wurde, dass Spieler nur an manchen  Audioströmen von Spielern interessiert sind, wird versucht diese Beobachtung in die Modellierung einfließen zu lassen. Muss jeder Teilnehmer seinen Audiostrom nicht an alle anderen Teilnehmer verschicken, sondern nur an Teilnehmer seiner unmittelbaren Umgebung, so kann Bandbreite eingespart werden. Außerdem kann in Abhängigkeit der Entfernung der Spieler zueinander, unterschieden werden welcher Audiocodec eingesetzt wird. 
 
 Dieser Ansatz entspricht dem Proximitätsprinzip, oder auch der \textit{Area of Interest}, bei der nur Teilnehmer an einer Audioverbindung interessiert sind, die sich auch tatsächlich in der Nähe des Spielers befinden.
 
@@ -304,19 +301,19 @@ Befinden sich beispielsweise 16 Personen im Spiel und nimmt man an, dass sich im
 
 Dabei gibt $P_{Hoernaehe}$ an, wie viele Personen, sich im Schnitt in der Hörnähe des Teilnehmers befinden. Dieser Wert kann verändert werden, in dem die \textit{Hörerreichweite}\footnote{Radius, in dem die Stimmen anderer Teilnehmer abonniert werden} des Spielers vergrößert oder verkleinert wird. 
 
-Generell gilt je größer die Hörerreichweite, desto mehr Personen können sich in der Hörnähe des Teilnehmers befinden. In diesem Fall wird bei einer Hörerreichweite von 10 m, eine theoretische Wahrscheinlichkeit von 30\% angenommen, dass eine Person sich in diesem Hörradius befindet. 
+Generell gilt je größer die Hörerreichweite, desto mehr Personen können sich in der Hörnähe des Teilnehmers befinden. In diesem Fall wird bei einer Hörerreichweite von 10 m, eine theoretische Wahrscheinlichkeit, dass eine Person sich in diesem Hörradius befindet von 30\% angenommen. 
 
-Nun wird die Gleichung um diese Wahrscheinlichkeit ergänzt und immer noch angenommen, dass sich 16 Spieler im Spiel befinden. 
+Nun wird die Gleichung um diese Wahrscheinlichkeit ergänzt und immer noch von 16 Spielern im Spiel ausgegangen. 
 
-Upstream/Downstream
+Upstream/Downstream:
 
 \[
 	\mbox{16 Spieler} \cdot 16 \frac{Kbit}{s} \cdot 30\% = 76,8\frac{Kbit}{s}
 \]
 
-Hier ist eindeutig eine Reduzierung der Bandbreite möglich. Natürlich kann im schlechtesten Fall, bei einer hohen Avatardichte, der Fall eintreten, dass wieder alle 16 Teilnehmer sich in der Hörnähe des Spielers befinden. Dann ist diese Lösung genauso effizient wie die Full-Mesh Topologie, da der Spieler mit allen Teilnehmern Verbindungen aufbauen muss. Im Schnitt kann jedoch ein großer Prozentsatz der Bandbreite eingespart werden, wenn man davon ausgeht, dass Spieler nur an Audioverbindungen mit Spielern interessiert sind, die sich in ihrer Nähe befinden.
+In Abhängigkeit der Wahrscheinlichkeit ist eine Reduzierung der Bandbreite möglich. Natürlich kann im schlechtesten Fall, bei einer hohen Avatardichte, der Fall eintreten, dass wieder alle 16 Teilnehmer sich in der Hörnähe des Spielers befinden. Dann ist diese Lösung genauso effizient wie die Full-Mesh-Topologie, da der Spieler mit allen Teilnehmern Verbindungen aufbauen muss. Im Schnitt kann jedoch ein großer Prozentsatz der Bandbreite eingespart werden, wenn man davon ausgeht, dass Spieler nur an Audioverbindungen mit Spielern interessiert sind, die sich in ihrer Nähe befinden.
 
-Es lässt sich sogar noch mehr Bandbreite einsparen, wenn man die Hörreichweite in zwei Zonen (entsprechend Abschnitt \label{proxemikalssteuerungvonkonferenzen}) mit verschiedenen Audiocodecs unterteilt wird. In einer private Zone wird ein hochwertige Audiocodec mit einer größeren Bandbreite benutzt und in einer sozialen Zone ein wird ein Codec mit einer niedrigeren Bandbreite benutzt. 
+Es lässt sich sogar noch mehr Bandbreite einsparen, wenn man die Hörreichweite in zwei Zonen (entsprechend Abschnitt \label{proxemikalssteuerungvonkonferenzen}) mit verschiedenen Audiocodecs unterteilt. In einer private Zone wird ein hochwertiger Audiocodec mit einer größeren Bandbreite benutzt und in einer sozialen Zone ein wird ein Codec mit einer niedrigeren Bandbreite benutzt. 
 
 In einem einfachen Szenario, kann man annehmen, dass die 30\% aller Benutzer in Hörreichweite, sich in 10\% in der privaten Zone und 20\% in der sozialen Zone aufteilen. Spieler in der privaten Zone nutzen einen Audiocodec mit einer Bitrate von $16Kbit/s$ und Spieler in der sozialen Zone einen Audiocodec mit $8Kbit/s$. Ergänzt man die Gleichung entsprechend um das Zonenkonzept, und nimmt immer noch an, dass sich 16 Spieler im Spiel befinden kommt man zu folgender Berechnung:
 
