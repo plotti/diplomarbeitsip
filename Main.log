@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592-1.40.4 (MiKTeX 2.7) (preloaded format=latex 2008.3.17)  30 MAY 2008 12:03
+This is pdfTeX, Version 3.141592-1.40.4 (MiKTeX 2.7) (preloaded format=latex 2008.3.17)  30 MAY 2008 14:59
 entering extended mode
 **Main.tex
 (Main.tex
@@ -369,11 +369,8 @@ Class scrbook Warning: `pagehead' and `pagefoot' are aliases for the same
 (Main.aux (kapitel/titel.aux) (kapitel/abstract.aux)
 (kapitel/stichwortverzeichnis.aux) (kapitel/abkuerzungen.aux)
 (kapitel/einleitung.aux) (kapitel/kapitel_kommunikation.aux)
-(kapitel/kapitel_folgerungundziele.aux) (kapitel/kapitel_sip.aux
-
-LaTeX Warning: Label `SIP-Message' multiply defined.
-
-) (kapitel/kapitel_recentwork.aux) (kapitel/kapitel_konstruktion.aux
+(kapitel/kapitel_folgerungundziele.aux) (kapitel/kapitel_sip.aux)
+(kapitel/kapitel_recentwork.aux) (kapitel/kapitel_konstruktion.aux
 
 LaTeX Warning: Label `Audio-Proxy' multiply defined.
 
@@ -459,10 +456,16 @@ Class scrbook Info: You've told me to use the font selection of the element
 Class scrbook Info: You've told me to use the font selection of the element
 (scrbook)           `sectioning' that is an alias of element `disposition'
 (scrbook)            on input line 70.
+
+Overfull \hbox (3.3639pt too wide) in paragraph at lines 73--73
+ [][][] []\OT1/cmr/m/n/12 DICE: In-ter-net De-li-ve-ry of Im-mer-si-ve Voi-ce C
+ommuni-cation 
+ []
+
 Class scrbook Info: You've told me to use the font selection of the element
 (scrbook)           `sectioning' that is an alias of element `disposition'
 (scrbook)            on input line 81.
- [4]
+[4]
 Class scrbook Info: You've told me to use the font selection of the element
 (scrbook)           `sectioning' that is an alias of element `disposition'
 (scrbook)            on input line 106.
@@ -475,10 +478,10 @@ Class scrbook Info: You've told me to use the font selection of the element
 (scrbook)            on input line 190.
 Class scrbook Info: You've told me to use the font selection of the element
 (scrbook)           `sectioning' that is an alias of element `disposition'
-(scrbook)            on input line 201.
+(scrbook)            on input line 202.
 Class scrbook Info: You've told me to use the font selection of the element
 (scrbook)           `sectioning' that is an alias of element `disposition'
-(scrbook)            on input line 204.
+(scrbook)            on input line 205.
 )
 \tf@toc=\write3
  [6] (kapitel/stichwortverzeichnis.tex) [7
@@ -488,6 +491,12 @@ Class scrbook Info: You've told me to use the font selection of the element
 Overfull \hbox (1.8753pt too wide) in paragraph at lines 14--14
  [][][] []\OT1/cmr/m/n/12 Einsatz von je-weils di-rek-ten Kom-mu-ni-ka-ti-ons-k
 an[]alen zwi-schen Teil- 
+ []
+
+
+Overfull \hbox (2.42392pt too wide) in paragraph at lines 29--29
+ [][][] []\OT1/cmr/m/n/12 Peer-to-Peer-Architektur mit di-rek-ten Au-dio-ver-bi
+n-dun-gen der Spie- 
  []
 
 [8
@@ -805,43 +814,31 @@ und Re-gis-tra-ren []ubernommen
 
 LaTeX Warning: Reference `siphybrid' on page 68 undefined on input line 198.
 
-[68]
-Overfull \hbox (8.83041pt too wide) in paragraph at lines 222--223
-[][]\OT1/cmr/m/n/12 Befinden sich bei-spiels-wei-se 16 Per-so-nen im Spiel, emp
-f[]angt der Ser-ver Au-diostr[]ome
- []
-
-[69]
-Overfull \hbox (11.63316pt too wide) in paragraph at lines 236--237
+[68] [69]
+Overfull \hbox (11.63316pt too wide) in paragraph at lines 235--236
 [][]\OT1/cmr/m/n/12 Die Nach-tei-le ei-nes Misch-ser-vers lie-gen je-doch beim 
 in-ter-ak-ti-ven De-lay, der abh[]angig
  []
 
-
-Overfull \hbox (31.60379pt too wide) in paragraph at lines 245--246
-[][]\OT1/cmr/m/n/12 Dieses Mo-dell bie-tet Vor-tei-le, in-dem die Band-brei-ten
--be-las-tung und Ka-pa-zit[]atsbelastung
- []
-
 [70] [71]
-Overfull \hbox (12.14702pt too wide) in paragraph at lines 284--285
+Overfull \hbox (12.14702pt too wide) in paragraph at lines 283--284
 \OT1/cmr/m/n/12 Spie-lern je-der Spie-ler min-des-tens []uber einen Uploa-d/-Do
 w-n-load von $256[]$ verf[]ugen
  []
 
 [72]
-Overfull \hbox (24.50706pt too wide) in paragraph at lines 303--304
+Overfull \hbox (24.50706pt too wide) in paragraph at lines 302--303
 \OT1/cmr/m/n/12 Teil-neh-mers be-fin-den. Die-ser Wert kann ver[]andert wer-den
 , in dem die \OT1/cmr/m/it/12 H[]orerreichweite[]
  []
 
-[73] [74] [75]) [76] (kapitel/kapitel_implementierung.tex
+[73] [74]) [75] (kapitel/kapitel_implementierung.tex
 Kapitel 7.
-[77
+[76
 
 
 
-] [78]
+] [77]
 ! Undefined control sequence.
 <argument> \textit {Ventrillo},\texit 
                                       {Teamspeak},\texit {Mumble}
@@ -886,79 +883,105 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-[79] [80] [81] [82]
+
+Overfull \hbox (2.32884pt too wide) in paragraph at lines 47--48
+[][]\OT1/cmr/m/n/12 Bei al-len der drei Pro-duk-ten han-delt es sich um ser-ver
+-ba-sier-te VoIP-Anwendungen.
+ []
+
+[78] [79]
+Overfull \hbox (18.31721pt too wide) in paragraph at lines 78--79
+[]\OT1/cmr/m/n/12 Andere Peer-to-Peer Pro-gram-me wie \OT1/cmr/m/it/12 Microsof
+t-Netmeeting[]\OT1/cmr/m/n/12 , \OT1/cmr/m/it/12 Microsoft-Messenger[]\OT1/cmr/
+m/n/12 ,
+ []
+
+
+Overfull \hbox (18.89111pt too wide) in paragraph at lines 81--83
+\OT1/cmr/m/n/12 str[]omen, Kon-fe-ren-zen oder Com-pu-ter-spie-len her-stel-len
+. Zahl-rei-che Standardisierungs-
+ []
+
+[80]
+Overfull \hbox (5.05937pt too wide) in paragraph at lines 84--85
+[][]\OT1/cmr/m/n/12 In der Open-Source Ge-mein-de wird das SIP-Protokoll auch z
+u-neh-mend un-terst[]utzt.
+ []
+
+[81]
 Underfull \hbox (badness 10000) in paragraph at lines 111--111
 [][]\OT1/cmr/m/n/10 Wikipedia:Overview of SIP Soft-wa-re, Ver-si-on 22.03.2008,
 
  []
 
-[83]
+
+Overfull \hbox (20.86517pt too wide) in paragraph at lines 114--115
+[]\OT1/cmr/m/n/12 Neben kom-plet-ten Soft-pho-nes exis-tie-ren Plattform-[]uber
+greifende SIP-Protokollstapel,
+ []
+
+[82]
 File: grafiken/pjsip.eps Graphic file (type eps)
- <grafiken/pjsip.eps> [84]
+ <grafiken/pjsip.eps> [83]
 File: grafiken/spielewelt-screenshot.eps Graphic file (type eps)
- <grafiken/spielewelt-screenshot.eps> [85]
-[86]
+ <grafiken/spielewelt-screenshot.eps> [84]
+[85]
 File: grafiken/pjsip-mediaflow.eps Graphic file (type eps)
- <grafiken/pjsip-mediaflow.eps> [87]
-Overfull \hbox (29.37285pt too wide) in paragraph at lines 211--212
+ <grafiken/pjsip-mediaflow.eps> [86]
+Overfull \hbox (29.37285pt too wide) in paragraph at lines 210--211
 [][]\OT1/cmr/m/n/12 W[]ahrend der In-itia-li-sie-rungs-pha-se, er-stellt die An
 -wen-dung einen lo-gi-schen Soundkarten-
  []
 
-
-Overfull \hbox (17.28427pt too wide) in paragraph at lines 211--212
-\OT1/cmr/m/n/12 nut-zen und ihn bei der Kon-fe-renz-br[]ucke re-gis-trie-ren. D
-a-nach kann die-ser Audiostrom-
- []
-
-[88]
-Overfull \hbox (0.2514pt too wide) in paragraph at lines 221--222
+[87]
+Overfull \hbox (0.2514pt too wide) in paragraph at lines 220--221
 \OT1/cmr/m/n/12 der Ent-fer-nung von-ein-an-der wer-den die ent-spre-chen-den Z
 o-nen-me-cha-nis-men durch
  []
 
+[88]
 File: grafiken/conference-bridge.eps Graphic file (type eps)
-<grafiken/conference-bridge.eps> [89]
+ <grafiken/conference-bridge.eps>
 File: grafiken/gamestart-screenshot.eps Graphic file (type eps)
  <grafiken/gamestart-screenshot.eps>
-[90] [91]
+[89] [90] [91]
 File: grafiken/sipanruf_403.eps Graphic file (type eps)
  <grafiken/sipanruf_403.eps> [92] [93] [94]
 File: grafiken/siphold.eps Graphic file (type eps)
- <grafiken/siphold.eps>
-[95] [96] [97]) [98] (kapitel/kapitel_network.tex
+
+<grafiken/siphold.eps> [95] [96]) [97] (kapitel/kapitel_network.tex
 Kapitel 8.
-[99
+[98
 
 
 
-] [100] [101]
+] [99] [100]
 Overfull \hbox (0.12033pt too wide) in paragraph at lines 53--54
 \OT1/cmr/m/n/12 Ent-wick-lung ei-nes sol-chen []uber den Rah-men der Ar-beit hi
 n-aus-geht. Da-zu m[]ussten
  []
 
-[102] [103] [104] [105] [106] [107] [108] [109]
+[101] [102] [103] [104] [105] [106] [107] [108]
 
-LaTeX Warning: Reference `p2psipregisterandjoin' on page 110 undefined on input
+LaTeX Warning: Reference `p2psipregisterandjoin' on page 109 undefined on input
  line 199.
 
 
-LaTeX Warning: Reference `p2psipregisterandjoin_user' on page 110 undefined on 
+LaTeX Warning: Reference `p2psipregisterandjoin_user' on page 109 undefined on 
 input line 203.
 
-[110]
+[109]
 File: grafiken/p2psipregisterandjoin.eps Graphic file (type eps)
  <grafiken/p2psipregisterandjoin.eps>
 File: grafiken/p2psipregisterandjoin_user.eps Graphic file (type eps)
 
 <grafiken/p2psipregisterandjoin_user.eps>
 
-LaTeX Warning: Reference `p2psipcall' on page 111 undefined on input line 220.
+LaTeX Warning: Reference `p2psipcall' on page 110 undefined on input line 220.
 
-[111]
+[110]
 File: grafiken/p2psipcall.eps Graphic file (type eps)
- <grafiken/p2psipcall.eps> [112]
+ <grafiken/p2psipcall.eps> [111]
 
 LaTeX Warning: File `grafiken/3in1registrar.eps' not found on input line 244.
 
@@ -988,16 +1011,16 @@ Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 File: grafiken/3in1registrar.eps Graphic file (type eps)
-<grafiken/3in1registrar.eps>) [113] [114] (kapitel/kapitel_benchmarking.tex
+<grafiken/3in1registrar.eps>) [112] [113] (kapitel/kapitel_benchmarking.tex
 Kapitel 9.
 
-LaTeX Warning: Reference `fullmeshszenario' on page 115 undefined on input line
+LaTeX Warning: Reference `fullmeshszenario' on page 114 undefined on input line
  13.
 
 File: grafiken/fullmesh.eps Graphic file (type eps)
 <grafiken/fullmesh.eps>
 File: grafiken/fullmeshchart.eps Graphic file (type eps)
- <grafiken/fullmeshchart.eps> [115
+ <grafiken/fullmeshchart.eps> [114
 
 
 
@@ -1014,7 +1037,7 @@ The control sequence marked <to be read again> should
 not appear between \csname and \endcsname.
 
 
-LaTeX Warning: Reference `\textbraceleft ' on page 116 undefined on input line 
+LaTeX Warning: Reference `\textbraceleft ' on page 115 undefined on input line 
 45.
 
 ! Extra \endcsname.
@@ -1030,32 +1053,32 @@ l.45 ...sen. Abbildung \ref\{fig:partialmeshchart}
 You've closed more groups than you opened.
 Such booboos are generally harmless, so keep going.
 
-[116]
+[115]
 File: grafiken/partialmeshchart.eps Graphic file (type eps)
  <grafiken/partialmeshchart.eps>
 File: grafiken/fullmesh-worstcase.eps Graphic file (type eps)
  <grafiken/fullmesh-worstcase.eps>
 File: grafiken/ohnevpn1.eps Graphic file (type eps)
 
-<grafiken/ohnevpn1.eps> [117]
+<grafiken/ohnevpn1.eps> [116]
 File: grafiken/ohnevpn2.eps Graphic file (type eps)
  <grafiken/ohnevpn2.eps>
 File: grafiken/mitvadupdown.eps Graphic file (type eps)
 
 <grafiken/mitvadupdown.eps>
 File: grafiken/mitvadrtpsip.eps Graphic file (type eps)
- <grafiken/mitvadrtpsip.eps> [118]
+ <grafiken/mitvadrtpsip.eps> [117]
 File: grafiken/mitholdupanddown.eps Graphic file (type eps)
 
 <grafiken/mitholdupanddown.eps>
 File: grafiken/mithold1.eps Graphic file (type eps)
- <grafiken/mithold1.eps> [119]
+ <grafiken/mithold1.eps> [118]
 File: grafiken/mitvadund2codecs.eps Graphic file (type eps)
 
 <grafiken/mitvadund2codecs.eps>
 File: grafiken/mitvadundrtpsip.eps Graphic file (type eps)
- <grafiken/mitvadundrtpsip.eps>) [120] [121]
-[122] [123] [124] (kapitel/kapitel_conclusion.tex
+ <grafiken/mitvadundrtpsip.eps>) [119] [120]
+[121] [122] [123] (kapitel/kapitel_conclusion.tex
 Kapitel 10.
 
 Overfull \hbox (12.18462pt too wide) in paragraph at lines 10--11
@@ -1063,17 +1086,17 @@ Overfull \hbox (12.18462pt too wide) in paragraph at lines 10--11
 ichkeiten adres-siert und L[]osungen
  []
 
-[125
+[124
 
 
 
-] [126]
+] [125]
 Overfull \hbox (4.4597pt too wide) in paragraph at lines 30--31
 [][]\OT1/cmr/m/n/12 Obwohl zwar meh-re-re Sprach-kom-mu-ni-ka-ti-ons L[]osungen
  auf Ba-sis von pro-pri[]ateren
  []
 
-[127]
+[126]
 ! Undefined control sequence.
 l.34 ...yspielen oder tragbaren Konsolen\footnonte
                                                   {Nintendo DS, Playstation ...
@@ -1089,11 +1112,7 @@ Overfull \hbox (2.42232pt too wide) in paragraph at lines 38--39
 rds in Com-pu-ter-spie-le w[]urden
  []
 
-
-Package natbib Warning: Citation `gibbs03' on page 128 undefined on input line 
-40.
-
-) [128] (Main.bbl [129
+) [127] (Main.bbl [128
 
 
 
@@ -1109,7 +1128,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 126--132
 ]Studien[]-
  []
 
-[130]
+[129]
 Underfull \hbox (badness 10000) in paragraph at lines 242--248
 [][]\OT1/cmr/m/sc/12 Ipoque\OT1/cmr/m/n/12 :  In-ter-net Stu-die 2007.  In:
  []
@@ -1120,14 +1139,14 @@ Overfull \hbox (1.91747pt too wide) in paragraph at lines 242--248
 et[]study[]2007
  []
 
-[131] [132]
+[130] [131]
 Underfull \hbox (badness 10000) in paragraph at lines 401--405
 [][]\OT1/cmr/m/sc/12 Reichswald\OT1/cmr/m/n/12 , R. ; \OT1/cmr/m/sc/12 M[]oslei
 n\OT1/cmr/m/n/12 , K. ; \OT1/cmr/m/sc/12 Sa-chen-ba-che-rand\OT1/cmr/m/n/12 , K
 . ;
  []
 
-[133] [134] [135]) [136] (kapitel/erklaerung.tex) [137
+[132] [133] [134]) [135] (kapitel/erklaerung.tex) [136
 
 
 ]
@@ -1141,10 +1160,6 @@ Package natbib Warning: There were undefined citations.
 (kapitel/kapitel_recentwork.aux) (kapitel/kapitel_konstruktion.aux)
 (kapitel/kapitel_implementierung.aux) (kapitel/kapitel_network.aux)
 (kapitel/kapitel_benchmarking.aux) (kapitel/kapitel_conclusion.aux)
-
-Package natbib Warning: Citation(s) may have changed.
-(natbib)                Rerun to get citations correct.
-
 (kapitel/erklaerung.aux))
 
 LaTeX Warning: There were undefined references.
@@ -1156,10 +1171,10 @@ LaTeX Warning: There were multiply-defined labels.
 Here is how much of TeX's memory you used:
  6718 strings out of 95341
  96357 string characters out of 1184182
- 210216 words of memory out of 1500000
+ 210300 words of memory out of 1500000
  9675 multiletter control sequences out of 110000
  11824 words of font info for 42 fonts, out of 1200000 for 2000
  14 hyphenation exceptions out of 8191
  37i,11n,37p,1415b,1101s stack positions out of 5000i,500n,10000p,200000b,5000s
 
-Output written on Main.dvi (149 pages, 531536 bytes).
+Output written on Main.dvi (148 pages, 531364 bytes).
