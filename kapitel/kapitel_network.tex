@@ -1,10 +1,10 @@
 \chapter{SIP als Netzwerkschicht für Spiele}
 
-Wie schon im Kapitel 7 beobachtet, sind die Herausforderungen an die Verwaltung einer Sprachkommunikation mit der darunter liegenden Netzwerkarchitektur verbunden. Vor allem in Kaptiel 6 wurde deutlich, dass die Signalisierung und Lokation der Teilnehmer einer Konferenz, genauso wichtig ist wie der Austausch der Audiodaten selbst. Es liegt daher nahe, die bereits eingesetzten Komponenten nicht nur dazu zu Nutzen, um Teilnehmer zu Lokalisieren und Konferenzen zu steuern, sondern auch um Spieleinformationen zu übertragen. 
+Wie schon in Kapitel 7 beobachtet, sind die Herausforderungen an die Verwaltung einer Sprachkommunikation mit der darunter liegenden Netzwerkarchitektur verbunden. Vor allem in Kapitel 6 wurde deutlich, dass die Signalisierung und Lokation der Teilnehmer einer Konferenz, genauso wichtig ist wie der Austausch der Audiodaten selbst. Es liegt daher nahe, die bereits eingesetzten Komponenten nicht nur dazu zu Nutzen, um Teilnehmer zu Lokalisieren und Konferenzen zu steuern, sondern auch um Spieleinformationen zu übertragen. 
 
 \section{SIP als Netzwerkschicht}
 
-Da es sich bei SIP um generisches Protokoll handelt, ist es prinzipiell nicht nur für die Sprachkommunikation einsetzbar sondern auch, um beliebige Sitzungen zwischen Clients zu etablieren und Daten in Echtzeit auszutauschen. Dieses Kapitel soll zeigen, welche der bestehenden Client-Server und Peer-to-Peer Architekturen sich mit SIP umsetzen lassen. Es ist keineswegs das Ziel bestehende Probleme der einzelnen Architekturen lösen, indem das SIP Protokoll verwendet wird, sondern vielmehr eine standardisierte Addressierung,  Signalisierung und hohe Abstraktionsebene zu erreichen.
+Da es sich bei SIP um generisches Protokoll handelt, ist es prinzipiell nicht nur für die Sprachkommunikation einsetzbar sondern auch, um beliebige Sitzungen zwischen Clients zu etablieren und Daten in Echtzeit auszutauschen. Dieses Kapitel soll zeigen, welche der bestehenden Client-Server und Peer-to-Peer Architekturen sich mit SIP umsetzen lassen. Es ist keineswegs das Ziel bestehende Probleme der einzelnen Architekturen lösen, indem das SIP-Protokoll verwendet wird, sondern vielmehr eine standardisierte Adressierung,  Signalisierung und hohe Abstraktionsebene zu erreichen.
 
 In diesem Kapitel werden zunächst Client-Server Konzepte und dann eine die Implementierung einer Client-Server Architektur auf Basis des SIP Protokolls vorgestellt. Diese soll zeigen, dass es sehr einfach ist einen Spielprototyp zu bauen,  bei dem SIP für die Sprachkommunikation und als Netzwerkschnittstelle eingesetzt wird. 
 
@@ -12,23 +12,23 @@ Im zweiten Teil werden bisherige Konzepte für Peer-to-Peer Spiele dargestellt un
 
 \section{Anforderungen an die Netzwerkschicht}
 
-Mehrspieler Spiele besitzen vielfältige Anforderungen an eine Netzwerkarchitektur. Abhängig von der gewählten Architektur lassen sich einige der Anforderungen leichter umsetzen als andere.
+Mehrspieler-Spiele besitzen vielfältige Anforderungen an eine Netzwerkarchitektur. Abhängig von der gewählten Architektur lassen sich einige der Anforderungen leichter umsetzen als andere.
 
 \textbf{Sicherheit:} Da Spieler gegeneinander antreten, sollte Manipulation ausgeschlossen werden. Dazu benötigt man eine sichere Kommunikation zwischen den Spielern. 
 
-\textbf{Spielstand:} Das Spiel kann Objekte enthalten die nur genau einmal existieren. Deswegen muss zwischen den einzelnen Sitzungen dafür gesorgt werden, dass diese dauerhaft gespeichert werden.
+\textbf{Persistenz:} Das Spiel kann Objekte enthalten die nur genau einmal existieren. Deswegen muss zwischen den einzelnen Sitzungen dafür gesorgt werden, dass diese dauerhaft gespeichert werden.
 
-\textbf{Zuverlässigkeit:} Durch einen zu häufigen Ausfall des gesamten Systems, wird die Spielerfahrung negativ beeinflusst. 
+\textbf{Zuverlässigkeit:} Durch einen zu häufigen Ausfall des gesamten Systems wird die Spielerfahrung negativ beeinflusst. 
 
-\textbf{Konsistenz:} Um eine sinnvolle Interaktion zwischen Spielern zu ermöglichen, muss die Erfahrung dieser Welt für jeden Mitspieler konsistent sein. Dies beinhaltet das Aufrechterhalten von Spielezuständen und die Synchronisation von Ereignissen. Um eine Konsistenz der Spielewelt zu Erreichen müssen Ereignisse der Spieler mittels Nachrichten im System ausgetauscht werden. 
+\textbf{Konsistenz:} Um eine sinnvolle Interaktion zwischen Spielern zu ermöglichen, muss die Erfahrung dieser Welt für jeden Mitspieler konsistent sein. Dies beinhaltet das Aufrechterhalten von Spielezuständen und die Synchronisation von Ereignissen. Um eine Konsistenz der Spielewelt zu erreichen, müssen Ereignisse der Spieler mittels Nachrichten im System ausgetauscht werden. 
 
-\textbf{Reaktionsfreudigkeit:} Da Spiele oft die echte Welt simulieren, hat die Reaktionsfreudigkeit des Systems großen Einfluss darauf, für wie realistisch diese Welt gehalten wird. Werden durch zu große Verzögerungen Ereignisse zu spät dargestellt , so wird die Spielmechanik gestört. 
+\textbf{Reaktionsfreudigkeit:} Da Spiele oft die echte Welt simulieren, hat die Reaktionsfreudigkeit des Systems großen Einfluss darauf, für wie realistisch diese Welt gehalten wird. Werden durch zu große Verzögerungen Ereignisse zu spät dargestellt, so wird die Spielmechanik gestört. 
 
 \textbf{Skalierbarkeit:} Eine skalierbare Architektur sollte eine große Anzahl und  Anstieg an gleichzeitigen Benutzern unterstützen, ohne dass die Last des Systems dramatisch ansteigt. 
 
-Während Client- Server Basierte Systeme eine hohe Sicherheit, Persistenz und Konsistenz bieten, ist ihre Zuverlässigkeit und Skalierbarkeit durch den Einsatz einzelner zentralen Komponenten limitiert. Peer-to-Peer basierte Systeme dagegen bieten eine hohe Skalierbarkeit und Zuverlässigkeit, sind aber Anfällig in ihrer Sicherheit, Persistenz und Skalierbarkeit. 
+Während Client-Server basierte Systeme eine hohe Sicherheit, Persistenz und Konsistenz bieten, ist ihre Zuverlässigkeit und Skalierbarkeit durch den Einsatz einzelner zentralen Komponenten limitiert. Peer-to-Peer-basierte Systeme dagegen bieten eine hohe Skalierbarkeit und Zuverlässigkeit, sind aber anfällig in ihrer Sicherheit, Persistenz und Leistung. 
 
-In der Forschung werden beide Architekturen bezüglich der oben genannten Aspekte untersucht. So existieren viele Studien \cite{lau06} zur Skalierbarkeit von Client-Server und Peer-to-Peer Architekturen die bezüglich ihrer Bandbreite, Last und des Delay verglichen werden. Auch Inhalte des Netzwerkverkehrs in Spielen \cite{lau05b}, oder die Auswirkungen der geografische Verteilung von Spieleservern und Spielern wurden untersucht \cite{feng03}. 
+In der Forschung werden beide Architekturen bezüglich der oben genannten Aspekte untersucht. So existieren viele Studien \cite{lau06} zur Skalierbarkeit von Client-Server- und Peer-to-Peer-Architekturen, die bezüglich ihrer Bandbreite, Last und des Delay verglichen werden. Auch Inhalte des Netzwerkverkehrs in Spielen \cite{lau05b}, oder die Auswirkungen der geografischen Verteilung von Spieleservern und Spielern wurden untersucht \cite{feng03}. 
 
 
 \section{Client - Server in Netzwerkspielen}

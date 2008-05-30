@@ -5,7 +5,7 @@ Version=2
 [SessionInfo]
 ActiveTab=0
 FrameCount=19
-ActiveFrame=6
+ActiveFrame=14
 
 [Frame0]
 Columns=1
@@ -90,9 +90,9 @@ cxCur=751
 cxMin=10
 
 [Frame2_View0,0]
-Cursor.row=346
-Cursor.column=15
-TopSubLine=912
+Cursor.row=179
+Cursor.column=581
+TopSubLine=477
 
 [Frame3]
 Columns=1
@@ -177,15 +177,15 @@ cxCur=751
 cxMin=10
 
 [Frame5_View0,0]
-Cursor.row=0
+Cursor.row=138
 Cursor.column=0
-TopSubLine=821
+TopSubLine=311
 
 [Frame6]
 Columns=1
 Rows=1
-Flags=2
-ShowCmd=3
+Flags=0
+ShowCmd=1
 MinPos.x=-1
 MinPos.y=-1
 MaxPos.x=-4
@@ -198,16 +198,16 @@ Class=CLatexEdit
 Document=Main.tex
 
 [Frame6_Row0]
-cyCur=432
+cyCur=346
 cyMin=10
 
 [Frame6_Col0]
-cxCur=940
+cxCur=751
 cxMin=10
 
 [Frame6_View0,0]
-Cursor.row=0
-Cursor.column=0
+Cursor.row=15
+Cursor.column=8
 TopSubLine=0
 
 [Frame7]
@@ -293,9 +293,9 @@ cxCur=801
 cxMin=10
 
 [Frame9_View0,0]
-Cursor.row=357
-Cursor.column=10
-TopSubLine=859
+Cursor.row=305
+Cursor.column=13
+TopSubLine=749
 
 [Frame10]
 Columns=1
@@ -322,9 +322,9 @@ cxCur=787
 cxMin=10
 
 [Frame10_View0,0]
-Cursor.row=420
-Cursor.column=11
-TopSubLine=826
+Cursor.row=411
+Cursor.column=335
+TopSubLine=802
 
 [Frame11]
 Columns=1
@@ -416,8 +416,8 @@ TopSubLine=266
 [Frame14]
 Columns=1
 Rows=1
-Flags=0
-ShowCmd=1
+Flags=2
+ShowCmd=3
 MinPos.x=-1
 MinPos.y=-1
 MaxPos.x=-4
@@ -430,17 +430,17 @@ Class=CLatexEdit
 Document=kapitel\kapitel_network.tex
 
 [Frame14_Row0]
-cyCur=162
+cyCur=607
 cyMin=10
 
 [Frame14_Col0]
-cxCur=1000
+cxCur=909
 cxMin=10
 
 [Frame14_View0,0]
-Cursor.row=0
-Cursor.column=0
-TopSubLine=0
+Cursor.row=30
+Cursor.column=435
+TopSubLine=43
 
 [Frame15]
 Columns=1
@@ -496,9 +496,9 @@ cxCur=746
 cxMin=10
 
 [Frame16_View0,0]
-Cursor.row=124
-Cursor.column=70
-TopSubLine=214
+Cursor.row=44
+Cursor.column=598
+TopSubLine=75
 
 [Frame17]
 Columns=1

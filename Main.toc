@@ -110,7 +110,7 @@
 \contentsline {subsubsection}{\textit {Irrklang}}{77}
 \contentsline {section}{\numberline {7.2}VoIP-L\"osung}{77}
 \contentsline {subsection}{\numberline {7.2.1}Serverbasierte Sprachkommunikationsl\"osungen}{78}
-\contentsline {subsubsection}{\textit {Ventrillo},{Teamspeak},{Mumble}}{78}
+\contentsline {subsubsection}{Ventrillo, Teamspeak und Mumble}{78}
 \contentsline {subsection}{\numberline {7.2.2}Dezentralisierte Sprachkommunikationsl\"osungen}{79}
 \contentsline {subsubsection}{\textit {Skype}}{79}
 \contentsline {subsection}{\numberline {7.2.3}Instant Messaging Anwendungen}{80}
@@ -150,8 +150,8 @@
 \contentsline {subsection}{\numberline {7.8.1}\"offentliche Zone}{93}
 \contentsline {subsubsection}{Eingang und Verlassen der \"Offentlichen Zone}{94}
 \contentsline {subsubsection}{RTP - Silence Supression}{94}
-\contentsline {subsubsection}{SIP - HOLD}{94}
-\contentsline {subsection}{\numberline {7.8.2}Soziale Zone}{95}
+\contentsline {subsubsection}{SIP - HOLD}{95}
+\contentsline {subsection}{\numberline {7.8.2}Soziale Zone}{96}
 \contentsline {subsubsection}{Lautst\"arkenanpassung}{96}
 \contentsline {subsubsection}{Audiocodec}{96}
 \contentsline {subsection}{\numberline {7.8.3}Private Zone}{97}

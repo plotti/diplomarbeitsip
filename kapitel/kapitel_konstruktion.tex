@@ -299,7 +299,7 @@ Die Grundlage für eine einfache Berechnung versteht sich unter folgenden Vorauss
 
 Befinden sich beispielsweise 16 Personen im Spiel und nimmt man an, dass sich im Schnitt nur $30\%$ aller Teilnehmer in Hörnähe befinden, so muss der Sender nur noch an 5 Personen seinen Audiostrom senden und auch nur von 5 Personen den Audiostrom empfangen. 
 
-Dabei gibt $P_{Hoernaehe}$ an, wie viele Personen, sich im Schnitt in der Hörnähe des Teilnehmers befinden. Dieser Wert kann verändert werden, in dem die \textit{Hörerreichweite}\footnote{Radius, in dem die Stimmen anderer Teilnehmer abonniert werden} des Spielers vergrößert oder verkleinert wird. 
+Dabei gibt $P_{Hoernaehe}$ an, wie viele Personen, sich im Schnitt in der Hörnähe des Teilnehmers befinden. Dieser Wert kann verändert werden, in dem die \textit{Hörer\-reichweite} des Spielers vergrößert oder verkleinert wird. 
 
 Generell gilt je größer die Hörerreichweite, desto mehr Personen können sich in der Hörnähe des Teilnehmers befinden. In diesem Fall wird bei einer Hörerreichweite von 10 m, eine theoretische Wahrscheinlichkeit, dass eine Person sich in diesem Hörradius befindet von 30\% angenommen. 
 
@@ -318,7 +318,7 @@ Es lässt sich sogar noch mehr Bandbreite einsparen, wenn man die Hörreichweite i
 In einem einfachen Szenario, kann man annehmen, dass die 30\% aller Benutzer in Hörreichweite, sich in 10\% in der privaten Zone und 20\% in der sozialen Zone aufteilen. Spieler in der privaten Zone nutzen einen Audiocodec mit einer Bitrate von $16Kbit/s$ und Spieler in der sozialen Zone einen Audiocodec mit $8Kbit/s$. Ergänzt man die Gleichung entsprechend um das Zonenkonzept, und nimmt immer noch an, dass sich 16 Spieler im Spiel befinden kommt man zu folgender Berechnung:
 
 \[
-	\mbox{16 Spieler} \cdot 10\% \cdot 16 \frac{Kbit}{s} + \mbox{16 Spieler} \cdot 20\% \cdot 16 \frac{Kbit}{s} = 51,2\frac{Kbit}{s}
+	\mbox{16 Spieler} \cdot 16 \frac{Kbit}{s} \cdot 10\% + \mbox{16 Spieler} \cdot 16 \frac{Kbit}{s} \cdot 20\% = 51,2\frac{Kbit}{s}
 \]
 
 Hier wird deutlich, dass noch einmal Bandbreite eingespart werden kann, und trotzdem die gleiche Konnektivität gewährleistet wird. Die Einsparung resultiert vor allem aus der Reduziertung der Qualität der sozialen Zone. Trotzdem kann bei Bedarf noch eine höherwertige Konversation eingeleitet werden, indem sich Spieler in die private Zone begeben. Im Kapitel 8 und 10 wird die Umsetzung dieses Ansatzes genauer diskutiert und evaluiert.
