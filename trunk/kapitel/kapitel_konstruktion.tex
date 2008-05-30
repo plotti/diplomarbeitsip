@@ -328,31 +328,31 @@ Hier wird deutlich, dass noch einmal Bandbreite eingespart werden kann, und trot
 Die vorgestellten Alternativen $A_{5}$ und $A_{6}$, gehen davon die zentrale Komponente des Registrars verteilbar ist. Von einer Verteilung des Registrars und Proxy können auch die vorgestellten Alternativen $A_{1}$, $A_{2}$, $A_{3}$ profitieren, da sich damit die \textit{Fault Tolerance} des Systems erhöht. Falls mehrere Registrare eingesetzt werden, bestehen folgende Alternativen:
 
 \begin{itemize}
-	\item Die Registrierung des Benutzers findet auf einem Registrar statt und wird dann auf mehreren Registraren repliziert. Die Suche findet bei einem beliebigen Registrar statt.
-	\item Die Registrierung findet nur auf einem Registrar geschieht, während die Suche nach dem Registrar, der die Benutzerinformation enthält vom Client auf allen Registraren stattfindet.
+	\item Die Registrierung des Benutzers findet auf einem Registrar statt und wird dann auf mehrere Registrare repliziert. Die Suche findet bei einem beliebigen Registrar statt.
+	\item Die Registrierung geschieht nur auf einem Registrar, während die Suche nach dem Registrar, der die Benutzerinformation enthält vom Client auf allen Registraren stattfindet.
 \end{itemize}
 
 % BILD see \cite{schulzrinne05}
 
-Im ersten Fall könnten durch Datenbank Replikationen sichergestellt werden, dass die Benutzereinträge zwischen verschiedenen Registraren konsistent gehalten werden. 
+Im ersten Fall könnten durch Datenbank-Replikationen sichergestellt werden, dass die Benutzereinträge zwischen verschiedenen Registraren konsistent gehalten werden. 
 
-Im zweiten Fall kann entweder der Benutzer alle Registrare kontaktieren oder der erste kontaktiere Server die Anfrage weiterleiten. 
+Im zweiten Fall kann entweder der Benutzer alle Registrare kontaktieren oder der erste kontaktierte Server die Anfrage weiterleiten. 
 
-Der Nachteil des ersten Ansatzes ist, dass eine Synchronisation für jede Registrierung erforderlich ist. Es besteht die Möglichkeit dass Einträge veraltet sind, bevor eine Synchronisation zwischen den Servern ausgeführt wird. Mit einer wachsenden Anzahl an Benutzern könnte diese Architektur der zusätzliche Netzwerkverkehr zwischen den Servern zu einem Flaschenhals werden. 
+Der Nachteil des ersten Ansatzes ist eine erforderliche Synchronisation für jede Registrierung. Es besteht die Möglichkeit, dass Einträge veraltet sind, bevor eine Synchronisation zwischen den Servern ausgeführt wird. Mit einer wachsenden Anzahl an Benutzern könnte der zusätzliche Netzwerkverkehr zwischen den Servern zu einem Flaschenhals werden. 
 
-Im Anderen Fall ist die Verbindungslatenz höher, da erst eine Reihe von Schritten durchlaufen werden muss. Eine parallele Suche erhöht zudem die benötigte Bandbreite. 
+Im anderen Fall ist die Verbindungslatenz höher, da erst eine Reihe von Schritten durchlaufen werden muss. Eine parallele Suche erhöht zudem die benötigte Bandbreite. 
 
-Beide Ansätze können jedoch fehlschlagen wenn die Anzahl an Benutzern sehr groß wird.
+Beide Ansätze können jedoch fehlschlagen, wenn die Anzahl an Benutzern sehr groß wird.
 
 \section{Implementierung einer hybriden Architektur}
-Im darauf folgendem Kapitel wird die Umsetzung der Alternative $A_{3}$ besprochen, da diese Kombination es erlaubt die in Kapitel 3 gestellten Ziele zu realisieren und gleichzeitig wie gesehen Möglichkeiten Bandbreite einzusparen, die Peer-to-Peer sehr kostbar ist. Außerdem sprechen noch viele weitere Vorteile für die Präferenz dieser Alternative:
+Im darauf folgendem Kapitel wird die Implementierung der Alternative $A_{3}$ besprochen, da diese Kombination es erlaubt die in Kapitel 3 gestellten Ziele zu realisieren und gleichzeitig Möglichkeiten bietet Bandbreite einzusparen, die bei Peer-to-Peer sehr kostbar ist. Außerdem sprechen noch viele weitere Vorteile für die Präferenz dieser Alternative:
 
 \begin{itemize}
-	\item Eine einfache Lokation und Signalisierung der Teilnehmer.
+	\item Eine einfache Lokation und Signalisierung der Teilnehmer
 	\item Die Bandbreite auf den Registraren und Proxys ist minimal, während der Audiostrom zwischen den Clients stattfinden kann.
 	\item Sie bietet eine gute Basis um später die zentrale Komponente des Registrars auch verteilt zu implementieren. Somit ist eine zukünftige komplett dezentralisierte Umsetzung der Alternative $A_{9}$ mit P2PSIP möglich.
-	\item Sie bietet eine gute Ausgangsgrundlage um die alternative $A_{6}$ umzusetzen, wenn mehrere Registrare und Proxys eingesetzt werden.
-	\item Man umgeht das komplizierte Problem einer dezentralen Signalisierung des Full-Mesh Ansatzes.
+	\item Sie bietet eine gute Ausgangsgrundlage, um die alternative $A_{6}$ umzusetzen, wenn mehrere Registrare und Proxys eingesetzt werden.
+	\item Man umgeht das komplizierte Problem einer dezentralen Signalisierung des Full-Mesh-Ansatzes.
 	\item Es können mehrere Unterschiedliche Kanäle gleichzeitig betrieben werden.
 	\item Der Spieler ist in der Lage zu unterscheiden, welche Audioströme er abmischen will und welche er verwerfen will.
 \end{itemize}
