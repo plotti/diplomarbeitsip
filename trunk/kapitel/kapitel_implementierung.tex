@@ -20,7 +20,7 @@ Eine Alternative zu reinen Spiele-Engines bieten offene generische 3D-Engines, d
 \subsubsection{\textit{Irrklang}}
 Speziell für die Sprachkommunikation musste das 3D-Framework um eine Audio-Engine erweitert werden, die eine gezielte Audioausgabe ermöglicht. Speziell für Irrlicht existiert \textit{IrrKlang}\footnote{Nikolaus Gebhardt, Version 15.04.2008, http://www.ambiera.com/irrklang}, eine einfache Plattform-übergreifende Audiobibliothek. Sie unterstützt Audioverarbeitung auf der nativen Ebene, realistisches \textit{3D-Audio-Rendering}, \textit{Multithreading} und kann über \textit{Plugins} erweitert werden. Zusätzlich verfügt sie über eine einfache API, die eine schnelle Einarbeitung und Entwicklung ermöglicht. All diese Gründe waren ausschlaggebend, diese Bibliothek zu benutzen. 
 
-\section{VoIP-Lösung}
+\section{VoIP-Lösungen}
 
 Zwecks der Implementierung einer Sprachkommunikationslösung stehen mehrere Alternativen zur Verfügung: 
 
@@ -35,7 +35,7 @@ Bisher werden im Spielebereich fast ausschließlich serverbasierte Drittanbieter 
 \subsection{Serverbasierte Sprachkommunikationslösungen}
 %http://www.tentonhammer.com/index.php?q=node/102
 
-\subsubsection{\textit{Ventrillo},\texit{Teamspeak},\texit{Mumble}}
+\subsubsection{Ventrillo, Teamspeak und Mumble}
 %http://www.ventrilo.com/
 Die unter Spielern beliebtesten Lösungen sind 
 \begin{itemize}
@@ -58,7 +58,7 @@ Obwohl die kommerziellen Lösungen bei einer optimalen Konfiguration Hunderte von
 
 Es existieren etliche verschiedene VoIP Programmen, die alle als dezentralisierte Lösungen eingesetzt werden können. Eine tatsächlich dezentrale Architektur kann jedoch bisher nur \textit{Skype} bieten. 
 
-\subsubsection{\textit{Skype}}
+\subsubsection{Skype}
 
 Das Programm \textit{Skype} des Unternehmens Skype Technologies\footnote{Skype Technologies, Version 23.03.2008, http://www.skype.com} bietet innerhalb des eigenen Netzwerkes von registrierten Skype Benutzern die Möglichkeit des Instant Messaging, des Dateitransfers und der kostenlosen Telefonie über das Internet.
 Von den Mitbegründern der Tauschbörse \textit{Kazaa}\footnote{Internet Tauschbörse (Sharman Networks Ltd), Version 23.03.2008, http://www.kazaa.com} ins Leben gerufen, basiert Skype wie das Filesharingprogramm auf dem Peer-to-Peer Prinzip. Die Vermittlung, die Gespräche und auch Dienste wie das Teilnehmerverzeichnis werden nicht von einem zentralen Server angeboten, sondern auf alle gleichberechtigten Teilnehmer (den so genannten Peers) verteilt. Lediglich für die Authentifizierung und die Abrechnung bedient sich Skype eines zentralen Back-End-Servers. Das Skype Netzwerk unterscheidet zwischen einfachen Benutzern (Ordinary Hosts genannt) und den Super Nodes. 
@@ -179,7 +179,7 @@ Der Spieler ist in der Lage sich in alle Richtungen zu Bewegen und zu springen. 
 
 In einem Radar am oberen-linken Bildschirmrand werden für den Spieler alle Teilnehmer des Spiels angezeigt. Das Radar verfügt über drei Zonen, die die einzelnen Verbindungsstufen repräsentieren. Spieler werden mit einem Icon und ihrem zugehörigen Namen angezeigt. In der öffentlichen Zone wird das Icon gräulich dargestellt, betreten sie die soziale Zone, wird dieser grün gefärbt und in der privaten Zone ist ihr Icon gelb. Die Metapher der Luftübertragung, gepaart mit dem Radar als Orientierungshilfe, unterstützt den Spieler bei der Adressierung von anderen Teilnehmern. Spieler sind direkt in der Lage zu sehen, an wen ihre Sprachnachrichten übertragen werden und welche Teilnehmer sie gerade hören. 
 
-\subsection{\textit{Irrklang}}
+\subsection{Irrklang}
 
 \subsubsection{Lokale Audioszene}
 Das Level wurde zusätzlich mit mehreren lokalen Audioquellen ausgestattet, die eine realistische Audioumgebung simulieren. So sind der Wind, der Springbrunnen und die Fahrzeuge des Levels mit entsprechenden Audiodateien unterlegt, die mit Hilfe der Irrklang-Engine für das Ohr dreidimensional positioniert werden können. Die Audioszene wird lokal erzeugt und muss im Gegensatz zur Sprachkommunikation nicht über das Netzwerk übertragen werden. Die Sprachkommunikation und die lokale Audioszene existieren simultan und erzeugen so für den Spieler eine realistische Illusion. 
