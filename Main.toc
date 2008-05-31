@@ -15,8 +15,8 @@
 \contentsline {section}{\numberline {2.1}Kommunikation}{7}
 \contentsline {subsection}{\numberline {2.1.1}Kommunikationsmodell}{7}
 \contentsline {subsection}{\numberline {2.1.2}Auspr\"agungen: Interpersonelle vs. Massenkommunikation}{9}
-\contentsline {subsection}{\numberline {2.1.3}Reichtum - Media-Richness-Theorie}{10}
-\contentsline {subsection}{\numberline {2.1.4}Arten - Sprach-, Text- und Nonverbale Kommunikation}{11}
+\contentsline {subsection}{\numberline {2.1.3}Reichtum: Media-Richness-Theorie}{10}
+\contentsline {subsection}{\numberline {2.1.4}Arten: Sprach-, Text- und Nonverbale Kommunikation}{11}
 \contentsline {subsubsection}{Proxemik}{12}
 \contentsline {section}{\numberline {2.2}Vergleich der Kommunikationsmedien in Computerspielen}{13}
 \contentsline {subsection}{\numberline {2.2.1}Spielegenre}{13}
@@ -133,7 +133,7 @@
 \contentsline {section}{\numberline {7.5}PjSIP-VoIP-Instanz}{86}
 \contentsline {subsection}{\numberline {7.5.1}Signalisierung mit PJSUA}{86}
 \contentsline {subsection}{\numberline {7.5.2}Medienfluss}{87}
-\contentsline {section}{\numberline {7.6}Zusammenarbeit von \textit {Irrlicht} und VoIP}{87}
+\contentsline {section}{\numberline {7.6}Zusammenarbeit von Irrlicht und VoIP}{87}
 \contentsline {subsection}{\numberline {7.6.1}Aktualisierung der VoIP Instanz}{87}
 \contentsline {subsection}{\numberline {7.6.2}Buddy Konzept}{88}
 \contentsline {subsection}{\numberline {7.6.3}Conference-Bridge}{88}
@@ -147,7 +147,7 @@
 \contentsline {subsubsection}{Das Problem der doppelten Verbindung}{91}
 \contentsline {subsection}{\numberline {7.7.7}Verbindungsabbau}{93}
 \contentsline {section}{\numberline {7.8}Zonen}{93}
-\contentsline {subsection}{\numberline {7.8.1}\"offentliche Zone}{93}
+\contentsline {subsection}{\numberline {7.8.1}\"Offentliche Zone}{93}
 \contentsline {subsubsection}{Eingang und Verlassen der \"Offentlichen Zone}{94}
 \contentsline {subsubsection}{RTP - Silence Supression}{94}
 \contentsline {subsubsection}{SIP - HOLD}{95}
@@ -181,17 +181,17 @@
 \contentsline {subsection}{\numberline {8.5.4}Regionsbasierte Peer-to-Peer Systeme}{107}
 \contentsline {subsection}{\numberline {8.5.5}Unstrukturierte und strukturierte Peer-to-Peer-Systeme}{107}
 \contentsline {section}{\numberline {8.6}Hybride Systeme}{107}
-\contentsline {section}{\numberline {8.7}Peer-to-Peer SIP}{108}
-\contentsline {subsection}{\numberline {8.7.1}Motivation f\"ur Peer-to-Peer SIP}{108}
+\contentsline {section}{\numberline {8.7}Peer-to-Peer-SIP}{108}
+\contentsline {subsection}{\numberline {8.7.1}Motivation f\"ur Peer-to-Peer-SIP}{108}
 \contentsline {subsection}{\numberline {8.7.2}Funktionsweise}{109}
 \contentsline {subsubsection}{Registrierung}{109}
-\contentsline {subsubsection}{Aufbau einer Verbindung}{109}
-\contentsline {subsection}{\numberline {8.7.3}Einsatz von P2P-SIP f\"ur Spiele}{110}
-\contentsline {subsection}{\numberline {8.7.4}Architektur Variationen}{111}
+\contentsline {subsubsection}{Aufbau einer Verbindung}{110}
+\contentsline {subsection}{\numberline {8.7.3}Einsatz von P2P-SIP f\"ur Spiele}{111}
+\contentsline {subsection}{\numberline {8.7.4}Architektur Variationen}{112}
 \contentsline {chapter}{\numberline {9}Evaluation}{114}
-\contentsline {section}{\numberline {9.1}Fullmesh vs. Partialmesh Szenario}{114}
-\contentsline {subsection}{\numberline {9.1.1}Full Mesh}{114}
-\contentsline {subsection}{\numberline {9.1.2}Partial Mesh}{115}
+\contentsline {section}{\numberline {9.1}Full-Mesh vs. Partial-Mesh Szenario}{114}
+\contentsline {subsection}{\numberline {9.1.1}Full-Mesh}{114}
+\contentsline {subsection}{\numberline {9.1.2}Partial-Mesh}{114}
 \contentsline {subsubsection}{Partial-Mesh Worst Case}{116}
 \contentsline {section}{\numberline {9.2}Zonenkonzepte}{116}
 \contentsline {subsection}{\numberline {9.2.1}Ohne Unterscheidung}{116}
@@ -199,8 +199,8 @@
 \contentsline {subsection}{\numberline {9.2.3}Zonen mit SIP HOLD}{118}
 \contentsline {subsection}{\numberline {9.2.4}Zonen mit unterschiedlichen Audiocodecs}{118}
 \contentsline {section}{\numberline {9.3}Tests von SIP als Netzwerkschnittstelle}{119}
-\contentsline {section}{\numberline {9.4}Test der Conference-Bridge}{119}
-\contentsline {chapter}{\numberline {10}Fazit und Ausblick}{124}
-\contentsline {section}{\numberline {10.1}Fazit}{124}
+\contentsline {section}{\numberline {9.4}Test der Conference-Bridge}{120}
+\contentsline {chapter}{\numberline {10}Fazit und Ausblick}{125}
+\contentsline {section}{\numberline {10.1}Fazit}{125}
 \contentsline {section}{\numberline {10.2}Ausblick}{126}
-\contentsline {chapter}{Literaturverzeichnis}{128}
+\contentsline {chapter}{Literaturverzeichnis}{129}

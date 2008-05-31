@@ -31,8 +31,8 @@
 \contentsline {figure}{\numberline {6.3}{\ignorespaces Eine Proxy-Architektur. In schwarz ist die Verbindung von Spieler 3 mit Spieler 7 dargestellt.}}{62}
 \contentsline {figure}{\numberline {6.4}{\ignorespaces Verteilte Server S1...S4. Die Verbindungen der Spielewelt S3 werden in schwarz dargestellt. }}{63}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {7.1}{\ignorespaces \"Ubersicht der Komponenten des PJSIP Protokollstacks}}{83}
-\contentsline {figure}{\numberline {7.2}{\ignorespaces Realistische 3D Spielewelt mit Radar}}{85}
+\contentsline {figure}{\numberline {7.1}{\ignorespaces \"Ubersicht der Komponenten des PjSIP-Protokollstacks}}{83}
+\contentsline {figure}{\numberline {7.2}{\ignorespaces Realistische 3D-Spielewelt mit Radar}}{85}
 \contentsline {figure}{\numberline {7.3}{\ignorespaces Eine \"Ubersicht \"uber den Audiofluss in PjSIP}}{87}
 \contentsline {figure}{\numberline {7.4}{\ignorespaces Funktionsweise der Konferenzbr\"ucke mit 5 Teilnehmern und Anpassung der einzelnen Audiostr\"ome}}{89}
 \contentsline {figure}{\numberline {7.5}{\ignorespaces Startbildschirm des Spiels}}{90}
@@ -41,20 +41,20 @@
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {8.1}{\ignorespaces Registrierung eines neuen Knotens bei Knoten C}}{110}
 \contentsline {figure}{\numberline {8.2}{\ignorespaces Registrierung des Benutzers}}{110}
-\contentsline {figure}{\numberline {8.3}{\ignorespaces Ein schematischer Ablauf eines Anrufs bei P2P SIP}}{111}
-\contentsline {figure}{\numberline {8.4}{\ignorespaces Verschiede Registrar Variationen}}{112}
+\contentsline {figure}{\numberline {8.3}{\ignorespaces Ein schematischer Ablauf eines Anrufs bei P2P-SIP}}{111}
+\contentsline {figure}{\numberline {8.4}{\ignorespaces Verschiede Registrar Variationen}}{113}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {9.1}{\ignorespaces Audioverbindungen im Full-Mesh Ansatz}}{115}
+\contentsline {figure}{\numberline {9.1}{\ignorespaces Audioverbindungen im Full-Mesh-Ansatz}}{115}
 \contentsline {figure}{\numberline {9.2}{\ignorespaces Bandbreitenverbrauch beim Full-Mesh-Ansatz}}{116}
 \contentsline {figure}{\numberline {9.3}{\ignorespaces Ein Partial-Mesh der Audioverbindungen der Teilnehmer}}{117}
 \contentsline {figure}{\numberline {9.4}{\ignorespaces Bandbreiteneinsparungen beim Partial-Mesh, da nicht mehr alle Verbindungen aufgebaut werden m\"ussen}}{118}
-\contentsline {figure}{\numberline {9.5}{\ignorespaces Partial-Mesh Worstcase Szenario gleicht dem Fullmesh Ansatz}}{119}
+\contentsline {figure}{\numberline {9.5}{\ignorespaces Partial-Mesh "`Worstcase"'-Szenario gleicht einem Full-Mesh}}{119}
 \contentsline {figure}{\numberline {9.6}{\ignorespaces Der Up- und Downstream}}{120}
-\contentsline {figure}{\numberline {9.7}{\ignorespaces Signalisierung mit SIP, Audiostrom mit RTP}}{120}
+\contentsline {figure}{\numberline {9.7}{\ignorespaces Signalisierung mit SIP, Audiostrom mit RTP}}{121}
 \contentsline {figure}{\numberline {9.8}{\ignorespaces Der Up- und Downstream mit der VAD-Technik}}{121}
-\contentsline {figure}{\numberline {9.9}{\ignorespaces Gegen\"uberstellung der SIP und RTP Traffics mit der VAD - Technik}}{121}
+\contentsline {figure}{\numberline {9.9}{\ignorespaces Gegen\"uberstellung der SIP und RTP Traffics mit der VAD-Technik}}{122}
 \contentsline {figure}{\numberline {9.10}{\ignorespaces Der Up- und Downstream mit der SIP HOLD - Technik}}{122}
-\contentsline {figure}{\numberline {9.11}{\ignorespaces Gegen\"uberstellung des SIP und RTP Traffics mit der SIP HOLD-Technik}}{122}
-\contentsline {figure}{\numberline {9.12}{\ignorespaces Speex mit 32kHz in der Privaten Zone und Speex 8khZ in der Sozialen Zone}}{123}
-\contentsline {figure}{\numberline {9.13}{\ignorespaces Rufauf und -abbau, sowie Signalisierung eines anderen Codecs mit SIP, Reduktion des Audiostroms mit RTP}}{123}
+\contentsline {figure}{\numberline {9.11}{\ignorespaces Gegen\"uberstellung des SIP und RTP Traffics mit der SIP HOLD-Technik}}{123}
+\contentsline {figure}{\numberline {9.12}{\ignorespaces Speex mit 32kHz in der privaten Zone und Speex 8khZ in der sozialen Zone}}{123}
+\contentsline {figure}{\numberline {9.13}{\ignorespaces Rufauf und -abbau, sowie Signalisierung eines anderen Codecs mit SIP, Reduktion des Audiostroms mit RTP}}{124}
 \addvspace {10\p@ }

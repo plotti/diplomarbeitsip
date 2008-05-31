@@ -698,7 +698,7 @@
   keywords = {dblp}
 }
 
-@INPROCEEDINGS{maymounkov02kademlia,
+@INPROCEEDINGS{kademilla02,
   author = {P. Maymounkov and D. Mazieres},
   title = {Kademlia: A peer-to-peer information system based on the XOR metric},
   booktitle = {IPTPS02, Cambridge},
