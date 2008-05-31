@@ -188,7 +188,9 @@ SIP wurde konventionell so gestaltet, dass so viel Funktionalität wie möglich in
 Der einzige zentralisierte Baustein in SIP besteht aus der Lokation der Teilnehmer, die vom Registrar vorgenommen wird. In einer gewöhnlichen SIP Konfiguration meldet sich jeder Endpunkt bei einem Registrar an, der eine Zuordnung zwischen dem Namen des Teilnehmers und seiner IP Adresse herstellt. Möchte ein Benutzer einen anderen anrufen, so kontaktiert er zunächst den Registrar, um die Zieladresse herauszufinden.
 
 \subsection{Funktionsweise}
-Als Peer-to-Peer-SIP wird verstanden, dass die einzige zentrale Komponente des Systems entfernt wird und dezentral zwischen den einzelnen Teilnehmern verteilt mit \textit{DHT (Chord)} realisiert wird.
+Es existieren bisher 2 Varianten um ein P2P SIP Umzusetzen. Die vorgestellte Variante nutzt einen Chord-DHT Ring um Knoten anzuordnen. Alternativ zum vorgestellten Verfahren bestehen auch Bemühungen beim Peer-to-Peer-SIP das CAN-DHT-Verfahren \cite{pundkar07} einzusetzen. Hier wird die Verteilung der Knoten auf in einem zweidimensionalen Raum abgebildet, was auch der Verteilung der Spieler in einer virtuellen Welt entsprechen würde.
+
+Alle Varianten haben gemeinsam, dass die einzige zentrale Komponente des Systems entfernt wird und dezentral zwischen den einzelnen Teilnehmern verteilt mit \textit{DHT} realisiert wird und jeder Knoten einen Teil der Funktionalität übernimmt. 
 
 Dazu werden zwei 2 Arten von IDs verwendet: Eine \textit{Peer-ID}, die den Rechner identifiziert und eine \textit{Ressource-ID}, die den Benutzer identifiziert. Die Information darüber, wo eine Person gefunden werden kann, wird in der \textit{Peer-ID} abgespeichert. Jedem Knoten im Overlay wird eine \textit{Peer-ID} zugewiesen, die durch einen eindeutigen \textit{Hash} aus seiner IP Adresse gebildet wird.Der Name des Benutzers des Knotens wird ebenfalls als ein eindeutiger \textit{Hash} in der \textit{Resource-ID} gespeichert. Dabei ist jeder Knoten für die Speicherung eines Teils der gesamten Information zuständig. 
 
@@ -223,22 +225,21 @@ Verlassen Knoten das Overlay, so müssen sie ihre Information an andere Knoten we
 \begin{figure}[tbh]
 	\centering
 		\includegraphics[width=1.00\textwidth]{grafiken/p2psipcall.eps}
-	\caption{Ein schematischer Ablauf eines Anrufs bei P2P SIP}
+	\caption{Ein schematischer Ablauf eines Anrufs bei P2P-SIP}
 	\label{fig:p2psipcall}
 \end{figure}
 
 Bryan, Lowekamp und Jennings schlagen im SOSIMPLE-Prototyp \cite{bryan05s} eine Kombination vom SIP- und-SIMPLE Protokoll vor, in dem Knoten in einem Chord-basierten DHT Overlay verwaltet werden. Alle Nachrichten, die benötigt werden um das DHT aufrecht zu erhalten, Benutzer zu registrieren, Ressourcen zu lokalisieren, Sitzungen zu verwalten sind reine SIP-Nachrichten. Da SIP als generisches Protokoll entworfen wurde, müssen nur die Nachrichtentypen um zusätzliche Header ergänzt werden. Ein Ähnliches Konzept für SIP-Telefonie auf Basis eines Chord-basierten-DHT, schlagen auch Singh und Schulzrinne vor \cite{schulzrinne05}.
 
-Entsprechend zum vorgestellten Verfahren bestehen auch Bemühungen Peer-to-Peer-SIP nicht nur auf einem Chord-DHT zu verteilen sondern auch das CAN-DHT-Verfahren \cite{pundkar07} einzusetzen. Hier wird die Verteilung der Knoten auf in einem zweidimensionalen Raum abgebildet, was auch der Verteilung der Spieler in einer virtuellen Welt entsprechen würde.  
-
 \subsection{Einsatz von P2P-SIP für Spiele}
-P2P-SIP lässt sich auch für Spiele einsetzen und ist vor allem deswegen interessant, da es Vorteile von Peer-to-Peer mit der hohen Abstraktion von SIP kombiniert. 
-//TODO?!
-Da die Komponente des Registrars logisch immer noch vorhanden ist, kann z.B. der implementierte Client-Server Ansatz mit wenigen Veränderungen direkt eingesetzt werden. Nur mit dem Unterschied, dass es sich nun um eine reine Peer-to-Peer Architektur handelt. Die Daten- und Sprachkommunikation der Spieler könnten direkt untereinander geschehen, während die für die Verwaltung der Teilnehmer eines Spiels der Lokationsdienst des Registrars verwendet werden könnte. Auch die Präsenz der Teilnehmer könnte direkt untereinander stattfinden. Indem man darüber entscheidet auf welche Knoten die Komponente des Registrars verteilt wird, kann auch das Konzept von Supernodes umgesetzt werden.
+P2P-SIP lässt sich auch für Spiele einsetzen und ist vor allem deswegen interessant, da es Vorteile von strukturierten Peer-to-Peer-Ansätzen mit der hohen Abstraktion von SIP kombiniert. Die vorgestellten Ansätze für P2P-Spiele könnten eine solche Netzwerkschicht nutzen, um eine standardisierte Umsetzung zu gewährleisten. Man kann sogar noch weiter gehen und sagen, dass ein funktionierendes P2P-SIP bereits ausreicht, um als Basis für P2P-Spiele zu dienen. Prinzipiell sind in einem SIP-Standard alle Komponenten vorhanden, die man für eine P2P-Architektur braucht und übliche Probleme wie das NAT-Traversal bereits erfolgreich gelöst. Da die VoIP-Technologie ähnliche Konzepte und Probleme wie im Spielebereich aufweist, sind wichtige Komponenten bereits in Form von Lokationsdiensten, Präsenzdiensten, Proxys, Registraren oder STUN-Servern abstrahiert worden. P2P Ansätzen Spielebereich steht diese Entwicklung noch bevor. 
+
+Zum Beispiel könnte der implementierte Client-Server Ansatz mit wenigen Veränderungen in einer P2P-SIP-Architektur eingesetzt werden.  Man könnte so auf der Abstraktionsebene zwar das bewährte Konzept einer Client-Server Anordnung beibehalten, obwohl die tatsächliche Architektur bereits komplett dezentralisert wurde. Der Ansatz zentrale Komponenten eines hybriden Systems dezentral zu realisieren wird bereits im BitTorrent-Protokoll erfolgreich umgesetzt.
+
+Indem man eine Unterscheidung zulässt auf welche Knoten der Lokationsdienst verteilt wird, können Supernodes Konzepte oder Serverfarmen helfen den Dienst performanter und ausfallsicherer zu machen.
 
 \subsection{Architektur Variationen}
 Es bestehen drei alternative Architektur Variationen beim Einsatz mit DHT zur Verfügung. 
-
 
 Der DHT kann auf eine dedizierte Server Farm limitiert werden. Für die Registrierung verbinden die Teilnehmer sich zu einem der Server. Wie bereits geschildert implementieren die Server selbst eine skalierbare Datenstruktur wie DHT, um den entsprechenden Eintrag zu finden. Der Teilnehmer muss jedoch mindestens einen Server finden und zu ihm verbinden. Diese Option beinhaltet keine Modifizierung der Clients, bietet aber eine zuverlässige Server Farm Architektur. 
 
