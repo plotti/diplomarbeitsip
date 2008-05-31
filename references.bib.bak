@@ -1,5 +1,5 @@
-This file was created with JabRef 2.2.
-Encoding: Cp1252
+% This file was created with JabRef 2.3.1.
+% Encoding: Cp1252
 
 @INPROCEEDINGS{aarseth03,
   author = {Aarseth, Espen and Smedstad, Solveig M. and Sunnan{\~o}, Lise},
@@ -158,6 +158,17 @@ Encoding: Cp1252
   address = {New York, NY, USA},
   issn = {0146-4833},
   publisher = {ACM}
+}
+
+@ARTICLE{torrent06,
+  author = {Bharambe, A. R. and Herley, C. and Padmanabhan, V. N.},
+  title = {Analyzing and Improving a BitTorrent Networks Performance Mechanisms},
+  journal = {INFOCOM 2006. 25th IEEE International Conference on Computer Communications.
+	Proceedings},
+  year = {2006},
+  pages = {1-12},
+  month = {April },
+  issn = {0743-166X}
 }
 
 @INPROCEEDINGS{566501,
@@ -685,6 +696,16 @@ Encoding: Cp1252
   date = {2005-11-28},
   description = {dblp},
   keywords = {dblp}
+}
+
+@INPROCEEDINGS{maymounkov02kademlia,
+  author = {P. Maymounkov and D. Mazieres},
+  title = {Kademlia: A peer-to-peer information system based on the XOR metric},
+  booktitle = {IPTPS02, Cambridge},
+  year = {2002},
+  text = {P. Maymounkov and D. Mazieres. Kademlia: A peer-to-peer information
+	system based on the XOR metric. In Proceedings of IPTPS02, Cambridge,
+	USA, March 2002. http://www.cs.rice.edu/Conferences/IPTPS02/.}
 }
 
 @ARTICLE{miladinovic-multiparty,

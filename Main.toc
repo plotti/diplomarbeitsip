@@ -108,11 +108,11 @@
 \contentsline {subsection}{\numberline {7.1.1}3D-Engines}{77}
 \contentsline {subsubsection}{\textit {Irrlicht}}{77}
 \contentsline {subsubsection}{\textit {Irrklang}}{77}
-\contentsline {section}{\numberline {7.2}VoIP-L\"osung}{77}
+\contentsline {section}{\numberline {7.2}VoIP-L\"osungen}{77}
 \contentsline {subsection}{\numberline {7.2.1}Serverbasierte Sprachkommunikationsl\"osungen}{78}
 \contentsline {subsubsection}{Ventrillo, Teamspeak und Mumble}{78}
 \contentsline {subsection}{\numberline {7.2.2}Dezentralisierte Sprachkommunikationsl\"osungen}{79}
-\contentsline {subsubsection}{\textit {Skype}}{79}
+\contentsline {subsubsection}{Skype}{79}
 \contentsline {subsection}{\numberline {7.2.3}Instant Messaging Anwendungen}{80}
 \contentsline {subsection}{\numberline {7.2.4}SIP-Protokoll}{80}
 \contentsline {subsubsection}{SIP-Server}{81}
@@ -128,7 +128,7 @@
 \contentsline {subsubsection}{Level}{84}
 \contentsline {subsubsection}{Steuerung}{85}
 \contentsline {subsubsection}{Radar}{86}
-\contentsline {subsection}{\numberline {7.4.2}\textit {Irrklang}}{86}
+\contentsline {subsection}{\numberline {7.4.2}Irrklang}{86}
 \contentsline {subsubsection}{Lokale Audioszene}{86}
 \contentsline {section}{\numberline {7.5}PjSIP-VoIP-Instanz}{86}
 \contentsline {subsection}{\numberline {7.5.1}Signalisierung mit PJSUA}{86}
@@ -165,28 +165,29 @@
 \contentsline {subsection}{\numberline {8.3.1}Techniken zur Skalierung}{100}
 \contentsline {subsubsection}{Sharding}{100}
 \contentsline {subsubsection}{Clustering}{100}
-\contentsline {subsubsection}{Interest Management}{100}
+\contentsline {subsubsection}{Interest-Management}{100}
 \contentsline {section}{\numberline {8.4}Implementierung einer Client-Server Architektur mit SIP}{101}
 \contentsline {subsection}{\numberline {8.4.1}SIP SIMPLE Protokoll}{102}
 \contentsline {subsubsection}{Nachrichtendienst}{102}
 \contentsline {subsubsection}{Buddy Konzept}{103}
 \contentsline {subsubsection}{Pr\"asenzdienst}{103}
 \contentsline {subsection}{\numberline {8.4.2}Skalierbarkeit}{104}
-\contentsline {subsection}{\numberline {8.4.3}Tauglichkeit als Peer-to-Peer Ansatz}{104}
+\contentsline {subsection}{\numberline {8.4.3}Tauglichkeit als Peer-to-Peer Ansatz}{105}
 \contentsline {section}{\numberline {8.5}Peer-to-Peer}{105}
 \contentsline {subsection}{\numberline {8.5.1}Distributed Hash Tables}{105}
-\contentsline {subsection}{\numberline {8.5.2}Peer-to-Peer in Netzwerkspielen}{105}
+\contentsline {subsection}{\numberline {8.5.2}Peer-to-Peer in Netzwerkspielen}{106}
 \contentsline {subsection}{\numberline {8.5.3}Nachbarbasierte P2P-Systeme}{106}
-\contentsline {subsubsection}{Voronoibasierte P2P Systeme}{106}
+\contentsline {subsubsection}{Voronoi-basierte P2P-Systeme}{106}
 \contentsline {subsection}{\numberline {8.5.4}Regionsbasierte Peer-to-Peer Systeme}{107}
-\contentsline {section}{\numberline {8.6}Hybride Systeme}{108}
+\contentsline {subsection}{\numberline {8.5.5}Unstrukturierte und strukturierte Peer-to-Peer-Systeme}{107}
+\contentsline {section}{\numberline {8.6}Hybride Systeme}{107}
 \contentsline {section}{\numberline {8.7}Peer-to-Peer SIP}{108}
 \contentsline {subsection}{\numberline {8.7.1}Motivation f\"ur Peer-to-Peer SIP}{108}
 \contentsline {subsection}{\numberline {8.7.2}Funktionsweise}{109}
 \contentsline {subsubsection}{Registrierung}{109}
-\contentsline {subsubsection}{Aufbau einer Verbindung}{110}
-\contentsline {subsection}{\numberline {8.7.3}Einsatz von P2P-SIP f\"ur Spiele}{111}
-\contentsline {subsection}{\numberline {8.7.4}Architektur Variationen}{112}
+\contentsline {subsubsection}{Aufbau einer Verbindung}{109}
+\contentsline {subsection}{\numberline {8.7.3}Einsatz von P2P-SIP f\"ur Spiele}{110}
+\contentsline {subsection}{\numberline {8.7.4}Architektur Variationen}{111}
 \contentsline {chapter}{\numberline {9}Evaluation}{114}
 \contentsline {section}{\numberline {9.1}Fullmesh vs. Partialmesh Szenario}{114}
 \contentsline {subsection}{\numberline {9.1.1}Full Mesh}{114}

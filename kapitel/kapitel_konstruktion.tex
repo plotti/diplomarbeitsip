@@ -193,6 +193,7 @@ So verlieren die Teilnehmer die Kontrolle darüber, wer an Konferenzen teilnehmen
 % In the loosely coupled model, there is no signaling relationship between participants in the conference.  There is no central point of control or conference server.  Participation is gradually learned through control information that is passed as partof the conference (using the Real Time Control Protocol (RTCP) [2], for example).  Loosely coupled conferences are easily supported in SIP by using multicast addresses within its session descriptions. 
 
 \subsubsection{Peer-to-Peer Unicast}
+\label{peer-to-peer-unicast}
 Bei einem völlig dezentralisierten P2P SIP mittels verteilter \textit{Hashtabellen} findet sowohl die Lokation und Signalisierung als auch die Sprachkommunikation nur zwischen den einzelnen Clients statt. Die zentrale Komponente des Registrars wird auf die einzelnen Clients verteilt. Für jede Audioverbindung wird ein Peer-to-Peer Unicast eingesetzt. 
 
 Dieser interessante Ansatz ist bisher nur theoretisch möglich, da keine geeignete SIP Implementierung existiert, die einen verteilten Registrar umsetzt. Zudem ist das Problem einer verteilten Spielkontrolle nicht trivial, da kein Teilnehmer über komplette Informationen über die Spielewelt verfügt. Dieses dieses Problem wird später genauer in Kapitel 9 behandelt. Sollte in Zukunft eine Implementierung eines funktionierenden P2PSIP Overlays existieren, könnte diese Option in Zukunft durchaus vorstellbar sein. Dieses Konzept würde ein komplett dezentrales Abmischen der Audioströme erfordern, dessen Vor- und Nachteile in Abschnitt \ref{siphybrid} besprochen werden.
@@ -324,7 +325,7 @@ In einem einfachen Szenario, kann man annehmen, dass die 30\% aller Benutzer in 
 Hier wird deutlich, dass noch einmal Bandbreite eingespart werden kann, und trotzdem die gleiche Konnektivität gewährleistet wird. Die Einsparung resultiert vor allem aus der Reduziertung der Qualität der sozialen Zone. Trotzdem kann bei Bedarf noch eine höherwertige Konversation eingeleitet werden, indem sich Spieler in die private Zone begeben. Im Kapitel 8 und 10 wird die Umsetzung dieses Ansatzes genauer diskutiert und evaluiert.
 
 \subsection{Einsatz mehrerer Server}
-
+\label{mehrereregistrare}
 Die vorgestellten Alternativen $A_{5}$ und $A_{6}$, gehen davon die zentrale Komponente des Registrars verteilbar ist. Von einer Verteilung des Registrars und Proxy können auch die vorgestellten Alternativen $A_{1}$, $A_{2}$, $A_{3}$ profitieren, da sich damit die \textit{Fault Tolerance} des Systems erhöht. Falls mehrere Registrare eingesetzt werden, bestehen folgende Alternativen:
 
 \begin{itemize}
