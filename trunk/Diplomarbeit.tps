@@ -4,8 +4,8 @@ Version=2
 
 [SessionInfo]
 ActiveTab=0
-FrameCount=19
-ActiveFrame=14
+FrameCount=20
+ActiveFrame=5
 
 [Frame0]
 Columns=1
@@ -90,9 +90,9 @@ cxCur=751
 cxMin=10
 
 [Frame2_View0,0]
-Cursor.row=179
-Cursor.column=581
-TopSubLine=477
+Cursor.row=134
+Cursor.column=46
+TopSubLine=365
 
 [Frame3]
 Columns=1
@@ -155,8 +155,8 @@ TopSubLine=0
 [Frame5]
 Columns=1
 Rows=1
-Flags=0
-ShowCmd=1
+Flags=2
+ShowCmd=3
 MinPos.x=-1
 MinPos.y=-1
 MaxPos.x=-4
@@ -169,17 +169,17 @@ Class=CLatexEdit
 Document=kapitel\kapitel_kommunikation.tex
 
 [Frame5_Row0]
-cyCur=346
+cyCur=432
 cyMin=10
 
 [Frame5_Col0]
-cxCur=751
+cxCur=986
 cxMin=10
 
 [Frame5_View0,0]
-Cursor.row=138
-Cursor.column=0
-TopSubLine=311
+Cursor.row=265
+Cursor.column=375
+TopSubLine=655
 
 [Frame6]
 Columns=1
@@ -206,8 +206,8 @@ cxCur=751
 cxMin=10
 
 [Frame6_View0,0]
-Cursor.row=15
-Cursor.column=8
+Cursor.row=0
+Cursor.column=0
 TopSubLine=0
 
 [Frame7]
@@ -236,7 +236,7 @@ cxMin=10
 
 [Frame7_View0,0]
 Cursor.row=0
-Cursor.column=0
+Cursor.column=365
 TopSubLine=0
 
 [Frame8]
@@ -293,9 +293,9 @@ cxCur=801
 cxMin=10
 
 [Frame9_View0,0]
-Cursor.row=305
-Cursor.column=13
-TopSubLine=749
+Cursor.row=195
+Cursor.column=0
+TopSubLine=487
 
 [Frame10]
 Columns=1
@@ -380,9 +380,9 @@ cxCur=762
 cxMin=10
 
 [Frame12_View0,0]
-Cursor.row=43
-Cursor.column=0
-TopSubLine=181
+Cursor.row=41
+Cursor.column=1
+TopSubLine=157
 
 [Frame13]
 Columns=1
@@ -416,8 +416,8 @@ TopSubLine=266
 [Frame14]
 Columns=1
 Rows=1
-Flags=2
-ShowCmd=3
+Flags=0
+ShowCmd=1
 MinPos.x=-1
 MinPos.y=-1
 MaxPos.x=-4
@@ -430,17 +430,17 @@ Class=CLatexEdit
 Document=kapitel\kapitel_network.tex
 
 [Frame14_Row0]
-cyCur=607
+cyCur=162
 cyMin=10
 
 [Frame14_Col0]
-cxCur=909
+cxCur=1000
 cxMin=10
 
 [Frame14_View0,0]
-Cursor.row=30
-Cursor.column=435
-TopSubLine=43
+Cursor.row=227
+Cursor.column=56
+TopSubLine=556
 
 [Frame15]
 Columns=1
@@ -467,7 +467,7 @@ cxCur=1000
 cxMin=10
 
 [Frame15_View0,0]
-Cursor.row=0
+Cursor.row=7
 Cursor.column=0
 TopSubLine=0
 
@@ -496,9 +496,9 @@ cxCur=746
 cxMin=10
 
 [Frame16_View0,0]
-Cursor.row=44
-Cursor.column=598
-TopSubLine=75
+Cursor.row=136
+Cursor.column=71
+TopSubLine=232
 
 [Frame17]
 Columns=1
@@ -557,4 +557,33 @@ cxMin=10
 Cursor.row=12
 Cursor.column=0
 TopSubLine=37
+
+[Frame19]
+Columns=1
+Rows=1
+Flags=0
+ShowCmd=1
+MinPos.x=-1
+MinPos.y=-1
+MaxPos.x=-4
+MaxPos.y=-30
+NormalPos.left=22
+NormalPos.top=29
+NormalPos.right=512
+NormalPos.bottom=337
+Class=CLatexEdit
+Document=kapitel\einleitung.tex
+
+[Frame19_Row0]
+cyCur=253
+cyMin=10
+
+[Frame19_Col0]
+cxCur=461
+cxMin=10
+
+[Frame19_View0,0]
+Cursor.row=30
+Cursor.column=381
+TopSubLine=210
 

@@ -132,7 +132,7 @@ Die Wahl fiel in dieser Arbeit aus den folgenden Gründen auf den offenen SIP Pro
 \begin{figure}[tbh]
 	\centering
 		\includegraphics[width=0.70\textwidth]{grafiken/pjsip.eps}
-	\caption{Übersicht der Komponenten des PJSIP Protokollstacks}
+	\caption{Übersicht der Komponenten des PJSIP-Protokollstacks}
 	\label{fig:pjsip}
 \end{figure}
 
@@ -163,7 +163,7 @@ Zu Beginn des Spieles werden die \textit{Irrlicht} und VoIP Instanzen initialisi
 \begin{figure}[tbh]
 	\centering
 		\includegraphics[width=1.00\textwidth]{grafiken/spielewelt-screenshot.eps}
-	\caption{Realistische 3D Spielewelt mit Radar}
+	\caption{Realistische 3D-Spielewelt mit Radar}
 	\label{fig:spielewelt-screenshot}
 \end{figure}
 
@@ -291,7 +291,7 @@ Die Umgebung des Spielers wurde wie gefordert in drei Zonen unterteilt.
 //TODO Grafik mit den Übergängen und jeweiligen Methoden zu den Zonen
 //HAT NOCH ARBEIT NÖTIG. MUSS KLARER UND TECHNISCHER SEIN.
 
-\subsection{öffentliche Zone}
+\subsection{Öffentliche Zone}
 Die öffentliche Zone wird genutzt, um SIP Verbindungen des Spielers mit anderen Teilnehmern zu initiieren und so eine Grundkonnektivität zwischen diesen herzustellen. Da der Verbindungsaufbau mitunter bis zu 1 oder 2 Sekunden betragen kann, wird diese Zone dazu genutzt, um vorab die gesamte Signalisierung vorzunehmen, bevor die Teilnehmer tatsächlich die nötige Hörnähe eingenommen haben, um miteinander zu sprechen. So soll die entstehende Latenz beim Verbindungsaufbau für den Spieler nicht erkennbar sein. 
 
 Durch die Existenz der öffentlichen Zone findet ein stufenweiser Übergang von nicht verbundenen Teilnehmern, über Teilnehmer die bereits auf logischer Ebene verbunden sind, bis hin zu Teilnehmern, die tatsächlich Audiodaten austauschen, statt. 
