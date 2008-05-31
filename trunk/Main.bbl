@@ -1,4 +1,4 @@
-\begin{thebibliography}{84}
+\begin{thebibliography}{88}
 % this bibliography was produced with the style dinat.bst v2.5
 \makeatletter
 \newcommand{\dinatlabel}[1]%
@@ -52,6 +52,21 @@
 \newblock \emph{3-D sound for virtual reality and multimedia}.
 \newblock San Diego, CA, USA~: Academic Press Professional, Inc., 1994. --
 \newblock ISBN 0-12-084735-3
+
+\bibitem[Berger(1999)]{uo08}
+\dinatlabel{Berger 1999} \textsc{Berger}, Andreas:
+\newblock \emph{Spiel mit den Leben. Eine deskriptive und qualitative Analyse
+  des Multiuserdungeons "Ultima Online"}.
+\newblock 1999
+
+\bibitem[Bharambe u.\,a.(2006)Bharambe, Herley und Padmanabhan]{torrent06}
+\dinatlabel{Bharambe u.\,a. 2006} \textsc{Bharambe}, A.~R.~; \textsc{Herley},
+  C.~; \textsc{Padmanabhan}, V.~N.:
+\newblock Analyzing and Improving a BitTorrent Networks Performance Mechanisms.
+\newblock In: \emph{INFOCOM 2006. 25th IEEE International Conference on
+  Computer Communications. Proceedings}
+\newblock (2006), April, S.~1--12. --
+\newblock ISSN 0743-166X
 
 \bibitem[Bolot und Fosse-Parisis(29 Mar--2 Apr 1998)]{bolot98}
 \dinatlabel{Bolot und Fosse-Parisis 29 Mar--2 Apr 1998} \textsc{Bolot},
@@ -240,7 +255,8 @@
 
 \bibitem[Ipoque(2007)]{ipoque:2007}
 \dinatlabel{Ipoque 2007} \textsc{Ipoque}:
-\newblock Internet Studie 2007.
+\newblock Internet Studie 2007: Auswirkungen von P2P-Filesharing, Voice over
+  IP, Skype, Joost und Instant Messaging auf das Internet.
 \newblock In:
   \emph{http://www.ipoque.com/news\_\&\_events/internet\_studies/internet\_stu%
 dy\_2007}
@@ -326,6 +342,12 @@ dy\_2007}
   game avatars.
 \newblock In: \emph{DIGRA Conf.}, 2003
 
+\bibitem[Maymounkov und Mazieres(2002)]{kademilla02}
+\dinatlabel{Maymounkov und Mazieres 2002} \textsc{Maymounkov}, P.~;
+  \textsc{Mazieres}, D.:
+\newblock Kademlia: A peer-to-peer information system based on the XOR metric.
+\newblock In: \emph{IPTPS02, Cambridge}, 2002
+
 \bibitem[Miladinovic und Stadler(2002)]{miladinovic-multiparty}
 \dinatlabel{Miladinovic und Stadler 2002} \textsc{Miladinovic}, I.~;
   \textsc{Stadler}, J.:
@@ -334,17 +356,19 @@ dy\_2007}
 \newblock In: \emph{International Network Conference}
 \newblock (2002), S.~191--198
 
-\bibitem[Morrisk(2006)]{morris06}
-\dinatlabel{Morrisk 2006} \textsc{Morrisk}, S.:
+\bibitem[Morris(2006)]{morris06}
+\dinatlabel{Morris 2006} \textsc{Morris}, Sue:
 \newblock WADs, Bots and Mods: Multiplayer FPS Games as Co-Creative Media.
 \newblock In: \emph{Level Up Conference Proceedings}
 \newblock 3 (2006)
 
-\bibitem[Morse(1996)]{morse96}
-\dinatlabel{Morse 1996} \textsc{Morse}, Katherine~L.:
-\newblock Interest Management in Large-Scale Distributed Simulations.
-\newblock
-\newblock (1996), Nr.~ICS-TR-96-27, S.~17
+\bibitem[Morse u.\,a.(2000)Morse, Bic und Dillencourt]{morse96}
+\dinatlabel{Morse u.\,a. 2000} \textsc{Morse}, Katherine~L.~; \textsc{Bic},
+  Lubomir~; \textsc{Dillencourt}, Michael:
+\newblock Interest Management in Large-Scale Virtual Environments.
+\newblock In: \emph{Presence: Teleoper. Virtual Environ.}
+\newblock 9 (2000), Nr.~1, S.~52--68. --
+\newblock ISSN 1054-7460
 
 \bibitem[Pena-Herborn und Hancock(2004)]{pena04}
 \dinatlabel{Pena-Herborn und Hancock 2004} \textsc{Pena-Herborn}, Jorge~;
@@ -363,9 +387,9 @@ dy\_2007}
 \bibitem[Preece und Maloney-Krichmar(2003)]{pearce03}
 \dinatlabel{Preece und Maloney-Krichmar 2003} \textsc{Preece}, Jenny~;
   \textsc{Maloney-Krichmar}, Diane:
-\newblock Online communities: focusing on sociability and usability.
-\newblock
-\newblock (2003), S.~596--620.
+\newblock \emph{Online communities: focusing on sociability and usability}.
+\newblock Mahwah, NJ, USA~: Lawrence Erlbaum Associates, Inc., 2003. --
+\newblock 596--620~S. --
 \newblock ISBN 0-8058-3838-4
 
 \bibitem[PricewaterHouseCoopers(2007)]{pwc:07}
@@ -373,6 +397,12 @@ dy\_2007}
 \newblock German Entertainment and Media Outlook: 2007-2011.
 \newblock In: \emph{http://www.pwc.de/portal/pub/!ut/p/kcxml}
 \newblock Version 22.03.2008 (2007)
+
+\bibitem[Pundkar(2007)]{pundkar07}
+\dinatlabel{Pundkar 2007} \textsc{Pundkar}, Swapnil~D.:
+\newblock Peer to Peer Communication over the Internet An Open Approach.
+\newblock In: \emph{Thesis}
+\newblock (2007), S.~1--25
 
 \bibitem[Radenkovic u.\,a.(2002)Radenkovic, Greenhalgh und
   Benford]{radenkovic02}
@@ -527,8 +557,8 @@ dy\_2007}
 \dinatlabel{Schulzrinne u.\,a. 1996} \textsc{Schulzrinne}, H.~;
   \textsc{Casner}, S.~; \textsc{Frederick}, R.~; \textsc{Jacobson}, V.:
 \newblock RTP: A Transport Protocol for Real-Time Applications.
-\newblock 1996.
-\newblock  -- Forschungsbericht
+\newblock In: \emph{http://www.ietf.org/rfc/rfc1889.txt}
+\newblock (1996)
 
 \bibitem[Schulzrinne und Rosenberg(1999)]{schulzrinne99}
 \dinatlabel{Schulzrinne und Rosenberg 1999} \textsc{Schulzrinne}, H.~;

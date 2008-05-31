@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592-1.40.4 (MiKTeX 2.7) (preloaded format=latex 2008.3.17)  31 MAY 2008 12:39
+This is pdfTeX, Version 3.141592-1.40.4 (MiKTeX 2.7) (preloaded format=latex 2008.3.17)  31 MAY 2008 19:41
 entering extended mode
 **Main.tex
 (Main.tex
@@ -475,13 +475,13 @@ Class scrbook Info: You've told me to use the font selection of the element
  [5]
 Class scrbook Info: You've told me to use the font selection of the element
 (scrbook)           `sectioning' that is an alias of element `disposition'
-(scrbook)            on input line 190.
+(scrbook)            on input line 191.
 Class scrbook Info: You've told me to use the font selection of the element
 (scrbook)           `sectioning' that is an alias of element `disposition'
-(scrbook)            on input line 202.
+(scrbook)            on input line 203.
 Class scrbook Info: You've told me to use the font selection of the element
 (scrbook)           `sectioning' that is an alias of element `disposition'
-(scrbook)            on input line 205.
+(scrbook)            on input line 206.
 )
 \tf@toc=\write3
  [6] (kapitel/stichwortverzeichnis.tex) [7
@@ -515,54 +515,51 @@ n-dun-gen der Spie-
 (kapitel/einleitung.tex
 Kapitel 1.
 
-Overfull \hbox (3.74052pt too wide) in paragraph at lines 11--12
+Overfull \hbox (3.74052pt too wide) in paragraph at lines 10--11
 [][]\OT1/cmr/m/n/12 Die ers-ten po-pul[]aren be-geh-ba-ren 3D-Grafik-Mehrspiele
 r-Welten wa-ren lo-ka-le Netz-
  []
 
 
-Package natbib Warning: Citation `uo08' on page 1 undefined on input line 13.
+Underfull \hbox (badness 8056) in paragraph at lines 14--14
+[][]\OT1/cmr/m/n/10 Blizzard En-ter-tain-ment: World of War-craft User Sta-ti-s
+tics, Ver-si-on 15.03.2008,
+ []
 
 [1
 
 
 
 
-]
-Underfull \hbox (badness 8056) in paragraph at lines 15--15
-[][]\OT1/cmr/m/n/10 Blizzard En-ter-tain-ment: World of War-craft User Sta-ti-s
-tics, Ver-si-on 15.03.2008,
- []
-
-[2]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 41.
+] [2]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 40.
  ("C:\Program Files\MiKTeX 2.7\tex\latex\base\omscmr.fd"
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 41.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 40.
  [3]
-Overfull \hbox (4.77881pt too wide) in paragraph at lines 54--55
+Overfull \hbox (4.77881pt too wide) in paragraph at lines 53--54
 \OT1/cmr/m/n/12 Unterhaltungs- und Me-dien-in-dus-trie bis 2011 auf 1,8 Bil-lio
 -nen US-Dollar gesch[]atzt. 
  []
 
 [4]
-Overfull \hbox (47.98439pt too wide) in paragraph at lines 60--61
+Overfull \hbox (47.98439pt too wide) in paragraph at lines 59--60
 [][]\OT1/cmr/m/n/12 Anhand ei-nes Pro-to-typs soll un-ter-sucht wer-den, wie ei
 -ne in-te-grier-te Sprach-kommunikations-
  []
 
-
-Overfull \hbox (2.46637pt too wide) in paragraph at lines 80--81
+[5]
+Overfull \hbox (2.46637pt too wide) in paragraph at lines 79--80
 \OT1/cmr/m/n/12 ne Sprach[]ubertragung. Ent-spre-chen-de Vor- und Nach-tei-le w
 er-den ge-gen[]uber-
  []
 
-[5]
-Overfull \hbox (11.05264pt too wide) in paragraph at lines 81--82
-[]\OT1/cmr/bx/n/12 Kapitel 7 \OT1/cmr/m/n/12 be-fasst sich mit der Im-ple-men-t
-ie-rung des Pro-to-typs und pr[]asentiert
+
+Overfull \hbox (11.05264pt too wide) in paragraph at lines 80--81
+[][]\OT1/cmr/bx/n/12 Kapitel 7 \OT1/cmr/m/n/12 be-fasst sich mit der Im-ple-men
+-tie-rung des Pro-to-typs und pr[]asentiert
  []
 
 ) [6] (kapitel/kapitel_kommunikation.tex
@@ -584,7 +581,7 @@ File: grafiken/proxemik.eps Graphic file (type eps)
 File: grafiken/spielgenredreieck.eps Graphic file (type eps)
  <grafiken/spielgenredreieck.eps>
 [14] [15] [16]
-Overfull \hbox (7.06558pt too wide) in paragraph at lines 178--180
+Overfull \hbox (7.06558pt too wide) in paragraph at lines 180--182
 []\OT1/cmr/m/n/12 Eine n[]ahere Un-ter-su-chung der non-ver-blen Kom-mu-ni-ka-t
 i-on soll Auf-schl[]usse dar[]uber
  []
@@ -611,12 +608,17 @@ a-ti-on als st[]orend
 
 [25]
 File: grafiken/multi-kommunikationsmodell.eps Graphic file (type eps)
- <grafiken/multi-kommunikationsmodell.eps> [26] [27]
+ <grafiken/multi-kommunikationsmodell.eps> [26]
+Overfull \hbox (2.74852pt too wide) in paragraph at lines 83--84
+[][]\OT1/cmr/bx/n/12 Quadratisch an-stei-gen-der Band-brei-ten-ver-brauch\OT1/c
+mr/m/n/12 : Da der Au-diostrom
+ []
+
+[27]
 File: grafiken/ventrillo.eps Graphic file (type eps)
+ <grafiken/ventrillo.eps> [28]
 
-<grafiken/ventrillo.eps> [28]
-
-LaTeX Warning: Reference `ventrillo' on page 29 undefined on input line 155.
+LaTeX Warning: Reference `ventrillo' on page 29 undefined on input line 153.
 
 [29]
 File: grafiken/lautstaerke.eps Graphic file (type eps)
@@ -650,9 +652,9 @@ Overfull \hbox (4.84186pt too wide) in paragraph at lines 168--169
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 181.
 
-Overfull \hbox (4.39415pt too wide) in paragraph at lines 192--193
-\OT1/cmr/m/it/10.95 In-ter-net Mes-sa-ge Ex-ten-si-ons\OT1/cmr/m/n/10.95 (MIME)
- Nach-rich-ten []uber-tragen wer-den. MESSAGE-
+Overfull \hbox (35.38828pt too wide) in paragraph at lines 192--193
+\OT1/cmr/m/it/10.95 media In-ter-net Mes-sa-ge Ex-ten-si-ons\OT1/cmr/m/n/10.95 
+(MIME) Nach-rich-ten []uber-tragen wer-den. MESSAGE-
  []
 
 [39]
@@ -810,18 +812,14 @@ Overfull \hbox (38.82602pt too wide) in paragraph at lines 158--159
 und Re-gis-tra-ren []ubernommen
  []
 
-[66] [67]
-
-LaTeX Warning: Reference `siphybrid' on page 68 undefined on input line 199.
-
-[68] [69]
+[66] [67] [68] [69]
 Overfull \hbox (11.63316pt too wide) in paragraph at lines 236--237
 [][]\OT1/cmr/m/n/12 Die Nach-tei-le ei-nes Misch-ser-vers lie-gen je-doch beim 
 in-ter-ak-ti-ven De-lay, der abh[]angig
  []
 
 [70] [71]
-Overfull \hbox (12.14702pt too wide) in paragraph at lines 284--285
+Overfull \hbox (12.14702pt too wide) in paragraph at lines 285--286
 \OT1/cmr/m/n/12 Spie-lern je-der Spie-ler min-des-tens []uber einen Uploa-d/-Do
 w-n-load von $256[]$ verf[]ugen
  []
@@ -917,15 +915,6 @@ ie-ler mit der IP:192.168.0.50
  []
 
 [102] [103]
-
-LaTeX Warning: Reference `mehrereregistrare' on page 104 undefined on input lin
-e 117.
-
-
-LaTeX Warning: Reference `peer-to-peer-unicast' on page 104 undefined on input 
-line 120.
-
-
 Overfull \hbox (10.10487pt too wide) in paragraph at lines 120--121
 \OT1/cmr/m/n/12 trars, der f[]ur die Lo-ka-ti-on der Teil-neh-mer ver-ant-wort-
 lich ist. Die-se SIP-Komponente
@@ -952,17 +941,26 @@ LaTeX Warning: Reference `p2psipregisterandjoin' on page 109 undefined on input
 LaTeX Warning: Reference `p2psipregisterandjoin_user' on page 109 undefined on 
 input line 204.
 
+[109]
 File: grafiken/p2psipregisterandjoin.eps Graphic file (type eps)
-<grafiken/p2psipregisterandjoin.eps>
+ <grafiken/p2psipregisterandjoin.eps>
 File: grafiken/p2psipregisterandjoin_user.eps Graphic file (type eps)
- <grafiken/p2psipregisterandjoin_user.eps>
 
-LaTeX Warning: Reference `p2psipcall' on page 109 undefined on input line 221.
+<grafiken/p2psipregisterandjoin_user.eps>
 
+LaTeX Warning: Reference `p2psipcall' on page 110 undefined on input line 221.
+
+[110]
 File: grafiken/p2psipcall.eps Graphic file (type eps)
-<grafiken/p2psipcall.eps> [109] [110]
+ <grafiken/p2psipcall.eps>
+Overfull \hbox (40.38849pt too wide) in paragraph at lines 237--238
+[][]\OT1/cmr/m/n/12 Zum Bei-spiel k[]onnte der im-ple-men-tier-te Client-Server
+ An-satz mit we-ni-gen Ver[]anderungen
+ []
 
-LaTeX Warning: File `grafiken/3in1registrar.eps' not found on input line 245.
+[111]
+
+LaTeX Warning: File `grafiken/3in1registrar.eps' not found on input line 248.
 
 
 ! LaTeX Error: File `grafiken/3in1registrar.eps' not found.
@@ -971,7 +969,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.245 ...00\textwidth]{grafiken/3in1registrar.eps}
+l.248 ...00\textwidth]{grafiken/3in1registrar.eps}
                                                   
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -984,14 +982,13 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.245 ...00\textwidth]{grafiken/3in1registrar.eps}
+l.248 ...00\textwidth]{grafiken/3in1registrar.eps}
                                                   
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 File: grafiken/3in1registrar.eps Graphic file (type eps)
-<grafiken/3in1registrar.eps> [111] [112]) [113]
-(kapitel/kapitel_benchmarking.tex
+<grafiken/3in1registrar.eps>) [112] [113] (kapitel/kapitel_benchmarking.tex
 Kapitel 9.
 
 LaTeX Warning: Reference `fullmeshszenario' on page 114 undefined on input line
@@ -1007,9 +1004,9 @@ File: grafiken/fullmeshchart.eps Graphic file (type eps)
 ]
 File: grafiken/partialmesh.eps Graphic file (type eps)
 
-<grafiken/partialmesh.eps> [115]
+<grafiken/partialmesh.eps>
 File: grafiken/partialmeshchart.eps Graphic file (type eps)
- <grafiken/partialmeshchart.eps>
+ <grafiken/partialmeshchart.eps> [115]
 File: grafiken/fullmesh-worstcase.eps Graphic file (type eps)
 
 <grafiken/fullmesh-worstcase.eps>
@@ -1032,26 +1029,20 @@ File: grafiken/mitvadund2codecs.eps Graphic file (type eps)
  <grafiken/mitvadund2codecs.eps>
 File: grafiken/mitvadundrtpsip.eps Graphic file (type eps)
 
-<grafiken/mitvadundrtpsip.eps>) [119] [120] [121] [122] [123]
+<grafiken/mitvadundrtpsip.eps>) [119] [120] [121] [122] [123] [124]
 (kapitel/kapitel_conclusion.tex
 Kapitel 10.
 
-Overfull \hbox (12.18462pt too wide) in paragraph at lines 10--11
-[][]\OT1/cmr/m/n/12 In die-ser Ar-beit wer-den ge-nau die-se Un-zul[]angl[]angl
-ichkeiten adres-siert und L[]osungen
+Overfull \hbox (5.11325pt too wide) in paragraph at lines 10--11
+\OT1/cmr/m/n/12 wird ein Pro-to-typ ei-nes Com-pu-ter-spiels ent-wi-ckelt, der 
+[]uber ei-ne in-te-grier-te Sprach-
  []
 
-[124
+[125
 
 
 
-] [125]
-Overfull \hbox (4.4597pt too wide) in paragraph at lines 30--31
-[][]\OT1/cmr/m/n/12 Obwohl zwar meh-re-re Sprach-kom-mu-ni-ka-ti-ons L[]osungen
- auf Ba-sis von pro-pri[]ateren
- []
-
-[126]
+] [126] [127]
 ! Undefined control sequence.
 l.34 ...yspielen oder tragbaren Konsolen\footnonte
                                                   {Nintendo DS, Playstation ...
@@ -1067,55 +1058,65 @@ Overfull \hbox (2.42232pt too wide) in paragraph at lines 38--39
 rds in Com-pu-ter-spie-le w[]urden
  []
 
-) [127] (Main.bbl [128
+) [128] (Main.bbl [129
 
 
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 126--132
+Underfull \hbox (badness 10000) in paragraph at lines 141--147
 [][]\OT1/cmr/m/sc/12 Ernst&Young\OT1/cmr/m/n/12 :  Di-gi-ta-le Spie-le in Deuts
 ch-land.  In:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 126--132
+Underfull \hbox (badness 10000) in paragraph at lines 141--147
 \OT1/cmr/m/it/12 http://www.ey.com/global/content.nsf/Germany/Publikationen[]-[
 ]Studien[]-
  []
 
-[129]
-Underfull \hbox (badness 10000) in paragraph at lines 242--248
-[][]\OT1/cmr/m/sc/12 Ipoque\OT1/cmr/m/n/12 :  In-ter-net Stu-die 2007.  In:
+[130]
+Underfull \hbox (badness 2042) in paragraph at lines 257--264
+[][]\OT1/cmr/m/sc/12 Ipoque\OT1/cmr/m/n/12 :  In-ter-net Stu-die 2007: Aus-wir-
+kun-gen von P2P-Filesharing,
  []
 
 
-Overfull \hbox (1.91747pt too wide) in paragraph at lines 242--248
+Overfull \hbox (1.91747pt too wide) in paragraph at lines 257--264
 \OT1/cmr/m/it/12 http://www.ipoque.com/news[]&[]events/internet[]studies/intern
 et[]study[]2007
  []
 
-[130] [131]
-Underfull \hbox (badness 10000) in paragraph at lines 401--405
+[131] [132]
+Underfull \hbox (badness 10000) in paragraph at lines 431--435
 [][]\OT1/cmr/m/sc/12 Reichswald\OT1/cmr/m/n/12 , R. ; \OT1/cmr/m/sc/12 M[]oslei
 n\OT1/cmr/m/n/12 , K. ; \OT1/cmr/m/sc/12 Sa-chen-ba-che-rand\OT1/cmr/m/n/12 , K
 . ;
  []
 
-[132] [133] [134]) [135] (kapitel/erklaerung.tex) [136
+[133] [134]
+Underfull \hbox (badness 4353) in paragraph at lines 557--562
+[][]\OT1/cmr/m/sc/12 Schulzrinne\OT1/cmr/m/n/12 , H. ; \OT1/cmr/m/sc/12 Cas-ner
+\OT1/cmr/m/n/12 , S. ; \OT1/cmr/m/sc/12 Fre-de-rick\OT1/cmr/m/n/12 , R. ; \OT1/
+cmr/m/sc/12 Ja-cob-son\OT1/cmr/m/n/12 ,
+ []
 
 
-]
+Underfull \hbox (badness 1715) in paragraph at lines 557--562
+\OT1/cmr/m/n/12 V.:  RTP: A Trans-port Pro-to-col for Real-Time Ap-p-li-ca-ti-o
+ns.  In:
+ []
 
-Package natbib Warning: There were undefined citations.
+[135] [136]) [137] (kapitel/erklaerung.tex) [138
 
-(Main.aux (kapitel/titel.aux) (kapitel/abstract.aux)
-(kapitel/stichwortverzeichnis.aux) (kapitel/abkuerzungen.aux)
-(kapitel/einleitung.aux) (kapitel/kapitel_kommunikation.aux)
-(kapitel/kapitel_folgerungundziele.aux) (kapitel/kapitel_sip.aux)
-(kapitel/kapitel_recentwork.aux) (kapitel/kapitel_konstruktion.aux)
-(kapitel/kapitel_implementierung.aux) (kapitel/kapitel_network.aux)
-(kapitel/kapitel_benchmarking.aux) (kapitel/kapitel_conclusion.aux)
-(kapitel/erklaerung.aux))
+
+] (Main.aux (kapitel/titel.aux) (kapitel/abstract.aux) (kapitel/stichwortverzei
+chnis.aux)
+(kapitel/abkuerzungen.aux) (kapitel/einleitung.aux)
+(kapitel/kapitel_kommunikation.aux) (kapitel/kapitel_folgerungundziele.aux)
+(kapitel/kapitel_sip.aux) (kapitel/kapitel_recentwork.aux)
+(kapitel/kapitel_konstruktion.aux) (kapitel/kapitel_implementierung.aux)
+(kapitel/kapitel_network.aux) (kapitel/kapitel_benchmarking.aux)
+(kapitel/kapitel_conclusion.aux) (kapitel/erklaerung.aux))
 
 LaTeX Warning: There were undefined references.
 
@@ -1124,12 +1125,12 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 6717 strings out of 95341
- 96374 string characters out of 1184182
- 210300 words of memory out of 1500000
- 9674 multiletter control sequences out of 110000
- 11824 words of font info for 42 fonts, out of 1200000 for 2000
+ 6718 strings out of 95341
+ 96373 string characters out of 1184182
+ 210540 words of memory out of 1500000
+ 9675 multiletter control sequences out of 110000
+ 11465 words of font info for 41 fonts, out of 1200000 for 2000
  14 hyphenation exceptions out of 8191
  37i,11n,37p,1415b,1101s stack positions out of 5000i,500n,10000p,200000b,5000s
 
-Output written on Main.dvi (148 pages, 529812 bytes).
+Output written on Main.dvi (150 pages, 534244 bytes).

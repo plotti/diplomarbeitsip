@@ -40,7 +40,7 @@ Bisher werden im Spielebereich fast ausschließlich serverbasierte Drittanbieter 
 Die unter Spielern beliebtesten Lösungen sind 
 \begin{itemize}
 	\item \textit{Ventrillo}\footnote{Flagship Industries Inc., Programmversion 3.0.1, http://www.ventrilo.com}
-	\item Teamspeak\footnote{TeamSpeak Systems GmbH, Programmversion 2.0.33.7, http://www.goteamspeak.com} 
+	\item \textit{Teamspeak}\footnote{TeamSpeak Systems GmbH, Programmversion 2.0.33.7, http://www.goteamspeak.com} 
 	\item \textit{Mumble}\footnote{Thorvald Natvig, Programmversion 1.1.3, http://mumble.sourceforge.net}
 \end{itemize}
  
@@ -75,10 +75,10 @@ Beide Versionen jedoch bieten auf Clientseite keine Kontrolle über die einzelnen
 Somit bietet \textit{Skype} als einziger tatsächlicher dezentralisierter Client nicht alle Eigenschaften, um als mögliche Ausgangsgrundlage zu dienen. 
 
 \subsection{Instant Messaging Anwendungen}
-Andere Peer-to-Peer Programme wie \textit{Microsoft-Netmeeting}\footnote{Microsoft, Version 20.03.2008, http://de.wikipedia.org/wiki/NetMeeting}, \textit{Microsoft-Messenger}\footnote{Microsoft, Version 20.03.2008, http://messenger.live.com}, \textit{Google Talk}\footnote{Google, Version 20.03.2008, http://www.google.com/talk} sind nicht modifizierbar und bieten nur sehr eingeschränkte Konferenzmöglichkeiten. 
+Andere Peer-to-Peer Programme wie \textit{Microsoft-Netmeeting}\footnote{Microsoft, Version 20.03.2008, http://de.wikipedia.org/wiki/NetMeeting}, \textit{Microsoft-Messenger}\footnote{Microsoft, Version 20.03.2008, http://messenger.live.com} oder \textit{Google Talk}\footnote{Google, Version 20.03.2008, http://www.google.com/talk} sind nicht modifizierbar und bieten nur sehr eingeschränkte Konferenzmöglichkeiten. 
 
 \subsection{SIP-Protokoll}
-Das im Kapitel 4 vorgestellte SIP Protokoll und existierende Protokollstapel erfüllen die gestellten Anforderungen an den Prototypen. Da SIP ein generisches und offenes Protokoll ist, kann es benutzt werden, um beliebige Sitzungen mit einem oder mehreren Teilnehmern zu verwalten. Dabei ist es nicht auf Internet-Telefonie beschränkt, sondern kann Sitzungen zwischen beliebigen Multimediaströmen, Konferenzen oder Computerspielen herstellen. Zahlreiche Standardisierungs-Organisationen wie \textit{IETF \footnote{IETF, Version 22.03.2008, http://www.ietf.org/html.charters/sip-charter.html}, 3GPP\footnote{3GPP,Version 22.03.2008, http://www.3gpp.org/}, International Packet Communications Consortium \footnote{IPCC,Version 22.03.2008, http://www.imsforum.org/}, IMTC\footnote{ITMC, Version 22.03.2008, http://www.imtc.org/} und PacketCable \footnote{PacketCable, Version 22.03.2008, http://www.packetcable.com/}} unterstützen bereits den Einsatz von SIP.
+Das im Kapitel 4 vorgestellte SIP Protokoll und existierende Protokollstapel erfüllen die gestellten Anforderungen an den Prototypen. Da SIP ein generisches und offenes Protokoll ist, kann es benutzt werden, um beliebige Sitzungen mit einem oder mehreren Teilnehmern zu verwalten. Dabei ist es nicht auf Internet-Telefonie beschränkt, sondern kann Sitzungen zwischen beliebigen Multimediaströmen, Konferenzen oder Computerspielen herstellen. Zahlreiche Standard\-isier\-ungs-Organisationen wie \textit{IETF\footnote{IETF, Version 22.03.2008, http://www.ietf.org/html.charters/sip-charter.html}, 3GPP\footnote{3GPP,Version 22.03.2008, http://www.3gpp.org/}, International Packet Communications Consortium\footnote{IPCC,Version 22.03.2008, http://www.imsforum.org/}, IMTC\footnote{ITMC, Version 22.03.2008, http://www.imtc.org/} und PacketCable\footnote{PacketCable, Version 22.03.2008, http://www.packetcable.com/}} unterstützen bereits den Einsatz von SIP.
 %http://www.cs.columbia.edu/sip/
 
 In der Open-Source Gemeinde wird das SIP-Protokoll auch zunehmend unterstützt. So existieren bereits etliche Clientanwendungen und zentrale Komponenten wie \textit{Proxys} und \textit{Registrare}. Darüber hinaus finden sich zahlreiche gut dokumentierte SIP-Protokollstapel und \textit{SDKs}. Es existieren auch Referenzimplementierungen, wie \textit{JAIN-SIP} \footnote{Sun Microsystems, Version 24.03.2008, http://jain-sip.dev.java.net}, die sowohl in kommerziellen Projekten aber auch zu Forschungszwecken eingesetzt werden. Der wichtigste Grund für den Einsatz von SIP ist, dass es alle Anforderungen für die Umsetzung des Prototyps unterstützt:
@@ -132,7 +132,7 @@ Die Wahl fiel in dieser Arbeit aus den folgenden Gründen auf den offenen SIP Pro
 \begin{figure}[tbh]
 	\centering
 		\includegraphics[width=0.70\textwidth]{grafiken/pjsip.eps}
-	\caption{Übersicht der Komponenten des PJSIP-Protokollstacks}
+	\caption{Übersicht der Komponenten des PjSIP-Protokollstacks}
 	\label{fig:pjsip}
 \end{figure}
 
@@ -201,15 +201,15 @@ Die VoIP-Instanz unterscheidet zwischen der Signalisierung (PJSIP) und der Kontr
 
 Die Hauptkomponenten der Abbildung \ref{fig:pjsip-mediaflow} bestehen aus:
 \begin{itemize}
-	\item einem Soundkarten-Port, der eine Abstraktions-Ebene darstellt, die die Callbacks der Soundkarte in Audioframes übersetzt)
+	\item einem Soundkarten-Port, der eine Abstraktions-Ebene darstellt, die die Callbacks der Soundkarte in Audioframes übersetzt
 	\item einer Conference-Bridge, die ein Mischen der Audiosignale erlaubt
 	\item einem Medienstrom, der bei einem Anruf erstellt wird.
 	\item einem Medientransport, der für die Übertragung des Medienstroms durch RTP/RTCP Pakete zuständig ist.
 \end{itemize}
 
-Während der Initialisierungsphase, erstellt die Anwendung einen logischen Soundkarten-Port und die Conference-Bridge. Diese zwei Objekte bleiben während der Lebenszeit der Applikation erhalten. Wird ein Anruf getätigt oder entgegengenommen, erstellt die Anwendung eine Instanz des Media-Transports (normalerweise UDP). Die Adresse(Port) des Media-Transports wird als Parameter der SDP IVITE Nachricht übergeben (empfangen). Ist die Verbindung etabliert, wird eine Medien-Sitzung erstellt. Die Anwendung kann nun den Audiostrom der Medien-Sitzung nutzen und ihn bei der Conference-Bridge registrieren. Danach kann dieser \textit{Audiostrom-Slot} in der Conference-Bridge mit anderen Slots anderer Audioströme verbunden werden, oder mit dem sog. "`0-slot"', der direkt mit der Soundkarte und dem Mikrofon verbunden ist. 
+Während der Initialisierungsphase, erstellt die Anwendung einen logischen Sound\-karten-Port und die Conference-Bridge. Diese zwei Objekte bleiben während der Lebenszeit der Applikation erhalten. Wird ein Anruf getätigt oder entgegengenommen, erstellt die Anwendung eine Instanz des Media-Transports (normalerweise UDP). Die Adresse(Port) des Media-Transports wird als Parameter der SDP IVITE Nachricht übergeben (empfangen). Ist die Verbindung etabliert, wird eine Medien-Sitzung erstellt. Die Anwendung kann nun den Audiostrom der Medien-Sitzung nutzen und ihn bei der Conference-Bridge registrieren. Danach kann dieser \textit{Audiostrom-Slot} in der Conference-Bridge mit Slots anderer Audioströme verbunden werden oder mit dem sog. "`zero-slot"', der direkt mit der Soundkarte und dem Mikrofon verbunden ist. 
 
-\section{Zusammenarbeit von \textit{Irrlicht} und VoIP}
+\section{Zusammenarbeit von Irrlicht und VoIP}
 
 \subsection{Aktualisierung der VoIP Instanz}
 
@@ -224,7 +224,7 @@ Unterschreitet ein Spieler die Entfernung zu einem anderen Spieler, veranlasst d
 Die Spieler im Spiel werden durch Avatare repräsentiert. Jedem Avatar im Spiel ist ein entsprechender "`Buddy"' in der VoIP-Instanz gegenübergestellt. Diese hält somit eine lokale Liste aller Mitspieler vor. Sämtliche Sprachkommunikation findet durch einen Anruf zum entsprechendem \textit{Buddy} statt. Falls sich mehrere Personen in der Hörnähe des Spielers befinden, werden auch mehrere Anrufe zu den entsprechenden Personen veranlasst. Da für jeden Teilnehmer ein eigener Anruf getätigt und separat verwaltet wird, ist der Spieler in der Lage die Parameter wie Lautstärke, Bitrate und Codec jedes einzelnen Anrufs zu verändern und neu auszuhandeln. Alle getätigten Anrufe werden in der lokalen \textit{Conference-Bridge} abgemischt.
 
 \subsection{Conference-Bridge}
-Die Aufgabe der \textit{Conference-Bridge} besteht die Audioströme bestehender SIP Anrufe lokal abzumischen (siehe Abbildung \ref{fig:conference-bridge}. Jeder Teilnehmer der Conference-Bridge verfügt über einen Eingangs- und Ausgangs-Kanal, die beliebig miteinander verschaltet werden können. Das Mikrofonsignal des Spielers wird unverändert an alle Teilnehmer der Conference-Bridge übertragen. Die empfangenen Signale werden jedoch in ihrer Lautstärke angepasst. Dabei wird die Lautstärke der jeweiligen Audioströme mit dem Parameter $r$ zwischen 0 und 1 gewichtet, bevor sie addiert werden. So kann die Entfernung des Teilnehmers simuliert werden. Die Parameter $r$ wiederum werden anhand der Distanz der Avatare vom Spieler errechnet, die auf einen Bereich zwischen 0 und 1 normiert wird. Überschreiten Spieler im Spiel die Maximaldistanz der sozialen Zone, werden die Teilnehmer aus der Konferenzbrücke entfernt, der logische SIP Anruf jedoch so lange erhalten bis sie auch die öffentliche Zone verlassen haben. Dieses Verhalten wird später in Abschnitt \ref{Zonen-Implementierung} beschreiben. Liegen die Audiosignale in verschiedenen Abtastraten vor, übernimmt die Conference-Bridge automatisch ein \textit{Resampling} des Signals. 
+Die Aufgabe der \textit{Conference-Bridge} besteht die Audioströme bestehender SIP Anrufe lokal abzumischen (siehe Abbildung \ref{fig:conference-bridge}). Jeder Teilnehmer der Conference-Bridge verfügt über einen Eingangs- und Ausgangs-Kanal, die beliebig miteinander verschaltet werden können. Das Mikrofonsignal des Spielers wird unverändert an alle Teilnehmer der Conference-Bridge übertragen. Die empfangenen Signale werden jedoch in ihrer Lautstärke angepasst. Dabei wird die Lautstärke der jeweiligen Audioströme mit dem Parameter $r$ zwischen 0 und 1 gewichtet, bevor sie addiert werden. So kann die Entfernung des Teilnehmers simuliert werden. Die Parameter $r$ werden anhand der Distanz der Avatare vom Spieler errechnet, die auf einen Bereich zwischen 0 und 1 normiert wird. Überschreiten Spieler im Spiel die Maximaldistanz der sozialen Zone, werden die Teilnehmer aus der Konferenzbrücke entfernt, der logische SIP Anruf jedoch so lange erhalten bis sie auch die öffentliche Zone verlassen haben. Dieses Verhalten wird später in Abschnitt \ref{Zonen-Implementierung} beschreiben. Liegen die Audiosignale in verschiedenen Abtastraten vor, übernimmt die Conference-Bridge automatisch ein \textit{Resampling} des Signals. 
 
 \begin{figure}
 	\centering

@@ -15,7 +15,7 @@ Im Viereck aus Spielerlebnis, Spielsimulation, erzählerischem Aspekt und der Spi
 \section{Methaphern zur Sprachübertragung}
 Computerspiele ahmen oft die Realität nach, indem detailgetreue virtuelle Welten nachgebildet werden, in denen physikalische Gesetze gelten, die die Bewegung aller Spieler und Gegenstände dieser Welt beeinflussen. Man kann nicht durch Gegenstände hindurchsehen oder -gehen, unverwundbar sein oder unendlich viel Munition oder Geld besitzen. Diese prinzipiellen Grenzen des Möglichen machen oft genau den Spielspaß aus, da Spieler versuchen müssen unter einschränkenden Bedingungen ihren Vorteil auszuspielen. 
 
-Die Sprachkommunikation jedoch ist keinen solchen Einschränkungen unterlegen. Spieler können jederzeit, beliebig lang mit jedem Spieler kommunizieren. Sie können über die weitesten Entfernungen oder durch Wände hinweg sprechen, besitzen aber kein Telefon oder kein Fernsprechgerät. Sie können  ihre Verbindung aufrechterhalten jederzeit aufrechterhalten egal ob sie sich unter Wasser oder in einem Tunnel befinden. Unabhängig davon ob ihre Spielfigur tot oder lebendig ist können sie immer noch Mitspieler kontaktieren. 
+Die Sprachkommunikation jedoch ist keinen solchen Einschränkungen unterlegen. Spieler können jederzeit, beliebig lang mit jedem Spieler kommunizieren. Sie können über die weitesten Entfernungen oder durch Wände hinweg sprechen, besitzen aber kein Telefon oder kein Fernsprechgerät. Sie können ihre Verbindung jederzeit aufrechterhalten, egal ob sie sich unter Wasser oder in einem Tunnel befinden. Unabhängig davon ob ihre Spielfigur tot oder lebendig ist können sie immer noch Mitspieler kontaktieren. 
 
 Spieler, die sich jedoch in ihrer unmittelbaren Nähe befinden, aber nicht Teil des gleichen Kommunikationskanals sind, können nicht angesprochen werden. Da verwundert es zunächst nicht, dass vor allem unerfahrene Spieler Probleme damit haben, das Gesprochene in ihren Kopfhörern mit den Avataren auf dem Bildschirm zu verknüpfen. 
 
@@ -23,7 +23,7 @@ Wie bereits in Kapitel 2 vorgestellt, fehlen in bisherigen Spielen Metaphern der
 
 Angelehnt an die bereits in Kapitel 2 vorgestellten Metaphern von Gibs und Wadley, wurde der Entschluss gefällt die Sprach\-über\-tragung anhand einer der vorgestellten Metaphern zu modellieren. Die Übertragung der Sprache durch die Luft wurde deshalb gewählt, da es sich um die intuitivste Art handelt und wir von ihr im wirklichen Leben am häufigsten Gebrauch machen. Ein wichtiger Vorteil ist zudem, dass sie als einzige das angestrebte Konzept der Proxemik zulässt und eine intuitive Steuerung von Konferenzen erlaubt.
 
-Die Metapher der Übertragung von Sprache durch die Luft bedeutet, dass Spieler sich nur dann hören können falls sie sich in einer bestimmten Hörnähe zueinander befinden. Die Lautstärke und Qualität der Sprachübertragung hängt dabei von der Entfernung der Spieler voneinander ab. 
+Die Metapher der Übertragung von Sprache durch die Luft bedeutet, dass Spieler sich nur dann hören können, falls sie sich in einer bestimmten Hörnähe zueinander befinden. Die Lautstärke und Qualität der Sprachübertragung hängt dabei von der Entfernung der Spieler voneinander ab. 
 
 \section{Mehrkanal-Modell}
 Viele der genannten Probleme basieren auf der Verwendung von genau einem Kanal zur Sprachübertragung, der aber von mehreren Sendern und Empfängern gleichzeitig genutzt
@@ -50,21 +50,19 @@ Ein Großteil der Störungen resultiert aus der Untauglichkeit eines einzigen Über
 	
 		\item \textbf{Keine Kontrolle über Empfang der Nachrichten}: Analog zum Addressierungsproblem sind Teilnehmer genauso wenig in der Lage zu kontrollieren, welche Sprachnachrichten sie empfangen möchten und welche sie verwerfen wollen. Oft führt dies dazu, dass ein Großteil der Sprachkommunikation auf dem Kanal als Lärm empfunden wird. 
 		
+Ein Einkanalsystem hat aber auch einige Vorteile:
+
+\begin{itemize}
+	\item \textbf{Linear ansteigender Bandbreitenverbrauch}: Da der Audiostrom zentral gemischt wird, muss der Server der den Kanal betreibt, bei N Teilnehmern genau N Ströme entgegennehmen und nur N Audioströme verschicken. Dieses Verhalten wird genauer in Kapitel \ref{Architektur-Entwurf} behandelt.
+	\item \textbf{Einfache Kanaladministration}: Existiert nur ein einziger Kanal, ist seine Administration und der Mischvorgang einfach. Alle Spieler die den Kanal betreten erhalten die Summe aller Signale und versenden auch ihr eigenes Signal an den Kanal.  
+\end{itemize}
+
 \end{itemize}
 \begin{figure}[tbh]
-	\centering
-		\includegraphics[width=1.00\textwidth]{grafiken/multi-kommunikationsmodell.eps}
+	\centering	\includegraphics[width=1.00\textwidth]{grafiken/multi-kommunikationsmodell.eps}
 	\caption{Einsatz von jeweils direkten Kommunikationskanälen zwischen Teilnehmern}
 	\label{fig:mehrkanalsystem}
 \end{figure}
-
-Das Einkanalsystem hat aber auch einige Vorteile:
-
-\begin{itemize}
-	\item Linear ansteigender Bandbreitenverbrauch: Da der Audiostrom zentral gemischt wird, muss der Server der den Kanal betreibt, bei N Teilnehmern genau N Ströme entgegennehmen und nur N Audioströme verschicken. Dieses Verhalten wird genauer in Kapitel \ref{Architektur-Entwurf} behandelt.
-	\item Einfache Kanaladministration: Existiert nur ein einziger Kanal, ist seine Administration und der Mischvorgang einfach. Alle Spieler die den Kanal betreten erhalten die Summe aller Signale und versenden auch ihr eigenes Signal an den Kanal. 
-	\item 
-\end{itemize}
 
 Wird ein einziger Kanal durch mehrere parallele direkte Kanäle zwischen den Teilnehmern ersetzt (siehe Abbildung \ref{fig:mehrkanalsystem}), so können viele der genannten Probleme gelöst werden, indem jeder Spieler eine bessere Kontrolle über das Medium erhält. Er kann dann für jede Audioquelle selbst entscheiden, wie er mit ihr verfahren will. 
 
@@ -78,11 +76,11 @@ Wird ein einziger Kanal durch mehrere parallele direkte Kanäle zwischen den Teil
 
 In diesem Modell kann auch das Feedback entsprechend dem Modell von Schramm \cite{schramm54} gezielt erfolgen, indem es immer nur an die entsprechende Person erfolgt und nicht mehr an alle Teilnehmer des Spiels.
  
-Es resultieren auch einige, vor allem technische Nachteile aus der Verwendung von mehreren Kanälen, die hier nicht unerwähnt bleiben sollen, jedoch erst in Kapitel \ref{Architektur-Entwurf} detailliert behandelt werden.
+Es resultieren auch einige - vor allem technische Nachteile aus der Verwendung von mehreren Kanälen, die hier nicht unerwähnt bleiben sollen, jedoch erst in Kapitel \ref{Architektur-Entwurf} detailliert behandelt werden.
 
 \begin{itemize}
-	\item Kanaladministration: Da für jede Audioverbindung ein separater Kanal benutzt wird, muss auf Clientseite eine ausgefeilte Steuerung dafür sorgen, dass der Spieler mit den richtigen Kanälen verbunden wird. Mit genau diesem Problem befasst sich das Unterkapitel \ref{proxemikalssteuerungvonkonferenzen}.	
-	\item Quadratisch ansteigender Bandbreitenverbrauch: Da der Audiostrom von jedem Teilnehmer lokal gemischt wird, muss auch jeder Teilnehmer alle anderen Audioströme empfangen und seinen Audiostrom an alle Teilnehmer verschicken. Dieses Problem wird ausführlich in Kapitel \ref{Architektur-Entwurf} behandelt.
+	\item \textbf{Kanaladministration}: Da für jede Audioverbindung ein separater Kanal benutzt wird, muss auf Clientseite eine ausgefeilte Steuerung dafür sorgen, dass der Spieler mit den richtigen Kanälen verbunden wird. Mit genau diesem Problem befasst sich das Unterkapitel \ref{proxemikalssteuerungvonkonferenzen}.	
+	\item \textbf{Quadratisch ansteigender Bandbreitenverbrauch}: Da der Audiostrom von jedem Teilnehmer lokal gemischt wird, muss auch jeder Teilnehmer alle anderen Audioströme empfangen und seinen Audiostrom an alle Teilnehmer verschicken. 
 \end{itemize}
  
 \section{Gleichzeitige interpersonelle und Massenkommunikation}

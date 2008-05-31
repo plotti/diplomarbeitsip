@@ -178,19 +178,19 @@ Anfragen erreicht werden kann. Das Format entspricht dem der To- und From-Header
 In der Spezifikation RFC 3261 werden sechs Request-Typen definiert, die jedoch inzwischen um weitere Request Typen erweitert wurden:
 \small
 \begin{itemize}
-	\item INVITE: Mit INVITE initiiert ein IP-Telefon einen neuen Anruf. Eine INVITE Nachricht enthält die SIP-Adresse von beiden Teilnehmern, einen Grund(Subject) und dessen Priorität.
-	\item BYE: Mit BYE wird der Abbau der bestehenden VoIP-Verbindung zwischen zwei Teilnehmern initiiert.
-	\item ACK: ACK dient als "`positive"' Bestätigung mit der die Annahme eines ankommenden Anrufes bestätigt wird.
-	\item OPTIONS: Mit dieser Nachricht kann man die Fähigkeiten eines Teilnehmers befragen (\textit{Media Capabilities}), die bestimmen welche Arten von Medien empfangen werden können und welche Verfahren zur Kodierung dieser Medien unterstützt werden.
-	\item CANCEL: Mit CANCEL kann eine bereits initiierte VoIP-Verbindung abgebrochen und vorzeitig beendet werden. 
-	\item REGISTER: Mit REGISTER werden dem \textit{Registrar} Informationen über die Lokation des Teilnehmers mitgeteilt. 
+	\item \textbf{INVITE}: Mit INVITE initiiert ein IP-Telefon einen neuen Anruf. Eine INVITE Nachricht enthält die SIP-Adresse von beiden Teilnehmern, einen Grund(Subject) und dessen Priorität.
+	\item \textbf{BYE}: Mit BYE wird der Abbau der bestehenden VoIP-Verbindung zwischen zwei Teilnehmern initiiert.
+	\item \textbf{ACK}: ACK dient als "`positive"' Bestätigung mit der die Annahme eines ankommenden Anrufes bestätigt wird.
+	\item \textbf{OPTIONS}: Mit dieser Nachricht kann man die Fähigkeiten eines Teilnehmers befragen (\textit{Media Capabilities}), die bestimmen welche Arten von Medien empfangen werden können und welche Verfahren zur Kodierung dieser Medien unterstützt werden.
+	\item \textbf{CANCEL}: Mit CANCEL kann eine bereits initiierte VoIP-Verbindung abgebrochen und vorzeitig beendet werden. 
+	\item \textbf{REGISTER}: Mit REGISTER werden dem \textit{Registrar} Informationen über die Lokation des Teilnehmers mitgeteilt. 
 \end{itemize}
 
 Ausgewählte erweiterte Request-Typen, die in zusätzlichen RFCs (3428,3265) nach\-träg\-lich definiert wurden:
 
 \begin{itemize}
-	\item MESSAGE: Mit MESSAGE Nachrichten kann Inhalt in der Form von \textit{Multi\-media Internet Message Extensions}(MIME) Nachrichten über\-tragen werden.  MESSAGE-Nachrichten initiieren keinen SIP-Dialog und werden üblicherweise wie normale Kurz\-nachrichten verstanden. 
-	\item SUBSCRIBE, PUBLISH und NOTIFY: SIP kann verwendet werden, um bestimmte Ereignisse zu übermitteln. Hierfür sind die Nachrichten SUBSCRIBE, PUBLISH  und NOTIFY eingeführt worden. So kann z.B. die Anwesenheit eines Teilnehmers von weiteren Teilnehmern mit einer SUBSCRIBE-Nachricht abonniert werden. Geht dieser Teilnehmer online, so benachrichtigt er alle anderen Teilnehmer mit einer PUBLISH-Nachricht an den Presence-Server. Dieser sendet NOTIFY-Nachrichten an alle Abonnenten des Anwenders.  
+	\item \textbf{MESSAGE}: Mit MESSAGE Nachrichten kann Inhalt in der Form von \textit{Multi\-media Internet Message Extensions}(MIME) Nachrichten über\-tragen werden.  MESSAGE-Nachrichten initiieren keinen SIP-Dialog und werden üblicherweise wie normale Kurz\-nachrichten verstanden. 
+	\item \textbf{SUBSCRIBE, PUBLISH und NOTIFY}: SIP kann verwendet werden, um bestimmte Ereignisse zu übermitteln. Hierfür sind die Nachrichten SUBSCRIBE, PUBLISH  und NOTIFY eingeführt worden. So kann z.B. die Anwesenheit eines Teilnehmers von weiteren Teilnehmern mit einer SUBSCRIBE-Nachricht abonniert werden. Geht dieser Teilnehmer online, so benachrichtigt er alle anderen Teilnehmer mit einer PUBLISH-Nachricht an den Presence-Server. Dieser sendet NOTIFY-Nachrichten an alle Abonnenten des Anwenders.  
 \end{itemize}
 
 \subsubsection{Response-Typen}

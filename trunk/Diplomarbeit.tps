@@ -4,8 +4,8 @@ Version=2
 
 [SessionInfo]
 ActiveTab=0
-FrameCount=20
-ActiveFrame=5
+FrameCount=19
+ActiveFrame=16
 
 [Frame0]
 Columns=1
@@ -90,9 +90,9 @@ cxCur=751
 cxMin=10
 
 [Frame2_View0,0]
-Cursor.row=134
-Cursor.column=46
-TopSubLine=365
+Cursor.row=226
+Cursor.column=669
+TopSubLine=601
 
 [Frame3]
 Columns=1
@@ -119,9 +119,9 @@ cxCur=751
 cxMin=10
 
 [Frame3_View0,0]
-Cursor.row=7
-Cursor.column=0
-TopSubLine=11
+Cursor.row=82
+Cursor.column=239
+TopSubLine=183
 
 [Frame4]
 Columns=1
@@ -155,8 +155,8 @@ TopSubLine=0
 [Frame5]
 Columns=1
 Rows=1
-Flags=2
-ShowCmd=3
+Flags=0
+ShowCmd=1
 MinPos.x=-1
 MinPos.y=-1
 MaxPos.x=-4
@@ -169,17 +169,17 @@ Class=CLatexEdit
 Document=kapitel\kapitel_kommunikation.tex
 
 [Frame5_Row0]
-cyCur=432
+cyCur=346
 cyMin=10
 
 [Frame5_Col0]
-cxCur=986
+cxCur=751
 cxMin=10
 
 [Frame5_View0,0]
-Cursor.row=265
-Cursor.column=375
-TopSubLine=655
+Cursor.row=207
+Cursor.column=62
+TopSubLine=602
 
 [Frame6]
 Columns=1
@@ -293,7 +293,7 @@ cxCur=801
 cxMin=10
 
 [Frame9_View0,0]
-Cursor.row=195
+Cursor.row=198
 Cursor.column=0
 TopSubLine=487
 
@@ -322,9 +322,9 @@ cxCur=787
 cxMin=10
 
 [Frame10_View0,0]
-Cursor.row=411
-Cursor.column=335
-TopSubLine=802
+Cursor.row=176
+Cursor.column=0
+TopSubLine=360
 
 [Frame11]
 Columns=1
@@ -382,7 +382,7 @@ cxMin=10
 [Frame12_View0,0]
 Cursor.row=41
 Cursor.column=1
-TopSubLine=157
+TopSubLine=175
 
 [Frame13]
 Columns=1
@@ -438,9 +438,9 @@ cxCur=1000
 cxMin=10
 
 [Frame14_View0,0]
-Cursor.row=227
-Cursor.column=56
-TopSubLine=556
+Cursor.row=98
+Cursor.column=8
+TopSubLine=222
 
 [Frame15]
 Columns=1
@@ -474,8 +474,8 @@ TopSubLine=0
 [Frame16]
 Columns=1
 Rows=1
-Flags=0
-ShowCmd=1
+Flags=2
+ShowCmd=3
 MinPos.x=-1
 MinPos.y=-1
 MaxPos.x=-4
@@ -488,48 +488,19 @@ Class=CLatexEdit
 Document=kapitel\kapitel_benchmarking.tex
 
 [Frame16_Row0]
-cyCur=413
+cyCur=401
 cyMin=10
 
 [Frame16_Col0]
-cxCur=746
+cxCur=785
 cxMin=10
 
 [Frame16_View0,0]
-Cursor.row=136
-Cursor.column=71
-TopSubLine=232
+Cursor.row=18
+Cursor.column=21
+TopSubLine=6
 
 [Frame17]
-Columns=1
-Rows=1
-Flags=0
-ShowCmd=1
-MinPos.x=-1
-MinPos.y=-1
-MaxPos.x=-4
-MaxPos.y=-30
-NormalPos.left=0
-NormalPos.top=0
-NormalPos.right=748
-NormalPos.bottom=468
-Class=CLatexEdit
-Document=literatur\da.bib
-
-[Frame17_Row0]
-cyCur=413
-cyMin=10
-
-[Frame17_Col0]
-cxCur=719
-cxMin=10
-
-[Frame17_View0,0]
-Cursor.row=1209
-Cursor.column=0
-TopSubLine=1404
-
-[Frame18]
 Columns=1
 Rows=1
 Flags=0
@@ -545,20 +516,20 @@ NormalPos.bottom=458
 Class=CLatexEdit
 Document=kapitel\grafiken.tex
 
-[Frame18_Row0]
+[Frame17_Row0]
 cyCur=278
 cyMin=10
 
-[Frame18_Col0]
+[Frame17_Col0]
 cxCur=763
 cxMin=10
 
-[Frame18_View0,0]
+[Frame17_View0,0]
 Cursor.row=12
 Cursor.column=0
 TopSubLine=37
 
-[Frame19]
+[Frame18]
 Columns=1
 Rows=1
 Flags=0
@@ -574,16 +545,16 @@ NormalPos.bottom=337
 Class=CLatexEdit
 Document=kapitel\einleitung.tex
 
-[Frame19_Row0]
+[Frame18_Row0]
 cyCur=253
 cyMin=10
 
-[Frame19_Col0]
+[Frame18_Col0]
 cxCur=461
 cxMin=10
 
-[Frame19_View0,0]
-Cursor.row=30
-Cursor.column=381
-TopSubLine=210
+[Frame18_View0,0]
+Cursor.row=15
+Cursor.column=175
+TopSubLine=96
 

@@ -256,6 +256,7 @@ Grundsätztlich jedoch funktioniert das dedizierte Mischen besser als das End-Sys
 
 \subsection{Dezentrales Audiomixing}
 \subsubsection{SIP-Hybrid-Modell}
+\label{siphybrid}
 
 Das SIP-Hybrid-Modell nutzt die zentrale Komponente des Registrars, bei dem sich jeder Teilnehmer des Spiels zuerst anmeldet. Der Registrar verfügt so über eine komplette Liste aller Teilnehmer. Der Datenaustausch findet über den Proxy statt, der bei jeder Nachricht die Adresse des Empfängers bestimmt. Die Sprach\-kommunikation jedoch findet nicht über die zentrale Komponente statt, sondern direkt zwischen den einzelnen Spielern. Im einfachsten Fall wird der eigene Audiostrom an alle Teilnehmer des Spieles gesendet, und man selbst empfängt auch den Audiostrom aller Teilnehmer. In einer dh-hoc peer-to-peer Telekonferenz nutzt jeder Teilnehmer unicast, um seine Stimme an alle anderen Teilnehmer der Konferenz zu übertragen und um Stimmen aller Konferenzeilnehmer zu empfangen. In einer Konferenz mit $n$ Teilnehmern müssen so $n^2-n$ Audioströme ausgetauscht werden. 
 
