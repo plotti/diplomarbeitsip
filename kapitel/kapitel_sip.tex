@@ -232,7 +232,7 @@ Die bestehende RTP-Session kann von beiden Seiten beendet werden. Beendet Teilne
 \end{figure}
 \subsection{Registrierung der Lokation von Teilnehmern}
 
-\begin{figure}[htb]
+\begin{figure}[ht]
 	\centering
 		\includegraphics[width=1.00\textwidth]{grafiken/sipanrufmitproxy.eps}
 	\caption{Einsatz eines Proxy Servers mit Registrar}
@@ -288,7 +288,7 @@ SDP ist ein textbasiertes Format, in dem die Eigenschaft und der Wert in Textfor
 
 % Bild der SDP message
 % Bild vom SIP Message
-\begin{figure}[htbp]
+\begin{figure}[h]
 \lstset{frame=single}
 	\begin{lstlisting}[label={SDP-Message}]
 v=0
@@ -345,7 +345,7 @@ Die wichtigsten Besonderheiten von RTP sind:
 \subsection{Aufbau von RTP-Paketen}
 RTP übermittelt ein Echtzeitmedium als Folge von RTP-Paketen, die mit einem vorangestellten UDP-Header in den IP-Paketen transportiert werden. Jedes RTP-Paket enthält einen RTP-Header und die Nutzlast(\textit{Payload}). Die wesentlichen Angaben im RTP-Header sind:
 
-\begin{figure}[htbp]
+\begin{figure}[h]
 	\centering
 		\includegraphics[width=1.00\textwidth]{grafiken/rtppaket.eps}
 	\caption{Header eines RTP-Pakets}
@@ -411,7 +411,7 @@ Unter STUN versteht man ein einfaches Protokoll, das es erlaubt Anwendungen fest
 
 Die typische STUN-Konfiguration beinhaltet einen STUN-Client, der in einem privaten Netzwerk beheimatet ist. Dieses Netzwerk wird mit dem Internet durch einen NAT verbunden. Ein weiteres privates Netzwerk das ebenfalls durch einen NAT verbunden ist, beheimatet einen weiteren STUN-Client. Der STUN-Server befindet sich im öffentlichen Internet. Möchte nun eine Client-Anwendung ihre öffentliche IP Adresse und Port erfahren auf der sie Daten empfangen kann, sendet der STUN-Client in der Anwendung einen STUN "`\textit{Shared Secret Request}"' an den STUN-Server und dann einen \textit{Binding Request}. Dafür muss dem Client mindestens die Adresse eines öffentlichen STUN-Servers bekannt sein. Ein \textit{Binding Request} wird benutzt, um die Anwesenheit eines NATs festzustellen und um die öffentliche IP-Adresse und Port zu erfahren, die der NAT generiert hat. Vom STUN-Server wird ein solcher Request mit einer \textit{Binding Response} beantwortet, die genau diese Daten zurück an den Client schickt. Erhält nun ein STUN-Client eine \textit{Binding Response}, vergleicht er die IP-Adresse und den Port mit seiner lokalen IP-Adresse und Sendereport und kann so feststellen, ob es sich hinter einem NAT befindet. Nachdem beide Clients ihre öffentlichen IP-Adressen und Port-Paare kennen, sind sie in der Lage direkt miteinander zu kommunizieren. 
 
-\begin{figure}[htbp]
+\begin{figure}[h]
 	\centering
 		\includegraphics[width=0.60\textwidth]{grafiken/stun.eps}
 	\caption{Ein schematischer Ablauf von STUN}

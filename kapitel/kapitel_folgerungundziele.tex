@@ -1,4 +1,4 @@
-\chapter{Resultierende Probleme und Verbesserungsvorschläge}
+\chapter{Resultierende Probleme und Herausforderungen}
 
 Wie bereits die vorgestellten Studien der Text- und Sprachkommunikation im Kapitel 2 gezeigt haben, besteht an vielen Stellen noch ein großer Bedarf, die bisherigen Unzulänglichkeiten der Kommunikationsmedien zu beheben. In diesem Kapitel sollen die bisher dargestellten Grundlagen der Kommunikation genutzt werden, um  bisherige Probleme einzuordnen, gemeinsame Ursachen zu finden und Verbesserungsvorschläge abzuleiten. Der bisherige theoretische Ansatz soll helfen, neue Konzepte zu entwickeln und aus diesen sukzessive praktische Empfehlungen für eine bessere Sprach\-kommunikations\-lösung zu geben.
 
@@ -12,7 +12,7 @@ Im Viereck aus Spielerlebnis, Spielsimulation, erzählerischem Aspekt und der Spi
  %BILD der Einordnung eines Actionspiels
  %Bild der Einordnung eines Rollenspiels 
 
-\section{Methaphern zur Sprachübertragung}
+\section{Einsatz von Methaphern zur Sprachübertragung}
 Computerspiele ahmen oft die Realität nach, indem detailgetreue virtuelle Welten nachgebildet werden, in denen physikalische Gesetze gelten, die die Bewegung aller Spieler und Gegenstände dieser Welt beeinflussen. Man kann nicht durch Gegenstände hindurchsehen oder -gehen, unverwundbar sein oder unendlich viel Munition oder Geld besitzen. Diese prinzipiellen Grenzen des Möglichen machen oft genau den Spielspaß aus, da Spieler versuchen müssen unter einschränkenden Bedingungen ihren Vorteil auszuspielen. 
 
 Die Sprachkommunikation jedoch ist keinen solchen Einschränkungen unterlegen. Spieler können jederzeit, beliebig lang mit jedem Spieler kommunizieren. Sie können über die weitesten Entfernungen oder durch Wände hinweg sprechen, besitzen aber kein Telefon oder kein Fernsprechgerät. Sie können ihre Verbindung jederzeit aufrechterhalten, egal ob sie sich unter Wasser oder in einem Tunnel befinden. Unabhängig davon ob ihre Spielfigur tot oder lebendig ist können sie immer noch Mitspieler kontaktieren. 
@@ -26,8 +26,7 @@ Angelehnt an die bereits in Kapitel 2 vorgestellten Metaphern von Gibs und Wadle
 Die Metapher der Übertragung von Sprache durch die Luft bedeutet, dass Spieler sich nur dann hören können, falls sie sich in einer bestimmten Hörnähe zueinander befinden. Die Lautstärke und Qualität der Sprachübertragung hängt dabei von der Entfernung der Spieler voneinander ab. 
 
 \section{Mehrkanal-Modell}
-Viele der genannten Probleme basieren auf der Verwendung von genau einem Kanal zur Sprachübertragung, der aber von mehreren Sendern und Empfängern gleichzeitig genutzt
-wird. Diese Beobachtung stützt sich auf dem vorgestellten Kommunikationsmodell von Shannon und Weaver, welches eine gute Ausgangsgrundlage darstellt, um diesen Sachverhalt anschaulich zu verdeutlichen (siehe Abbildung \ref{fig:einkanalsystem}):
+Viele der genannten Probleme basieren auf der Verwendung von genau einem Kanal zur Sprachübertragung, der aber von mehreren Sendern und Empfängern gleichzeitig genutzt wird. Diese Beobachtung stützt sich auf dem vorgestellten Kommunikationsmodell von Shannon und Weaver, welches eine gute Ausgangsgrundlage darstellt, um diesen Sachverhalt anschaulich zu verdeutlichen (siehe Abbildung \ref{fig:einkanalsystem}):
 
 \begin{figure}[tbh]
 	\centering
@@ -100,7 +99,7 @@ Es ist prinzipiell zwar möglich, dass Teilnehmer auf dem Kanal ein persönliches 
 
 Der Verbesserungsvorschlag sieht vor, dass Teilnehmer sowohl persönliche Gespräche führen können, als auch an der Massenkommunikation teilnehmen können. Dies soll durch einen erweiterten Mischvorgang ermöglicht werden, der die Teilnahme an einem Kanal nicht binär definiert, sondern einen fließenden Übergang zwischen Kanälen ermöglicht.
 
-\section {Erweitertes Audio Mixing}
+\section {Erweitertes Audio-Mixing}
 Da bisher die Teilnahme an einer Konferenz binär gelöst wurde, waren Spieler entweder Teil einer solchen oder nicht. So ist das in einer Konferenz mit \textit{n} Teilnehmern ${p_{1},p_{2},...,p_{n}}$, mit Audioströmen ${V_{1}(t),V_{2}(t),...,V_{n}(t)}$, von einem Teilnehmer $i$ zu einer Zeit \textit{t} empfangene Signal $R_{i}(t)$ aller Teilnehmer $j$ definiert durch:
 
 \begin{align}
@@ -115,7 +114,7 @@ Der Verbesserungsvorschlag sieht vor den binären Teilnahmestatus durch eine stet
 
 In einer 3D Umgebung, in der die Spieler beliebige Positionen zueinander einnehmen können, wird vom Spieler ein Distanzvektor zu den übrigen Spielerpositionen berechnet und die Lautstärke des entsprechenden Audiostroms anhand diesem angepasst. Ein solcher Ansatz ermöglicht es für den Spieler eine eigene Konferenz zu erstellen, in der die Teilnehmer nur zu einem bestimmten Prozentsatz, repräsentiert durch ihre Lautstärke, anwesend sind. 
 
-Personen die sich in der Nähe befinden sind besser zu hören, als Personen die sich weit entfernt befinden. Die Kontrolle der Konferenz findet somit nicht direkt durch Tastatureingaben statt, sondern hängt implizit von der Position und Bewegung der Spieler zueinander ab. Um dieses Mixingkonzept zu realisieren, wird das Modell der Proxemik eingesetzt, das bereits im zweiten Kapitel vorgestellt wurde und dessen Implementierung in Kapitel 7 besprochen wird.
+Personen die sich in der Nähe befinden sind besser zu hören, als Personen die sich weit entfernt befinden. Die Kontrolle der Konferenz findet somit nicht direkt durch Tastatureingaben statt, sondern hängt implizit von der Position und Bewegung der Spieler zueinander ab. Um dieses Mixingkonzept zu realisieren, wird das Modell der Proxemik eingesetzt, das bereits im zweiten Kapitel vorgestellt wurde.
 
 %\section{Hohe Mediarichness}
 %Wie Studien der Texkommunikation gezeigt haben, besteht ein großes Interesse nach einem Medium für Kommunikation in Spielen, das eine ausreichend hohe Mediarichness besitzt. 
@@ -144,8 +143,6 @@ Personen die sich in der Nähe befinden sind besser zu hören, als Personen die si
 %			\bottomrule
 %		\end{tabular}
 %\end{table}
-
-
 %Bild von Schall in Luft.
 
 \section{Proxemik als Steuerung von Konferenzen}
