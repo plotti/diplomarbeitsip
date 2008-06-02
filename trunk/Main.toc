@@ -9,7 +9,7 @@
 \contentsline {section}{\numberline {1.1}Virtuelle Welten}{1}
 \contentsline {section}{\numberline {1.2}Motivation}{2}
 \contentsline {section}{\numberline {1.3}Marktrelevanz}{4}
-\contentsline {section}{\numberline {1.4}Ziel der Diplomarbeit}{4}
+\contentsline {section}{\numberline {1.4}Ziel der Diplomarbeit}{5}
 \contentsline {section}{\numberline {1.5}Aufbau der Arbeit}{5}
 \contentsline {chapter}{\numberline {2}Hintergr\"unde und Grundlagen}{7}
 \contentsline {section}{\numberline {2.1}Kommunikation}{7}
@@ -27,18 +27,18 @@
 \contentsline {subsubsection}{Vorteile der Textkommunikation}{17}
 \contentsline {subsection}{\numberline {2.2.3}Nonverbale Kommunikation}{17}
 \contentsline {subsubsection}{Proxemik in der virtuellen Welt}{18}
-\contentsline {subsection}{\numberline {2.2.4}Sprachkommunikation}{18}
+\contentsline {subsection}{\numberline {2.2.4}Sprachkommunikation}{19}
 \contentsline {subsubsection}{Reale Sprachsituation}{19}
 \contentsline {subsubsection}{\"Ubertragene Sprache}{20}
 \contentsline {subsubsection}{Wer h\"ort mich? Wen h\"ore ich?}{20}
 \contentsline {subsubsection}{Keine Zuordnung zwischen Sprache und Avataren}{21}
-\contentsline {subsubsection}{Metaphern der Sprach\"ubertragung}{21}
+\contentsline {subsubsection}{Metaphern der Sprach\"ubertragung}{22}
 \contentsline {chapter}{\numberline {3}Resultierende Probleme und Verbesserungsvorschl\"age}{23}
 \contentsline {section}{\numberline {3.1}Art des Spieleprototyps}{23}
 \contentsline {section}{\numberline {3.2}Methaphern zur Sprach\"ubertragung}{24}
 \contentsline {section}{\numberline {3.3}Mehrkanal-Modell}{25}
 \contentsline {section}{\numberline {3.4}Gleichzeitige interpersonelle und Massenkommunikation}{27}
-\contentsline {section}{\numberline {3.5}Erweitertes Audio Mixing}{28}
+\contentsline {section}{\numberline {3.5}Erweitertes Audio Mixing}{29}
 \contentsline {section}{\numberline {3.6}Proxemik als Steuerung von Konferenzen}{29}
 \contentsline {chapter}{\numberline {4}VoIP Grundlagen}{32}
 \contentsline {section}{\numberline {4.1}Protokolle zur Echtzeitkommunikation}{32}
@@ -86,7 +86,7 @@
 \contentsline {subsubsection}{Korrelation}{58}
 \contentsline {subsection}{\numberline {6.1.1}Peer-to-Peer}{58}
 \contentsline {subsection}{\numberline {6.1.2}Client-Server}{59}
-\contentsline {subsubsection}{Audio-Proxy}{61}
+\contentsline {subsubsection}{Audio-Proxy}{60}
 \contentsline {subsubsection}{Verteilte Audioserver}{62}
 \contentsline {subsection}{\numberline {6.1.3}Hybrid}{63}
 \contentsline {section}{\numberline {6.2}Architekturen mit SIP Komponenten}{63}
@@ -125,13 +125,13 @@
 \contentsline {section}{\numberline {7.4}3D-Spielewelt mit Irrlicht und Irrklang}{84}
 \contentsline {subsection}{\numberline {7.4.1}Irrlicht}{84}
 \contentsline {subsubsection}{Initialisierung}{84}
-\contentsline {subsubsection}{Level}{84}
+\contentsline {subsubsection}{Level}{85}
 \contentsline {subsubsection}{Steuerung}{85}
 \contentsline {subsubsection}{Radar}{86}
 \contentsline {subsection}{\numberline {7.4.2}Irrklang}{86}
 \contentsline {subsubsection}{Lokale Audioszene}{86}
 \contentsline {section}{\numberline {7.5}PjSIP-VoIP-Instanz}{86}
-\contentsline {subsection}{\numberline {7.5.1}Signalisierung mit PJSUA}{86}
+\contentsline {subsection}{\numberline {7.5.1}Signalisierung mit PJSUA}{87}
 \contentsline {subsection}{\numberline {7.5.2}Medienfluss}{87}
 \contentsline {section}{\numberline {7.6}Zusammenarbeit von Irrlicht und VoIP}{87}
 \contentsline {subsection}{\numberline {7.6.1}Aktualisierung der VoIP Instanz}{87}

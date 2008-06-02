@@ -28,7 +28,7 @@
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {6.1}{\ignorespaces Peer-to-Peer-Architektur mit direkten Audioverbindungen der Spieler untereinander in den entsprechenden Spielezonen}}{59}
 \contentsline {figure}{\numberline {6.2}{\ignorespaces Client Server Architektur mit zentralem Mischserver in Nordamerika}}{60}
-\contentsline {figure}{\numberline {6.3}{\ignorespaces Eine Proxy-Architektur. In schwarz ist die Verbindung von Spieler 3 mit Spieler 7 dargestellt.}}{62}
+\contentsline {figure}{\numberline {6.3}{\ignorespaces Eine Proxy-Architektur. In schwarz ist die Verbindung von Spieler 3 mit Spieler 7 dargestellt.}}{61}
 \contentsline {figure}{\numberline {6.4}{\ignorespaces Verteilte Server S1...S4. Die Verbindungen der Spielewelt S3 werden in schwarz dargestellt. }}{63}
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {7.1}{\ignorespaces \"Ubersicht der Komponenten des PjSIP-Protokollstacks}}{83}
@@ -42,7 +42,7 @@
 \contentsline {figure}{\numberline {8.1}{\ignorespaces Registrierung eines neuen Knotens bei Knoten C}}{110}
 \contentsline {figure}{\numberline {8.2}{\ignorespaces Registrierung des Benutzers}}{110}
 \contentsline {figure}{\numberline {8.3}{\ignorespaces Ein schematischer Ablauf eines Anrufs bei P2P-SIP}}{111}
-\contentsline {figure}{\numberline {8.4}{\ignorespaces Verschiede Registrar Variationen}}{113}
+\contentsline {figure}{\numberline {8.4}{\ignorespaces Verschiede Registrar Variationen}}{112}
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {9.1}{\ignorespaces Audioverbindungen im Full-Mesh-Ansatz}}{115}
 \contentsline {figure}{\numberline {9.2}{\ignorespaces Bandbreitenverbrauch beim Full-Mesh-Ansatz}}{116}
