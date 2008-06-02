@@ -32,7 +32,11 @@ In der Forschung werden beide Architekturen bezüglich der oben genannten Aspekte
 
 
 \section{Client - Server in Netzwerkspielen}
-Die Client-Server-Architektur für Netzwerk-Spiele war über Jahrzehnte die dominierende Architektur, die in der Lage war, zwischen 2 und 64 Spielern gleichzeitig zu unterstützen \cite{singhal99}. Die Mehrheit kommerzieller Mehrspieler-Spiele benutzt heutzutage eine zentralisierte Architektur. Diese wird auch in Zukunft die üblichste Architektur für Spiele mit einer kleinen Spieleranzahl bleiben, ist aber nicht in der Lage mehrere tausend gleichzeitige Spieler zu unterstützen. Obwohl einzelne Server dem System hinzugefügt werden können, steigt die Netzwerklast des Systems polynomiell mit der Zunahme von Spielern auf dem System \cite{lau06} an.  
+Die Client-Server-Architektur für Netzwerk-Spiele war über Jahrzehnte die dominierende Architektur, die in der Lage war, zwischen 2 und 64 Spielern gleichzeitig zu unterstützen \cite{singhal99}. 
+
+In einem Client-Server Modell ist der Server für die Verwaltung des Spielstandes verantwortlich. Die Clients auf Spielerseite werden genutzt, um den Spielstand anzuzeigen und mit dem Server zu kommunizieren. Jedes Ereignis auf dem Client wird an den Spieleserver übertragen, der entsprechende Spieler über dieses benachrichtigt. Der Spieleserver verwaltet auch den Beitritt und das Verlassen von Spielern. 
+
+Die Mehrheit kommerzieller Mehrspieler-Spiele benutzt heutzutage eine zentralisierte Architektur, da sie viele Vorteile gegenüber anderen Architekturen bietet. Diese wird auch in Zukunft die üblichste Architektur für Spiele mit einer kleinen Spieleranzahl bleiben, ist aber nicht in der Lage mehrere tausend gleichzeitige Spieler zu unterstützen. Obwohl einzelne Server dem System hinzugefügt werden können, steigt die Netzwerklast des Systems polynomiell mit der Zunahme von Spielern auf dem System \cite{lau06} an.  
 
 Da die Tendenz zum Spiel als Kommunikationsplattform geht, bei der mehrere Millionen Spieler gegeneinander antreten, aber zentralisierte Systeme nicht über mehrere zehntausend Spieler skalierbar sind, verfehlen sie laut Marktanalysten ihr eigentliches Marktpotenzial \cite{thor03}. 
 
@@ -96,12 +100,13 @@ Eine einfache Möglichkeit könnte darin bestehen, dass der Registrar beim Anmelde
 Hier zeigt sich auch der Vorteil einer zentralen Instanz, bei der der Lokationsdienst  eine aktuelle Liste aller Spieler besitzt und der Präsenzdienst auch deren Status kennt. Zusätzlich können an dieser zentralen Stelle die Konsistenz, Persistenz,Rechtemanagement und andere für ein tatsächliches Spiel essentiellen Aufgaben durchgeführt werden. Diese wären in einem Peer-to-Peer System nicht so einfach zu realisieren.
 
 \subsubsection {Präsenzdienst}
-//TODO: SUBSCRIBE, PUBLISH NOTIFY -- DREI Nachrichten und nicht 2
 Präsenz ist ein Begriff, der im Instant Messaging verwendet wird. Er bezieht sich darauf, dass Benutzer feststellen können, ob andere Benutzer mit dem Dienst verbunden sind. Falls dies der Fall ist, kann eine Benachrichtigung erfolgen, die anzeigt, ob diese Benutzer \textit{online} oder \textit{offline} sind. 
 
 Der Präsenzdienst wird im Prototypen deshalb eingesetzt, damit Spieler feststellen können welche andere Teilnehmer sich im aktuellen Spiel befinden und mit Informationsupdates versorgt werden müssen. 
 
-Zu diesem Zweck wird die \textit{SUBSCRIBE/NOTIFY} Funktion von SIP benutzt, die bereits in Kapitel 4 beschrieben wurde. Der SIMPLE-Präsenzdienst nutzt genau diese zwei Nachrichtentypen und erlaubt es so Teilnehmern ihre eigene Präsenz zu signalisieren (\textit{NOTIFY}) und Präsenzen anderer Teilnehmer zu abonnieren (\textit{SUBSCRIBE}). Anhand dieser Präsenzinformation werden nur Nachrichten nur an Spieler versandt, die eine Teilnahme am Spiel signalisiert haben. 
+Publish- und Subscribe-Mechanismen sind in Mehrspieler-Computerspielen ein beliebtes Schema, bei bei dem Clients bei einem Spieleserver oder auch einzelnen Clients Ereignisse abonnieren \cite{mercury02}. Die Notify Nachrichten werden bentutzt, um den Spielestatus zu übertragen, der bei den Clients später angezeigt wird.
+
+Zu diesem Zweck wird die \textit{SUBSCRIBE/NOTIFY} Funktion von SIP benutzt, die bereits in Kapitel 4 beschrieben wurde. Der SIMPLE-Präsenzdienst nutzt genau diese Nachrichtentypen und erlaubt es so Teilnehmern, ihre eigene Präsenz zu signalisieren (\textit{NOTIFY}) und Präsenzen anderer Teilnehmer zu abonnieren (\textit{SUBSCRIBE}). Anhand dieser Präsenzinformation werden nur Nachrichten nur an Spieler versandt, die eine Teilnahme am Spiel signalisiert haben. 
 
 Dazu wurden in der Implementierung drei einfache Präsenzstati definiert:
 \begin{itemize}
@@ -177,19 +182,19 @@ Hybride Systeme benutzen einen zentralen Server, um Knoten zu lokalisieren. Der 
 Beide Systeme sind sehr gute Beispiele dafür, dass der hybride Ansatz funktioniert und sehr gut skaliert \cite{torrent06}. Sie haben jedoch den Nachteil, dass sie im Gegensatz zu komplett dezentralisierten Systemen einen \textit{Single Point of Failure} besitzen.  Um einen \textit{Single Point of Failure} zu vermeiden, werden seit einiger Zeit im Bittorrent Protokoll sog. \textit{trackerlose Torrents}\footnote{BitTorrent Draft, Version 22.03.2008, http://www.bittorrent.com/trackerless.html} auf der Basis von Kademila \cite{kademilla02} einsetzt. Einen ähnlichen Ansatz, bietet der Peer-to-Peer SIP Ansatz, der die Abstraktion von zentralisierten Lokationsdiensten beibehält, aber diese Instanz verteilt realisiert. Dieser Ansatz soll nun im folgenden Abschnitt vorgestellt werden, da er aufgrund seiner generischen Eigenschaften auch für P2P-Spiele Einsetzbar ist. 
 
 \section{Peer-to-Peer-SIP}
-Peer-to-Peer-SIP ist ein gutes Beispiel für einen strukturierten Overlay, der auch die Möglichkeit bietet unstrukturierte Anfragen zu realisieren. Er bietet nicht nur eine hohe Abstraktionsstufe sondern kann auf bestehenden Standards aufbauen. Somit bietet er eine gute Grundlage um als Netzwerkschicht für P2P Spiele zu fungieren. 
+Peer-to-Peer-SIP ist ein gutes Beispiel für einen strukturierten Overlay, der auch die Möglichkeit bietet unstrukturierte Anfragen zu realisieren. Er bietet nicht nur eine hohe Abstraktionsstufe, sondern kann auf bestehenden Standards aufbauen. Somit bietet er eine gute Grundlage um als Netzwerkschicht für P2P Spiele zu fungieren. 
 
 \subsection{Motivation für Peer-to-Peer-SIP}
 Da sich SIP bereits als Standard etabliert hat und viele Eigenschaften besitzt, die es für einen reinen Peer-to-Peer-Betrieb attraktiv machen, bestehen seit dem Jahr 2005 Bemühungen das Hybride SIP Protokoll komplett zu einem reinen Peer-to-Peer Protokoll zu erweitern. Das Interesse an einem solchen Ansatz ist sehr hoch, wie bereits dutzende Entwürfe\cite{bryan07}, die bei der IETF eingegangen sind, zeigen. 
 
-Der große Vorteil gegenüber anderen Systemen liegt in der Kombination von bereits etablierten Standards, wie dem SIP und SIMPLE Protokoll, mit Eigenschaften von Distributed Hash Tables. Da bisher in P2P-Systemen noch keine Standards existieren bietet sich die Verwendung von SIP für diesen Zweck an, da es als ausgereift und etabliert gilt. Zusätzlich werden zunehmend Endgeräte wie Firewalls oder NAT-Router mit Application Layer Gateways (ALG ausgestattet. Dies sind zwischengeschaltete SIP-Proxys, die für reibungslosen Transfer der SIP-Signalisierung und -Medienströme sorgen.
+Der große Vorteil gegenüber anderen Systemen liegt in der Kombination von bereits etablierten Standards, wie dem SIP und SIMPLE Protokoll, mit Eigenschaften von Distributed Hash Tables. Da bisher in P2P-Systemen noch keine Standards existieren bietet sich die Verwendung von SIP für diesen Zweck an, da es als ausgereift und etabliert gilt. Zusätzlich werden zunehmend Endgeräte wie Firewalls oder NAT-Router mit Application Layer Gateways (ALG) ausgestattet. Dies sind zwischengeschaltete SIP-Proxys, die für reibungslosen Transfer der SIP-Signalisierung und -Medienströme sorgen.
 
 SIP wurde konventionell so gestaltet, dass so viel Funktionalität wie möglich in den Endpunkten enthalten ist. Alle Nachrichten, die für den Aufbau eines Telefongesprächs notwendig sind, werden bereits nur zwischen den Clients ausgetauscht. Das Aushandeln der Audiocodecs, der Fähigkeiten der einzelnen User Agents findet ebenfalls direkt zwischen den Endpunkten statt. Ist ein Telefongespräch etabliert, so fließen die Daten direkt zwischen den Teilnehmern. 
 
 Der einzige zentralisierte Baustein in SIP besteht aus der Lokation der Teilnehmer, die vom Registrar vorgenommen wird. In einer gewöhnlichen SIP Konfiguration meldet sich jeder Endpunkt bei einem Registrar an, der eine Zuordnung zwischen dem Namen des Teilnehmers und seiner IP Adresse herstellt. Möchte ein Benutzer einen anderen anrufen, so kontaktiert er zunächst den Registrar, um die Zieladresse herauszufinden.
 
 \subsection{Funktionsweise}
-Es existieren bisher 2 Varianten um ein P2P SIP Umzusetzen. Die vorgestellte Variante nutzt einen Chord-DHT Ring um Knoten anzuordnen. Alternativ zum vorgestellten Verfahren bestehen auch Bemühungen beim Peer-to-Peer-SIP das CAN-DHT-Verfahren \cite{pundkar07} einzusetzen. Hier wird die Verteilung der Knoten auf in einem zweidimensionalen Raum abgebildet, was auch der Verteilung der Spieler in einer virtuellen Welt entsprechen würde.
+Es existieren bisher 2 Varianten um ein P2P SIP Umzusetzen. Die vorgestellte Variante nutzt einen Chord-DHT Ring um Knoten anzuordnen. Alternativ zum vorgestellten Verfahren bestehen auch Bemühungen beim Peer-to-Peer-SIP das CAN-DHT-Verfahren \cite{pundkar07} einzusetzen. Hier wird die Verteilung der Knoten auf in einem zweidimensionalen-Raum abgebildet, was auch der Verteilung der Spieler in einer virtuellen Welt entsprechen würde.
 
 Alle Varianten haben gemeinsam, dass die einzige zentrale Komponente des Systems entfernt wird und dezentral zwischen den einzelnen Teilnehmern verteilt mit \textit{DHT} realisiert wird und jeder Knoten einen Teil der Funktionalität übernimmt. 
 
@@ -244,12 +249,12 @@ Es bestehen drei alternative Architektur Variationen beim Einsatz mit DHT zur Ve
 
 Der DHT kann auf eine dedizierte Server Farm limitiert werden. Für die Registrierung verbinden die Teilnehmer sich zu einem der Server. Wie bereits geschildert implementieren die Server selbst eine skalierbare Datenstruktur wie DHT, um den entsprechenden Eintrag zu finden. Der Teilnehmer muss jedoch mindestens einen Server finden und zu ihm verbinden. Diese Option beinhaltet keine Modifizierung der Clients, bietet aber eine zuverlässige Server Farm Architektur. 
 
-\begin{figure}
-	\centering
-		\includegraphics[width=1.00\textwidth]{grafiken/3in1registrar.eps}
-	\caption{Verschiede Registrar Variationen}
-	\label{fig:3in1registrar}
-\end{figure}
+%\begin{figure}
+%	\centering
+%		\includegraphics[width=1.00\textwidth]{grafiken/3in1registrar.eps}
+%	\caption{Verschiede Registrar Variationen}
+%	\label{fig:3in1registrar}
+%\end{figure}
 
 %\begin{figure}[tbh]
 %	\centering
