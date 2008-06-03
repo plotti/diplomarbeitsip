@@ -1,4 +1,4 @@
-\begin{thebibliography}{88}
+\begin{thebibliography}{84}
 % this bibliography was produced with the style dinat.bst v2.5
 \makeatletter
 \newcommand{\dinatlabel}[1]%
@@ -203,12 +203,6 @@
 \newblock New York, NY, USA~: ACM, 2005, S.~303--306. --
 \newblock ISBN 1-59593-044-2
 
-\bibitem[Hall und Knapp(2005)]{hall05}
-\dinatlabel{Hall und Knapp 2005} \textsc{Hall}, Judith~A.~; \textsc{Knapp},
-  Mark~L.:
-\newblock \emph{Nonverbal Communication in Human Interaction}.
-\newblock Wadsworth Publishing; 6 edition, 2005
-
 \bibitem[Halloran~J.(2003)]{halloran03}
 \dinatlabel{Halloran~J. 2003} \textsc{Halloran~J.}, Fitzpatrick~G.:
 \newblock From text to talk: multiplayer games and voiceover IP.
@@ -335,13 +329,6 @@ dy\_2007}
 \newblock In: \emph{Gamasutra}
 \newblock (2003)
 
-\bibitem[Manninen und Kujanp‰‰(2003)]{manninen03}
-\dinatlabel{Manninen und Kujanp‰‰ 2003} \textsc{Manninen}, Tony~;
-  \textsc{Kujanp‰‰}, Tomi:
-\newblock Supporting visual elements of non-verbal communication in computer
-  game avatars.
-\newblock In: \emph{DIGRA Conf.}, 2003
-
 \bibitem[Maymounkov und Mazieres(2002)]{kademilla02}
 \dinatlabel{Maymounkov und Mazieres 2002} \textsc{Maymounkov}, P.~;
   \textsc{Mazieres}, D.:
@@ -432,13 +419,6 @@ dy\_2007}
   K.~; \textsc{Sachenbacherand}, K.~; \textsc{H.Engelberger}:
 \newblock \emph{Telekooperation - Verteilte- Arbeits und Organisationsformen.}
 \newblock Springer, 1998
-
-\bibitem[Reid(1995)]{reid95}
-\dinatlabel{Reid 1995} \textsc{Reid}, E.:
-\newblock Virtual worlds: Culture and imagination.
-\newblock In: \emph{Cybersociety: Computer-mediated communication and
-  community}
-\newblock 24 (1995), S.~164--83
 
 \bibitem[Rice(1992)]{rice92}
 \dinatlabel{Rice 1992} \textsc{Rice}, R.:
@@ -662,13 +642,6 @@ dy\_2007}
   on Network and system support for games}.
 \newblock New York, NY, USA~: ACM, 2007, S.~13--18. --
 \newblock ISBN 978-0-9804460-0-5
-
-\bibitem[Turkle(1995)]{turkle95}
-\dinatlabel{Turkle 1995} \textsc{Turkle}, S.~; \textsc{Touchstone} (Hrsg.):
-\newblock \emph{Life on the Screen: Identity in the Age of the Internet}.
-  Bd.~3.
-\newblock Simon \& Schuster, 1995
-\newblock ISSN 978-0684833484
 
 \bibitem[Walther(2002)]{walther02}
 \dinatlabel{Walther 2002} \textsc{Walther}, J.B.:

@@ -1,38 +1,23 @@
-\chapter{Hintergründe und Grundlagen}
+\chapter{Grundlagen der Kommunikation}
 
-Ein großer Anteil an Forschung geht zurück bis ins 20ste Jahrhundert und befasst sich damit, warum Menschen ein bestimmtes Kommunikationsmedium bevorzugen und welchen Einfluss diese Wahl auf ihre soziale Interaktion hat. Dieses Kapitel soll nicht nur wichtige Grundlagen liefern, die für ein Studium der bestehenden Kommunikationsmedien in Spielen notwendig sind, sondern auch eine Analyse der bestehenden Kommunikationsmedien in Spielen vornehmen, um zu zeigen warum die Sprackommunikation in Computerspielen wichtig ist. Vor allem für den späteren Entwurf einer Sprachkommunikation sollen hier medienpsychologische Konzepte vorgestellt werden, die später direkten Einfluss auf ihre Umsetzung haben werden. 
-
-%\begin{figure}[tbh]
-%	\centering
-%	\caption{Eine Übersicht über die behandelten Felder der Kommunikation in ihrem Kontext für die Telekooperation in Spielen}
-%		\includegraphics[width=.70\textwidth]{grafiken/kommunikationoverview.eps}
-%	\label{fig:kommunikationoverview}
-%\end{figure}
+Ein großer Anteil an Forschung geht zurück bis ins 20ste Jahrhundert und befasst sich damit, warum Menschen ein bestimmtes Kommunikationsmedium bevorzugen und welchen Einfluss diese Wahl auf ihre soziale Interaktion hat. Dieses Kapitel liefert Grundlagen, die für ein Analyse der bisherigen Probleme der Sprachkommunikation in Computerspielen notwendig sind. 
 
 \section{Kommunikation}
 
 Das Wort "`Kommunikation"' kann sehr umfangreich definiert werden. Die Ansätze unterscheiden sich grundsätzlich anhand der Frage, ob die Teilnehmer einer Kommunikation ausschließlich als Menschen und Lebewesen angesehen werden oder ob auch technische Geräte (z.B. Computer) daran beteiligt sind. 
 
 \subsection{Kommunikationsmodell}
-Das allgemeine Modell von Shannon und Weaver  \citep{shannon48}, den Begründern der Informationstheorie, besteht aus den folgenden Komponenten:
+\label{kommunikationsmodell}
+Das allgemeine Kommunikationsmodell \citep{shannon48} besteht aus einer Informatonsquelle, die eine Nachricht an ein Ziel sendet. Dazu wird diese an den Transmitter übermittelt, der daraus ein Signal generiert. Dieses wird dann über einen Kanal übertragen und von einem Empfänger zurück in eine Nachricht transformiert. In einer erweiterten Version \citep{schramm54} erlaubt es dem Empfänger ein Feedback an die Informationsquelle. Generell gilt: Je störungsfreierer der Kommunikationskanal und je kürzer die Antwortzeit, desto natürlicher und erfolgreicher ist die Kommunikation.
 
 \begin{figure}[tbh]
 	\centering
-		\includegraphics[width=\textwidth]{grafiken/kommunikationsmodell}
-	\caption{Kommunikationsmodell nach Shannon und Weaver}
+		\includegraphics[width=\textwidth]{grafiken/kommunikationsmodell-schramm-weaver.eps}
+	\caption{Kommunikationsmodell nach Shannon, Weaver und Schramm}
 	\label{fig:kommunikationsmodell}
 \end{figure}
 
-\begin{itemize}
-	\item Einer Informationsquelle, die eine Nachricht produziert
-	\item Einem Transmitter, der aus der Nachricht ein Signal generiert, das durch einen Kanal geschickt werden kann
-	\item Einem Kanal, der das Medium bildet über welches das Signal übertragen wird 
-	\item Einer Störquelle, die die Übertragung stört
-	\item Einem Empfänger, der das Signal wieder zu einer Nachricht transformiert 
-	\item Einem Ziel, einer Person oder Maschine, an die die Nachricht gesendet wurde
-\end{itemize}
-
-Obwohl es ursprünglich nicht das Ziel dieses Modells war, menschliche Kommunikation zu beschreiben, sondern die Datenübertragung mithilfe technischer Faktoren zu optimieren, ist diese ursprüngliche Problemstellung passend, da sich diese Arbeit auch mit den Problemen der Übertragung von (Sprach-)Nachrichten beschäftigen wird. Dabei sind die folgenden Problemkategorien besonders interessant:
+Dabei sind die folgenden Problemkategorien besonders interessant:
 
 \begin{itemize}
 	\item \textbf{Technisches Problem}: Wie genau können die Symbole der Kommunikation übertragen werden? 
@@ -40,16 +25,18 @@ Obwohl es ursprünglich nicht das Ziel dieses Modells war, menschliche Kommunikat
 	\item \textbf{Effektivitäts-Problem}: Wie effektiv wird die empfangene Nachricht in eine gewünschte Handlung umgesetzt?
 \end{itemize}
 
-Das technische Problem befasst sich mit der Genauigkeit der übertragenen Symbole vom Sender zum Empfänger eines Signals wie Schrift oder Sprache. Das semantische Problem setzt sich mit der Interpretation der Bedeutung durch den Empfänger im Vergleich zur ursprünglichen Interpretation. Bei der einfachsten Nachricht kann eine Veränderung des Inhaltes oder der Bedeutung entstehen, falls die Semantik nicht eingehalten wird. Das Effektivitäts-Problem befasst sich mit der Aussicht, dass der Empfänger tatsächlich das gewünschte Verhalten einnimmt. 
+Analog diesem Modell wäre z.B. die Textkommunikation ein Kommunikationsmedium, das wenige technische Probleme besitzt, da diese durch die verlässliche zugrunde liegende Netzwerkschicht minimiert werden. Wie jedoch Kapitel 1 gezeigt hat ist durch den hohen Freiheitsgrad, die Benutzung von Abkürzungen dieses Medium gerade für semantische Probleme anfällig. Obwohl sie helfen die Feedbackzeit zu reduzieren und die Kommunikation natürlicher erscheinen, ist der Preis eine Reduzierung der Semantik und Grammatik. Dies führt wiederum dazu, dass Aufgaben nicht mehr so effektiv erklärt und ausgeführt werden können wie im echten Leben. 
 
-\begin{figure}[tbh]
-	\centering
-		\includegraphics[width=\textwidth]{grafiken/kommunikationsmodell-schramm2.eps}
-	\caption{Kommunikationsmodell nach Schramm}
-	\label{fig:kommunikationsmodell-schramm}
-\end{figure}
+%Das technische Problem befasst sich mit der Genauigkeit der übertragenen Symbole vom Sender zum Empfänger eines Signals wie Schrift oder Sprache. Das semantische Problem setzt sich mit der Interpretation der Bedeutung durch den Empfänger im Vergleich zur ursprünglichen Interpretation. Bei der einfachsten Nachricht kann eine Veränderung des Inhaltes oder der Bedeutung entstehen, falls die Semantik nicht eingehalten wird. Das Effektivitäts-Problem befasst sich mit der Aussicht, dass der Empfänger tatsächlich das gewünschte Verhalten einnimmt. 
 
-Das bestehende Modell wurde von Willbur Schramm \citep{schramm54} unter anderem um das Feedback ergänzt, das er als unentbehrlich bei der Kommunikation betrachtete. Dabei ist eine kurze Antwortzeit und somit ein schnelles Feedback essentiell für eine erfolgreiche Kommunikation. So unterscheiden sich z.B. die schriftliche und verbale Kommunikation bei ihrer Antwortzeit, die bei der einen im Millisekunden-Bereich liegen kann und bei der anderen durchaus über Stunden oder Tage betragen kann. Generell gilt: Je kürzer die Antwortzeit, desto natürlicher erscheint eine Kommunikation.
+%\begin{figure}[tbh]
+%	\centering
+%		\includegraphics[width=\textwidth]{grafiken/kommunikationsmodell-schramm2.eps}
+%	\caption{Kommunikationsmodell nach Schramm}
+%	\label{fig:kommunikationsmodell-schramm}
+%\end{figure}
+
+%Das bestehende Modell wurde von Willbur Schramm \citep{schramm54} unter anderem um das Feedback ergänzt, das er als unentbehrlich bei der Kommunikation betrachtete. Dabei ist eine kurze Antwortzeit und somit ein schnelles Feedback essentiell für eine erfolgreiche Kommunikation. So unterscheiden sich z.B. die schriftliche und verbale Kommunikation bei ihrer Antwortzeit, die bei der einen im Millisekunden-Bereich liegen kann und bei der anderen durchaus über Stunden oder Tage betragen kann. 
 
 %Für Schramm gibt es nicht nur das Feedback durch eine Antwort oder durch Signale wie Kopfnicken, sondern es gibt auch eine Art von Eigenfeedback als Antwort zur selbst gesendeten Nachricht.
 
@@ -62,11 +49,14 @@ Die interpersonelle Kommunikation beinhaltet mindestens zwei Kommunizierende, di
 Bei einer Massenkommunikation kommuniziert ein Sender an viele verschiedene Emp"-fänger. Damit ist eine öffentliche, indirekte, einseitige, technische Verbreitung von strukturell und funktional ausdifferenzierter Kommunikation an ein großes Publikum zu verstehen \citep{maletzke98}. Im Alltag findet eine Massenkommunikation bei Veranstaltungen statt, in denen ein Redner vor einem Publikum spricht. Das Fernsehen und Radio können auch als Massenkommunikation verstanden werden. 
 
 \subsection{Reichtum: Media-Richness-Theorie}
-Im Bereich der Sozialwissenschaften spricht man von Interaktivität, wenn zwei Individuen miteinander in Kontakt treten und sich in ihren wechselseitigen Handlungen gegenseitig beeinflussen. Interaktivität oder auch die Wechselwirkung von Handlungen unterschiedlicher Personen kann unmittelbar zwischen Personen oder vermittelt durch Medien wie Telefon, E-Mail oder Chat geschehen.
+\label{mediarichness}
+Im Bereich der Sozialwissenschaften spricht man von Interaktivität, wenn zwei Individuen miteinander in Kontakt treten und sich in ihren wechselseitigen Handlungen gegenseitig beeinflussen. Interaktivität oder auch die Wechselwirkung von Handlungen unterschiedlicher Personen kann unmittelbar zwischen Personen oder vermittelt durch Medien wie Telefon, E-Mail oder Chat geschehen.Interaktivität erhöht die Qualität mit der wir das Kommunizierte verstehen \citep{jensen98}. 
 
-Interaktivität erhöht die Qualität mit der wir das Kommunizierte verstehen \citep{jensen98}. Liest man Texte, deren Sachverhalt nicht mit Grafiken weiter veranschaulicht wird, kann es vorkommen, dass man Teile nicht versteht. Lässt man sich dagegen den Stoff mit Hilfe von geeigneten Medien von einem Experten vortragen und kann z.B. durch Fragen interaktiv den Stoff diskutieren, so entwickelt man oft ein besseres Verständnis der Materie. 
+Eng verbunden mit der Interaktivität ist die Lebhaftigkeit des Kommunizierten. Bücher und Emails sind nicht besonders lebhaft, weil man keine weitere Information, wie ein Bild oder einen Ton, mit dem Gelesenen verknüpft. In der Medienpsychologie wird die Lebhaftigkeit im Bezug zur Interaktivität als Begriff der Media-Richness-Theorie definiert \citep{rice92} (vgl. Abbildung \ref{fig:mediarichness}).
 
-Eng verbunden mit der Interaktivität ist die Lebhaftigkeit des Kommunizierten. Bücher und Emails sind nicht besonders lebhaft, weil man keine weitere Information, wie ein Bild oder einen Ton, mit dem Gelesenen verknüpft. Ein anderes Beispiel ist das Fernsehen, das sehr lebhaft ist, aber nicht besonders interaktiv ist. In der Medienpsychologie wird die Lebhaftigkeit im Bezug zur Interaktivität als Begriff der Media-Richness-Theorie definiert \citep{rice92}.
+%Liest man Texte, deren Sachverhalt nicht mit Grafiken weiter veranschaulicht wird, kann es vorkommen, dass man Teile nicht versteht. Lässt man sich dagegen den Stoff mit Hilfe von geeigneten Medien von einem Experten vortragen und kann z.B. durch Fragen interaktiv den Stoff diskutieren, so entwickelt man oft ein besseres Verständnis der Materie. 
+
+%Ein anderes Beispiel ist das Fernsehen, das sehr lebhaft ist, aber nicht besonders interaktiv ist.
 
 \begin{figure}[tbh]
 	\centering
@@ -78,24 +68,21 @@ Eng verbunden mit der Interaktivität ist die Lebhaftigkeit des Kommunizierten. B
 % Grafik Interaktivität vs. Lebhaftigkeit
 % Sekundärliteratur MP2
 
-Den Reichtum ('Richness') eines Mediums kann man daran messen, wie unmittelbar das Feedback ist, wie viele Kanäle wie viele Hinweise geben, wie persönlich die Kommunikation ist und wie vielfältig die vermittelte Sprache ist. Die Verwendung von besser geeigneten Medien führt zu höherer Effektivität der Aufgabenerfüllung. Reichwald  \citep{reichswald98} entwickelt daraus ein Media-Richness-Modell für die Telekooperation (vgl. Abbildung \ref{fig:mediarichness}). In Abhängigkeit davon, wie mehrdeutig die Telekooperationsaufgabe ist, sind andere Medien zu bevorzugen. Dabei ist es nicht so, dass reiche Medien per se 'besser' geeignet sind und arme Medien schlechter. Vielmehr gibt es einen Bereich effektiver Kommunikation. 
+Den Reichtum eines Mediums ('Media-Richness')\citep{reichswald98} kann man daran messen, wie unmittelbar das Feedback ist, wie viele Kanäle wie viele Hinweise geben, wie persönlich die Kommunikation ist und wie vielfältig die vermittelte Sprache ist. Die Verwendung von besser geeigneten Medien führt zu höherer Effektivität der Aufgabenerfüllung. In Abhängigkeit davon, wie mehrdeutig die Telekooperationsaufgabe ist, sind andere Medien zu bevorzugen. Dabei ist es nicht so, dass reiche Medien per se 'besser' geeignet sind und arme Medien schlechter. Vielmehr gibt es einen Bereich effektiver Kommunikation. 
 
 Die Wahl von reichen Medien führt zu einer Überkomplizierung ('Overcomplication') der Situation. Anstatt Fakten zu suchen, werden die Teilnehmer durch den Reichtum des Mediums abgelenkt; es wird interpretiert und möglicherweise Mehrdeutigkeit künstlich erzeugt. Die Verwendung zu armer Medien führt zu einer zu starken Vereinfachung ('Oversimplification'): Das Medium eignet sich nur für die Informationssuche, obwohl ein gemeinsames Verständnis durch gemeinsame Interpretation gefragt ist. Wegen mangelnden Feedbacks und Unpersönlichkeit des Mediums kann nicht gemeinsam interpretiert werden. 
 
 \subsection{Arten: Sprach-, Text- und Nonverbale Kommunikation}
-In der zwischenmenschlichen Kommunikation wird generell zwischen Sprach-, Text- und Nonverbaler Kommunikation unterschieden. Alle drei werden in dieser Arbeit im Bereich von Computerspielen im Detail diskutiert werden. 
-Da die Text- und Sprachkommunikation dem Leser vertraut sind, sollen kurze Grundlagen zur nonverbalen Kommunikation vermittelt werden, da diese auch später in der Arbeit genutzt wird.
+In der zwischenmenschlichen Kommunikation wird generell zwischen Sprach-, Text- und nonverbaler Kommunikation unterschieden. Da die Text- und Sprachkommunikation dem Leser vertraut sind, sollen kurze Grundlagen zur nonverbalen Kommunikation vermittelt werden, da diese auch später in der Arbeit genutzt wird.
 
-Als nonverbale Kommunikation (Verständigung ohne Worte) wird der Teil der Kommunikation des Menschen bezeichnet, der nicht mittels einer gesprochenen, gebärdeten oder geschriebenen Sprache erfolgt, sondern durch nicht linguistische Mittel wie Körperhaltung, Gesten, Mimik stattfindet. Die Kinesik ist die Wissenschaft, die sich mit der nicht-sprachlichen Verständigung befasst.
-Die bewusste Nonverbale Kommunikation unterteilt sich selbst in mehrere Teilgebiete, von denen das Teilgebiet der Proxemik besonders interessante Ansätze für einen späteren Entwurf der Sprachkommunikation bietet.
+Als nonverbale Kommunikation (Verständigung ohne Worte) wird der Teil der Kommunikation des Menschen bezeichnet, der nicht mittels einer gesprochenen, gebärdeten oder geschriebenen Sprache erfolgt, sondern durch nicht linguistische Mittel wie Körperhaltung, Gesten, Mimik stattfindet. %Die Kinesik ist die Wissenschaft, die sich mit der nicht-sprachlichen Verständigung befasst.
+Die bewusste Nonverbale Kommunikation unterteilt sich selbst in mehrere Teilgebiete, von denen das Teilgebiet der Proxemik vorgestellt wird, da es später den Ansatz für einen Entwurf von integrierten Sprachkommunikationslösungen bietet.
 
 %Dabei wird bei der nonverbalen Kommunikation zwischen der unbewussten (z.B. Aufnahme von Pheromonen), teilbewussten (z.B. Schweißbildung) und der bewussten nonverbalen Kommunikation (z.B. Lächeln, Gestik) unterschieden. , die sich mit ihren Teilaspekten beschäftigen. 
 %So wird die Physische Umgebung wird in der Proxemik und Chronemik analysiert. Die Bewegung und des menschlichen Körpers wird in der Kinesik, Haptik und Studien der Augen, Körperhaltung und Gestik analysiert.
 
 \subsubsection{Proxemik}
-
-%Immersion seems to be linked with proxemics - the sense of spatial surroundings.
- In mehreren Studien \citep{hall05} wurde von Hall und Knapp in den 60er und 70er Jahren  festgestellt, dass der Mensch seinen Raum um sich in verschiedene Distanzzonen einteilt:
+ Der Mensch Teilt den Raum um sich in verschiedene Distanzzonen\ citep{hall05} ein :
 
 \begin{itemize}
 	\item Eine persönliche Zone (0 - 100 cm)
@@ -110,160 +97,5 @@ Die bewusste Nonverbale Kommunikation unterteilt sich selbst in mehrere Teilgebi
 	\label{fig:proxemik}
 \end{figure}
 
-Kommunikation, die unmittelbar in der Entfernung einer Hand passiert, findet in der persönlichen Zone statt und erfordert erst das Vertrauen der Kommunikationspartner. Die soziale Zone hat sich auf Grund der mittleren Reichweite normal gesprochener Sprache gebildet. Hier wird von lebhafter Kommunikation ausgegangen, die andererseits nicht unmittelbar bedrohlich (handgreiflich) werden kann. In der öffentlichen Distanz dagegen ist
-verbale Kommunikation ist mit erhobener Stimme möglich, oft werden Gesten zur Verständigung eingesetzt. 
-
-%bewegen wir uns relativ sicher. Hier lässt unsere Aufmerksamkeit nach, da potenzielle Gegner aus dem Umfeld eine gewisse Distanz zu überbrücken haben bis sie uns erreichen. 
-
-Distanzzonen finden sich bisher nicht in der computerbasierten Text-, Sprach- und Telekooperation, da die Kollaboration meist nicht an eine Repräsentation des eigenen Ichs in der virtuellen Umsetzung gekoppelt ist. 
-
-\section{Vergleich der Kommunikationsmedien in Computerspielen}
-
-Mehrspieler-Computerspiele spielen in detaillierten, realistischen virtuellen 3D-Welten, durch die man mittels einer Spielfigur navigiert. In diesen Welten kommunizieren Spieler miteinander aus verschiedenen Gründen wie z.B. um die Strategie zu besprechen, Hilfe zu rufen, die Leistung des Anderen zu bewerten oder um einfach nur zu plaudern. Dabei sind meistens in einem Spiel mehrere Wege der Kommunikation möglich, auf die später in diesem Absatz im Detail eingegangen wird. Alle bisher vorgestellten Aspekte finden sich auch in der Kommunikation zwischen Spielern in Computerspielen. So kann abhängig vom Spielegenre, der Spielegemeinde und technischen Voraussetzungen, jeweils eine andere Kommunikation mit verschiedenen Ausprägungen in den vorgestellten Gebieten existieren.  
-
-\subsection{Spielegenre}
-
-Eine Klassifizierung und die Erstellung einer Typologie für Spiele ist auf vielerlei Arten möglich. Aarseth, Smedstad und Sunnan schlagen in \cite{aarseth03} eine Kategorisierung nach mehreren Dimensionen vor, von denen eine wichtige Klassifizierung auch das Genre des Spiels darstellt. Um eine Übersicht über die Arten von Computerspielen zu geben, werden wir diese fünf Hauptkategorien zuordnen, wobei die Zuordnung keinen strengen Richtlinien folgt und ein Spiel auch mehreren Genres angehören kann.
-
-\begin{itemize}
-	\item \textbf{Actionspiele}: Spiele, in denen die Spielmechanik überwiegend die Geschicklichkeit und Reaktionsschnelligkeit des Spielers fordert. Dies geht in der Regel mit einer starken Betonung des Echtzeit-Aspekts einher. In den meisten Actionspielen lenkt der Spieler eine einzelne Spielfigur. Dieses Genre wird durch Ego- oder First-Person-Shooter dominiert.
-	
-	\item \textbf{Rollenspiele}: Spiele, die sich durch eine komplexe Handlung in einer erdachten oder adaptierten Welt verschiedenster kultureller, sozialer und zeitlicher Hintergründe auszeichnen. Sie  bieten die Möglichkeit einen oder mehrere Charaktere zu erschaffen, auszustatten und durch im Spielverlauf gesammelter Erfahrung sich entwickeln zu lassen. 
-	Eine immer stärker vertretene Klasse dieses Genres sind sog. MMORPGs (Massive-Multiplayer-Online-Roleplaying-Games) bei denen ein Schwerpunkt auf die Interaktion zwischen möglichst vielen Spielern und Spielergruppen gelegt wird. Der Echtzeit-Aspekt spielt hier im Gegensatz zu klassischen Rollenspielen eine wichtige Rolle, da Aufgaben und Rätsel meist nur durch eine kollektive synchronisierte Zusammenarbeit mehrerer Spielergruppen gelöst werden können. 
-	
-	\item \textbf{Strategiespiele}: Spiele, deren Bewältigung vor allem strategisches oder taktisches Geschick erfordert. Dabei übernimmt der Computer entweder die Rolle eines Gegenspielers oder er bietet eine Plattform, auf der mehrere Spieler mit- bzw. gegeneinander spielen können. Strategiespiele können sowohl runden- als auch echtzeitbasiert sein. 
-	
-	\item \textbf{Simulationsspiele}: Spiele, bei denen die Durchführung einer Simulation mit Hilfe eines Computers im Mittelpunkt steht. Dabei kann der Spieler Parameter der Simulation verändern und deren Auswirkung auf das Simulationsmodell ausprobieren. Gegenstände von Simulationen können Fahrzeuge, Flugzeuge, Sportarten als auch Wirtschaftssysteme sein. Wegen des oft beträchtlichen zeitlichen Aufwands bis zum Durchlauf einer kompletten Simulation wird dieses Spielgenre hauptsächlich im als Einspieler-Spiel gespielt. 
-		
-	\item \textbf{Puzzlespiele}: Spiele, deren primäres Ziel es ist, Lösungen für komplexe Ausgangsfragestellungen zu erarbeiten. Dabei steht die Effizienz und Optimalität der Lösung sowie die benötigte Zeit im Vordergrund. Die zeitliche Spanne eines Spiels kann sowohl wenige Sekunden als auch mehrere Wochen betragen. Kurze Puzzlespiele werden oft als Echtzeit-Mehrspieler-Spiele gegeneinander gespielt. 
-	
-\end{itemize}
-
-\begin{figure}[tbh]
-	\centering
-		\includegraphics[width=1.00\textwidth]{grafiken/spielgenredreieck.eps}
-	\caption{Viereck aus Spielerlebnis, Simulation, erzählerischem Aspekt und Spielerinteraktion}
-	\label{fig:spieledreieck}
-\end{figure}
-
-Eine andere Sichtweise auf Computerspiele bietet Lindley \cite{lindley03}, der Spiele in einem Dreieck aus Spielerlebnis, Spielsimulation und erzählerischem Aspekt einordnet. So wäre Tetris ein Spiel mit einem ausgeprägten Spielerlebnis, geringer Simulation und geringem erzählerischem Aspekt. Gibbs, Wadley und Benda ergänzen dieses System um eine weitere Dimension der Spielerinteraktion \cite{gibbs05}. Dabei können Mehrspieler-Spiele wie \textit{Second Life} einen hohen Grad an Spielerinteraktion besitzen und in anderen Dimensionen kaum ausgeprägt sein. 
-
-\subsection{Textkommunikation}
-Spieler können sich über Tastatur unterhalten, wobei die ausgetauschten Nachrichten bei Rollenspielen über dem Kopf des Avatars angezeigt werden oder bei \textit{First-Person-Shootern} als Lauftext kurz eingeblendet werden. In Strategiespielen werden die Nachrichten nur an Spieler der gleichen Seite übertragen. Generell spielt Textkommunikation vor allem bei Rollen- und Strategiespielen eine besondere Rolle, da sie für für eine Koorinierung der Mitspieler sorgt.  %grundlegenden Teil des Spielprinzips ausmacht. 
-Bei \textit{First-Person-Shootern} dagegen spielt Text-Kommunikation nur eine untergeordnete Rolle. Spieler benötigen hier bereits viele Tastatureingaben, um die Spielfigur zu steuern und sind so nur schwer in der Lage gleichzeitig per Texteingabe miteinander zu kommunizieren. Deshalb werden in diesen Genres oft nur kurze Nachrichten zum Zweck der Koordination ausgetauscht. 
-
-\subsubsection{Computer-Mediated-Communication}
-Die Benutzung von Systemen zur interpersonellen Kommunikation durch internetgestützte Medien ist Forschungsgebiet der computer-vermittelten Kommunikation (Computer-Mediated-Communication Abk. CMC)\cite{walther02}. Durch das hohe Wachstum der Computerspiele-Branche und deren zunehmender Bedeutung ist die Analyse von Text-Nachrichten in Computerspielen auch Teil des Forschungsgebietes der CMC geworden. \cite{wright02}. Eine kurze Übersicht der Studien der CMC im Computerspielebereich soll Aufschlüsse geben, welche Aspekte von Spielern gewünscht werden und wo die bisherigen Schwierigkeiten liegen. 
-
-\subsubsection{Soziale Aspekte}
-Vor allem der Wunsch nach einer sozialen Interaktion der Spieler untereinander wird deutlich. Carter stellt in Studien \cite{carter03} fest, dass beim Austausch von Nachrichten nicht nur Inhalte übertragen werden, sondern Benutzer auch Wege finden soziale und emotionale Hinweise über Text-Nachrichten zu übertragen, indem sie Emoticons und andere Stellvertreter benutzen. Pena untersuchte in einer empirischen Studie \cite{pena04} vor allem diese soziale Komponente der text-basierten Kommunikation in Mehrspieler-Computerspielen. Dazu unterteilte er Textnachrichten in aufgabenorientierte Nachrichten, die  Kommandos oder Informationen über den Spielablauf enthalten und soziale Nachrichten, die Solidarität füreinander oder Freude, Trauer, Zustimmung, Anspannung zeigten. Die Auswertung zeigte, dass in der textbasierten Kommunikation der Anteil an sozialen Nachrichten im Vergleich zu Situationen im echten Leben überproportional hoch ist. Diese Beobachtung spiegelte sich auch in der Länge der Nachrichten wieder, da aufgabenorientierte Textnachrichten im Vergleich zu sozialen Nachrichten kurz gehalten wurden. Zudem war der Großteil der ausgetauschten sozialen Nachrichten positiver Natur. 
-
-Diese Studien bestätigten die These, dass Mehrspieler Computerspiele eine hohe soziale Komponente besitzen. Allerdings bedienen sich erfahrene Spieler verschiedener Emoticons und Abkürzungen, die von unerfahrenen Spielern im Vergleich dazu weniger genutzt wurden. Wright, Breidenbach und Boria konnten in Studien \cite{wright02} zeigen, dass in Mehrspieler-Spielen Hierarchien entstehen, die auf der Erfahrung der Spieler und der Kenntnis von "`Insider"' Wissen beruhen. 
-
-\subsubsection{Probleme der Textkommunikation}
-Studien der CMC im Computerspielebereich zeigen auch wichtige Ursachen der Unzulänglichkeit des Mediums für eine ausgeprägte Kommunikation und lassen Rückschlüsse zu, warum die Sprachkommunikation die Textkommunikation in manchen Bereichen so schnell ablöste. Sie lassen sich in drei Bereiche gliedern:
-
-\begin{itemize}
-	\item Zu langsames Medium 
-	\item Fehlende interpersonelle Kommunikation
-	\item Fehlende Mediarichness
-\end{itemize}
-
-Da es in Echtzeit-Mehrspieler-Spielen notwendig ist, die Zeit zum Tippen so kurz wie möglich zu halten, basiert die Kommunikation oft Abkürzungen und Akronymen \cite{thon06}. Solche Einschränkungen führen oft zu kürzeren Sätzen, die eine vereinfachte Grammatik und Semantik besitzen, welche in einigen Fällen zu Missverständnissen führen können. Die CMC in Computerspielen wird deswegen in der Literatur \cite{riva01} oft als eine Form von "`\textit{Fehlverständigung}"' beschrieben: Spieler haben zwar einen hohen Freiheitsgrad beim Verfassen der Nachricht, müssen aber auch in der Lage sein mit diesem umzugehen, da ansonsten die Verständlichkeit der Kommunikation darunter leidet.
-
-Analog zum Modell von Shannon und Weaver ist die Textkommunikation ein Kommunikationsmedium, das wenige technische Probleme besitzt, da diese durch die verlässliche zugrunde liegende Netzwerkschicht minimiert werden. Sie ist jedoch durch den hohen Freiheitsgrad und die Benutzung von Abkürzungen gerade für semantische Probleme anfällig. Die Verwendung von Abkürzungen reduziert zwar die Feedbackzeit und lässt die Kommunikation natürlicher erscheinen, jedoch zum Preis einer gleichzeitigen Reduzierung der Semantik und Grammatik. Dies führt wiederum dazu, dass Aufgaben nicht mehr so effektiv erklärt und ausgeführt werden können wie im echten Leben.
-
-Gerade die persönliche Komponente (interpersonelle Kommunikation) wird durch soziale Normen der Spielergemeinde eingeschränkt. Der Einsatz interpersoneller Kommunikation in öffentlichen Kanälen wird von der Spielergemeinde als "`Fehlverhalten"' angesehen \cite{morris06}. Dies liegt mitunter daran, dass meist nur ein \textit{Chatkanal} zur Verfügung steht und zu viele gleichzeitige private Gespräche die Übersichtlichkeit erschweren. Diese Tatsache lässt bei der Textkommuniktion in Spielen oft nur eine geringe persönliche Komponente zu.
-
-Ein weiteres Handicap ist geringe Mediarichness der Textkommunikation. In der Matrix der Mediarichness wird sie zwar als interaktiv jedoch als nicht besonders lebendig klassifiziert. Das macht sie nicht zu einem optimalen Medium, um komplizierte Telekooperationsaufgaben zu lösen, wie z.B. dem taktischen Befehligen von mehreren Spielern in Echtzeit. Zudem ist sie durch ihre geringe Mediarichness nur sehr begrenzt in der Lage, einfache Emotionen wie Freude, Trauer der Spieler zu übertragen, was bereits in den Studien oben beobachtet wurde. 
-
-\subsubsection{Vorteile der Textkommunikation}
-Auch wenn diese Probleme dazu geführt haben, dass die Textkommunikation aus echtzeitbasierten Action- und Rollenspielen durch die Sprachkommunikation verdrängt wurde, besitzt sie gerade trotz ihrer technischen Einfachheit einen unersetzbaren Vorteil: Studien von Turkle \cite{reid95} und Reid \cite{turkle95} haben gezeigt, dass Menschen sehr gerne neue parallele Identitäten erschaffen, um für sich mit Sexualität, Rasse, Geschlecht und Macht zu experimentieren. Solche Identitäten können aktiv online gelebt werden, ohne dass das Gegenüber die wahre Identität des Spielers erfährt, da durch die Textkommunikation essentielle Details ausgeblendet werden können.
-
-\subsection{Nonverbale Kommunikation} 
-Eine nähere Untersuchung der nonverblen Kommunikation soll Aufschlüsse darüber geben, wie diese im Zusammenhang mit der Sprachkommunikation verwendet werden kann. Nonverbale Kommunikation spielt in grafisch basierten Interaktionen mit Avataren eine wichtige Rolle, da sie für Spieler einen Kontext schafft, in dem sie sich ausdrücken können. Vor allem in avatarbasierten Action und Rollenspielen hat die Animation des Avatars einen wichtigen Zweck, da sie Informationen über den Zustand und Absichten des Mitspielers preisgibt.
-
-\subsubsection{Proxemik in der virtuellen Welt}
-Studien von Bailenson, Beall und Blascovich \cite{bailenson01} untersuchten das Verhalten von Probanden in einer virtuellen Umgebung (\textit{Interactive Virtual Environment Abk. 'IVE'}) um Distanzzonen zu bestimmen. Dabei stellten sie fest, dass Menschen die durch Avatare in virtuellen Räumen vertreten sind, ähnliche Distanzzonen wie im wirklichen Leben einhalten. Abhängig von der gewählten Distanz wurde nonverbale Kommunikation sowohl als Massen- als auch als interpersonelle Kommunikation verstanden. 
-
-In fortführenden Studie \cite{bailenson02} wurde auch der Einfluss von nonverbaler Kommunikation in kollaborativen virtuellen Umgebungen analysiert. Dabei wurde das Verhalten von Probanden  in einer gewöhnlichen Telefonkonferenz mit dem in einer virtuellen Konferenz verglichen, in der die Bewegungen ihres Kopfes übertragen wurden. Die Ergebnisse zeigten, dass Probanden in der virtuellen Umgebung eine höhere Anwesenheit und größere Zuneigung zeigten, sich oft einander anschauten und im Vergleich zum Telefongespräch mit weniger Sprachkommunikation auskamen. Diese Erkenntnisse bestätigten:  Teilnehmer nutzen die Übertragung der nonverbalen Zusatzinformation (z.B Kopfnicken), um die Sprachkommunikation zu entlasten und besser zu interpretieren. 
-
-Leider können bisher vorhandene Spiele die Mimik eines zwischenmenschlichen Gespräches nur in einem sehr groben Detail abbilden, weil die zugrundeliegenden 3D-Modelle das komplexe Zusammenspiel aller Gesichtsbewegungen nur rudimentär abbilden können. Der technische Aspekt der Übertragung einer nonverbalen Kommunikation stellt noch ein Hindernis dar, da weder ihre detaillierte Darstellung noch die Steuerung gelöst wurde. Studien \cite{manninen03} zeigen auch,  dass für eine umfassende nonverbale Kommunikation jedoch eine Kombination von mehreren Faktoren wie dem Gesichtsausdruck und der Körperhaltung notwendig sind.
-
-Trotz ungelöster Probleme erhöht die nonverbale Kommunikation die Interaktivität und Lebhaftigkeit einer Text- oder Sprachkommunikation und kann in Zukunft zur Unterstützung bereits etablierter Kommunikationsmethoden genutzt werden \cite{manninen03}. Sie gibt einen unverzichtbaren Kontext für eine Kommunikation in virtuellen Räumen, da sie uns die Möglichkeit bietet, intuitiv miteinander zu interagieren. In dieser Arbeit werden später in Kapitel \ref{proxemikalssteuerungvonkonferenzen} genau diese Eigenschaften genutzt werden. 
-
-\subsection{Sprachkommunikation}
-Spieler können sich mittels eines Mikrofons und Kopfhörers unterhalten, wobei die ins Mikrofon gesprochene Nachricht an alle Teilnehmer des Empfangskanals gesendet wird. Sprachkommunikation wird mittels zusätzlicher Sprachserver ermöglicht, auf denen sich Mitspieler zunächst vor Spielbeginn einloggen und einem gemeinsamen Kanal beitreten. Eine durchgehend in alle Spielegenre integrierte Sprachkommunikation bietet als einziges bisher das \textit{XBox-Live}\footnote{Microsoft Corporation, Version 21.03.2008, http://www.xbox.com/} System, das lange Zeit aufgrund fehlender Tastatureingabe, nur die Kommunikation über das Mikrofon und Kopfhörer ermöglichte. 
-
-Vor allem Actionspiele bedürfen eines hohen Anteils an Sprachkommunikation, um im Mehrspieler-Modus, die langsame Textkommunikation zu kompensieren. Strategie-, Simulations- und Puzzlespiele verzichten meist auf die Sprachkommunikation entweder wegen eines rundenbasierten Spielmodus oder des fehlenden Mehrspielercharakters des Spiels. Rollen und Actionspiele erlauben meist die Sprachkommunikation in virtuellen Welten bei Spielern der gleichen Spielegruppe. Ein spontanes Gespräch mit noch unbekannten Spielern ist jedoch aufgrund technischer Möglichkeiten und fehlender Integration meist nicht möglich. In den meisten Mehrspieler-Rollenspielen ist diese Form der Kommunikation sehr wichtig, da sich die Teilnehmer im Spiel, sei es beim Bekämpfen computergesteuerter Gegner oder dem Kampf mehrere Spieler untereinander, teilweise innerhalb von Sekunden strategisch neu ausrichten müssen. Spieler, die hier auf die Verwendung einer Tastatur angewiesen sind, sind im Nachteil.
-
-Obwohl die Sprachkommunikation bei der zwischenmenschlichen Interaktion die dominierende Kommunikationsart ist, ist sie bis auf wenige Ausnahmen nicht in Computerspiele integriert worden. Bisher werden Konferenzlösungen für Spiele durch eine Vielzahl von kommerziellen Drittanbieter Programmen wie \textit{Roger Wilco}\footnote{GameSpy Industries, Version 22.03.2008, http://rogerwilco.gamespy.com}, \textit{Ventrillo}\footnote{Flagship Industries, Inc. Version 22.03.2008, http://www.ventrilo.com}, \textit{Teamspeak}\footnote{TeamSpeak Systems GmbH, Version 22.03.2008, http://www.goteamspeak.com} ermöglicht. 
-
-In einer vorläufigen Studie \cite{halloran03} analysierten Holloran, Rogers und Fitzpatrick die soziale Auswirkung dieser Tools auf die Kommunikation zwischen Spielern. Sie zunächst stellten fest, dass Sprachkommunikation grundsätzlich für Mehrspieler-Spiele gut geeignet ist und die soziale Erfahrung durch eine hohe Lebendigkeit und Personalisierung der Kommunikation erhöht. 
-
-\subsubsection{Reale Sprachsituation}
-Um vorab zu bestimmen, wie Sprache zwischen Spielern benutzt wird, wurden 8 Spieler im gleichen Raum beim Spielen eines First-Person-Shooters über mehrere Stunden aufgezeichnet. Im Gegensatz zu Telefonkonferenzen, bei denen die Sprecher, um Interferenzen zu minimieren, jeweils nur einer nach dem anderen sprechen, wurde eine starke gleichzeitige Interaktion sowohl in zwischen den Spielfiguren im Spiel, als auch zwischen den menschlichen Spielern im Raum festgestellt. Dabei agierten die Spieler in zwei verschiedenen sozialen Umgebungen gleichzeitig: Während die Spielfiguren einen Kampf im virtuellen Raum austrugen, unterhielten sich die Spieler gleichzeitig über ihre Herkunft, Alter und ihre Erfahrung beim Spielen. Offenbar sind im Szenario einer realen Sprachkommunikation die Spieler mühelos in der Lage durch kurze Feedbackzeiten eine ausgeprägte Sprachkommunikation zu führen. Durch die die Anpassung der Stimmlautstärke und durch den natürlichen Einsatz von nonverbaler Kommunikation konnten alle Teilnehmer ohne Mühe zwischen den einzelnen Gesprächspartnern wechseln. Sie zeigten Emotionen und empfanden beim Spielen eine starke Interaktivität und Lebhaftigkeit. Dies ist das ideale Ziel, das erreicht werden soll, wenn man an eine Umsetzung von Sprachkommunikation denkt. 
-
-\subsubsection{Übertragene Sprache}
-Anschließend spielten die gleichen Spieler wieder Mehrspieler-Spiele gegeneinander, befanden jedoch jeweils an anderen Orten und sollten sich mit Hilfe der vorhandenen Sprachkommunikationslösungen miteinander unterhalten. Dabei wurden sie über mehrere Stunden aufgezeichnet. Die Analyse ergab diesmal eine leisere und geringere Sprachkommunikation, bei der sich die Spieler mehr auf das Spiel konzentrierten, und oft nur aufgabenorientierte Informationen austauschten. Die geringere Intensität wurde vor allem auf technische Einschränkungen zurückgeführt: Vor allem die Tatsache, dass im \textit{Xbox Live} System nur ein Kanal für mehrere Spielern zur Verfügung steht wurde von den Teilnehmern bemängelt. Da bereits eine Kollision von 2 gleichzeitigen Sprachübertragungen ausreicht, um nicht mehr verstanden zu werden, unterliegt ein solcher Sprachkanal implizit einer starken Reglementierung und wird von einzelnen Spielern meist nur zur Koordination der Gruppe benutzt. Interpersonelle Gespräche sind somit auf diesen Kanälen fast ausgeschlossen.
-
-\subsubsection{Wer hört mich? Wen höre ich?}
-Gibbs, Hew und Wadley untersuchten in Studien \cite{gibbs04}, \cite{Gibbs04a} die Sprachkommunikation auf bestehende Probleme bei ihrer Benutzer\-freundlich\-keit  und ihren sozialen Möglich\-keiten. %Sie etablieren den Begriff des Computergestützten Kooperativen Spielens ('Computer Supported Cooperative Play' Abk. \textit{CSCP}), der definiert wird als gemeinsames Engagement von zwei oder mehr Individuen in einer Freizeitaktivität mittels einer Computerumgebung. Im Kontext ihrer Untersuchung von Sprachkommunikation im CSCP führen sie auch den Begriff der \textit{Soziabilität} ein, die von Pearce in \cite{pearce03} ausführlich definiert wird. Der entscheidende Faktor bei der Soziabilität eines Spieles ist es, nicht nur die Interaktion zwischen dem Spieler und dem Spiel zu berücksichtigen, sondern auch die Interaktion zwischen den Spielern untereinander im Spiel. Eigenschaften wie Spielernamen, Freundeslisten und Sprachkommunikation sind Faktoren die zur \textit{Soziabilität} beitragen. 
-
-Um die Soziabilität \cite{pearce03} der Sprachkommunikation zu analysieren, wurden sechs Vergleichsgruppen aus jeweils drei Mitgliedern beim Spielen auf der \textit{XBox-Live}-Plattform während mehrerer Wochen auf Video aufgezeichnet und ihre Erfahrungen nach jeder Sitzung mittels Fragebogen und Diskussionen festgehalten. Obwohl zunächst alle Spieler duch die Sprachkommunikation eine Verbesserung gegenüber der textbasierten Kommunikation erwarteten, hatten sie während der Studie auch vor allem mit zwei Problemen zu kämpfen: Einerseits zu bestimmen was von wem gehört wird und andererseits was an wen gesendet werden soll. Dies führte dazu, dass auf dem Kanal ein Großteil der Sprachkommunikation als Lärm empfunden wurde. Dieser bestand aus Konversationen, die nicht an die Spieler adressiert waren und Hintergrundgeräuschen wie der versehentlich übertragenen Sprache, Musik oder Fernsehen. Ein Großteil der Teilnehmer kritisierte auch, dass keinerlei Kontrolle darüber bestand, wer Empfänger ihrer Nachricht ist. Dies führte bei vielen Teilnehmern zum Entschluss, die Sprachkommunikation nicht weiter zu benutzen. 
-
-\subsubsection{Keine Zuordnung zwischen Sprache und Avataren}
-In einer weiteren Studie \cite{halloran04} untersuchten Halloran, Fitzpatrick, Marshall und Rogers, welche Auswirkungen es für Spieler hat, wenn sie in der Lage sind festzustellen, mit wem sie gerade reden. Das Verhalten von zehn Spielern in einer XBox-Live-Umgebung wurde dazu über 10 Wochen aufgezeichnet und ausgewertet. Dabei wurde festgestellt, dass es für Spieler durch die geringe Audioqualität und eventuelle Verzerrungen schwer ist, nur anhand der Stimme zu erkennen, mit wem sie kommunizieren.  Zudem enthält die übertragene Sprachinformation im Gegensatz zur Textkommunikation, die immer den Absender anzeigt, keine Hinweise auf die Quelle des Gehörten. Vor allem bei unerfahrenen Spielern wurde von der Nähe eines Avatars auf seine Sprachaktivität geschlossen. Sie nahmen an, dass Spieler, die sich in ihrer Nähe befanden, auch die Spieler sein müssen, die sie gerade hören. Solche Verwechslungen führten zu Beeinträchtigungen des Spielflusses, da vor allem in taktischen Spielen bei der Zusammenarbeit Kommandos oder Anweisungen nicht den entsprechenden Avataren auf dem Bildschirm zugeordnet werden konnten.
-
-\subsubsection{Metaphern der Sprachübertragung}
-Gibbs, Wadley und Benda formulierten daraufhin Kriterien für eine erfolgreiche Sprachkommunikation \cite{gibbs05}. Dabei benutzen sie Metaphern der realen Sprach\-über\-tragung, die in Spielen simuliert werden kann. Sie definieren dazu vier verschiedene Metaphern: 
-
-\begin{itemize}
-	\item \textbf{Funksprechgerät}: Die Sprach\-über\-tragung findet jederzeit und an jeden Spieler statt. In dieser Massenkommunikation benutzen alle Spieler einen Kanal, was implizit von den Teilnehmern ein gemeinsames Protokoll und Disziplin erfordert. 
-	\item \textbf{Mobiltelefon}: Die Sprachübertragung ist überall möglich, muss jedoch erst initiiert werden. Während der Sprachkommunikation findet nur eine interpersonelle Kommunikation statt. Dabei muss der Anrufer über zusätzliche Informationen wie z.B. über den Namen der zu kontaktierenden Person verfügen.
-	\item \textbf{Festnetztelefon}: Die Sprachübertragung kann nur an bestimmten Plätzen in der virtuellen Welt stattfinden. Dabei ist sowohl eine interpersonelle als auch Massenkommunikation zwischen Spielern vorstellbar.
-	\item \textbf{Luftübertragung}: Die Übertragung von Sprache ist nur möglich, falls sich Spieler in Hörnähe befinden. Die Lautstärke und Qualität der Kommunikation hängt dabei von der Entfernung der Spieler voneinander ab. 
-\end{itemize}
-
-Dabei wird der Typ der Übertragung durch den Spieltyp oder die Umstände im Spiel definiert.
-
-All diese Erkentnisse zeigen, dass Sprachkommunikation - im Gegensatz zur Textkommunikation einen hohen technischen Aufwand benötigt, um sie überhaupt zu ermöglichen. Durch Probleme auf der technischen Stufe wird das Gesprochene für das Gegenüber oft unverständlich: Falsche Einstellungen an Mikrofon und Lautsprechern oder störende Hintergrundgeräusche können zu einer starken Beeinträchtigung der Kommunikation führen. Die Adressierung der Personen gestaltet sich oft schwer und führt zu Missverständnissen. Trotz Problemen im technischen Bereich hat die Sprachkommunikation geringere Probleme bei der Semantik und Effizienz. Da kein Medienbruch wie bei der Textkommunikation stattfindet, wird kein zusätzliches semantisches Problem erzeugt, die Semantik entspricht der zwischenmenschlichen Kommunikation, die wir in unserem Alltag vorfinden.
-
-%\subsection{Heutige und zukünftige Vorteile der Sprachkommunikation}
-%Obwohl viele Probleme, Vor und Nachteile in den vorgestellten Studien bereits diskutiert wurden, existieren darüber hinaus noch mehr Eigenschaften, die den Einsatz von Sprachkommunikation rechtfertigen. 
-
-%// WHOLE SECTION SKIP OR LEAVE??
-
-%\subsubsection{Erhöhung der Lebendigkeit}
-%Dadurch dass Spieler nicht mehr zwischen dem Spiel selbst und Texteingabefeldern hin und herschalten müssen, können sie sich vollkommen auf das Spielgeschehen konzentrieren. Ausgestattet mit einem Headset können sie so mit ihren Mitspielern in die Spielewelt eintauchen und so die Lebhaftigkeit erhöhen. 
-
-%\subsubsection{Schnellere Reaktion}
-%Durch eine direkte Sprachkommunikation ist es viel einfacher für Mitspieler auf das Spielgeschehen zu reagieren. Vor allem bei den Hauptvertretern der Multispieler Spieler, wie den Ego-Shootern und Echtzeit-Rollenspielen ist die Reaktionszeit eine wichtige Komponente. Durch die Sprachkommunikation reduziert sich die Reaktionszeit im Vergleich zur Textkommunikation auf ein Minimum.  
-
-%\subsubsection{Spiel als Kommunikationsplattform}
-%Durch eine Integration der bestehenden VoIP Standarts in Computerspiele wären wir in der Lage in der Lage Freunde direkt und kostenlos anzurufen. Somit würde die Grenzen zwischen dem Computerspiel als Unterhaltungs Platform und Computerspiel als Kommunikationsplattform verschwimmen. Das finden von Mitspielern für ein Spiel wird somit bereits Teil des Spiels. Das von SonyEntertainment auf der 'Game Developers Conference' am 7ten März für die Playstation 3 Konsole vorgestellte 'Home System'  \cite{home08}, vereint genau diese Funktionalitäten. Dies entspricht der o.g. Beobachtung von Gibbs und Wadley \cite{gibbs05}, welche die Spielerinteraktion als Fundamentalen Bestandteil von Computerspielen sehen. 
-
-%\subsubsection{Keine Hände}
-%Obwohl es trivial ist, benötigt man im Gegensatz zur Textkommunikation keine Hände. Der Spieler kann sich voll und ganz auf das Steuern des Avatars konzentrieren, ohne dass er das Spielgeschehen dauernd unterbrechen müsste. Computerspiele und ihre Kommunikation sind ebenfalls somit nicht mehr auf die Tastatur als Kommunikationsgerät angewiesen, und wie schon bei der XBox Live Konsole gezeigt, scheint die Einfachheit einer solchen Kommunikation auf weite Akzeptanz zu stoßen. 
-
-%\subsubsection{Erhöhter Realismus}
-%Obwohl es Ausnahmen gibt, bei denen man die Textkommunikation als Mittel nutzen kann um seine Identität neu auszuleben, erhöht die Sprachkommunikation den Realismus eines Spiels. Gerade durch die Stimmführung sind kann die Sprachkommunikationen das Spielerlebniss zwischen zwei Spielern stark beinflussen. 
-
-%\subsubsection{Mobile Einsatzbereiche}
-%Ein unterschätztes Nebenprodukt des Einsatzes der Sprachkommunikation ist, dass man aufgrund nicht benötigter Tastatur auch bei mobilen Geräten die Möglichkeit hat miteinander zu Kommunizieren. So ist es vorstellbar auf tragbaren Konsolen Mittels VoIP und Wlan Spiele miteinander zu spielen und gleichzeitig zu kommunizieren. 
-
-%\subsubsection{Freundschaften knüpfen}
-%Mittels VoIP ist es bereits heute möglich und üblich mit Freunden und bekannten auf der ganzen Welt kostenlos zu telefonieren. Obwohl soziale Netzwerke im Internet ein Spiegel der real existieren Netzwerke sind, bieten Spiele die Möglichkeit sich über die Methode des gemeinsamen Erlebens Freundschaften zu Entwickeln. Gerade im Spielebereich ist eine starke Bindung zu Spielergruppen üblich. Mit Sprachkommunikation können stärkere Bindungen der Spieler untereinader erfolgen, und mittels einer interpersonellen Sprachkommunikation im Spiel auch persönliche Themen diskutiert werden, während man gemeinsam seine Freizeit im von Third Place verbringt \cite{gibbs03}.
-
-%\subsubsection{Kein Hin- und Her-Schalten zwischen Applikationen}
-%Oft ist es erforderlich gerade in zeitkritischen Spielen zwischen verschiedenen Applikationen hin und herzuschalten um mit neuen Teilnehmern des Spiels eine Sprachkommunikation aufzubauen. Durch eine Integration der Sprachkommunikation in das Spiel ist es auch technisch unterfahrenen Nutzern möglich einfach und komfortabel immer mit Mitspielern Sprachverbindungen aufzubauen. 
-
-
-%\subsubsection{Einfache Koordination}
-%Will man mit mehreren Teammitgliedern Sprechen so sind gerade die in Spielen vorgesehenen Sammelphasen, die bis zu 10 Sekunden dauern optimal um mittels Sprachkommunikation die weitere Vorgehensweise zu besprechen. Während bei der Textkommunikation diese kurze Zeit oft nur für unzureichende Strategische anweisungen ausreicht oder die Spielstrategie wegen unzulänglicher Kommunikation nicht geändert wird, kann mittels Sprachkommunikation eine weit aus bessere Koordination im Spiel erreicht werden. 
-
-%\subsubsection{Stimmverfremdungen}
-%Es is auch vorstellbar, dass man die eigene Stimme verfremden kann, um einen bestimmten Effekt zu erreichen der den Mitspieler noch weiter in das Spiel eintauchen lässt. So könnte die Stimmlage an die eigene Rolle im Spiel angepasst werden.
-
-%\subsubsection{Standardisierung}
-%Obwohl mehrere Sprachkommunikations Lösungen auf Basis von propriäteren Technologie existieren, ist es durchaus vorstellbar, dass die Standardisierung die im VoIP bereits weit gediegen ist, auch im Spielebereich Einsatz hält. So ist es vorstellbar, dass Sprachkommunikation auf einem offenen Protokoll wie z.B. SIP basieren kann und Anbieterlösungen somit kompatibel werden.
+Kommunikation, die unmittelbar in der Entfernung einer Hand passiert, findet in der persönlichen Zone statt und erfordert erst das Vertrauen der Kommunikationspartner. Die soziale Zone hat sich auf Grund der mittleren Reichweite normal gesprochener Sprache gebildet. Hier wird von lebhafter Kommunikation ausgegangen. In der öffentlichen Distanz dagegen ist verbale Kommunikation ist mit erhobener Stimme möglich, oft werden Gesten zur Verständigung eingesetzt. 
+%Distanzzonen finden sich bisher nicht in der computerbasierten Text-, Sprach- und Telekooperation, da die Kollaboration meist nicht an eine Repräsentation des eigenen Ichs in der virtuellen Umsetzung gekoppelt ist.
