@@ -1,4 +1,4 @@
-\begin{thebibliography}{84}
+\begin{thebibliography}{83}
 % this bibliography was produced with the style dinat.bst v2.5
 \makeatletter
 \newcommand{\dinatlabel}[1]%
@@ -295,15 +295,6 @@ dy\_2007}
   IEEE Computer and Communications Societies}
 \newblock 1 (2004), S.~107
 
-\bibitem[Lau u.\,a.(2005{\natexlab{a}})Lau, Crowcroft, Pias, Sharma und
-  Lim]{lau05}
-\dinatlabel{Lau u.\,a. 2005{\natexlab{a}}} \textsc{Lau}, Keong~;
-  \textsc{Crowcroft}, J.~; \textsc{Pias}, M.~; \textsc{Sharma}, R.~;
-  \textsc{Lim}, S.:
-\newblock A survey and comparison of peer-to-peer overlay network schemes.
-\newblock In: \emph{Communications Surveys \& Tutorials, IEEE}
-\newblock (2005), S.~72--93
-
 \bibitem[Lau u.\,a.(2006)Lau, Soh und Webb]{lau06}
 \dinatlabel{Lau u.\,a. 2006} \textsc{Lau}, William~; \textsc{Soh}, Sieteng~;
   \textsc{Webb}, Steven~D.:
@@ -314,9 +305,9 @@ dy\_2007}
   S.~15--22. --
 \newblock ISBN 86905-902-5
 
-\bibitem[Lau u.\,a.(2005{\natexlab{b}})Lau, Tan und Loh]{lau05b}
-\dinatlabel{Lau u.\,a. 2005{\natexlab{b}}} \textsc{Lau}, William~;
-  \textsc{Tan}, Swee~A.~; \textsc{Loh}, Allan:
+\bibitem[Lau u.\,a.(2005)Lau, Tan und Loh]{lau05b}
+\dinatlabel{Lau u.\,a. 2005} \textsc{Lau}, William~; \textsc{Tan}, Swee~A.~;
+  \textsc{Loh}, Allan:
 \newblock Networked game mobility model for first-person-shooter games.
 \newblock In: \emph{NetGames '05: Proceedings of 4th ACM SIGCOMM workshop on
   Network and system support for games}.

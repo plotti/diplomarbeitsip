@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592-1.40.7 (MiKTeX 2.7) (preloaded format=latex 2008.3.12)  3 JUN 2008 10:49
+This is pdfTeX, Version 3.141592-1.40.7 (MiKTeX 2.7) (preloaded format=latex 2008.3.12)  3 JUN 2008 18:17
 entering extended mode
 **Main.tex
 (Main.tex
@@ -464,6 +464,9 @@ Class scrbook Info: You've told me to use the font selection of the element
 Class scrbook Info: You've told me to use the font selection of the element
 (scrbook)           `sectioning' that is an alias of element `disposition'
 (scrbook)            on input line 151.
+Class scrbook Info: You've told me to use the font selection of the element
+(scrbook)           `sectioning' that is an alias of element `disposition'
+(scrbook)            on input line 169.
 
 [5]
 Class scrbook Info: You've told me to use the font selection of the element
@@ -471,10 +474,7 @@ Class scrbook Info: You've told me to use the font selection of the element
 (scrbook)            on input line 181.
 Class scrbook Info: You've told me to use the font selection of the element
 (scrbook)           `sectioning' that is an alias of element `disposition'
-(scrbook)            on input line 193.
-Class scrbook Info: You've told me to use the font selection of the element
-(scrbook)           `sectioning' that is an alias of element `disposition'
-(scrbook)            on input line 196.
+(scrbook)            on input line 184.
 )
 \tf@toc=\write3
  [6] (kapitel/stichwortverzeichnis.tex) [7
@@ -522,102 +522,72 @@ LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
  [3] [4]) [5]
 (kapitel/kapitel_kommunikation.tex
 Kapitel 2.
-
-LaTeX Warning: File `grafiken/kommunikationsmodell-schramm-weaver.eps' not foun
-d on input line 15.
-
-
-! LaTeX Error: File `grafiken/kommunikationsmodell-schramm-weaver.eps' not foun
-d.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.15 ...n/kommunikationsmodell-schramm-weaver.eps}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-! LaTeX Error: Cannot determine size of graphic in grafiken/kommunikationsmodel
-l-schramm-weaver.eps (no BoundingBox).
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.15 ...n/kommunikationsmodell-schramm-weaver.eps}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
 File: grafiken/kommunikationsmodell-schramm-weaver.eps Graphic file (type eps)
 <grafiken/kommunikationsmodell-schramm-weaver.eps> [6
 
 
 
-] [7]
+]
 File: grafiken/mediarichness.eps Graphic file (type eps)
 
-<grafiken/mediarichness.eps> [8]
+<grafiken/mediarichness.eps> [7] [8]
 File: grafiken/proxemik.eps Graphic file (type eps)
  <grafiken/proxemik.eps>
 Underfull \hbox (badness 10000) in paragraph at lines 96--96
 []\OT1/cmr/m/n/10.95 Proxemikmodell mit ei-ner pers[]onlichen, so-zia-len und
  []
 
-) [9] [10] (kapitel/kapitel_folgerungundziele.tex
+) [9] (kapitel/kapitel_folgerungundziele.tex
 Kapitel 3.
-[11
+[10
 
 
 
-] [12]
-Overfull \hbox (9.64766pt too wide) in paragraph at lines 31--32
+] [11]
+Overfull \hbox (9.64766pt too wide) in paragraph at lines 29--30
 \OT1/cmr/m/n/10.95 Text-kom-mu-ni-ka-ti-on einen ho-hen tech-ni-schen Auf-wand 
 ben[]otigt, um sie []uberhaupt
  []
 
-[13]
+[12]
 File: grafiken/spielgenredreieck.eps Graphic file (type eps)
- <grafiken/spielgenredreieck.eps> [14]
-Overfull \hbox (4.70616pt too wide) in paragraph at lines 66--67
+ <grafiken/spielgenredreieck.eps> [13]
+Overfull \hbox (4.70616pt too wide) in paragraph at lines 63--64
 [][]\OT1/cmr/bx/n/10.95 Festnetztelefon\OT1/cmr/m/n/10.95 : Die Sprach[]ubertra
 gung kann nur an be-stimm-ten Pl[]atzen
  []
 
-[15]
+[14]
 File: grafiken/singlekanal-kommunikationsmodell.eps Graphic file (type eps)
- <grafiken/singlekanal-kommunikationsmodell.eps> [16]
-Overfull \hbox (4.08911pt too wide) in paragraph at lines 99--100
+ <grafiken/singlekanal-kommunikationsmodell.eps> [15]
+Overfull \hbox (4.08911pt too wide) in paragraph at lines 96--97
 [][]\OT1/cmr/bx/n/10.95 Linear an-stei-gen-der Band-brei-ten-ver-brauch\OT1/cmr
 /m/n/10.95 : Da der Au-diostrom
  []
 
 File: grafiken/multi-kommunikationsmodell.eps Graphic file (type eps)
-<grafiken/multi-kommunikationsmodell.eps> [17]
-Overfull \hbox (11.33716pt too wide) in paragraph at lines 124--125
+<grafiken/multi-kommunikationsmodell.eps> [16]
+Overfull \hbox (11.33716pt too wide) in paragraph at lines 121--122
 [][]\OT1/cmr/bx/n/10.95 Quadratisch an-stei-gen-der Band-brei-ten-ver-brauch\OT
 1/cmr/m/n/10.95 : Da der Au-diostrom
  []
 
-[18]
+[17]
 File: grafiken/ventrillo.eps Graphic file (type eps)
- <grafiken/ventrillo.eps> [19]
+ <grafiken/ventrillo.eps> [18]
 
-LaTeX Warning: Reference `ventrillo' on page 20 undefined on input line 164.
+LaTeX Warning: Reference `ventrillo' on page 19 undefined on input line 161.
 
-[20]
+[19]
 File: grafiken/lautstaerke.eps Graphic file (type eps)
- <grafiken/lautstaerke.eps>) [21] [22] (kapitel/kapitel_sip.tex
+ <grafiken/lautstaerke.eps>) [20] [21] (kapitel/kapitel_sip.tex
 Kapitel 4.
 File: grafiken/voipprotokolle.eps Graphic file (type eps)
-<grafiken/voipprotokolle.eps> [23
+<grafiken/voipprotokolle.eps> [22
 
 
 
-] [24] [25]
+] [23] [24]
 Underfull \hbox (badness 1721) in paragraph at lines 79--80
 []\OT1/cmr/m/n/10.95 keinerlei An-stren-gung zum Verst[]andnis der
  []
@@ -627,13 +597,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 79--80
 \OT1/cmr/m/n/10.95 Spra-che not-wen-dig; to-ta-le Ent-span-nung
  []
 
-[26] [27]
+[25] [26]
 Overfull \hbox (12.68327pt too wide) in paragraph at lines 168--169
 \OT1/cmr/m/n/10.95 Request-Typs z.B. IN-VI-TE, ei-ner \OT1/cmr/m/it/10.95 Reque
 st-URI\OT1/cmr/m/n/10.95 (z.B. sip:8495302002@192.168.2.25)
  []
 
-[28]
+[27]
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 181.
 
@@ -642,11 +612,11 @@ Overfull \hbox (0.27795pt too wide) in paragraph at lines 181--182
  einen Grund(Subject)
  []
 
-[29] [30]
+[28] [29]
 File: grafiken/sipanruf.eps Graphic file (type eps)
  <grafiken/sipanruf.eps>
 File: grafiken/sipanrufmitproxy.eps Graphic file (type eps)
- <grafiken/sipanrufmitproxy.eps> [31] [32]
+ <grafiken/sipanrufmitproxy.eps> [30] [31]
 Overfull \hbox (11.02615pt too wide) in paragraph at lines 250--251
 []\OT1/cmr/m/n/10.95 Als In-stant Mes-sa-ging wird im All-ge-mei-nen ein Dienst
  zur so-for-ti-gen []Ubermittlung
@@ -659,29 +629,29 @@ lay Chat), XMPP(Extensible
  []
 
 File: grafiken/sipmessage.eps Graphic file (type eps)
-<grafiken/sipmessage.eps> [33]
+<grafiken/sipmessage.eps> [32]
 File: grafiken/sippresence.eps Graphic file (type eps)
- <grafiken/sippresence.eps> [34] [35] [36]
+ <grafiken/sippresence.eps> [33] [34] [35]
 File: grafiken/rtppaket.eps Graphic file (type eps)
 
-<grafiken/rtppaket.eps> [37] [38] [39]
+<grafiken/rtppaket.eps> [36] [37] [38]
 File: grafiken/stun.eps Graphic file (type eps)
- <grafiken/stun.eps>) [40]
+ <grafiken/stun.eps>) [39]
 (kapitel/kapitel_recentwork.tex
 Kapitel 5.
-[41
+[40
 
 
 
-] [42] [43] [44]) [45] (kapitel/kapitel_konstruktion.tex
+] [41] [42] [43]) [44] (kapitel/kapitel_konstruktion.tex
 Kapitel 6.
-[46
+[45
 
 
 
 ]
 File: grafiken/entwurf-p2p.eps Graphic file (type eps)
- <grafiken/entwurf-p2p.eps> [47]
+ <grafiken/entwurf-p2p.eps> [46]
 File: grafiken/entwurf-server.eps Graphic file (type eps)
  <grafiken/entwurf-server.eps>
 Underfull \hbox (badness 3735) in paragraph at lines 54--54
@@ -689,12 +659,12 @@ Underfull \hbox (badness 3735) in paragraph at lines 54--54
 r in
  []
 
-[48] [49]
+[47] [48]
 File: grafiken/entwurf-proxy.eps Graphic file (type eps)
- <grafiken/entwurf-proxy.eps> [50]
+ <grafiken/entwurf-proxy.eps> [49]
 File: grafiken/entwurf-verteilteserver.eps Graphic file (type eps)
 
-<grafiken/entwurf-verteilteserver.eps> [51] [52]
+<grafiken/entwurf-verteilteserver.eps> [50] [51]
 Underfull \hbox (badness 10000) in paragraph at lines 143--143
 []\OT1/cmr/m/n/10.95 ($\OML/cmm/m/it/10.95 A[]$\OT1/cmr/m/n/10.95 ) Client-
  []
@@ -775,32 +745,32 @@ Underfull \hbox (badness 10000) in paragraph at lines 147--148
 \OT1/cmr/m/n/10.95 de-zen-tra-le
  []
 
-[53] [54] [55] [56]
+[52] [53] [54] [55]
 Underfull \hbox (badness 10000) in paragraph at lines 226--226
 [][]\OT1/cmr/m/n/9 Patentfreies Audio-Kompressions-Format (Xiph OSC) , Ver-si-o
 n 22.03.2008,
  []
 
-[57] [58] [59] [60] [61] [62]) [63] (kapitel/kapitel_implementierung.tex
+[56] [57] [58] [59] [60] [61]) [62] (kapitel/kapitel_implementierung.tex
 Kapitel 7.
-[64
+[63
 
 
 
-] [65]
+] [64]
 Overfull \hbox (10.46275pt too wide) in paragraph at lines 47--48
 [][]\OT1/cmr/m/n/10.95 Bei al-len der drei Pro-duk-ten han-delt es sich um ser-
 ver-ba-sier-te VoIP-Anwendungen.
  []
 
-[66] [67]
+[65] [66]
 Overfull \hbox (24.97467pt too wide) in paragraph at lines 78--79
 []\OT1/cmr/m/n/10.95 Andere Peer-to-Peer Pro-gram-me wie \OT1/cmr/m/it/10.95 Mi
 crosoft-Netmeeting[]\OT1/cmr/m/n/10.95 , \OT1/cmr/m/it/10.95 Microsoft-Messenge
 r[]
  []
 
-[68] [69]
+[67] [68]
 Underfull \hbox (badness 10000) in paragraph at lines 111--111
 [][]\OT1/cmr/m/n/9 Wikipedia:Overview of SIP Soft-wa-re, Ver-si-on 22.03.2008,
  []
@@ -818,59 +788,86 @@ cmr/m/it/10.95 Spe-ex \OT1/cmr/m/n/10.95 (PJMEDIA-CODEC)
  []
 
 File: grafiken/pjsip.eps Graphic file (type eps)
-<grafiken/pjsip.eps> [70] [71]
+<grafiken/pjsip.eps> [69] [70]
 File: grafiken/spielewelt-screenshot.eps Graphic file (type eps)
- <grafiken/spielewelt-screenshot.eps> [72]
-[73]
+ <grafiken/spielewelt-screenshot.eps> [71]
+[72]
 File: grafiken/pjsip-mediaflow.eps Graphic file (type eps)
- <grafiken/pjsip-mediaflow.eps> [74] [75]
+ <grafiken/pjsip-mediaflow.eps> [73] [74]
 File: grafiken/conference-bridge.eps Graphic file (type eps)
  <grafiken/conference-bridge.eps>
 File: grafiken/gamestart-screenshot.eps Graphic file (type eps)
 
-<grafiken/gamestart-screenshot.eps> [76] [77]
+<grafiken/gamestart-screenshot.eps> [75] [76]
 File: grafiken/sipanruf_403.eps Graphic file (type eps)
  <grafiken/sipanruf_403.eps>
-[78] [79]
+[77] [78]
 File: grafiken/zonenkonzept2.eps Graphic file (type eps)
- <grafiken/zonenkonzept2.eps> [80] [81]
+ <grafiken/zonenkonzept2.eps> [79] [80]
 File: grafiken/siphold.eps Graphic file (type eps)
  <grafiken/siphold.eps>
-[82] [83]) [84] [85] (kapitel/kapitel_network.tex
+[81] [82]) [83] [84] (kapitel/kapitel_network.tex
 Kapitel 8.
-[86
+
+Package natbib Warning: Citation `lua05' on page 85 undefined on input line 11.
+
+
+[85
 
 
 
-] [87] [88] [89] [90]
+]
 
-Package natbib Warning: Citation `mercury02' on page 91 undefined on input line
- 107.
+Package natbib Warning: Citation `gomaa99' on page 86 undefined on input line 2
+4.
 
-[91] [92] [93] [94] [95] [96]
+[86]
+File: grafiken/sip-client-server.eps Graphic file (type eps)
+ <grafiken/sip-client-server.eps> [87] [88]
 
-LaTeX Warning: Reference `p2psipregisterandjoin' on page 97 undefined on input 
-line 206.
+Package natbib Warning: Citation `mercury02' on page 89 undefined on input line
+ 69.
+
+[89] [90]
+
+Package natbib Warning: Citation `lua05' on page 91 undefined on input line 99.
 
 
-LaTeX Warning: Reference `p2psipregisterandjoin_user' on page 97 undefined on i
-nput line 210.
+File: grafiken/sip-unstrukturiert.eps Graphic file (type eps)
+<grafiken/sip-unstrukturiert.eps> [91] [92]
+File: grafiken/sip-p2pstruktur.eps Graphic file (type eps)
+ <grafiken/sip-p2pstruktur.eps>
+[93]
+
+LaTeX Warning: Reference `p2psipregisterandjoin' on page 94 undefined on input 
+line 141.
+
+
+LaTeX Warning: Reference `p2psipregisterandjoin_user' on page 94 undefined on i
+nput line 145.
+
+
+Package natbib Warning: Citation `harjula06' on page 94 undefined on input line
+ 147.
 
 File: grafiken/p2psipregisterandjoin.eps Graphic file (type eps)
 <grafiken/p2psipregisterandjoin.eps>
 File: grafiken/p2psipregisterandjoin_user.eps Graphic file (type eps)
  <grafiken/p2psipregisterandjoin_user.eps>
 
-LaTeX Warning: Reference `p2psipcall' on page 97 undefined on input line 227.
+LaTeX Warning: Reference `p2psipcall' on page 94 undefined on input line 164.
 
-[97]
+[94]
 File: grafiken/p2psipcall.eps Graphic file (type eps)
- <grafiken/p2psipcall.eps> [98]) [99] (kapitel/kapitel_benchmarking.tex
+ <grafiken/p2psipcall.eps> [95]
+File: grafiken/3in1registrar.eps Graphic file (type eps)
+ <grafiken/3in1registrar.eps> [96]) [97]
+(kapitel/kapitel_benchmarking.tex
 Kapitel 9.
 File: grafiken/fullmesh.eps Graphic file (type eps)
 <grafiken/fullmesh.eps>
 File: grafiken/fullmeshchart.eps Graphic file (type eps)
- <grafiken/fullmeshchart.eps> [100
+ <grafiken/fullmeshchart.eps> [98
 
 
 
@@ -882,14 +879,14 @@ File: grafiken/partialmeshchart.eps Graphic file (type eps)
  <grafiken/partialmeshchart.eps>
 File: grafiken/fullmesh-worstcase.eps Graphic file (type eps)
 
-<grafiken/fullmesh-worstcase.eps> [101]
+<grafiken/fullmesh-worstcase.eps> [99]
 File: grafiken/ohnevpn1.eps Graphic file (type eps)
  <grafiken/ohnevpn1.eps>
 File: grafiken/ohnevpn2.eps Graphic file (type eps)
 
 <grafiken/ohnevpn2.eps>
 File: grafiken/mitvadupdown.eps Graphic file (type eps)
- <grafiken/mitvadupdown.eps> [102]
+ <grafiken/mitvadupdown.eps> [100]
 File: grafiken/mitvadrtpsip.eps Graphic file (type eps)
 
 <grafiken/mitvadrtpsip.eps>
@@ -897,15 +894,15 @@ File: grafiken/mitholdupanddown.eps Graphic file (type eps)
  <grafiken/mitholdupanddown.eps>
 File: grafiken/mithold1.eps Graphic file (type eps)
 
-<grafiken/mithold1.eps> [103]
+<grafiken/mithold1.eps> [101]
 File: grafiken/mitvadund2codecs.eps Graphic file (type eps)
  <grafiken/mitvadund2codecs.eps>
 File: grafiken/mitvadundrtpsip.eps Graphic file (type eps)
 
-<grafiken/mitvadundrtpsip.eps>) [104] [105] [106] [107] [108] [109]
+<grafiken/mitvadundrtpsip.eps>) [102] [103] [104] [105] [106] [107]
 (kapitel/kapitel_conclusion.tex
 Kapitel 10.
-[110
+[108
 
 
 
@@ -915,13 +912,13 @@ Overfull \hbox (5.86505pt too wide) in paragraph at lines 23--24
 ie-le bis-he-ri-ge Un-zul[]anglichkeiten
  []
 
-[111]
+[109]
 Overfull \hbox (6.23001pt too wide) in paragraph at lines 29--30
 [][]\OT1/cmr/m/n/10.95 Obwohl zwar meh-re-re Sprach-kom-mu-ni-ka-ti-onsl[]osung
 en auf Ba-sis von pro-pri[]ateren
  []
 
-[112]) [113] (Main.bbl [114
+[110]) [111] (Main.bbl [112
 
 
 
@@ -937,7 +934,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 141--147
 ]-
  []
 
-[115]
+[113]
 Underfull \hbox (badness 1102) in paragraph at lines 251--258
 [][]\OT1/cmr/m/sc/10.95 Ipoque\OT1/cmr/m/n/10.95 :  In-ter-net Stu-die 2007: Au
 s-wir-kun-gen von P2P-Filesharing,
@@ -949,39 +946,39 @@ Overfull \hbox (10.20546pt too wide) in paragraph at lines 251--258
 ernet[]study[]2007
  []
 
-[116]
-Underfull \hbox (badness 10000) in paragraph at lines 369--373
+[114]
+Underfull \hbox (badness 10000) in paragraph at lines 360--364
 [][]\OT1/cmr/m/sc/10.95 Postel\OT1/cmr/m/n/10.95 , J.:  User Da-ta-gram Pro-to-
 col.  In:
  []
 
-[117]
-Underfull \hbox (badness 10000) in paragraph at lines 418--422
+[115]
+Underfull \hbox (badness 10000) in paragraph at lines 409--413
 [][]\OT1/cmr/m/sc/10.95 Reichswald\OT1/cmr/m/n/10.95 , R. ; \OT1/cmr/m/sc/10.95
  M[]oslein\OT1/cmr/m/n/10.95 , K. ; \OT1/cmr/m/sc/10.95 Sa-chen-ba-che-rand\OT1
 /cmr/m/n/10.95 , K. ;
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 418--422
+Underfull \hbox (badness 10000) in paragraph at lines 409--413
 \OT1/cmr/m/sc/10.95 H.Engelberger\OT1/cmr/m/n/10.95 :  \OT1/cmr/m/it/10.95 Te-l
 e-ko-ope-ra-ti-on - Verteilte- Ar-beits und
  []
 
-[118]
-Underfull \hbox (badness 3601) in paragraph at lines 537--542
+[116]
+Underfull \hbox (badness 3601) in paragraph at lines 528--533
 [][]\OT1/cmr/m/sc/10.95 Schulzrinne\OT1/cmr/m/n/10.95 , H. ; \OT1/cmr/m/sc/10.9
 5 Cas-ner\OT1/cmr/m/n/10.95 , S. ; \OT1/cmr/m/sc/10.95 Fre-de-rick\OT1/cmr/m/n/
 10.95 , R. ; \OT1/cmr/m/sc/10.95 Ja-cob-son\OT1/cmr/m/n/10.95 ,
  []
 
 
-Underfull \hbox (badness 1067) in paragraph at lines 537--542
+Underfull \hbox (badness 1067) in paragraph at lines 528--533
 \OT1/cmr/m/n/10.95 V.:  RTP: A Trans-port Pro-to-col for Real-Time Ap-p-li-ca-t
 i-ons.  In:
  []
 
-[119] [120]) [121] (kapitel/erklaerung.tex) [122
+[117] [118]) [119] (kapitel/erklaerung.tex) [120
 
 
 ]
@@ -1004,12 +1001,12 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 6714 strings out of 95338
- 96060 string characters out of 1184228
- 211510 words of memory out of 1500000
- 9671 multiletter control sequences out of 110000
+ 6726 strings out of 95338
+ 96324 string characters out of 1184228
+ 211483 words of memory out of 1500000
+ 9682 multiletter control sequences out of 110000
  11820 words of font info for 42 fonts, out of 1200000 for 2000
  14 hyphenation exceptions out of 8191
- 38i,11n,46p,1418b,1101s stack positions out of 5000i,500n,10000p,200000b,5000s
+ 38i,11n,46p,1501b,1101s stack positions out of 5000i,500n,10000p,200000b,5000s
 
-Output written on Main.dvi (134 pages, 495024 bytes).
+Output written on Main.dvi (132 pages, 482876 bytes).
