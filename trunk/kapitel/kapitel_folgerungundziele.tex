@@ -1,19 +1,20 @@
-\chapter{Probleme und Herausforderungen}
-In diesem Kapitel sollen die bisher dargestellten Grundlagen der Kommunikation genutzt werden, um  anhand ausgewählter Analysen bisherige Probleme der Sprachkommunikation einzuordnen, gemeinsame Ursachen zu finden und Verbesserungsvorschläge abzuleiten. Ein theoretischer Ansatz soll helfen, neue Konzepte zu entwickeln und aus diesen sukzessive praktische Empfehlungen für eine bessere Sprach\-kommunikations\-lösung zu geben.
+\chapter{Anaylse der Sprachkommunikation resultierende und Herausforderungen}
 
-\section{Probleme Bisheriger Sprachkommunikationslösungen}
+In diesem Kapitel sollen die in Kapitel 2 dargestellten Grundlagen der Kommunikation genutzt werden, um anhand ausgewählter Analysen bisherige Probleme der Sprachkommunikation in Mehrspieler-Computerspielen systematisch einzuordnen, gemeinsame modellbedingte Ursachen zu finden und eigene innovative Konzepte zu entwickeln. Diese sehen die Entwicklung einer integrierten Sprachkommunikation vor, die die Metapher einer Luftübertragung von Sprache nutzt, um eine distanzbasierte Sprachkommunikation zu erlauben. Es wird erläutert, wie die Konzepte der Proxemik aus Kapitel 2 zur Steuerung von mehreren Sprachübertragnungskanälen genutzt werden und auch ein Ansatz geliefert, wie eine gleichzeitige interpersonellen und Massenkommunikation anhand eines erweiterten Mixing-Konzepts realisiert werden kann. 
+
+\section{Analyse bisheriger Lösungen}
 \label{sprachprobleme}
 %Vor allem Actionspiele bedürfen eines hohen Anteils an Sprachkommunikation, um im Mehrspieler-Modus, die langsame Textkommunikation zu kompensieren. Strategie-, Simulations- und Puzzlespiele verzichten meist auf die Sprachkommunikation entweder wegen eines rundenbasierten Spielmodus oder des fehlenden Mehrspielercharakters des Spiels. Rollen und Actionspiele erlauben meist die Sprachkommunikation in virtuellen Welten bei Spielern der gleichen Spielegruppe. Ein spontanes Gespräch mit noch unbekannten Spielern ist jedoch aufgrund technischer Möglichkeiten und fehlender Integration meist nicht möglich.
 
 Obwohl die Sprachkommunikation bei der zwischenmenschlichen Interaktion die dominierende Kommunikationsart ist, ist sie bis auf wenige Ausnahmen nicht in Computerspiele integriert worden. Bisher werden Konferenzlösungen für Spiele durch eine Vielzahl von kommerziellen Drittanbieter Programmen wie \textit{Roger Wilco}\footnote{GameSpy Industries, Version 22.03.2008, http://rogerwilco.gamespy.com}, \textit{Ventrillo}\footnote{Flagship Industries, Inc. Version 22.03.2008, http://www.ventrilo.com}, \textit{Teamspeak}\footnote{TeamSpeak Systems GmbH, Version 22.03.2008, http://www.goteamspeak.com} ermöglicht. Spieler können sich mittels eines Mikrofons und Kopfhörers unterhalten, wobei die ins Mikrofon gesprochene Nachricht an alle Teilnehmer des Empfangskanals gesendet wird. Sprachkommunikation wird mittels zusätzlicher Sprachserver ermöglicht, auf denen sich Mitspieler zunächst vor Spielbeginn einloggen und einem gemeinsamen Kanal beitreten. Eine durchgehend in alle Spielegenre integrierte Sprachkommunikation bietet als einziges bisher das \textit{XBox-Live}\footnote{Microsoft Corporation, Version 21.03.2008, http://www.xbox.com/} System, das lange Zeit aufgrund fehlender Tastatureingabe, nur die Kommunikation über das Mikrofon und Kopfhörer ermöglichte. 
 
-In einer Feldstudie \cite{halloran03} analysierten Holloran et Al. die soziale Auswirkung dieser Programme auf die Kommunikation zwischen Spielern. Sie zunächst stellten fest, dass Sprachkommunikation grundsätzlich für Mehrspieler-Spiele gut geeignet ist und die soziale Erfahrung durch eine hohe Lebendigkeit und Personalisierung der Kommunikation erhöht. 
+In einer Feldstudie \cite{halloran03} analysierten Holloran et Al. die soziale Auswirkung dieser Programme auf die Kommunikation zwischen Spielern. Dabei soll auch geklärt werden, ob Sprachkommunikation grundsätzlich für Mehrspieler-Spiele gut geeignet ist und die soziale Erfahrung durch eine hohe Lebendigkeit und Personalisierung der Kommunikation erhöht. 
 
 \subsubsection{Reale Sprachsituation}
 Um vorab zu bestimmen, wie Sprache zwischen Spielern benutzt wird, wurden 8 Spieler im gleichen Raum beim Spielen eines First-Person-Shooters über mehrere Stunden aufgezeichnet. Im Gegensatz zu Telefonkonferenzen, bei denen die Sprecher, um Interferenzen zu minimieren, jeweils nur einer nach dem anderen sprechen, wurde eine starke gleichzeitige Interaktion sowohl in zwischen den Spielfiguren im Spiel, als auch zwischen den menschlichen Spielern im Raum festgestellt. Dabei agierten die Spieler in zwei verschiedenen sozialen Umgebungen gleichzeitig: Während die Spielfiguren einen Kampf im virtuellen Raum austrugen, unterhielten sich die Spieler gleichzeitig über ihre Herkunft, Alter und ihre Erfahrung beim Spielen. Offenbar sind im Szenario einer realen Sprachkommunikation die Spieler mühelos in der Lage durch kurze Feedbackzeiten eine ausgeprägte Sprachkommunikation zu führen. Durch die die Anpassung der Stimmlautstärke und durch den natürlichen Einsatz von nonverbaler Kommunikation konnten alle Teilnehmer ohne Mühe zwischen den einzelnen Gesprächspartnern wechseln. Sie zeigten Emotionen und empfanden beim Spielen eine starke Interaktivität und Lebhaftigkeit. Dies ist das ideale Ziel, das erreicht werden soll, wenn man an eine Umsetzung von Sprachkommunikation denkt. 
 
 \subsubsection{Ein-Kanal-Problem}
-Anschließend spielten die gleichen Spieler wieder Mehrspieler-Spiele gegeneinander, befanden jedoch jeweils an anderen Orten und sollten sich mit Hilfe der vorhandenen Sprachkommunikationslösungen miteinander unterhalten. Dabei wurden sie über mehrere Stunden aufgezeichnet. Die Analyse ergab diesmal eine leisere und geringere Sprachkommunikation, bei der sich die Spieler mehr auf das Spiel konzentrierten, und oft nur aufgabenorientierte Informationen austauschten. Die geringere Intensität wurde vor allem auf technische Einschränkungen zurückgeführt: Vor allem die Tatsache, dass im \textit{Xbox Live} System nur ein Kanal für mehrere Spielern zur Verfügung steht wurde von den Teilnehmern bemängelt. Da bereits eine Kollision von 2 gleichzeitigen Sprachübertragungen ausreicht, um nicht mehr verstanden zu werden, unterliegt ein solcher Sprachkanal implizit einer starken Reglementierung und wird von einzelnen Spielern meist nur zur Koordination der Gruppe benutzt. Interpersonelle Gespräche sind somit auf diesen Kanälen fast ausgeschlossen.
+Anschließend spielten die gleichen Spieler wieder Mehrspieler-Spiele gegeneinander, befanden jedoch jeweils an anderen Orten und sollten sich mit Hilfe der vorhandenen Sprachkommunikationslösungen miteinander unterhalten. Dabei wurden sie über mehrere Stunden aufgezeichnet. Die Analyse ergab diesmal eine leisere und geringere Sprachkommunikation, bei der sich die Spieler mehr auf das Spiel konzentrierten, und oft nur aufgabenorientierte Informationen austauschten. Die geringere Intensität wurde hauptsächlich auf technische Einschränkungen zurückgeführt: Vor allem die Tatsache, dass im \textit{Xbox Live} System nur ein Kanal für mehrere Spielern zur Verfügung steht wurde von den Teilnehmern bemängelt. Da bereits eine Kollision von 2 gleichzeitigen Sprachübertragungen ausreicht, um nicht mehr verstanden zu werden, unterliegt ein solcher Sprachkanal implizit einer starken Reglementierung und wird von einzelnen Spielern meist nur zur Koordination der Gruppe benutzt. Interpersonelle Gespräche sind somit auf diesen Kanälen fast ausgeschlossen.
 
 \subsubsection{Schwierige Addressierung}
 Gibbs et Al. untersuchten \cite{gibbs04}, \cite{Gibbs04a} die Sprachkommunikation auf bestehende Probleme bei ihrer Benutzer\-freundlich\-keit  und ihren sozialen Möglich\-keiten. %Sie etablieren den Begriff des Computergestützten Kooperativen Spielens ('Computer Supported Cooperative Play' Abk. \textit{CSCP}), der definiert wird als gemeinsames Engagement von zwei oder mehr Individuen in einer Freizeitaktivität mittels einer Computerumgebung. Im Kontext ihrer Untersuchung von Sprachkommunikation im CSCP führen sie auch den Begriff der \textit{Soziabilität} ein, die von Pearce in \cite{pearce03} ausführlich definiert wird. Der entscheidende Faktor bei der Soziabilität eines Spieles ist es, nicht nur die Interaktion zwischen dem Spieler und dem Spiel zu berücksichtigen, sondern auch die Interaktion zwischen den Spielern untereinander im Spiel. Eigenschaften wie Spielernamen, Freundeslisten und Sprachkommunikation sind Faktoren die zur \textit{Soziabilität} beitragen. 
@@ -25,27 +26,9 @@ In einer weiteren Studie \cite{halloran04} untersuchten Halloran et Al. welche A
 
 %Vor allem für den späteren Entwurf einer Sprachkommunikation sollen hier medienpsychologische Konzepte vorgestellt werden, die später direkten Einfluss auf ihre Umsetzung haben werden. 
 
-\section{Resultierende Probleme und Herausfoderungen}
+\section{Probleme und Herausforderungen}
 All diese Erkentnisse zeigen, dass Sprachkommunikation - im Gegensatz zur Textkommunikation einen hohen technischen Aufwand benötigt, um sie überhaupt zu ermöglichen. Durch Probleme auf der technischen Stufe wird das Gesprochene für das Gegenüber oft unverständlich: Falsche Einstellungen an Mikrofon und Lautsprechern oder störende Hintergrundgeräusche können zu einer starken Beeinträchtigung der Kommunikation führen. Die Adressierung der Personen gestaltet sich oft schwer und führt zu Missverständnissen. Um die in diesem Kapitel gemachten Vorschläge zu untersuchen, soll ein Prototyp eines Spiels entstehen, in dem Konzepte ausprobiert und untersucht werden können. 
 
-\subsection{Art des Spieleprototyps}
-Mehrspieler-Computerspiele spielen in detaillierten, realistischen virtuellen 3D-Welten, durch die man mittels einer Spielfigur navigiert. In diesen Welten kommunizieren Spieler miteinander aus verschiedenen Gründen wie z.B. um die Strategie zu besprechen, Hilfe zu rufen, die Leistung des Anderen zu bewerten oder um einfach nur zu plaudern. 
-
-Eine klassische Unterteilung \cite{aarseth03} von Spielen in Spielegenres zeigt, dass in 
-Abhängigkeit vom Genre des Spiels der Kommunikationsaspekt unterschiedlich stark ausgeprägt ist. Vor allem 3D-Actionspiele und Echtzeit-Rollenspiele haben den größten Bedarf an einer ausgeprägten Sprachkommunikation, da sie den Echtzeit-Aspekt betonen und oft eine kollektive synchronisierte Zusammenarbeit mehrerer Spielergruppen benötigen. 
-
-Auch der Prototyp des Spiels soll eine virtuelle, detaillierte und realistische 3D-Welt abbilden, in der der Spieler die Möglichkeit frei bewegen und mit anderen Spielern in Interaktion treten kann.
-
-Im Viereck \cite{lindley03}, \cite{gibbs05} aus Spielerlebnis, Spielsimulation, erzählerischem Aspekt und der Spielerinteraktion soll hier eine hohe Spielerinteraktion und Simulationstiefe erreicht werden. Ein Antibeispiel wäre ein Spiel wie Tetris das zwar ein ausgeprägtes Spielerlebnis besitzt aber nur geringfügig in der Spielesimulation erzählerischem Aspekt ausgebildet ist und über keine Spielerinteraktion verfügt. Ein gutes Beispiel wäre das Mehrspieler-Computerspiel \textit{Second Life} das einen hohen Grad an Spielerinteraktion besitzt, dafür aber in anderen Dimensionen kaum ausgeprägt ist. 
-
-Obwohl in dieser Arbeit kein Anspruch darauf besteht einen Prototypen zu entwickeln, der einem ausgereiften 3D-Action- oder Echtzeit-Rollenspiel entspricht, besteht ein Ziel der Arbeit darin, den Aspekt der gemeinsamen Spielerinteraktion zu betonen. Dies soll vor allem durch eine möglichst effektive und intuitive Einsatzmöglichkeit der Sprachkommunikation erreicht werden, während sich der Spieler in einer möglichst realistischen Umgebung befinden soll.
- 
-\begin{figure}[tbh]
-	\centering
-		\includegraphics[width=1.00\textwidth]{grafiken/spielgenredreieck.eps}
-	\caption{Viereck aus Spielerlebnis, Simulation, erzählerischem Aspekt und Spielerinteraktion}
-	\label{fig:spieledreieck}
-\end{figure}
 
 \subsection{Einsatz von Methaphern zur Sprachübertragung}
 
@@ -89,11 +72,15 @@ Ein Großteil der Störungen resultiert aus der Untauglichkeit eines einzigen Über
 	\item \textbf{Keine Kontrolle über Empfänger der Nachricht}:  Bedingt durch die Massenkommunikation kann keine gezielte Adressierung der Teilnehmer erfolgen. So können auf einem Kanal nur alle Teilnehmer gleichzeitig angesprochen werden, und der Empfänger konnte nur aus dem Kontext erkennen, dass die Nachricht für ihn bestimmt ist. 
 	
 		\item \textbf{Keine Kontrolle über Empfang der Nachrichten}: Analog zum Addressierungsproblem sind Teilnehmer genauso wenig in der Lage zu kontrollieren, welche Sprachnachrichten sie empfangen möchten und welche sie verwerfen wollen. Oft führt dies dazu, dass ein Großteil der Sprachkommunikation auf dem Kanal als Lärm empfunden wird. 
+
+\end{itemize}
 		
 Allerdings hat ein Einkanalsystem hat aber auch einige technische architekturbedingte Vorteile, die hier erwähnt, aber in Abschnitt \ref{Architektur-Entwurf} diskutiert werden. 
 
 \begin{itemize}
-	\item \textbf{Linear ansteigender Bandbreitenverbrauch}: Da der Audiostrom zentral gemischt wird, muss der Server der den Kanal betreibt, bei N Teilnehmern genau N Ströme entgegennehmen und nur N Audioströme verschicken. Dieses Verhalten wird genauer in Kapitel \ref{Architektur-Entwurf} behandelt.
+
+	\item \textbf{Linear ansteigender Bandbreitenverbrauch}: Da der Audiostrom zentral gemischt wird, muss der Server der den Kanal betreibt, bei N Teilnehmern genau N Ströme entgegennehmen und nur N Audioströme verschicken. 
+
 	\item \textbf{Einfache Kanaladministration}: Existiert nur ein einziger Kanal, ist seine Administration und der Mischvorgang einfach. Alle Spieler die den Kanal betreten erhalten die Summe aller Signale und versenden auch ihr eigenes Signal an den Kanal.  
 \end{itemize}
 

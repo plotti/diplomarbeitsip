@@ -1,7 +1,7 @@
 \chapter{Architektur-Entwurf}
 \label{Architektur-Entwurf}
 
-Bevor im Entwurf mögliche Szenarien gegenüber gestellt werden, soll abgegrenzt werden was nicht Aufgabe dieses Kapitels sein soll: Da Probleme der Kontrolle von Konferenzen, der Einsatz von Multicast-Gruppen und deren Kontroll-Mechanismen in den letzten Jahren umfangreich erforscht wurden \cite{schulzrinne02}, sollen diese hier nicht weiter erläutert werden. Der Schwerpunkt des Entwurfs soll sich mit der Analyse bestehender Architekturen für Sprachübertragung in Computerspielen befassen und den Einsatz von SIP in diesen Szenarien erläutern. 
+Dieses Kapitel zeigt, dass die Umsetzung einer Sprchkommunikationslösung an die darunter liegende Architektur geknüpft ist. Dazu werden bestehende Architekturen für die Sprachübertragung vorgestellt und die Anforderungen und Probleme an diese beschrieben. Da noch keine strukturierte Analyse von SIP-protokoll-basierten Lösungen und ihrer Tauglichkeit für Mehrspieler-Sprach\-kommunikations\-lösungen existiert, wird diese in diesem Kapitel vorgenommen und eine Entscheidung für die Implementierung eines hybriden multi-unicast Ansatzes getroffen. Dieses Kapitel geht auch auf die resultierenden Bandbreitenprobleme der gewählten Architektur ein und stellt eigene Konzepte vor, wie anhand eines Partial-Mesh-Ansatzes, bei dem nur relevante Audioverbindungen etabliert werden, Bandbreite eingespart werden kann.
 
 \section {Analyse der bestehenden Architekturen für Audioübertragung}
 

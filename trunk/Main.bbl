@@ -1,4 +1,4 @@
-\begin{thebibliography}{83}
+\begin{thebibliography}{88}
 % this bibliography was produced with the style dinat.bst v2.5
 \makeatletter
 \newcommand{\dinatlabel}[1]%
@@ -67,6 +67,15 @@
   Computer Communications. Proceedings}
 \newblock (2006), April, S.~1--12. --
 \newblock ISSN 0743-166X
+
+\bibitem[Bharambe u.\,a.(2002)Bharambe, Rao und Seshan]{mercury02}
+\dinatlabel{Bharambe u.\,a. 2002} \textsc{Bharambe}, Ashwin~R.~; \textsc{Rao},
+  Sanjay~; \textsc{Seshan}, Srinivasan:
+\newblock Mercury: a scalable publish-subscribe system for internet games.
+\newblock In: \emph{NetGames '02: Proceedings of the 1st workshop on Network
+  and system support for games}.
+\newblock New York, NY, USA~: ACM, 2002, S.~3--9. --
+\newblock ISBN 1-58113-493-2
 
 \bibitem[Bolot und Fosse-Parisis(29 Mar--2 Apr 1998)]{bolot98}
 \dinatlabel{Bolot und Fosse-Parisis 29 Mar--2 Apr 1998} \textsc{Bolot},
@@ -193,6 +202,15 @@
   Springer, 2004, S.~377--385. --
 \newblock ISBN 3-540-22947-7
 
+\bibitem[Gomaa und Farrukh(1999)]{gomaa99}
+\dinatlabel{Gomaa und Farrukh 1999} \textsc{Gomaa}, H.~; \textsc{Farrukh},
+  G.~A.:
+\newblock A reusable architecture for federated client/server systems.
+\newblock In: \emph{SSR '99: Proceedings of the 1999 symposium on Software
+  reusability}.
+\newblock New York, NY, USA~: ACM, 1999, S.~113--121. --
+\newblock ISBN 1-58113-101-1
+
 \bibitem[Gu u.\,a.(2005)Gu, Wen, Yu und Shae]{gu05}
 \dinatlabel{Gu u.\,a. 2005} \textsc{Gu}, Xiaohui~; \textsc{Wen}, Zhen~;
   \textsc{Yu}, Philip~S.~; \textsc{Shae}, Zon-Yin:
@@ -202,6 +220,12 @@
   international conference on Multimedia}.
 \newblock New York, NY, USA~: ACM, 2005, S.~303--306. --
 \newblock ISBN 1-59593-044-2
+
+\bibitem[Hall und Knapp(2005)]{hall05}
+\dinatlabel{Hall und Knapp 2005} \textsc{Hall}, Judith~A.~; \textsc{Knapp},
+  Mark~L.:
+\newblock \emph{Nonverbal Communication in Human Interaction}.
+\newblock Wadsworth Publishing; 6 edition, 2005
 
 \bibitem[Halloran~J.(2003)]{halloran03}
 \dinatlabel{Halloran~J. 2003} \textsc{Halloran~J.}, Fitzpatrick~G.:
@@ -221,6 +245,18 @@
 \newblock SDP: Session Description Protocol.
 \newblock In: \emph{http://www.ietf.org/rfc/rfc2327.txt}
 \newblock (1998)
+
+\bibitem[Harjula u.\,a.(2006)Harjula, Ala-Kurikka, Howie und
+  Ylianttila]{harjula06}
+\dinatlabel{Harjula u.\,a. 2006} \textsc{Harjula}, Erkki~;
+  \textsc{Ala-Kurikka}, Jussi~; \textsc{Howie}, Douglas~; \textsc{Ylianttila},
+  Mika:
+\newblock ISE02-6: Analysis of Peer-to-Peer SIP in a Distributed Mobile
+  Middleware System.
+\newblock In: \emph{Global Telecommunications Conference, 2006. GLOBECOM '06.
+  IEEE}
+\newblock (2006), Nov., S.~1--6. --
+\newblock ISSN 1930-529X
 
 \bibitem[Hu und Liao(2004)]{hu04}
 \dinatlabel{Hu und Liao 2004} \textsc{Hu}, Shun-Yun~; \textsc{Liao}, Guan-Ming:
@@ -319,6 +355,13 @@ dy\_2007}
 \newblock Game taxonomies: a high level framework for game analysis and design.
 \newblock In: \emph{Gamasutra}
 \newblock (2003)
+
+\bibitem[Lua u.\,a.(2005)Lua, Crowcroft, Pias, Sharma und Lim]{lua05}
+\dinatlabel{Lua u.\,a. 2005} \textsc{Lua}, Keong~; \textsc{Crowcroft}, J.~;
+  \textsc{Pias}, M.~; \textsc{Sharma}, R.~; \textsc{Lim}, S.:
+\newblock A survey and comparison of peer-to-peer overlay network schemes.
+\newblock In: \emph{Communications Surveys \& Tutorials, IEEE}
+\newblock (2005), S.~72--93
 
 \bibitem[Maymounkov und Mazieres(2002)]{kademilla02}
 \dinatlabel{Maymounkov und Mazieres 2002} \textsc{Maymounkov}, P.~;

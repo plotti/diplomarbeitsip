@@ -3,9 +3,9 @@ Type=TeXnicCenterProjectSessionInformation
 Version=2
 
 [SessionInfo]
-ActiveTab=2
-FrameCount=19
-ActiveFrame=14
+ActiveTab=0
+FrameCount=20
+ActiveFrame=16
 
 [Frame0]
 Columns=1
@@ -32,9 +32,9 @@ cxCur=719
 cxMin=10
 
 [Frame0_View0,0]
-Cursor.row=19
+Cursor.row=35
 Cursor.column=0
-TopSubLine=8
+TopSubLine=19
 
 [Frame1]
 Columns=1
@@ -61,9 +61,9 @@ cxCur=751
 cxMin=10
 
 [Frame1_View0,0]
-Cursor.row=65
-Cursor.column=456
-TopSubLine=219
+Cursor.row=1
+Cursor.column=296
+TopSubLine=0
 
 [Frame2]
 Columns=1
@@ -90,9 +90,9 @@ cxCur=751
 cxMin=10
 
 [Frame2_View0,0]
-Cursor.row=0
-Cursor.column=0
-TopSubLine=0
+Cursor.row=193
+Cursor.column=24
+TopSubLine=474
 
 [Frame3]
 Columns=1
@@ -119,9 +119,9 @@ cxCur=751
 cxMin=10
 
 [Frame3_View0,0]
-Cursor.row=120
-Cursor.column=7
-TopSubLine=382
+Cursor.row=12
+Cursor.column=5
+TopSubLine=59
 
 [Frame4]
 Columns=1
@@ -177,9 +177,9 @@ cxCur=751
 cxMin=10
 
 [Frame5_View0,0]
-Cursor.row=27
-Cursor.column=112
-TopSubLine=33
+Cursor.row=25
+Cursor.column=401
+TopSubLine=36
 
 [Frame6]
 Columns=1
@@ -264,7 +264,7 @@ cxCur=801
 cxMin=10
 
 [Frame8_View0,0]
-Cursor.row=0
+Cursor.row=2
 Cursor.column=0
 TopSubLine=0
 
@@ -293,9 +293,9 @@ cxCur=801
 cxMin=10
 
 [Frame9_View0,0]
-Cursor.row=351
-Cursor.column=358
-TopSubLine=843
+Cursor.row=225
+Cursor.column=54
+TopSubLine=553
 
 [Frame10]
 Columns=1
@@ -322,9 +322,9 @@ cxCur=787
 cxMin=10
 
 [Frame10_View0,0]
-Cursor.row=0
+Cursor.row=350
 Cursor.column=0
-TopSubLine=0
+TopSubLine=679
 
 [Frame11]
 Columns=1
@@ -351,9 +351,9 @@ cxCur=730
 cxMin=10
 
 [Frame11_View0,0]
-Cursor.row=64
-Cursor.column=0
-TopSubLine=51
+Cursor.row=7
+Cursor.column=28
+TopSubLine=0
 
 [Frame12]
 Columns=1
@@ -380,9 +380,9 @@ cxCur=762
 cxMin=10
 
 [Frame12_View0,0]
-Cursor.row=42
+Cursor.row=4
 Cursor.column=0
-TopSubLine=180
+TopSubLine=0
 
 [Frame13]
 Columns=1
@@ -416,8 +416,8 @@ TopSubLine=266
 [Frame14]
 Columns=1
 Rows=1
-Flags=2
-ShowCmd=3
+Flags=0
+ShowCmd=1
 MinPos.x=-1
 MinPos.y=-1
 MaxPos.x=-4
@@ -430,17 +430,17 @@ Class=CLatexEdit
 Document=kapitel\kapitel_network.tex
 
 [Frame14_Row0]
-cyCur=607
+cyCur=162
 cyMin=10
 
 [Frame14_Col0]
-cxCur=965
+cxCur=1000
 cxMin=10
 
 [Frame14_View0,0]
-Cursor.row=188
-Cursor.column=0
-TopSubLine=452
+Cursor.row=2
+Cursor.column=704
+TopSubLine=0
 
 [Frame15]
 Columns=1
@@ -467,15 +467,15 @@ cxCur=1000
 cxMin=10
 
 [Frame15_View0,0]
-Cursor.row=0
+Cursor.row=7
 Cursor.column=0
 TopSubLine=0
 
 [Frame16]
 Columns=1
 Rows=1
-Flags=0
-ShowCmd=1
+Flags=2
+ShowCmd=3
 MinPos.x=-1
 MinPos.y=-1
 MaxPos.x=-4
@@ -488,17 +488,17 @@ Class=CLatexEdit
 Document=kapitel\kapitel_benchmarking.tex
 
 [Frame16_Row0]
-cyCur=413
+cyCur=643
 cyMin=10
 
 [Frame16_Col0]
-cxCur=746
+cxCur=950
 cxMin=10
 
 [Frame16_View0,0]
-Cursor.row=0
-Cursor.column=0
-TopSubLine=0
+Cursor.row=92
+Cursor.column=12
+TopSubLine=160
 
 [Frame17]
 Columns=1
@@ -527,7 +527,7 @@ cxMin=10
 [Frame17_View0,0]
 Cursor.row=12
 Cursor.column=0
-TopSubLine=32
+TopSubLine=37
 
 [Frame18]
 Columns=1
@@ -554,7 +554,36 @@ cxCur=461
 cxMin=10
 
 [Frame18_View0,0]
-Cursor.row=76
-Cursor.column=412
-TopSubLine=453
+Cursor.row=55
+Cursor.column=0
+TopSubLine=364
+
+[Frame19]
+Columns=1
+Rows=1
+Flags=0
+ShowCmd=1
+MinPos.x=-1
+MinPos.y=-1
+MaxPos.x=-4
+MaxPos.y=-30
+NormalPos.left=66
+NormalPos.top=87
+NormalPos.right=898
+NormalPos.bottom=512
+Class=CLatexEdit
+Document=literatur\da.bib
+
+[Frame19_Row0]
+cyCur=370
+cyMin=10
+
+[Frame19_Col0]
+cxCur=803
+cxMin=10
+
+[Frame19_View0,0]
+Cursor.row=1238
+Cursor.column=1
+TopSubLine=1367
 
