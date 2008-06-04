@@ -1,8 +1,9 @@
 \chapter{VoIP Grundlagen}
-
-Voice-over-IP (auch VoIP, IP-Telefonie) bezeichnet die Telefonie über das Internet oder Computernetzwerke. Um per VoIP ein Telefongespräch führen zu können, benötigen Benutzer ein software-basiertes SIP-Telefon oder VoIP-Telefon-Hardware. Gespräche sind mit jedem beliebigen Teilnehmer möglich: Sowohl VoiP-Nummern als auch Teilnehmer mit normalen Telefonnummern können angerufen werden.
+Dieses Kapitel vermittelt die technischen Grundlagen und erläutert wichtige Komponenten des gewählten SIP-Protokolls, die für eine Umsetzung der in Kapitel 3 entworfenen Sprachkommunikationslösung notwendig sind. Dabei wird eine Übersicht über die zur Sprachübertragung und Signalisierung verwendeten Protokollfamilien SIP, SDP, RTP und RTCP gegeben. 
 
 \section{Protokolle zur Echtzeitkommunikation}
+Voice-over-IP (auch VoIP, IP-Telefonie) bezeichnet die Telefonie über das Internet. Um per VoIP ein Telefongespräch führen zu können, benötigen Benutzer ein software-basiertes SIP-Telefon oder VoIP-Telefon-Hardware. Gespräche sind mit jedem beliebigen Teilnehmer möglich: Sowohl VoiP-Nummern als auch Teilnehmer mit normalen Telefonnummern können angerufen werden.
+
 	Voice-over-IP beinhaltet unterschiedliche Protokolle. Zur reinen Signalisierung werden hauptsächlich das Session Initiation Protocol (SIP) \cite{sip02} bzw. Protokolle aus der H.323-Protokollfamilie\footnote{Da SIP die ältere H.323 Protokollfamilie ablöst, wird diese hier nicht behandelt.} verwendet. Bei VoIP sind generell folgende Klassen der Protokolle zu unterscheiden:
 \begin{itemize}
 	\item Protokolle für die Sprachübermittlung: Da die Sprachkommunikation in Echtzeit verläuft, sind spezielle Protokolle für die Übermittlung der Sprache über IP-Netze nötig.
@@ -93,13 +94,15 @@ Eine analoge Sprachübertragung kommt auf einen MOS-Wert von 3.5 bis 4. Hochwerti
 
 Es gibt mehrere Sprachkodierungsverfahren, die bei Voice over IP verwendet werden können. Man unterscheidet zwischen abtastwert-orientierten Kodierungsverfahren, die zwar gute Sprachqualität garantieren aber Bitraten haben, die größer als 16 Kbit/s sind und segment-orientierten Kodierungsverfahren die zwar geringe Bitraten haben, aber dafür nur eine schwache bis gute Sprachqualität bieten. Eine Übersicht üblicher Codecs findet sich in Tabelle \ref{pt-tabelle}.
 
+
 \begin{table}
+\begin{minipage}{\linewidth}
+\renewcommand{\footnoterule}{}
 \centering
-\caption{Einige Sprachkodierungsverfahren ihre PT-Nummern und Bitraten}
 \label{pt-tabelle}
 \begin{tabular}{lllr}
 \toprule
-PT-Nr. & Kodierungsname & Kodierungsart & Bitrate (kbit/s) \\
+PT-Nr.\footnote{Die Verwendung von PT-Nummern wird in Absatz \ref{sdp-aufbau} geschildert} & Kodierungsname & Kodierungsart & Bitrate (kbit/s) \\
 \midrule
 0  & PCM $\mu-Law$ & Abtastwert-orientiert & 64 \\
 4  & G723 & Segment-orientiert & 5.3-6.3 \\
@@ -111,6 +114,8 @@ dyn & G726-32 & Abtastwert-orientiert & 32 \\
 dyn & G726-16 & Abtastwert-orientiert & 16 \\
 \bottomrule
 \end{tabular}
+\end{minipage}
+\caption{Einige Sprachkodierungsverfahren und Bitraten}
 \end{table}
 
 \section{Session Initiation Protokoll (SIP)}
@@ -343,6 +348,7 @@ Die wichtigsten Besonderheiten von RTP sind:
 \end{itemize}
 
 \subsection{Aufbau von RTP-Paketen}
+\label{rtp-header}
 RTP übermittelt ein Echtzeitmedium als Folge von RTP-Paketen, die mit einem vorangestellten UDP-Header in den IP-Paketen transportiert werden. Jedes RTP-Paket enthält einen RTP-Header und die Nutzlast(\textit{Payload}). Die wesentlichen Angaben im RTP-Header sind:
 
 \begin{figure}[h]

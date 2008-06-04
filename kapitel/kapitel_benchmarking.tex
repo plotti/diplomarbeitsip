@@ -1,16 +1,33 @@
 \chapter{Evaluation}
 
+In diesem Kapitel wird das Resultat der Umsetzung mit konkreten Messergebnissen erfasst. Anhand eines Szenarios wird der Full-Mesh-Ansatz mit dem entwickelten Partial-Mesh-Ansatz verglichen und dabei Einsparungen der Bandbreite aufgezeigt. In einem weiteren Szenario wird der Bandbreitenverbrauch des Prototyps in den in Kapitel 7 vorgestellten Zonen gemessen. Dabei werden jeweils Messungen für die Audiocodec-Variationen, die SIP-Hold-, RTP-Silence-Suppression-Technik vorgenommen. 
+
+\section{Versuchsaufbau}
+
+Um die tatsächliche Bandbreitenveränderungen zu messen, wurden alle versendeten und empfangenen Pakete auf einem Spiel initiierenden Rechner protokolliert\footnote{Gerald Combs: Wireshark 1.0.0, Version 08.05.2008, http://www.wireshark.org/}. Danach wurden die Daten nach den Quell-IP-Adressen gefiltert, um so den Bandbreitenverbrauch den jeweiligen Teilnehmern zuzuordnen. Um den reinen Bandbreitenverbrauch der Audioverbindungen zu messen wurden auch Pakete die die Positionsänderungen der Teilnehmer untereinander broadcasten ausgefiltert. Für alle Messungen wurde die Testumgebung aus Abschnitt \ref{testumgebung} eingesetzt. 
+
+Die virtuellen Zonenradien betrugen 600 Pixel für die private Zone, 1200 Pixel für die soziale Zone und 2400 Pixel für die öffentliche Zone. Die Gesamtgröße des Spielfeldes betrug $5000 \cdot 5000$ Pixel und die Höhe und Breite eines Avatars $300 \cdot 100$ Pixel. 
+
+\subsection{Header-Overhead}
+Bei fast\footnote{In Abschnitt \ref{audiocodec-zonen} wurde der Speex-Codec mit einer Abtastrate von 8kHz eingesetzt.} allen Messungen wurde der Speex Codec mit einer Abtastrate von 16kHz benutzt, der eine mittlere Bitrate von 16.8 kbit/s\footnote{Speex Codec Quality Comparison (Xiph OSC) , Version 22.03.2008, http://speex.org/comparison/} besitzt.  Bei beiden lag die Stimm-Abtastrate bei 20ms.
+
+Wie man jedoch in allen Grafiken erkennen kann, weist die tatsächliche verbrauchte Bandbreite jedes Rechners einen Upload von 5kByte/s oder 40 kbit/s auf. Die Differenz zwischen der Nutzlast (Payload) und der tatsächlichen Bandbreite liegt im Header-Overhead. 
+
+Für für die Header werden pro Paket insgesamt 40 Bytes benötigt (IP\footnote{RFC: Internet Protocol, Version 22.03.2008, http://www.ietf.org/rfc/rfc791.txt}: 20 Bytes, UDP\footnote{RFC: User Datagram Protocol, Version 22.03.2008, www.ietf.org/rfc/rfc768.html} : 8 Bytes, RTP\footnote{siehe Abschnitt \ref{rtp-header}} : 12 Bytes). Zusätzlich dazu kommen 20 Bytes VPN-Headerinformationen\footnote{VPN Protocols, Version 22.03.2008, http://www.vpnc.org/vpn-standards.html}, da der Laptop der die Messung ausführte durch einen VPN mit dem Uni-Netz verbunden war. 
+
+Geht man davon aus, dass jedes Paket ein Stimm-Sample überträgt und diese alle 20ms abgetastet werden, ergeben sich 50 Pakete pro Sekunde. Jedes Paket beinhaltet einen VPN/IP/UDP/RTP Header von 480 Bit (60 Byte*8). Also werden pro Sekunde 24.000 Bit (480 Bit * 50) Headerinformationen verschickt. Dies ist genau die Differenz zwischen der Bitrate des Audiocodecs und den tatsächlich verbrauchten Bandbreite.
+
 \section{Full-Mesh vs. Partial-Mesh Szenario}
 
 Um zu verdeutlichen, wie der umgesetzte Ansatz, zu Einsparungen beim Verbrauch der Bandbreite eingesetzt werden kann, wird er mit einem gewöhlichem Full-Mesh Ansatz verglichen, in dem jeder Teilnehmer des Spiels mit allen anderen 
 Teilnehmern Audioverbindungen aufbaut, unabhängig davon, wo sich diese im Spiel befinden.
 
-Im vorgeschlagenen Partial-Mesh-Ansatz dagegen, verbindet sich der Teilnehmer nur mit Spielern die sich in seiner unmittelbaren Nähe befinden. Dieses Verhalten entspricht dem umgesetzten Proximitätskonzept, in dem nur Audioverbindungen mit Spielern aufgebaut werden, die sich mindestens in der Öffentlichen Zone befinden.
+Im vorgeschlagenen Partial-Mesh-Ansatz dagegen, verbindet sich der Teilnehmer nur mit Spielern die sich in seiner unmittelbaren Nähe befinden. Dieses Verhalten entspricht dem umgesetzten Proximitätskonzept, in dem nur Audioverbindungen mit Spielern aufgebaut werden, die sich mindestens in der öffentlichen Zone befinden.
 
-In einem einfachen Szenario werden beide Ansätze ausprobiert: Hier betreten 5 Spieler nacheinander die Spielewelt. Die Nummer des Teilnehmers entspricht der Reihenfolge seiner Teilnahme am Spiel: Zunächst betritt Teilnehmer 1 das Spielfeld, danach Teilnehmer 2 usw... .Spieler 1, 2 und 3 befinden sich in gegenseitiger Hörnähe, während Spieler 5 und 6 isolierte Positionen einnehmen. 
+In einem einfachen Szenario werden beide Ansätze ausprobiert: Hier betreten 5 Spieler nacheinander die Spielewelt. Die Nummer des Teilnehmers entspricht der Reihenfolge seiner Teilnahme am Spiel: Zunächst betritt Teilnehmer 1 das Spielfeld, danach Teilnehmer 2 usw... .Spieler 1, 2 und 3 befinden sich in gegenseitiger Hörnähe, während Spieler 5 und 6 isolierte Positionen einnehmen. Da der Versuch mehrmals manuell ausgeführt wurde, sind die Beitritszeitpunkte der Teilnehmer nicht exakt uniform verteilt, was jedoch die Aussagen der Versuchsergebnisse nicht beeinflusst. 
 
 \subsection{Full-Mesh}
-Die Abbildung \ref{fig:fullmesh} zeigt, dass beim Full-Mesh-Ansatz jeder Teilnehmer Verbindungen zu allen anderen Teilnehmern etabliert und so für jeden Teilnehmer eine hohe Bandbreitenbelastung zustande kommt. 
+Die Szenario-Abbildung \ref{fig:fullmesh} zeigt, dass beim Full-Mesh-Ansatz jeder Teilnehmer Verbindungen zu allen anderen Teilnehmern etabliert und so ein Full-Mesh zwischen allen Teilnehmern gebildet wird. 
 
 \begin{figure}[tbh]
 	\centering
@@ -19,7 +36,7 @@ Die Abbildung \ref{fig:fullmesh} zeigt, dass beim Full-Mesh-Ansatz jeder Teilneh
 	\label{fig:fullmesh}
 \end{figure}
 
-Der Bandbreitenverbrauch wurde in Abbildung \ref{fig:fullmesh-withchart} aus Sicht des Teilnehmers 1 gemessen. Da alle 10 Sekunden ein weiterer Spieler das Spielfeld betritt, wird auch eine Audioverbindung mit diesem Spieler aufgebaut. Dies führt dazu, dass der Verbrauch der Bandbreite sich jeweils um weitere 10Kb/s erhöht. Bei allen Messungen wurde der Speex Codec mit einer Abtastrate von 16kHz benutzt, der eine mittlere Bitrate von 10 - 15 Kb/s besitzt.
+Abbildung \ref{fig:fullmesh-withchart} zeigt den Bandbreitenverbrauch von Teilnehmer 1 in Abhängigkeit zur Anzahl der sich im Spiel befindlichen Spielern. Da alle 10 Sekunden ein weiterer Spieler das Spielfeld betritt, wird auch eine Audioverbindung mit diesem Spieler aufgebaut. Diese führt dazu, dass der Verbrauch der Bandbreite sich jeweils um weitere 10kByte/s (5kByte Up-/ 5kByte Download) erhöht. Dieses Vorgehen führt bei bereits 5 Anwesenden Teilnehmern zu einem Gesamtbandbreitenverbrauch zwischen Teilnehmer 1 und Teilnehmern 2,3,5 von über 40 kByte/s. Im Full-Mesh fließt zum Zeitpunkt $t4$ zwischen allen Teilnehmern bereits ein Gesamtaudiostrom von 100 kByte/s ($10 \cdot 10kByte/s$).
 
 \begin{figure}[tbh]
 	\centering
@@ -31,9 +48,9 @@ Der Bandbreitenverbrauch wurde in Abbildung \ref{fig:fullmesh-withchart} aus Sic
 \subsection{Partial-Mesh}
 Im gleichen Szenario wurde nun die Partial-Mesh Technik eingesetzt, bei der nur noch Verbindungen mit Teilnehmern aufgebaut wurden, die sich mindestens in der öffentlichen Zone des Spielers befinden (siehe Abbildung \ref{fig:partialmesh}).
 
-In der öffentlichen Zone wird zunächst ein SIP Anruf ausgeführt, jedoch gleichzeitig eine \textit{Silence Supression} auf RTP-Ebene vorgenommen. Diese wird so lange aufrecht erhalten, bis der Teilnehmer sich in die Soziale Zone begibt. In der sozialen Zone wird der volle RTP-Audiostrom zwischen den Teilnehmern initiiert. 
+Entsprechend dem Entwurf wird in der öffentlichen Zone zunächst ein SIP Anruf ausgeführt, jedoch gleichzeitig eine \textit{Silence Supression} auf RTP-Ebene vorgenommen. Diese wird so lange aufrecht erhalten, bis der Teilnehmer sich in die Soziale Zone begibt. In der sozialen Zone wird der volle RTP-Audiostrom zwischen den Teilnehmern initiiert. 
 
-Dieses Vorgehen führt dazu, dass Spieler 1 zunächst zwei logische SIP Verbindungen mit Spieler 2 und 3 etabliert. Während mit Spieler 2 ein voller RTP Audiostrom fließt, da sich dieser in der sozialen Zone befindet, wird mit Spieler 3 nur eine Audioverbindung mit \textit{Silence Suppression} etabliert. Teilnehmer 4 und 5 bauen keine Verbindungen auf, da sie sich nicht in Hörreichweite befinden. 
+Wie man in der Szenario-Abbildung \ref{fig:partialmesh} erkennen kann, führt diese Regel dazu, dass Spieler 1 zunächst zwei logische SIP-Verbindungen mit Spieler 2 und 3 etabliert. Während mit Spieler 2 ein voller RTP-Audiostrom fließt, da sich dieser in der sozialen Zone befindet, wird mit Spieler 3 nur eine Audioverbindung mit \textit{Silence Suppression} etabliert. Teilnehmer 4 und 5 bauen keine Verbindungen auf, da sie sich nicht in Hörreichweite befinden. 
 
 \begin{figure}[tbh]
 	\centering
@@ -42,7 +59,7 @@ Dieses Vorgehen führt dazu, dass Spieler 1 zunächst zwei logische SIP Verbindung
 	\label{fig:partialmesh}
 \end{figure}
 
-Der Bandbreitenverbrauch wurde auch aus Sicht des ersten Teilnehmers gemessen. Abbildung \ref{fig:partialmeshchart} zeigt, dass in dem Moment, in dem Spieler 2 das Spiel betritt, eine Audioverbindung aufgebaut wird, die zwischen 10-15Kb/s verbraucht. Betritt Spieler 3 das Spiel, werden nur zusätzliche 1-2Kb/s zur Aufrechterhaltung der Grundkonnektivität der RTP-Verbindung benötigt. Würde sich Teilnehmer 3 nun auf Spieler 1 zu bewegen, würde die Silence Suppression aufgehoben und auch ein normaler Audiostrom von 10-15kbs fließen. Spieler 4 und 5 verursachen keinen zusätzlichen Bandbreitenverbrauch, da sie sich außerhalb der öffentlichen Zone befinden.
+Abbildung \ref{fig:partialmeshchart} zeigt den Bandbreitenverbrauch von Teilnehmer 1 in Abhängigkeit zur Anzahl der sich im Spiel befindlichen Spielern. Zum Zeitpunkt $t1$, in dem Spieler 2 das Spiel betritt, ist der Aufbau einer Audioverbindung, die zwischen 10-15 kByte/s verbraucht, erkennbar. Zum Zeitpunkt $t2$ betritt Spieler 3 das Spiel, diesmal weren nur zusätzliche 1-2kByte/s zur Aufrechterhaltung der Grundkonnektivität der RTP-Verbindung benötigt. Würde sich Teilnehmer 3 nun auf Spieler 1 zu bewegen, würde die \textit{Silence Suppression} aufgehoben und auch ein RTP-Audiostrom von 10-15kbByte/s fließen. Spieler 4 und 5 dagegen verursachen keinen zusätzlichen Bandbreitenverbrauch, da sie sich außerhalb der öffentlichen Zone befinden und keine Verbindungen zu ihnen aufgebaut werden.
 
 \begin{figure}[tbh]
 	\centering
@@ -71,7 +88,7 @@ Hier entfernen sich beide Spieler voneinander, es werden jedoch keine Bandbreite
 \begin{figure}[tbh]
 	\centering
 	\caption{Der Up- und Downstream}
-		\includegraphics[width=1.00\textwidth]{grafiken/ohnevpn1.eps}
+		\includegraphics[width=1.00\textwidth]{grafiken/ohnevadupdown.eps}
 	\label{fig:NOVADrtpsip}
 \end{figure}
 
@@ -79,7 +96,7 @@ Beim Vergleich des RTP und SIP Protokolls in Abbildung \ref{fig:NoVADupdown} sie
 
 \begin{figure}[tbh]
 	\centering
-		\includegraphics[width=1.00\textwidth]{grafiken/ohnevpn2.eps}
+		\includegraphics[width=1.00\textwidth]{grafiken/ohnevadsiprtp.eps}
 		\caption{Signalisierung mit SIP, Audiostrom mit RTP}
 	\label{fig:NoVADupdown}
 \end{figure}
@@ -127,14 +144,15 @@ Beim Bandbreitenvergleich der SIP und RTP Protokolle sieht man, dass eine Signal
 \end{figure}
 
 \subsection{Zonen mit unterschiedlichen Audiocodecs}
-Die dritte Variante beinhaltete den Einsatz von 2 verschiedenen Codecs für die Private und Soziale Zone. In der Privaten Zone wurde der qualitativ hohe Speex Codec mit einer Abtastrate von 32kHz verwendet, während in der sozialen Zone nur der Speex Codec mit einer Abtastrate von 8kHz verwendet wurde. 
+\label{audiocodec-zonen}
+Die dritte Variante beinhaltete den Einsatz von 2 verschiedenen Codecs für die Private und Soziale Zone. In der Privaten Zone wurde der qualitativ hohe Speex Codec mit einer Abtastrate von 16kHz verwendet, während in der sozialen Zone nur der Speex Codec mit einer Abtastrate von 8kHz verwendet wurde. 
 
 Da erwartet wird, dass in der sozialen Zone mehr Verbindungen als in der privaten Zone aufgebaut werden, wird hier auch ein Codec mit einer niedrigeren Bitrate verwendet, um eine größere Anzahl an Verbindungen zu ermöglichen. In der öffentlichen Zone wird, wie im oberen Beispiel die \textit{Silence Supression} angewendet. Unter diesen Voraussetzungen ist in Abbildung \ref{fig:mitvadund2codecs} zu sehen, dass der Bandbreitenverbrauch in der sozialen Zone im Vergleich zur privaten Zone reduziert wird und in der öffentlichen Zone sehr gering ausfällt.
 
 \begin{figure}[tbh]
 	\centering
 		\includegraphics[width=\textwidth]{grafiken/mitvadund2codecs.eps}
-		\caption{Speex mit 32kHz in der privaten Zone und Speex 8khZ in der sozialen Zone}
+		\caption{Speex mit 16kHz in der privaten Zone und Speex 8khZ in der sozialen Zone}
 	\label{fig:mitvadund2codecs}
 \end{figure}
 

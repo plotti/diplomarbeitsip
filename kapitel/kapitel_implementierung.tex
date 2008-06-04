@@ -1,8 +1,28 @@
 \chapter{Implementierung}
 
-Bei der Implementierung bestand die Herausforderung darin eine virtuelle 3D-Welt mit VoIP Funktionalität zu kombinieren. Dabei sollten die einzelnen Komponenten so gewählt werden, dass die in Kapitel 3 präsentierten Verbesserungsvorschläge für eine bessere Sprachkommunikation tatsächlich praktisch umgesetzt werden können. Außerdem sollten die gewählten Komponenten auch die in Kapitel 6 gewählte Architektur unterstützen.
+Dieses Kapitel befasst sich mit der Implementierung des Spiel-Prototyps mit distanzbasierter integrierter Sprachkommunikation auf Basis eines hybriden SIP Multi-unicast-Ansatzes und präsentiert ausgewählte Details und Probleme bei der Umsetzung. Hauptaugenmerk liegt dabei auf der technischen Umsetzung der in \textit{Kapitel3} vorgestellten distanzbasierten Sprachkommunikation, dem Einfluss der Zonenkonzepte auf die verwendete Bandbreite, und der Zusammenarbeit der 3D-Welt mit der VoIP-Anwendung.
+
+ \section{Art des Spieleprototyps}
+Mehrspieler-Computerspiele spielen in detaillierten, realistischen virtuellen 3D-Welten, durch die man mittels einer Spielfigur navigiert. In diesen Welten kommunizieren Spieler miteinander aus verschiedenen Gründen wie z.B. um die Strategie zu besprechen, Hilfe zu rufen, die Leistung des Anderen zu bewerten oder um einfach nur zu plaudern. 
+
+Eine klassische Unterteilung \cite{aarseth03} von Spielen in Spielegenres zeigt, dass in 
+Abhängigkeit vom Genre des Spiels der Kommunikationsaspekt unterschiedlich stark ausgeprägt ist. Vor allem 3D-Actionspiele und Echtzeit-Rollenspiele haben den größten Bedarf an einer ausgeprägten Sprachkommunikation, da sie den Echtzeit-Aspekt betonen und oft eine kollektive synchronisierte Zusammenarbeit mehrerer Spielergruppen benötigen. 
+
+Auch der Prototyp des Spiels soll eine virtuelle, detaillierte und realistische 3D-Welt abbilden, in der der Spieler die Möglichkeit frei bewegen und mit anderen Spielern in Interaktion treten kann.
+
+Im Viereck \cite{lindley03}, \cite{gibbs05} aus Spielerlebnis, Spielsimulation, erzählerischem Aspekt und der Spielerinteraktion soll hier eine hohe Spielerinteraktion und Simulationstiefe erreicht werden. Ein Antibeispiel wäre ein Spiel wie Tetris das zwar ein ausgeprägtes Spielerlebnis besitzt aber nur geringfügig in der Spielesimulation erzählerischem Aspekt ausgebildet ist und über keine Spielerinteraktion verfügt. Ein gutes Beispiel wäre das Mehrspieler-Computerspiel \textit{Second Life} das einen hohen Grad an Spielerinteraktion besitzt, dafür aber in anderen Dimensionen kaum ausgeprägt ist. 
+
+Obwohl in dieser Arbeit kein Anspruch darauf besteht einen Prototypen zu entwickeln, der einem ausgereiften 3D-Action- oder Echtzeit-Rollenspiel entspricht, besteht ein Ziel der Arbeit darin, den Aspekt der gemeinsamen Spielerinteraktion zu betonen. Dies soll vor allem durch eine möglichst effektive und intuitive Einsatzmöglichkeit der Sprachkommunikation erreicht werden, während sich der Spieler in einer möglichst realistischen Umgebung befinden soll.
  
-\section{3D-Umgebung}
+\begin{figure}[tbh]
+	\centering
+	\includegraphics[width=1.00\textwidth]{grafiken/spielgenredreieck.eps}
+	\caption{Viereck aus Spielerlebnis, Simulation, erzählerischem Aspekt und Spielerinteraktion}
+	\label{fig:spieledreieck}
+\end{figure}
+
+
+ \section{3D-Umgebung}
 Da die Entwicklung eines realistischen Spieles weit über das Thema der Arbeit hinausgeht und diese Aufgabe normalerweise von ganzen Teams über mehrere Monate oder Jahre bewältigt wird, sollen nach Möglichkeit bestehende Komponenten eingesetzt werden.
 
 Hierzu existieren bereits Frameworks, die dazu eingesetzt werden können einen Prototypen zu erstellen, in dem ein Avatar in einer möglichst realistischen 3D Umgebung gesteuert werden kann. 
@@ -146,6 +166,7 @@ Der Einsatz von C und C++ als Programmiersprache wird durch mehrere Vorteile ger
 Da C und C++ maschinennahe Sprachen sind, und keine Interpretation des Quellcodes während der Laufzeit benötigen, besitzen sie einen Effizienzvorteil gegenüber Sprachen eine hohe Abstraktionsebene besitzen oder während der Laufzeit interpretiert werden müssen. Gerade deswegen liegen fast alle bisher vorgestellten Protokollstapel und Bibliotheken für VoIP oder 3D-Grafik ausschließlich in C oder C++ vor. 
 
 \subsection{Testumgebung}
+\label{testumgebung}
 Die wiederkehrenden Tests wurden auf diversen mir zur Verfügung stehenden Systemen
 durchgeführt. Als Clients kamen, zwei \textit{AMD Athlon(tm)} X2Dual 4200+, \textit{IBM} \textit{Thinkpad }T42 1,6GHz, \textit{Sony Vaio }CR 1,6GHz und \textit{HP Compaq }6710b 2,1GHz zum Einsatz. Um möglichst realistische Bedingungen zu schaffen, wurden die Rechner auf verschiedene Art und Weise an das Internet angebunden. Zwei Laptops nutzten ein 54Mbit WLAN mit VPN Anschluss, ein Laptop befand sich hinter einem NAT-Router mit WLAN, die stationären Rechner verfügten über einen direkten 100Mbit LAN Anschluss. In den Tests nutzten alle Rechner den Breitbandanschluss der Universität Mannheim, der über 33 MBit Down- und 16 MBit Upload verfügt. 
 
@@ -169,6 +190,8 @@ Zu Beginn des Spieles werden die \textit{Irrlicht} und VoIP Instanzen initialisi
 
 Für eine möglichst realistische Umsetzung wurde ein Level benutzt, das einen Park zeigt in dem Spieler die Möglichkeit haben sich frei zu bewegen. Die Vorstellung, dass Menschen in hier spontane Gesprächen führen liegt nahe. Ebenso erscheint in diesem Szenario die Übertragung der Sprache per Luft sehr natürlich.
 
+//AVATARE MD2 Modelle
+//Level Park in Montreal
 %\subsubsection{\textit{Collision Detection}}
 %Der Spieler kann in der Implementierung mit andern Spielern des Levels und dem Level selbst interagieren. Dabei ist es wichtig, dass eine Berechnung der Kollision des Spielers mit dem Level oder anderen Spielern stattfindet, da ohne eine solche der Spieler alle Gegenstände durchdringen könnte und das Szenario unnatürlich erscheint. Diese Berechnung wird "`\textit{Collision Detection}"' genannt und wird ebenfalls mit im \textit{Irrlicht} Framework umgesetzt. 
 
