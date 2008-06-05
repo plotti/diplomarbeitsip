@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592-1.40.7 (MiKTeX 2.7) (preloaded format=latex 2008.3.12)  4 JUN 2008 20:39
+This is pdfTeX, Version 3.141592-1.40.7 (MiKTeX 2.7) (preloaded format=latex 2008.3.12)  5 JUN 2008 17:54
 entering extended mode
 **Main.tex
 (Main.tex
@@ -886,42 +886,41 @@ eil-neh-mer 1 in Abh[]angigkeit
 
 [99]
 File: grafiken/fullmeshchart.eps Graphic file (type eps)
- <grafiken/fullmeshchart.eps> [100]
+ <grafiken/fullmeshchart.eps>
 File: grafiken/partialmesh.eps Graphic file (type eps)
- <grafiken/partialmesh.eps>
-Overfull \hbox (3.36963pt too wide) in paragraph at lines 62--63
+ <grafiken/partialmesh.eps> [100]
+Overfull \hbox (3.36963pt too wide) in paragraph at lines 62--64
 [][]\OT1/cmr/m/n/10.95 Abbildung 9.4[] zeigt den Band-brei-ten-ver-brauch von T
 eil-neh-mer 1 in Abh[]angigkeit
  []
 
-[101]
 File: grafiken/partialmeshchart.eps Graphic file (type eps)
- <grafiken/partialmeshchart.eps>
-File: grafiken/fullmesh-worstcase.eps Graphic file (type eps)
- <grafiken/fullmesh-worstcase.eps>
-[102]
+<grafiken/partialmeshchart.eps> [101]
 File: grafiken/ohnevadupdown.eps Graphic file (type eps)
  <grafiken/ohnevadupdown.eps>
 File: grafiken/ohnevadsiprtp.eps Graphic file (type eps)
- <grafiken/ohnevadsiprtp.eps>
+
+<grafiken/ohnevadsiprtp.eps>
 File: grafiken/mitvadupdown.eps Graphic file (type eps)
-
-<grafiken/mitvadupdown.eps>
+ <grafiken/mitvadupdown.eps> [102]
 File: grafiken/mitvadrtpsip.eps Graphic file (type eps)
- <grafiken/mitvadrtpsip.eps> [103]
+
+<grafiken/mitvadrtpsip.eps>
 File: grafiken/mitholdupanddown.eps Graphic file (type eps)
-
-<grafiken/mitholdupanddown.eps>
+ <grafiken/mitholdupanddown.eps>
 File: grafiken/mithold1.eps Graphic file (type eps)
- <grafiken/mithold1.eps> [104]
-File: grafiken/mitvadund2codecs.eps Graphic file (type eps)
 
-<grafiken/mitvadund2codecs.eps>
+<grafiken/mithold1.eps> [103]
+File: grafiken/mitvadund2codecs.eps Graphic file (type eps)
+ <grafiken/mitvadund2codecs.eps>
 File: grafiken/mitvadundrtpsip.eps Graphic file (type eps)
- <grafiken/mitvadundrtpsip.eps>) [105] [106]
-[107] [108] (kapitel/kapitel_conclusion.tex
+
+<grafiken/mitvadundrtpsip.eps>
+File: grafiken/rtt-chart.eps Graphic file (type eps)
+ <grafiken/rtt-chart.eps> [104]) [105] [106]
+[107] [108] [109] (kapitel/kapitel_conclusion.tex
 Kapitel 10.
-[109
+[110
 
 
 
@@ -931,13 +930,13 @@ Overfull \hbox (5.86505pt too wide) in paragraph at lines 23--24
 ie-le bis-he-ri-ge Un-zul[]anglichkeiten
  []
 
-[110]
+[111]
 Overfull \hbox (6.23001pt too wide) in paragraph at lines 29--30
 [][]\OT1/cmr/m/n/10.95 Obwohl zwar meh-re-re Sprach-kom-mu-ni-ka-ti-onsl[]osung
 en auf Ba-sis von pro-pri[]ateren
  []
 
-[111]) [112] (Main.bbl [113
+[112]) [113] (Main.bbl [114
 
 
 
@@ -953,7 +952,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 150--156
 ]-
  []
 
-[114]
+[115]
 Underfull \hbox (badness 1102) in paragraph at lines 287--294
 [][]\OT1/cmr/m/sc/10.95 Ipoque\OT1/cmr/m/n/10.95 :  In-ter-net Stu-die 2007: Au
 s-wir-kun-gen von P2P-Filesharing,
@@ -965,7 +964,7 @@ Overfull \hbox (10.20546pt too wide) in paragraph at lines 287--294
 ernet[]study[]2007
  []
 
-[115] [116]
+[116] [117]
 Underfull \hbox (badness 10000) in paragraph at lines 403--407
 [][]\OT1/cmr/m/sc/10.95 Postel\OT1/cmr/m/n/10.95 , J.:  User Da-ta-gram Pro-to-
 col.  In:
@@ -984,7 +983,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 452--456
 e-ko-ope-ra-ti-on - Verteilte- Ar-beits und
  []
 
-[117]
+[118]
 Underfull \hbox (badness 3601) in paragraph at lines 571--576
 [][]\OT1/cmr/m/sc/10.95 Schulzrinne\OT1/cmr/m/n/10.95 , H. ; \OT1/cmr/m/sc/10.9
 5 Cas-ner\OT1/cmr/m/n/10.95 , S. ; \OT1/cmr/m/sc/10.95 Fre-de-rick\OT1/cmr/m/n/
@@ -997,7 +996,7 @@ Underfull \hbox (badness 1067) in paragraph at lines 571--576
 i-ons.  In:
  []
 
-[118] [119]) [120] (kapitel/erklaerung.tex) [121
+[119] [120]) [121] (kapitel/erklaerung.tex) [122
 
 
 ] (Main.aux (kapitel/titel.aux) (kapitel/abstract.aux) (kapitel/stichwortverzei
@@ -1017,11 +1016,11 @@ LaTeX Warning: There were multiply-defined labels.
  ) 
 Here is how much of TeX's memory you used:
  6728 strings out of 95338
- 96318 string characters out of 1184228
+ 96291 string characters out of 1184228
  211815 words of memory out of 1500000
  9684 multiletter control sequences out of 110000
  12169 words of font info for 43 fonts, out of 1200000 for 2000
  14 hyphenation exceptions out of 8191
  38i,17n,46p,1501b,1101s stack positions out of 5000i,500n,10000p,200000b,5000s
 
-Output written on Main.dvi (133 pages, 493388 bytes).
+Output written on Main.dvi (134 pages, 493604 bytes).

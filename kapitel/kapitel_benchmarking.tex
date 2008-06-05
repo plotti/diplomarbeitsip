@@ -31,16 +31,16 @@ Die Szenario-Abbildung \ref{fig:fullmesh} zeigt, dass beim Full-Mesh-Ansatz jede
 
 \begin{figure}[tbh]
 	\centering
-		\includegraphics[width=.60\textwidth]{grafiken/fullmesh.eps}
+		\includegraphics[width=.70\textwidth]{grafiken/fullmesh.eps}
 			\caption{Audioverbindungen im Full-Mesh-Ansatz}
 	\label{fig:fullmesh}
 \end{figure}
 
-Abbildung \ref{fig:fullmesh-withchart} zeigt den Bandbreitenverbrauch von Teilnehmer 1 in Abhängigkeit zur Anzahl der sich im Spiel befindlichen Spielern. Da alle 10 Sekunden ein weiterer Spieler das Spielfeld betritt, wird auch eine Audioverbindung mit diesem Spieler aufgebaut. Diese führt dazu, dass der Verbrauch der Bandbreite sich jeweils um weitere 10kByte/s (5kByte Up-/ 5kByte Download) erhöht. Dieses Vorgehen führt bei bereits 5 Anwesenden Teilnehmern zu einem Gesamtbandbreitenverbrauch zwischen Teilnehmer 1 und Teilnehmern 2,3,5 von über 40 kByte/s. Im Full-Mesh fließt zum Zeitpunkt $t4$ zwischen allen Teilnehmern bereits ein Gesamtaudiostrom von 100 kByte/s ($10 \cdot 10kByte/s$).
+Abbildung \ref{fig:fullmesh-withchart} zeigt den Bandbreitenverbrauch von Teilnehmer 1 in Abhängigkeit zur Anzahl der sich im Spiel befindlichen Spielern. Da alle 10 Sekunden ein weiterer Spieler das Spielfeld betritt, wird auch eine Audioverbindung mit diesem Spieler aufgebaut. Diese führt dazu, dass der Verbrauch der Bandbreite sich jeweils um weitere 10kByte/s (5 kByte Up-/ 5 kByte Download) erhöht. Dieses Vorgehen führt bei bereits 5 Anwesenden Teilnehmern zu einem Gesamtbandbreitenverbrauch zwischen Teilnehmer 1 und Teilnehmern 2,3,5 von über 40 kByte/s. Im Full-Mesh fließt zum Zeitpunkt $t4$ zwischen allen Teilnehmern bereits ein Gesamtaudiostrom von 100 kByte/s ($10 \cdot 10kByte/s$).
 
 \begin{figure}[tbh]
 	\centering
-		\includegraphics[width=.70\textwidth]{grafiken/fullmeshchart.eps}
+		\includegraphics[width=\textwidth]{grafiken/fullmeshchart.eps}
 	\caption{Bandbreitenverbrauch beim Full-Mesh-Ansatz}
 	\label{fig:fullmesh-withchart}
 \end{figure}
@@ -59,27 +59,24 @@ Wie man in der Szenario-Abbildung \ref{fig:partialmesh} erkennen kann, führt die
 	\label{fig:partialmesh}
 \end{figure}
 
-Abbildung \ref{fig:partialmeshchart} zeigt den Bandbreitenverbrauch von Teilnehmer 1 in Abhängigkeit zur Anzahl der sich im Spiel befindlichen Spielern. Zum Zeitpunkt $t1$, in dem Spieler 2 das Spiel betritt, ist der Aufbau einer Audioverbindung, die zwischen 10-15 kByte/s verbraucht, erkennbar. Zum Zeitpunkt $t2$ betritt Spieler 3 das Spiel, diesmal weren nur zusätzliche 1-2kByte/s zur Aufrechterhaltung der Grundkonnektivität der RTP-Verbindung benötigt. Würde sich Teilnehmer 3 nun auf Spieler 1 zu bewegen, würde die \textit{Silence Suppression} aufgehoben und auch ein RTP-Audiostrom von 10-15kbByte/s fließen. Spieler 4 und 5 dagegen verursachen keinen zusätzlichen Bandbreitenverbrauch, da sie sich außerhalb der öffentlichen Zone befinden und keine Verbindungen zu ihnen aufgebaut werden.
+Abbildung \ref{fig:partialmeshchart} zeigt den Bandbreitenverbrauch von Teilnehmer 1 in Abhängigkeit zur Anzahl der sich im Spiel befindlichen Spielern. Zum Zeitpunkt $t1$, in dem Spieler 2 das Spiel betritt, ist der Aufbau einer Audioverbindung, die zwischen 10-15 kByte/s verbraucht, erkennbar. Zum Zeitpunkt $t2$ betritt Spieler 3 das Spiel, diesmal werden nur zusätzliche 1-2 kByte/s zur Aufrechterhaltung der Grundkonnektivität, der RTP-Verbindung unter Silence Supression benötigt. Würde sich Teilnehmer 3 nun auf Spieler 1 zu bewegen, würde die Silence Suppression aufgehoben und auch ein RTP-Audiostrom von 10-15 kByte/s fließen. Spieler 4 und 5 dagegen verursachen keinen zusätzlichen Bandbreitenverbrauch, da sie sich außerhalb der öffentlichen Zone befinden und keine Verbindungen zu ihnen aufgebaut werden. Im Vergleich zu Abbildung \ref{fig:fullmesh-withchart} werden 16 kByte/s verbraucht was auch dem Gesamtverbrauch entspricht. Im Worst-Case, könnten sich alle Teilnehmer im gegenseitigen Hörradius befinden, was dazu führt, dass eine Full-Mesh Topologie zwischen ihnen aufgebaut wird. Hier kann keine Bandbreite eingespart werden und das vorgestellte Verfahren verliert seinen Vorteil.
 
 \begin{figure}[tbh]
 	\centering
-		\includegraphics[width=.70\textwidth]{grafiken/partialmeshchart.eps}
+		\includegraphics[width=\textwidth]{grafiken/partialmeshchart.eps}
 	\caption{Bandbreiteneinsparungen beim Partial-Mesh, da nicht mehr alle Verbindungen aufgebaut werden müssen}
 	\label{fig:partialmeshchart}
 \end{figure}
 
-\subsubsection{Partial-Mesh Worst Case}
-Unter ungünstige Randbedingungen (siehe Abbildung \ref{fig:fullmesh-worstcase}, befinden sich alle Teilnehmer im gegenseitigen Hörradius, was dazu führt, dass eine Full-Mesh Topologie zwischen ihnen aufgebaut wird. Hier kann keine Bandbreite eingespart werden und das vorgestellte Verfahren verliert seinen Vorteil.
-
-\begin{figure}[tbh]
-	\centering
-		\includegraphics[width=0.70\textwidth]{grafiken/fullmesh-worstcase.eps}
-	\caption{Partial-Mesh "`Worstcase"'-Szenario gleicht einem Full-Mesh}
-	\label{fig:fullmesh-worstcase}
-\end{figure}
+%\begin{figure}[tbh]
+	%\centering
+		%\includegraphics[width=0.70\textwidth]{grafiken/fullmesh-worstcase.eps}
+	%\caption{Partial-Mesh "`Worstcase"'-Szenario gleicht einem Full-Mesh}
+	%\label{fig:fullmesh-worstcase}
+%\end{figure}
 
 \section{Zonenkonzepte}
-Um den Bandbreitenverbrauch in den einzelnen Zonen aufzuzeigen, wurde ein einfaches Szenario erstellt, bei 2 Spieler am gleichen Ausgangspunkt das Spiel beginnen und sich dann voneinander wegbewegen. Während sie die einzelnen Zonen durchlaufen wird der Bandbreitenverbrauch gemessen. Dabei wird nicht nur zwischen dem Up- und Downloadverbrauch, sondern auch zwischen dem des SIP und RTP Protokolls unterschieden. 
+Um den Bandbreitenverbrauch in den einzelnen Zonen aufzuzeigen, wurde ein einfaches Szenario erstellt, bei 2 Spieler am gleichen Ausgangspunkt das Spiel beginnen und sich dann voneinander wegbewegen. Während sie die einzelnen Zonen durchlaufen werden wird der Bandbreitenverbrauch eines Teilnehmers gemessen. Bei der Messung wird nicht nur zwischen dem Up- und Downloadverbrauch, sondern auch zwischen dem des SIP und RTP Protokolls unterschieden. 
 Für die drei Implementierungsvariationen (Silence Supression, SIP-Hold, unterschiedliche Audiocodecs), die in Kapitel 7 erläutert wurden und das Ziel haben einer Reduzierung der benötigten Bandbreite zu bewirken, wurde jeweils eine Messung vorgenommen. 
 
 \subsection{Ohne Unterscheidung}
@@ -173,8 +170,20 @@ Im Vergleich (siehe Abbildung \ref{fig:mitvadundrtpsip}) der beiden SIP und RTP 
 %MESSUNG: einfach nur die conference bridge messen.
 
 \section{Tests von SIP als Netzwerkschnittstelle}
--- RTT über die zeit bei konstanten benutzern vs. Resultat mit Multicast Sockets oder Skype.
--- bzw. Vergleich des Traffics bei Zunehmender Benutzeranzahl
+
+\begin{figure}
+	\centering
+		\includegraphics[width=1.00\textwidth]{grafiken/rtt-chart.eps}
+	\caption{Messung der RTT im LAN zwischen beim Einsatz von 2 Clients}
+	\label{fig:rtt-chart}
+\end{figure}
+
+- Im Lan gemessen
+- zwischen 2 Desktop PCs
+- Der Proxy nahm die Messung mit Wireshark vor
+- im Lan sind RTT zwischen 0-10ms üblich
+--> SIP Layer erzeugt keine übermäßige Latenz
+
 
 \section{Test der Conference-Bridge}
 -- CPU vs Anzahl gleichzeitig abgemischter Audioströme.

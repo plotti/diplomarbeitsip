@@ -47,16 +47,16 @@
 \contentsline {figure}{\numberline {8.6}{\ignorespaces Ein schematischer Ablauf eines Anrufs bei P2P-SIP}}{97}
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {9.1}{\ignorespaces Audioverbindungen im Full-Mesh-Ansatz}}{100}
-\contentsline {figure}{\numberline {9.2}{\ignorespaces Bandbreitenverbrauch beim Full-Mesh-Ansatz}}{100}
-\contentsline {figure}{\numberline {9.3}{\ignorespaces Ein Partial-Mesh der Audioverbindungen der Teilnehmer}}{101}
-\contentsline {figure}{\numberline {9.4}{\ignorespaces Bandbreiteneinsparungen beim Partial-Mesh, da nicht mehr alle Verbindungen aufgebaut werden m\"ussen}}{102}
-\contentsline {figure}{\numberline {9.5}{\ignorespaces Partial-Mesh "`Worstcase"'-Szenario gleicht einem Full-Mesh}}{103}
-\contentsline {figure}{\numberline {9.6}{\ignorespaces Der Up- und Downstream}}{104}
-\contentsline {figure}{\numberline {9.7}{\ignorespaces Signalisierung mit SIP, Audiostrom mit RTP}}{105}
-\contentsline {figure}{\numberline {9.8}{\ignorespaces Der Up- und Downstream mit der VAD-Technik}}{106}
-\contentsline {figure}{\numberline {9.9}{\ignorespaces Gegen\"uberstellung der SIP und RTP Traffics mit der VAD-Technik}}{106}
-\contentsline {figure}{\numberline {9.10}{\ignorespaces Der Up- und Downstream mit der SIP HOLD - Technik}}{107}
-\contentsline {figure}{\numberline {9.11}{\ignorespaces Gegen\"uberstellung des SIP und RTP Traffics mit der SIP HOLD-Technik}}{107}
-\contentsline {figure}{\numberline {9.12}{\ignorespaces Speex mit 16kHz in der privaten Zone und Speex 8khZ in der sozialen Zone}}{108}
-\contentsline {figure}{\numberline {9.13}{\ignorespaces Rufauf und -abbau, sowie Signalisierung eines anderen Codecs mit SIP, Reduktion des Audiostroms mit RTP}}{108}
+\contentsline {figure}{\numberline {9.2}{\ignorespaces Bandbreitenverbrauch beim Full-Mesh-Ansatz}}{101}
+\contentsline {figure}{\numberline {9.3}{\ignorespaces Ein Partial-Mesh der Audioverbindungen der Teilnehmer}}{102}
+\contentsline {figure}{\numberline {9.4}{\ignorespaces Bandbreiteneinsparungen beim Partial-Mesh, da nicht mehr alle Verbindungen aufgebaut werden m\"ussen}}{103}
+\contentsline {figure}{\numberline {9.5}{\ignorespaces Der Up- und Downstream}}{104}
+\contentsline {figure}{\numberline {9.6}{\ignorespaces Signalisierung mit SIP, Audiostrom mit RTP}}{105}
+\contentsline {figure}{\numberline {9.7}{\ignorespaces Der Up- und Downstream mit der VAD-Technik}}{106}
+\contentsline {figure}{\numberline {9.8}{\ignorespaces Gegen\"uberstellung der SIP und RTP Traffics mit der VAD-Technik}}{106}
+\contentsline {figure}{\numberline {9.9}{\ignorespaces Der Up- und Downstream mit der SIP HOLD - Technik}}{107}
+\contentsline {figure}{\numberline {9.10}{\ignorespaces Gegen\"uberstellung des SIP und RTP Traffics mit der SIP HOLD-Technik}}{107}
+\contentsline {figure}{\numberline {9.11}{\ignorespaces Speex mit 16kHz in der privaten Zone und Speex 8khZ in der sozialen Zone}}{108}
+\contentsline {figure}{\numberline {9.12}{\ignorespaces Rufauf und -abbau, sowie Signalisierung eines anderen Codecs mit SIP, Reduktion des Audiostroms mit RTP}}{108}
+\contentsline {figure}{\numberline {9.13}{\ignorespaces Messung der RTT im LAN zwischen beim Einsatz von 2 Clients}}{109}
 \addvspace {10\p@ }
