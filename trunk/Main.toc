@@ -169,16 +169,16 @@
 \contentsline {subsection}{\numberline {9.1.1}Header-Overhead}{98}
 \contentsline {section}{\numberline {9.2}Full-Mesh vs. Partial-Mesh Szenario}{99}
 \contentsline {subsection}{\numberline {9.2.1}Full-Mesh}{99}
-\contentsline {subsection}{\numberline {9.2.2}Partial-Mesh}{101}
-\contentsline {subsubsection}{Partial-Mesh Worst Case}{102}
-\contentsline {section}{\numberline {9.3}Zonenkonzepte}{102}
+\contentsline {subsection}{\numberline {9.2.2}Partial-Mesh}{100}
+\contentsline {subsubsection}{Partial-Mesh Worst Case}{101}
+\contentsline {section}{\numberline {9.3}Zonenkonzepte}{101}
 \contentsline {subsection}{\numberline {9.3.1}Ohne Unterscheidung}{102}
-\contentsline {subsection}{\numberline {9.3.2}Zonen mit RTP Silence Supression}{103}
-\contentsline {subsection}{\numberline {9.3.3}Zonen mit SIP HOLD}{104}
+\contentsline {subsection}{\numberline {9.3.2}Zonen mit RTP Silence Supression}{102}
+\contentsline {subsection}{\numberline {9.3.3}Zonen mit SIP HOLD}{103}
 \contentsline {subsection}{\numberline {9.3.4}Zonen mit unterschiedlichen Audiocodecs}{104}
 \contentsline {section}{\numberline {9.4}Tests von SIP als Netzwerkschnittstelle}{105}
 \contentsline {section}{\numberline {9.5}Test der Conference-Bridge}{105}
-\contentsline {chapter}{\numberline {10}Fazit und Ausblick}{109}
-\contentsline {section}{\numberline {10.1}Fazit}{109}
-\contentsline {section}{\numberline {10.2}Ausblick}{110}
-\contentsline {chapter}{Literaturverzeichnis}{113}
+\contentsline {chapter}{\numberline {10}Fazit und Ausblick}{110}
+\contentsline {section}{\numberline {10.1}Fazit}{110}
+\contentsline {section}{\numberline {10.2}Ausblick}{111}
+\contentsline {chapter}{Literaturverzeichnis}{114}
