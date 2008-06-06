@@ -5,7 +5,7 @@ Version=2
 [SessionInfo]
 ActiveTab=0
 FrameCount=20
-ActiveFrame=16
+ActiveFrame=2
 
 [Frame0]
 Columns=1
@@ -32,9 +32,9 @@ cxCur=719
 cxMin=10
 
 [Frame0_View0,0]
-Cursor.row=35
-Cursor.column=0
-TopSubLine=19
+Cursor.row=31
+Cursor.column=1
+TopSubLine=32
 
 [Frame1]
 Columns=1
@@ -68,8 +68,8 @@ TopSubLine=0
 [Frame2]
 Columns=1
 Rows=1
-Flags=0
-ShowCmd=1
+Flags=2
+ShowCmd=3
 MinPos.x=-1
 MinPos.y=-1
 MaxPos.x=-4
@@ -82,17 +82,17 @@ Class=CLatexEdit
 Document=kapitel\kapitel_implementierung.tex
 
 [Frame2_Row0]
-cyCur=346
+cyCur=283
 cyMin=10
 
 [Frame2_Col0]
-cxCur=751
+cxCur=869
 cxMin=10
 
 [Frame2_View0,0]
-Cursor.row=0
-Cursor.column=0
-TopSubLine=474
+Cursor.row=35
+Cursor.column=352
+TopSubLine=83
 
 [Frame3]
 Columns=1
@@ -119,9 +119,9 @@ cxCur=751
 cxMin=10
 
 [Frame3_View0,0]
-Cursor.row=12
-Cursor.column=5
-TopSubLine=59
+Cursor.row=155
+Cursor.column=223
+TopSubLine=480
 
 [Frame4]
 Columns=1
@@ -177,9 +177,9 @@ cxCur=751
 cxMin=10
 
 [Frame5_View0,0]
-Cursor.row=25
-Cursor.column=401
-TopSubLine=36
+Cursor.row=0
+Cursor.column=0
+TopSubLine=0
 
 [Frame6]
 Columns=1
@@ -206,7 +206,7 @@ cxCur=751
 cxMin=10
 
 [Frame6_View0,0]
-Cursor.row=91
+Cursor.row=93
 Cursor.column=13
 TopSubLine=80
 
@@ -293,9 +293,9 @@ cxCur=801
 cxMin=10
 
 [Frame9_View0,0]
-Cursor.row=225
-Cursor.column=54
-TopSubLine=553
+Cursor.row=303
+Cursor.column=137
+TopSubLine=742
 
 [Frame10]
 Columns=1
@@ -322,9 +322,9 @@ cxCur=787
 cxMin=10
 
 [Frame10_View0,0]
-Cursor.row=350
+Cursor.row=73
 Cursor.column=0
-TopSubLine=679
+TopSubLine=192
 
 [Frame11]
 Columns=1
@@ -380,9 +380,9 @@ cxCur=762
 cxMin=10
 
 [Frame12_View0,0]
-Cursor.row=4
+Cursor.row=39
 Cursor.column=0
-TopSubLine=0
+TopSubLine=162
 
 [Frame13]
 Columns=1
@@ -409,9 +409,9 @@ cxCur=1000
 cxMin=10
 
 [Frame13_View0,0]
-Cursor.row=107
-Cursor.column=257
-TopSubLine=266
+Cursor.row=21
+Cursor.column=0
+TopSubLine=56
 
 [Frame14]
 Columns=1
@@ -439,7 +439,7 @@ cxMin=10
 
 [Frame14_View0,0]
 Cursor.row=0
-Cursor.column=0
+Cursor.column=63
 TopSubLine=0
 
 [Frame15]
@@ -474,8 +474,8 @@ TopSubLine=0
 [Frame16]
 Columns=1
 Rows=1
-Flags=2
-ShowCmd=3
+Flags=0
+ShowCmd=1
 MinPos.x=-1
 MinPos.y=-1
 MaxPos.x=-4
@@ -488,17 +488,17 @@ Class=CLatexEdit
 Document=kapitel\kapitel_benchmarking.tex
 
 [Frame16_Row0]
-cyCur=643
+cyCur=413
 cyMin=10
 
 [Frame16_Col0]
-cxCur=950
+cxCur=746
 cxMin=10
 
 [Frame16_View0,0]
-Cursor.row=81
-Cursor.column=22
-TopSubLine=136
+Cursor.row=206
+Cursor.column=0
+TopSubLine=405
 
 [Frame17]
 Columns=1
@@ -509,25 +509,25 @@ MinPos.x=-1
 MinPos.y=-1
 MaxPos.x=-4
 MaxPos.y=-30
-NormalPos.left=110
-NormalPos.top=125
-NormalPos.right=902
-NormalPos.bottom=458
+NormalPos.left=22
+NormalPos.top=29
+NormalPos.right=890
+NormalPos.bottom=123
 Class=CLatexEdit
-Document=kapitel\grafiken.tex
+Document=kapitel\einleitung.tex
 
 [Frame17_Row0]
-cyCur=278
+cyCur=39
 cyMin=10
 
 [Frame17_Col0]
-cxCur=763
+cxCur=839
 cxMin=10
 
 [Frame17_View0,0]
-Cursor.row=12
-Cursor.column=0
-TopSubLine=37
+Cursor.row=84
+Cursor.column=233
+TopSubLine=291
 
 [Frame18]
 Columns=1
@@ -538,25 +538,25 @@ MinPos.x=-1
 MinPos.y=-1
 MaxPos.x=-4
 MaxPos.y=-30
-NormalPos.left=22
-NormalPos.top=29
-NormalPos.right=512
-NormalPos.bottom=337
+NormalPos.left=44
+NormalPos.top=58
+NormalPos.right=868
+NormalPos.bottom=275
 Class=CLatexEdit
-Document=kapitel\einleitung.tex
+Document=kapitel\grafiken.tex
 
 [Frame18_Row0]
-cyCur=253
+cyCur=162
 cyMin=10
 
 [Frame18_Col0]
-cxCur=461
+cxCur=795
 cxMin=10
 
 [Frame18_View0,0]
-Cursor.row=55
-Cursor.column=0
-TopSubLine=351
+Cursor.row=19
+Cursor.column=155
+TopSubLine=85
 
 [Frame19]
 Columns=1
@@ -569,21 +569,21 @@ MaxPos.x=-4
 MaxPos.y=-30
 NormalPos.left=66
 NormalPos.top=87
-NormalPos.right=898
-NormalPos.bottom=512
+NormalPos.right=890
+NormalPos.bottom=304
 Class=CLatexEdit
-Document=literatur\da.bib
+Document=kapitel\kapitel_recenctwork_temp.tex
 
 [Frame19_Row0]
-cyCur=370
+cyCur=162
 cyMin=10
 
 [Frame19_Col0]
-cxCur=803
+cxCur=795
 cxMin=10
 
 [Frame19_View0,0]
-Cursor.row=0
+Cursor.row=2
 Cursor.column=0
-TopSubLine=0
+TopSubLine=2
 
