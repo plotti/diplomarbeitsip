@@ -124,7 +124,7 @@ Es können vier Hauptkomponenten eines Systems definiert werden, die je nach ihre
 
 \begin{itemize}
 	\item \textbf{Mixer}: Ein Mixer empfängt eine Gruppe von Audioströmen und vereinigt ihre Medien nach einer spezifischen Art, um das Ergebnis an jeden Teilnehmer zu schicken. Dies beinhaltet Medien, die mittels des RTP-Protokolls übertragen wurden.
-	\item Konferenz-Server: Ein Konferenz-Server ist die logische Instanz, die darüber entscheidet welche Audioströme miteinander gemischt werden und an wen sie verteilt werden. 
+	\item \textbf{Konferenz-Server:} Ein Konferenz-Server ist die logische Instanz, die darüber entscheidet welche Audioströme miteinander gemischt werden und an wen sie verteilt werden. 
 	\item \textbf{Teilnehmer-Client}: Eine Client Anwendung, die einen Benutzer mit einer Konferenz verbindet. Diese implementiert mindestens einen SIP-User-Agent kann aber auch nicht SIP spezifische Mechanismen für zusätzliche Funktionalität beherbergen. 
 	\item \textbf{Spieleserver}: Eine optionale Komponente, die die Daten der Spieler entgegen nimmt, um sie auszuwerten und an die anderen Teilnehmer zu verteilen. Diese kann, muss aber nicht, die Spielelogik enthalten und teilt dem Konferenz-Server mit, welche Spieler Teil einer Konferenz werden. Um mit den anderen Komponenten zu kommunizieren unterstützt sie das SIP Protokoll. 
 \end{itemize}
@@ -134,9 +134,7 @@ Aus den vorgestellten Komponeten wird ersichtlich, dass die Architektur der Spra
 Geht man davon aus, dass sowohl der Datenverkehr, als auch die Audioströme zwischen den Spielen entweder komplett zentral, verteilt oder komplett dezentral stattfinden können, ergeben sich 9 mögliche Kombinationen, die in Tabelle \ref{audiodatenmatrix} dargestellt werden: 
 
 \begin{table}[tbh]
-	\centering
-	\label{audiodatenmatrix}
-	\caption{Mögliche Kombinationen bei Unterscheidung zwischen Daten- und Audioströmen}	\begin{tabular}{p{0.2\textwidth}|p{0.2\textwidth}|p{0.2\textwidth}|p{0.2\textwidth}}		
+	\centering	\begin{tabular}{p{0.2\textwidth}|p{0.2\textwidth}|p{0.2\textwidth}|p{0.2\textwidth}}		
 		\toprule
 		\textbf{Daten / \newline Audio} & \textbf{Zentral} & \textbf{Verteilt} & \textbf{P2P} \\
 		\midrule
@@ -147,6 +145,8 @@ Geht man davon aus, dass sowohl der Datenverkehr, als auch die Audioströme zwisc
 		\textbf{P2P} & ($A_{3}$) VoIP mit zentralem Server & ($A_{6}$) VoIP mit verteilten Servern & ($A_{9}$) Komplett dezentrale Lösungen. \\
 		\bottomrule
 		\end{tabular}
+			\label{audiodatenmatrix}
+	\caption{Mögliche Kombinationen bei Unterscheidung zwischen Daten- und Audioströmen}
 \end{table}
 
 Prinzipiell sind alle Alternativen vorstellbar. In erster Linie sollen bei einer Implementierung einer einsatzfähigen Sprachkommunikationslösung vor allem Alternativen bevorzugt werden, die sowohl umsetzbar als auch sinnvoll erscheinen.  
@@ -301,7 +301,7 @@ Die Grundlage für eine einfache Berechnung versteht sich unter folgenden Vorauss
 	\item Jeder Spieler mischt die Audioströme lokal ab, da er auch die Positionen der Teilnehmer kennt. 
 \end{itemize}
 
-Befinden sich beispielsweise 16 Personen im Spiel und nimmt man an, dass sich im Schnitt nur $30\%$ aller Teilnehmer in Hörnähe befinden, so muss der Sender nur noch an 5 Personen seinen Audiostrom senden und auch nur von 5 Personen den Audiostrom empfangen. 
+Befinden sich beispielsweise 16 Personen im Spiel und nimmt man an, dass sich im Schnitt nur $30\%$ aller Teilnehmer in Hörnähe aufhalten, so muss der Sender nur noch an 5 Personen seinen Audiostrom senden und auch nur von 5 Personen den Audiostrom empfangen. 
 
 Dabei gibt $P_{Hoernaehe}$ an, wie viele Personen, sich im Schnitt in der Hörnähe des Teilnehmers befinden. Dieser Wert kann verändert werden, in dem die \textit{Hörer\-reichweite} des Spielers vergrößert oder verkleinert wird. 
 
