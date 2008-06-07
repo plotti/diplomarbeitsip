@@ -117,21 +117,29 @@ Diese zwei Aspekte können nicht getrennt voneinander betrachtet werden, da immer
 
 So muss für Konferenzen nicht nur die Frage beantwortet werden wo der Audiostrom abgemischt wird, sondern wie die Teilnehmer informiert werden, dass sie Teil einer Konferenz sind.
 
+Zusätzlich zu diesen Fragen muss eine gewählte Architektur in Bezug auf die Herausforderungen aus Kapitel 3 noch folgende Kriterien erfüllen:
+
+\begin{itemize}
+	\item Die Architektur muss mehrere Audioströme unterstüzen.
+	\item Die Kontrolle über alle Audioströme muss beim Client liegen.
+	\item Die Lösung muss möglichst kostengünstig für die Spieler sein.
+\end{itemize}
+
 %Deswegen werden die Komponenten zur Lokation, Signalisierung der Konferenzen und Mischen des Audiostroms zwar gleichzeitig betrachtet, aber unter ihnen unterschieden.
 
 \subsection{Komponenten}
-Es können vier Hauptkomponenten eines Systems definiert werden, die je nach ihrer Verteilung verschiedene Architekturen bilden können:
+Es können drei Hauptkomponenten eines Systems definiert werden, die je nach ihrer Verteilung verschiedene Architekturen bilden können:
 
 \begin{itemize}
 	\item \textbf{Mixer}: Ein Mixer empfängt eine Gruppe von Audioströmen und vereinigt ihre Medien nach einer spezifischen Art, um das Ergebnis an jeden Teilnehmer zu schicken. Dies beinhaltet Medien, die mittels des RTP-Protokolls übertragen wurden.
-	\item \textbf{Konferenz-Server:} Ein Konferenz-Server ist die logische Instanz, die darüber entscheidet welche Audioströme miteinander gemischt werden und an wen sie verteilt werden. 
+	\item \textbf{Konferenz-Komponente:} Ein Konferenz-Komponente ist die logische Instanz, die darüber entscheidet welche Audioströme miteinander gemischt werden und an wen sie verteilt werden und auch wer Teilnehmer einer Konferenz ist. Die Konferenz-Komponente kann von der Spielelogik gesteuert werden.   
 	\item \textbf{Teilnehmer-Client}: Eine Client Anwendung, die einen Benutzer mit einer Konferenz verbindet. Diese implementiert mindestens einen SIP-User-Agent kann aber auch nicht SIP spezifische Mechanismen für zusätzliche Funktionalität beherbergen. 
-	\item \textbf{Spieleserver}: Eine optionale Komponente, die die Daten der Spieler entgegen nimmt, um sie auszuwerten und an die anderen Teilnehmer zu verteilen. Diese kann, muss aber nicht, die Spielelogik enthalten und teilt dem Konferenz-Server mit, welche Spieler Teil einer Konferenz werden. Um mit den anderen Komponenten zu kommunizieren unterstützt sie das SIP Protokoll. 
+	%\item \textbf{Spieleserver}: Eine optionale Komponente, die die Daten der Spieler entgegen nimmt, um sie auszuwerten und an die anderen Teilnehmer zu verteilen. Diese kann, muss aber nicht, die Spielelogik enthalten und teilt dem Konferenz-Server mit, welche Spieler Teil einer Konferenz werden. Um mit den anderen Komponenten zu kommunizieren unterstützt sie das SIP Protokoll. 
 \end{itemize}
 
-Aus den vorgestellten Komponeten wird ersichtlich, dass die Architektur der Sprachkommunikation nicht getrennt von der Architektur des darunter liegenden Spieles gesehen wird. Während die Signalisierung und der reine Austausch an Spielerinformationen und Konferenzinformationen relativ wenig Bandbreite benötigt, kann eine Audioverbindung aufgrund ihres reinen Datenvoluments bereits das 10fache der Bandbreite benötigen. 
+Aus den vorgestellten Komponeten wird ersichtlich, dass die Architektur der Sprachkommunikation nicht getrennt von der Architektur des darunter liegenden Signalisierung gesehen wird. Dies geschieht deswegen, weil die Signalisierung und der reine Austausch an Spielerinformationen und Konferenzinformationen relativ wenig Bandbreite benötigt eine Audioverbindung dagegen, aufgrund ihres reinen Datenvoluments bereits das 10fache der Bandbreite benötigen kann.  
 
-Geht man davon aus, dass sowohl der Datenverkehr, als auch die Audioströme zwischen den Spielen entweder komplett zentral, verteilt oder komplett dezentral stattfinden können, ergeben sich 9 mögliche Kombinationen, die in Tabelle \ref{audiodatenmatrix} dargestellt werden: 
+Geht man davon aus, dass sowohl die Signalisierung, als auch die Audioströme zwischen den Spielen entweder komplett zentral, verteilt oder komplett dezentral stattfinden können, ergeben sich 9 mögliche Kombinationen, die in Tabelle \ref{audiodatenmatrix} dargestellt werden: 
 
 \begin{table}[tbh]
 	\centering	\begin{tabular}{p{0.2\textwidth}|p{0.2\textwidth}|p{0.2\textwidth}|p{0.2\textwidth}}		
@@ -149,7 +157,7 @@ Geht man davon aus, dass sowohl der Datenverkehr, als auch die Audioströme zwisc
 	\caption{Mögliche Kombinationen bei Unterscheidung zwischen Daten- und Audioströmen}
 \end{table}
 
-Prinzipiell sind alle Alternativen vorstellbar. In erster Linie sollen bei einer Implementierung einer einsatzfähigen Sprachkommunikationslösung vor allem Alternativen bevorzugt werden, die sowohl umsetzbar als auch sinnvoll erscheinen.  
+Prinzipiell sind alle Alternativen vorstellbar. In erster Linie sollen bei einer Implementierung einer einsatzfähigen Sprachkommunikationslösung vor allem Alternativen bevorzugt werden, die sowohl umsetzbar als auch sinnvoll erscheinen, als auch eine Umsetzung der Vorschläge aus Kapitel 3 erfüllen können.  
 
 \begin{itemize}
 	\item ($A_{1}$) Hier findet sowohl die Signalisierung und Lokation der Teilnehmer als auch das Mischen des Audiostroms zentral statt. Darunter versteht man ein SIP Netzwerk, das mit einem zentralen Server ausgestattet ist, der sämtliche Daten der Spielerclients entgegen nimmt und verteilt. Das Abmischen der Audioströme findet ebenfalls in einer zentralen Konferenz statt, die auf dem Server verwaltet wird. 	
@@ -181,6 +189,14 @@ Die verbleibenden Alternativen lassen sich in 4 Gruppen gliedern:
 
 
 \subsection{Komplett dezentralisierte Ansätze}
+
+\begin{figure}[tbh]
+	\centering
+		\includegraphics[width=0.60\textwidth]{grafiken/archp2p.eps}
+	 \caption{Dezentralisierte SIP Architektur}
+	\label{fig:archp2p}
+\end{figure}
+
 Ansätze der Alternative $A_{9}$ haben alle gemeinsam, dass sowohl der Audiostrom, als auch der Datenstrom nur zwischen den einzelnen Knoten fließt und keine zentrale Komponente benötigt wird. Sie unterscheiden sich jedoch darin, in welchen Topologien die einzelnen Clients miteinander verbunden werden und auf welche Art und weise die Signalisierung stattfindet. 
 
 \subsubsection{Multicast}
@@ -211,6 +227,14 @@ Das größte Problem bei diesem Ansatz stellt die fehlende strukturierte Signalisi
 
 \subsection{Komplett zentralisierte Ansätze}
 \label{zentralansatz}
+
+\begin{figure}[tbh]
+	\centering
+		\includegraphics[width=0.60\textwidth]{grafiken/archzentral.eps}
+	\caption{Komplett zentralisierter Ansatz mit SIP}
+	\label{fig:archzentral}
+\end{figure}
+
 Die in Kapitel 5 von Singh und Acharya vorgestellte Methode kann man als zentralisiertes SIP bezeichnen. Hier wird die Signalisierung und Lokation der Teilnehmer und das Abmischen der Audioströme zentral vorgenommen. Den komplett zentralisierten Ansatz verfolgen auch Safei und Boustead im vorgestellten MICE-System. Diese Architektur bietet zunächst eine sehr gute Ausgangsbasis für Sprachkommunikationslösungen mit einer begrenzten Anzahl an Teilnehmern, da es auch Knoten mit geringer Bandbreite eine Teilnahme ermöglicht. 
 
 Die Grundlage für eine einfache Berechnung der verbrauchten Bandbreite versteht sich unter folgenden Voraussetzungen:
@@ -239,6 +263,7 @@ Die Nachteile eines Mischservers liegen jedoch beim interaktiven Delay, der abhä
 
 \subsection{Verteiltes dediziertes Audiomixing}
 
+
 \subsubsection{Dedicated Node Mixing}
 Die Konsequenz aus einer fehlenden Skalierbarkeit eines Audioservers führt zum logischen Entschluss diesen zu verteilen. Ein Ansatz verteilte Konferenzen zu betreiben, besteht darin, mehrere dedizierte SIP-Endpunkte zu ernennen, mit denen sich Teilnehmern  verbinden. Diese Mixer nehmen die Audioströme entgegen, mischen sie ab und leiten sie an die entsprechenden Spieler weiter. 
 
@@ -257,14 +282,22 @@ Grundsätztlich jedoch funktioniert das dedizierte Mischen besser als das End-Sys
 % Grafik Server-Based-Mixing
 
 \subsection{Dezentrales Audiomixing}
+
+\begin{figure}
+	\centering
+		\includegraphics[width=0.60\textwidth]{grafiken/archhybrid.eps}
+	\caption{Hybride SIP Architektur mit einem oder mehreren Konferenzservern}
+	\label{fig:archhybrid}
+\end{figure}
+
 \subsubsection{SIP-Hybrid-Modell}
 \label{siphybrid}
 
-Das SIP-Hybrid-Modell nutzt die zentrale Komponente des Registrars, bei dem sich jeder Teilnehmer des Spiels zuerst anmeldet. Der Registrar verfügt so über eine komplette Liste aller Teilnehmer. Der Datenaustausch findet über den Proxy statt, der bei jeder Nachricht die Adresse des Empfängers bestimmt. Die Sprach\-kommunikation jedoch findet nicht über die zentrale Komponente statt, sondern direkt zwischen den einzelnen Spielern. Im einfachsten Fall wird der eigene Audiostrom an alle Teilnehmer des Spieles gesendet, und man selbst empfängt auch den Audiostrom aller Teilnehmer. In einer peer-to-peer Telekonferenz nutzt jeder Teilnehmer unicast, um seine Stimme an alle anderen Teilnehmer der Konferenz zu übertragen und um Stimmen aller Konferenzeilnehmer zu empfangen. In einer Konferenz mit $n$ Teilnehmern müssen so $n^2-n$ Audioströme ausgetauscht werden. 
+Das SIP-Hybrid-Modell beinhaltet die zentrale Signalisierungskomponente einen Registrar und Proxy.  Der Registrar verfügt über eine komplette Liste aller Teilnehmer und der Proxy ist in der Lage alle ein und ausgehenden Nachrichten aufzulösen und zuzustellen.  Die Sprach\-kommunikation jedoch direkt zwischen den einzelnen Spielern statt. Im einfachsten Fall wird der eigene Audiostrom an alle Teilnehmer des Spieles gesendet (Multi-Unicast), und man selbst empfängt auch den Audiostrom aller Teilnehmer. In einer Konferenz mit $n$ Teilnehmern müssen so insgesamt $n^2-n$ Audioströme ausgetauscht werden. 
 
-Dies entspricht dem Full-Mesh-Anatz von Schulzrinne \cite{schulzrinne03}, der jedoch in einem völlig dezentralisierten Ansatz damit zu kämpfen hatte, die Teilnehmer einer Konferenz zu bestimmen. Hier kann die Bestimmung der Teilnehmer einer Konferenz mit Hilfe des Registrars zentral geschehen und vereinfacht das Problem. 
+Dies entspricht dem Full-Mesh-Anatz von Schulzrinne \cite{schulzrinne03}, der jedoch in einem völlig dezentralisierten Ansatz damit zu kämpfen hatte, die Teilnehmer einer Konferenz zu bestimmen. Hier kann jedoch die Bestimmung der Teilnehmer einer Konferenz mit Hilfe des Registrars zentral geschehen und vereinfacht das Problem. 
 
-Indem nun die einzelnen Knoten für das Abmischen verantwortlich sind, kann die Kapazitätsbelastung eines Mischservers auf die Clientmaschinen verlagert werden, die gerade im Spielebereich sehr gut ausgesattet sind. Da allerdings der Bandbreitenverbrauch bei einem dezentralen Austausch von Audioströmen quadratisch von der Anzahl der Teilnehmer abhängt, soll eine Plausibilitätsrechnung prüfen, welche Mindestvoraussetzungen die Teilnehmer eines solchen Systems erfüllen müssen.
+Indem nun die einzelnen Client-Knoten das Abmischen vornhemen, kann die Kapazitätsbelastung eines Mischservers auf die Clientmaschinen verlagert werden, die gerade im Spielebereich sehr gut ausgesattet sind. Da allerdings der Bandbreitenverbrauch bei einem dezentralen Austausch von Audioströmen quadratisch von der Anzahl der Teilnehmer abhängt, soll eine Plausibilitätsrechnung prüfen, welche Mindestvoraussetzungen die Teilnehmer eines solchen Systems erfüllen müssen.
 
 Es wird gefordert, dass mindestens 16 Spieler in der Lage sein sollen, miteinander zu kommunizieren. Sendet jeder Spieler seinen Audiostrom mit 16 Kbit/s an die anderen Spieler, kann leicht errechnet werden, über welche Anbindung die Spieler mindestens verfügen müssen, um diese Anforderung zu erfüllen. 
 

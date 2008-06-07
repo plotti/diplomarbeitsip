@@ -8,32 +8,35 @@
 \contentsline {figure}{\numberline {2.2}{\ignorespaces Interaktivit\"at vs. Lebendigkeit\relax }}{8}
 \contentsline {figure}{\numberline {2.3}{\ignorespaces Proxemikmodell mit einer pers\"onlichen, sozialen und \"offentlichen Zone\relax }}{9}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Ein einziger Kanal b\"undelt alle \"ubertragenen Signale und f\"uhrt so zu Adressierungsproblemen\relax }}{14}
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Einsatz von jeweils direkten Kommunikationskan\"alen zwischen Teilnehmern\relax }}{15}
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Konfiguration von Kan\"alen, Gruppen und Rechten in kommerziellen Sprach\discretionary {-}{}{}kommunikations\discretionary {-}{}{}programmen\relax }}{17}
-\contentsline {figure}{\numberline {3.4}{\ignorespaces Distanzbasierte Ver\"anderung der Lautst\"arke in Abh\"angigkeit der gew\"ahlten Zone\relax }}{20}
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Konfiguration von Kan\"alen, Gruppen und Rechten in kommerziellen Sprach\discretionary {-}{}{}kommunikations\discretionary {-}{}{}programmen\relax }}{12}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Ein einziger Kanal b\"undelt alle \"ubertragenen Signale und f\"uhrt so zu Adressierungsproblemen\relax }}{14}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Einsatz von jeweils direkten Kommunikationskan\"alen zwischen Teilnehmern\relax }}{15}
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Distanzbasierte Ver\"anderung der Lautst\"arke in Abh\"angigkeit der gew\"ahlten Zone\relax }}{17}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Eine \"Ubersicht \"uber die VoIP Protokollfamilie\relax }}{22}
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Beispiel eines typischen SIP-Requests\relax }}{27}
-\contentsline {figure}{\numberline {4.3}{\ignorespaces SIP-Anruf ohne Proxy\relax }}{30}
-\contentsline {figure}{\numberline {4.4}{\ignorespaces Einsatz eines Proxy Servers mit Registrar\relax }}{37}
-\contentsline {figure}{\numberline {4.5}{\ignorespaces Teilnehmer A schickt Teilnehmer B eine Nachricht. Beide sind Teil der gleichen Dom\"ane und benutzen den gleichen Proxy.\relax }}{38}
-\contentsline {figure}{\numberline {4.6}{\ignorespaces Teilnehmer A m\"ochte die Pr\"asenz von Teilnehmer B abonnieren. Teilnehmer B aktualisiert seine Information.\relax }}{38}
-\contentsline {figure}{\numberline {4.7}{\ignorespaces Beispiel einer SDP-Nachricht\relax }}{38}
-\contentsline {figure}{\numberline {4.8}{\ignorespaces Header eines RTP-Pakets\relax }}{39}
-\contentsline {figure}{\numberline {4.9}{\ignorespaces Ein schematischer Ablauf von STUN\relax }}{39}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Eine \"Ubersicht \"uber die VoIP Protokollfamilie\relax }}{20}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Beispiel eines typischen SIP-Requests\relax }}{25}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces SIP-Anruf ohne Proxy\relax }}{28}
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Einsatz eines Proxy Servers mit Registrar\relax }}{35}
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Teilnehmer A schickt Teilnehmer B eine Nachricht. Beide sind Teil der gleichen Dom\"ane und benutzen den gleichen Proxy.\relax }}{36}
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Teilnehmer A m\"ochte die Pr\"asenz von Teilnehmer B abonnieren. Teilnehmer B aktualisiert seine Information.\relax }}{36}
+\contentsline {figure}{\numberline {4.7}{\ignorespaces Beispiel einer SDP-Nachricht\relax }}{36}
+\contentsline {figure}{\numberline {4.8}{\ignorespaces Header eines RTP-Pakets\relax }}{37}
+\contentsline {figure}{\numberline {4.9}{\ignorespaces Ein schematischer Ablauf von STUN\relax }}{37}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {6.1}{\ignorespaces Peer-to-Peer-Architektur mit direkten Audioverbindungen der Spieler untereinander in den entsprechenden Spielezonen\relax }}{47}
-\contentsline {figure}{\numberline {6.2}{\ignorespaces Client Server Architektur mit zentralem Mischserver in Nordamerika\relax }}{48}
-\contentsline {figure}{\numberline {6.3}{\ignorespaces Eine Proxy-Architektur. In schwarz ist die Verbindung von Spieler 3 mit Spieler 7 dargestellt.\relax }}{49}
-\contentsline {figure}{\numberline {6.4}{\ignorespaces Verteilte Server S1...S4. Die Verbindungen der Spielewelt S2 werden in schwarz dargestellt. \relax }}{50}
+\contentsline {figure}{\numberline {6.1}{\ignorespaces Peer-to-Peer-Architektur mit direkten Audioverbindungen der Spieler untereinander in den entsprechenden Spielezonen\relax }}{45}
+\contentsline {figure}{\numberline {6.2}{\ignorespaces Client Server Architektur mit zentralem Mischserver in Nordamerika\relax }}{46}
+\contentsline {figure}{\numberline {6.3}{\ignorespaces Eine Proxy-Architektur. In schwarz ist die Verbindung von Spieler 3 mit Spieler 7 dargestellt.\relax }}{47}
+\contentsline {figure}{\numberline {6.4}{\ignorespaces Verteilte Server S1...S4. Die Verbindungen der Spielewelt S2 werden in schwarz dargestellt. \relax }}{48}
+\contentsline {figure}{\numberline {6.5}{\ignorespaces Dezentralisierte SIP Architektur\relax }}{52}
+\contentsline {figure}{\numberline {6.6}{\ignorespaces Komplett zentralisierter Ansatz mit SIP\relax }}{54}
+\contentsline {figure}{\numberline {6.7}{\ignorespaces Hybride SIP Architektur mit einem oder mehreren Konferenzservern\relax }}{57}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {7.1}{\ignorespaces Viereck aus Spielerlebnis, Simulation, erz\"ahlerischem Aspekt und Spielerinteraktion\relax }}{64}
-\contentsline {figure}{\numberline {7.2}{\ignorespaces \"Ubersicht der Komponenten des PjSIP-Protokollstacks\relax }}{71}
-\contentsline {figure}{\numberline {7.3}{\ignorespaces Realistische 3D-Spielewelt mit Radar\relax }}{73}
-\contentsline {figure}{\numberline {7.4}{\ignorespaces Eine \"Ubersicht \"uber den Audiofluss in PjSIP\relax }}{74}
-\contentsline {figure}{\numberline {7.5}{\ignorespaces Funktionsweise der Konferenzbr\"ucke mit 5 Teilnehmern und Anpassung der einzelnen Audiostr\"ome\relax }}{76}
+\contentsline {figure}{\numberline {7.1}{\ignorespaces Viereck aus Spielerlebnis, Simulation, erz\"ahlerischem Aspekt und Spielerinteraktion\relax }}{63}
+\contentsline {figure}{\numberline {7.2}{\ignorespaces \"Ubersicht der Komponenten des PjSIP-Protokollstacks\relax }}{70}
+\contentsline {figure}{\numberline {7.3}{\ignorespaces Realistische 3D-Spielewelt mit Radar\relax }}{72}
+\contentsline {figure}{\numberline {7.4}{\ignorespaces Eine \"Ubersicht \"uber den Audiofluss in PjSIP\relax }}{73}
+\contentsline {figure}{\numberline {7.5}{\ignorespaces Funktionsweise der Konferenzbr\"ucke mit 5 Teilnehmern und Anpassung der einzelnen Audiostr\"ome\relax }}{75}
 \contentsline {figure}{\numberline {7.6}{\ignorespaces Startbildschirm des Spiels\relax }}{77}
 \contentsline {figure}{\numberline {7.7}{\ignorespaces Ablauf einer symmetrischen Verbindung\relax }}{79}
 \contentsline {figure}{\numberline {7.8}{\ignorespaces Zonenkonzept und daraus resultierende Funktionalit\"at\relax }}{81}

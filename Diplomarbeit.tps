@@ -5,7 +5,7 @@ Version=2
 [SessionInfo]
 ActiveTab=0
 FrameCount=20
-ActiveFrame=2
+ActiveFrame=9
 
 [Frame0]
 Columns=1
@@ -68,8 +68,8 @@ TopSubLine=0
 [Frame2]
 Columns=1
 Rows=1
-Flags=2
-ShowCmd=3
+Flags=0
+ShowCmd=1
 MinPos.x=-1
 MinPos.y=-1
 MaxPos.x=-4
@@ -82,17 +82,17 @@ Class=CLatexEdit
 Document=kapitel\kapitel_implementierung.tex
 
 [Frame2_Row0]
-cyCur=283
+cyCur=346
 cyMin=10
 
 [Frame2_Col0]
-cxCur=869
+cxCur=751
 cxMin=10
 
 [Frame2_View0,0]
-Cursor.row=35
-Cursor.column=352
-TopSubLine=83
+Cursor.row=266
+Cursor.column=189
+TopSubLine=678
 
 [Frame3]
 Columns=1
@@ -119,9 +119,9 @@ cxCur=751
 cxMin=10
 
 [Frame3_View0,0]
-Cursor.row=155
-Cursor.column=223
-TopSubLine=480
+Cursor.row=0
+Cursor.column=0
+TopSubLine=0
 
 [Frame4]
 Columns=1
@@ -177,7 +177,7 @@ cxCur=751
 cxMin=10
 
 [Frame5_View0,0]
-Cursor.row=0
+Cursor.row=6
 Cursor.column=0
 TopSubLine=0
 
@@ -208,7 +208,7 @@ cxMin=10
 [Frame6_View0,0]
 Cursor.row=93
 Cursor.column=13
-TopSubLine=80
+TopSubLine=82
 
 [Frame7]
 Columns=1
@@ -264,15 +264,15 @@ cxCur=801
 cxMin=10
 
 [Frame8_View0,0]
-Cursor.row=2
+Cursor.row=0
 Cursor.column=0
 TopSubLine=0
 
 [Frame9]
 Columns=1
 Rows=1
-Flags=0
-ShowCmd=1
+Flags=2
+ShowCmd=3
 MinPos.x=-1
 MinPos.y=-1
 MaxPos.x=-4
@@ -285,17 +285,17 @@ Class=CLatexEdit
 Document=kapitel\kapitel_konstruktion.tex
 
 [Frame9_Row0]
-cyCur=346
+cyCur=434
 cyMin=10
 
 [Frame9_Col0]
-cxCur=801
+cxCur=902
 cxMin=10
 
 [Frame9_View0,0]
-Cursor.row=303
-Cursor.column=137
-TopSubLine=742
+Cursor.row=299
+Cursor.column=72
+TopSubLine=634
 
 [Frame10]
 Columns=1
@@ -382,7 +382,7 @@ cxMin=10
 [Frame12_View0,0]
 Cursor.row=39
 Cursor.column=0
-TopSubLine=162
+TopSubLine=172
 
 [Frame13]
 Columns=1
@@ -411,7 +411,7 @@ cxMin=10
 [Frame13_View0,0]
 Cursor.row=21
 Cursor.column=0
-TopSubLine=56
+TopSubLine=51
 
 [Frame14]
 Columns=1
@@ -498,7 +498,7 @@ cxMin=10
 [Frame16_View0,0]
 Cursor.row=206
 Cursor.column=0
-TopSubLine=405
+TopSubLine=393
 
 [Frame17]
 Columns=1
@@ -525,9 +525,9 @@ cxCur=839
 cxMin=10
 
 [Frame17_View0,0]
-Cursor.row=84
-Cursor.column=233
-TopSubLine=291
+Cursor.row=17
+Cursor.column=0
+TopSubLine=67
 
 [Frame18]
 Columns=1
@@ -556,7 +556,7 @@ cxMin=10
 [Frame18_View0,0]
 Cursor.row=19
 Cursor.column=155
-TopSubLine=85
+TopSubLine=93
 
 [Frame19]
 Columns=1
