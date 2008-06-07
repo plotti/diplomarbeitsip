@@ -257,6 +257,23 @@ Die Aufgabe der \textit{Conference-Bridge} besteht die Audioströme bestehender S
 	\label{fig:conference-bridge}
 \end{figure}
 
+\subsection {Erweitertes Audio-Mixing}
+Da bisher die Teilnahme an einer Konferenz binär gelöst wurde, waren Spieler entweder Teil einer solchen oder nicht. So ist das in einer Konferenz mit \textit{n} Teilnehmern ${p_{1},p_{2},...,p_{n}}$, mit Audioströmen ${V_{1}(t),V_{2}(t),...,V_{n}(t)}$, von einem Teilnehmer $i$ zu einer Zeit \textit{t} empfangene Signal $R_{i}(t)$ aller Teilnehmer $j$ definiert durch:
+
+\begin{align}
+	R_{i}(t) = \sum \limits_{j=1}^n {V_{j}(t)}  \ \ \mbox{wobei} \  1 \geq j \geq n \ \mbox{und} \  j \neq i
+\end{align}
+
+Der Verbesserungsvorschlag sieht vor den binären Teilnahmestatus durch eine stetige Teilnahmefunktion zu ersetzen.  Die Teilnahme an einer Konferenz soll von der Distanz $d_{j}$ zum anderen Teilnehmer abhängig sein und somit alle Werte zwischen 0 und 1 annehmen. Das empfangene Signal $R_{i}(t)$ wird somit definiert als:
+
+\begin{align}
+	R_{i}(t) = \sum \limits_{j=1}^n {d_{j} \cdot V_{j}(t)} \ \ \mbox{wobei} \ 1 \geq j \geq n \ \mbox{und} \ j \neq i
+\end{align}
+
+In einer 3D Umgebung, in der die Spieler beliebige Positionen zueinander einnehmen können, wird vom Spieler ein Distanzvektor zu den übrigen Spielerpositionen berechnet und die Lautstärke des entsprechenden Audiostroms anhand diesem angepasst. Ein solcher Ansatz ermöglicht es für den Spieler eine eigene Konferenz zu erstellen, in der die Teilnehmer nur zu einem bestimmten Prozentsatz, repräsentiert durch ihre Lautstärke, anwesend sind. 
+
+Personen die sich in der Nähe befinden sind besser zu hören, als Personen die sich weit entfernt befinden. Die Kontrolle der Konferenz findet somit nicht direkt durch Tastatureingaben statt, sondern hängt implizit von der Position und Bewegung der Spieler zueinander ab. Um dieses Mixingkonzept zu realisieren, wird das Modell der Proxemik eingesetzt, das bereits im zweiten Kapitel vorgestellt wurde.
+
 \section{Spielablauf}
 
 \subsection{Registrierung}
