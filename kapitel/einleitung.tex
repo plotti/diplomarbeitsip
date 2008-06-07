@@ -1,6 +1,6 @@
 \chapter{Einführung}
 \label{chap:einleitung}
-Dieses Kapitel gibt zunächst einen Einblick auf Entwicklung der Sprachkommunikation in Mehrspieler-Computerspielen, die neue Herausforderungen das Kommunikationsmedium stellen. Anhand dieser wird die Motivation für die Arbeit hergeleitet und die Marktrelevanz dieses Themas verdeutlicht. Abschließend werden konkrete Ziele für eine Umsetzung einer distanzbasierten Sprachkommunikation gestellt und eine Übersicht über den Aufbau der Arbeit gegeben.
+%Dieses Kapitel gibt zunächst einen Einblick auf Entwicklung der Sprachkommunikation in Mehrspieler-Computerspielen, die neue Herausforderungen das Kommunikationsmedium stellen. Anhand dieser wird die Motivation für die Arbeit hergeleitet und die Marktrelevanz dieses Themas verdeutlicht. Abschließend werden konkrete Ziele für eine Umsetzung einer distanzbasierten Sprachkommunikation gestellt und eine Übersicht über den Aufbau der Arbeit gegeben.
 
 %\section{Virtuelle Welten}
 %Einen großen Anteil an der zunehmenden Beliebtheit von Computerspielen hat ihre zunehmende Etablierung als virtuelle Welt. Diese stellt für den Spieler die Regeln auf, nach denen gespielt wird, bietet aber gleichzeitig auch einen Ort, an dem man mit anderen Spielern in gleicher Art und Weise interagieren kann. 
@@ -33,11 +33,11 @@ Eine integrierte Sprachkommunikation wird jedoch von den wenigsten Produkten unt
  
 Aufgrund des hohen Bedarfs nach solchen Lösungen bieten Drittanbieter seit einigen Jahren  ergänzende Konferenzlösungen speziell für Spiele an. Diese sehen vor, dass dedizierte Server mit einer hohen Bandbreite und Rechenleistung von Spielergruppen eingekauft werden können, um darauf Audiokonferenzen abzuhalten. Hilfsprogramme auf Clientseite ermöglichen es dann parallel zur Spielesitzung in Kanälen auf solchen Servern eine Audioverständigung aufzubauen. Sprachkanäle solcher Programme sind wie ein Funksprechgerät konfiguriert: Normalerweise können alle Mitglieder eines Teams, die auf dem gleichen Kanal verbunden sind, den Sprecher hören. 
 
-Der Einsatz solcher virtuellen Funksprechgeräte, deren Pendant im wirklichen Leben vor allem in Kampfsituationen genutzt wird, zeigte sich auch in virtuellen Welten von Vorteil. Dieser führte letztendlich zu einer schnellen Adoption und Popularität von Sprachkommunikation in Computerspielen. Mittlerweile schreiben viele Spielergruppen die Benutzung solcher Hilfsprogramme für ihre Mitglieder sogar vor.
+Der Einsatz solcher virtuellen Funksprechgeräte, deren Pendant im wirklichen Leben vor allem in Kampfsituationen genutzt wird, zeigte sich auch in virtuellen Welten von Vorteil. Dieser führte letztendlich zu einer schnellen Verbreitung und Popularität von Sprachkommunikation in Computerspielen. Mittlerweile schreiben viele Spielergruppen die Benutzung solcher Hilfsprogramme für ihre Mitglieder sogar vor.
+%Obwohl Sprachkommunikation kleinen Spielergemeinde genutzt wird, bildet sie die Schn
+%Der Eifer, mit der die Sprachkommunikation für Online-Spiele adoptiert wurde, zeigt eindeutig wie sehr diese der Textkommunikation überlegen ist.
 
-Der Eifer, mit der die Sprachkommunikation für Online-Spiele adoptiert wurde, zeigt eindeutig wie sehr diese der Textkommunikation überlegen ist. Die bisher eingesetzten Lösungen funktionieren gut, wenn kleine sich bereits kennende Gruppen gemeinsame Kanäle nutzen, um ihre Taktik oder weiteres Vorgehen zu besprechen.
-
-Der Hauptnachteil solcher Lösungen liegt vor allem darin, dass sie nicht in das Spiel integriert sind und so kein unmittelbarer Zusammenhang zwischen den Teilnehmern einer Konferenz und den Teilnehmern des Spieles besteht.
+ Die bisher eingesetzten Lösungen funktionieren gut, wenn kleine sich bereits kennende Gruppen gemeinsame Kanäle nutzen, um ihre Taktik oder weiteres Vorgehen zu besprechen. Der Hauptnachteil solcher Lösungen liegt vor allem darin, dass sie nicht in das Spiel integriert sind und so kein unmittelbarer Zusammenhang zwischen den Teilnehmern einer Konferenz und den Teilnehmern des Spieles besteht.
 
 Diese Produkte leiden vor allem unter vier Problemen \cite{gibbs04}, \cite{Gibbs04a}: 
 
@@ -48,16 +48,14 @@ Diese Produkte leiden vor allem unter vier Problemen \cite{gibbs04}, \cite{Gibbs
 	\item Benutzen zu viele Spieler einen gemeinsamen Sprachkanal, ist dieser aufgrund der gegenseitigen Interferenzen schnell überlastet. Bei zu vielen gleichzeitigen Stimmen, können die Teilnehmer sich nicht mehr gegenseitig verstehen. 
 \end{itemize}
 
-\section{Marktrelevanz}
-Obwohl Sprachkommunikation in Mehrspieler-Computerspielen, bisher nur von einer kleinen Spielergemeinde genutzt wird, bildet sie die Schnittmenge zweier großer Bereiche, nämlich der des VoIP und der Computerspiele, die bereits zu bedeutenden Marktsegmenten in der IT angewachsen sind. 
+%\section{Marktrelevanz}
+%Obwohl Sprachkommunikation in Mehrspieler-Computerspielen, bisher nur von einer kleinen Spielergemeinde genutzt wird, bildet sie die Schnittmenge zweier großer Bereiche, nämlich der des VoIP und der Computerspiele, die bereits zu bedeutenden Marktsegmenten in der IT angewachsen sind. 
 
-Eine im Jahr 2007 von Ipoque \cite{ipoque:2007} weltweit durchgeführte Studie, bei der drei Petabyte anonymer Daten von mehr als einer Million Nutzern erhoben wurden, zeigt, dass P2P-Anwendungen im Internet mehr Verkehr als alle anderen Anwendungen zusammen erzeugen. Dabei ist Voice-over-IP (VoIP) mittlerweile zu einer der beliebtesten Anwendungen geworden. Unter den Privatpersonen ist die Internet-Telefonie besonders bei den 18- bis 24-Jährigen beliebt. In dieser Gruppe verwendet fast jeder Vierte seinen Breitbandanschluss, um mit Freunden und Bekannten zu sprechen \cite{E-Business:08}.
+%Eine im Jahr 2007 von Ipoque \cite{ipoque:2007} weltweit durchgeführte Studie, bei der drei Petabyte anonymer Daten von mehr als einer Million Nutzern erhoben wurden, zeigt, dass P2P-Anwendungen im Internet mehr Verkehr als alle anderen Anwendungen zusammen erzeugen. Dabei ist Voice-over-IP (VoIP) mittlerweile zu einer der beliebtesten Anwendungen geworden. Unter den Privatpersonen ist die Internet-Telefonie besonders bei den 18- bis 24-Jährigen beliebt. In dieser Gruppe verwendet fast jeder Vierte seinen Breitbandanschluss, um mit Freunden und Bekannten zu sprechen \cite{E-Business:08}.
 
-Parallel zur rasanten Entwicklung des VoIP-Marktes weisen gleich mehrere große Studien \cite{ErnstYoung:07}, \cite{pwc:07} auf die zunehmende Marktrelevanz von Computer- und Videospielen hin, die bei den gleichen Zielgruppen beliebt sind. Allein in Deutschland ist ihr Umsatz in diesem Jahr um 21\% auf 2,14 Millionen Euro gestiegen und es wird erwartet, dass dieser noch im laufenden Jahr sogar den Umsatz der Musikbranche übertreffen wird . Weltweit wird sogar ein Anstieg des Umsatzes der Unterhaltungs- und Medienindustrie bis 2011 auf 1,8 Billionen US-Dollar geschätzt. 
+%Parallel zur rasanten Entwicklung des VoIP-Marktes weisen gleich mehrere große Studien \cite{ErnstYoung:07}, \cite{pwc:07} auf die zunehmende Marktrelevanz von Computer- und Videospielen hin, die bei den gleichen Zielgruppen beliebt sind. Allein in Deutschland ist ihr Umsatz in diesem Jahr um 21\% auf 2,14 Millionen Euro gestiegen und es wird erwartet, dass dieser noch im laufenden Jahr sogar den Umsatz der Musikbranche übertreffen wird . Weltweit wird sogar ein Anstieg des Umsatzes der Unterhaltungs- und Medienindustrie bis 2011 auf 1,8 Billionen US-Dollar geschätzt. 
 
 \section{Ziel der Diplomarbeit}
-
-// BESSER + BILLIGER
 
 In dieser Diplomarbeit wird eine Implementierung einer integrierten Sprachkommunikation für Spiele entwickelt, die im Gegensatz zu bisherigen Lösungen, keinen zentralen Konferenz-Server zum Mischen des Audiostroms benutzt. Die Audioverbindung erfolgt auf Peer-to-Peer-Basis, wobei nach Möglichkeit bereits bestehende VoIP Komponenten verwendet werden. Ein solcher Ansatz soll nicht nur helfen Kosten zu sparen, indem die Bandbreite und Rechenleistung von Teilnehmern gestellt wird, sondern ihnen auch eine bessere Kontrolle über Audiokonferenzen ermöglichen.
 
@@ -76,7 +74,7 @@ Im Abschluss der Arbeit werden die Auswirkungen einer solchen Lösung untersucht 
 
 Die vorliegende Arbeit gliedert sich wie folgt:
 
-Zunächst werden in Kapitel \textit{Kapitel 2} die Grundlagen der Kommunikation vorgestellt, die später in \textit{Kapitel 3} dazu genutzt werden, um sukzessive aus den Untersuchungen der Probleme bisheriger Sprachkommunikationslösungen praktische und innovative Konzepte für eine bessere Lösung zu erarbeiten. Auf diese Weise sollen in dieser Arbeit nicht nur technische Herausforderungen einer peer-to-peer-basierten integrierten Sprach\-kommunikations\-lösung adressiert werden, sondern auch Schwächen in der Benutzer\-freundlichkeit bisheriger Programme durch die Einführung von Sprach\-übertragungs\-metaphern und Mehrkanalmodellen kompensiert werden. 
+Zunächst werden in Kapitel \textit{Kapitel 2} die Grundlagen der Kommunikation vorgestellt, die später in \textit{Kapitel 3} dazu genutzt werden, um sukzessive aus den Untersuchungen der Probleme bisheriger Sprachkommunikationslösungen praktische und innovative Konzepte für eine bessere Lösung zu erarbeiten. Auf diese Weise sollen in dieser Arbeit nicht nur technische Herausforderungen einer integrierten Sprach\-kommunikations\-lösung adressiert werden, sondern auch Schwächen in der Benutzer\-freundlichkeit bisheriger Programme durch die Einführung von Sprach\-übertragungs\-metaphern und Mehrkanalmodellen kompensiert werden. 
 
 Die für eine technische Umsetzung notwendigen Grundlagen und wichtige Bestandteile des gewählten Protokolls werden dem Leser in Kapitel \textit{Kapitel 4} vermittelt. Kapitel \textit {Kapitel 5} bietet eine Übersicht relevanter Arbeiten im Bereich der Sprachkommunikation in Mehrspieler-Computerspielen und zeigt ihre Vor- und Nachteile. Dieses Kapitel erfordert technische VoIP-Grundlagen aus \textit{Kapitel 4} erfordert und ist deshalb nach diesem angeordnet.
 
