@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592-1.40.4 (MiKTeX 2.7) (preloaded format=latex 2008.3.17)  7 JUN 2008 14:10
+This is pdfTeX, Version 3.141592-1.40.4 (MiKTeX 2.7) (preloaded format=latex 2008.3.17)  7 JUN 2008 15:36
 entering extended mode
 **Main.tex
 (Main.tex
@@ -510,7 +510,7 @@ See the caption package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.50 ...a)}{\ignorespaces {Full-Mesh-Ansatz}}}{99}
+l.53 ...)}{\ignorespaces {Full-Mesh-Ansatz}}}{100}
                                                   
 If you do not understand this error, please take a closer look
 at the documentation of the `caption' package, especially the
@@ -525,7 +525,7 @@ See the caption package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.50 ...a)}{\ignorespaces {Full-Mesh-Ansatz}}}{99}
+l.53 ...)}{\ignorespaces {Full-Mesh-Ansatz}}}{100}
                                                   
 If you do not understand this error, please take a closer look
 at the documentation of the `caption' package, especially the
@@ -540,7 +540,7 @@ See the caption package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.51 ...{\ignorespaces {Partial-Mesh-Ansatz}}}{99}
+l.54 ...\ignorespaces {Partial-Mesh-Ansatz}}}{100}
                                                   
 If you do not understand this error, please take a closer look
 at the documentation of the `caption' package, especially the
@@ -555,7 +555,7 @@ See the caption package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.51 ...{\ignorespaces {Partial-Mesh-Ansatz}}}{99}
+l.54 ...\ignorespaces {Partial-Mesh-Ansatz}}}{100}
                                                   
 If you do not understand this error, please take a closer look
 at the documentation of the `caption' package, especially the
@@ -860,8 +860,13 @@ n 22.03.2008,
 
 [55]
 File: grafiken/archhybrid.eps Graphic file (type eps)
- <grafiken/archhybrid.eps> [56] [57] [58] [59] [60]) [61]
-(kapitel/kapitel_implementierung.tex
+ <grafiken/archhybrid.eps>
+Overfull \hbox (1.33293pt too wide) in paragraph at lines 296--297
+[]\OT1/cmr/m/n/10.95 Das SIP-Hybrid-Modell bein-hal-tet die zen-tra-le Si-gna-l
+i-sie-rungs-kom-po-nen-te einen
+ []
+
+[56] [57] [58] [59] [60]) [61] (kapitel/kapitel_implementierung.tex
 Kapitel 7.
 File: grafiken/spielgenredreieck.eps Graphic file (type eps)
 <grafiken/spielgenredreieck.eps> [62
@@ -1165,10 +1170,10 @@ LaTeX Warning: There were multiply-defined labels.
 Here is how much of TeX's memory you used:
  7570 strings out of 95341
  112257 string characters out of 1184182
- 234241 words of memory out of 1500000
+ 234277 words of memory out of 1500000
  10519 multiletter control sequences out of 110000
  12477 words of font info for 44 fonts, out of 1200000 for 2000
  14 hyphenation exceptions out of 8191
  38i,17n,47p,1501b,1122s stack positions out of 5000i,500n,10000p,200000b,5000s
 
-Output written on Main.dvi (134 pages, 498332 bytes).
+Output written on Main.dvi (134 pages, 498904 bytes).

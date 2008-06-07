@@ -119,9 +119,9 @@ cxCur=751
 cxMin=10
 
 [Frame3_View0,0]
-Cursor.row=0
+Cursor.row=38
 Cursor.column=0
-TopSubLine=0
+TopSubLine=136
 
 [Frame4]
 Columns=1
@@ -177,8 +177,8 @@ cxCur=751
 cxMin=10
 
 [Frame5_View0,0]
-Cursor.row=6
-Cursor.column=0
+Cursor.row=1
+Cursor.column=8
 TopSubLine=0
 
 [Frame6]
@@ -285,7 +285,7 @@ Class=CLatexEdit
 Document=kapitel\kapitel_konstruktion.tex
 
 [Frame9_Row0]
-cyCur=434
+cyCur=589
 cyMin=10
 
 [Frame9_Col0]
@@ -293,9 +293,9 @@ cxCur=902
 cxMin=10
 
 [Frame9_View0,0]
-Cursor.row=299
-Cursor.column=72
-TopSubLine=634
+Cursor.row=380
+Cursor.column=0
+TopSubLine=814
 
 [Frame10]
 Columns=1
@@ -322,9 +322,9 @@ cxCur=787
 cxMin=10
 
 [Frame10_View0,0]
-Cursor.row=73
+Cursor.row=0
 Cursor.column=0
-TopSubLine=192
+TopSubLine=0
 
 [Frame11]
 Columns=1
@@ -411,7 +411,7 @@ cxMin=10
 [Frame13_View0,0]
 Cursor.row=21
 Cursor.column=0
-TopSubLine=51
+TopSubLine=48
 
 [Frame14]
 Columns=1
@@ -525,9 +525,9 @@ cxCur=839
 cxMin=10
 
 [Frame17_View0,0]
-Cursor.row=17
-Cursor.column=0
-TopSubLine=67
+Cursor.row=84
+Cursor.column=111
+TopSubLine=290
 
 [Frame18]
 Columns=1
