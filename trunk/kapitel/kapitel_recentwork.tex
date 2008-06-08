@@ -7,7 +7,7 @@ Erste Ansätze für eine Sprachkommunikation in Computerspielen finden sich im MiM
 
 \section{Serverbasierte Ansätze}
 
-\subsection{DICE: Internet Delivery of Immersive Voice Communi\-cation for Crowded Virtual Spaces}
+\subsubsection{DICE: Internet Delivery of Immersive Voice Communi\-cation for Crowded Virtual Spaces}
 
 Im DICE System \cite{safei05} schlagen Safei und Boustead einen Entwurf einer serverbasierten Architektur für die Sprachkommunikation für Mehrspieler-Computerspiele im Internet vor. Dieses System beruht auf dem Prinzip, dass eine zentrale Komponente für die Verteilung von Audioströmen verantwortlich ist, deren Abmischen jedoch lokal auf den Clients geschieht. Dabei soll jeder Spieler eine Mischung aus Stimmen und Geräuschen hören, die speziell auf seine Position im Spiel angepasst ist. Es soll sowohl die Lautstärke als auch die Position der Stimmen in der Audioszene abgebildet werden. Die Architektur baut auf einem verteilten Server-System auf, da vorhergehende Studien \cite{safei04} von Safei gezeigt hatten, dass eine einzige Serverkomponente die Delay Anforderungen nicht erfüllen kann. 
 
@@ -17,7 +17,7 @@ Auf dem Scene Creation Server wird das räumliche Umfeld jedes Spielers in Cluste
 
 %Der Scene Creation Server wird dabei vom darunter liegenden Control-Server verwaltet, der darüber entscheidet, welche Audioströme an den Audio-Client geschickt werden sollen, damit dieser in der Lage ist die Audioszene zu erzeugen. 
 
-\subsection{MICE: Mobile Immersice Communication Environment}
+\subsubsection{MICE: Mobile Immersice Communication Environment}
 
 Das MICE System \cite{safei06b} von Safei und Boustead ist der Entwurf einer serverbasierten Sprachkommunikation für Mehrspieler-Spiele, die auf mobilen Endgeräten zum Einsatz kommen. Die spezielle Herausforderung besteht darin, dass solche Geräte über eine geringe Bandbreite und Rechenleistung verfügen. Dabei ähnelt der Ansatz dem DICE System, da auch jeder Spieler seine Monoquelle an den Server sendet. Der Unterschied zum DICE System besteht darin, dass die Erzeugung der Audioszene komplett auf dem Server geschieht und nur das fertige Resultat als Stereo-Audiostrom an den Client übertragen wird. 
 
@@ -27,7 +27,7 @@ Dazu wird mittels HRTF (Head Related Transfer Function) \cite{bergault94}, einer
 
 %Dazu wurden die Erfahrungen von 27 Probanden Anhand des Standardisierten Mean Opition Score \cite{mtu96} analysiert und es wurde festgestellt, dass Unterschiede bis zu 35 $\circ$ Grad akzeptiert werden. In einer weiteren Studie schlagen Safaei und Downlatshahi vor die zentralisierte Server Architektur durch eine Anzahl an lokalen Proxies zu ersetzen, die selbst in einem Multicast Overlay verbunden sind \cite{safaei06}. 
 
-\subsection{Session Initiation Protocol for Multiplayer Networked Games}
+\subsubsection{Session Initiation Protocol for Multiplayer Networked Games}
 
 Singh und Acharya schlagen ein auf dem Session Initiation Protocoll basiertes System vor, um VoIP in Mehrspieler-Spielen zu realisieren \cite{singh04}. Dazu führen sie einen Konferenz-Server ein, der eng mit dem Spieleserver zusammenarbeitet. Der Konferenz-Server kontrolliert und initiiert die Sitzungen für alle Spielteilnehmer und verwaltet ebenfalls die hardwarebasierte Mixerkomponente des Systems. Diese ist für das dedizierte Mischen der verschiedenen Audioströme zuständig. Dabei wird die Konferenz zwischen den Clients und dem Konferenz-Server initiiert, der Datenstrom selbst jedoch fließt zwischen dem Mixer und den Clients. 
 
@@ -51,19 +51,19 @@ Eine weitere theoretische Erweiterung sieht vor, dass die Lautstärke des Audio\-
 
 \section{Dezentralisierte Ansätze}
 
-\subsection{Full-Mesh}
+\subsubsection{Full-Mesh}
 
 In \cite{schulzrinne03}, \cite{schulzrinne99} schlagen Schulzrinne et. Al ein verteiltes dezentralisiertes System vor, in dem alle Teilnehmer ein komplett verbundenes Netz (engl. full-mesh) bilden. Hier ist jeder Teilnehmer mit jedem anderen Teilnehmer verbunden. Dazu überträgt jeder Teilnehmer seinen Audiostrom an alle anderen Teilnehmer, die dann lokal das Abmischen vornehmen. Um den Ansatz zu testen, simulieren sie ein solches Netz in verschiedenen Szenarien, in denen Teilnehmer  Konferenzen betreten, verlassen oder andere Teilnehmer zu Konferenzen einladen. Die Teilnehmer selbst haben keinerlei Information über die Topologie des Netzes und  können so nur durch das rekursive Einladen von Teilnehmern ein komplettes Netz bilden. Das Hauptproblem dabei ist, es exisitert dadurch eine eine Vielzahl an Ereignismöglichkeiten, die eintreten können. Schulzrinne et Al. zeigen, dass schon bei vier Teilnehmern, die einladen, das Spiel verlassen oder betreten bereits über 50 Möglichkeiten aus den genannten Permutationen möglich sind. 
 
 
-\subsection{Distributed Partial Mixing}
+\subsubsection{Distributed Partial Mixing}
 
 Radenkovic, Grennhalgh und Benford diskutieren  in \cite{radenkovic02} den Einsatz 
 eines DPM (Distributed Partial Mixing), das auf Basis des RTP und RTCP-Protokolls und Multicast-Gruppen funktioniert. Hier werden mehrere dedizierte Mixer eingesetzt, die nur solche Audioströme abmischen, die tatsächlich auch vom Teilnehmer benutzt werden. Dies soll einerseits ermöglichen, eine Vielzahl an Audioströmen zu verwalten und andererseits die Überlastung des Netzwerks verhindern. 
 
 Der Ansatz sieht vor, dass die dedizierten Mixer zunächst die Audioströme der Clients entgegennehmen. Die Mixer selbst sind alle miteinander in einer Baumstruktur verbunden und in der Lage Audioströme untereinander weiterzuleiten. Je nach Konnektivität und Bandbreite der Mixer untereinander entscheiden diese, ob ein Zusammenmischen der Audioströme notwendig ist, oder alle Audioströme ungemischt weitergeleitet werden können. Da der Ansatz auf Multicast-Gruppen basiert, ist er zwar in LANs umsetzbar, im Internet jedoch aufgrund der fehlenden Multicast-Unterstützung nicht realisierbar. 
 
-\subsection{Verteiltes Mischen}
+%\subsection{Verteiltes Mischen}
 
 Gu, Yu und Shae schlagen ein dezentrales System vor \cite{gu05}, in dem sie die Verteilung des Audiostroms in zwei Phasen der Aggregation und Distribution aufteilen. Dabei verstehen sie unter Aggregation das Zusammenmischen der Audioströme und unter Distribution die Verteilung der gemischten Audioströme auf die einzelnen Clients. 
 Dazu nimmt ein initialer Mischknoten, der eine gute Anbindung besitzt und möglichst optimale Wege zu allen Teilnehmern hat zunächst das Abmischen vor. Falls er jedoch überlastet ist, kann er zusätzliche Mischknoten ernennen, die seine Arbeit übernehmen. Dabei können Mischknoten, falls sie unterlastet sind, ihre Aufgabe an den Vaterknoten wieder abgeben. Der Vorteil der Methode ist, es muss kein dedizierter Mischserver benutzt werden da theoretisch jeder Knoten diese Aufgabe übernehmen kann. 
@@ -71,7 +71,7 @@ Dazu nimmt ein initialer Mischknoten, der eine gute Anbindung besitzt und möglic
 Der Hauptnachteil dieser Methode ist, dass jederzeit alle Knoten über die Topologie des Netzes informiert sein müssen und jederzeit den optimalen Mischknoten der Multicast-Gruppe kennen müssen. Die Distribution des Audiostroms und die Kontrolle der Clients darüber, welche Audioströme gemischt werden sollen wird nicht gelöst. 
 %TODO
 
-\subsection{SIP Konferenz Extension}
+\subsubsection{SIP Konferenz Extension}
 
 In \cite{miladinovic-multiparty} diskutieren Stadler and Miladinovic sowohl einen serverbasierten als auch einen dezentralen Einsatz von SIP für Konferenzen. Dazu führen sie einen SIP Nachrichtentyp CONF ein, der vom Initiator der Konferenz an alle Teilnehmer der Konferenz verschickt wird und alle Namen und den Status aller Konferenzteilnehmer enthält. 
 

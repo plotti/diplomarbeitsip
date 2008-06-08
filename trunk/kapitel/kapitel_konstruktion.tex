@@ -137,6 +137,10 @@ Es können drei Hauptkomponenten eines Systems definiert werden, die je nach ihre
 	%\item \textbf{Spieleserver}: Eine optionale Komponente, die die Daten der Spieler entgegen nimmt, um sie auszuwerten und an die anderen Teilnehmer zu verteilen. Diese kann, muss aber nicht, die Spielelogik enthalten und teilt dem Konferenz-Server mit, welche Spieler Teil einer Konferenz werden. Um mit den anderen Komponenten zu kommunizieren unterstützt sie das SIP Protokoll. 
 \end{itemize}
 
+%\subsection{Einsatz mehrerer Server}
+%\label{mehrereregistrare}
+
+
 Aus den vorgestellten Komponeten wird ersichtlich, dass die Architektur der Sprachkommunikation nicht getrennt von der Architektur des darunter liegenden Signalisierung gesehen wird. Dies geschieht deswegen, weil die Signalisierung und der reine Austausch an Spielerinformationen und Konferenzinformationen relativ wenig Bandbreite benötigt. Eine Audioverbindung dagegen, kann aufgrund ihres reinen Datenvoluments bereits das 10fache der Bandbreite benötigen.   
 
 Geht man davon aus, dass sowohl die Signalisierung, als auch die Audioströme zwischen den Spielen entweder komplett zentral, verteilt oder komplett dezentral stattfinden können, ergeben sich 9 mögliche Kombinationen, die in Tabelle \ref{audiodatenmatrix} dargestellt werden. Dabei sind beim verteilen von Audiomixern prinzipiell alle Architekturen aus Abschnitt \ref{client-server-verteilung} vorstellbar.
@@ -171,7 +175,19 @@ Prinzipiell sind alle Alternativen vorstellbar. In erster Linie sollen bei einer
 	\item ($A_{9}$): Realisiert man sowohl den Datenaustausch als auch das Mischen des Audiostroms komplett dezentral, 	spricht man vom Einsatz eines dezentralisierten SIP-Netzwerkes, das mittels P2PSIP, Multicast oder Full-Mesh Ansätzen realisiert werden kann. 
 \end{itemize}
 
-Geht man dazu über, den Datenaustausch des Spiels auf mehrere Server zu verteilen (siehe Alternativen $A_{7}$,$A_{8}$,$A_{9}$), so tut man das aus zwei Gründen: Erstens um einen Single Point of Failure zu vermeiden und zweitens um eine bessere Skalierbarkeit zu erreichen. 
+Die vorgestellten Alternativen $A_{5}$ und $A_{6}$, gehen davon die zentrale Komponente des Registrars verteilbar ist. Von einer Verteilung des Registrars und Proxy können auch die vorgestellten Alternativen $A_{1}$, $A_{2}$, $A_{3}$ profitieren, da sich damit die \textit{Fault Tolerance} des Systems erhöht. Falls mehrere Registrare eingesetzt werden, bestehen folgende Alternativen, die auch ihre Grenzen haben auf die hier jedoch nicht eingegangen wird. 
+\begin{itemize}
+	\item Die Registrierung des Benutzers findet auf einem Registrar statt und wird dann mit Datenbank-Replikation konsistent auf mehrere Registrare repliziert werden. Die Suche findet bei einem beliebigen Registrar statt.  
+	\item Die Registrierung geschieht nur auf einem Registrar, während die Suche nach dem Registrar, der die Benutzerinformation enthält vom Client auf allen Registraren stattfindet. Dazu muss der Benutzer alle Registrare kontaktieren oder der erste kontaktierte Server die Anfrage weiterleiten. 
+\end{itemize}
+
+%Der Nachteil des ersten Ansatzes ist eine erforderliche Synchronisation für jede Registrierung. Es besteht die Möglichkeit, dass Einträge veraltet sind, bevor eine Synchronisation zwischen den Servern ausgeführt wird. Mit einer wachsenden Anzahl an Benutzern könnte der zusätzliche Netzwerkverkehr zwischen den Servern zu einem Flaschenhals werden. 
+
+%Im anderen Fall ist die Verbindungslatenz höher, da erst eine Reihe von Schritten durchlaufen werden muss. Eine parallele Suche erhöht zudem die benötigte Bandbreite. 
+
+%Beide Ansätze können jedoch fehlschlagen, wenn die Anzahl an Benutzern sehr groß wird.
+
+Geht man dazu über, den Datenaustausch des Spiels auf dezentral zu verteilen (siehe Alternativen $A_{7}$,$A_{8}$,$A_{9}$), so tut man das aus zwei Gründen: Erstens um einen Single Point of Failure zu vermeiden und zweitens um eine bessere Skalierbarkeit zu erreichen. 
 
 Prinzipiell ist dieses Vorgehen solange praktikabel wie noch einige zentrale Komponenten bestehen, die hierarchisch höher gestellt sind als andere Knoten. Dies ist schon aus Gründen wie z.B. der Konferenzsteuerung notwendig, da Knoten existieren müssen, die die Lokationen der einzelnen Teilnehmer kennen, Rechte in Konferenzen überwachen, oder eine Liste an aktiven Teilnehmern führen.
 
@@ -288,11 +304,12 @@ Man kann eingeschränkt sagen, dass dedizierte Knoten besser als Superpeers für d
 	\caption{Hybride SIP Architektur mit einem oder mehreren Konferenzservern}
 	\label{fig:archhybrid}
 \end{figure}
+
 Bei diesem Ansatz wird das Abmischen der Audioströme direkt von den einzelnen Clients vorgenommen, während die Signalisierung von einem oder mehreren Registraren übernommen wird. Im einfachsten Fall wird der eigene Audiostrom an alle Teilnehmer des Spieles gesendet (Multi-Unicast), und man selbst empfängt auch den Audiostrom aller Teilnehmer. In einer Konferenz mit $n$ Teilnehmern müssen so insgesamt $n^2-n$ Audioströme ausgetauscht werden. 
 
-Was den Austausch der  Audiosignale angeht, entspricht dies dem Full-Mesh-Anatz von Schulzrinne \cite{schulzrinne03}. Bei der Signalisierung jedoch bestand bestand der große Nachteil darin die Teilnehmer einer Konferenz zu bestimmen. Hier kann jedoch die Bestimmung der Teilnehmer einer Konferenz mit Hilfe des Registrars zentral geschehen und vereinfacht das Problem. 
+Was den Austausch der Audiosignale betrifft, entspricht diese Architektur dem Full-Mesh-Anatz von Schulzrinne \cite{schulzrinne03}. Da die Signalisierung beim Full-Mesh-Ansatz keine zentrale Komponente besitzt, liegt große Nachteil darin die Teilnehmer einer Konferenz zu bestimmen. Hier kann jedoch die Bestimmung der Teilnehmer einer Konferenz mit Hilfe des Registrars zentral geschehen und löst dieses Problem. 
 
-Indem nun die einzelnen Client-Knoten das Abmischen vornhemen, kann die Kapazitätsbelastung eines Mischservers auf die Clientmaschinen verlagert werden, die gerade im Spielebereich sehr gut ausgesattet sind. Da allerdings der Bandbreitenverbrauch bei einem dezentralen Austausch von Audioströmen quadratisch von der Anzahl der Teilnehmer abhängt, soll eine Plausibilitätsrechnung prüfen, welche Mindestvoraussetzungen die Teilnehmer eines solchen Systems erfüllen müssen.
+Indem die einzelnen Client-Knoten, die gerade im Spielebereich sehr gut ausgesattet sind, das Abmischen vornehmen, kann die Kapazitätsbelastung eines Mischservers so verteilt werden. Da allerdings der Bandbreitenverbrauch bei einem dezentralen Austausch von Audioströmen quadratisch von der Anzahl der Teilnehmer abhängt, soll eine Plausibilitätsrechnung prüfen, welche Mindestvoraussetzungen die Teilnehmer eines solchen Systems erfüllen müssen.
 
 Es wird gefordert, dass mindestens 16 Spieler in der Lage sein sollen, miteinander zu kommunizieren. Sendet jeder Spieler seinen Audiostrom mit 16 Kbit/s an die anderen Spieler, kann leicht errechnet werden, über welche Anbindung die Spieler mindestens verfügen müssen, um diese Anforderung zu erfüllen. 
 
@@ -312,19 +329,20 @@ Upstream/Downstream:
 	\mbox{16 Spieler} \cdot 16 \frac{Kbit}{s} = 256 \frac{Kbit}{s}
 \]
 
-Jeder Spieler muss also über mindestens $256 Kbit/s$ Up- Download verfügen, um in einem Full-Mesh miteinander kommunizieren zu können. Der Full-Mesh Ansatz hat das Problem, dass sich die Kapazität der Bandbreite relativ schnell erschöpft, da jeder Spieler seinen Audiostrom an alle anderen Spieler senden muss. Geht man davon aus, dass jeder Client heutzutage mit einem Upload von 128 Kbit/s ausgestattet ist, zeigen sich bereits bei 16 Spielern, die Grenzen dieses Systems. Mit entsprechenden Audiocodecs ist vielleicht eine Verdopplung der Teilnehmer möglich, sie ändern aber nichts an den architekturbedingten Grenzen dieses Ansatzes.
+Jeder Spieler muss also über mindestens $256 Kbit/s$ Up- Download verfügen, um in einem Full-Mesh miteinander kommunizieren zu können. Der Full-Mesh Ansatz hat das Problem, dass sich die Kapazität der Bandbreite relativ schnell erschöpft, da jeder Spieler seinen Audiostrom an alle anderen Spieler senden muss. Geht man davon aus, dass jeder Client heutzutage mit einem Upload von 128 Kbit/s ausgestattet ist, zeigen sich bereits bei 16 Spielern, die Grenzen dieses Systems. Mit entsprechenden Audiocodecs ist vielleicht eine Verdopplung der Teilnehmer möglich, sie ändert aber nichts an den architekturbedingten Grenzen dieses Ansatzes.
 
-Die Gründe dafür liegen unter anderem in einer uneffizienten Verbreitung des Audiostroms. Es ist vorstellbar, dass nicht nicht jeder Spieler des Spiels am Audiostrom aller Mitspieler interessiert ist. Trotzdem werden mit allen Teilnehmern Verbindungen aufgebaut.
+Die Gründe dafür liegen unter anderem in einer uneffizienten Verbreitung des Audiostroms. Es ist vorstellbar, dass nicht nicht jeder Spieler des Spiels am Audiostrom aller Mitspieler interessiert ist. Trotzdem werden mit allen Teilnehmern Verbindungen aufgebaut. Deswegen werden in den folgenden Abschnitten Methoden vorgestellt, die Ansätze aus Kapitel 3 nutzen, um Bandbreite einzusparen.
 
-Diese Alternative bietet als einzige die entsprechenden Eigenschaften, um die Ansätze aus Kapitel 3 umzusetzen. Da das Abmischen der Audioströme lokal stattfindet können wie gefordert mehrere unterschiedliche Kanäle gleichzeitig abgemischt werden. So kann lokal für jeden Spieler die Konzepte aus Kapitel 3 lokal umgesetzt werden.
-Dank der zentralen Komponente erlaubt diese Alternative eine einfache Lokation und Signalisierung der Teilnehmer und umgeht die komplizierte dezentrale Signalisierung wie beim Full-Mesh-Ansatz. Die Bandbreite auf den zentralen Komponenten ist minimal, da der Audiostrom nur zwischen den Clients fließt. Außerdem bietet der Hybride Ansatz eine gute Ausgangsgrundlage um in Zukunft andere Komponenten zu realisieren. Sollte es Zukunft möglich sein die Komponente des Registrars zu verteilen wäre auch die P2PSIP Alternative $A_{9}$ möglich. 
+Diese Alternative bietet als einzige die entsprechenden Eigenschaften, um die Ansätze aus Kapitel 3 umzusetzen. Sie bietet wie alle dezentralen Alternativen $A9$ dem Client Kontrolle über alle Audioströme und erlaubt so mehrere Kanäle gleichzeitig zu verwenden und lokal abgemischen, verfügt jedoch als einzige über eine funktionierende bereits praxisbewährte Signalisierung.  Diese besteht in der zentralen Komponente des Registrars, der es erlaubt eine einfache Lokation und Signalisierung der Teilnehmer vorzunehmen. Bei P2PSIP Ansätzen befindet sie sich noch noch im Entwurfstadium oder ist beim Full-Mesh-Ansatz besonders kompliziert. 
 
-Die jedoch die Nachteile dieser Architektur vor allem beim quadratischen Anstieg der verbrauchten Bandbreite in Abhängigkeit der Spieler liegen sollen Methoden entwickelt werden, wie Ansätze aus Kapitel 3 helfen können Bandbreite einzusparen
+Außerdem nutzt der Hybride Ansatz genau die Unterschiede der beiden Daten- und Audioströme, was dazu führt, dass der Bandbreitenverbrauch auf den zentralen Komponenten ist minimal ist, da der Audiostrom nur zwischen den Clients fließt. Dies erlaubt es auch günstige zentrale Komponenten einzusetzen. 
+
+Außerdem bietet der Hybride Ansatz eine gute Ausgangsgrundlage, um eine völlig dezentralisiere Sprachkommunikation mit P2PSIP zu ermöglichen, indem die einzige zentrale Komponente des Registrars verteilt wird. 
 
 \section{Möglichkeiten zur Einsparung von Bandbreite}
 
 \subsection{Hörnähe vs. Area of Interest}
-Da bereits in Kapitel 3 festgestellt wurde, dass Spieler nur an manchen  Audioströmen von Spielern interessiert sind, wird versucht diese Beobachtung in die Modellierung einfließen zu lassen. Muss jeder Teilnehmer seinen Audiostrom nicht an alle anderen Teilnehmer verschicken, sondern nur an Teilnehmer seiner unmittelbaren Umgebung, so kann Bandbreite eingespart werden. Außerdem kann in Abhängigkeit der Entfernung der Spieler zueinander, unterschieden werden welcher Audiocodec eingesetzt wird. 
+Da bereits in Kapitel 3 festgestellt wurde, dass Spieler nur an manchen  Audioströmen von Spielern interessiert sind, wird versucht diese Beobachtung in die Modellierung einfließen zu lassen. Muss jeder Teilnehmer seinen Audiostrom nicht an alle anderen Teilnehmer verschicken, sondern nur an Teilnehmer seiner unmittelbaren Umgebung, so kann Bandbreite eingespart werden. %Außerdem kann in Abhängigkeit der Entfernung der Spieler zueinander, unterschieden werden welcher Audiocodec eingesetzt wird. 
 
 Dieser Ansatz entspricht dem Proximitätsprinzip, oder auch der \textit{Area of Interest}, bei der nur Teilnehmer an einer Audioverbindung interessiert sind, die sich auch tatsächlich in der Nähe des Spielers befinden.
 
@@ -364,23 +382,3 @@ In einem einfachen Szenario, kann man annehmen, dass die 30\% aller Benutzer in 
 
 Hier wird deutlich, dass noch einmal Bandbreite eingespart werden kann, und trotzdem die gleiche Konnektivität gewährleistet wird. Die Einsparung resultiert vor allem aus der Reduziertung der Audioqualität der sozialen Zone. Trotzdem kann bei Bedarf noch eine höherwertige Konversation eingeleitet werden, indem sich Spieler in die private Zone begeben. Im Kapitel 7 und 9 wird die Umsetzung dieses Ansatzes genauer diskutiert und evaluiert.
 
-\subsection{Einsatz mehrerer Server}
-\label{mehrereregistrare}
-Die vorgestellten Alternativen $A_{5}$ und $A_{6}$, gehen davon die zentrale Komponente des Registrars verteilbar ist. Von einer Verteilung des Registrars und Proxy können auch die vorgestellten Alternativen $A_{1}$, $A_{2}$, $A_{3}$ profitieren, da sich damit die \textit{Fault Tolerance} des Systems erhöht. Falls mehrere Registrare eingesetzt werden, bestehen folgende Alternativen:
-
-\begin{itemize}
-	\item Die Registrierung des Benutzers findet auf einem Registrar statt und wird dann auf mehrere Registrare repliziert. Die Suche findet bei einem beliebigen Registrar statt.
-	\item Die Registrierung geschieht nur auf einem Registrar, während die Suche nach dem Registrar, der die Benutzerinformation enthält vom Client auf allen Registraren stattfindet.
-\end{itemize}
-
-% BILD see \cite{schulzrinne05}
-
-Im ersten Fall könnten durch Datenbank-Replikationen sichergestellt werden, dass die Benutzereinträge zwischen verschiedenen Registraren konsistent gehalten werden. 
-
-Im zweiten Fall kann entweder der Benutzer alle Registrare kontaktieren oder der erste kontaktierte Server die Anfrage weiterleiten. 
-
-Der Nachteil des ersten Ansatzes ist eine erforderliche Synchronisation für jede Registrierung. Es besteht die Möglichkeit, dass Einträge veraltet sind, bevor eine Synchronisation zwischen den Servern ausgeführt wird. Mit einer wachsenden Anzahl an Benutzern könnte der zusätzliche Netzwerkverkehr zwischen den Servern zu einem Flaschenhals werden. 
-
-Im anderen Fall ist die Verbindungslatenz höher, da erst eine Reihe von Schritten durchlaufen werden muss. Eine parallele Suche erhöht zudem die benötigte Bandbreite. 
-
-Beide Ansätze können jedoch fehlschlagen, wenn die Anzahl an Benutzern sehr groß wird.
