@@ -279,6 +279,13 @@ Die Nachteile eines zentralen Mischservers überwiegen seine Vorteile: Zum einen 
 Dabei bietet es sich gerade im Spielebereich an, die hohe Rechenleistung von gut ausgestatteten Spielecomputern auszunutzen, um die zentrale Komponente zu entlasten. 
 
 \subsection{Verteiltes dediziertes Audiomixing}
+\begin{figure}
+	\centering
+		\includegraphics[width=0.70\textwidth]{grafiken/archverteilt.eps}
+	\caption{Architekturen mit dedizierten Audiomixern}
+	\label{fig:archverteilt}
+\end{figure}
+
  Ein Ansatz verteilte Konferenzen zu betreiben, besteht darin, mehrere dedizierte SIP-Endpunkte zu ernennen, mit denen sich Teilnehmern verbinden. Diese Mixer nehmen die Audioströme entgegen, mischen sie ab und leiten sie an die entsprechenden Spieler weiter. Die Signalisierung dagegen kann entweder von einem oder mehreren Registraren vorgenommen werden. 
 
 Dabei gibt es zwei mögliche Varianten dieses Modells: In einem Superpeer-Mixing übernimmt ein Teilnehmer die Verantwortung für das Mischen des Audiostroms und in einem Server-basierten-Mixing übernehmen unabhängige dedizierte Server-Knoten diese Verantwortung, ohne aktiv am Gespräch teilzunehmen. 
