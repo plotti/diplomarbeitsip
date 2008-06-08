@@ -1,10 +1,10 @@
 \select@language {english}
 \select@language {ngerman}
 \contentsline {chapter}{Zusammenfassung}{ii}
-\contentsline {chapter}{Stichwortverzeichnis}{vi}
-\contentsline {chapter}{Abbildungsverzeichnis}{vii}
-\contentsline {chapter}{Tabellenverzeichnis}{ix}
-\contentsline {chapter}{Abk\"{u}rzungsverzeichnis}{x}
+\contentsline {chapter}{Stichwortverzeichnis}{vii}
+\contentsline {chapter}{Abbildungsverzeichnis}{viii}
+\contentsline {chapter}{Tabellenverzeichnis}{x}
+\contentsline {chapter}{Abk\"{u}rzungsverzeichnis}{xi}
 \contentsline {chapter}{\numberline {1}Einf\"uhrung}{1}
 \contentsline {section}{\numberline {1.1}Motivation}{1}
 \contentsline {section}{\numberline {1.2}Ziel der Diplomarbeit}{3}
@@ -84,99 +84,98 @@
 \contentsline {subsubsection}{Full-Mesh}{53}
 \contentsline {subsection}{\numberline {6.2.3}Komplett zentralisierte Ans\"atze}{53}
 \contentsline {subsection}{\numberline {6.2.4}Verteiltes dediziertes Audiomixing}{55}
-\contentsline {subsection}{\numberline {6.2.5}Hybrides Peer-to-Peer Audiomixing}{57}
+\contentsline {subsection}{\numberline {6.2.5}Hybrides Peer-to-Peer Audiomixing}{56}
 \contentsline {section}{\numberline {6.3}M\"oglichkeiten zur Einsparung von Bandbreite}{58}
 \contentsline {subsection}{\numberline {6.3.1}H\"orn\"ahe vs. Area of Interest}{58}
 \contentsline {subsection}{\numberline {6.3.2}Private Zone und Soziale Zone}{59}
-\contentsline {chapter}{\numberline {7}Implementierung}{61}
-\contentsline {section}{\numberline {7.1}Art des Spieleprototyps}{61}
-\contentsline {section}{\numberline {7.2}3D-Umgebung}{62}
-\contentsline {subsection}{\numberline {7.2.1}3D-Engines}{63}
+\contentsline {chapter}{\numberline {7}Implementierung des Spiel-Prototypen}{61}
+\contentsline {section}{\numberline {7.1}Vorausetzungen}{61}
+\contentsline {section}{\numberline {7.2}Auswahl eines 3D-Frameworks}{61}
+\contentsline {subsection}{\numberline {7.2.1}First-Person-Shooter-Frameworks}{62}
+\contentsline {subsection}{\numberline {7.2.2}3D-Engines}{63}
 \contentsline {subsubsection}{\textit {Irrlicht}}{63}
-\contentsline {subsubsection}{\textit {Irrklang}}{63}
-\contentsline {section}{\numberline {7.3}VoIP-L\"osungen}{63}
-\contentsline {subsection}{\numberline {7.3.1}Serverbasierte Sprachkommunikationsl\"osungen}{64}
-\contentsline {subsubsection}{Ventrillo, Teamspeak und Mumble}{64}
-\contentsline {subsection}{\numberline {7.3.2}Dezentralisierte Sprachkommunikationsl\"osungen}{65}
+\contentsline {section}{\numberline {7.3}Auswahl einer VoIP-L\"osung}{63}
+\contentsline {subsection}{\numberline {7.3.1}Modifikation bisheriger Sprachkommunikationsl\"osungen}{64}
+\contentsline {subsection}{\numberline {7.3.2}Nutzung der API von VoIP-Anwendungen}{64}
 \contentsline {subsubsection}{Skype}{65}
-\contentsline {subsection}{\numberline {7.3.3}Instant Messaging Anwendungen}{66}
-\contentsline {subsection}{\numberline {7.3.4}SIP-Protokoll}{66}
-\contentsline {subsubsection}{SIP-Server}{67}
+\contentsline {subsubsection}{Instant Messaging Anwendungen}{66}
+\contentsline {subsection}{\numberline {7.3.3}SIP-Protokollstapel}{66}
+\contentsline {subsubsection}{SIP-Server}{66}
 \contentsline {subsubsection}{SIP-Clients}{67}
-\contentsline {subsubsection}{SIP-Protokollstapel}{68}
-\contentsline {subsubsection}{Pjsip}{68}
-\contentsline {section}{\numberline {7.4}Entwicklungsumgebung}{69}
-\contentsline {subsection}{\numberline {7.4.1}Programmiersprache}{69}
-\contentsline {subsection}{\numberline {7.4.2}Testumgebung}{69}
-\contentsline {section}{\numberline {7.5}3D-Spielewelt mit Irrlicht und Irrklang}{70}
-\contentsline {subsection}{\numberline {7.5.1}Irrlicht}{70}
-\contentsline {subsubsection}{Initialisierung}{70}
-\contentsline {subsubsection}{Level}{70}
-\contentsline {subsubsection}{Steuerung}{70}
-\contentsline {subsubsection}{Radar}{71}
-\contentsline {subsection}{\numberline {7.5.2}Irrklang}{71}
-\contentsline {subsubsection}{Lokale Audioszene}{71}
-\contentsline {section}{\numberline {7.6}PjSIP-VoIP-Instanz}{72}
-\contentsline {subsection}{\numberline {7.6.1}Signalisierung mit PJSUA}{72}
-\contentsline {subsection}{\numberline {7.6.2}Medienfluss}{72}
-\contentsline {section}{\numberline {7.7}Zusammenarbeit von Irrlicht und VoIP}{73}
-\contentsline {subsection}{\numberline {7.7.1}Aktualisierung der VoIP Instanz}{73}
-\contentsline {subsection}{\numberline {7.7.2}Buddy Konzept}{73}
-\contentsline {subsection}{\numberline {7.7.3}Conference-Bridge}{74}
-\contentsline {subsection}{\numberline {7.7.4}Erweitertes Audio-Mixing}{74}
-\contentsline {section}{\numberline {7.8}Spielablauf}{75}
-\contentsline {subsection}{\numberline {7.8.1}Registrierung}{75}
-\contentsline {subsection}{\numberline {7.8.2}Spieler startet das Spiel}{75}
-\contentsline {subsection}{\numberline {7.8.3}Neuer Spieler betritt das Spiel}{75}
-\contentsline {subsection}{\numberline {7.8.4}Spieler bewegt sich im Spiel}{76}
-\contentsline {subsection}{\numberline {7.8.5}Spieler beendet sein Spiel}{76}
-\contentsline {subsection}{\numberline {7.8.6}Verbindungsaufbau}{77}
-\contentsline {subsubsection}{Das Problem der doppelten Verbindung}{77}
-\contentsline {subsection}{\numberline {7.8.7}Verbindungsabbau}{78}
-\contentsline {section}{\numberline {7.9}Zonen}{79}
-\contentsline {subsection}{\numberline {7.9.1}\"Offentliche Zone}{79}
+\contentsline {subsubsection}{Pjsip}{67}
+\contentsline {section}{\numberline {7.4}Vorgehensweise bei der Implementierung des Prototypen}{68}
+\contentsline {subsection}{\numberline {7.4.1}Entwicklungsumgebung und Programmiersprache}{68}
+\contentsline {subsubsection}{Testumgebung}{68}
+\contentsline {section}{\numberline {7.5}3D-Spielewelt mit Irrlicht und Irrklang}{68}
+\contentsline {subsection}{\numberline {7.5.1}Irrlicht}{68}
+\contentsline {subsubsection}{Initialisierung}{68}
+\contentsline {subsubsection}{Level}{69}
+\contentsline {subsubsection}{Steuerung}{69}
+\contentsline {subsubsection}{Radar}{70}
+\contentsline {subsection}{\numberline {7.5.2}Irrklang}{70}
+\contentsline {subsubsection}{Lokale Audioszene}{70}
+\contentsline {section}{\numberline {7.6}PjSIP-VoIP-Instanz}{70}
+\contentsline {subsection}{\numberline {7.6.1}Signalisierung mit PJSUA}{70}
+\contentsline {subsection}{\numberline {7.6.2}Medienfluss}{71}
+\contentsline {section}{\numberline {7.7}Zusammenarbeit von Irrlicht und VoIP}{71}
+\contentsline {subsection}{\numberline {7.7.1}Aktualisierung der VoIP Instanz}{71}
+\contentsline {subsection}{\numberline {7.7.2}Buddy Konzept}{72}
+\contentsline {subsection}{\numberline {7.7.3}Conference-Bridge}{72}
+\contentsline {subsection}{\numberline {7.7.4}Erweitertes Audio-Mixing}{73}
+\contentsline {section}{\numberline {7.8}Spielablauf}{74}
+\contentsline {subsection}{\numberline {7.8.1}Registrierung}{74}
+\contentsline {subsection}{\numberline {7.8.2}Spieler startet das Spiel}{74}
+\contentsline {subsection}{\numberline {7.8.3}Neuer Spieler betritt das Spiel}{74}
+\contentsline {subsection}{\numberline {7.8.4}Spieler bewegt sich im Spiel}{75}
+\contentsline {subsection}{\numberline {7.8.5}Spieler beendet sein Spiel}{75}
+\contentsline {subsection}{\numberline {7.8.6}Verbindungsaufbau}{75}
+\contentsline {subsubsection}{Das Problem der doppelten Verbindung}{76}
+\contentsline {subsection}{\numberline {7.8.7}Verbindungsabbau}{77}
+\contentsline {section}{\numberline {7.9}Zonen}{77}
+\contentsline {subsection}{\numberline {7.9.1}\"Offentliche Zone}{77}
 \contentsline {subsubsection}{Eingang und Verlassen der \"Offentlichen Zone}{79}
 \contentsline {subsubsection}{RTP - Silence Supression}{79}
-\contentsline {subsubsection}{SIP - HOLD}{81}
-\contentsline {subsection}{\numberline {7.9.2}Soziale Zone}{81}
+\contentsline {subsubsection}{SIP - HOLD}{79}
+\contentsline {subsection}{\numberline {7.9.2}Soziale Zone}{80}
 \contentsline {subsubsection}{Lautst\"arkenanpassung}{81}
-\contentsline {subsubsection}{Audiocodec}{83}
-\contentsline {subsection}{\numberline {7.9.3}Private Zone}{83}
-\contentsline {subsubsection}{Lautst\"arke}{83}
-\contentsline {subsubsection}{Audiocodec}{83}
-\contentsline {section}{\numberline {7.10}PTSN-Netzwerke}{83}
-\contentsline {chapter}{\numberline {8}SIP als Netzwerkschicht f\"ur Mehrspieler-Computerspiele}{85}
-\contentsline {section}{\numberline {8.1}Anforderungen an Netzwerkarchitekturen}{85}
-\contentsline {section}{\numberline {8.2}Client-Server-Architektur in Netzwerkspielen}{86}
-\contentsline {section}{\numberline {8.3}Implementierung einer Client-Server Architektur mit SIP}{87}
-\contentsline {subsection}{\numberline {8.3.1}SIP SIMPLE Protokoll}{88}
-\contentsline {subsubsection}{Nachrichtendienst}{88}
-\contentsline {subsubsection}{Pr\"asenzdienst}{89}
-\contentsline {subsection}{\numberline {8.3.2}Skalierbarkeit}{90}
-\contentsline {section}{\numberline {8.4}Hybride Systeme}{90}
-\contentsline {section}{\numberline {8.5}Peer-to-Peer in Netzwerkspielen}{91}
-\contentsline {section}{\numberline {8.6}SIP in Unstrukturierten P2P-Systemen}{91}
-\contentsline {section}{\numberline {8.7}SIP in Strukturierten P2P-Systemen}{92}
-\contentsline {subsection}{\numberline {8.7.1}Peer-to-Peer-SIP}{93}
-\contentsline {subsection}{\numberline {8.7.2}Funktionsweise}{94}
-\contentsline {subsubsection}{Registrierung}{94}
-\contentsline {subsubsection}{Aufbau einer Verbindung}{95}
-\contentsline {subsection}{\numberline {8.7.3}Architektur Variationen}{96}
-\contentsline {chapter}{\numberline {9}Evaluation}{97}
-\contentsline {section}{\numberline {9.1}Versuchsaufbau}{97}
-\contentsline {subsection}{\numberline {9.1.1}Header-Overhead}{97}
-\contentsline {subsection}{\numberline {9.1.2}Aktive Silence Supression}{98}
-\contentsline {section}{\numberline {9.2}Full-Mesh vs. Partial-Mesh Szenario}{98}
-\contentsline {subsection}{\numberline {9.2.1}Full-Mesh}{99}
-\contentsline {subsection}{\numberline {9.2.2}Partial-Mesh}{99}
-\contentsline {section}{\numberline {9.3}Zonenkonzepte}{101}
-\contentsline {subsection}{\numberline {9.3.1}Ohne Zonen-Unterscheidung}{101}
-\contentsline {subsection}{\numberline {9.3.2}Zonen mit RTP Silence Supression}{102}
-\contentsline {subsection}{\numberline {9.3.3}Zonen mit SIP-Hold}{102}
-\contentsline {subsection}{\numberline {9.3.4}Zonen mit unterschiedlichen Audiocodecs}{103}
-\contentsline {section}{\numberline {9.4}Tests von SIP als Netzwerkschnittstelle}{104}
-\contentsline {section}{\numberline {9.5}Test der Conference-Bridge}{105}
-\contentsline {chapter}{\numberline {10}Fazit und Ausblick}{109}
-\contentsline {section}{\numberline {10.1}Fazit}{109}
-\contentsline {section}{\numberline {10.2}Ausblick}{110}
-\contentsline {chapter}{Literaturverzeichnis}{113}
+\contentsline {subsubsection}{Audiocodec}{81}
+\contentsline {subsection}{\numberline {7.9.3}Private Zone}{81}
+\contentsline {subsubsection}{Lautst\"arke}{81}
+\contentsline {subsubsection}{Audiocodec}{82}
+\contentsline {section}{\numberline {7.10}PTSN-Netzwerke}{82}
+\contentsline {chapter}{\numberline {8}SIP als Netzwerkschicht f\"ur Mehrspieler-Computerspiele}{83}
+\contentsline {section}{\numberline {8.1}Anforderungen an Netzwerkarchitekturen}{83}
+\contentsline {section}{\numberline {8.2}Client-Server-Architektur in Netzwerkspielen}{84}
+\contentsline {section}{\numberline {8.3}Implementierung einer Client-Server Architektur mit SIP}{85}
+\contentsline {subsection}{\numberline {8.3.1}SIP SIMPLE Protokoll}{86}
+\contentsline {subsubsection}{Nachrichtendienst}{86}
+\contentsline {subsubsection}{Pr\"asenzdienst}{87}
+\contentsline {subsection}{\numberline {8.3.2}Skalierbarkeit}{88}
+\contentsline {section}{\numberline {8.4}Hybride Systeme}{88}
+\contentsline {section}{\numberline {8.5}Peer-to-Peer in Netzwerkspielen}{89}
+\contentsline {section}{\numberline {8.6}SIP in Unstrukturierten P2P-Systemen}{89}
+\contentsline {section}{\numberline {8.7}SIP in Strukturierten P2P-Systemen}{90}
+\contentsline {subsection}{\numberline {8.7.1}Peer-to-Peer-SIP}{91}
+\contentsline {subsection}{\numberline {8.7.2}Funktionsweise}{92}
+\contentsline {subsubsection}{Registrierung}{92}
+\contentsline {subsubsection}{Aufbau einer Verbindung}{93}
+\contentsline {subsection}{\numberline {8.7.3}Architektur Variationen}{94}
+\contentsline {chapter}{\numberline {9}Evaluation}{95}
+\contentsline {section}{\numberline {9.1}Versuchsaufbau}{95}
+\contentsline {subsection}{\numberline {9.1.1}Header-Overhead}{95}
+\contentsline {subsection}{\numberline {9.1.2}Aktive Silence Supression}{96}
+\contentsline {section}{\numberline {9.2}Full-Mesh vs. Partial-Mesh Szenario}{96}
+\contentsline {subsection}{\numberline {9.2.1}Full-Mesh}{97}
+\contentsline {subsection}{\numberline {9.2.2}Partial-Mesh}{97}
+\contentsline {section}{\numberline {9.3}Zonenkonzepte}{99}
+\contentsline {subsection}{\numberline {9.3.1}Ohne Zonen-Unterscheidung}{99}
+\contentsline {subsection}{\numberline {9.3.2}Zonen mit RTP Silence Supression}{100}
+\contentsline {subsection}{\numberline {9.3.3}Zonen mit SIP-Hold}{100}
+\contentsline {subsection}{\numberline {9.3.4}Zonen mit unterschiedlichen Audiocodecs}{100}
+\contentsline {section}{\numberline {9.4}Tests von SIP als Netzwerkschnittstelle}{101}
+\contentsline {section}{\numberline {9.5}Test der Conference-Bridge}{102}
+\contentsline {chapter}{\numberline {10}Fazit und Ausblick}{103}
+\contentsline {section}{\numberline {10.1}Fazit}{103}
+\contentsline {section}{\numberline {10.2}Ausblick}{104}
+\contentsline {chapter}{Anhang}{108}
+\contentsline {chapter}{Literaturverzeichnis}{112}

@@ -100,41 +100,13 @@ Um den Bandbreitenverbrauch in den einzelnen Zonen aufzuzeigen, wurde ein einfac
 \subsection{Ohne Zonen-Unterscheidung}
 Hier entfernen sich beide Spieler voneinander, es werden jedoch keine bandbreitenreduzierenden Maßnahmen in Abhängigkeit von der Zone des Spielers getroffen. Man erkennt in der Abbildung \ref{fig:NOVADrtpsip}, dass die Bandbreite sich in allen Zonen gleichmäßig bei 10 kByte/s bleibt. 
 
-\begin{figure}[tbh]
-	\centering
-	\caption{Der Up- und Downstream}
-		\includegraphics[width=1.00\textwidth]{grafiken/ohnevadupdown.eps}
-	\label{fig:NOVADrtpsip}
-\end{figure}
-
 Beim Vergleich der Bandbreite des RTP und SIP Protokolls in Abbildung \ref{fig:NoVADupdown} zeigt der Plot, dass SIP nur zum Signalisieren des Anrufs benutzt wird, da es nur am Anfang und Ende des SIP Anrufs Bandbreite erzeugt, während das RTP Protokoll für den reinen Audiostrom zuständig ist.  
-
-\begin{figure}[tbh]
-	\centering
-		\includegraphics[width=1.00\textwidth]{grafiken/ohnevadsiprtp.eps}
-		\caption{Signalisierung mit SIP, Audiostrom mit RTP}
-	\label{fig:NoVADupdown}
-\end{figure}
 
 \subsection{Zonen mit RTP Silence Supression}
 
 Hier wird in der öffentlichen Zone eine Silence-Supression durchgeführt. In der Abbildung \ref{fig:VADupdown} ist zu erkennen, dass sich hier der Bandbreitenverbrauch auf unter 1kByte/s reduziert, während er in der privaten und sozialen Zone bei fast 10 kByte/s liegt.  
 
-\begin{figure}[tbh]
-	\centering
-		\includegraphics[width=1.00\textwidth]{grafiken/mitvadupdown.eps}
-		\caption{Der Up- und Downstream mit der Silcence-Supression-Technik}
-	\label{fig:VADupdown}
-\end{figure}
-
 In der Abbildung \ref{fig:VADRTPSIP} wurde ein Vergleich der SIP und RTP Protokolle dargestellt. Der Plot zeigt, dass bei der Silence Supression beim RTP Protokoll in der öffentlichen Zone die Bandbreite auf jeweils unter 1kByte/s sinkt. Anhand der Unterscheidung der Protokolle wird deutlich, dass es sich um eine Eigenschaft des RTP-Protokolls handelt, da keine SIP Nachrichten beim Übergang erzeugt werden.
-
-\begin{figure}[tbh]
-	\centering
-		\includegraphics[width=1.00\textwidth]{grafiken/mitvadrtpsip.eps}
-		\caption{Gegenüberstellung der SIP- und RTP-Bandbreite mit der Silence-Supression-Technik}
-	\label{fig:VADRTPSIP}
-\end{figure}
 
 \subsection{Zonen mit SIP-Hold}
 
@@ -142,21 +114,7 @@ Eine weitere Unterscheidung der Zonen wurde mit dem SIP "`Hold Call"' Ansatz ver
 
 Allerdings konnte der SIP-Hold-Ansatz in der Praxis nicht bewähren, da beim Halten und Wiederaufnehmen des Gesprächs, die Sitzungsparameter wieder neu verhandelt werden, was zu einer spürbaren Verzögerung führte. Es ist vorstellbar, dass der SIP Anruf schon etwas früher wiederaufgenommen wird, um diese Verzögerung auszugleichen und so beim Erreichen der sozialen Zone einen bereits etablierten Anruf vorzufinden. 
 
-\begin{figure}[tbh]
-	\centering
-		\includegraphics[width=1.00\textwidth]{grafiken/mitholdupanddown.eps}
-		\caption{Der Up- und Downstream mit der SIP-Hold-Technik}
-	\label{fig:mitholdupanddown}
-\end{figure}
-
 Beim Bandbreitenvergleich der SIP und RTP Protokolle sieht man, dass im Gegensatz zur Silence-Supression, eine Signalisierung mit SIP beim Übergang von der sozialen zur öffentlichen Zone stattfindet. 
-
-\begin{figure}[tbh]
-	\centering
-	\caption{Gegenüberstellung des SIP und RTP Traffics mit der SIP HOLD-Technik}
-		\includegraphics[width=1.00\textwidth]{grafiken/mithold1.eps}
-	\label{fig:mithold1}
-\end{figure}
 
 \subsection{Zonen mit unterschiedlichen Audiocodecs}
 \label{audiocodec-zonen}
@@ -164,25 +122,11 @@ Die dritte Variante beinhaltete den Einsatz von 2 verschiedenen Codecs für die P
 
 Da erwartet wird, dass in der sozialen Zone mehr Verbindungen als in der privaten Zone aufgebaut werden, wird hier auch ein Codec mit einer niedrigeren Bitrate (11 kBit/s) verwendet, um eine größere Anzahl an Verbindungen zu ermöglichen. In der öffentlichen Zone wird, wie im oberen Beispiel(Abbildung \ref{fig:VADupdown}) die \textit{Silence Supression} angewendet. Unter diesen Voraussetzungen ist in Abbildung \ref{fig:mitvadund2codecs} zu sehen, dass der Bandbreitenverbrauch in der sozialen Zone mit 7kByte/s im Vergleich zur privaten Zone mit 9kByte/s um 23\% reduziert wird. In der öffentlichen Zone wird fast 90\% der Bandbreite eingespart. 
 
-\begin{figure}[tbh]
-	\centering
-		\includegraphics[width=\textwidth]{grafiken/mitvadund2codecs.eps}
-		\caption{Speex mit 16kHz in der privaten Zone und Speex 8khZ in der sozialen Zone}
-	\label{fig:mitvadund2codecs}
-\end{figure}
-
 Im Vergleich (siehe Abbildung \ref{fig:mitvadundrtpsip}) der beiden SIP und RTP Protokolle ist beim SIP Protokoll sowohl der Ruf -auf und -abbau zu erkennen als auch die Signalisierung eines anderen Sprachcodecs beim Übergang von der Privaten in die Soziale Zone. Beim RTP Protokoll ist die Übertragung des Audiostroms und die reduzierte Bitrate in der sozialen und öffentlichen Zone zu erkennen. 
 
 
 Anhand der gegebenen Beispiele und Messungen sieht man, dass in einer distanzbasierten Sprachkommunikationdass verschiedene Verfahren eingesetzt werden können, um eine Unterscheidung der Bandbreite in Abhängigkeit von der Entfernung der Teilnehmer vorzunehmen. 
 //TODO Speex VBR and ABR is it possible?
-
-\begin{figure}[tbh]
-	\centering
-		\includegraphics[width=\textwidth]{grafiken/mitvadundrtpsip.eps}
-		\caption{Rufauf und -abbau, sowie Signalisierung eines anderen Codecs mit SIP, Reduktion des Audiostroms mit RTP}
-	\label{fig:mitvadundrtpsip}
-\end{figure}
 
 %\subsection{SIP Benchmarks}
 %\subsection{Mixing}
