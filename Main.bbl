@@ -1,4 +1,4 @@
-\begin{thebibliography}{88}
+\begin{thebibliography}{84}
 % this bibliography was produced with the style dinat.bst v2.5
 \makeatletter
 \newcommand{\dinatlabel}[1]%
@@ -124,12 +124,6 @@
 \newblock In: \emph{ETC}
 \newblock 60 (2003), S.~29--39
 
-\bibitem[Commission(2007)]{E-Business:08}
-\dinatlabel{Commission 2007} \textsc{Commission}, European:
-\newblock The European e-Business Report 2006/07.
-\newblock In: \emph{http://www.ebusiness-watch.org/studies/}
-\newblock (2007)
-
 \bibitem[Diot und Gautier(1999)]{diot99}
 \dinatlabel{Diot und Gautier 1999} \textsc{Diot}, C.~; \textsc{Gautier}, L.:
 \newblock A distributed architecture for multiplayer interactive applications
@@ -145,14 +139,6 @@
   Architecture.
 \newblock In: \emph{Information and Automation}
 \newblock (2005)
-
-\bibitem[Ernst\&Young(2007)]{ErnstYoung:07}
-\dinatlabel{Ernst\&Young 2007} \textsc{Ernst\&Young}:
-\newblock Digitale Spiele in Deutschland.
-\newblock In:
-  \emph{http://www.ey.com/global/content.nsf/Germany/Publikationen\_-\_Studien%
-\_\-\_2007}
-\newblock Version 22.03.2008 (2007)
 
 \bibitem[chang Feng und chi Feng(2003)]{feng03}
 \dinatlabel{chang Feng und chi Feng 2003} \textsc{Feng}, Wu chang~;
@@ -283,15 +269,6 @@
 \newblock New York, NY, USA~: ACM, 2004, S.~116--120. --
 \newblock ISBN 1-58113-942-X
 
-\bibitem[Ipoque(2007)]{ipoque:2007}
-\dinatlabel{Ipoque 2007} \textsc{Ipoque}:
-\newblock Internet Studie 2007: Auswirkungen von P2P-Filesharing, Voice over
-  IP, Skype, Joost und Instant Messaging auf das Internet.
-\newblock In:
-  \emph{http://www.ipoque.com/news\_\&\_events/internet\_studies/internet\_stu%
-dy\_2007}
-\newblock Version 22.03.2208 (2007)
-
 \bibitem[ITU(1996)]{mtu96}
 \dinatlabel{ITU 1996} \textsc{ITU}:
 \newblock Methods for subjective determination of transmission quality.
@@ -412,12 +389,6 @@ dy\_2007}
 \newblock Mahwah, NJ, USA~: Lawrence Erlbaum Associates, Inc., 2003. --
 \newblock 596--620~S. --
 \newblock ISBN 0-8058-3838-4
-
-\bibitem[PricewaterHouseCoopers(2007)]{pwc:07}
-\dinatlabel{PricewaterHouseCoopers 2007} \textsc{PricewaterHouseCoopers}:
-\newblock German Entertainment and Media Outlook: 2007-2011.
-\newblock In: \emph{http://www.pwc.de/portal/pub/!ut/p/kcxml}
-\newblock Version 22.03.2008 (2007)
 
 \bibitem[Pundkar(2007)]{pundkar07}
 \dinatlabel{Pundkar 2007} \textsc{Pundkar}, Swapnil~D.:

@@ -1,7 +1,7 @@
 \chapter{VoIP Grundlagen}
 Dieses Kapitel vermittelt die technischen Grundlagen und erläutert wichtige Komponenten des gewählten SIP-Protokolls, die für eine Umsetzung der in Kapitel 3 entworfenen Sprachkommunikationslösung notwendig sind. Dabei wird eine Übersicht über die zur Sprachübertragung und Signalisierung verwendeten Protokollfamilien SIP, SDP, RTP und RTCP gegeben. 
 
-\section{Protokolle zur Echtzeitkommunikation}
+\subsubsection{Protokolle zur Echtzeitkommunikation}
 Voice-over-IP (auch VoIP, IP-Telefonie) bezeichnet die Telefonie über das Internet. Um per VoIP ein Telefongespräch führen zu können, benötigen Benutzer ein software-basiertes SIP-Telefon oder VoIP-Telefon-Hardware. Gespräche sind mit jedem beliebigen Teilnehmer möglich: Sowohl VoiP-Nummern als auch Teilnehmer mit normalen Telefonnummern können angerufen werden.
 
 	Voice-over-IP beinhaltet unterschiedliche Protokolle. Zur reinen Signalisierung werden hauptsächlich das Session Initiation Protocol (SIP) \cite{sip02} bzw. Protokolle aus der H.323-Protokollfamilie\footnote{Da SIP die ältere H.323 Protokollfamilie ablöst, wird diese hier nicht behandelt.} verwendet. Bei VoIP sind generell folgende Klassen der Protokolle zu unterscheiden:
@@ -26,7 +26,7 @@ Für die Sprachübertragung wird das Echtzeit-Transport-Protokoll (Realtime Transp
 %Für die Ansteuerung von VoIP-Gateways stehen die Protokolle MGCP(Media Gateway Control Protocol) \cite{mgcp99} und Megaco (Media Gateway Control) \cite{megaco00} zur Verfügung, die im Rahmen der Arbeit jedoch nicht weiter erläutert werden. 
 
 %Dieses Kapitel soll zunächst den Aufbau eines VoIP Systems beschreiben um anschließend die Protokolle SIP, SDP, RTP und RTCP zu behandeln. Da SIP die ältere H.323 Protokollfamilie in langfristig verdrängen wird, wird diese nicht behandelt. %Im Abschluss wird ein Überblick über das propriätere Protokoll von Skype gegeben, dessen Funktionsweise und Details zwar nicht offen sind, es jedoch eine Alternative zu den offenen Protokollen bietet. 
-
+\section{Allgemeines über VoIP}
 \subsection{Einfaches VoIP System}
 Der einfache Aufbau eines einfachen VoIP-Systems kann prinzipiell mit einer bestehenden IP-Infrastruktur und Computerprogrammen, die Telefonie ermöglichen (\textit{Softphones}), funktionieren. Die Teilnehmer müssen jedoch bei einer solchen Konfiguration die IP-Adressen der gewünschten Ge\-sprächs\-partner kennen, um einen direkten Anruf auszuführen. Bei einer Adress\-änderung der IP Adresse eines Gesprächspartners, müssten jedoch alle Einträge der Gesprächspartner entsprechend abgeändert werden, weil sich die Teilnehmer sonst nicht mehr erreichen könnten. Der gleiche Aufwand müsste auch beim Hinzufügen weiterer Teilnehmer erfolgen. %Ein solcher Aufbau wird daher als unflexibel angesehen. 
 
@@ -141,7 +141,7 @@ Obwohl zwischen den Komponenten unterschieden wird, können sie alle in einem Rec
 
 \textbf{Registrar:} Der Registrar oder Location Server speichert ausschließlich die  Aufenthaltsorte in Form von SIP-Adressen, nimmt aber an der SIP-Kommunikation zwischen den User Agents nicht teil. User Agents registrieren sich mit ihrem Aufenthaltsort bei einem Proxy Server, der die Information dann an den Registrar übermittelt. Somit kann die Mobilität von Teilnehmern ermöglicht werden. 
 
-\subsection{Aufbau einer SIP Nachricht}
+\subsection{Aufbau von SIP-Nachrichten}
 Die SIP-Nachrichten werden textbasiert aufgebaut. Jede Nachricht setzt sich aus einer Start-Zeile, einem \textit{Message Header} und einem \textit{Message Body} zusammen, wobei der \textit{Message Body} optional ist. Eine SIP-Nachricht stellt entweder eine Anforderung (\textit{Request}) von einem Initiator der Kommunikation oder eine Antwort (\textit{Response}) vom Partner an den Initiator dar. Somit gibt es nur zwei Arten von SIP Nachrichten:
 
 \begin{itemize}
@@ -222,7 +222,9 @@ Im RFC 3261 werden ebenfalls sechs Response-Klassen spezifiziert, die dem Absend
 	\item \textbf{600er Klasse (Globale Fehler)}: Es wird mitgeteilt, dass der Request auf keinem der Server des Netzes ausgeführt werden konnte. 
 \end{itemize}
 \normalsize
-\subsection{Rufaufbau, Verbindung, Rufabbau}
+
+\subsection{Betriebsarten bei SIP}
+\subsubsection{Rufaufbau, Verbindung, Rufabbau}
 
 % Grafik über Rufaufbau
 
@@ -235,7 +237,8 @@ Die bestehende RTP-Session kann von beiden Seiten beendet werden. Beendet Teilne
 	\caption{SIP-Anruf ohne Proxy}
 	\label{fig:sipanruf}
 \end{figure}
-\subsection{Registrierung der Lokation von Teilnehmern}
+
+\subsubsection{Registrierung der Lokation von Teilnehmern}
 
 \begin{figure}[ht]
 	\centering
@@ -250,7 +253,8 @@ Dadurch, dass ein Teilnehmer mobil sein und verschiedene Clients benutzen kann, 
 
 Möchte z.B. ein Teilnehmer mit der SIP-Adresse \textit{sip:bob@uni-mannheim.de} in seiner Heimat-Domain \textit{uni-mannheim.de} Anrufe entgegennehmen, so wird an den Registrar, z.B. \textit{registrar.uni-mannheim.de}, mit der Request Nachricht REGISTER, dieser Wunsch mitgeteilt. Relevante Felder der Nachricht enthalten die Herkunft (From), die Lokation des Benutzers (Contact) und die Gültigkeit der Nachricht (Expires). Wechselt der Benutzer vor Ablauf der Expire-Zeit seine Lokation, so wird der Registrar mit einer weiteren Nachricht darüber aktualisiert. Der Registrar bestätigt den Empfang der Nachrichten jeweils mit einer ACK-Nachricht. Ebenso ist eine Registrierung über eine andere Person möglich, so kann z.B. die Sekretärin die aktuelle Lokation ihres Chefs aktualisieren. 
 
-\subsection{Instant Messaging zwischen Teilnehmern}
+\subsection{Spezielle Dienstmerkmale}
+\subsubsection{Instant Messaging zwischen Teilnehmern}
 
 Als Instant Messaging wird im Allgemeinen ein Dienst zur sofortigen Übermittlung von Nachrichten zwischen Teilnehmern eines Netzwerks verstanden. Es existieren viele proprietäre Protokolle wie IRC(Internet Relay Chat), XMPP(Extensible Messaging and Presence Protocol) und OSCAR(Open System for CommunicAtion in Realtime). Auch bei SIP wurde in den RFCs 3860, 3428 und 3265 ein Protokoll für das Instant Messaging definiert: SIMPLE (SIP for Instant Messaging and Presence). 
 
@@ -266,7 +270,7 @@ Eine SIP-MESSAGE-Transaktion kann sowohl über einen PROXY laufen als auch direkt
 Der Grundlegende Unterschied zum SIP-Protokoll beruht darauf, dass hier kein separater Medienstrom existiert. Die Textnachrichten werden in einem SIP-Paket über die Knoten übertragen, die den Signalisierungspfad bilden. Dies erfordert ein größeres Bedürfnis nach Sicherheit als bei anderen SIP-Anfragen, da der Benutzer allen Proxys vertrauen muss. Unverschlüsselte Nachrichten liegen diesen offen und auch eventuelles Abzweigen von Nachrichten (\textit{Forking}) ohne Wissen des Benutzers ist hier möglich. 
 
 %RFC 3428
-\subsection{Präsenzfunktion von Teilnehmern}
+\subsubsection{Präsenzfunktion von Teilnehmern}
 
 % Grafik über Publish Subscribe
 
@@ -286,7 +290,7 @@ Will ein Teilnehmer ein Ereignis wie z.B. seine Statusänderung veröffentlichen, 
 \section{Session-Description-Protokoll}
 Das Session-Description-Protokoll wird vom Signalisierungsprotokoll SIP dazu benutzt, die Eigenschaften des Medienstroms sowie den verwendeten Codec, Transportprotokoll und Zieladresse mit Port festzulegen. 
 
-\subsection{Aufbau von SDP-Nachrichten}
+\subsubsection{Aufbau von SDP-Nachrichten}
 \label{sdp-aufbau}
 
 SDP ist ein textbasiertes Format, in dem die Eigenschaft und der Wert in Textform in der Nachricht festgehalten werden. Die Nachricht enthält die Besonder\-heiten der RTP-Session, die durch das SDP Protokoll festgelegt wird. Die Nachricht setzt sich aus der Spezifikation der RTP-Session, der Zeitbeschreibung und der Medienbeschreibung zusammen. 
@@ -330,7 +334,7 @@ Die Beschreibung der RTP-Session wird mit den folgenden Parametern definiert:
 
 Den "`klassischen"' Audio Formaten sind feste Nummern\footnote{Eine Übersicht üblicher PT-Nummern ist in der Tabelle \ref{pt-tabelle} dargestellt} zugeordnet. Weitere Typen befinden sich im dynamischen Bereich und können für jede Sitzung zu beliebigen Medienformaten vereinbart werden.
 
-\subsection{Aushandeln der Sitzungsparameter}
+\subsubsection{Aushandeln der Sitzungsparameter}
 Die unter dem Parameter \textbf{"`a"'} ausgetauschte Liste der Medienformate entspricht in der Reihenfolge den Präferenzen des Senders. Der Empfänger eines solchen Angebots beantwortet jedes empfangene Medienformat mit einer korrespondierenden Antwort, falls er dieses Medienformat unterstützt. Ein Medienstrom kann vom Empfänger abgelehnt werden, wenn keines der aufgelisteten Medienformate unterstützt wird, indem als Port eine Null gesendet wird. Nach Möglichkeit sollte die Reihenfolge der unterstützten Medienformate aus dem Angebot beibehalten werden, nicht unterstützte Formate sollten dagegen ausgeblendet werden.
 
 Nachdem sich beide Teilnehmer auf die unterstützten Formate geeinigt haben, können beide Seiten damit beginnen, die Mediendaten im jeweils bevorzugten Format zu senden. Während einer Sitzung können die Parameter neu verhandelt werden, indem der gleiche Ablauf mit entsprechend modifizierten SDP-Beschreibungen durchgeführt wird. 
@@ -347,7 +351,7 @@ Die wichtigsten Besonderheiten von RTP sind:
 	\item Transport unterschiedlicher Formate: Es können unterschiedliche Formate wie Audio, Sprache und Video übertragen werden, die in unterschiedlichen Profiles genau bezeichnet werden. 
 \end{itemize}
 
-\subsection{Aufbau von RTP-Paketen}
+\subsubsection{Aufbau von RTP-Paketen}
 \label{rtp-header}
 RTP übermittelt ein Echtzeitmedium als Folge von RTP-Paketen, die mit einem vorangestellten UDP-Header in den IP-Paketen transportiert werden. Jedes RTP-Paket enthält einen RTP-Header und die Nutzlast(\textit{Payload}). Die wesentlichen Angaben im RTP-Header sind:
 
@@ -404,7 +408,7 @@ In einem Receiver Report sind unter anderem folgende Informationen enthalten:
 
 Die SDES Pakete ermöglichen es, die Quellen mit Namen zu kennzeichnen. Diese Kennzeichnung wird vom Empfänger dazu verwendet, mehrere Bitströme einer Quelle, die in getrennten RTP-Sessions übertragen werden, wieder zusammenzuführen. Das BYE Paket dient dazu das Ende der Teilnahme an einer Kommunikation anzuzeigen. 
 
-\subsection{Silence Supression}
+\subsubsection{Silence Supression}
 Teilnehmer einer Audio-Verbindung müssen nicht unbedingt Audiopakete über den RTP-Strom senden, falls gerade bei den Teilnehmern Stille herrscht. Diese Funktion wurde im RFC 3389 spezifiziert.
 
 Die Möglichkeit, den RTP Paketversand während Stilleperioden zu unterbrechen wird als "`Stille Unterdrückung"' (\textit{Silence Suppression}) oder "`Stimm-Aktivitäts-Erkennung"'(\textit{Voice Activity Detection}) bezeichnet. Silcence Suppression kann vom Empfänger erkannt werden, wenn der RTP-Zeitstempel nicht mit dem Intervall übereinstimmt, das vom letzten Paket abgedeckt wurde, obwohl die RTP-Sequenznummer sich nur um 1 erhöht hat. Ob Silence Suppression eingesetzt wird, hängt normalerweise von der Konfiguration der beiden Endpunkte ab.
