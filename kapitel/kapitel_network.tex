@@ -1,3 +1,4 @@
+\cleardoublepage
 \chapter{SIP als Netzwerkschicht für Mehrspieler-Computerspiele}
 
 Wie sich bereits in Kapitel 6 und 7 abgezeichnet hat, sind die Herausforderungen an die Verwaltung einer Sprachkommunikation mit der darunter liegenden Netzwerkarchitektur verbunden. Deshalb wird in diesem Kapitel gezeigt, wie das gewählte SIP-Protokoll auch als Netzwerkschicht für Mehrspieler-Spiele eingesetzt werden kann.  Da es sich bei SIP um generisches Protokoll handelt, das beliebige Sitzungen zwischen Clients zu etablieren und Daten in Echtzeit auszutauschen kann liegt es nahe, die bereits in Kapitel 6 vorgestellten und Kapitel 7 eingesetzten Komponenten nicht nur dazu zu nutzen, um Teilnehmer zu Lokalisieren und Konferenzen zu steuern, sondern auch um Spieleinformationen zu übertragen. 
@@ -99,7 +100,7 @@ Bei Peer-to-Peer muss jeder Knoten der dem System betritt und Anfragen stellt, d
 
 Grundsätzlich lassen sich Peer-to-Peer-Systeme in unstrukturierte Systeme (nachbarbasierte) und strukturierte (regionsbasierte) Systeme unterscheiden \cite{lua05}, \cite{douglas05}.
 
-\section{SIP in Unstrukturierten P2P-Systemen}
+\section{SIP in Unstrukturierten Peer-to-Peer-Systemen}
 Unter unstrukturierten Systemen wird ein P2P Overlay verstanden, in dem die Topologie einer zufälligen Organisation entspricht und der Inhalt mit Suchverfahren, die das Overlay durchqueren, lokalisiert wird. Einige bekannte Vertreter sind Kawaharas' "`Peer-to-Peer Message Exchange Scheme"' \cite{kawahara02}, Keller's Solipsis-System \cite{Keller03} oder das voronoibasierte-Systemen von Hu \cite{hu04}. Solche Systeme bieten gute Skalierungseigenschaften, können jedoch unter einer Partitionierung\footnote{Ein Beispiel für Partitionierung ist, wenn sich ein Knoten in die Nähe eines anderen Knoten begibt, aber keiner der Knoten über diese Änderung informiert wird.} des Netzwerks leiden \cite{Keller03}.
 
 \begin{figure}
@@ -111,7 +112,7 @@ Unter unstrukturierten Systemen wird ein P2P Overlay verstanden, in dem die Topo
 
 Für die Umsetzung solcher Ansätze bietet sich SIP in seiner Reinform an, da hier SIP-Clients direkt miteinander kommunizieren und keine zentralen Komponenten genutzt werden. Die Applikationslogik kann die hohe Abstraktionsebene des SIP-Overlays nutzen ohne sich mit technischen Problemen auf Protokollebene zu befassen. Das Instant Messaging, der Präsenzdienst und natürlich das Voice-over-IP sind direkt zwischen den UAC/UAS nutzbar. Im Gegensatz zum serverbasierten Präsenzdienst werden jetzt die SUBSCRIBE/PUBLISH/NOTIFY und MESSAGE Nachrichten direkt zwischen den Clients geschickt. 
 
-\section{SIP in Strukturierten P2P-Systemen}
+\section{SIP in Strukturierten Peer-to-Peer-Systemen}
 Unter einem strukturiertem System versteht man ein P2P-Overlay, in dem die Topologie fest kontrolliert wird und der Inhalt nicht bei zufälligen Knoten platziert wird, sondern an speziellen ausgewählten Knoten existiert, um seine Lokalisierung mittels verteilter Hashtabellen (Dynamic Hash Tables Abk.(DHT)) effizienter zu ermöglichen.  Es existieren mehrere Umsetzungen verteilter Hashtabellen wie CAN \cite{Ratnasamy01}, Chord \cite{Stoica01}, Pastry \cite{Rowstron01} und Tapestry \cite{zaho01}, die sich durch spezielle Eigenschaften voneinander unterscheiden, deren Erläuterung jedoch nicht Thema der Arbeit ist. 
 
 In regionsbasierten P2P Spielen wird die Welt in geometrische Formen wie Quadrate oder Sechsecke unterteilt und für jede Region wird ein Koordinator oder \textit{Superpeer} bestimmt. Dieser Knoten verwaltet Spieler, die diese Region betreten und verlassen und nutzt DHT um weitere Knoten zu finden. Alle Ereignisse in einer Region generierten Ereignisse werden auch an Knoten der gleichen Region propagiert. Dafür muss ein Koordinator nicht unbedingt Teilnehmer des aktiven Spiels sein. Einige Ansätze für regionsbasierte P2P-Spiele sind das \textit{SimMud}-System von Knutnsson et Al. \cite{knutsson04}, der \textit{Zoned-Federation-of-Game-Servers}-Ansatz von Limura at Al. \cite{Iimura04} oder auch ein skype-basierter Ansatz von Triebel et Al. \cite{triebel07g}.
@@ -183,7 +184,7 @@ Bryan, Lowekamp und Jennings schlagen im SOSIMPLE-Prototyp \cite{bryan05s} eine 
 %Ein Beispiel eines hybriden Systems stellt der Ansatz von Yu \cite{yu05} dar, in dem Knoten in \textit{Master-, Slave-} und \textit{Home-} Knoten unterteilt werden. Master-Knoten sind für die Verwaltung der Spielregionen verantwortlich. Home-Knoten helfen Master-Knoten mit Hilfe von DHT sich miteinander zu verbinden und Slave-Knoten werden von den Master-Knoten verwaltet. Im Unstrukturieren Teil tauschen die Master-Knoten zusätzlich Informationen über ihre Nachbarn untereinander aus. Durch diesen Ansatz soll eine Partitionierung des Netzwerks verhindert werden, während der zusätzliche Netzwerkverkehr durch die Verwendung von DHT minimiert werden soll.
 %TODO TABLE
 
-\subsection{Architektur Variationen}
+\subsection{Architekturvariationen}
 Es bestehen drei alternative Architektur Variationen beim Einsatz mit DHT zur Verfügung. 
 
 Der DHT kann auf eine dedizierte Server Farm limitiert werden. Für die Registrierung verbinden die Teilnehmer sich zu einem der Server. Wie bereits geschildert implementieren die Server selbst eine skalierbare Datenstruktur wie DHT, um den entsprechenden Eintrag zu finden. Der Teilnehmer muss jedoch mindestens einen Server finden und zu ihm verbinden. Diese Option beinhaltet keine Modifizierung der Clients, bietet aber eine zuverlässige Server Farm Architektur. 
