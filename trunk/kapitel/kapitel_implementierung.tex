@@ -120,12 +120,12 @@ Viele der existierenden SIP-Clientanwendungen und Protokollstapel kamen für den 
 \begin{figure}[tbh]
 	\centering
 		\includegraphics[width=0.70\textwidth]{grafiken/pjsip.eps}
-	\caption{Übersicht der Komponenten des PjSIP-Protokollstacks}
+	\caption{Übersicht der Komponenten des PjSIP-Protokollstapels}
 	\label{fig:pjsip}
 \end{figure}
 
 \section{Vorgehensweise bei der Implementierung des Prototypen}
-\subsection{Entwicklungsumgebung und Programmiersprache}
+\subsection{Programmiersprache und Testumgebung}
 Der Einsatz von C und C++ als Programmiersprache wird durch mehrere Vorteile gerechtfertigt: Die Darstellung der virtuellen 3D Welt und die die Etablierung, Verarbeitung und Wiedergabe der Audioströme bilden zusammen ein Echtzeitsystem. Da in so einem System der gleichzeitige zeitnahe Ablauf mehrerer Prozesse erforderlich ist, wird eine sehr performante Programmiersprache benötigt. Es sind vor allem kurze Reaktionszeiten erforderlich, um für den Spieler eine glaubwürdige Illusion zu erzeugen. Beim Audiosignal reichen bereits Verzögerungen von mehr als 300ms aus, um eine Verständigung unverständlich zu machen. 
 
 Da C und C++ maschinennahe Sprachen sind, und keine Interpretation des Quellcodes während der Laufzeit benötigen, besitzen sie einen Effizienzvorteil gegenüber Sprachen eine hohe Abstraktionsebene besitzen oder während der Laufzeit interpretiert werden müssen. Gerade deswegen liegen fast alle bisher vorgestellten Protokollstapel und Bibliotheken für VoIP oder 3D-Grafik ausschließlich in C oder C++ vor. 
@@ -133,19 +133,16 @@ Da C und C++ maschinennahe Sprachen sind, und keine Interpretation des Quellcode
 \subsubsection{Testumgebung}
 \label{testumgebung}
 Die wiederkehrenden Tests wurden auf diversen mir zur Verfügung stehenden Systemen
-durchgeführt. Als Clients kamen, zwei \textit{AMD Athlon(tm)} X2Dual 4200+, \textit{IBM} \textit{Thinkpad }T42 1,6GHz, \textit{Sony Vaio }CR 1,6GHz und \textit{HP Compaq }6710b 2,1GHz zum Einsatz. Um möglichst realistische Bedingungen zu schaffen, wurden die Rechner auf verschiedene Art und Weise an das Internet angebunden. Zwei Laptops nutzten ein 54Mbit WLAN mit VPN Anschluss, ein Laptop befand sich hinter einem NAT-Router mit WLAN, die stationären Rechner verfügten über einen direkten 100Mbit LAN Anschluss. In den Tests nutzten alle Rechner den Breitbandanschluss der Universität Mannheim, der über 33 MBit Down- und 16 MBit Upload verfügt. 
+durchgeführt. Als Clients kamen, zwei \textit{AMD Athlon(tm)} X2Dual 4200+, \textit{IBM} \textit{Thinkpad} T42 1,6GHz, \textit{Sony Vaio} CR 1,6GHz und \textit{HP Compaq} 6710b 2,1GHz zum Einsatz. Um möglichst realistische Bedingungen zu schaffen, wurden die Rechner auf verschiedene Art und Weise an das Internet angebunden. Zwei Laptops nutzten ein 54Mbit WLAN mit VPN Anschluss, ein Laptop befand sich hinter einem NAT-Router mit WLAN, die stationären Rechner verfügten über einen direkten 100Mbit LAN Anschluss. In den Tests nutzten alle Rechner den Breitbandanschluss der Universität Mannheim, der über 33 MBit Down- und 16 MBit Upload verfügt. 
 
 Auf den folgenden Seiten soll nun die Umsetzung, der in Kapitel 3 erarbeiteten Konzepte und Verbesserungsvorschläge erläutert werden. Es werden ausgewählte Probleme und Lösungswege beschrieben, die in dieser Phase der Arbeit aufgetreten sind. 
 
-\section{3D-Spielewelt mit Irrlicht und Irrklang}
-
-\subsection{Irrlicht}
+\subsection{3D-Spielewelt mit Irrlicht}
 
 \subsubsection{Initialisierung}
-Zu Beginn des Spieles werden die \textit{Irrlicht} und VoIP Instanzen initialisiert, die später in zwei verschiedenen Prozessen parallel ablaufen und miteinander zusammenarbeiten. In \textit{Irrlicht} wird die 3D-Welt gerendert und die Darstellung und Steuerung des Avatars vorgenommen und in der VoIP-Instanz die Audiokommunikation signalisiert und durchgeführt.
+Zu Beginn des Spieles werden die \textit{Irrlicht} und VoIP-Instanzen initialisiert, die später in zwei verschiedenen Prozessen parallel ablaufen und miteinander zusammenarbeiten. In \textit{Irrlicht} wird die 3D-Welt gerendert und die Darstellung und Steuerung des Avatars vorgenommen und in der VoIP-Instanz wird die Audiokommunikation signalisiert und das Audiosignal abgemischt. 
 
 \subsubsection{Level}
-%Todo bild vom Level
 \begin{figure}[tbh]
 	\centering
 		\includegraphics[width=1.00\textwidth]{grafiken/spielewelt-screenshot.eps}
@@ -153,10 +150,11 @@ Zu Beginn des Spieles werden die \textit{Irrlicht} und VoIP Instanzen initialisi
 	\label{fig:spielewelt-screenshot}
 \end{figure}
 
-Für eine möglichst realistische Umsetzung wurde ein Level benutzt, das einen Park zeigt in dem Spieler die Möglichkeit haben sich frei zu bewegen. Die Vorstellung, dass Menschen in hier spontane Gesprächen führen liegt nahe. Ebenso erscheint in diesem Szenario die Übertragung der Sprache per Luft sehr natürlich.
+Für eine möglichst realistische Umsetzung einer 3D-Welt wurde ein Level benutzt, das einen Park zeigt, in dem Spieler die Möglichkeit haben sich frei zu bewegen. Die Vorstellung, dass Menschen hier spontane Gesprächen führen liegt nahe. Ebenso erscheint in diesem Szenario die Übertragung der Sprache per Luft sehr natürlich. 
+Mit Irrlicht wird auch eine einfache \textit{Collision Detection} und Simulation der Schwerkraft vorgenommen, um realistische Verhältnisse zu erzeugen.   
 
-//AVATARE MD2 Modelle
-//Level Park in Montreal
+%//AVATARE MD2 Modelle
+%//Level Park in Montreal
 %\subsubsection{\textit{Collision Detection}}
 %Der Spieler kann in der Implementierung mit andern Spielern des Levels und dem Level selbst interagieren. Dabei ist es wichtig, dass eine Berechnung der Kollision des Spielers mit dem Level oder anderen Spielern stattfindet, da ohne eine solche der Spieler alle Gegenstände durchdringen könnte und das Szenario unnatürlich erscheint. Diese Berechnung wird "`\textit{Collision Detection}"' genannt und wird ebenfalls mit im \textit{Irrlicht} Framework umgesetzt. 
 
@@ -165,21 +163,17 @@ Der Spieler ist in der Lage sich in alle Richtungen zu Bewegen und zu springen. 
 
 \subsubsection{Radar}
 
-In einem Radar am oberen-linken Bildschirmrand werden für den Spieler alle Teilnehmer des Spiels angezeigt. Das Radar verfügt über drei Zonen, die die einzelnen Verbindungsstufen repräsentieren. Spieler werden mit einem Icon und ihrem zugehörigen Namen angezeigt. In der öffentlichen Zone wird das Icon gräulich dargestellt, betreten sie die soziale Zone, wird dieser grün gefärbt und in der privaten Zone ist ihr Icon gelb. Die Metapher der Luftübertragung, gepaart mit dem Radar als Orientierungshilfe, unterstützt den Spieler bei der Adressierung von anderen Teilnehmern. Spieler sind direkt in der Lage zu sehen, an wen ihre Sprachnachrichten übertragen werden und welche Teilnehmer sie gerade hören. 
-
-\subsection{Irrklang}
+In einem runden Radar am oberen-linken Bildschirmrand werden für den Spieler alle Teilnehmer des Spiels in Abhängigkeit ihrer Position zum Spieler angezeigt. Das Radar verfügt über drei Zonen, die die einzelnen Verbindungsstufen repräsentieren. Spieler werden mit einem Icon und ihrem zugehörigen Namen angezeigt. In der öffentlichen Zone wird das Icon gräulich dargestellt, betreten sie die soziale Zone, wird dieser grün gefärbt und in der privaten Zone ist ihr Icon gelb. Die Metapher der Luftübertragung, gepaart mit dem Radar als Orientierungshilfe, unterstützt den Spieler bei der Adressierung von anderen Teilnehmern. Spieler sind direkt in der Lage zu sehen, an wen ihre Sprachnachrichten übertragen werden und welche Teilnehmer sie gerade hören. 
 
 \subsubsection{Lokale Audioszene}
-Das Level wurde zusätzlich mit mehreren lokalen Audioquellen ausgestattet, die eine realistische Audioumgebung simulieren. So sind der Wind, der Springbrunnen und die Fahrzeuge des Levels mit entsprechenden Audiodateien unterlegt, die mit Hilfe der Irrklang-Engine für das Ohr dreidimensional positioniert werden können. Die Audioszene wird lokal erzeugt und muss im Gegensatz zur Sprachkommunikation nicht über das Netzwerk übertragen werden. Die Sprachkommunikation und die lokale Audioszene existieren simultan und erzeugen so für den Spieler eine realistische Illusion. 
+Das Level wurde zusätzlich mit mehreren lokalen Audioquellen ausgestattet, die eine realistische Audioumgebung simulieren. So sind der Wind, Springbrunnen und die Fahrzeuge des Levels mit entsprechenden Audiodateien unterlegt, die mit Hilfe der Irrklang-Engine für das Ohr dreidimensional positioniert werden. Sie helfen die 
+Metapher der Luftübertragung von Schall zu unterstützen, da ihre Lautstärke auch mit zunehmender Entfernung abnimmt. Die Audioszene wird lokal erzeugt und muss im Gegensatz zur Sprachkommunikation nicht über das Netzwerk übertragen werden. Die Sprachkommunikation und die lokale Audioszene existieren simultan und erzeugen so für den Spieler eine realistische Illusion. 
 
-\section{PjSIP-VoIP-Instanz}
+\subsection{VoIP-Instanz mit PjSIP}
 
-Die VoIP-Instanz unterscheidet zwischen der Signalisierung (PJSIP) und der Kontrolle und dem Fluss des Audiostroms(PJMEDIA). Es existiert sowohl eine \textit{Low-level-API} (PJSIP \& PJMEDIA), als auch eine \textit{High-level-API}(PJSUA). Die gleichzeitige direkte Nutzung der PJMEDIA und PJSIP Pakete bietet eine direkte Kontrolle über jeden Schritt der Anwendung. Die PJSUA-API dagegen, erlaubt es die Signalisierung, Account-Management, Buddy-Management, Präsenz, Instant-Messeging, Konferenzen und Medien-Funktionalitäten zu abstrahieren. 
+Die VoIP-Instanz unterscheidet zwischen der Signalisierung (PJSIP) und der Kontrolle und dem Fluss des Audiostroms (PJMEDIA). Die Steuerung kann durch eine \textit{Low-level-API} (PJSIP \& PJMEDIA), als auch durch eine \textit{High-level-API} (PJSUA) geschehen. Die gleichzeitige direkte Nutzung der PJMEDIA- und PJSIP-Komponenten bietet eine direkte Kontrolle über jeden Schritt der Anwendung. Im Prototypen wird die PJSUA-API eingesetzt, da sie es erlaubt die Signalisierung, Account-Management, Buddy-Management, Präsenz, Instant-Messeging, Konferenzen und Medien-Funktionalitäten zu abstrahieren, aber trotzdem noch die benötigte Kontrolle über alle Audioströme liefert. 
 
-\subsection{Signalisierung mit PJSUA}
-// TODO Vieleicht doch ein bisschen CODE? 
-
-\subsection{Medienfluss}
+\subsubsection{Medienfluss}
 \begin{figure}
 	\centering
 		\includegraphics[width=1.00\textwidth]{grafiken/pjsip-mediaflow.eps}
@@ -187,61 +181,20 @@ Die VoIP-Instanz unterscheidet zwischen der Signalisierung (PJSIP) und der Kontr
 	\label{fig:pjsip-mediaflow}
 \end{figure}
 
-Die Hauptkomponenten der Abbildung \ref{fig:pjsip-mediaflow} bestehen aus:
+Die Abläufe, die im Hintergrund ausgeführt werden, sollen kurz erläutert werden: Während der Initialisierungsphase erstellt die VoIP-Instanz einen logischen Sound\-karten-Port und die Conference-Bridge. Diese zwei Objekte bleiben während der Lebenszeit der Applikation erhalten. Wird ein Anruf getätigt oder entgegengenommen, erstellt die Anwendung eine Instanz des Media-Transports (normalerweise UDP). Die Adresse (Port) des Media-Transports wird als Parameter der SDP-IVITE-Nachricht übergeben (empfangen). Ist eine Verbindung etabliert, wird eine Medien-Sitzung erstellt. Der Audiostrom der Medien-Sitzung kann nun genutzt werden und bei der Conference-Bridge registriert werden. Danach kann dieser \textit{Audiostrom-Slot} in der Conference-Bridge mit Slots anderer Audioströme verbunden werden. Die lokale Audioausgabe ist möglich indem Audiostrom-Slots mit dem sog. "`Zero-Slot"' verbunden werden, der direkt mit der Soundkarte und dem Mikrofon verbunden ist (siehe auch Abschnitt \ref{conference-bridge}).
+
+Die Hauptkomponenten der Abbildung\footnote{Quelle: PjSIP, Version 22.03.2008, http://trac.pjsip.org/repos/wiki/media-flow} \ref{fig:pjsip-mediaflow}, die diesen Ablauf schematisch darstellt, bestehen aus:
 \begin{itemize}
-	\item einem Soundkarten-Port, der eine Abstraktions-Ebene darstellt, die die Callbacks der Soundkarte in Audioframes übersetzt
-	\item einer Conference-Bridge, die ein Mischen der Audiosignale erlaubt
-	\item einem Medienstrom, der bei einem Anruf erstellt wird.
-	\item einem Medientransport, der für die Übertragung des Medienstroms durch RTP/RTCP Pakete zuständig ist.
+	\item Einem Soundkarten-Port, der die Callbacks der Soundkarte in Audioframes übersetzt
+	\item Einer Conference-Bridge, die ein Mischen der Audiosignale erlaubt
+	\item Einem Medienstrom, der bei einem Anruf erstellt wird.
+	\item Einem Medientransport, der für die Übertragung des Medienstroms durch RTP/RTCP Pakete zuständig ist.
 \end{itemize}
 
-Während der Initialisierungsphase, erstellt die Anwendung einen logischen Sound\-karten-Port und die Conference-Bridge. Diese zwei Objekte bleiben während der Lebenszeit der Applikation erhalten. Wird ein Anruf getätigt oder entgegengenommen, erstellt die Anwendung eine Instanz des Media-Transports (normalerweise UDP). Die Adresse(Port) des Media-Transports wird als Parameter der SDP IVITE Nachricht übergeben (empfangen). Ist die Verbindung etabliert, wird eine Medien-Sitzung erstellt. Die Anwendung kann nun den Audiostrom der Medien-Sitzung nutzen und ihn bei der Conference-Bridge registrieren. Danach kann dieser \textit{Audiostrom-Slot} in der Conference-Bridge mit Slots anderer Audioströme verbunden werden oder mit dem sog. "`zero-slot"', der direkt mit der Soundkarte und dem Mikrofon verbunden ist. 
+\subsection{Zusammenarbeit von Irrlicht und PjSIP}
 
-\section{Zusammenarbeit von Irrlicht und VoIP}
-
-\subsection{Aktualisierung der VoIP Instanz}
-
-Im Spiel selbst ist der \textit{Irrlicht-Scene-Manager} für eine Verwaltung aller Objekte der Spielewelt verantwortlich. Er verfügt sowohl über die Koordinaten des Spielers und aller lokalen Objekte, kann aber auch über die Koordinaten aller anderen anwesenden Spieler im Spiel informiert werden. Erhält der Spieler neue Positionsinformationen von anderen Teilnehmern, werden diese im \textit{Scene-Manager} aktualisiert. Genauso versendet der Spieler selbst seine eigenen Koordinaten an alle teilnehmenden Spieler.
-
-Die Aktualisierung aller Positionsinformationen findet (alle 10 Frames) in der Hauptschleife von \textit{Irrlicht} statt, in der sowohl die 3D Welt als auch die lokale VoIP Instanz aktualisiert wird. Anhand der Koordinaten aller aktiven Spieler des Scene Managers kann die die VoIP Instanz die entsprechenden Distanzvektoren berechnen. Die Anzahl der dargestellten Frames hängt dabei stark von der Grafikleistung des Rechners ab und lag bei den Testmaschinen zwischen 5fps und 53fps.
- 
-Unterschreitet ein Spieler die Entfernung zu einem anderen Spieler, veranlasst die VoIP-Instanz einen entsprechenden Anruf zu diesem Teilnehmer. In Abhängigkeit der Entfernung voneinander werden die entsprechenden Zonenmechanismen durch die VoIP-Instanz im Hintergrund eingeleitet. Hier werden vor allem Callbacks zwischen Irrlicht und der VoIP Instanz genutzt um entsprechende Events auszulösen. 
-
-\subsection{Buddy Konzept}
-
-Die Spieler im Spiel werden durch Avatare repräsentiert. Jedem Avatar im Spiel ist ein entsprechender "`Buddy"' in der VoIP-Instanz gegenübergestellt. Diese hält somit eine lokale Liste aller Mitspieler vor. Sämtliche Sprachkommunikation findet durch einen Anruf zum entsprechendem \textit{Buddy} statt. Falls sich mehrere Personen in der Hörnähe des Spielers befinden, werden auch mehrere Anrufe zu den entsprechenden Personen veranlasst. Da für jeden Teilnehmer ein eigener Anruf getätigt und separat verwaltet wird, ist der Spieler in der Lage die Parameter wie Lautstärke, Bitrate und Codec jedes einzelnen Anrufs zu verändern und neu auszuhandeln. Alle getätigten Anrufe werden in der lokalen \textit{Conference-Bridge} abgemischt.
-
-\subsection{Conference-Bridge}
-Die Aufgabe der \textit{Conference-Bridge} besteht die Audioströme bestehender SIP Anrufe lokal abzumischen (siehe Abbildung \ref{fig:conference-bridge}). Jeder Teilnehmer der Conference-Bridge verfügt über einen Eingangs- und Ausgangs-Kanal, die beliebig miteinander verschaltet werden können. Das Mikrofonsignal des Spielers wird unverändert an alle Teilnehmer der Conference-Bridge übertragen. Die empfangenen Signale werden jedoch in ihrer Lautstärke angepasst. Dabei wird die Lautstärke der jeweiligen Audioströme mit dem Parameter $r$ zwischen 0 und 1 gewichtet, bevor sie addiert werden. So kann die Entfernung des Teilnehmers simuliert werden. Die Parameter $r$ werden anhand der Distanz der Avatare vom Spieler errechnet, die auf einen Bereich zwischen 0 und 1 normiert wird. Überschreiten Spieler im Spiel die Maximaldistanz der sozialen Zone, werden die Teilnehmer aus der Konferenzbrücke entfernt, der logische SIP Anruf jedoch so lange erhalten bis sie auch die öffentliche Zone verlassen haben. Dieses Verhalten wird später in Abschnitt \ref{Zonen-Implementierung} beschreiben. Liegen die Audiosignale in verschiedenen Abtastraten vor, übernimmt die Conference-Bridge automatisch ein \textit{Resampling} des Signals. 
-
-\begin{figure}
-	\centering
-		\includegraphics[width=1.00\textwidth]{grafiken/conference-bridge.eps}
-	\caption{Funktionsweise der Konferenzbrücke mit 5 Teilnehmern und Anpassung der einzelnen Audioströme}
-	\label{fig:conference-bridge}
-\end{figure}
-
-\subsection {Erweitertes Audio-Mixing}
-Da bisher die Teilnahme an einer Konferenz binär gelöst wurde, waren Spieler entweder Teil einer solchen oder nicht. So ist das in einer Konferenz mit \textit{n} Teilnehmern ${p_{1},p_{2},...,p_{n}}$, mit Audioströmen ${V_{1}(t),V_{2}(t),...,V_{n}(t)}$, von einem Teilnehmer $i$ zu einer Zeit \textit{t} empfangene Signal $R_{i}(t)$ aller Teilnehmer $j$ definiert durch:
-
-\begin{align}
-	R_{i}(t) = \sum \limits_{j=1}^n {V_{j}(t)}  \ \ \mbox{wobei} \  1 \geq j \geq n \ \mbox{und} \  j \neq i
-\end{align}
-
-Der Verbesserungsvorschlag sieht vor den binären Teilnahmestatus durch eine stetige Teilnahmefunktion zu ersetzen.  Die Teilnahme an einer Konferenz soll von der Distanz $d_{j}$ zum anderen Teilnehmer abhängig sein und somit alle Werte zwischen 0 und 1 annehmen. Das empfangene Signal $R_{i}(t)$ wird somit definiert als:
-
-\begin{align}
-	R_{i}(t) = \sum \limits_{j=1}^n {d_{j} \cdot V_{j}(t)} \ \ \mbox{wobei} \ 1 \geq j \geq n \ \mbox{und} \ j \neq i
-\end{align}
-
-In einer 3D Umgebung, in der die Spieler beliebige Positionen zueinander einnehmen können, wird vom Spieler ein Distanzvektor zu den übrigen Spielerpositionen berechnet und die Lautstärke des entsprechenden Audiostroms anhand diesem angepasst. Ein solcher Ansatz ermöglicht es für den Spieler eine eigene Konferenz zu erstellen, in der die Teilnehmer nur zu einem bestimmten Prozentsatz, repräsentiert durch ihre Lautstärke, anwesend sind. 
-
-Personen die sich in der Nähe befinden sind besser zu hören, als Personen die sich weit entfernt befinden. Die Kontrolle der Konferenz findet somit nicht direkt durch Tastatureingaben statt, sondern hängt implizit von der Position und Bewegung der Spieler zueinander ab. Um dieses Mixingkonzept zu realisieren, wird das Modell der Proxemik eingesetzt, das bereits im zweiten Kapitel vorgestellt wurde.
-
-\section{Spielablauf}
-
-\subsection{Registrierung}
-Bevor das eigentliche Spiel stattfindet, registriert sich der Spieler bei einem voreingestellten Registrar. Dazu sendet er seine Anmeldung gemäß dem im Kapitel 3 vorgestellten Registrierungsprozess. Ist die Registrierung abgeschlossen, ist der Registrar in der Lage diesen Spieler erfolgreich zu lokalisieren. Während der Registrierungsphase wird auch ein öffentlicher STUN-Server kontaktiert, der es dem Spieler erlaubt seine öffentliche IP Adresse und den Typ des eingesetzten Routers herauszufinden. 
+\subsubsection{Start des Spiels}
+Bevor das eigentliche Spiel stattfindet, registriert die VoIP-Instanz den Spieler bei einem voreingestellten Registrar. Dazu wird seine Anmeldung gemäß dem im Abschnitt \ref{sip-register} vorgestellten Registrierungsprozess vorgenommen. Ist die Registrierung abgeschlossen, ist der Registrar in der Lage diesen Spieler erfolgreich zu lokalisieren. Während der Registrierungsphase wird auch ein öffentlicher STUN-Server kontaktiert, der es dem Spieler erlaubt seine öffentliche IP Adresse und den Typ des eingesetzten Routers herauszufinden. 
 
 \begin{figure}
 	\centering
@@ -249,20 +202,20 @@ Bevor das eigentliche Spiel stattfindet, registriert sich der Spieler bei einem 
 		\caption{Startbildschirm des Spiels}
 \end{figure}
 
-\subsection{Spieler startet das Spiel}
-Auf dem Startbildschirm findet der Spieler seine bisherigen Freunde vor und kann ihren aktuellen Status ablesen: Diese können entweder \textit{offline}, \textit{online} oder gerade \textit{im Spiel} sein. Möchte der Spieler das Spiel betreten, kann er einen aktiven Spieler anwählen und mit dem Drücken des \textit{Join}-Knopfs am Spiel teilnehmen. Möchte er ein neues Spiel starten, kann er mit dem Betätigen des \textit{Create}-Knopfes ein neues Spiel anlegen. 
+Auf dem Startbildschirm findet der Spieler seine bisherigen Freunde vor und kann ihren aktuellen Status ablesen: Diese können entweder \textit{offline}, \textit{online} oder gerade \textit{im Spiel} sein. Für eine Abfrage des Online-Status wird der SIP-Präsenzdienst\footnote{Eine detaillierte Beschreibung der Vorgänge in der SIP-Netzwerkschicht folgt in Kapitel 8} in der VoIP-Instanz eingesetzt. Möchte der Spieler das Spiel betreten, kann er einen aktiven Spieler anwählen und mit dem Drücken des \textit{Join}-Knopfs am Spiel teilnehmen. Möchte er ein neues Spiel starten, kann er mit dem Betätigen des \textit{Create}-Knopfes ein neues Spiel anlegen. 
 
-\subsection{Neuer Spieler betritt das Spiel}
-Betritt ein neuer Spieler das Spiel, so wird er von diesem Zeitpunkt ab vom lokalen \textit{Scene-Manager} verwaltet und in der 3D-Welt als neuer Avatar dargestellt. Ein solcher wird für jeden neuen Spieler an einer festgelegten Einstiegskoordinate erzeugt. Gleichzeitig wird die SIP-Adresse des neuen Teilnehmers in die lokale \textit{Buddyliste} des Spielers aufgenommen. Befindet sich der entsprechende Spieler in Hörnähe, wird ein Anruf zu diesem Teilnehmer in der VoIP-Instanz ausgeführt.
+\subsubsection{Während des Spiels}
+%neues Spiel%
+Betritt ein neuer Spieler das Spiel, so wird er von diesem Zeitpunkt ab vom lokalen \textit{Irrlicht-Scene-Manager} verwaltet und in der 3D-Welt als neuer Avatar an einer festgelegten Einstiegskoodrinate erzeugt. Gleichzeitig wird in der VoIP-Instanz die SIP-Adresse eines neuen Teilnehmers in die lokale \textit{Buddyliste} (siehe Abschnitt \ref{buddy-mehrkanalmodell}) des Spielers aufgenommen. 
 
-\subsection{Spieler bewegt sich im Spiel}
-Jeder Spieler ist in der Lage sich frei im Level zu bewegen. Jede Bewegung wird allen anderen Teilnehmern mitgeteilt, damit sie in der Lage sind ihre Spielewelt konsistent zu halten. Auf die gleiche Weise erhält der Spieler selbst ebenfalls Bewegungsinformationen aller Spieler des aktiven Spiels. Diese Aktualisierung wird alle 10 Frames vorgenommen. Anhand der Positionsinformationen der Spieler wird die Sprachkommunikation entsprechend des Zonenkonzepts eingeleitet.
+%irrlicht scene manager und austausch der positionen%
+ Der Irrlicht-Scene-Manager ist für eine Verwaltung aller Objekte der Spielewelt verantwortlich. Er verwaltet sowohl die Koordinaten des Spielers und aller lokalen Objekte, aber auch die Koordinaten aller anderen im Spiel anwesenden Spieler. Da jeder Spieler in der Lage ist sich frei im Level zu bewegen, muss jede Bewegung an alle anderen Teilnehmern mit Hilfe der SIP-Netzwerkschicht\footnote{Eine detailierte Beschreibung der Übertragung der Spielerkoordinaten mit Hilfe des SIP-Protokolls findet sich in Kapitel 8.} übertragen werden, damit diese in der Lage sind ihre Spielewelt konsistent zu halten. Erhält der Spieler neue Positionsinformationen von anderen Teilnehmern des aktiven Spiels, werden diese im Irrlicht-Scene-Manager aktualisiert. 
 
-\subsection{Spieler beendet sein Spiel}
-Beendet ein Spieler sein Spiel, so bedeutet es für die übrigen Spieler nicht das Ende des kompletten Spiels. Das Verlassen eines Teilnehmers hat als einziges zur Folge, dass dieser seine Positionsinformationen nicht mehr versendet und auch keine weiteren mehr empfängt. Alle aktiven Gespräche mit diesem Spieler werden ebenfalls beendet. Eine frühe Implementierung nutzte spezielle Nachrichtentypen, um dies zu signalisieren. In einer späteren Version wurde jedoch der SIP-Präsenzdienst dazu eingesetzt\footnote{Eine genaue Beschreibung dieses Dienstes findet sich in Kapitel 4. Die Implementierung wird in Kapitel 9 erläutert.}.
+%aktualisierung der Positionsinformationen%
+Die 3D-Szene wird für in der Hauptschleife von Irrlicht für jedes Frame neu gezeichnet, während eine Aktualisierung der Positionsinformationen der lokalen VoIP-Instanz aus Effizienzgründen nur alle 10 Frames vorgenommen wird. Anhand der übergebenen Koordinaten aller aktiven Spieler, kann die VoIP-Instanz die entsprechenden Distanzvektoren zu diesen berechnen. In Abhängigkeit der Distanz zu Spielern wird deren Lautstärke entsprechend angepasst (siehe Abschnitt \ref{conference-bridge}) und anhand des Proxemikkonzepts (siehe Abschnitt \ref{Zonen-Implementierung} verschiedene Konnektivitätsstufen aufrecht erhalten. Bevor diese beschrieben werden, muss zunächst das Problem des Verbindungsaufbaus zwischen zwei Spielern erklärt werden. 
 
-\subsection{Verbindungsaufbau}
-Befinden sich zwei Teilnehmer in einer entsprechenden Hörnähe, wird diese Bedingung sie dazu veranlassen eine Verbindung untereinander aufzubauen. Dabei findet der Verbindungsaufbau entsprechend des SIP Protokolls statt, besitzt jedoch einen signifikanten Unterschied, der im Folgenden erklärt werden soll:
+\subsubsection{Verbindungsaufbau}
+Befinden sich zwei Teilnehmer in einer entsprechenden Hörnähe (öffentliche Distanz), wird diese Bedingung ihre VoIP-Instanzen dazu veranlassen eine Verbindung untereinander aufzubauen. Dabei findet der Verbindungsaufbau entsprechend des SIP-Protokolls statt, besitzt jedoch einen signifikanten Unterschied, der im Folgenden erklärt werden soll:
 
 Möchte Teilnehmer A zu Teilnehmer B eine Verbindung herstellen, sendet er eine SIP-Nachricht INVITE an Teilnehmer B. Die Nachricht enthält die Beschreibung der RTP-Session nach dem SDP Protokoll und alle notwendigen Angaben. Teilnehmer B sendet die gleiche Nachricht, da er auch eine Verbindung herstellen möchte.
 
@@ -286,12 +239,51 @@ Der kompliziertere Fall ist der symmetrische Fall: Dieser tritt dann ein, wenn B
 
 Hierbei ist die Existenz einer gemeinsamen Regel für alle Teilnehmer wichtig, nach der sie beim Dialog-Aufbau vorgehen. Die hier gewählte Lösung sieht vor, dass beide Teilnehmer eine zufällige Zeit $t$ warten und danach versuchen eine neue Verbindung zu etablieren bis der unsymmetrische Fall auftritt. Diese Vorgehensweise hat sich in der Praxis bewährt. 
 
-\subsection{Verbindungsabbau}
-Der Verbindungsabbau findet wie gewohnt statt: Befindet sich Teilnehmer B nicht mehr in Verbindungsreichweite zu Teilnehmer A so beenden beide die Verbindung zueinander. Dazu senden sie eine BYE Nachricht an den anderen Teilnehmer, die mit einer ACK Nachricht bestätigt wird. 
+\subsubsection{Verbindungsabbau}
+Verlassen die Teilnehmer wieder die Hörnähe (öffentliche Distanz) findet in der der VoIP-Instanz der Verbindungsabbau wie gewohnt statt: Beide Teilnehmer senden eine BYE Nachricht an den anderen Teilnehmer, die mit einer ACK Nachricht bestätigt wird. 
 
-\section{Zonen}
+\subsubsection{Beenden des Spiels}
+Spieler können anhand des SIP-Präsenzdienstes\footnote{Eine detaillierte Beschreibung der Implementierung dieses Dienstes findet sich in Kapitel 9} feststellen, wann ein Spieler das Spiel verlassen hat. Beendet ein Spieler sein Spiel, so bedeutet es für die übrigen Spieler nicht das Ende des kompletten Spiels. Das Verlassen eines Teilnehmers hat nur zur Folge, dass dieser seine Positionsinformationen nicht mehr versendet und auch keine weiteren mehr empfängt. Außerdem werden alle aktiven Gespräche mit diesem Spieler werden beendet. 
+
+\section{Umsetzung des Mehrkanalmodells}
+\label{buddy-mehrkanalmodell}
+Die Spieler im Spiel werden durch Avatare repräsentiert. Jedem Avatar im Spiel ist ein entsprechender "`Buddy"' in der VoIP-Instanz gegenübergestellt. Diese hält somit eine lokale Liste aller Mitspieler vor. Sämtliche Sprachkommunikation findet durch einen Anruf zum entsprechendem \textit{Buddy} statt. Falls sich mehrere Personen in der Hörnähe des Spielers befinden, werden auch mehrere Anrufe zu den entsprechenden Personen durchgeführt. Da für jeden Teilnehmer ein eigener Anruf getätigt und separat verwaltet wird, ist der Spieler in der Lage die Parameter wie Lautstärke, Bitrate und Codec jedes einzelnen Anrufs zu verändern und neu auszuhandeln. Alle getätigten Anrufe werden in der lokalen \textit{Conference-Bridge} abgemischt.Dieses Verhalten entspricht dem Mehrkanalkonzept aus Kapitel 3. 
+
+\section{Umsetzung der Methapher der Luftübertragung}
+\label{umsetzungluftmetapher}
+\subsection{Erweitertes Mixing-Konzept}
+Wie Kapitel 3 gezeigt hat, ist bisher die Teilnahme an Konferenzen binär gelöst worden, indem Spieler entweder Teil einer solchen waren oder nicht. So ist bisher das in einer Konferenz mit \textit{n} Teilnehmern ${p_{1},p_{2},...,p_{n}}$, mit Audioströmen ${V_{1}(t),V_{2}(t),...,V_{n}(t)}$, von einem Teilnehmer $i$ zu einer Zeit \textit{t} empfangene Signal $R_{i}(t)$ aller Teilnehmer $j$ definiert durch:
+
+\begin{align}
+	R_{i}(t) = \sum \limits_{j=1}^n {V_{j}(t)}  \ \ \mbox{wobei} \  1 \geq j \geq n \ \mbox{und} \  j \neq i
+\end{align}
+
+Dies bedeutet, dass das Empfangene Signal der Summe der Signale aller Teilnehmer entspricht.  Um die Metapher der Luftübertragung zu simulieren, ist es erforderlich gewesen den binären Teilnahmestatus durch eine stetige Teilnahmefunktion zu ersetzen.  Die Gesamtlautstärke $R_{i}(t)$ aller empfangenen Audiosignale $V_{j}(t)$ wird von der Distanz $d_{j}$ zum anderen Teilnehmer abhängig gemacht. Dabei wird die Lautstärke der jeweiligen Audioströme mit dem Parameter $d_{j}$ zwischen 0 und 1 gewichtet, bevor diese summiert werden.  Die Parameter $d_{j}$ werden  anhand der Distanz der Avatare vom Spieler errechnet, die auf einen Bereich zwischen 0 und 1 normiert werden. Durch dieses Vorgehen kann die Abnahme der Lautstärke des Signals in Abhängigkeit der Entfernung des Teilnehmers simuliert werden.
+
+\begin{align}
+\label{mixingalgo}
+	R_{i}(t) = \sum \limits_{j=1}^n {d_{j} \cdot V_{j}(t)} \ \ \mbox{wobei} \ 1 \geq j \geq n \ \mbox{und} \ j \neq i
+\end{align}
+
+Da die VoIP-Instanz alle 10 Frames von Irrlicht mit neuen Positionsinformationen versorgt wird, werden auch die Distanzvektoren alle 10 Frames neu berechnet und die Lautstärke des entsprechenden Audiostroms anhand diesen angepasst. Auf diese Art und Weise entsteht der gewünschte Effekt, dass Personen die sich in der Nähe befinden sind besser zu hören, als Personen die sich weit entfernt befinden.
+
+\subsection{Erweiterte Conference-Bridge}
+\label{conference-bridge}
+
+Das Abmischen der Audioströme bestehender SIP-Anrufe wird von der lokalen \textit{Conference-Bridge} übernommen (siehe Abbildung \ref{fig:conference-bridge}). Jeder Teilnehmer der Conference-Bridge verfügt über einen Eingangs- und Ausgangs-Kanal, die beliebig miteinander verschaltet werden können. Das Mikrofonsignal des Spielers wird unverändert an alle Teilnehmer der Conference-Bridge übertragen. Die empfangenen Signale werden entsprechend der oben vorgestellten Formel \ref{mixingalgo} in ihrer Lautstärke angepasst. Liegen die Audiosignale in verschiedenen Abtastraten vor, übernimmt die Conference-Bridge automatisch ein \textit{Resampling} des Signals.
+
+\begin{figure}
+	\centering
+		\includegraphics[width=1.00\textwidth]{grafiken/conference-bridge.eps}
+	\caption{Funktionsweise der Konferenzbrücke mit 5 Teilnehmern und Anpassung der einzelnen Audioströme}
+	\label{fig:conference-bridge}
+\end{figure}
+
+Wie bereits in Kapitel 3 gefordert, wird nur in der sozialen Zone des Spielers ein solches Abmischen vorgenommen. In der privaten Zone werden die Audioströme mit ihrer Maximallautstärke summiert. Überschreiten Spieler im Spiel die maximale Distanz der sozialen Zone, werden die Teilnehmer aus der Konferenzbrücke entfernt und nicht mehr abgemischt. Der logische SIP Anruf jedoch so lange erhalten, bis sie auch die öffentliche Zone verlassen haben. Dieses Verhalten wird später im darauf folgenden Abschnitt beschreiben. 
+
+\section{Umsetzung des Proxemikkonzepts}
 \label{Zonen-Implementierung}
-Die Umgebung des Spielers wurde wie gefordert in drei Zonen unterteilt. 
+Die Umgebung des Spielers wurde entsprechend dem Entwurf in Kapitel 3 in drei Zonen unterteilt. Wie auch Kapitel 6 gezeigt hat, kann durch die Etablierung verschiedener Konnektivitätsstufen Bandbreite eingespart werden. Die Umsetzung dieser Konzepte wird nun dargestellt:
 
 \begin{figure}[htbp]
 	\centering
@@ -300,19 +292,10 @@ Die Umgebung des Spielers wurde wie gefordert in drei Zonen unterteilt.
 	\label{fig:zonenkonzept}
 \end{figure}
 
-\subsection{Öffentliche Zone}
-Die öffentliche Zone wird genutzt, um SIP Verbindungen des Spielers mit anderen Teilnehmern zu initiieren und so eine Grundkonnektivität zwischen diesen herzustellen. Da der Verbindungsaufbau mitunter bis zu 1 oder 2 Sekunden betragen kann, wird diese Zone dazu genutzt, um vorab die gesamte Signalisierung vorzunehmen, bevor die Teilnehmer tatsächlich die nötige Hörnähe eingenommen haben, um miteinander zu sprechen. So soll die entstehende Latenz beim Verbindungsaufbau für den Spieler nicht erkennbar sein. 
+\subsection{Technische Vorgänge in der öffentliche Zone}
+Die öffentliche Zone wird genutzt, um SIP-Verbindungen des Spielers mit anderen Teilnehmern zu initiieren und so eine Grundkonnektivität zwischen diesen herzustellen, da es wahrscheinlich ist, dass Spieler die bereits diese Entfernung eingenommen haben, auch die soziale Zone betreten werden, in der tatsächlich eine Audioverbindung stattfindet. Da der SIP-Verbindungsaufbau recht komplex ist (siehe Abschnitt \ref{rufaufbau}) und mitunter bis zu 1 oder 2 Sekunden betragen kann, wird diese Zone dazu genutzt, um vorab die gesamte Signalisierung vorzunehmen. Dabei soll die etablierte Grundkonnektivität eine minimale Bandbreite beanspruchen, aber einen raschen Aufbau der Audiokommunikation in der sozialen Zone gewährleisten damit eine Sprachkommunikation in der sozialen Zone verzögerungsfrei stattfinden kann. 
 
-Durch die Existenz der öffentlichen Zone kann der Übergang stufenweise von nicht verbundenen Teilnehmern, über Teilnehmer, die bereits auf logischer Ebene verbunden sind, bis hin zu Teilnehmern, die tatsächlich Audiodaten austauschen, stattfinden. 
-
-In dieser Zone werden deshalb logische SIP Verbindungen aufgebaut, weil es sehr wahrscheinlich ist, dass die Teilnehmer, die bereits diese Entfernung eingenommen haben, auch die soziale Zone betreten werden, in der tatsächlich eine Audioverbindung stattfindet. 
-
-Da Spielergruppen in virtuellen Welten, der Erfahrung nach, während der Spielesitzung eine geringe Entfernung zu anderen Mitgliedern der gleichen Gruppe beibehalten, soll durch eine öffentliche Zone sichergestellt werden, dass bereits eine Konnektivität zwischen allen Teilnehmern herrscht, damit eine Sprachkommunikation zwischen diesen Spielern verzögerungsfrei stattfinden kann. Diese Grundkonnektivität beansprucht dabei eine minimale Bandbreite, gewährleistet aber einen raschen Aufbau der Audiokommunikation. 
-
-\subsubsection{Eingang und Verlassen der Öffentlichen Zone}
-Die öffentliche Zone kann aus zwei Richtungen betreten werden. Wird sie von außen betreten, wird eine logische SIP Verbindung zwischen den Teilnehmern aufgebaut. Der doppelte Verbindungsaufbau und die entstehenden Probleme wurden oben bereits beschrieben. Befindet sich der Teilnehmer erst einmal in der öffentlichen Zone, wird eine Reduzierung der Bandbreite vorgenommen.
-
-In der Implementierung wurden zwei Mechanismen ausprobiert, um einen geringen Bandbreitenverbrauch in dieser Zone zu gewährleisten ohne jedoch die logische SIP Verbindung zu beenden. Dabei wurden die speziellen Eigenschaften der verwendeten Protokolle SIP und RTP ausgenutzt.
+Die öffentliche Zone kann aus zwei Richtungen betreten werden. Wird sie von außen betreten, wird eine logische SIP Verbindung zwischen den Teilnehmern aufgebaut. Der doppelte Verbindungsaufbau und die entstehenden Probleme wurden oben bereits beschrieben. Befindet sich der Teilnehmer erst einmal in der öffentlichen Zone, wird eine Reduzierung der Bandbreite vorgenommen. Bei der Umsetzung wurden zwei Mechanismen ausprobiert, um einen geringen Bandbreitenverbrauch in dieser Zone zu gewährleisten ohne jedoch die logische SIP Verbindung zu beenden. Dabei wurden die speziellen Eigenschaften der verwendeten Protokolle SIP und RTP ausgenutzt.
 
 \subsubsection{RTP - Silence Supression}
 Während der logische SIP Anruf weiterhin erhalten bleibt, wird auf auf RTP Ebene kein weiteres Audiosignal mehr übertragen. Dies geschieht, in dem die Teilnehmer aus den jeweils lokalen lokalen Konferenz genommen werden und so das Mikrofonsignal nicht mehr übermittelt wird. 
@@ -321,8 +304,8 @@ Da kein Audiosignal mehr an die gegenseitigen Spieler übertragen wird, wird von 
 
 Diese Methode bietet die Möglichkeit, den Bandbreitenverbrauch in dieser Zone auf unter 1kB/s \footnote{Messungen zum Bandbreitenverbrauchs in dieser Zone finden sich in Kapitel 10.} zu reduzieren. Der große Vorteil dieses Verfahrens besteht darin, dass der Wechsel zwischen der öffentlichen und sozialen Zone verzögerungsfrei stattfinden kann, da kein neues Aushandeln der Parameter benötigt wird.
 
-\subsubsection{SIP - HOLD}
-Eine Reduzierung des Bandbreitenverbrauch wurde auch mit der SIP HOLD Funktionalität ausprobiert. Hierbei signalisiert das SIP Protokoll, dass der Anruf "`geparkt"' werden soll und die RTP Verbindung während des Hold Vorgangs beendet wird. Wird der Hold aufgehoben, wird die RTP Verbindung wieder neu etabliert. Die Messergebnisse\footnote{Siehe Kapitel 9} und eigene Erfahrungen haben gezeigt, dass zwar eine noch größere Einsparung der Bandbreite, als bei der RTP Silence Supression stattfindet, da praktisch keine Daten mehr übertragen werden. Der Nachteil jedoch besteht darin, dass beim Wiederaufnehmen des Anrufs eine spürbare Verzögerung auftritt, da die Verbindungsparameter des Gesprächs wieder neu verhandelt werden müssen.
+\subsubsection{SIP-Hold-Funktion}
+Eine Reduzierung des Bandbreitenverbrauch wurde auch mit der SIP-Hold Funktionalität ausprobiert. Hierbei signalisiert das SIP-Protokoll, dass der Anruf "`geparkt"' werden soll und die RTP-Verbindung während des Hold-Vorgangs beendet wird. Wird der Hold-Vorgang aufgehoben, wird die RTP-Verbindung wieder neu etabliert. Die Messergebnisse \footnote{siehe Anhang} und eigene Erfahrungen haben gezeigt, dass zwar eine noch größere Einsparung der Bandbreite, als bei der RTP-Silence-Supression stattfindet, da praktisch keine Daten mehr übertragen werden. Der Nachteil besteht jedoch darin, dass beim Wiederaufnehmen des Anrufs eine spürbare Verzögerung auftritt, da die Verbindungsparameter des Gesprächs wieder neu verhandelt werden müssen. Diese Gründe führten dazu die Silence-Suppression anzuwenden. 
 
 \begin{figure}[tbh]
 	\centering
@@ -331,20 +314,20 @@ Eine Reduzierung des Bandbreitenverbrauch wurde auch mit der SIP HOLD Funktional
 	\label{fig:siphold}
 \end{figure}
 
-\subsection{Soziale Zone}
-In der sozialen Zone werden die Teilnehmer mit denen bereits Verbindungen aufgebaut wurden, nun der eigenen lokalen Konferenz hinzugefügt. Innerhalb dieser Konferenz wird die Lautstärke der Teilnehmer gemäß ihrer Entfernung angepasst. Audiosignale von Teilnehmern, die sich am inneren Rand der sozialen Zone des Spielers befinden werden ungedämpft mit einer Lautstärke von 100\% abgemischt. Diese nimmt linear in Abhängigkeit der Entfernung zu den Spielern ab, bis sie am äußersten Rand der Zone 0\% beträgt. 
+\subsection{Technische Vorgänge in der sozialen Zone}
+In der sozialen Zone werden die Teilnehmer mit denen bereits Verbindungen aufgebaut wurden, nun der eigenen lokalen Konferenz hinzugefügt. Innerhalb dieser Konferenz wird die Lautstärke der Teilnehmer gemäß ihrer Entfernung angepasst. Audiosignale von Teilnehmern, die sich am inneren Rand der sozialen Zone des Spielers befinden werden ungedämpft mit einer Lautstärke von 100\% abgemischt. Diese nimmt linear in Abhängigkeit der Entfernung zu den Spielern ab, bis sie am äußersten Rand der Zone 0\% beträgt. Dies Entspricht der Methapher der Luftübertragung die in dieser Zone ihre Anwendung findet und bereits in Abschnitt \ref{umsetzungluftmetapher} behandelt wurde.
 
-\subsubsection{Lautstärkenanpassung}
-Da die Lautstärke der übertragenen Stimme bei einer Übertragung durch Luft mit zunehmender Entfernung abnimmt wurde ein einfaches physikalisches Modell der Schallübertragung benutzt: Generell gilt, dass Schalldruck bei zunehmender Entfernung $r$  mit $1/r$ abnimmt. Da sich die Schallintensität auf eine immer größer werdende gedachte Kugeloberfläche (proportional zur Entfernung $r$) verteilt, nimmt sie mit der Entfernung quadratisch ab. 
+%\subsubsection{Lautstärkenanpassung}
+%Da die Lautstärke der übertragenen Stimme bei einer Übertragung durch Luft mit zunehmender Entfernung abnimmt wurde ein einfaches physikalisches Modell der Schallübertragung benutzt: Generell gilt, dass Schalldruck bei zunehmender Entfernung $r$  mit $1/r$ abnimmt. Da sich die Schallintensität auf eine immer größer werdende gedachte Kugeloberfläche (proportional zur Entfernung $r$) verteilt, nimmt sie mit der Entfernung quadratisch ab. 
 
-Zu Testzwecken wurden sowohl die lineare als auch die quadratische Abnahme der Schallintensität modelliert, um festzustellen welche Veränderung natürlicher erscheint. Die lineare Abnahme erwies sich sich als transparenter für den Benutzer, da eine einfachere Relation zwischen Lautstärke und Entfernung hergestellt werden konnte. 
+Zu Testzwecken wurden sowohl die lineare als auch die quadratische Abnahme der Schallintensität\footnote{Schalldruck nimmt bei zunehmender Entfernung $d$ mit $1/d$ ab. Da sich die Schallintensität auf eine immer größer werdende gedachte Kugeloberfläche (proportional zur Entfernung $d$) verteilt, nimmt sie mit der Entfernung quadratisch ab.} modelliert, um festzustellen welche Veränderung natürlicher erscheint. Die lineare Abnahme erwies sich sich als transparenter für den Benutzer, da eine einfachere Relation zwischen Lautstärke und Entfernung hergestellt werden konnte. 
 
 Als ein Problem bei der Lautstärkenanpassung erwies sich die unterschiedliche Aufnahmelautstärke der Mikrofone. Da verschiedene Mikrofone eine unterschiedliche Sensibilität haben, senden Spieler unter Umständen bei gleicher Entfernung verschieden laute Signale. In einem fertigen Produkt, sollte das Mikrofon dynamisch auf einen bestimmten Pegel normiert werden, bevor das Spiel beginnt. Solche Verfahren sind Standard bei VoIP Telefonen und könnten später leicht nachgerüstet werden. %http://www.sengpielaudio.com/Rechner-entfernung.htm
 
 \subsubsection{Audiocodec}
 In der sozialen Zone wird ein Audiocodec mit einer niedrigen Bitrate eingesetzt, um eine größere Anzahl an möglichen Mitspielern zu ermöglichen. In den Testszenarios habe ich mich für den Speex Codec mit einer Abtastrate von 16kHz und einer Bitrate von 11 Kb/s entschieden, der einen MOS Wert von über 4 liefert. Es ist natürlich vorstellbar auch qualitativ schlechtere Codecs mit einer noch geringeren Bitrate einzusetzen, um dem Spieler noch mehr Verbindungen zu ermöglichen. Diese Entscheidung kann in einem fertigen Produkt entweder dem Spieler selbst - bei einer manuellen Konfiguration - überlassen werden oder automatisch anhand der verfügbaren Bandbreite bestimmt werden. So könnten Spieler mit einer höheren Bandbreite auch ein besseres Audiosignal verbreiten, während Spieler mit einer schwachen Anbindung nur Codecs mit einer niedrigen Bitrate einsetzen könnten.
 
-\subsection{Private Zone}
+\subsection{Technische Vorgänge in der privaten Zone}
 
 \subsubsection{Lautstärke}
 In der privaten Zone A bleibt die Laut\-stärke der Teilnehmer konstant bei 100\%. Dies ermöglicht den Teilnehmern sich in einem kleinen Radius umeinander zu bewegen, unt trotzdem immer noch mit einer optimalen Lautstärke zu kommunizieren. 

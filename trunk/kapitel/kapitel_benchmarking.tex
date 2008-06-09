@@ -135,7 +135,7 @@ Anhand der gegebenen Beispiele und Messungen sieht man, dass in einer distanzbas
 %--> Müsste zeigen dass weniger Streams gemischt werden müssen und somit Last eingespart werden %kann. ( Wie messe ich das?)
 %MESSUNG: einfach nur die conference bridge messen.
 
-\section{Tests von SIP als Netzwerkschnittstelle}
+\section{SIP als Netzwerkschnittstelle}
 
 \begin{figure}
 	\centering
@@ -150,7 +150,7 @@ Um festzustellen, inwiefern die SIP-Abstraktionsebene die Netzwerk-Kommunikation
 
 Der Plot der RTT-Messung in Abbildung \ref{fig:rtt-chart} zeigt die gemessene RTT beim Versand von Über 6000 Nachrichten. Diese liegt im Durchschnitt bei 1-2 ms und weist auch Verzögerungen bis zu 13ms auf. Da die RTT in einem LAN üblicherweise 1ms beträgt\footnote{Christoph Lüders, Martin Winkler: Pingpong. in: c't. Hannover 2006,23, S.199. ISSN 07248679} liegt die Verzögerung durch den Einsatz von des SIP-Abstraktionslayers bei ca. 1 - 12 ms, was einen akzeptablen Wert darstellt.
 
-\section{Test der Conference-Bridge}
+\section{Conference-Bridge}
 Um zu Messen, wie sich die Conference Bridge beim Mischen verschiedener Audioströme verhält, wurde die CPU-Auslastung eines Mixers auf einem Athlon-Duo 4600+ Rechner mit 3GB RAM, gemessen. Dazu wurde die Conference Bridge verwendet, um künstlich erzeugte Sinus-Audiosignale zu mischen. Obwohl kein Encoding und Decoding verwendet wird, zeigt die Grafik\ref{cpu-chart}, dass bereits beim Einsatz von Resampling bei 32 Teilnehmern die Kapazitätsgrenze des Rechners erreicht wurde. Diese Messung stützt die Annahme aus Kapitel \ref{zentralansatz}, dass Mixing-Server zwar die entsprechende Bandbreite besitzen, um tausende von  Audioströmen entgegenzunehmen, jedoch praktisch aufgrund ihrer CPU-Kapazität nicht in der Lage sind in einer Konferenz so viele Audioströme zu mischen. 
 
 //INCLUDE GRAPHIC
