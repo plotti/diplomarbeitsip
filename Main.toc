@@ -1,10 +1,10 @@
 \select@language {english}
 \select@language {ngerman}
 \contentsline {chapter}{Zusammenfassung}{ii}
-\contentsline {chapter}{Stichwortverzeichnis}{vii}
-\contentsline {chapter}{Abbildungsverzeichnis}{viii}
-\contentsline {chapter}{Tabellenverzeichnis}{x}
-\contentsline {chapter}{Abk\"{u}rzungsverzeichnis}{xi}
+\contentsline {chapter}{Stichwortverzeichnis}{vi}
+\contentsline {chapter}{Abbildungsverzeichnis}{vii}
+\contentsline {chapter}{Tabellenverzeichnis}{ix}
+\contentsline {chapter}{Abk\"{u}rzungsverzeichnis}{x}
 \contentsline {chapter}{\numberline {1}Einf\"uhrung}{1}
 \contentsline {section}{\numberline {1.1}Motivation}{1}
 \contentsline {section}{\numberline {1.2}Ziel der Diplomarbeit}{3}
@@ -104,78 +104,70 @@
 \contentsline {subsubsection}{SIP-Clients}{67}
 \contentsline {subsubsection}{Pjsip}{67}
 \contentsline {section}{\numberline {7.4}Vorgehensweise bei der Implementierung des Prototypen}{68}
-\contentsline {subsection}{\numberline {7.4.1}Entwicklungsumgebung und Programmiersprache}{68}
+\contentsline {subsection}{\numberline {7.4.1}Programmiersprache und Testumgebung}{68}
 \contentsline {subsubsection}{Testumgebung}{68}
-\contentsline {section}{\numberline {7.5}3D-Spielewelt mit Irrlicht und Irrklang}{68}
-\contentsline {subsection}{\numberline {7.5.1}Irrlicht}{68}
+\contentsline {subsection}{\numberline {7.4.2}3D-Spielewelt mit Irrlicht}{68}
 \contentsline {subsubsection}{Initialisierung}{68}
 \contentsline {subsubsection}{Level}{69}
 \contentsline {subsubsection}{Steuerung}{69}
 \contentsline {subsubsection}{Radar}{70}
-\contentsline {subsection}{\numberline {7.5.2}Irrklang}{70}
 \contentsline {subsubsection}{Lokale Audioszene}{70}
-\contentsline {section}{\numberline {7.6}PjSIP-VoIP-Instanz}{70}
-\contentsline {subsection}{\numberline {7.6.1}Signalisierung mit PJSUA}{70}
-\contentsline {subsection}{\numberline {7.6.2}Medienfluss}{71}
-\contentsline {section}{\numberline {7.7}Zusammenarbeit von Irrlicht und VoIP}{71}
-\contentsline {subsection}{\numberline {7.7.1}Aktualisierung der VoIP Instanz}{71}
-\contentsline {subsection}{\numberline {7.7.2}Buddy Konzept}{72}
-\contentsline {subsection}{\numberline {7.7.3}Conference-Bridge}{72}
-\contentsline {subsection}{\numberline {7.7.4}Erweitertes Audio-Mixing}{73}
-\contentsline {section}{\numberline {7.8}Spielablauf}{74}
-\contentsline {subsection}{\numberline {7.8.1}Registrierung}{74}
-\contentsline {subsection}{\numberline {7.8.2}Spieler startet das Spiel}{74}
-\contentsline {subsection}{\numberline {7.8.3}Neuer Spieler betritt das Spiel}{74}
-\contentsline {subsection}{\numberline {7.8.4}Spieler bewegt sich im Spiel}{75}
-\contentsline {subsection}{\numberline {7.8.5}Spieler beendet sein Spiel}{75}
-\contentsline {subsection}{\numberline {7.8.6}Verbindungsaufbau}{75}
-\contentsline {subsubsection}{Das Problem der doppelten Verbindung}{76}
-\contentsline {subsection}{\numberline {7.8.7}Verbindungsabbau}{77}
-\contentsline {section}{\numberline {7.9}Zonen}{77}
-\contentsline {subsection}{\numberline {7.9.1}\"Offentliche Zone}{77}
-\contentsline {subsubsection}{Eingang und Verlassen der \"Offentlichen Zone}{79}
-\contentsline {subsubsection}{RTP - Silence Supression}{79}
-\contentsline {subsubsection}{SIP - HOLD}{79}
-\contentsline {subsection}{\numberline {7.9.2}Soziale Zone}{80}
-\contentsline {subsubsection}{Lautst\"arkenanpassung}{81}
-\contentsline {subsubsection}{Audiocodec}{81}
-\contentsline {subsection}{\numberline {7.9.3}Private Zone}{81}
+\contentsline {subsection}{\numberline {7.4.3}VoIP-Instanz mit PjSIP}{70}
+\contentsline {subsubsection}{Medienfluss}{70}
+\contentsline {subsection}{\numberline {7.4.4}Zusammenarbeit von Irrlicht und PjSIP}{71}
+\contentsline {subsubsection}{Start des Spiels}{71}
+\contentsline {subsubsection}{W\"ahrend des Spiels}{72}
+\contentsline {subsubsection}{Verbindungsaufbau}{73}
+\contentsline {subsubsection}{Das Problem der doppelten Verbindung}{73}
+\contentsline {subsubsection}{Verbindungsabbau}{75}
+\contentsline {subsubsection}{Beenden des Spiels}{75}
+\contentsline {section}{\numberline {7.5}Umsetzung des Mehrkanalmodells}{75}
+\contentsline {section}{\numberline {7.6}Umsetzung der Methapher der Luft\"ubertragung}{75}
+\contentsline {subsection}{\numberline {7.6.1}Erweitertes Mixing-Konzept}{75}
+\contentsline {subsection}{\numberline {7.6.2}Erweiterte Conference-Bridge}{76}
+\contentsline {section}{\numberline {7.7}Umsetzung des Proxemikkonzepts}{77}
+\contentsline {subsection}{\numberline {7.7.1}Technische Vorg\"ange in der \"offentliche Zone}{77}
+\contentsline {subsubsection}{RTP - Silence Supression}{77}
+\contentsline {subsubsection}{SIP-Hold-Funktion}{79}
+\contentsline {subsection}{\numberline {7.7.2}Technische Vorg\"ange in der sozialen Zone}{79}
+\contentsline {subsubsection}{Audiocodec}{80}
+\contentsline {subsection}{\numberline {7.7.3}Technische Vorg\"ange in der privaten Zone}{81}
 \contentsline {subsubsection}{Lautst\"arke}{81}
-\contentsline {subsubsection}{Audiocodec}{82}
-\contentsline {section}{\numberline {7.10}PTSN-Netzwerke}{82}
-\contentsline {chapter}{\numberline {8}SIP als Netzwerkschicht f\"ur Mehrspieler-Computerspiele}{83}
-\contentsline {section}{\numberline {8.1}Anforderungen an Netzwerkarchitekturen}{83}
-\contentsline {section}{\numberline {8.2}Client-Server-Architektur in Netzwerkspielen}{84}
-\contentsline {section}{\numberline {8.3}Implementierung einer Client-Server Architektur mit SIP}{85}
-\contentsline {subsection}{\numberline {8.3.1}SIP SIMPLE Protokoll}{86}
-\contentsline {subsubsection}{Nachrichtendienst}{86}
-\contentsline {subsubsection}{Pr\"asenzdienst}{87}
-\contentsline {subsection}{\numberline {8.3.2}Skalierbarkeit}{88}
-\contentsline {section}{\numberline {8.4}Hybride Systeme}{88}
-\contentsline {section}{\numberline {8.5}Peer-to-Peer in Netzwerkspielen}{89}
-\contentsline {section}{\numberline {8.6}SIP in Unstrukturierten P2P-Systemen}{89}
-\contentsline {section}{\numberline {8.7}SIP in Strukturierten P2P-Systemen}{90}
-\contentsline {subsection}{\numberline {8.7.1}Peer-to-Peer-SIP}{91}
-\contentsline {subsection}{\numberline {8.7.2}Funktionsweise}{92}
-\contentsline {subsubsection}{Registrierung}{92}
-\contentsline {subsubsection}{Aufbau einer Verbindung}{93}
-\contentsline {subsection}{\numberline {8.7.3}Architektur Variationen}{94}
-\contentsline {chapter}{\numberline {9}Evaluation}{95}
-\contentsline {section}{\numberline {9.1}Versuchsaufbau}{95}
-\contentsline {subsection}{\numberline {9.1.1}Header-Overhead}{95}
-\contentsline {subsection}{\numberline {9.1.2}Aktive Silence Supression}{96}
-\contentsline {section}{\numberline {9.2}Full-Mesh vs. Partial-Mesh Szenario}{96}
-\contentsline {subsection}{\numberline {9.2.1}Full-Mesh}{97}
-\contentsline {subsection}{\numberline {9.2.2}Partial-Mesh}{97}
-\contentsline {section}{\numberline {9.3}Zonenkonzepte}{99}
-\contentsline {subsection}{\numberline {9.3.1}Ohne Zonen-Unterscheidung}{99}
-\contentsline {subsection}{\numberline {9.3.2}Zonen mit RTP Silence Supression}{100}
-\contentsline {subsection}{\numberline {9.3.3}Zonen mit SIP-Hold}{100}
-\contentsline {subsection}{\numberline {9.3.4}Zonen mit unterschiedlichen Audiocodecs}{100}
-\contentsline {section}{\numberline {9.4}Tests von SIP als Netzwerkschnittstelle}{101}
-\contentsline {section}{\numberline {9.5}Test der Conference-Bridge}{102}
-\contentsline {chapter}{\numberline {10}Fazit und Ausblick}{103}
-\contentsline {section}{\numberline {10.1}Fazit}{103}
-\contentsline {section}{\numberline {10.2}Ausblick}{104}
-\contentsline {chapter}{Anhang}{108}
-\contentsline {chapter}{Literaturverzeichnis}{112}
+\contentsline {subsubsection}{Audiocodec}{81}
+\contentsline {section}{\numberline {7.8}PTSN-Netzwerke}{81}
+\contentsline {chapter}{\numberline {8}SIP als Netzwerkschicht f\"ur Mehrspieler-Computerspiele}{82}
+\contentsline {section}{\numberline {8.1}Anforderungen an Netzwerkarchitekturen}{82}
+\contentsline {section}{\numberline {8.2}Client-Server-Architektur in Netzwerkspielen}{83}
+\contentsline {section}{\numberline {8.3}Implementierung einer Client-Server Architektur mit SIP}{84}
+\contentsline {subsection}{\numberline {8.3.1}SIP SIMPLE Protokoll}{85}
+\contentsline {subsubsection}{Nachrichtendienst}{85}
+\contentsline {subsubsection}{Pr\"asenzdienst}{86}
+\contentsline {subsection}{\numberline {8.3.2}Skalierbarkeit}{87}
+\contentsline {section}{\numberline {8.4}Hybride Systeme}{87}
+\contentsline {section}{\numberline {8.5}Peer-to-Peer in Netzwerkspielen}{88}
+\contentsline {section}{\numberline {8.6}SIP in Unstrukturierten P2P-Systemen}{88}
+\contentsline {section}{\numberline {8.7}SIP in Strukturierten P2P-Systemen}{89}
+\contentsline {subsection}{\numberline {8.7.1}Peer-to-Peer-SIP}{90}
+\contentsline {subsection}{\numberline {8.7.2}Funktionsweise}{91}
+\contentsline {subsubsection}{Registrierung}{91}
+\contentsline {subsubsection}{Aufbau einer Verbindung}{92}
+\contentsline {subsection}{\numberline {8.7.3}Architektur Variationen}{93}
+\contentsline {chapter}{\numberline {9}Evaluation}{94}
+\contentsline {section}{\numberline {9.1}Versuchsaufbau}{94}
+\contentsline {subsection}{\numberline {9.1.1}Header-Overhead}{94}
+\contentsline {subsection}{\numberline {9.1.2}Aktive Silence Supression}{95}
+\contentsline {section}{\numberline {9.2}Full-Mesh vs. Partial-Mesh Szenario}{95}
+\contentsline {subsection}{\numberline {9.2.1}Full-Mesh}{96}
+\contentsline {subsection}{\numberline {9.2.2}Partial-Mesh}{96}
+\contentsline {section}{\numberline {9.3}Zonenkonzepte}{98}
+\contentsline {subsection}{\numberline {9.3.1}Ohne Zonen-Unterscheidung}{98}
+\contentsline {subsection}{\numberline {9.3.2}Zonen mit RTP Silence Supression}{99}
+\contentsline {subsection}{\numberline {9.3.3}Zonen mit SIP-Hold}{99}
+\contentsline {subsection}{\numberline {9.3.4}Zonen mit unterschiedlichen Audiocodecs}{99}
+\contentsline {section}{\numberline {9.4}SIP als Netzwerkschnittstelle}{100}
+\contentsline {section}{\numberline {9.5}Conference-Bridge}{101}
+\contentsline {chapter}{\numberline {10}Fazit und Ausblick}{102}
+\contentsline {section}{\numberline {10.1}Fazit}{102}
+\contentsline {section}{\numberline {10.2}Ausblick}{103}
+\contentsline {chapter}{Anhang}{107}
+\contentsline {chapter}{Literaturverzeichnis}{111}

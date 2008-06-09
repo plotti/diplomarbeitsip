@@ -225,7 +225,7 @@ Im RFC 3261 werden ebenfalls sechs Response-Klassen spezifiziert, die dem Absend
 
 \subsection{Betriebsarten bei SIP}
 \subsubsection{Rufaufbau, Verbindung, Rufabbau}
-
+\label{rufaufbau}
 % Grafik über Rufaufbau
 
 Teilnehmer A möchte zu Teilnehmer B eine Verbindung herstellen. Dazu sendet er eine SIP-Nachricht INVITE an Teilnehmer B. Die Nachricht enthält die Beschreibung der RTP-Session nach dem SDP-Protokoll und alle notwendigen Angaben, wie z.B. die Sprachkodierung, damit Teilnehmer B prüfen kann, ob eine Session hergestellt werden kann. Falls Teilnehmer B die Verbindung annehmen kann, klingelt das angerufene IP-Telefon von Teilnehmer B, dies wird mit der SIP-Response 180 Ringing signalisiert. 
@@ -239,7 +239,7 @@ Die bestehende RTP-Session kann von beiden Seiten beendet werden. Beendet Teilne
 \end{figure}
 
 \subsubsection{Registrierung der Lokation von Teilnehmern}
-
+\label{sip-register}
 \begin{figure}[ht]
 	\centering
 		\includegraphics[width=1.00\textwidth]{grafiken/sipanrufmitproxy.eps}
