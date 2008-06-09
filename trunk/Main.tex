@@ -81,7 +81,9 @@
 \selectlanguage{ngerman} %deutsche Silbentrennung
 \frontmatter      % vorspann, kapitel r{\"o}misch nummeriert
 
-\include{kapitel/titel}     % titelseite einbinden
+\include{kapitel/titel}        % titelseite einbinden
+\newpage\thispagestyle{empty}~ % Seite 2 (links leer) bis auf ein Leerzeichen			
+\cleardoublepage
 \include{kapitel/abstract}  % Abstract
 \tableofcontents            % inhaltsverzeichnis
 \include{kapitel/stichwortverzeichnis}  % Stichwortverzeichnis

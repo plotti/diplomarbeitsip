@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592-1.40.4 (MiKTeX 2.7) (preloaded format=latex 2008.3.17)  9 JUN 2008 15:24
+This is pdfTeX, Version 3.141592-1.40.4 (MiKTeX 2.7) (preloaded format=latex 2008.3.17)  9 JUN 2008 18:16
 entering extended mode
 **Main.tex
 (Main.tex
@@ -440,12 +440,14 @@ File: grafiken/unilogo.eps Graphic file (type eps)
 
 
 
-]) (kapitel/abstract.tex) [2
+]) [2
+
+] (kapitel/abstract.tex)
+[3
 
 
 
-]
-(Main.toc
+] (Main.toc
 Class scrbook Info: You've told me to use the font selection of the element
 (scrbook)           `sectioning' that is an alias of element `disposition'
 (scrbook)            on input line 3.
@@ -473,7 +475,7 @@ Class scrbook Info: You've told me to use the font selection of the element
 Class scrbook Info: You've told me to use the font selection of the element
 (scrbook)           `sectioning' that is an alias of element `disposition'
 (scrbook)            on input line 28.
- [3
+ [4
 
 
 ]
@@ -488,27 +490,27 @@ Class scrbook Info: You've told me to use the font selection of the element
 (scrbook)            on input line 91.
 Class scrbook Info: You've told me to use the font selection of the element
 (scrbook)           `sectioning' that is an alias of element `disposition'
-(scrbook)            on input line 138.
- [4]
+(scrbook)            on input line 137.
+ [5]
 Class scrbook Info: You've told me to use the font selection of the element
 (scrbook)           `sectioning' that is an alias of element `disposition'
-(scrbook)            on input line 155.
+(scrbook)            on input line 154.
 Class scrbook Info: You've told me to use the font selection of the element
 (scrbook)           `sectioning' that is an alias of element `disposition'
-(scrbook)            on input line 169.
+(scrbook)            on input line 168.
+Class scrbook Info: You've told me to use the font selection of the element
+(scrbook)           `sectioning' that is an alias of element `disposition'
+(scrbook)            on input line 171.
 Class scrbook Info: You've told me to use the font selection of the element
 (scrbook)           `sectioning' that is an alias of element `disposition'
 (scrbook)            on input line 172.
-Class scrbook Info: You've told me to use the font selection of the element
-(scrbook)           `sectioning' that is an alias of element `disposition'
-(scrbook)            on input line 173.
 )
 \tf@toc=\write3
- [5] (kapitel/stichwortverzeichnis.tex) [6
+ [6] (kapitel/stichwortverzeichnis.tex) [7
 
 
 ] (Main.lof
-[7
+[8
 
 
 ]
@@ -544,14 +546,14 @@ If that doesn't work, type  X <return>  to quit.
 
 )
 \tf@lof=\write4
- [8] (Main.lot)
+ [9] (Main.lot)
 \tf@lot=\write5
- [9
+ [10
 
-] (kapitel/abkuerzungen.tex [10
+] (kapitel/abkuerzungen.tex [11
 
 
-]) [11]
+]) [12]
 (kapitel/einleitung.tex
 Kapitel 1.
 
@@ -586,6 +588,7 @@ File: grafiken/kommunikationsmodell-schramm-weaver.eps Graphic file (type eps)
 
 
 
+
 ]
 File: grafiken/mediarichness.eps Graphic file (type eps)
 
@@ -598,10 +601,11 @@ Kapitel 3.
 
 
 
+
 ] [10]
 File: grafiken/ventrillo.eps Graphic file (type eps)
  <grafiken/ventrillo.eps> [11]
-Overfull \hbox (9.64766pt too wide) in paragraph at lines 45--46
+Overfull \hbox (9.64766pt too wide) in paragraph at lines 46--47
 \OT1/cmr/m/n/10.95 Text-kom-mu-ni-ka-ti-on einen ho-hen tech-ni-schen Auf-wand 
 ben[]otigt, um sie []uberhaupt
  []
@@ -611,13 +615,13 @@ File: grafiken/singlekanal-kommunikationsmodell.eps Graphic file (type eps)
 File: grafiken/multi-kommunikationsmodell.eps Graphic file (type eps)
 
 <grafiken/multi-kommunikationsmodell.eps> [13]
-Overfull \hbox (11.33716pt too wide) in paragraph at lines 105--106
+Overfull \hbox (11.33716pt too wide) in paragraph at lines 106--107
 [][]\OT1/cmr/bx/n/10.95 Quadratisch an-stei-gen-der Band-brei-ten-ver-brauch\OT
 1/cmr/m/n/10.95 : Da der Au-diostrom
  []
 
 [14]
-Overfull \hbox (4.70616pt too wide) in paragraph at lines 117--118
+Overfull \hbox (4.70616pt too wide) in paragraph at lines 118--119
 [][]\OT1/cmr/bx/n/10.95 Festnetztelefon\OT1/cmr/m/n/10.95 : Die Sprach[]ubertra
 gung kann nur an be-stimm-ten Pl[]atzen
  []
@@ -630,90 +634,85 @@ Kapitel 4.
 
 
 
+
 ]
 File: grafiken/voipprotokolle.eps Graphic file (type eps)
  <grafiken/voipprotokolle.eps> [19]
 
-LaTeX Warning: Reference `pt-tabelle' on page 20 undefined on input line 48.
+LaTeX Warning: Reference `pt-tabelle' on page 20 undefined on input line 49.
 
 [20]
-Underfull \hbox (badness 1721) in paragraph at lines 80--81
+Underfull \hbox (badness 1721) in paragraph at lines 81--82
 []\OT1/cmr/m/n/10.95 keinerlei An-stren-gung zum Verst[]andnis der
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 80--81
+Underfull \hbox (badness 10000) in paragraph at lines 81--82
 \OT1/cmr/m/n/10.95 Spra-che not-wen-dig; to-ta-le Ent-span-nung
  []
 
-
-LaTeX Warning: Reference `pt-tabelle' on page 21 undefined on input line 95.
-
 [21]
 
-Package caption Warning: \label before \caption ignored on input line 102.
+LaTeX Warning: Reference `pt-tabelle' on page 22 undefined on input line 97.
+
+
+Package caption Warning: \label before \caption ignored on input line 104.
 See the caption package documentation for explanation.
 
 [22]
 
-Package caption Warning: \label before \caption ignored on input line 157.
+Package caption Warning: \label before \caption ignored on input line 159.
 See the caption package documentation for explanation.
 
-
-Overfull \hbox (12.68327pt too wide) in paragraph at lines 173--174
-\OT1/cmr/m/n/10.95 Request-Typs z.B. IN-VI-TE, ei-ner \OT1/cmr/m/it/10.95 Reque
-st-URI\OT1/cmr/m/n/10.95 (z.B. sip:8495302002@192.168.2.25)
- []
-
 [23]
-LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 186.
-
-Overfull \hbox (0.27795pt too wide) in paragraph at lines 186--187
-\OT1/cmr/m/n/10 Nach-richt enth[]alt die SIP-Adresse von bei-den Teil-neh-mern,
- einen Grund(Subject)
+Overfull \hbox (1.13945pt too wide) in paragraph at lines 175--176
+\OT1/cmr/m/n/10.95 Request-Typs z. B. IN-VI-TE, ei-ner \OT1/cmr/m/it/10.95 Requ
+est-URI\OT1/cmr/m/n/10.95 (z. B. sip:8302002@192.168.2.25)
  []
 
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 188.
 [24] [25]
 File: grafiken/sipanruf.eps Graphic file (type eps)
  <grafiken/sipanruf.eps>
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
 File: grafiken/sipanrufmitproxy.eps Graphic file (type eps)
- <grafiken/sipanrufmitproxy.eps> [26]
-Overfull \hbox (11.02615pt too wide) in paragraph at lines 259--260
-[]\OT1/cmr/m/n/10.95 Als In-stant Mes-sa-ging wird im All-ge-mei-nen ein Dienst
- zur so-for-ti-gen []Ubermittlung
- []
+<grafiken/sipanrufmitproxy.eps>
 
+LaTeX Warning: `h' float specifier changed to `ht'.
 
-Overfull \hbox (5.56209pt too wide) in paragraph at lines 259--260
-\OT1/cmr/m/n/10.95 ren vie-le pro-priet[]are Pro-to-kol-le wie IRC(Internet Re-
-lay Chat), XMPP(Extensible
- []
-
-[27]
+[26] [27]
 File: grafiken/sipmessage.eps Graphic file (type eps)
  <grafiken/sipmessage.eps>
-File: grafiken/sippresence.eps Graphic file (type eps)
- <grafiken/sippresence.eps> [28]
 
-Package caption Warning: \label before \caption ignored on input line 302.
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: grafiken/sippresence.eps Graphic file (type eps)
+<grafiken/sippresence.eps>
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[28]
+
+Package caption Warning: \label before \caption ignored on input line 312.
 See the caption package documentation for explanation.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-LaTeX Warning: Reference `pt-tabelle' on page 29 undefined on input line 335.
+LaTeX Warning: Reference `pt-tabelle' on page 29 undefined on input line 345.
 
 [29]
 File: grafiken/rtppaket.eps Graphic file (type eps)
- <grafiken/rtppaket.eps>
+ <grafiken/rtppaket.eps> [30]
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[30]
 
-LaTeX Warning: Reference `pt-tabelle' on page 31 undefined on input line 373.
+LaTeX Warning: Reference `pt-tabelle' on page 31 undefined on input line 383.
 
 [31] [32]
 File: grafiken/stun.eps Graphic file (type eps)
@@ -727,9 +726,11 @@ Kapitel 5.
 
 
 
+
 ] [38] [39] [40]) [41] (kapitel/kapitel_konstruktion.tex
 Kapitel 6.
 [42
+
 
 
 
@@ -746,86 +747,86 @@ File: grafiken/entwurf-verteilteserver.eps Graphic file (type eps)
 [47] [48]
 
 LaTeX Warning: Reference `audiodatenmatrix' on page 49 undefined on input line 
-146.
+147.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 153--153
+Underfull \hbox (badness 10000) in paragraph at lines 154--154
 []\OT1/cmr/m/n/10.95 ($\OML/cmm/m/it/10.95 A[]$\OT1/cmr/m/n/10.95 ) Client-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 153--153
+Underfull \hbox (badness 10000) in paragraph at lines 154--154
 \OT1/cmr/m/n/10.95 Server
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 153--153
+Underfull \hbox (badness 10000) in paragraph at lines 154--154
 []\OT1/cmr/m/n/10.95 ($\OML/cmm/m/it/10.95 A[]$\OT1/cmr/m/n/10.95 ) Ein
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 153--153
+Underfull \hbox (badness 10000) in paragraph at lines 154--154
 \OT1/cmr/m/n/10.95 Au-dio-ser-ver
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 153--153
+Underfull \hbox (badness 10000) in paragraph at lines 154--154
 \OT1/cmr/m/n/10.95 und meh-re-re
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 155--155
+Underfull \hbox (badness 10000) in paragraph at lines 156--156
 []\OT1/cmr/m/n/10.95 ($\OML/cmm/m/it/10.95 A[]$\OT1/cmr/m/n/10.95 ) Zen-tra-ler
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 155--155
+Underfull \hbox (badness 10000) in paragraph at lines 156--156
 \OT1/cmr/m/n/10.95 Ser-ver mit
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 155--155
+Underfull \hbox (badness 10000) in paragraph at lines 156--156
 \OT1/cmr/m/n/10.95 meh-re-ren
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 155--155
+Underfull \hbox (badness 10000) in paragraph at lines 156--156
 \OT1/cmr/m/n/10.95 de-di-zier-ten
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 155--155
+Underfull \hbox (badness 10000) in paragraph at lines 156--156
 []\OT1/cmr/m/n/10.95 ($\OML/cmm/m/it/10.95 A[]$\OT1/cmr/m/n/10.95 ) Su-per-no-
  []
 
 
-Underfull \hbox (badness 8038) in paragraph at lines 157--157
+Underfull \hbox (badness 8038) in paragraph at lines 158--158
 \OT1/cmr/m/n/10.95 zen-tra-lem Ser-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 157--157
+Underfull \hbox (badness 10000) in paragraph at lines 158--158
 []\OT1/cmr/m/n/10.95 ($\OML/cmm/m/it/10.95 A[]$\OT1/cmr/m/n/10.95 ) VoIP
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 157--157
+Underfull \hbox (badness 10000) in paragraph at lines 158--158
 \OT1/cmr/m/n/10.95 mit ver-teil-ten
  []
 
 
-Underfull \hbox (badness 3514) in paragraph at lines 157--158
+Underfull \hbox (badness 3514) in paragraph at lines 158--159
 []\OT1/cmr/m/n/10.95 ($\OML/cmm/m/it/10.95 A[]$\OT1/cmr/m/n/10.95 ) Kom-plett
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 157--158
+Underfull \hbox (badness 10000) in paragraph at lines 158--159
 \OT1/cmr/m/n/10.95 de-zen-tra-le
  []
 
 
-Package caption Warning: \label before \caption ignored on input line 160.
+Package caption Warning: \label before \caption ignored on input line 161.
 See the caption package documentation for explanation.
 
 [49] [50]
@@ -833,7 +834,7 @@ File: grafiken/archp2p.eps Graphic file (type eps)
  <grafiken/archp2p.eps> [51] [52]
 File: grafiken/archzentral.eps Graphic file (type eps)
  <grafiken/archzentral.eps> [53]
-Underfull \hbox (badness 10000) in paragraph at lines 265--265
+Underfull \hbox (badness 10000) in paragraph at lines 266--266
 [][]\OT1/cmr/m/n/9 Patentfreies Audio-Kompressions-Format (Xiph OSC) , Ver-si-o
 n 22.03.2008,
  []
@@ -841,7 +842,7 @@ n 22.03.2008,
 [54]
 File: grafiken/archverteilt.eps Graphic file (type eps)
  <grafiken/archverteilt.eps> [55]
-Overfull \hbox (3.15785pt too wide) in paragraph at lines 295--296
+Overfull \hbox (3.15785pt too wide) in paragraph at lines 296--297
 [][]\OT1/cmr/m/n/10.95 Dieses Mo-dell hat je-doch ei-ni-ge Nach-tei-le: Vor al-
 lem beim Ein-satz von Superpeer-
  []
@@ -855,14 +856,15 @@ File: grafiken/spielgenredreieck.eps Graphic file (type eps)
 
 
 
+
 ] [62] [63] [64]
-Overfull \hbox (26.41312pt too wide) in paragraph at lines 75--76
+Overfull \hbox (26.41312pt too wide) in paragraph at lines 76--77
 []\OT1/cmr/m/n/10.95 Als letz-te Al-ter-na-ti-ve exis-tie-ren Peer-to-Peer Pro-
 gram-me wie \OT1/cmr/m/it/10.95 Microsoft-Netmeeting[]\OT1/cmr/m/n/10.95 ,
  []
 
 [65] [66]
-Overfull \hbox (4.13197pt too wide) in paragraph at lines 114--115
+Overfull \hbox (4.13197pt too wide) in paragraph at lines 115--116
 [][]\OT1/cmr/m/n/10.95 Unterst[]utzung mo-der-ner Au-dio-co-decs wie z.B. \OT1/
 cmr/m/it/10.95 Spe-ex \OT1/cmr/m/n/10.95 (PJMEDIA-CODEC) 
  []
@@ -892,12 +894,13 @@ Kapitel 8.
 
 
 
+
 ] [83]
 File: grafiken/sip-client-server.eps Graphic file (type eps)
  <grafiken/sip-client-server.eps> [84] [85] [86]
 
 LaTeX Warning: Reference `mehrereregistrare' on page 87 undefined on input line
- 90.
+ 91.
 
 [87]
 File: grafiken/sip-unstrukturiert.eps Graphic file (type eps)
@@ -915,12 +918,13 @@ File: grafiken/p2psipcall.eps Graphic file (type eps)
 [92]) [93] (kapitel/kapitel_benchmarking.tex
 Kapitel 9.
 
-Underfull \hbox (badness 10000) in paragraph at lines 12--12
+Underfull \hbox (badness 10000) in paragraph at lines 13--13
 [][]\OT1/cmr/m/n/9 Speex Co-dec Qua-li-ty Com-pa-ri-son (Xiph OSC) , Ver-si-on 
 22.03.2008,
  []
 
 [94
+
 
 
 
@@ -932,7 +936,7 @@ See the caption package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.35 \subfloat
+l.36 \subfloat
               [Full-Mesh-Ansatz]{
 If you do not understand this error, please take a closer look
 at the documentation of the `caption' package, especially the
@@ -949,7 +953,7 @@ See the caption package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.39 \subfloat
+l.40 \subfloat
               [Partial-Mesh-Ansatz]{
 If you do not understand this error, please take a closer look
 at the documentation of the `caption' package, especially the
@@ -959,19 +963,19 @@ If that doesn't work, type  X <return>  to quit.
 
 File: grafiken/partialmesh.eps Graphic file (type eps)
 <grafiken/partialmesh.eps>
-Overfull \hbox (14.59998pt too wide) in paragraph at lines 38--43
+Overfull \hbox (14.59998pt too wide) in paragraph at lines 39--44
  [][][] 
  []
 
 [95]
-Overfull \hbox (3.36963pt too wide) in paragraph at lines 58--59
+Overfull \hbox (3.36963pt too wide) in paragraph at lines 59--60
 [][]\OT1/cmr/m/n/10.95 Abbildung 9.2[] zeigt den Band-brei-ten-ver-brauch von T
 eil-neh-mer 1 in Abh[]angigkeit
  []
 
 File: grafiken/fullmeshchart.eps Graphic file (type eps)
 <grafiken/fullmeshchart.eps> [96]
-Overfull \hbox (3.36963pt too wide) in paragraph at lines 81--82
+Overfull \hbox (3.36963pt too wide) in paragraph at lines 82--83
 [][]\OT1/cmr/m/n/10.95 Abbildung 9.3[] zeigt den Band-brei-ten-ver-brauch von T
 eil-neh-mer 1 in Abh[]angigkeit
  []
@@ -979,20 +983,20 @@ eil-neh-mer 1 in Abh[]angigkeit
 File: grafiken/partialmeshchart.eps Graphic file (type eps)
 <grafiken/partialmeshchart.eps> [97] [98]
 
-LaTeX Warning: Reference `fig:VADRTPSIP' on page 99 undefined on input line 109
+LaTeX Warning: Reference `fig:VADRTPSIP' on page 99 undefined on input line 110
 .
 
 [99]
 File: grafiken/rtt-chart.eps Graphic file (type eps)
  <grafiken/rtt-chart.eps>
-Overfull \hbox (23.44711pt too wide) in paragraph at lines 149--150
+Overfull \hbox (23.44711pt too wide) in paragraph at lines 150--151
 [][]\OT1/cmr/m/n/10.95 Um fest-zu-stel-len, in-wie-fern die SIP-Abstraktionsebe
 ne die Netzwerk-Kommunikation
  []
 
 [100]
 
-LaTeX Warning: Reference `cpu-chart' on page 101 undefined on input line 154.
+LaTeX Warning: Reference `cpu-chart' on page 101 undefined on input line 155.
 
 ) [101] (kapitel/kapitel_conclusion.tex
 Kapitel 10.
@@ -1000,14 +1004,15 @@ Kapitel 10.
 
 
 
+
 ]
-Overfull \hbox (5.86505pt too wide) in paragraph at lines 23--24
+Overfull \hbox (5.86505pt too wide) in paragraph at lines 24--25
 [][]\OT1/cmr/m/n/10.95 Das in die-ser Ar-beit vor-ge-stell-te Kon-zept greift v
 ie-le bis-he-ri-ge Un-zul[]anglichkeiten
  []
 
 [103]
-Overfull \hbox (6.23001pt too wide) in paragraph at lines 29--30
+Overfull \hbox (6.23001pt too wide) in paragraph at lines 30--31
 [][]\OT1/cmr/m/n/10.95 Obwohl zwar meh-re-re Sprach-kom-mu-ni-ka-ti-onsl[]osung
 en auf Ba-sis von pro-pri[]ateren
  []
@@ -1103,4 +1108,4 @@ Here is how much of TeX's memory you used:
  14 hyphenation exceptions out of 8191
  38i,17n,47p,1501b,1122s stack positions out of 5000i,500n,10000p,200000b,5000s
 
-Output written on Main.dvi (130 pages, 479232 bytes).
+Output written on Main.dvi (131 pages, 480408 bytes).

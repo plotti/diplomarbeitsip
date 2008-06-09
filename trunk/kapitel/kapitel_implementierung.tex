@@ -1,3 +1,4 @@
+\cleardoublepage
 \chapter{Implementierung des Spiel-Prototypen}
 
 Dieses Kapitel befasst sich mit der Implementierung des Spiel-Prototypen mit distanzbasierter integrierter Sprachkommunikation auf Basis eines hybriden SIP Multi-unicast-Ansatzes in einer 3D-Umgebung und präsentiert ausgewählte Details und Probleme bei der Umsetzung. Hauptaugenmerk liegt dabei auf der technischen Umsetzung der in \textit{Kapitel3} vorgestellten distanzbasierten Sprachkommunikation, dem Einfluss der Zonenkonzepte auf die verwendete Bandbreite, und der Zusammenarbeit des 3D-Frameworks mit der VoIP-Anwendung.
@@ -71,7 +72,7 @@ Wie sich jedoch beim Versuch einer Implementierung zeigte sind in der kostenlose
 
 Zudem ist über die Technik, die von der Skype-Anwendung verwendet wird, nicht viel bekannt, da die gesamte Kommunikation per AES mit 256 Bit verschlüsselt wird. Dies erlaubt keine direkte Analyse des Audiostroms und auch nur den Einsatz der Originalsoftware. Somit bietet \textit{Skype} als einziger tatsächlicher dezentralisierter Client nicht alle Eigenschaften, um als mögliche Ausgangsgrundlage zu dienen. 
 
-\subsubsection{Instant Messaging Anwendungen}
+\subsubsection{Instant-Messaging-Anwendungen}
 Als letzte Alternative existieren Peer-to-Peer Programme wie \textit{Microsoft-Netmeeting}\footnote{Microsoft, Version 20.03.2008, http://de.wikipedia.org/wiki/NetMeeting}, \textit{Microsoft-Messenger}\footnote{Microsoft, Version 20.03.2008, http://messenger.live.com} oder \textit{Google Talk}\footnote{Google, Version 20.03.2008, http://www.google.com/talk} nicht modifizierbar und bieten nur sehr eingeschränkte Konferenzmöglichkeiten. 
 
 Die Abstraktionsstuffe von existierenden VoIP Lösungen ist bereits zu sehr auf die Funktion der Programme als Softphones ausgelegt und so bietet deren API, falls vorhanden, nicht genügend Kontrolle über die einzelnen Audioströme. Deshalb wurde der Entschluss getroffen VoIP-Protokollstapel einzusetzen, um eine eigene Lösung zu entwickeln. 
