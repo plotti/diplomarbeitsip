@@ -8,7 +8,7 @@ Konzepte zu entwickeln. Diese sehen die Entwicklung einer integrierten Sprach-
 kommunikation vor, die die Metapher einer Luftübertragung von Sprache nutzt,
 um eine distanzbasierte Sprachkommunikation zu erlauben. Es wird erläutert,
 wie die Konzepte der Proxemik aus Kapitel 2 zur Steuerung von mehreren
-Sprachübertragnungskanälen genutzt werden und eine gleichzeitige interpersonellen und Massenkommunikation erlauben. 
+Sprachübertragnungskanälen genutzt werden und eine gleichzeitige interpersonelle und Massenkommunikation erlauben. 
 
 \section{Probleme bisheriger Lösungen}
 \label{sprachprobleme}
@@ -24,8 +24,7 @@ Um vorab zu bestimmen, wie Sprache zwischen Spielern benutzt wird, wurden 8 Spie
 \subsubsection{Probleme eines einzigen Übertragungskanals}
 Anschließend spielten die gleichen Spieler wieder Mehrspieler-Spiele gegeneinander, befanden jedoch jeweils an anderen Orten und sollten sich mit Hilfe der vorhandenen Sprachkommunikationslösungen miteinander unterhalten. Dabei wurden sie über mehrere Stunden aufgezeichnet. Die Analyse ergab diesmal eine leisere und geringere Sprachkommunikation, bei der sich die Spieler mehr auf das Spiel konzentrierten und oft nur aufgabenorientierte Informationen austauschten. Die geringere Intensität wurde hauptsächlich auf technische Einschränkungen zurückgeführt: Vor allem die Tatsache, dass im \textit{Xbox Live} System nur ein Kanal für mehrere Spieler zur Verfügung steht wurde von den Teilnehmern bemängelt. Da bereits eine Kollision von 2 gleichzeitigen Sprachübertragungen ausreicht, um nicht mehr verstanden zu werden, unterliegt ein solcher Sprachkanal implizit einer starken Reglementierung und wird von einzelnen Spielern meist nur zur Koordination der Gruppe benutzt. Interpersonelle Gespräche sind somit auf diesen Kanälen fast ausgeschlossen. 
 
-In der Praxis werden oft auch so genannte \textit{Channel Leader} (siehe Abbildung \ref{fig:ventrillo}) ernannt, die über Sprachrechte verfügen, während alle anderen Spieler nur zuhören können. Es ist prinzipiell zwar möglich, dass Teilnehmer auf dem Kanal ein persönliches Gespräch führen, wird aber aufgrund der resultierenden Interferenzen nicht gerne von anderen Teilnehmern gesehen \cite{morris06}. Deswegen verfügen einige Hilfsprogramme\textit{Ventrillo}\footnote{Flagship Industries, Inc. Version 22.03.2008, http://www.ventrilo.com}
-%\footnote{Blizzard Entertainment: World of Warcraft Communication Basics, Version 22.03.2008, http://worlfofwarcraft.com/info/basics/voicechat.html} 
+In der Praxis werden oft auch so genannte \textit{Channel Leader} (siehe Abbildung \ref{fig:ventrillo}) ernannt, die über Sprachrechte verfügen, während alle anderen Spieler nur zuhören können. Es ist prinzipiell zwar möglich, dass Teilnehmer auf dem Kanal ein persönliches Gespräch führen, wird aber aufgrund der resultierenden Interferenzen nicht gerne von anderen Teilnehmern gesehen \cite{morris06}. Deswegen verfügen einige Hilfsprogramme wie \textit{Ventrillo}%\footnote{Blizzard Entertainment: World of Warcraft Communication Basics, Version 22.03.2008, http://worlfofwarcraft.com/info/basics/voicechat.html} 
 über einen "`Flüstermodus"', der eine private Konversation mit einzelnen Spielern ermöglicht. Eine solche Verbindung muss jedoch bereits vor der Teilnahme am eigentlichen Spiel in der Konfiguration definiert werden. Somit ist ein spontanes Gespräch mit einem beliebigem Spieler nicht ohne weiteres möglich. Zudem werden Teilnehmer eines solchen "`Flüstergesprächs"' vom restlichen Geschehen ausgegrenzt, da sie nicht gleichzeitig beide Kanäle benutzen können.
 
 \begin{figure}[tbh]
@@ -43,7 +42,7 @@ In einer weiteren Studie \cite{halloran04} untersuchten Halloran et Al. welche A
 %Trotz Problemen im technischen Bereich zeigte die Sprachkommunikation geringere Probleme bei der Semantik und Effizienz. Da kein Medienbruch wie bei der Textkommunikation stattfindet entspricht die Semantik der zwischenmenschlichen Kommunikation, die wir in unserem Alltag vorfinden.
 
 \section{Herausforderungen an eine bessere Lösung}
-All diese Erkentnisse zeigen, dass Sprachkommunikation - im Gegensatz zur Textkommunikation einen hohen technischen Aufwand benötigt, um sie überhaupt zu ermöglichen. Durch Probleme auf der technischen Stufe wird das Gesprochene für das Gegenüber oft unverständlich: Falsche Einstellungen an Mikrofon und Lautsprechern oder störende Hintergrundgeräusche können zu einer starken Beeinträchtigung der Kommunikation führen. Die Adressierung der Personen gestaltet sich oft schwer und führt zu Missverständnissen. Um diese Probleme zu adressieren, werden in diesem Kapitel Vorschläge gemacht, die später in einem Prototyp (siehe Abschnitt \ref{prototyp}) eines Spiels ausprobiert und untersucht werden können. 
+All diese Erkentnisse zeigen, dass Sprachkommunikation - im Gegensatz zur Textkommunikation einen hohen technischen Aufwand benötigt, um sie überhaupt zu ermöglichen. Durch Probleme auf der technischen Stufe wird das Gesprochene für das Gegenüber oft unverständlich: Falsche Einstellungen an Mikrofon und Lautsprechern oder störende Hintergrundgeräusche können zu einer starken Beeinträchtigung der Kommunikation führen. Die Adressierung der Personen gestaltet sich oft schwer und führt zu Missverständnissen. Um diese Probleme zu adressieren, werden in diesem Kapitel Vorschläge gemacht, die später in einem Spiel-Prototyp (siehe Kapitel 7) ausprobiert und untersucht werden können. 
 
 %Eine zweite Herausforderung liegt darin, eine Architektur zu finden, die die gemachten Vorschläge umsetzbar macht und hilft Kosten einzusparen. Wie die Einleitung bereits gezeigt hat, sind bisherige Lösungen mit dem Einsatz von dedizierten Servern verbunden, die von Entwicklungsstudios oder den Spielern selbst eingekauft werden müssen und Sprachkommunikation teuer machen. 
 
@@ -107,7 +106,7 @@ Es resultieren auch einige - vor allem technische Nachteile aus der Verwendung v
 \end{itemize}
 
 \subsection{Einsatz von Metaphern zur Sprachübertragung}
-Obwohl die Verwaltung von Telefonkonferenzen seit Jahren erforscht wird, \cite{schulzrinne02}, existieren bisher wenige intuitive Methoden zu ihrer Steuerung. Alle Studien zur Konferenzsteuerung zeigen, dass die Einführung von mehreren Kanälen ein entsprechend kompliziertes Konferenz-Management (siehe Abbildung \ref{fig:ventrillo}) erfordert, da Teilnehmer in der Lage sein müssen, zu entscheiden welche Kanäle sie hören wollen und welche nicht. 
+Obwohl die Verwaltung von Telefonkonferenzen seit Jahren erforscht wird \cite{schulzrinne02}, existieren bisher wenige intuitive Methoden zu ihrer Steuerung. Alle Studien zur Konferenzsteuerung zeigen, dass die Einführung von mehreren Kanälen ein entsprechend kompliziertes Konferenz-Management (siehe Abbildung \ref{fig:ventrillo}) erfordert, da Teilnehmer in der Lage sein müssen, zu entscheiden welche Kanäle sie hören wollen und welche nicht. 
 
 Die Lösung dieses Problems liegt in der Abstraktion der Konferenzsteuerung, indem
 Metaphern der Sprachübertragung \cite{gibbs05} aus der realen Welt eingesetzt werden, um die Sprachkommnikation zu steuern und diese Steuerung für alle Teilnehmer auch plausibel zu machen. Folgende Metaphern sind dabei vorstellbar:

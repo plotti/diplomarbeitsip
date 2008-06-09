@@ -143,7 +143,7 @@ Es können drei Hauptkomponenten eines Systems definiert werden, die je nach ihre
 
 Aus den vorgestellten Komponeten wird ersichtlich, dass die Architektur der Sprachkommunikation nicht getrennt von der Architektur des darunter liegenden Signalisierung gesehen werden kann. Dies geschieht deswegen, weil die Signalisierung und der reine Austausch an Spielerinformationen und Konferenzinformationen relativ wenig Bandbreite benötigt. Eine Audioverbindung dagegen, kann aufgrund ihres reinen Datenvolumens bereits das zehnfache der Bandbreite benötigen.   
 
-Geht man davon aus, dass sowohl die Signalisierung, als auch die Audioströme zwischen den Spielern entweder komplett zentral, verteilt oder komplett dezentral stattfinden können, ergeben sich 9 mögliche Kombinationen, die in Tabelle \ref{audiodatenmatrix} dargestellt werden. Dabei sind beim verteilen von Audiomixern prinzipiell alle Architekturen aus Abschnitt \ref{client-server-verteilung} vorstellbar.
+Geht man davon aus, dass sowohl die Signalisierung, als auch die Audioströme zwischen den Spielern entweder komplett zentral, verteilt oder komplett dezentral stattfinden können, ergeben sich 9 mögliche Kombinationen, die in Tabelle \ref{audiodatenmatrix} dargestellt werden. Dabei kann beim verteilen von Audioservern jede Technik aus Abschnitt \ref{client-server-verteilung} eingesetzt werden.
 
 \begin{table}[tbh]
 	\centering	\begin{tabular}{p{0.2\textwidth}|p{0.2\textwidth}|p{0.2\textwidth}|p{0.2\textwidth}}		
@@ -175,7 +175,7 @@ Prinzipiell sind alle Alternativen vorstellbar. In erster Linie sollen bei einer
 	\item ($A_{9}$): Realisiert man sowohl den Datenaustausch als auch das Mischen des Audiostroms komplett dezentral, 	spricht man vom Einsatz eines dezentralisierten SIP-Netzwerkes, das mittels P2PSIP, Multicast oder Full-Mesh-Ansätzen realisiert werden kann. 
 \end{itemize}
 
-Die vorgestellten Alternativen $A_{5}$ und $A_{6}$, gehen davon die zentrale Komponente des Registrars verteilbar ist. Von einer Verteilung des Registrars und Proxy können auch die vorgestellten Alternativen $A_{1}$, $A_{2}$, $A_{3}$ profitieren, da sich damit die \textit{Fault Tolerance} des Systems erhöht. Falls mehrere Registrare eingesetzt werden, bestehen folgende Alternativen, die auch ihre Grenzen haben auf die hier jedoch nicht eingegangen wird. 
+Die vorgestellten Alternativen $A_{5}$ und $A_{6}$, gehen davon die zentrale Komponente des Registrars verteilbar ist. Von einer Verteilung des Registrars und Proxy können auch die vorgestellten Alternativen $A_{1}$, $A_{2}$, $A_{3}$ profitieren, da sich damit die \textit{Fault Tolerance} des Systems erhöht. Falls mehrere Registrare eingesetzt werden, bestehen folgende Alternativen\footnote{Die Nachteile dieser Ansätze bei einer großen Benutzeranzahl sind entweder eine große Netzwerklast oder eine hohe Verbindungslatenz.}:
 \begin{itemize}
 	\item Die Registrierung des Benutzers findet auf einem Registrar statt und wird dann mit Datenbank-Replikation konsistent auf mehrere Registrare repliziert werden. Die Suche findet bei einem beliebigen Registrar statt.  
 	\item Die Registrierung geschieht nur auf einem Registrar, während die Suche nach dem Registrar, der die Benutzerinformation enthält vom Client auf allen Registraren stattfindet. Dazu muss der Benutzer alle Registrare kontaktieren oder der erste kontaktierte Server die Anfrage weiterleiten. 
