@@ -1,6 +1,5 @@
 \select@language {english}
 \select@language {ngerman}
-\contentsline {chapter}{Zusammenfassung}{iii}
 \contentsline {chapter}{Stichwortverzeichnis}{vii}
 \contentsline {chapter}{Abbildungsverzeichnis}{viii}
 \contentsline {chapter}{Tabellenverzeichnis}{x}
@@ -45,16 +44,16 @@
 \contentsline {subsubsection}{Registrierung der Lokation von Teilnehmern}{26}
 \contentsline {subsection}{\numberline {4.2.4}Spezielle Dienstmerkmale}{27}
 \contentsline {subsubsection}{Instant Messaging zwischen Teilnehmern}{27}
-\contentsline {subsubsection}{Pr\"asenzfunktion von Teilnehmern}{28}
-\contentsline {section}{\numberline {4.3}Session-Description-Protokoll (SDP)}{29}
-\contentsline {subsubsection}{Aufbau von SDP-Nachrichten}{29}
-\contentsline {subsubsection}{Aushandeln der Sitzungsparameter}{30}
-\contentsline {section}{\numberline {4.4}Real-time-Transport-Protokoll (RTP)}{30}
-\contentsline {subsubsection}{Aufbau von RTP-Paketen}{30}
-\contentsline {subsection}{\numberline {4.4.1}RTP Control Protokoll}{31}
-\contentsline {subsubsection}{Typen und Struktur der RTCP-Pakete}{31}
-\contentsline {subsubsection}{Silence Supression}{32}
-\contentsline {section}{\numberline {4.5}NAT Traversal}{33}
+\contentsline {subsubsection}{Pr\"asenzfunktion von Teilnehmern}{29}
+\contentsline {section}{\numberline {4.3}Session-Description-Protokoll (SDP)}{30}
+\contentsline {subsubsection}{Aufbau von SDP-Nachrichten}{30}
+\contentsline {subsubsection}{Aushandeln der Sitzungsparameter}{31}
+\contentsline {section}{\numberline {4.4}Real-time-Transport-Protokoll (RTP)}{32}
+\contentsline {subsubsection}{Aufbau von RTP-Paketen}{32}
+\contentsline {subsection}{\numberline {4.4.1}RTP Control Protokoll}{33}
+\contentsline {subsubsection}{Typen und Struktur der RTCP-Pakete}{33}
+\contentsline {subsubsection}{Silence Supression}{34}
+\contentsline {section}{\numberline {4.5}NAT Traversal}{35}
 \contentsline {chapter}{\numberline {5}Verwandte Arbeiten}{37}
 \contentsline {section}{\numberline {5.1}Historische Ans\"atze}{37}
 \contentsline {section}{\numberline {5.2}Serverbasierte Ans\"atze}{37}

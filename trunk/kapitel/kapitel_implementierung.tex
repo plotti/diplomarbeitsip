@@ -1,4 +1,3 @@
-\cleardoublepage
 \chapter{Implementierung des Spiel-Prototypen}
 
 Dieses Kapitel befasst sich mit der Implementierung des Spiel-Prototypen mit distanzbasierter integrierter Sprachkommunikation auf Basis eines hybriden SIP Multi-unicast-Ansatzes in einer 3D-Umgebung und präsentiert ausgewählte Details und Probleme bei der Umsetzung. Hauptaugenmerk liegt dabei auf der technischen Umsetzung der in \textit{Kapitel3} vorgestellten distanzbasierten Sprachkommunikation, der Umsetzung der Zonenkonzepte und der Zusammenarbeit des 3D-Frameworks mit der VoIP-Anwendung.
@@ -304,7 +303,7 @@ Während der logische SIP Anruf weiterhin erhalten bleibt, wird auf auf RTP Ebene
 
 Da kein Audiosignal mehr an die gegenseitigen Spieler übertragen wird, wird von nun vom VAD-Algorithmus (Voice-Activity-Detection) eine \textit{Silence Suppression} vorgenommen. Dieses Verhalten entspricht der im Kapitel 3 geschilderten Eigenschaften der Silence Supression des RTP-Protokolls. Der Unterschied besteht hier darin, dass die Silence Supression nicht von der tatsächlichen Stille im Mikrofon abhängt, sondern von der Entfernung der Teilnehmer untereinander. 
 
-Diese Methode bietet die Möglichkeit, den Bandbreitenverbrauch in dieser Zone auf unter 1kByte/s \footnote{Messungen zum Bandbreitenverbrauchs in dieser Zone finden sich in Kapitel 9.} zu reduzieren. Der große Vorteil dieses Verfahrens besteht darin, dass der Wechsel zwischen der öffentlichen und sozialen Zone verzögerungsfrei stattfinden kann, da kein neues Aushandeln der Parameter benötigt wird.
+Diese Methode bietet die Möglichkeit, den Bandbreitenverbrauch in dieser Zone auf unter 1 KByte/s \footnote{Messungen zum Bandbreitenverbrauchs in dieser Zone finden sich in Kapitel 9.} zu reduzieren. Der große Vorteil dieses Verfahrens besteht darin, dass der Wechsel zwischen der öffentlichen und sozialen Zone verzögerungsfrei stattfinden kann, da kein neues Aushandeln der Parameter benötigt wird.
 
 \subsubsection{SIP-Hold-Funktion}
 Eine Reduzierung des Bandbreitenverbrauch wurde auch mit der SIP-Hold Funktionalität ausprobiert. Hierbei signalisiert das SIP-Protokoll, dass der Anruf "`geparkt"' werden soll und die RTP-Verbindung während des Hold-Vorgangs beendet wird. Wird der Hold-Vorgang aufgehoben, wird die RTP-Verbindung wieder neu etabliert. Die Messergebnisse\footnote{siehe Anhang} und eigene Erfahrungen haben gezeigt, dass zwar eine noch größere Einsparung der Bandbreite, als bei der RTP-Silence-Supression stattfindet, da praktisch keine Daten mehr übertragen werden. Der Nachteil besteht jedoch darin, dass beim Wiederaufnehmen des Anrufs eine spürbare Verzögerung auftritt, da die Verbindungsparameter des Gesprächs wieder neu verhandelt werden müssen. Diese Gründe führten dazu die SIP-Hold-Funktion nicht einzusetzen und stattdessen die Silence Suppression zu bevorzugen. 
@@ -338,3 +337,4 @@ Entsprechend der Vorschläge aus Kapitel 6 wurden in der privaten Zone eine Unter
 
 \section{PTSN-Netzwerke}
 Durch die Möglichkeit SIP-Server mit externen Gateways zu verbinden, wurde auch die Metapher des Festnetz-Telefons umgesetzt, die dem Spieler tatsächlich erlaubt aus der virtuellen Welt in die reale Welt zu telefonieren. Dazu wurde das Modell einer Telefonzelle auf dem Spielfeld platziert. Befindet sich der Spieler in Hörnähe zu dieser Telefonzelle, findet ein Anruf an eine beliebige Telefonnummer statt. Dieser \textit{Proof of Concept} zeigt, dass mit Hilfe eines standardisierten Protokolls solche Möglichkeiten sehr einfach realisiert werden können. 
+\cleardoublepage

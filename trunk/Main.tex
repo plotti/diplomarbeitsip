@@ -6,15 +6,15 @@
 %    Inhal\emph{}ten gef{\"u}llt werden.
 %
 % ---------------------------------------
-
 \documentclass[
     smallheadings,  % kleinere {\"U}berschriften
-    oneside,        % einseitig, nur rechte seiten
+    %oneside,        % einseitig, nur rechte seiten
     liststotoc,     % listen in inhaltsverzeichnis aufnehmen
     bibtotoc,       % literaturverzeichnis in inhltsvz. aufnehmen
     headsepline,     % trennlinie unter kopfzeile
     11pt,
-    a4paper
+    a4paper,
+    oneside,
     ]{scrbook}
 
 \usepackage{a4}  %a4 Seitenformat benutzen
@@ -46,6 +46,7 @@
 \usepackage{microtype}
 \usepackage{picinpar}
 \usepackage{appendix}
+\usepackage{abstract}
 \usepackage[font=small,labelfont=bf]{caption}
 \usepackage[font=small,labelfont=empty]{subfig}
 \usepackage{url}         % fuer urls: schreibweise ist z.B. \url{http://www.uni-mannheim.de}
@@ -83,18 +84,18 @@
 
 \include{kapitel/titel}        % titelseite einbinden
 \newpage\thispagestyle{empty}~ % Seite 2 (links leer) bis auf ein Leerzeichen			
-\cleardoublepage
 \include{kapitel/abstract}  % Abstract
 \tableofcontents            % inhaltsverzeichnis
 \include{kapitel/stichwortverzeichnis}  % Stichwortverzeichnis
 \listoffigures              % abbildungsverzeichnis
 \listoftables               % tabellenverzeichnis
-\include{kapitel/abkuerzungen}  % beispiel eines handerstellten
-                                %verzeichnisses
+\include{kapitel/abkuerzungen}  % beispiel eines handerstellten                        %verzeichnisses
 \mainmatter       % hauptteil, kapitel lateinisch nummeriert
+
 \include{kapitel/einleitung}
 \include{kapitel/kapitel_kommunikation}
 \include{kapitel/kapitel_folgerungundziele}
+%\newpage~
 \include{kapitel/kapitel_sip}
 \include{kapitel/kapitel_recentwork}
 \include{kapitel/kapitel_konstruktion}

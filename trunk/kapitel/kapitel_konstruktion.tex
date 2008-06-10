@@ -1,4 +1,3 @@
-\cleardoublepage
 \chapter{Architekturentwurf}
 \label{Architektur-Entwurf}
 
@@ -172,7 +171,7 @@ Prinzipiell sind alle Alternativen vorstellbar. In erster Linie sollen bei einer
 	\item ($A_{6}$): Diese Alternative entspricht der vorhergehenden Alternative, nur dass hier jeder Clients für das Abmischen seines Audiostroms verantwortlich ist, während die Signalisierung und Lokation von verteilten Proxys oder Registraren übernommen wird.
 	\item ($A_{7}$): Hier liegt ein komplett dezentraler Datenaustausch mit einem zentralen Audioserver
 	\item ($A_{8}$): Es handelt sich um einen Ein komplett dezentralen Datenaustausch mit mehreren Audioservern.
-	\item ($A_{9}$): Realisiert man sowohl den Datenaustausch als auch das Mischen des Audiostroms komplett dezentral, 	spricht man vom Einsatz eines dezentralisierten SIP-Netzwerkes, das mittels P2PSIP, Multicast oder Full-Mesh-Ansätzen realisiert werden kann. 
+	\item ($A_{9}$): Realisiert man sowohl den Datenaustausch als auch das Mischen des Audiostroms komplett dezentral, 	spricht man vom Einsatz eines dezentralisierten SIP-Netzwerkes, das mittels P2P-SIP, Multicast oder Full-Mesh-Ansätzen realisiert werden kann. 
 \end{itemize}
 
 Die vorgestellten Alternativen $A_{5}$ und $A_{6}$, gehen davon die zentrale Komponente des Registrars verteilbar ist. Von einer Verteilung des Registrars und Proxy können auch die vorgestellten Alternativen $A_{1}$, $A_{2}$, $A_{3}$ profitieren, da sich damit die \textit{Fault Tolerance} des Systems erhöht. Falls mehrere Registrare eingesetzt werden, bestehen folgende Alternativen\footnote{Die Nachteile dieser Ansätze bei einer großen Benutzeranzahl sind entweder eine große Netzwerklast oder eine hohe Verbindungslatenz.}:
@@ -227,9 +226,9 @@ So verlieren die Teilnehmer die Kontrolle darüber, wer an Konferenzen teilnehmen
 
 \subsubsection{Peer-to-Peer Unicast}
 \label{peer-to-peer-unicast}
-Bei einem völlig dezentralisierten P2PSIP mittels verteilter \textit{Hashtabellen}\footnote{siehe Kapitel 9} findet sowohl die Lokation, Signalisierung als auch die Sprachkommunikation nur zwischen den einzelnen Clients statt. Dazu wird zentrale Komponente des Registrars wird auf die einzelnen Clients verteilt. Für jede Audioverbindung wird ein Peer-to-Peer Unicast eingesetzt, dessen Vor- und Nachteile in Abschnitt \ref{siphybrid} besprochen werden.
+Bei einem völlig dezentralisierten P2P-SIP mittels verteilter \textit{Hashtabellen}\footnote{siehe Kapitel 9} findet sowohl die Lokation, Signalisierung als auch die Sprachkommunikation nur zwischen den einzelnen Clients statt. Dazu wird zentrale Komponente des Registrars wird auf die einzelnen Clients verteilt. Für jede Audioverbindung wird ein Peer-to-Peer Unicast eingesetzt, dessen Vor- und Nachteile in Abschnitt \ref{siphybrid} besprochen werden.
 
-Dieser interessante Ansatz ist bisher nur theoretisch möglich, da keine geeignete SIP-Implementierung existiert, die einen verteilten Registrar umsetzt. Zudem ist das Problem einer verteilten Spielkontrolle nicht trivial, da kein Teilnehmer über komplette Informationen der Spielewelt verfügt. Dieses Problem wird später genauer in Kapitel 9 behandelt. Sollte in Zukunft eine Implementierung eines funktionierenden P2P SIP-Overlays existieren, könnte diese Option in Zukunft durchaus vorstellbar sein. 
+Dieser interessante Ansatz ist bisher nur theoretisch möglich, da keine geeignete SIP-Implementierung existiert, die einen verteilten Registrar umsetzt. Zudem ist das Problem einer verteilten Spielkontrolle nicht trivial, da kein Teilnehmer über komplette Informationen der Spielewelt verfügt. Dieses Problem wird später genauer in Kapitel 9 behandelt. Sollte in Zukunft eine Implementierung eines funktionierenden P2P-SIP-Overlays existieren, könnte diese Option in Zukunft durchaus vorstellbar sein. 
 
 \subsubsection{Full-Mesh}
 In einem "`Full-Mesh"'-Modell kommuniziert jeder Endpunkt direkt mit jedem anderen Endpunkt. Alle Teilnehmer in der Konferenz sind "`gleich"' - es gibt keinen Benutzer, der topologisch besonders ist oder über zusätzlichen Rechte oder Fähigkeiten verfügt. Jeder Teilnehmer kann jederzeit eine Konferenz betreten und verlassen. Das Audiosignal wird nur von den Endpunkten abgemischt.
@@ -340,11 +339,11 @@ Jeder Spieler muss also über mindestens $256 Kbit/s$ Up- Download verfügen, um i
 
 Die Gründe dafür liegen unter anderem in einer uneffizienten Verbreitung des Audiostroms. Es ist vorstellbar, dass nicht jeder Spieler des Spiels an den Audioströmen aller Mitspieler interessiert ist. Trotzdem werden mit allen Teilnehmern Verbindungen aufgebaut. Deswegen werden in den folgenden Abschnitten Methoden vorgestellt, die Ansätze aus Kapitel 3 nutzen, um Bandbreite einzusparen.
 
-Diese Alternative bietet als einzige die entsprechenden Eigenschaften, um die Ansätze aus Kapitel 3 umzusetzen. Sie bietet wie alle dezentralen Alternativen $A9$ dem Client Kontrolle über alle Audioströme und erlaubt so mehrere Kanäle gleichzeitig zu verwenden und lokal abgemischen, verfügt jedoch als einzige über eine funktionierende bereits praxisbewährte Signalisierung.  Diese besteht in der zentralen Komponente des Registrars, der es erlaubt eine einfache Lokation und Signalisierung der Teilnehmer vorzunehmen. Bei P2P SIP Ansätzen befindet sie sich noch noch im Entwurfstadium oder ist beim Full-Mesh-Ansatz besonders kompliziert. 
+Diese Alternative bietet als einzige die entsprechenden Eigenschaften, um die Ansätze aus Kapitel 3 umzusetzen. Sie bietet wie alle dezentralen Alternativen $A9$ dem Client Kontrolle über alle Audioströme und erlaubt so mehrere Kanäle gleichzeitig zu verwenden und lokal abgemischen, verfügt jedoch als einzige über eine funktionierende bereits praxisbewährte Signalisierung.  Diese besteht in der zentralen Komponente des Registrars, der es erlaubt eine einfache Lokation und Signalisierung der Teilnehmer vorzunehmen. Bei P2P-SIP-Ansätzen befindet sie sich noch noch im Entwurfstadium oder ist beim Full-Mesh-Ansatz besonders kompliziert. 
 
 Außerdem nutzt der Hybride Ansatz genau die Unterschiede der beiden Daten- und Audioströme, was dazu führt, dass der Bandbreitenverbrauch auf den zentralen Komponenten ist minimal ist, da der Audiostrom nur zwischen den Clients fließt. Dies erlaubt es auch günstige zentrale Komponenten einzusetzen. 
 
-Außerdem bietet der hybride Ansatz eine gute Ausgangsgrundlage, um eine völlig dezentralisiere Sprachkommunikation mit P2P SIP zu ermöglichen, indem die einzige zentrale Komponente des Registrars verteilt wird. 
+Außerdem bietet der hybride Ansatz eine gute Ausgangsgrundlage, um eine völlig dezentralisiere Sprachkommunikation mit P2P-SIP zu ermöglichen, indem die einzige zentrale Komponente des Registrars verteilt wird. 
 
 \section{Möglichkeiten zur Einsparung von Bandbreite}
 
@@ -381,11 +380,12 @@ In Abhängigkeit von der Wahrscheinlichkeit ist eine Reduzierung der Bandbreite m
 
 Es lässt sich sogar noch mehr Bandbreite einsparen, wenn man die Hörreichweite in zwei Zonen (entsprechend Abschnitt \ref{proxemikalssteuerungvonkonferenzen}) mit verschiedenen Audiocodecs unterteilt. In einer private Zone wird ein hochwertiger Audiocodec mit einer größeren Bandbreite benutzt und in einer sozialen Zone ein wird ein Codec mit einer niedrigeren Bandbreite benutzt. 
 
-In einem einfachen Szenario, kann man annehmen, dass die 30\% aller Benutzer in Hörreichweite, sich zu 10\% in der privaten Zone und zu 20\% in der sozialen Zone aufhalten. Spieler in der privaten Zone nutzen einen Audiocodec mit einer Bitrate von $16Kbit/s$ und Spieler in der sozialen Zone einen Audiocodec mit $8Kbit/s$. Ergänzt man die Gleichung entsprechend um das Zonenkonzept, und nimmt immer noch an, dass sich 16 Spieler im Spiel befinden kommt man zu folgender Berechnung:
+In einem einfachen Szenario, kann man annehmen, dass die 30\% aller Benutzer in Hörreichweite, sich zu 10\% in der privaten Zone und zu 20\% in der sozialen Zone aufhalten. Spieler in der privaten Zone nutzen einen Audiocodec mit einer Bitrate von $16 Kbit/s$ und Spieler in der sozialen Zone einen Audiocodec mit $8 Kbit/s$. Ergänzt man die Gleichung entsprechend um das Zonenkonzept, und nimmt immer noch an, dass sich 16 Spieler im Spiel befinden kommt man zu folgender Berechnung:
 
 \[
 	\mbox{16 Spieler} \cdot 16 \frac{Kbit}{s} \cdot 10\% + \mbox{16 Spieler} \cdot 16 \frac{Kbit}{s} \cdot 20\% = 51,2\frac{Kbit}{s}
 \]
 
 Hier wird deutlich, dass noch einmal Bandbreite eingespart werden kann, und trotzdem die gleiche Konnektivität gewährleistet wird. Die Einsparung resultiert vor allem aus der Reduziertung der Audioqualität der sozialen Zone. Trotzdem kann bei Bedarf noch eine höherwertige Konversation eingeleitet werden, indem sich Spieler in die private Zone begeben. Im Kapitel 7 und 9 wird die Umsetzung dieses Ansatzes genauer diskutiert und evaluiert.
+\cleardoublepage
 

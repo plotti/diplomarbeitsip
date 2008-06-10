@@ -1,4 +1,3 @@
-\cleardoublepage
 \chapter{Evaluation}
 
 In diesem Kapitel wird das Resultat der Umsetzung mit konkreten Messergebnissen erfasst. Anhand eines Szenarios wird der Full-Mesh-Ansatz mit dem entwickelten Partial-Mesh-Ansatz verglichen und dabei Einsparungen der Bandbreite aufgezeigt. In einem weiteren Szenario wird der Bandbreitenverbrauch des Prototyps in den in Kapitel 7 vorgestellten Zonen gemessen. Dabei werden jeweils Messungen für die Audiocodec-Variationen, die SIP-Hold-, RTP-Silence-Suppression-Technik vorgenommen. Außerdem wird der die Tauglichkeit von SIP als Netzwerkschnitstelle Anhand von Roudtrip-Time-Messungen, sowie die Grenzen der Conference Bridge beim Mischen von Audiosignalen aufgezeigt. 
@@ -10,9 +9,9 @@ Um Änderungen des Bandbreitenverbrauchs zu messen, wurden alle versendeten und e
 Die virtuellen Zonenradien betrugen 600 Pixel für die private Zone, 1200 Pixel für die soziale Zone und 2400 Pixel für die öffentliche Zone. Die Gesamtgröße des Spielfeldes betrug $5000 \cdot 5000$ Pixel und die Höhe und Breite eines Avatars $300 \cdot 100$ Pixel. 
 
 \subsubsection{Header-Overhead}
-Bei fast\footnote{In Abschnitt \ref{audiocodec-zonen} wurde der Speex-Codec mit einer Abtastrate von 8kHz eingesetzt.} allen Messungen wurde der Speex Codec mit einer Abtastrate von 16kHz benutzt, der eine mittlere Bitrate von 16.8 kbit/s\footnote{Speex Codec Quality Comparison (Xiph OSC) , Version 22.03.2008, http://speex.org/comparison/} besitzt.  Die Stimm-Abtastrate lag bei 20ms.
+Bei fast\footnote{In Abschnitt \ref{audiocodec-zonen} wurde der Speex-Codec mit einer Abtastrate von 8kHz eingesetzt.} allen Messungen wurde der Speex Codec mit einer Abtastrate von 16kHz benutzt, der eine mittlere Bitrate von 16.8 Kbit/s\footnote{Speex Codec Quality Comparison (Xiph OSC) , Version 22.03.2008, http://speex.org/comparison/} besitzt.  Die Stimm-Abtastrate lag bei 20ms.
 
-Obwohl der Audiocodec eine Bitrate von 16.8kbit/s besitzt, weist die tatsächliche verbrauchte Bandbreite jedes Rechners einen Upload von 5kByte/s oder 40 kbit/s auf, wie man in allen Messungenerkennen kann. Die Differenz zwischen der Nutzlast (Payload) und der tatsächlichen Bandbreite liegt im Header-Overhead. 
+Obwohl der Audiocodec eine Bitrate von 16.8 Kbit/s besitzt, weist die tatsächliche verbrauchte Bandbreite jedes Rechners einen Upload von 5 KByte/s oder 40 Kbit/s auf, wie man in allen Messungenerkennen kann. Die Differenz zwischen der Nutzlast (Payload) und der tatsächlichen Bandbreite liegt im Header-Overhead. 
 
 Für für die Header werden pro Paket insgesamt 40 Bytes benötigt (IP\footnote{RFC: Internet Protocol, Version 22.03.2008, http://www.ietf.org/rfc/rfc791.txt}: 20 Bytes, UDP\footnote{RFC: User Datagram Protocol, Version 22.03.2008, www.ietf.org/rfc/rfc768.html} : 8 Bytes, RTP\footnote{siehe Abschnitt \ref{rtp-header}} : 12 Bytes). Zusätzlich dazu kommen 20 Bytes VPN-Headerinformationen\footnote{VPN Protocols, Version 22.03.2008, http://www.vpnc.org/vpn-standards.html}, da der Laptop, der die Messung ausführte durch einen VPN mit dem Uni-Netz verbunden war. 
 
@@ -20,7 +19,7 @@ Geht man davon aus, dass jedes Paket ein Stimm-Sample überträgt und diese alle 2
 
 \subsubsection{Aktive Silence Supression}
 
-In allen Messergebnissen ist auch zu erkennen, dass die Bandbreite in der sozialen und privaten Zone einer gewissen Varianz von bis zu 3kByte/s unterliegt. Diese ist auf die aktive Silence Supression in diesen Zonen zurückzuführen, die durchgeführt wird, wenn das Audiosignal einen bestimmten Schwellwert unterschreitet. Diese wird automatisch von PjSIP und dem \textit{Preprocessor} des Speex Audiocodecs durchgeführt. Da die verwendeten  Mikrofone sich hardwarebedingt in ihrer Empfindlichkeit unterscheiden verhalten sich beide Kurven nicht immer exakt gleich.
+In allen Messergebnissen ist auch zu erkennen, dass die Bandbreite in der sozialen und privaten Zone einer gewissen Varianz von bis zu 3 KByte/s unterliegt. Diese ist auf die aktive Silence Supression in diesen Zonen zurückzuführen, die durchgeführt wird, wenn das Audiosignal einen bestimmten Schwellwert unterschreitet. Diese wird automatisch von PjSIP und dem \textit{Preprocessor} des Speex Audiocodecs durchgeführt. Da die verwendeten  Mikrofone sich hardwarebedingt in ihrer Empfindlichkeit unterscheiden verhalten sich beide Kurven nicht immer exakt gleich.
 
 \section{Full-Mesh- vs. Partial-Mesh-Szenario}
 
@@ -56,7 +55,7 @@ Die Szenario-Abbildung \ref{fig:fullmesh} zeigt, dass beim Full-Mesh-Ansatz jede
 %	\label{fig:fullmesh}
 %\end{figure}
 
-Abbildung \ref{fig:fullmesh-withchart} zeigt den Bandbreitenverbrauch von Teilnehmer 1 in Abhängigkeit zur Anzahl der sich im Spiel befindlichen Spielern. Da alle 10 Sekunden ein weiterer Spieler das Spielfeld betritt, wird auch eine Audioverbindung mit diesem Spieler aufgebaut. Diese führt dazu, dass der Verbrauch der Bandbreite sich jeweils um weitere 10kByte/s (5 kByte Up-/ 5 kByte Download) erhöht. Dieses Vorgehen führt bei bereits 5 Anwesenden Teilnehmern zu einem Gesamtbandbreitenverbrauch zwischen Teilnehmer 1 und Teilnehmern 2,3,5 von über 40 kByte/s. Im Full-Mesh fließt zum Zeitpunkt $t4$ zwischen allen Teilnehmern bereits ein Gesamtaudiostrom von 100 kByte/s ($10 \cdot 10kByte/s$).
+Abbildung \ref{fig:fullmesh-withchart} zeigt den Bandbreitenverbrauch von Teilnehmer 1 in Abhängigkeit zur Anzahl der sich im Spiel befindlichen Spielern. Da alle 10 Sekunden ein weiterer Spieler das Spielfeld betritt, wird auch eine Audioverbindung mit diesem Spieler aufgebaut. Diese führt dazu, dass der Verbrauch der Bandbreite sich jeweils um weitere 10kByte/s (5 KByte Up-/ 5 KByte Download) erhöht. Dieses Vorgehen führt bei bereits 5 Anwesenden Teilnehmern zu einem Gesamtbandbreitenverbrauch zwischen Teilnehmer 1 und Teilnehmern 2,3,5 von über 40 KByte/s. Im Full-Mesh fließt zum Zeitpunkt $t4$ zwischen allen Teilnehmern bereits ein Gesamtaudiostrom von 100 kByte/s ($10 \cdot 10kByte/s$).
 
 \begin{figure}[tbh]
 	\centering
@@ -79,7 +78,7 @@ Wie man in der Szenario-Abbildung \ref{fig:partialmesh} erkennen kann, führt die
 %	\label{fig:partialmesh}
 %\end{figure}
 
-Abbildung \ref{fig:partialmeshchart} zeigt den Bandbreitenverbrauch von Teilnehmer 1 in Abhängigkeit zur Anzahl der sich im Spiel befindlichen Spielern. Zum Zeitpunkt $t1$, in dem Spieler 2 das Spiel betritt, ist der Aufbau einer Audioverbindung erkennbar, die zwischen 10-15 kByte/s verbraucht. Zum Zeitpunkt $t2$ betritt Spieler 3 das Spiel, diesmal werden nur zusätzliche 1-2 kByte/s zur Aufrechterhaltung der Grundkonnektivität benötigt, da auf RTP-Ebene eine Silence Supression stattfindet. Spieler 4 und 5 dagegen verursachen keinen zusätzlichen Bandbreitenverbrauch, da sie sich außerhalb der öffentlichen Zone befinden und keine Verbindungen zu ihnen aufgebaut werden. Im Vergleich zu Abbildung \ref{fig:fullmesh-withchart} werden hier insgesamt nur 16 kByte/s, also eine Einsparung von 60\%. Man darf aber nicht vergessen, dass im Worst-Case sich alle Teilnehmer im gegenseitigen Hörradius befinden können, was dazu führt, dass eine Full-Mesh Topologie zwischen ihnen aufgebaut wird. Hier kann keine Bandbreite eingespart werden und das vorgestellte Verfahren verliert seinen Vorteil.
+Abbildung \ref{fig:partialmeshchart} zeigt den Bandbreitenverbrauch von Teilnehmer 1 in Abhängigkeit zur Anzahl der sich im Spiel befindlichen Spielern. Zum Zeitpunkt $t1$, in dem Spieler 2 das Spiel betritt, ist der Aufbau einer Audioverbindung erkennbar, die zwischen 10-15 KByte/s verbraucht. Zum Zeitpunkt $t2$ betritt Spieler 3 das Spiel, diesmal werden nur zusätzliche 1-2 KByte/s zur Aufrechterhaltung der Grundkonnektivität benötigt, da auf RTP-Ebene eine Silence Supression stattfindet. Spieler 4 und 5 dagegen verursachen keinen zusätzlichen Bandbreitenverbrauch, da sie sich außerhalb der öffentlichen Zone befinden und keine Verbindungen zu ihnen aufgebaut werden. Im Vergleich zu Abbildung \ref{fig:fullmesh-withchart} werden hier insgesamt nur 16 KByte/s, also eine Einsparung von 60\%. Man darf aber nicht vergessen, dass im Worst-Case sich alle Teilnehmer im gegenseitigen Hörradius befinden können, was dazu führt, dass eine Full-Mesh Topologie zwischen ihnen aufgebaut wird. Hier kann keine Bandbreite eingespart werden und das vorgestellte Verfahren verliert seinen Vorteil.
 
 \begin{figure}[tbh]
 	\centering
@@ -99,15 +98,15 @@ Abbildung \ref{fig:partialmeshchart} zeigt den Bandbreitenverbrauch von Teilnehm
 Um den Bandbreitenverbrauch in den einzelnen Zonen aufzuzeigen, wurde ein einfaches Szenario erstellt, bei 2 Spieler am gleichen Ausgangspunkt das Spiel beginnen und sich dann voneinander wegbewegen. Während sie die einzelnen Zonen durchlaufen werden wird der Bandbreitenverbrauch eines Teilnehmers gemessen. Bei der Messung wird nicht nur zwischen dem Up- und Downloadverbrauch, sondern auch zwischen dem des SIP- und RTP-Protokolls unterschieden. Für jede der  drei Implementierungsvariationen (RTP-Silence-Supression, SIP-Hold, unterschiedliche Audiocodecs) wurde jeweils eine Messung vorgenommen. 
 
 \subsection{Ohne Einsatz von Zonen}
-Hier entfernen sich beide Spieler voneinander, es werden jedoch keine bandbreitenreduzierenden Maßnahmen in Abhängigkeit von der Zone des Spielers getroffen. Man erkennt in der Abbildung \ref{fig:NOVADrtpsip}, dass die Bandbreite sich in allen Zonen um 10 kByte/s schwankt. 
+Hier entfernen sich beide Spieler voneinander, es werden jedoch keine bandbreitenreduzierenden Maßnahmen in Abhängigkeit von der Zone des Spielers getroffen. Man erkennt in der Abbildung \ref{fig:NOVADrtpsip}, dass die Bandbreite sich in allen Zonen um 10 KByte/s schwankt. 
 
 Beim Vergleich der Bandbreite des RTP und SIP Protokolls in Abbildung \ref{fig:NoVADupdown} zeigt der Plot, dass SIP nur zum Signalisieren des Anrufs benutzt wird, da es nur am Anfang und Ende des SIP Anrufs Bandbreite erzeugt, während das RTP Protokoll für den reinen Audiostrom zuständig ist.  
 
 \subsection{Zonen mit RTP Silence Supression}
 
-Hier wird in der öffentlichen Zone eine Silence-Supression durchgeführt. In der Abbildung \ref{fig:VADupdown} ist zu erkennen, dass sich hier der Bandbreitenverbrauch auf unter 1kByte/s reduziert, während er in der privaten und sozialen Zone bei fast 10 kByte/s liegt.  
+Hier wird in der öffentlichen Zone eine Silence-Supression durchgeführt. In der Abbildung \ref{fig:VADupdown} ist zu erkennen, dass sich hier der Bandbreitenverbrauch auf unter 1kByte/s reduziert, während er in der privaten und sozialen Zone bei fast 10 KByte/s liegt.  
 
-In der Abbildung \ref{fig:VADrtpsip} wurde ein Vergleich der SIP und RTP Protokolle dargestellt. Der Plot zeigt, dass bei der Silence Supression beim RTP Protokoll in der öffentlichen Zone die Bandbreite auf jeweils unter 1kByte/s sinkt. Anhand der Unterscheidung der Protokolle wird deutlich, dass es sich um eine Eigenschaft des RTP-Protokolls handelt, da keine SIP Nachrichten beim Übergang erzeugt werden.
+In der Abbildung \ref{fig:VADrtpsip} wurde ein Vergleich der SIP und RTP Protokolle dargestellt. Der Plot zeigt, dass bei der Silence Supression beim RTP Protokoll in der öffentlichen Zone die Bandbreite auf jeweils unter 1 KByte/s sinkt. Anhand der Unterscheidung der Protokolle wird deutlich, dass es sich um eine Eigenschaft des RTP-Protokolls handelt, da keine SIP Nachrichten beim Übergang erzeugt werden.
 
 \subsection{Zonen mit SIP-Hold}
 
@@ -121,7 +120,7 @@ Beim Bandbreitenvergleich der SIP- und RTP-Protokolle sieht man, dass im Gegensa
 \label{audiocodec-zonen}
 Die dritte Variante beinhaltete den Einsatz von 2 verschiedenen Codecs für die Private und Soziale Zone. In der Privaten Zone wurde der qualitativ hohe Speex Codec mit einer Abtastrate von 16kHz verwendet, während in der sozialen Zone nur der Speex Codec mit einer Abtastrate von 8kHz verwendet wurde. 
 
-Da erwartet wird, dass in der sozialen Zone mehr Verbindungen als in der privaten Zone aufgebaut werden, wird hier auch ein Codec mit einer niedrigeren Bitrate (11 kBit/s) verwendet, um eine größere Anzahl an Verbindungen zu ermöglichen. In der öffentlichen Zone wird, wie im oberen Beispiel(Abbildung \ref{fig:VADupdown}) die \textit{Silence Supression} angewendet. Unter diesen Voraussetzungen ist in Abbildung \ref{fig:mitvadund2codecs} zu sehen, dass der Bandbreitenverbrauch in der sozialen Zone mit 7kByte/s im Vergleich zur privaten Zone mit 9kByte/s um 23\% reduziert wird. In der öffentlichen Zone wird fast 90\% der Bandbreite eingespart. 
+Da erwartet wird, dass in der sozialen Zone mehr Verbindungen als in der privaten Zone aufgebaut werden, wird hier auch ein Codec mit einer niedrigeren Bitrate (11 KBit/s) verwendet, um eine größere Anzahl an Verbindungen zu ermöglichen. In der öffentlichen Zone wird, wie im oberen Beispiel(Abbildung \ref{fig:VADupdown}) die \textit{Silence Supression} angewendet. Unter diesen Voraussetzungen ist in Abbildung \ref{fig:mitvadund2codecs} zu sehen, dass der Bandbreitenverbrauch in der sozialen Zone mit 7 KByte/s im Vergleich zur privaten Zone mit 9 KByte/s um 23\% reduziert wird. In der öffentlichen Zone wird fast 90\% der Bandbreite eingespart. 
 
 Im Vergleich (siehe Abbildung \ref{fig:mitvadundrtpsip}) der beiden SIP- und RTP-Protokolle ist beim SIP-Protokoll sowohl der Rufauf und -abbau zu erkennen, als auch die Signalisierung eines anderen Sprachcodecs beim Übergang von der Privaten in die Soziale Zone. Beim RTP-Protokoll ist die Übertragung des Audiostroms und die reduzierte Bitrate in der sozialen und öffentlichen Zone zu erkennen. 
 
@@ -153,4 +152,10 @@ Der Plot der RTT-Messung in Abbildung \ref{fig:rtt-chart} zeigt die gemessene RT
 \section{Conference-Bridge}
 Um zu Messen, wie sich die Conference Bridge beim Mischen verschiedener Audioströme verhält, wurde die CPU-Auslastung eines Mixers auf einem Athlon-Duo 4600+ Rechner mit 3GB RAM, gemessen. Dazu wurde die Conference Bridge verwendet, um künstlich erzeugte Sinus-Audiosignale zu mischen. Obwohl kein Encoding und Decoding verwendet wird, zeigt die Grafik\ref{cpu-chart}, dass bereits beim Einsatz von Resampling bei 32 Teilnehmern die Kapazitätsgrenze des Rechners erreicht wurde. Diese Messung stützt die Annahme aus Kapitel \ref{zentralansatz}, dass Mixing-Server zwar die entsprechende Bandbreite besitzen, um tausende von  Audioströmen entgegenzunehmen, jedoch praktisch aufgrund ihrer CPU-Kapazität nicht in der Lage sind in einer Konferenz so viele Audioströme zu mischen. 
 
-//INCLUDE GRAPHIC
+\begin{figure}
+	\centering
+		\includegraphics[width=1.00\textwidth]{grafiken/confbench.eps}
+	\caption{Anstieg der CPU-Last in Abhängigkeit der Anzahl der Abgemischten Audiokanäle}
+	\label{fig:confbench}
+\end{figure}
+\cleardoublepage
