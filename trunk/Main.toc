@@ -67,7 +67,7 @@
 \contentsline {subsubsection}{SIP-Konferenz-Erweiterung}{41}
 \contentsline {chapter}{\numberline {6}Architekturentwurf}{42}
 \contentsline {section}{\numberline {6.1}Analyse der bestehenden Architekturen f\"ur Audio\"ubertragung}{42}
-\contentsline {subsubsection}{Interaktiver Delay}{42}
+\contentsline {subsubsection}{Interaktives Delay}{42}
 \contentsline {subsubsection}{Avatar-Dichte}{43}
 \contentsline {subsubsection}{Avatar-Verteilung}{43}
 \contentsline {subsubsection}{Korrelation}{43}
@@ -76,9 +76,9 @@
 \contentsline {subsubsection}{Audio-Proxy}{45}
 \contentsline {subsubsection}{Verteilte Audioserver}{46}
 \contentsline {subsection}{\numberline {6.1.3}Hybrid}{47}
-\contentsline {section}{\numberline {6.2}Architekturen mit SIP Komponenten}{48}
+\contentsline {section}{\numberline {6.2}Architekturen mit SIP-Komponenten}{48}
 \contentsline {subsection}{\numberline {6.2.1}Komponenten}{48}
-\contentsline {subsection}{\numberline {6.2.2}Komplett dezentralisierte Ans\"atze}{51}
+\contentsline {subsection}{\numberline {6.2.2}Komplett dezentralisierte Ans\"atze}{52}
 \contentsline {subsubsection}{Multicast}{52}
 \contentsline {subsubsection}{Peer-to-Peer Unicast}{53}
 \contentsline {subsubsection}{Full-Mesh}{53}
@@ -126,12 +126,12 @@
 \contentsline {subsection}{\numberline {7.6.1}Erweitertes Mixing-Konzept}{75}
 \contentsline {subsection}{\numberline {7.6.2}Erweiterte Conference-Bridge}{76}
 \contentsline {section}{\numberline {7.7}Umsetzung des Proxemikkonzepts}{77}
-\contentsline {subsection}{\numberline {7.7.1}Vorg\"ange in der \"offentliche Zone}{77}
-\contentsline {subsubsection}{RTP - Silence Supression}{77}
+\contentsline {subsection}{\numberline {7.7.1}\"Offentliche Zone}{77}
+\contentsline {subsubsection}{RTP - Silence Supression}{79}
 \contentsline {subsubsection}{SIP-Hold-Funktion}{79}
-\contentsline {subsection}{\numberline {7.7.2}Vorg\"ange in der sozialen Zone}{79}
-\contentsline {subsubsection}{Audiocodec}{80}
-\contentsline {subsection}{\numberline {7.7.3}Vorg\"ange in der privaten Zone}{81}
+\contentsline {subsection}{\numberline {7.7.2}Soziale Zone}{79}
+\contentsline {subsubsection}{Audiocodec}{81}
+\contentsline {subsection}{\numberline {7.7.3}Private Zone}{81}
 \contentsline {subsubsection}{Lautst\"arke}{81}
 \contentsline {section}{\numberline {7.8}PTSN-Netzwerke}{81}
 \contentsline {chapter}{\numberline {8}SIP als Netzwerkschicht f\"ur Mehrspieler-Computerspiele}{82}
@@ -142,19 +142,19 @@
 \contentsline {subsubsection}{Nachrichtendienst}{85}
 \contentsline {subsubsection}{Pr\"asenzdienst}{86}
 \contentsline {subsection}{\numberline {8.3.2}Skalierbarkeit}{87}
-\contentsline {section}{\numberline {8.4}Hybride Systeme}{87}
+\contentsline {section}{\numberline {8.4}Hybride Systeme}{88}
 \contentsline {section}{\numberline {8.5}Peer-to-Peer in Netzwerkspielen}{88}
 \contentsline {section}{\numberline {8.6}SIP in Unstrukturierten Peer-to-Peer-Systemen}{88}
 \contentsline {section}{\numberline {8.7}SIP in Strukturierten Peer-to-Peer-Systemen}{89}
 \contentsline {subsection}{\numberline {8.7.1}Peer-to-Peer-SIP}{90}
-\contentsline {subsection}{\numberline {8.7.2}Funktionsweise}{91}
+\contentsline {subsection}{\numberline {8.7.2}Funktionsweise}{90}
 \contentsline {subsubsection}{Registrierung}{91}
 \contentsline {subsubsection}{Aufbau einer Verbindung}{92}
 \contentsline {subsection}{\numberline {8.7.3}Architekturvariationen}{93}
 \contentsline {chapter}{\numberline {9}Evaluation}{94}
 \contentsline {section}{\numberline {9.1}Versuchsaufbau}{94}
-\contentsline {subsection}{\numberline {9.1.1}Header-Overhead}{94}
-\contentsline {subsection}{\numberline {9.1.2}Aktive Silence Supression}{95}
+\contentsline {subsubsection}{Header-Overhead}{94}
+\contentsline {subsubsection}{Aktive Silence Supression}{95}
 \contentsline {section}{\numberline {9.2}Full-Mesh- vs. Partial-Mesh-Szenario}{95}
 \contentsline {subsection}{\numberline {9.2.1}Full-Mesh}{96}
 \contentsline {subsection}{\numberline {9.2.2}Partial-Mesh}{96}
