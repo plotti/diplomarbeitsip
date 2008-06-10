@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592-1.40.4 (MiKTeX 2.7) (preloaded format=latex 2008.3.17)  9 JUN 2008 18:16
+This is pdfTeX, Version 3.141592-1.40.4 (MiKTeX 2.7) (preloaded format=latex 2008.3.17)  10 JUN 2008 09:50
 entering extended mode
 **Main.tex
 (Main.tex
@@ -605,7 +605,7 @@ Kapitel 3.
 ] [10]
 File: grafiken/ventrillo.eps Graphic file (type eps)
  <grafiken/ventrillo.eps> [11]
-Overfull \hbox (9.64766pt too wide) in paragraph at lines 46--47
+Overfull \hbox (9.64766pt too wide) in paragraph at lines 45--46
 \OT1/cmr/m/n/10.95 Text-kom-mu-ni-ka-ti-on einen ho-hen tech-ni-schen Auf-wand 
 ben[]otigt, um sie []uberhaupt
  []
@@ -615,13 +615,13 @@ File: grafiken/singlekanal-kommunikationsmodell.eps Graphic file (type eps)
 File: grafiken/multi-kommunikationsmodell.eps Graphic file (type eps)
 
 <grafiken/multi-kommunikationsmodell.eps> [13]
-Overfull \hbox (11.33716pt too wide) in paragraph at lines 106--107
+Overfull \hbox (11.33716pt too wide) in paragraph at lines 105--106
 [][]\OT1/cmr/bx/n/10.95 Quadratisch an-stei-gen-der Band-brei-ten-ver-brauch\OT
 1/cmr/m/n/10.95 : Da der Au-diostrom
  []
 
 [14]
-Overfull \hbox (4.70616pt too wide) in paragraph at lines 118--119
+Overfull \hbox (4.70616pt too wide) in paragraph at lines 117--118
 [][]\OT1/cmr/bx/n/10.95 Festnetztelefon\OT1/cmr/m/n/10.95 : Die Sprach[]ubertra
 gung kann nur an be-stimm-ten Pl[]atzen
  []
@@ -747,86 +747,86 @@ File: grafiken/entwurf-verteilteserver.eps Graphic file (type eps)
 [47] [48]
 
 LaTeX Warning: Reference `audiodatenmatrix' on page 49 undefined on input line 
-147.
+146.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 154--154
+Underfull \hbox (badness 10000) in paragraph at lines 153--153
 []\OT1/cmr/m/n/10.95 ($\OML/cmm/m/it/10.95 A[]$\OT1/cmr/m/n/10.95 ) Client-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 154--154
+Underfull \hbox (badness 10000) in paragraph at lines 153--153
 \OT1/cmr/m/n/10.95 Server
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 154--154
+Underfull \hbox (badness 10000) in paragraph at lines 153--153
 []\OT1/cmr/m/n/10.95 ($\OML/cmm/m/it/10.95 A[]$\OT1/cmr/m/n/10.95 ) Ein
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 154--154
+Underfull \hbox (badness 10000) in paragraph at lines 153--153
 \OT1/cmr/m/n/10.95 Au-dio-ser-ver
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 154--154
+Underfull \hbox (badness 10000) in paragraph at lines 153--153
 \OT1/cmr/m/n/10.95 und meh-re-re
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 156--156
+Underfull \hbox (badness 10000) in paragraph at lines 155--155
 []\OT1/cmr/m/n/10.95 ($\OML/cmm/m/it/10.95 A[]$\OT1/cmr/m/n/10.95 ) Zen-tra-ler
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 156--156
+Underfull \hbox (badness 10000) in paragraph at lines 155--155
 \OT1/cmr/m/n/10.95 Ser-ver mit
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 156--156
+Underfull \hbox (badness 10000) in paragraph at lines 155--155
 \OT1/cmr/m/n/10.95 meh-re-ren
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 156--156
+Underfull \hbox (badness 10000) in paragraph at lines 155--155
 \OT1/cmr/m/n/10.95 de-di-zier-ten
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 156--156
+Underfull \hbox (badness 10000) in paragraph at lines 155--155
 []\OT1/cmr/m/n/10.95 ($\OML/cmm/m/it/10.95 A[]$\OT1/cmr/m/n/10.95 ) Su-per-no-
  []
 
 
-Underfull \hbox (badness 8038) in paragraph at lines 158--158
+Underfull \hbox (badness 8038) in paragraph at lines 157--157
 \OT1/cmr/m/n/10.95 zen-tra-lem Ser-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 158--158
+Underfull \hbox (badness 10000) in paragraph at lines 157--157
 []\OT1/cmr/m/n/10.95 ($\OML/cmm/m/it/10.95 A[]$\OT1/cmr/m/n/10.95 ) VoIP
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 158--158
+Underfull \hbox (badness 10000) in paragraph at lines 157--157
 \OT1/cmr/m/n/10.95 mit ver-teil-ten
  []
 
 
-Underfull \hbox (badness 3514) in paragraph at lines 158--159
+Underfull \hbox (badness 3514) in paragraph at lines 157--158
 []\OT1/cmr/m/n/10.95 ($\OML/cmm/m/it/10.95 A[]$\OT1/cmr/m/n/10.95 ) Kom-plett
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 158--159
+Underfull \hbox (badness 10000) in paragraph at lines 157--158
 \OT1/cmr/m/n/10.95 de-zen-tra-le
  []
 
 
-Package caption Warning: \label before \caption ignored on input line 161.
+Package caption Warning: \label before \caption ignored on input line 160.
 See the caption package documentation for explanation.
 
 [49] [50]
@@ -834,7 +834,7 @@ File: grafiken/archp2p.eps Graphic file (type eps)
  <grafiken/archp2p.eps> [51] [52]
 File: grafiken/archzentral.eps Graphic file (type eps)
  <grafiken/archzentral.eps> [53]
-Underfull \hbox (badness 10000) in paragraph at lines 266--266
+Underfull \hbox (badness 10000) in paragraph at lines 265--265
 [][]\OT1/cmr/m/n/9 Patentfreies Audio-Kompressions-Format (Xiph OSC) , Ver-si-o
 n 22.03.2008,
  []
@@ -842,7 +842,7 @@ n 22.03.2008,
 [54]
 File: grafiken/archverteilt.eps Graphic file (type eps)
  <grafiken/archverteilt.eps> [55]
-Overfull \hbox (3.15785pt too wide) in paragraph at lines 296--297
+Overfull \hbox (3.15785pt too wide) in paragraph at lines 295--296
 [][]\OT1/cmr/m/n/10.95 Dieses Mo-dell hat je-doch ei-ni-ge Nach-tei-le: Vor al-
 lem beim Ein-satz von Superpeer-
  []
@@ -902,9 +902,9 @@ File: grafiken/sip-client-server.eps Graphic file (type eps)
 LaTeX Warning: Reference `mehrereregistrare' on page 87 undefined on input line
  91.
 
-[87]
+[87] [88]
 File: grafiken/sip-unstrukturiert.eps Graphic file (type eps)
- <grafiken/sip-unstrukturiert.eps> [88] [89]
+ <grafiken/sip-unstrukturiert.eps> [89]
 File: grafiken/sip-p2pstruktur.eps Graphic file (type eps)
 
 <grafiken/sip-p2pstruktur.eps> [90]
@@ -923,6 +923,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 13--13
 22.03.2008,
  []
 
+
+Overfull \hbox (3.34164pt too wide) in paragraph at lines 15--16
+[][]\OT1/cmr/m/n/10.95 Obwohl der Au-dio-co-dec ei-ne Bi-tra-te von 16.8kbit/s 
+be-sitzt, weist die tats[]achliche
+ []
+
 [94
 
 
@@ -937,7 +943,7 @@ Type  H <return>  for immediate help.
  ...                                              
                                                   
 l.36 \subfloat
-              [Full-Mesh-Ansatz]{
+              [Full-Mesh-Ansatz\label{fig:fullmesh}]{
 If you do not understand this error, please take a closer look
 at the documentation of the `caption' package, especially the
 section about errors.
@@ -954,7 +960,7 @@ Type  H <return>  for immediate help.
  ...                                              
                                                   
 l.40 \subfloat
-              [Partial-Mesh-Ansatz]{
+              [Partial-Mesh-Ansatz\label{fig:partialmesh}]{
 If you do not understand this error, please take a closer look
 at the documentation of the `caption' package, especially the
 section about errors.
@@ -1100,12 +1106,12 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 7685 strings out of 95341
- 113998 string characters out of 1184182
- 236779 words of memory out of 1500000
- 10625 multiletter control sequences out of 110000
+ 7686 strings out of 95341
+ 114017 string characters out of 1184182
+ 236792 words of memory out of 1500000
+ 10626 multiletter control sequences out of 110000
  13083 words of font info for 46 fonts, out of 1200000 for 2000
  14 hyphenation exceptions out of 8191
- 38i,17n,47p,1501b,1122s stack positions out of 5000i,500n,10000p,200000b,5000s
+ 38i,17n,47p,1503b,1122s stack positions out of 5000i,500n,10000p,200000b,5000s
 
-Output written on Main.dvi (131 pages, 480408 bytes).
+Output written on Main.dvi (131 pages, 480552 bytes).

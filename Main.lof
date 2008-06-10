@@ -25,8 +25,8 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {6.1}{\ignorespaces Peer-to-Peer-Architektur mit direkten Audioverbindungen der Spieler untereinander in den entsprechenden Spielezonen\relax }}{44}
-\contentsline {figure}{\numberline {6.2}{\ignorespaces Client Server Architektur mit zentralem Mischserver in Nordamerika\relax }}{45}
-\contentsline {figure}{\numberline {6.3}{\ignorespaces Eine Proxy-Architektur. In schwarz ist die Verbindung von Spieler 3 mit Spieler 7 dargestellt.\relax }}{46}
+\contentsline {figure}{\numberline {6.2}{\ignorespaces Client-Server-Architektur mit zentralem Mischserver in Nordamerika\relax }}{45}
+\contentsline {figure}{\numberline {6.3}{\ignorespaces Beispiel f\"ur eine Proxy-Architektur. In schwarz ist die Verbindung von Spieler 3 mit Spieler 7 dargestellt.\relax }}{46}
 \contentsline {figure}{\numberline {6.4}{\ignorespaces Verteilte Server S1...S4. Die Verbindungen der Spielewelt S2 werden in schwarz dargestellt. \relax }}{47}
 \contentsline {figure}{\numberline {6.5}{\ignorespaces Dezentralisierte SIP Architektur\relax }}{52}
 \contentsline {figure}{\numberline {6.6}{\ignorespaces Komplett zentralisierter Ansatz mit SIP\relax }}{54}
@@ -39,13 +39,13 @@
 \contentsline {figure}{\numberline {7.4}{\ignorespaces Eine \"Ubersicht \"uber den Audiofluss in PjSIP\relax }}{71}
 \contentsline {figure}{\numberline {7.5}{\ignorespaces Startbildschirm des Spiels\relax }}{72}
 \contentsline {figure}{\numberline {7.6}{\ignorespaces Ablauf einer symmetrischen Verbindung\relax }}{74}
-\contentsline {figure}{\numberline {7.7}{\ignorespaces Funktionsweise der Konferenzbr\"ucke mit 5 Teilnehmern und Anpassung der einzelnen Audiostr\"ome\relax }}{77}
+\contentsline {figure}{\numberline {7.7}{\ignorespaces Funktionsweise der Konferenzbr\"ucke mit 5 Teilnehmern und Anpassung der einzelnen Audiostr\"ome\relax }}{76}
 \contentsline {figure}{\numberline {7.8}{\ignorespaces Zonenkonzept und daraus resultierende Funktionalit\"at\relax }}{78}
 \contentsline {figure}{\numberline {7.9}{\ignorespaces Schematischer Ablauf des SIP-HOLD Nachrichtenverlaufs\relax }}{80}
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {8.1}{\ignorespaces Eine Client-Server Architektur mit SIP\relax }}{84}
 \contentsline {figure}{\numberline {8.2}{\ignorespaces Unstrukturierte P2P-Signalisierung mit SIP\relax }}{89}
-\contentsline {figure}{\numberline {8.3}{\ignorespaces Strukturiertes P2PSIP Overlay\relax }}{90}
+\contentsline {figure}{\numberline {8.3}{\ignorespaces Strukturiertes P2PSIP Overlay\relax }}{91}
 \contentsline {figure}{\numberline {8.4}{\ignorespaces Registrierung eines neuen Knotens bei Knoten C\relax }}{92}
 \contentsline {figure}{\numberline {8.5}{\ignorespaces Registrierung des Benutzers\relax }}{92}
 \contentsline {figure}{\numberline {8.6}{\ignorespaces Ein schematischer Ablauf eines Anrufs bei P2P-SIP\relax }}{93}
