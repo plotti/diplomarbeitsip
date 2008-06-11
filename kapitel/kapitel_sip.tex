@@ -28,9 +28,9 @@ Für die Sprachübertragung wird das Echtzeit-Transport-Protokoll (Realtime Transp
 %Dieses Kapitel soll zunächst den Aufbau eines VoIP Systems beschreiben um anschließend die Protokolle SIP, SDP, RTP und RTCP zu behandeln. Da SIP die ältere H.323 Protokollfamilie in langfristig verdrängen wird, wird diese nicht behandelt. %Im Abschluss wird ein Überblick über das propriätere Protokoll von Skype gegeben, dessen Funktionsweise und Details zwar nicht offen sind, es jedoch eine Alternative zu den offenen Protokollen bietet. 
 \section{Allgemeines über VoIP}
 \subsection{Einfaches VoIP-System}
-Der Aufbau eines einfachen VoIP-Systems kann prinzipiell mit einer bestehenden IP-Infrastruktur und Computerprogrammen, die Telefonie ermöglichen (\textit{Softphones}), realisiert werden. Die Teilnehmer müssen jedoch bei einer solchen Konfiguration die IP-Adressen der gewünschten Ge\-sprächs\-partner kennen, um einen direkten Anruf auszuführen. Bei einer Adress\-änderung der IP-Adresse eines Gesprächspartners müssten jedoch alle Einträge der Gesprächspartner entsprechend abgeändert werden, weil sich die Teilnehmer sonst nicht mehr erreichen könnten. Der gleiche Aufwand müsste auch beim Hinzufügen weiterer Teilnehmer erfolgen. %Ein solcher Aufbau wird daher als unflexibel angesehen. 
+Der Aufbau eines einfachen VoIP-Systems kann prinzipiell mit einer bestehenden IP-Infrastruktur und Computerprogrammen, die Telefonie ermöglichen (\textit{Softphones}), realisiert werden. Die Teilnehmer müssen bei einer solchen Konfiguration die IP-Adressen der gewünschten Ge\-sprächs\-partner kennen, um einen direkten Anruf auszuführen. Bei einer Adress\-änderung der IP-Adresse eines Gesprächspartners müssten alle Einträge der Gesprächspartner entsprechend abgeändert werden, weil sich die Teilnehmer sonst nicht mehr erreichen könnten. Der gleiche Aufwand müsste auch beim Hinzufügen weiterer Teilnehmer erfolgen. %Ein solcher Aufbau wird daher als unflexibel angesehen. 
 
-Im SIP-Protokoll wird dieses Problem von Komponenten (\textit{Proxys}), die die Aufgabe einer Vermittlungsstelle einnehmen, übernommen. Ein Proxy kann einen Lokationsdienst (\textit{Location Service}) enthalten, der ankommende SIP-Pakete an das Telefon des angerufenen Teilnehmers oder an einen anderen Proxy weiterleitet, falls sich der Benutzer außerhalb des eigenen Adressbereichs befindet. Zusätzlich können Konferenzen, Voice-Mail und Anrufweiterleitungen Teil eines VoIP-Systems sein. 
+Im SIP-Protokoll wird dieses Problem von Komponenten , die die Aufgabe einer Vermittlungsstelle einnehmen, übernommen (\textit{Proxys}). Ein Proxy kann einen Lokationsdienst (\textit{Location Service}) enthalten, der ankommende SIP-Pakete an das Telefon des angerufenen Teilnehmers oder an einen anderen Proxy weiterleitet, falls sich der Benutzer außerhalb des eigenen Adressbereichs befindet. Zusätzlich können Konferenzen, Voice-Mail und Anrufweiterleitungen Teil eines VoIP-Systems sein. 
 
 %Da die klassische Telefonie weiterhin neben VoIP Bestand hat, wird versucht mit zusätzlichen Komponenten, den Gateways, eine Verbindung zwischen den beiden Telefonsystemen herzustellen. 
 
@@ -100,7 +100,7 @@ Es gibt mehrere Sprachkodierungsverfahren, die bei Voice-over-IP verwendet werde
 \begin{minipage}{\linewidth}
 \renewcommand{\footnoterule}{}
 \centering
-\label{pt-tabelle}
+
 \begin{tabular}{lllr}
 \toprule
 PT-Nr.\footnote{Die Verwendung von PT-Nummern wird in Absatz \ref{sdp-aufbau} erläutert} & Kodierungsname & Kodierungsart & Bitrate (kbit/s) \\
@@ -117,6 +117,7 @@ dyn & G726-16 & Abtastwert-orientiert & 16 \\
 \end{tabular}
 \end{minipage}
 \caption{Überblick über Sprachkodierungsverfahren und Bitraten}
+\label{pt-tabelle}
 \end{table}
 
 \section{Session-Initiation-Protokoll (SIP)}
@@ -171,10 +172,10 @@ Content-Type: application/sdp
 \caption{Beispiel eines typischen SIP-Requests}
 \end{figure}
 
-Die Start-Zeile (\textit{Status-Line}) besteht bei den Requests aus einer Angabe des Request-Typs z. B. INVITE, einer \textit{Request-URI}(z. B. sip:8302002@192.168.2.25) als Ziel-Adresse und der SIP-Version. Bei einem Response enthält die \textit{Status-Line} die SIP-Version und einen \textit{Status-Code}, der den Nachrichtentyp definiert. Beide Typen von Nachrichten enthalten mehrere Header-Felder, von denen folgende besonders hervorzuheben sind:
+Die Start-Zeile (\textit{Status-Line}) besteht bei den Requests aus einer Angabe des Request-Typs z. B. INVITE, einer \textit{Request-URI\footnote{Ein Uniform Resource Identifier (URI) ist ein Identifikator und besteht aus einer Zeichenfolge, die zur Identifizierung einer abstrakten oder physischen Ressource dient.}} (z. B. sip:8302002@192.168.2.25) als Ziel-Adresse und der SIP-Version. Bei einem Response enthält die \textit{Status-Line} die SIP-Version und einen \textit{Status-Code}, der den Nachrichtentyp definiert. Beide Typen von Nachrichten enthalten mehrere Header-Felder, von denen folgende besonders hervorzuheben sind:
 \begin{itemize}
 	\item From: Dieses Feld enthält einen Namen und eine SIP-URI, die den Absender eindeutig identifiziert. 
-	\item To: Der To-Header identifiziert den logischen Empfänger der Anfrage und entspricht der URL in der Anfragezeile. Diese Headerzeile ist ähnlich der des From-Headers aufgebaut.
+	\item To: Der To-Header identifiziert den logischen Empfänger der Anfrage und entspricht der URI in der Anfragezeile. Diese Headerzeile ist ähnlich der des From-Headers aufgebaut.
 	\item Contact: Contact gibt eine SIP-URI an, unter der die Gegenstelle für weitere
 Anfragen erreicht werden kann. Das Format entspricht dem der To- und From-Header. Ein Parameter für diese Headerzeile ist \textit{expires}, der die Zeit in Sekunden angibt, bis der Kontakt nicht mehr verfügbar ist.
 	\item Call-ID: Diese identifiziert den Anruf. Jeder Anruf enthält eine ID, die sich aus einer Zufallszahl und den Namen des Anrufenden zusammensetzt. 
@@ -238,7 +239,7 @@ Im RFC 3261 werden ebenfalls sechs Response-Klassen spezifiziert, die dem Absend
 % Grafik über Rufaufbau
 
 Teilnehmer A möchte zu Teilnehmer B eine Verbindung herstellen. Dazu sendet er eine SIP-Nachricht INVITE an Teilnehmer B. Die Nachricht enthält die Beschreibung der RTP-Session nach dem SDP-Protokoll und alle notwendigen Angaben, wie z. B. die Sprachkodierung, damit Teilnehmer B prüfen kann, ob eine Session hergestellt werden kann. Falls Teilnehmer B die Verbindung annehmen kann, klingelt das angerufene IP-Telefon von Teilnehmer B, dies wird mit der SIP-Response 180 Ringing signalisiert. 
-Hat nun Teilnehmer B den Hörer abgehoben, sendet er einen SIP-Response 200 OK, der vom Teilnehmer A mit der Nachricht ACK bestätigt wird. Mit dem Empfang der ACK-Nachricht von Teilnehmer B, ist die logische Verbindung aufgebaut\footnote{Ist ein Teilnehmer nicht erreichbar, wird der Rufaufbau nach Ablauf einer bestimmten Zeit abgebrochen} der Rufaufbau statt oder ist ein Fehler aufgetreten . Nun kann eine Verbindung nach dem Protokoll RTP verlaufen und es besteht eine Session zwischen den Teilnehmern. 
+Hat nun Teilnehmer B den Hörer abgehoben, sendet er einen SIP-Response 200 OK, der vom Teilnehmer A mit der Nachricht ACK bestätigt wird. Mit dem Empfang der ACK-Nachricht von Teilnehmer B, ist die logische Verbindung aufgebaut\footnote{Ist ein Teilnehmer nicht erreichbar, wird der Rufaufbau nach Ablauf einer bestimmten Zeit abgebrochen.} der Rufaufbau (siehe Abbildung \ref{fig:sipanruf}) statt oder ist ein Fehler aufgetreten . Nun kann eine Verbindung nach dem Protokoll RTP verlaufen und es besteht eine Session zwischen den Teilnehmern. 
 Die bestehende RTP-Session kann von beiden Seiten beendet werden. Beendet Teilnehmer A durch das Absenden der SIP-Nachricht BYE die Session, bestätigt Teilnehmer B den Empfang der Nachricht mit der SIP-Response 200 OK. Mit dem Empfang von 200 OK beim IP-Telefon des Teilnehmers A wird die Session beendet. 
 
 \begin{figure}[h!]

@@ -5,7 +5,7 @@ Version=2
 [SessionInfo]
 ActiveTab=0
 FrameCount=21
-ActiveFrame=12
+ActiveFrame=9
 
 [Frame0]
 Columns=1
@@ -32,9 +32,9 @@ cxCur=719
 cxMin=10
 
 [Frame0_View0,0]
-Cursor.row=0
-Cursor.column=0
-TopSubLine=75
+Cursor.row=88
+Cursor.column=1
+TopSubLine=82
 
 [Frame1]
 Columns=1
@@ -61,9 +61,9 @@ cxCur=751
 cxMin=10
 
 [Frame1_View0,0]
-Cursor.row=1
+Cursor.row=51
 Cursor.column=0
-TopSubLine=0
+TopSubLine=177
 
 [Frame2]
 Columns=1
@@ -90,8 +90,8 @@ cxCur=751
 cxMin=10
 
 [Frame2_View0,0]
-Cursor.row=339
-Cursor.column=557
+Cursor.row=0
+Cursor.column=0
 TopSubLine=976
 
 [Frame3]
@@ -119,9 +119,9 @@ cxCur=751
 cxMin=10
 
 [Frame3_View0,0]
-Cursor.row=108
-Cursor.column=143
-TopSubLine=330
+Cursor.row=97
+Cursor.column=292
+TopSubLine=290
 
 [Frame4]
 Columns=1
@@ -177,9 +177,9 @@ cxCur=751
 cxMin=10
 
 [Frame5_View0,0]
-Cursor.row=1
-Cursor.column=0
-TopSubLine=0
+Cursor.row=76
+Cursor.column=229
+TopSubLine=164
 
 [Frame6]
 Columns=1
@@ -264,15 +264,15 @@ cxCur=801
 cxMin=10
 
 [Frame8_View0,0]
-Cursor.row=0
-Cursor.column=0
-TopSubLine=0
+Cursor.row=1
+Cursor.column=1303
+TopSubLine=6
 
 [Frame9]
 Columns=1
 Rows=1
-Flags=0
-ShowCmd=1
+Flags=2
+ShowCmd=3
 MinPos.x=-1
 MinPos.y=-1
 MaxPos.x=-4
@@ -285,17 +285,17 @@ Class=CLatexEdit
 Document=kapitel\kapitel_konstruktion.tex
 
 [Frame9_Row0]
-cyCur=346
+cyCur=405
 cyMin=10
 
 [Frame9_Col0]
-cxCur=801
+cxCur=933
 cxMin=10
 
 [Frame9_View0,0]
-Cursor.row=178
-Cursor.column=0
-TopSubLine=438
+Cursor.row=293
+Cursor.column=108
+TopSubLine=623
 
 [Frame10]
 Columns=1
@@ -322,9 +322,9 @@ cxCur=787
 cxMin=10
 
 [Frame10_View0,0]
-Cursor.row=292
-Cursor.column=16
-TopSubLine=598
+Cursor.row=241
+Cursor.column=275
+TopSubLine=468
 
 [Frame11]
 Columns=1
@@ -358,8 +358,8 @@ TopSubLine=0
 [Frame12]
 Columns=1
 Rows=1
-Flags=2
-ShowCmd=3
+Flags=0
+ShowCmd=1
 MinPos.x=-1
 MinPos.y=-1
 MaxPos.x=-4
@@ -372,17 +372,17 @@ Class=CLatexEdit
 Document=kapitel\kapitel_conclusion.tex
 
 [Frame12_Row0]
-cyCur=405
+cyCur=346
 cyMin=10
 
 [Frame12_Col0]
-cxCur=912
+cxCur=762
 cxMin=10
 
 [Frame12_View0,0]
-Cursor.row=3
-Cursor.column=189
-TopSubLine=0
+Cursor.row=21
+Cursor.column=0
+TopSubLine=81
 
 [Frame13]
 Columns=1
@@ -440,7 +440,7 @@ cxMin=10
 [Frame14_View0,0]
 Cursor.row=201
 Cursor.column=0
-TopSubLine=472
+TopSubLine=464
 
 [Frame15]
 Columns=1
@@ -467,9 +467,9 @@ cxCur=1000
 cxMin=10
 
 [Frame15_View0,0]
-Cursor.row=0
-Cursor.column=0
-TopSubLine=0
+Cursor.row=39
+Cursor.column=6
+TopSubLine=30
 
 [Frame16]
 Columns=1
@@ -496,9 +496,9 @@ cxCur=746
 cxMin=10
 
 [Frame16_View0,0]
-Cursor.row=128
-Cursor.column=7
-TopSubLine=291
+Cursor.row=0
+Cursor.column=19
+TopSubLine=0
 
 [Frame17]
 Columns=1
@@ -525,9 +525,9 @@ cxCur=839
 cxMin=10
 
 [Frame17_View0,0]
-Cursor.row=0
+Cursor.row=83
 Cursor.column=0
-TopSubLine=0
+TopSubLine=288
 
 [Frame18]
 Columns=1
@@ -614,5 +614,5 @@ cxMin=10
 [Frame20_View0,0]
 Cursor.row=33
 Cursor.column=21
-TopSubLine=21
+TopSubLine=23
 
