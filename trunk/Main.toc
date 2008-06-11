@@ -1,13 +1,12 @@
 \select@language {english}
 \select@language {ngerman}
-\contentsline {chapter}{Stichwortverzeichnis}{vii}
-\contentsline {chapter}{Abbildungsverzeichnis}{viii}
-\contentsline {chapter}{Tabellenverzeichnis}{x}
-\contentsline {chapter}{Abk\"{u}rzungsverzeichnis}{xi}
+\contentsline {chapter}{Abbildungsverzeichnis}{vii}
+\contentsline {chapter}{Tabellenverzeichnis}{ix}
+\contentsline {chapter}{Abk\"{u}rzungsverzeichnis}{x}
 \contentsline {chapter}{\numberline {1}Einf\"uhrung}{1}
 \contentsline {section}{\numberline {1.1}Motivation}{1}
 \contentsline {section}{\numberline {1.2}Ziel der Diplomarbeit}{3}
-\contentsline {section}{\numberline {1.3}Aufbau der Arbeit}{4}
+\contentsline {section}{\numberline {1.3}Aufbau der Arbeit}{3}
 \contentsline {chapter}{\numberline {2}Grundlagen der Kommunikation}{5}
 \contentsline {section}{\numberline {2.1}Kommunikationsmodell}{5}
 \contentsline {section}{\numberline {2.2}Auspr\"agungen: Interpersonelle vs. Massenkommunikation}{6}
@@ -22,6 +21,8 @@
 \contentsline {subsubsection}{Keine Zuordnung zwischen Sprache und Avataren}{12}
 \contentsline {section}{\numberline {3.2}Herausforderungen an eine bessere L\"osung}{12}
 \contentsline {subsection}{\numberline {3.2.1}Mehrkanal-Modell}{12}
+\contentsline {subsubsection}{Einkanalmodell}{12}
+\contentsline {subsubsection}{Mehrkanalmodell}{14}
 \contentsline {subsection}{\numberline {3.2.2}Einsatz von Metaphern zur Sprach\"ubertragung}{15}
 \contentsline {subsection}{\numberline {3.2.3}Proxemik zur Steuerung von Konferenzen}{16}
 \contentsline {chapter}{\numberline {4}VoIP-Grundlagen}{18}
@@ -164,8 +165,8 @@
 \contentsline {subsection}{\numberline {9.3.4}Zonen mit unterschiedlichen Audiocodecs}{99}
 \contentsline {section}{\numberline {9.4}SIP als Netzwerkschnittstelle}{100}
 \contentsline {section}{\numberline {9.5}Conference-Bridge}{101}
-\contentsline {chapter}{\numberline {10}Fazit und Ausblick}{102}
-\contentsline {section}{\numberline {10.1}Fazit}{102}
-\contentsline {section}{\numberline {10.2}Ausblick}{103}
-\contentsline {chapter}{Anhang}{107}
-\contentsline {chapter}{Literaturverzeichnis}{111}
+\contentsline {chapter}{\numberline {10}Fazit und Ausblick}{103}
+\contentsline {section}{\numberline {10.1}Fazit}{103}
+\contentsline {section}{\numberline {10.2}Ausblick}{104}
+\contentsline {chapter}{Anhang}{108}
+\contentsline {chapter}{Literaturverzeichnis}{112}
