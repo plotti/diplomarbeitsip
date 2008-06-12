@@ -54,13 +54,13 @@
 \contentsline {figure}{\numberline {9.2}{\ignorespaces Bandbreitenverbrauch beim Full-Mesh-Ansatz\relax }}{97}
 \contentsline {figure}{\numberline {9.3}{\ignorespaces Bandbreiteneinsparungen beim Partial-Mesh, da nicht mehr alle Verbindungen aufgebaut werden m\"ussen\relax }}{98}
 \contentsline {figure}{\numberline {9.4}{\ignorespaces Messung der RTT im LAN zwischen zwei Clients\relax }}{100}
-\contentsline {figure}{\numberline {9.5}{\ignorespaces Anstieg der CPU-Last in Abh\"angigkeit der Anzahl der Abgemischten Audiokan\"ale\relax }}{102}
+\contentsline {figure}{\numberline {9.5}{\ignorespaces Anstieg der CPU-Last in Abh\"angigkeit der Anzahl der Abgemischten Audiokan\"ale\relax }}{101}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {A.1}{\ignorespaces Der Up- und Downstream ohne Unterscheidung der Zonen\relax }}{108}
-\contentsline {figure}{\numberline {A.2}{\ignorespaces Signalisierung mit SIP, Audiostrom mit RTP ohne Unterscheidung der Zonen\relax }}{108}
-\contentsline {figure}{\numberline {A.3}{\ignorespaces Der Up- und Downstream mit der Silcence-Supression-Technik\relax }}{109}
-\contentsline {figure}{\numberline {A.4}{\ignorespaces Der Up- und Downstream mit der Silcence-Supression-Technik\relax }}{109}
-\contentsline {figure}{\numberline {A.5}{\ignorespaces Der Up- und Downstream mit der SIP-Hold-Technik\relax }}{110}
-\contentsline {figure}{\numberline {A.6}{\ignorespaces Gegen\"uberstellung des SIP und RTP Traffics mit der SIP HOLD-Technik\relax }}{110}
-\contentsline {figure}{\numberline {A.7}{\ignorespaces Speex mit 16kHz in der privaten Zone und Speex 8khZ in der sozialen Zone\relax }}{111}
-\contentsline {figure}{\numberline {A.8}{\ignorespaces Rufauf und -abbau, sowie Signalisierung eines anderen Codecs mit SIP, Reduktion des Audiostroms mit RTP\relax }}{111}
+\contentsline {figure}{\numberline {A.1}{\ignorespaces Der Up- und Downstream ohne Unterscheidung der Zonen\relax }}{107}
+\contentsline {figure}{\numberline {A.2}{\ignorespaces Signalisierung mit SIP, Audiostrom mit RTP ohne Unterscheidung der Zonen\relax }}{107}
+\contentsline {figure}{\numberline {A.3}{\ignorespaces Der Up- und Downstream mit der Silcence-Supression-Technik\relax }}{108}
+\contentsline {figure}{\numberline {A.4}{\ignorespaces Der Up- und Downstream mit der Silcence-Supression-Technik\relax }}{108}
+\contentsline {figure}{\numberline {A.5}{\ignorespaces Der Up- und Downstream mit der SIP-Hold-Technik\relax }}{109}
+\contentsline {figure}{\numberline {A.6}{\ignorespaces Gegen\"uberstellung des SIP und RTP Traffics mit der SIP HOLD-Technik\relax }}{109}
+\contentsline {figure}{\numberline {A.7}{\ignorespaces Speex mit 16kHz in der privaten Zone und Speex 8khZ in der sozialen Zone\relax }}{110}
+\contentsline {figure}{\numberline {A.8}{\ignorespaces Rufauf und -abbau, sowie Signalisierung eines anderen Codecs mit SIP, Reduktion des Audiostroms mit RTP\relax }}{110}
