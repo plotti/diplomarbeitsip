@@ -1,6 +1,6 @@
 \chapter{Implementierung des Spiel-Prototypen}
 
-Dieses Kapitel befasst sich mit der Implementierung des Spiel-Prototypen mit distanzbasierter integrierter Sprachkommunikation auf Basis eines hybriden SIP Multi-unicast-Ansatzes in einer 3D-Umgebung und präsentiert ausgewählte Details und Probleme bei der Umsetzung. Hauptaugenmerk liegt dabei auf der technischen Umsetzung der in \textit{Kapitel3} vorgestellten distanzbasierten Sprachkommunikation, der Umsetzung der Zonenkonzepte und der Zusammenarbeit des 3D-Frameworks mit der VoIP-Anwendung.
+Dieses Kapitel befasst sich mit der Implementierung des Spiel-Prototypen mit distanzbasierter integrierter Sprachkommunikation auf Basis eines hybriden SIP-Unicast-Ansatzes in einer 3D-Umgebung und präsentiert ausgewählte Details und Probleme bei der Umsetzung. Hauptaugenmerk liegt dabei auf der technischen Umsetzung der in \textit{Kapitel3} vorgestellten distanzbasierten Sprachkommunikation, der Umsetzung der Zonenkonzepte und der Zusammenarbeit des 3D-Frameworks mit der VoIP-Anwendung.
 
 \section{Vorausetzungen}
  \label{prototyp}
@@ -8,16 +8,16 @@ Dieses Kapitel befasst sich mit der Implementierung des Spiel-Prototypen mit dis
  
 Die Anforderungen an die zur Umsetzung der Implementierung des Prototypen eingesetzten VoIP-Komponenten leiten sich direkt aus den in Kapitel 3 gestellten Herausforderungen ab: Die VoIP-Komponente muss dem Client die Kontrolle über den gleichzeitigen Rufauf- und Abbau mehrerer Audioströme erlauben. Damit die Metapher der Luftübertragung realisiert werden kann, muss beim Abmischen die Lautstärke aller Ströme kontrollierbar sein. Zusätzliche Kriterien sind die Unterstützung der Änderung der Bitrate des Audiosignals oder die Kontrolle verschiedener Konnektivitätsstufen, um eine Unterscheidung in den Proxemik-Zonen vorzunehmen.
 
-Was die Anforderungen an das 3D-Framework betrifft, zeigt die klassische Einteilung \cite{aarseth03} von Spielen in Spielegenres, dass vor allem 3D-Actionspiele und Echtzeit-Rollenspiele den größten Bedarf an einer ausgeprägten Sprachkommunikation haben, da sie den Echtzeit-Aspekt betonen und oft eine kollektive synchronisierte Zusammenarbeit mehrerer Spielergruppen benötigen. So sind bei der grafischen Umsetzung des Prototyps Lösungen gefragt, die eine virtuelle, detaillierte und realistische 3D-Welt darstellen können, in der der Spieler die Möglichkeit frei bewegen und mit anderen Spielern in Interaktion treten kann. 
+Was die Anforderungen an das 3D-Framework betrifft, zeigt die klassische Einteilung \cite{aarseth03} von Spielen in Spielegenres, dass vor allem 3D-Actionspiele und Echtzeit-Rollenspiele den größten Bedarf an einer ausgeprägten Sprachkommunikation haben, da sie den Echtzeit-Aspekt betonen und oft eine kollektive synchronisierte Zusammenarbeit mehrerer Spielergruppen benötigen. So sind bei der grafischen Umsetzung des Prototyps Lösungen gefragt, die eine virtuelle, detaillierte und realistische 3D-Welt darstellen können, in der der Spieler die Möglichkeit hat sich frei zu bewegen und mit anderen Spielern in Interaktion treten kann. 
 
-In dieser Arbeit besteht kein Anspruch darauf einen Spiel-Prototypen zu entwickeln, der einem ausgereiften 3D-Action- oder Echtzeit-Rollenspiel entspricht. Stattdessen soll der Einsatz beider Komponenten im Viereck \cite{lindley03}, \cite{gibbs05} (siehe Abbildung \ref{fig:spieledreieck}) aus Spielerlebnis, Spielsimulation, erzählerischem Aspekt und der Spielerinteraktion durch möglichst effektive und intuitive Einsatzmöglichkeit der Sprachkommunikation eine hohe Spielerinteraktion erreichen und durch eine möglichst realistische Umgebung eine hohe Simulationstiefe darstellen.  
+%In dieser Arbeit besteht kein Anspruch darauf einen Spiel-Prototypen zu entwickeln, der einem ausgereiften 3D-Action- oder Echtzeit-Rollenspiel entspricht. Stattdessen soll der Einsatz beider Komponenten im Viereck \cite{lindley03}, \cite{gibbs05} (siehe Abbildung \ref{fig:spieledreieck}) aus Spielerlebnis, Spielsimulation, erzählerischem Aspekt und der Spielerinteraktion durch möglichst effektive und intuitive Einsatzmöglichkeit der Sprachkommunikation eine hohe Spielerinteraktion erreichen und durch eine möglichst realistische Umgebung eine hohe Simulationstiefe darstellen.  
 
-\begin{figure}[tbh]
-	\centering
-	\includegraphics[width=1.00\textwidth]{grafiken/spielgenredreieck.eps}
-	\caption{Viereck aus Spielerlebnis, Simulation, erzählerischem Aspekt und Spielerinteraktion}
-	\label{fig:spieledreieck}
-\end{figure}
+%\begin{figure}[tbh]
+%	\centering
+%	\includegraphics[width=1.00\textwidth]{grafiken/spielgenredreieck.eps}
+%	\caption{Viereck aus Spielerlebnis, Simulation, erzählerischem Aspekt und %Spielerinteraktion}
+%	\label{fig:spieledreieck}
+%\end{figure}
 
 \section{Auswahl eines 3D-Frameworks}
 Da die Entwicklung eines realistischen Spieles weit über das Thema der Arbeit hinausgeht und diese Aufgabe normalerweise von ganzen Teams über mehrere Monate oder Jahre bewältigt wird, sollen nach Möglichkeit bestehende Frameworks, eingesetzt werden, die die Steuerung eines Avatars in einer möglichst realistischen 3D Umgebung erlauben. 
@@ -31,7 +31,7 @@ Seit einigen Jahren sind auch komplette Neuentwicklungen wie \textit{Sauerbraten
 Eine Alternative zu 3D-Spiele-Frameworks bieten offene generische 3D-Engines, deren Fokus auf der möglichst komfortablen Darstellung von 3D-Grafiken liegt. Dazu werden meist die Details von Systembibliotheken wie \textit{Direct3D} oder \textit{OpenGL} abstrahiert und dem Entwickler ein Interface angeboten, das auf höheren Abstraktionsklassen basiert. Bekannte Vertreter sind \textit{Ogre3D}\footnote{TheOGRETeam, Version. 22.03.2008,  http://www.ogre3d.org/} oder \textit{Irrlicht}\footnote{N. Gebhardt, Version. 22.03.2008, http://irrlicht.sourceforge.net/}. 
 
 \subsubsection{\textit{Irrlicht}}
-\textit{Irrlicht} ist ein einfaches gut dokumentiertes Open-Source Framework in C++, das übliche 3D Features wie \textit{Collision Detection}, Animationen, \textit{Shading} und Texturen sowohl unter \textit{Windows}, \textit{Linux} als auch \textit{Mac OS} unterstützt. Der Hauptgrund für den Einsatz von Irrlicht liegt darin, da aufgrund der bestehenden Arbeit von Triebel \cite{triebel07g}, es mir  möglich war, bereits bestehende Konzepte zu verwenden und somit eine schnelle Entwicklung des Prototyps gewährleistet wurde. Da man bei Irrlicht das Spiel von Grund auf selbst gestaltet hat man so eine maximale Kontrolle über alle technischen Einzelheiten und Abläufe während des Spiels. Als zusätzlichen Anreiz existiert speziell für Irrlicht eine einfache plattform-übergreifende Audiobibliothek (\textit{IrrKlang}\footnote{Nikolaus Gebhardt, Version 15.04.2008, http://www.ambiera.com/irrklang}). Sie unterstützt Audioverarbeitung auf der nativen Ebene, realistisches \textit{3D-Audio-Rendering}, \textit{Multithreading} und kann über \textit{Plugins} erweitert werden. Diese bietet die Möglichkeit die Soundausgabe bestehender VoIP-Komponenten mit Irrlicht zu verbinden und zusätzlich eine 3D-Positionierung des Audiosignals erlauben. 
+\textit{Irrlicht} ist ein einfaches gut dokumentiertes Open-Source Framework in C++, das übliche 3D Features wie \textit{Collision Detection}, Animationen, \textit{Shading} und Texturen sowohl unter \textit{Windows}, \textit{Linux} als auch \textit{Mac OS} unterstützt. Der Hauptgrund für den Einsatz von Irrlicht liegt darin, dass die Konzepte der bestehenden Arbeit von Triebel \cite{triebel07g} verwendet werden konnten und so eine schnelle Entwicklung des Prototyps gewährleistet wurde. Da man bei Irrlicht das Spiel von Grund auf selbst gestaltet hat man so eine maximale Kontrolle über alle technischen Einzelheiten und Abläufe während des Spiels. Als zusätzlichen Anreiz existiert speziell für Irrlicht eine einfache plattform-übergreifende Audiobibliothek (\textit{IrrKlang}\footnote{Nikolaus Gebhardt, Version 15.04.2008, http://www.ambiera.com/irrklang}). Sie unterstützt Audioverarbeitung auf der nativen Ebene, realistisches \textit{3D-Audio-Rendering}, \textit{Multithreading} und kann über \textit{Plugins} erweitert werden. Diese bietet die Möglichkeit die Soundausgabe bestehender VoIP-Komponenten mit Irrlicht zu verbinden und zusätzlich eine 3D-Positionierung des Audiosignals erlauben. 
 
 \section{Auswahl einer VoIP-Lösung}
 
@@ -51,9 +51,9 @@ Die Funktionsweise dieser Programme wurde bereits in Abschnitt  \ref{sprachprobl
 
 \subsection{Nutzung der API von VoIP-Anwendungen}
 
-Es existieren etliche verschiedene VoIP Programme, die alle als dezentralisierte Lösungen eingesetzt werden können. Solche Programme wie \textit{X-Lite}\footnote{Counterpath, Version 21.03.2008, http://www.xten.com}, \textit{Gizmo5}\footnote{SIPphone Inc, Version 21.03.2008, http://gizmo5.com} oder \textit{OpenWengo}\footnote{OpenWengo Inc, Version 21.03.2008, http://www.openwengo.org}, werden von Infrastruktur-Betreibern kostenlos angeboten, um den eigenen Marktanteil am VoIP-Markt zu erhöhen. Diese besitzen meist einen großen Funktionsumfang, lassen sich jedoch aufgrund bestehender Lizenzen nicht modifizieren und sind meist an die Nutzung der Infrastruktur eines bestimmten Betreibers gebunden.
+Es existieren verschiedene VoIP Programme, die alle als dezentralisierte Lösungen eingesetzt werden können. Solche Programme wie \textit{X-Lite}\footnote{Counterpath, Version 21.03.2008, http://www.xten.com}, \textit{Gizmo5}\footnote{SIPphone Inc, Version 21.03.2008, http://gizmo5.com} oder \textit{OpenWengo}\footnote{OpenWengo Inc, Version 21.03.2008, http://www.openwengo.org}, werden von Infrastruktur-Betreibern kostenlos angeboten, um den eigenen Marktanteil am VoIP-Markt zu erhöhen. Diese besitzen meist einen großen Funktionsumfang, lassen sich jedoch aufgrund bestehender Lizenzen nicht modifizieren und sind meist an die Nutzung der Infrastruktur eines bestimmten Betreibers gebunden.
 
-Daneben existiert mittlerweile eine Vielzahl an spezieller ausgereifter Open-Source SIP-\textit{Softphone}-Lösungen wie 
+Daneben existiert eine Vielzahl an spezieller ausgereifter Open-Source SIP-\textit{Softphone}-Lösungen wie 
 \textit{Ekiga}\footnote{Damien Sandras, Version 24.03.2008, http://www.gnomemeeting.org/}, \textit{KPhone}\footnote{Jan Janak, Version 24.03.2008, http://sourceforge.net/projects/kphone} \textit{Linphone}\footnote{Antisip, Version 24.03.2008, http://www.linphone.org} oder \textit{Minisip}\footnote{Telecommunications System Laboratory, Version 25.03.2008, http://www.minisip.org}. Die API der meisten dieser Lösungen ist jedoch auf das Ausführen von Telefonaten und einige Sonderfunktionen beschränkt. Eine detaillierte Kontrolle einer lokalen Konferenz ist ausgeschlossen. 
 
 %Eine ausführliche und aktuelle Übersicht vieler auf auf dem Markt erhältlichen SIP Clients und Server Anwendungen ist im Internet verfügbar\footnote{Wikipedia:Overview of SIP Software, Version 22.03.2008, http://en.wikipedia.org/wiki/List\_of\_SIP\_software}
@@ -65,16 +65,16 @@ Von den Mitbegründern der Tauschbörse \textit{Kazaa}\footnote{Internet Tauschbör
 
 %Super Nodes sind Ordinary Hosts mit einer öffentlichen IP-Adresse und ausreichender Bandbreite, CPU-Leistung und Hauptspeicher und dienen als Endpunkte für die anderen Hosts. Der Benutzer selber hat keinen Einfluss auf die Entscheidung, ob sein Rechner als Super Node fungiert oder nicht. In diesem Zusammenhang kann man bei Skype nicht von einer reinen P2P Architektur sprechen, da nicht alle beteiligten Rechner gleiche Aufgaben übernehmen. 
 
-Die \textit{Skype} Technologie ermöglicht als einziges ein völlig dezentrales VoIP. Der Einsatz des \textit{Skype} Dienstes und Clients ist kostenlos. Über das \textit{Skype-API }ist es auch für externe Programme möglich, auf die Funktionalitäten des \textit{Skype-Clients} zu nutzen. Gerade deshalb wurde zur Anfangszeit der Arbeit Skype als VoIP-Lösung favorisiert. 
+Die \textit{Skype} Technologie ermöglicht als einziges ein völlig dezentrales VoIP. Der Einsatz des \textit{Skype} Dienstes und der Clients ist kostenlos. Über das \textit{Skype-API }ist es auch für externe Programme möglich, auf die Funktionalitäten des \textit{Skype-Clients} zu nutzen. 
 
-Wie sich jedoch beim Versuch einer Implementierung zeigte sind in der kostenlosen/kostenpflichtigen Version nur Konferenzen mit bis zu 5/10 gleichzeitigen Teilnehmern möglich. Beide Versionen bieten auf Clientseite keine Kontrolle über die einzelnen Audioströme. So kann nur die Summe aller Audioströme empfangen werden. Die Clientanwendung ist nicht in der Lage, einzelne Audioströme auszublenden oder die Lautstärke einzelner Teilnehmer zu ändern.  
+Wie sich jedoch beim Versuch einer Implementierung zeigte, sind in der kostenlosen/kostenpflichtigen Version nur Konferenzen mit bis zu 5/10 gleichzeitigen Teilnehmern möglich. Beide Versionen bieten auf Clientseite keine Kontrolle über die einzelnen Audioströme. So kann nur die Summe aller Audioströme empfangen werden. Die Clientanwendung ist nicht in der Lage, einzelne Audioströme auszublenden oder die Lautstärke einzelner Teilnehmer zu ändern.  
 
 Zudem ist über die Technik, die von der Skype-Anwendung verwendet wird, nicht viel bekannt, da die gesamte Kommunikation per AES mit 256 Bit verschlüsselt wird. Dies erlaubt keine direkte Analyse des Audiostroms und auch nur den Einsatz der Originalsoftware. Somit bietet \textit{Skype} als einziger tatsächlicher dezentralisierter Client nicht alle Eigenschaften, um als mögliche Ausgangsgrundlage zu dienen. 
 
 \subsubsection{Instant-Messaging-Anwendungen}
-Als letzte Alternative existieren Peer-to-Peer Programme wie \textit{Microsoft-Netmeeting}\footnote{Microsoft, Version 20.03.2008, http://de.wikipedia.org/wiki/NetMeeting}, \textit{Microsoft-Messenger}\footnote{Microsoft, Version 20.03.2008, http://messenger.live.com} oder \textit{Google Talk}\footnote{Google, Version 20.03.2008, http://www.google.com/talk} die jedoch nicht modifizierbar sind und nur sehr eingeschränkte Konferenzmöglichkeiten bieten. 
+Als letzte Alternative existieren Peer-to-Peer Programme wie \textit{Microsoft-\-Net\-meeting}\footnote{Microsoft, Version 20.03.2008, http://de.wikipedia.org/wiki/NetMeeting}, \textit{Microsoft-Messenger}\footnote{Microsoft, Version 20.03.2008, http://messenger.live.com} oder \textit{Google Talk}\footnote{Google, Version 20.03.2008, http://www.google.com/talk} die jedoch nicht modifizierbar sind und nur sehr eingeschränkte Konferenzmöglichkeiten bieten. 
 
-Es scheint, dass die Abstraktionsstuffe von existierenden VoIP-Lösungen bereits zu sehr auf die Funktion der Programme als Softphone ausgelegt ist und so keines der untersuchten Produkte eine API anbietet, die über genügend Kontrolle über die einzelnen Audioströme besitzt. Deshalb wurde der Entschluss getroffen VoIP-Protokollstapel einzusetzen, um eine eigene Lösung zu entwickeln. 
+Es scheint, dass die Abstraktionsstufe von existierenden VoIP-Lösungen bereits zu sehr auf die Funktion der Programme als Softphone ausgelegt ist und so keines der untersuchten Produkte eine API anbietet, die über genügend Kontrolle über die einzelnen Audioströme besitzt. Deshalb wurde der Entschluss getroffen VoIP-Protokollstapel einzusetzen, um eine eigene Lösung zu entwickeln. 
 
 \subsection{SIP-Protokollstapel}
 %Das im Kapitel 4 vorgestellte SIP Protokoll und existierende Protokollstapel erfüllen die gestellten Anforderungen an den Prototypen. Da SIP ein generisches und offenes Protokoll ist, kann es benutzt werden, um beliebige Sitzungen mit einem oder mehreren Teilnehmern zu verwalten. Dabei ist es nicht auf Internet-Telefonie beschränkt, sondern kann Sitzungen zwischen beliebigen Multimediaströmen, Konferenzen oder Computerspielen herstellen. 
@@ -100,13 +100,13 @@ Für den Einsatz als Server bieten sich zwei große Pakete an, die beide den SIP-S
 
 Die Serveranwendung \textit{OpenSer}\footnote{AG Projects, Programmversion 1.3.1, http://www.openser.org} bietet ähnliche Funktionalität und kann als SIP-Proxy, Registrar, aber auch als Locations- und Applications-Server betrieben werden und bietet zusätzlich Unterstützung für das SIP-SIMPLE Protokoll. \textit{OpenSer} ist sowohl von eingebetteten System wie DSL-Routern bis zu großen Installationen mit mehreren Millionen Benutzern bei Internet Service Providern flexibel einsetzbar. Diese Eigenschaften haben den Ausschlag gegeben Openser als SIP Server einzusetzen. 
 
-Darüber hinaus existieren noch etliche Open-Source und proprietäre SIP-Server-Lösungen, die hier nicht weiter erläutert werden. 
+Darüber hinaus existieren noch Open-Source oder proprietäre SIP-Server-Lösungen, die hier nicht weiter erläutert werden. 
 
 \subsubsection{SIP-Clients}
 Zu den Plattform-übergreifenden SIP-Protokollstapeln, die die Funktionalität von SIP in größeren Anwendungen ermöglichen zählen Protokollstapel wie \textit{OpenSipStack}\footnote{Joegen Baclor, Version 22.03.2008, http://www.opensipstack.org} \textit{sipXtackLib}\footnote{SIPfoundry, Version 22.03.2008, http://www.sipfoundry.org} \textit{reSIProcate}\footnote{B. Kampen, Version 22.03.2008, http://www.resiprocate.org} oder \textit{PJSIP}\footnote{Benjamin Prijono, Version 22.03.2008, http://www.pjsip.org}. 
 
 \subsubsection{Pjsip}
-Viele der existierenden SIP-Clientanwendungen und Protokollstapel kamen für den Prototypen deshalb nicht in Frage, weil sie in einer anderen Programmiersprache als C oder C++ geschrieben waren und so nicht in das 3D-Framework integriert werden konnten. Die Wahl fiel vor allem seiner guten Dokmentation und Platformunabhängigkeit auf \textit{PjSIP}. Im Gegensatz zu anderen Kandidaten, bietet es auch Dank der Kombination aus SIP-Signalisierung und der Existenz eines Audiostapels die besten Vorraussetzungen, um eine schnelle und Entwicklung zu gewährleisten. Es bietet außerdem eine Unterstüzung folgender in Kapitel 4 vorgestellten SIP-Funktionalitäten:
+Viele der existierenden SIP-Clientanwendungen und Protokollstapel kamen für den Prototypen deshalb nicht in Frage, weil sie in einer anderen Programmiersprache als C oder C++ geschrieben waren und so nur mühsam in das 3D-Framework integriert werden könnten. Die Wahl fiel vor allem aufgrund seiner guten Dokmentation und Platformunabhängigkeit auf \textit{PjSIP}. Im Gegensatz zu anderen Kandidaten, bietet es auch Dank der Kombination aus SIP-Signalisierung und der Existenz eines Audiostapels die besten Vorraussetzungen, um eine schnelle Entwicklung zu gewährleisten. Es bietet außerdem eine Unterstüzung folgender in Kapitel 4 vorgestellten SIP-Funktionalitäten:
 \begin{itemize}
 	\item Unterstützung des SIP Standards (PJSIP-CORE)
 	\item Unterstützung des SIP-SIMPLE Standards (PJSIP-SIMPLE)
@@ -126,14 +126,14 @@ Viele der existierenden SIP-Clientanwendungen und Protokollstapel kamen für den 
 
 \section{Vorgehensweise bei der Implementierung des Prototypen}
 \subsection{Programmiersprache und Testumgebung}
-Der Einsatz von C und C++ als Programmiersprache wird durch mehrere Vorteile gerechtfertigt: Die Darstellung der virtuellen 3D Welt und die die Etablierung, Verarbeitung und Wiedergabe der Audioströme bilden zusammen ein Echtzeitsystem. Da in so einem System der gleichzeitige zeitnahe Ablauf mehrerer Prozesse erforderlich ist, wird eine sehr performante Programmiersprache benötigt. Es sind vor allem kurze Reaktionszeiten erforderlich, um für den Spieler eine glaubwürdige Illusion zu erzeugen. Beim Audiosignal reichen bereits Verzögerungen von mehr als 300ms aus, um eine Verständigung unverständlich zu machen. 
+Der Einsatz von C und C++ als Programmiersprache wird durch mehrere Vorteile gerechtfertigt: Die Darstellung der virtuellen 3D-Welt und die die Etablierung, Verarbeitung und Wiedergabe der Audioströme bilden zusammen ein Echtzeitsystem. Da in so einem System der gleichzeitige zeitnahe Ablauf mehrerer Prozesse erforderlich ist, wird eine sehr performante Programmiersprache benötigt. Es sind vor allem kurze Reaktionszeiten erforderlich, um für den Spieler eine glaubwürdige Illusion zu erzeugen. Beim Audiosignal reichen bereits Verzögerungen von mehr als 300ms aus, um eine Verständigung unverständlich zu machen. 
 
 Da C und C++ maschinennahe Sprachen sind, und keine Interpretation des Quellcodes während der Laufzeit benötigen, besitzen sie einen Effizienzvorteil gegenüber Sprachen eine hohe Abstraktionsebene besitzen oder während der Laufzeit interpretiert werden müssen. Gerade deswegen liegen fast alle bisher vorgestellten Protokollstapel und Bibliotheken für VoIP oder 3D-Grafik ausschließlich in C oder C++ vor. 
 
 \subsubsection{Testumgebung}
 \label{testumgebung}
-Die wiederkehrenden Tests wurden auf diversen mir zur Verfügung stehenden Systemen
-durchgeführt. Als Clients kamen, zwei \textit{AMD Athlon(tm)} X2Dual 4200+, \textit{IBM} \textit{Thinkpad} T42 1,6GHz, \textit{Sony Vaio} CR 1,6GHz und \textit{HP Compaq} 6710b 2,1GHz zum Einsatz. Um möglichst realistische Bedingungen zu schaffen, wurden die Rechner auf verschiedene Art und Weise an das Internet angebunden. Zwei Laptops nutzten ein 54Mbit WLAN mit VPN Anschluss, ein Laptop befand sich hinter einem NAT-Router mit WLAN, die stationären Rechner verfügten über einen direkten 100Mbit LAN Anschluss. In den Tests nutzten alle Rechner den Breitbandanschluss der Universität Mannheim, der über 33 MBit Down- und 16 MBit Upload verfügt. 
+Die wiederkehrenden Tests wurden auf diversen zur Verfügung stehenden Systemen
+durchgeführt. Als Clients kamen \textit{AMD Athlon(tm)} X2Dual 4200+, \textit{IBM} \textit{Thinkpad} T42 1,6GHz, \textit{Sony Vaio} CR 1,6GHz und \textit{HP Compaq} 6710b 2,1GHz zum Einsatz. Um möglichst realistische Bedingungen zu schaffen, wurden die Rechner auf verschiedene Art und Weise an das Internet angebunden. Zwei Laptops nutzten ein 54Mbit WLAN mit VPN Anschluss, ein Laptop befand sich hinter einem NAT-Router mit WLAN, die stationären Rechner verfügten über einen direkten 100Mbit LAN Anschluss. In den Tests nutzten alle Rechner den Breitbandanschluss der Universität Mannheim, der über 33 MBit Down- und 16 MBit Upload verfügt. 
 
 Auf den folgenden Seiten soll nun die Umsetzung, der in Kapitel 3 erarbeiteten Konzepte und Verbesserungsvorschläge erläutert werden. Es werden ausgewählte Probleme und Lösungswege beschrieben, die in dieser Phase der Arbeit aufgetreten sind. 
 
@@ -185,10 +185,10 @@ Die Abläufe, die im Hintergrund ausgeführt werden, sollen kurz erläutert werden:
 
 Die Hauptkomponenten der Abbildung\footnote{Quelle: PjSIP, Version 22.03.2008, http://trac.pjsip.org/repos/wiki/media-flow} \ref{fig:pjsip-mediaflow}, die diesen Ablauf schematisch darstellt, bestehen aus:
 \begin{itemize}
-	\item Einem Soundkarten-Port, der die Callbacks der Soundkarte in Audioframes übersetzt
-	\item Einer Conference-Bridge, die ein Mischen der Audiosignale erlaubt
-	\item Einem Medienstrom, der bei einem Anruf erstellt wird.
-	\item Einem Medientransport, der für die Übertragung des Medienstroms durch RTP/RTCP Pakete zuständig ist.
+	\item einem Soundkarten-Port, der die Callbacks der Soundkarte in Audioframes übersetzt,
+	\item einer Conference-Bridge, die ein Mischen der Audiosignale erlaubt,
+	\item einem Medienstrom, der bei einem Anruf erstellt wird,
+	\item einem Medientransport, der für die Übertragung des Medienstroms durch RTP/RTCP Pakete zuständig ist.
 \end{itemize}
 
 \subsection{Zusammenarbeit von Irrlicht und PjSIP}
@@ -209,10 +209,10 @@ Auf dem Startbildschirm findet der Spieler seine bisherigen Freunde vor und kann
 Betritt ein neuer Spieler das Spiel, so wird er von diesem Zeitpunkt ab vom lokalen \textit{Irrlicht-Scene-Manager} verwaltet und in der 3D-Welt als neuer Avatar an einer festgelegten Einstiegskoodrinate erzeugt. Gleichzeitig wird in der VoIP-Instanz die SIP-Adresse eines neuen Teilnehmers in die lokale \textit{Buddyliste} (siehe Abschnitt \ref{buddy-mehrkanalmodell}) des Spielers aufgenommen. 
 
 %irrlicht scene manager und austausch der positionen%
- Der Irrlicht-Scene-Manager ist für eine Verwaltung aller Objekte der Spielewelt verantwortlich. Er verwaltet sowohl die Koordinaten des Spielers und aller lokalen Objekte, aber auch die Koordinaten aller anderen im Spiel anwesenden Spieler. Da jeder Spieler in der Lage ist sich frei im Level zu bewegen, muss jede Bewegung an alle anderen Teilnehmern mit Hilfe der SIP-Netzwerkschicht\footnote{Eine detailierte Beschreibung der Übertragung der Spielerkoordinaten mit Hilfe des SIP-Protokolls findet sich in Kapitel 8.} übertragen werden, damit diese in der Lage sind ihre Spielewelt konsistent zu halten. Erhält der Spieler neue Positionsinformationen von anderen Teilnehmern des aktiven Spiels, werden diese im Irrlicht-Scene-Manager aktualisiert. 
+ Der Irrlicht-Scene-Manager ist für eine Verwaltung aller Objekte der Spielewelt verantwortlich. Er verwaltet sowohl die Koordinaten des Spielers und aller lokalen Objekte, als auch die Koordinaten aller anderen im Spiel anwesenden Spieler. Da jeder Spieler in der Lage ist sich frei im Level zu bewegen, muss jede Bewegung an alle anderen Teilnehmern mit Hilfe der SIP-Netzwerkschicht\footnote{Eine detailierte Beschreibung der Übertragung der Spielerkoordinaten mit Hilfe des SIP-Protokolls findet sich in Kapitel 8.} übertragen werden, damit diese in der Lage sind ihre Spielewelt konsistent zu halten. Erhält der Spieler neue Positionsinformationen von anderen Teilnehmern des aktiven Spiels, werden diese im Irrlicht-Scene-Manager aktualisiert. 
 
 %aktualisierung der Positionsinformationen%
-Die 3D-Szene wird für in der Hauptschleife von Irrlicht für jedes Frame neu gezeichnet, während eine Aktualisierung der Positionsinformationen der lokalen VoIP-Instanz aus Effizienzgründen nur alle 10 Frames vorgenommen wird. Anhand der übergebenen Koordinaten aller aktiven Spieler, kann die VoIP-Instanz die entsprechenden Distanzvektoren zu diesen berechnen. In Abhängigkeit der Distanz zu Spielern wird deren Lautstärke entsprechend angepasst (siehe Abschnitt \ref{conference-bridge}) und anhand des Proxemikkonzepts (siehe Abschnitt \ref{Zonen-Implementierung}) verschiedene Konnektivitätsstufen aufrecht erhalten. Bevor diese beschrieben werden, muss zunächst das Problem des Verbindungsaufbaus zwischen zwei Spielern erklärt werden. 
+Die 3D-Szene wird in einer Schleife von Irrlicht für jedes Frame neu gezeichnet, während eine Aktualisierung der Positionsinformationen der lokalen VoIP-Instanz aus Effizienzgründen nur alle 10 Frames vorgenommen wird. Anhand der übergebenen Koordinaten aller aktiven Spieler, kann die VoIP-Instanz die entsprechenden Distanzvektoren zu diesen berechnen. In Abhängigkeit der Distanz zu Spielern wird deren Lautstärke entsprechend angepasst (siehe Abschnitt \ref{conference-bridge}) und anhand des Proxemikkonzepts (siehe Abschnitt \ref{Zonen-Implementierung}) verschiedene Konnektivitätsstufen aufrecht erhalten. Bevor diese beschrieben werden, muss zunächst das Problem des Verbindungsaufbaus zwischen zwei Spielern erklärt werden. 
 
 \subsubsection{Verbindungsaufbau}
 \label{verbindungsaufbau}
@@ -236,7 +236,7 @@ Da Teilnehmer zwar zentral lokalisiert werden, jedoch unabhängig von einer zentr
 
 Bei diesem Szenario können zwei verschiedene Fälle auftreten. Der einfache Fall liegt vor, wenn bei Teilnehmer B eine INVITE-Nachricht von A eintrifft und B bereits mit A verbunden ist. Dann kann er den zweiten Dialog einfach verwerfen, da ja bereits eine bestehende Verbindung existiert.
 
-Der kompliziertere Fall ist der symmetrische Fall: Dieser tritt dann ein, wenn B während er selbst eine Verbindung mit A aufbaut, die INVITE-Nachricht erhält. Hier hat B hat ebenfalls eine INVITE Nachricht an A geschickt, während A zur gleichen Zeit auch eine INVITE Nachricht an B geschickt hat. Lehnen nun beide Teilnehmer die Verbindung ab, so führt es dazu, so kommt in diesem Fall überhaupt keine Verbindung zwischen den Teilnehmern zustande. 
+Der kompliziertere Fall ist der symmetrische Fall: Dieser tritt dann ein, wenn B während er selbst eine Verbindung mit A aufbaut, die INVITE-Nachricht erhält. Hier hat B ebenfalls eine INVITE Nachricht an A geschickt, während A zur gleichen Zeit auch eine INVITE Nachricht an B geschickt hat. Lehnen nun beide Teilnehmer die Verbindung ab, so führt es dazu, dass in diesem Fall überhaupt keine Verbindung zwischen den Teilnehmern zustande kommt. 
 
 Hierbei ist die Existenz einer gemeinsamen Regel für alle Teilnehmer wichtig, nach der sie beim Dialog-Aufbau vorgehen. Die hier gewählte Lösung sieht vor, dass beide Teilnehmer eine zufällige Zeit $t$ warten und danach versuchen eine neue Verbindung zu etablieren bis der unsymmetrische Fall auftritt. Diese Vorgehensweise hat sich in der Praxis bewährt. 
 
@@ -256,14 +256,14 @@ Die Spieler im Spiel werden durch Avatare repräsentiert. Jedem Avatar im Spiel i
 Wie Kapitel 3 gezeigt hat, ist bisher die Teilnahme an Konferenzen binär gelöst worden, indem Spieler entweder Teil einer solchen waren oder nicht. So ist bisher das in einer Konferenz mit \textit{n} Teilnehmern ${p_{1},p_{2},...,p_{n}}$, mit Audioströmen ${V_{1}(t),V_{2}(t),...,V_{n}(t)}$, von einem Teilnehmer $i$ zu einer Zeit \textit{t} empfangene Signal $R_{i}(t)$ aller Teilnehmer $j$ definiert durch:
 
 \begin{align}
-	R_{i}(t) = \sum \limits_{j=1}^n {V_{j}(t)}  \ \ \mbox{wobei} \  1 \geq j \geq n \ \mbox{und} \  j \neq i
+	R_{i}(t) = \sum \limits_{j=1}^n {V_{j}(t)}  \ \ \mbox{wobei} \  j \neq i
 \end{align}
 
 Dies bedeutet, dass das empfangene Signal der Summe der Signale aller Teilnehmer entspricht.  Um die Metapher der Luftübertragung zu simulieren, ist es erforderlich den binären Teilnahmestatus durch eine stetige Teilnahmefunktion zu ersetzen.  Die Gesamtlautstärke $R_{i}(t)$ aller empfangenen Audiosignale $V_{j}(t)$ wird von der Distanz $d_{j}$ zum anderen Teilnehmer abhängig gemacht. Dabei wird die Lautstärke der jeweiligen Audioströme mit dem Parameter $d_{j}$ zwischen 0 und 1 gewichtet, bevor diese summiert werden.  Die Parameter $d_{j}$ werden  anhand der Distanz der Avatare vom Spieler errechnet, die auf einen Bereich zwischen 0 und 1 normiert werden. Durch dieses Vorgehen kann die Abnahme der Lautstärke des Signals in Abhängigkeit der Entfernung des Teilnehmers simuliert werden.
 
 \begin{align}
 \label{mixingalgo}
-	R_{i}(t) = \sum \limits_{j=1}^n {d_{j} \cdot V_{j}(t)} \ \ \mbox{wobei} \ 1 \geq j \geq n \ \mbox{und} \ j \neq i
+	R_{i}(t) = \sum \limits_{j=1}^n {d_{j} \cdot V_{j}(t)} \ \ \mbox{wobei} \ j \neq i
 \end{align}
 
 Da die VoIP-Instanz alle 10 Frames von Irrlicht mit neuen Positionsinformationen versorgt wird, werden auch die Distanzvektoren alle 10 Frames neu berechnet und die Lautstärke des entsprechenden Audiostroms anhand diesen angepasst. Auf diese Art und Weise entsteht der gewünschte Effekt, dass Personen die sich in der Nähe befinden sind besser zu hören, als Personen die sich weit entfernt befinden.
@@ -321,7 +321,7 @@ In der sozialen Zone werden die Teilnehmer mit denen bereits Verbindungen aufgeb
 %\subsubsection{Lautstärkenanpassung}
 %Da die Lautstärke der übertragenen Stimme bei einer Übertragung durch Luft mit zunehmender Entfernung abnimmt wurde ein einfaches physikalisches Modell der Schallübertragung benutzt: Generell gilt, dass Schalldruck bei zunehmender Entfernung $r$  mit $1/r$ abnimmt. Da sich die Schallintensität auf eine immer größer werdende gedachte Kugeloberfläche (proportional zur Entfernung $r$) verteilt, nimmt sie mit der Entfernung quadratisch ab. 
 
-Zu Testzwecken wurden sowohl die lineare als auch die quadratische Abnahme der Schallintensität\footnote{Schalldruck nimmt bei zunehmender Entfernung $d$ mit $1/d$ ab. Da sich die Schallintensität auf eine immer größer werdende gedachte Kugeloberfläche (proportional zur Entfernung $d$) verteilt, nimmt sie mit der Entfernung quadratisch ab.} modelliert, um festzustellen welche Veränderung natürlicher erscheint. Die lineare Abnahme erwies sich sich als transparenter für den Benutzer, da eine einfachere Relation zwischen Lautstärke und Entfernung hergestellt werden konnte. 
+Zu Testzwecken wurden sowohl die lineare als auch die quadratische Abnahme der Schallintensität\footnote{Schalldruck nimmt bei zunehmender Entfernung $d$ mit $1/d$ ab. Da sich die Schallintensität auf eine immer größer werdende gedachte Kugeloberfläche (proportional zur Entfernung $d$) verteilt, nimmt sie mit der Entfernung quadratisch ab.} modelliert, um festzustellen welche Veränderung natürlicher erscheint. Die lineare Abnahme erwies sich als transparenter für den Benutzer, da eine einfachere Relation zwischen Lautstärke und Entfernung hergestellt werden konnte. 
 
 Als ein Problem bei der Lautstärkenanpassung erwies sich die unterschiedliche Aufnahmelautstärke der Mikrofone. Da verschiedene Mikrofone eine unterschiedliche Sensibilität haben, senden Spieler unter Umständen bei gleicher Entfernung verschieden laute Signale. In einem fertigen Produkt, sollte das Mikrofon dynamisch auf einen bestimmten Pegel normiert werden, bevor das Spiel beginnt. Solche Verfahren sind Standard bei VoIP-Telefonen und könnten später auch hier eingesetzt werden. %http://www.sengpielaudio.com/Rechner-entfernung.htm
 

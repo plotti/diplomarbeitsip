@@ -27,19 +27,18 @@
 \contentsline {figure}{\numberline {6.3}{\ignorespaces Beispiel f\"ur eine Proxy-Architektur. In schwarz ist die Verbindung von Spieler 3 mit Spieler 7 dargestellt.\relax }}{46}
 \contentsline {figure}{\numberline {6.4}{\ignorespaces Verteilte Server S1...S4. Die Verbindungen der Spielewelt S2 werden in schwarz dargestellt. \relax }}{47}
 \contentsline {figure}{\numberline {6.5}{\ignorespaces Dezentralisierte SIP Architektur\relax }}{52}
-\contentsline {figure}{\numberline {6.6}{\ignorespaces Komplett zentralisierter Ansatz mit SIP\relax }}{53}
+\contentsline {figure}{\numberline {6.6}{\ignorespaces Komplett zentralisierter Ansatz mit SIP\relax }}{54}
 \contentsline {figure}{\numberline {6.7}{\ignorespaces Architekturen mit dedizierten Audiomixern\relax }}{55}
-\contentsline {figure}{\numberline {6.8}{\ignorespaces Hybride SIP Architektur mit einem oder mehreren Konferenzservern\relax }}{56}
+\contentsline {figure}{\numberline {6.8}{\ignorespaces Hybride SIP Architektur mit einem oder mehreren Konferenzservern\relax }}{57}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {7.1}{\ignorespaces Viereck aus Spielerlebnis, Simulation, erz\"ahlerischem Aspekt und Spielerinteraktion\relax }}{62}
-\contentsline {figure}{\numberline {7.2}{\ignorespaces \"Ubersicht der Komponenten des PjSIP-Protokollstapels\relax }}{67}
-\contentsline {figure}{\numberline {7.3}{\ignorespaces Realistische 3D-Spielewelt mit Radar\relax }}{69}
-\contentsline {figure}{\numberline {7.4}{\ignorespaces Eine \"Ubersicht \"uber den Audiofluss in PjSIP\relax }}{71}
-\contentsline {figure}{\numberline {7.5}{\ignorespaces Startbildschirm des Spiels\relax }}{72}
-\contentsline {figure}{\numberline {7.6}{\ignorespaces Ablauf einer symmetrischen Verbindung\relax }}{74}
-\contentsline {figure}{\numberline {7.7}{\ignorespaces Funktionsweise der Konferenzbr\"ucke mit 5 Teilnehmern und Anpassung der einzelnen Audiostr\"ome\relax }}{76}
-\contentsline {figure}{\numberline {7.8}{\ignorespaces Zonenkonzept und daraus resultierende Funktionalit\"at\relax }}{78}
-\contentsline {figure}{\numberline {7.9}{\ignorespaces Schematischer Ablauf des SIP-HOLD Nachrichtenverlaufs\relax }}{80}
+\contentsline {figure}{\numberline {7.1}{\ignorespaces \"Ubersicht der Komponenten des PjSIP-Protokollstapels\relax }}{67}
+\contentsline {figure}{\numberline {7.2}{\ignorespaces Realistische 3D-Spielewelt mit Radar\relax }}{68}
+\contentsline {figure}{\numberline {7.3}{\ignorespaces Eine \"Ubersicht \"uber den Audiofluss in PjSIP\relax }}{70}
+\contentsline {figure}{\numberline {7.4}{\ignorespaces Startbildschirm des Spiels\relax }}{71}
+\contentsline {figure}{\numberline {7.5}{\ignorespaces Ablauf einer symmetrischen Verbindung\relax }}{73}
+\contentsline {figure}{\numberline {7.6}{\ignorespaces Funktionsweise der Konferenzbr\"ucke mit 5 Teilnehmern und Anpassung der einzelnen Audiostr\"ome\relax }}{76}
+\contentsline {figure}{\numberline {7.7}{\ignorespaces Zonenkonzept und daraus resultierende Funktionalit\"at\relax }}{77}
+\contentsline {figure}{\numberline {7.8}{\ignorespaces Schematischer Ablauf des SIP-HOLD Nachrichtenverlaufs\relax }}{79}
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {8.1}{\ignorespaces Eine Client-Server Architektur mit SIP\relax }}{84}
 \contentsline {figure}{\numberline {8.2}{\ignorespaces Unstrukturierte P2P-Signalisierung mit SIP\relax }}{89}

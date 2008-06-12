@@ -1,4 +1,4 @@
-\begin{thebibliography}{82}
+\begin{thebibliography}{81}
 % this bibliography was produced with the style dinat.bst v2.5
 \makeatletter
 \newcommand{\dinatlabel}[1]%
@@ -328,12 +328,6 @@
   Network and system support for games}.
 \newblock New York, NY, USA~: ACM, 2005, S.~1--9. --
 \newblock ISBN 1-59593-156-2
-
-\bibitem[Lindley(2003)]{lindley03}
-\dinatlabel{Lindley 2003} \textsc{Lindley}, C.:
-\newblock Game taxonomies: a high level framework for game analysis and design.
-\newblock In: \emph{Gamasutra}
-\newblock (2003)
 
 \bibitem[Lua u.\,a.(2005)Lua, Crowcroft, Pias, Sharma und Lim]{lua05}
 \dinatlabel{Lua u.\,a. 2005} \textsc{Lua}, Keong~; \textsc{Crowcroft}, J.~;
