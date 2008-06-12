@@ -1,4 +1,4 @@
-\begin{thebibliography}{84}
+\begin{thebibliography}{82}
 % this bibliography was produced with the style dinat.bst v2.5
 \makeatletter
 \newcommand{\dinatlabel}[1]%
@@ -52,12 +52,6 @@
 \newblock \emph{3-D sound for virtual reality and multimedia}.
 \newblock San Diego, CA, USA~: Academic Press Professional, Inc., 1994. --
 \newblock ISBN 0-12-084735-3
-
-\bibitem[Berger(1999)]{uo08}
-\dinatlabel{Berger 1999} \textsc{Berger}, Andreas:
-\newblock \emph{Spiel mit den Leben. Eine deskriptive und qualitative Analyse
-  des Multiuserdungeons "Ultima Online"}.
-\newblock 1999
 
 \bibitem[Bharambe u.\,a.(2006)Bharambe, Herley und Padmanabhan]{torrent06}
 \dinatlabel{Bharambe u.\,a. 2006} \textsc{Bharambe}, A.~R.~; \textsc{Herley},
@@ -139,6 +133,14 @@
   Architecture.
 \newblock In: \emph{Information and Automation}
 \newblock (2005)
+
+\bibitem[Ernst\&Young(2007)]{ErnstYoung:07}
+\dinatlabel{Ernst\&Young 2007} \textsc{Ernst\&Young}:
+\newblock Digitale Spiele in Deutschland.
+\newblock In:
+  \emph{http://www.ey.com/global/content.nsf/Germany/Publikationen\_-\_Studien%
+\_\-\_2007}
+\newblock Version 22.03.2008 (2007)
 
 \bibitem[chang Feng und chi Feng(2003)]{feng03}
 \dinatlabel{chang Feng und chi Feng 2003} \textsc{Feng}, Wu chang~;
@@ -390,6 +392,12 @@
 \newblock 596--620~S. --
 \newblock ISBN 0-8058-3838-4
 
+\bibitem[PricewaterHouseCoopers(2007)]{pwc:07}
+\dinatlabel{PricewaterHouseCoopers 2007} \textsc{PricewaterHouseCoopers}:
+\newblock German Entertainment and Media Outlook: 2007-2011.
+\newblock In: \emph{http://www.pwc.de/portal/pub/!ut/p/kcxml}
+\newblock Version 22.03.2008 (2007)
+
 \bibitem[Pundkar(2007)]{pundkar07}
 \dinatlabel{Pundkar 2007} \textsc{Pundkar}, Swapnil~D.:
 \newblock Peer to Peer Communication over the Internet An Open Approach.
@@ -430,14 +438,6 @@
 \newblock \emph{Task Analyzability, Use of New Media and Effectiveness: A
   Multi-site Exploration of Media Richness}.
 \newblock Organization Science, 3 (4): 475-500., 1992
-
-\bibitem[Riva und Galimberti(2001)]{riva01}
-\dinatlabel{Riva und Galimberti 2001} \textsc{Riva}, G.~; \textsc{Galimberti},
-  C.:
-\newblock Actors, artifacts and inter-actions: Outline for a social psychology
-  of cyberspace.
-\newblock In: \emph{Towards CyberPsychology}
-\newblock (2001), S.~3--18
 
 \bibitem[Rosenberg(2008)]{ice08}
 \dinatlabel{Rosenberg 2008} \textsc{Rosenberg}, J.:
@@ -648,26 +648,10 @@
 \newblock New York, NY, USA~: ACM, 2007, S.~13--18. --
 \newblock ISBN 978-0-9804460-0-5
 
-\bibitem[Walther(2002)]{walther02}
-\dinatlabel{Walther 2002} \textsc{Walther}, J.B.:
-\newblock \emph{Cues filtered out, cues filtered in: Computermediated
-  communication and relationships.}
-\newblock Thousand Oaks, 2002
-\newblock (Handbook of interpersonal communication 3rd. Edition). --
-\newblock 529--563~S
-
 \bibitem[Wilbur(1954)]{schramm54}
 \dinatlabel{Wilbur 1954} \textsc{Wilbur}, Schramm:
 \newblock \emph{The Process and Effects of Mass Communication}.
 \newblock University of Illinois Press, 1954
-
-\bibitem[Wright u.\,a.(2002)Wright, Breidenbach und Boria]{wright02}
-\dinatlabel{Wright u.\,a. 2002} \textsc{Wright}, Talmadge~;
-  \textsc{Breidenbach}, Paul~; \textsc{Boria}, Eric:
-\newblock Creative Player Actions in FPS Online Video Games.
-\newblock In: \emph{Game Studies: The International Journal of Computer Game
-  Research}
-\newblock 2 (2002)
 
 \bibitem[Yu und Vuong(2005)]{yu05}
 \dinatlabel{Yu und Vuong 2005} \textsc{Yu}, Anthony~; \textsc{Vuong}, Son~T.:

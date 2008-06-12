@@ -5,7 +5,7 @@
 \contentsline {chapter}{Abk\"{u}rzungsverzeichnis}{x}
 \contentsline {chapter}{\numberline {1}Einf\"uhrung}{1}
 \contentsline {section}{\numberline {1.1}Motivation}{1}
-\contentsline {section}{\numberline {1.2}Ziel der Diplomarbeit}{3}
+\contentsline {section}{\numberline {1.2}Ziel der Diplomarbeit}{2}
 \contentsline {section}{\numberline {1.3}Aufbau der Arbeit}{3}
 \contentsline {chapter}{\numberline {2}Grundlagen der Kommunikation}{5}
 \contentsline {section}{\numberline {2.1}Kommunikationsmodell}{5}
@@ -78,9 +78,9 @@
 \contentsline {subsection}{\numberline {6.1.3}Hybrid}{47}
 \contentsline {section}{\numberline {6.2}Architekturen mit SIP-Komponenten}{48}
 \contentsline {subsection}{\numberline {6.2.1}Komponenten}{48}
-\contentsline {subsection}{\numberline {6.2.2}Komplett dezentralisierte Ans\"atze}{52}
+\contentsline {subsection}{\numberline {6.2.2}Komplett dezentralisierte Ans\"atze}{51}
 \contentsline {subsubsection}{Multicast}{52}
-\contentsline {subsubsection}{Peer-to-Peer Unicast}{53}
+\contentsline {subsubsection}{Peer-to-Peer Unicast}{52}
 \contentsline {subsubsection}{Full-Mesh}{53}
 \contentsline {subsection}{\numberline {6.2.3}Komplett zentralisierte Ans\"atze}{53}
 \contentsline {subsection}{\numberline {6.2.4}Verteiltes dediziertes Audiomixing}{55}
@@ -142,12 +142,12 @@
 \contentsline {subsubsection}{Nachrichtendienst}{85}
 \contentsline {subsubsection}{Pr\"asenzdienst}{86}
 \contentsline {subsection}{\numberline {8.3.2}Skalierbarkeit}{87}
-\contentsline {section}{\numberline {8.4}Hybride Systeme}{88}
+\contentsline {section}{\numberline {8.4}Hybride Systeme}{87}
 \contentsline {section}{\numberline {8.5}Peer-to-Peer in Netzwerkspielen}{88}
 \contentsline {section}{\numberline {8.6}SIP in Unstrukturierten Peer-to-Peer-Systemen}{88}
 \contentsline {section}{\numberline {8.7}SIP in Strukturierten Peer-to-Peer-Systemen}{89}
 \contentsline {subsection}{\numberline {8.7.1}Peer-to-Peer-SIP}{90}
-\contentsline {subsection}{\numberline {8.7.2}Funktionsweise}{90}
+\contentsline {subsection}{\numberline {8.7.2}Funktionsweise}{91}
 \contentsline {subsubsection}{Registrierung}{91}
 \contentsline {subsubsection}{Aufbau einer Verbindung}{92}
 \contentsline {subsection}{\numberline {8.7.3}Architekturvariationen}{93}
@@ -165,8 +165,8 @@
 \contentsline {subsection}{\numberline {9.3.4}Zonen mit unterschiedlichen Audiocodecs}{99}
 \contentsline {section}{\numberline {9.4}SIP als Netzwerkschnittstelle}{100}
 \contentsline {section}{\numberline {9.5}Conference-Bridge}{101}
-\contentsline {chapter}{\numberline {10}Fazit und Ausblick}{102}
-\contentsline {section}{\numberline {10.1}Fazit}{102}
-\contentsline {section}{\numberline {10.2}Ausblick}{103}
-\contentsline {chapter}{Anhang}{107}
-\contentsline {chapter}{Literaturverzeichnis}{111}
+\contentsline {chapter}{\numberline {10}Fazit und Ausblick}{103}
+\contentsline {section}{\numberline {10.1}Fazit}{103}
+\contentsline {section}{\numberline {10.2}Ausblick}{104}
+\contentsline {chapter}{Anhang}{108}
+\contentsline {chapter}{Literaturverzeichnis}{112}
