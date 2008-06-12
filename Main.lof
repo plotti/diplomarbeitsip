@@ -9,7 +9,7 @@
 \contentsline {figure}{\numberline {3.1}{\ignorespaces Konfiguration von Kan\"alen, Gruppen und Rechten in kommerziellen Sprach\discretionary {-}{}{}kommunikations\discretionary {-}{}{}programmen\relax }}{11}
 \contentsline {figure}{\numberline {3.2}{\ignorespaces Ein einziger Kanal b\"undelt alle \"ubertragenen Signale und f\"uhrt so zu Adressierungsproblemen\relax }}{13}
 \contentsline {figure}{\numberline {3.3}{\ignorespaces Einsatz von jeweils direkten Kommunikationskan\"alen zwischen Teilnehmern\relax }}{14}
-\contentsline {figure}{\numberline {3.4}{\ignorespaces Distanzbasierte Ver\"anderung der Lautst\"arke in Abh\"angigkeit der gew\"ahlten Zone\relax }}{17}
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Distanzbasierte Ver\"anderung der Lautst\"arke in Abh\"angigkeit der gew\"ahlten Zone\relax }}{16}
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {4.1}{\ignorespaces Eine \"Ubersicht \"uber die VoIP-Protokollfamilie\relax }}{19}
 \contentsline {figure}{\numberline {4.2}{\ignorespaces Beispiel eines typischen SIP-Requests\relax }}{24}
@@ -27,9 +27,9 @@
 \contentsline {figure}{\numberline {6.3}{\ignorespaces Beispiel f\"ur eine Proxy-Architektur. In schwarz ist die Verbindung von Spieler 3 mit Spieler 7 dargestellt.\relax }}{46}
 \contentsline {figure}{\numberline {6.4}{\ignorespaces Verteilte Server S1...S4. Die Verbindungen der Spielewelt S2 werden in schwarz dargestellt. \relax }}{47}
 \contentsline {figure}{\numberline {6.5}{\ignorespaces Dezentralisierte SIP Architektur\relax }}{52}
-\contentsline {figure}{\numberline {6.6}{\ignorespaces Komplett zentralisierter Ansatz mit SIP\relax }}{54}
+\contentsline {figure}{\numberline {6.6}{\ignorespaces Komplett zentralisierter Ansatz mit SIP\relax }}{53}
 \contentsline {figure}{\numberline {6.7}{\ignorespaces Architekturen mit dedizierten Audiomixern\relax }}{55}
-\contentsline {figure}{\numberline {6.8}{\ignorespaces Hybride SIP Architektur mit einem oder mehreren Konferenzservern\relax }}{57}
+\contentsline {figure}{\numberline {6.8}{\ignorespaces Hybride SIP Architektur mit einem oder mehreren Konferenzservern\relax }}{56}
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {7.1}{\ignorespaces Viereck aus Spielerlebnis, Simulation, erz\"ahlerischem Aspekt und Spielerinteraktion\relax }}{62}
 \contentsline {figure}{\numberline {7.2}{\ignorespaces \"Ubersicht der Komponenten des PjSIP-Protokollstapels\relax }}{67}
@@ -43,7 +43,7 @@
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {8.1}{\ignorespaces Eine Client-Server Architektur mit SIP\relax }}{84}
 \contentsline {figure}{\numberline {8.2}{\ignorespaces Unstrukturierte P2P-Signalisierung mit SIP\relax }}{89}
-\contentsline {figure}{\numberline {8.3}{\ignorespaces Strukturiertes P2P-SIP Overlay\relax }}{91}
+\contentsline {figure}{\numberline {8.3}{\ignorespaces Strukturiertes P2P-SIP Overlay\relax }}{90}
 \contentsline {figure}{\numberline {8.4}{\ignorespaces Registrierung eines neuen Knotens bei Knoten C\relax }}{92}
 \contentsline {figure}{\numberline {8.5}{\ignorespaces Registrierung des Benutzers\relax }}{92}
 \contentsline {figure}{\numberline {8.6}{\ignorespaces Ein schematischer Ablauf eines Anrufs bei P2P-SIP\relax }}{93}
@@ -54,13 +54,13 @@
 \contentsline {figure}{\numberline {9.2}{\ignorespaces Bandbreitenverbrauch beim Full-Mesh-Ansatz\relax }}{97}
 \contentsline {figure}{\numberline {9.3}{\ignorespaces Bandbreiteneinsparungen beim Partial-Mesh, da nicht mehr alle Verbindungen aufgebaut werden m\"ussen\relax }}{98}
 \contentsline {figure}{\numberline {9.4}{\ignorespaces Messung der RTT im LAN zwischen zwei Clients\relax }}{100}
-\contentsline {figure}{\numberline {9.5}{\ignorespaces Anstieg der CPU-Last in Abh\"angigkeit der Anzahl der Abgemischten Audiokan\"ale\relax }}{101}
+\contentsline {figure}{\numberline {9.5}{\ignorespaces Anstieg der CPU-Last in Abh\"angigkeit der Anzahl der Abgemischten Audiokan\"ale\relax }}{102}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {A.1}{\ignorespaces Der Up- und Downstream ohne Unterscheidung der Zonen\relax }}{107}
-\contentsline {figure}{\numberline {A.2}{\ignorespaces Signalisierung mit SIP, Audiostrom mit RTP ohne Unterscheidung der Zonen\relax }}{107}
-\contentsline {figure}{\numberline {A.3}{\ignorespaces Der Up- und Downstream mit der Silcence-Supression-Technik\relax }}{108}
-\contentsline {figure}{\numberline {A.4}{\ignorespaces Der Up- und Downstream mit der Silcence-Supression-Technik\relax }}{108}
-\contentsline {figure}{\numberline {A.5}{\ignorespaces Der Up- und Downstream mit der SIP-Hold-Technik\relax }}{109}
-\contentsline {figure}{\numberline {A.6}{\ignorespaces Gegen\"uberstellung des SIP und RTP Traffics mit der SIP HOLD-Technik\relax }}{109}
-\contentsline {figure}{\numberline {A.7}{\ignorespaces Speex mit 16kHz in der privaten Zone und Speex 8khZ in der sozialen Zone\relax }}{110}
-\contentsline {figure}{\numberline {A.8}{\ignorespaces Rufauf und -abbau, sowie Signalisierung eines anderen Codecs mit SIP, Reduktion des Audiostroms mit RTP\relax }}{110}
+\contentsline {figure}{\numberline {A.1}{\ignorespaces Der Up- und Downstream ohne Unterscheidung der Zonen\relax }}{108}
+\contentsline {figure}{\numberline {A.2}{\ignorespaces Signalisierung mit SIP, Audiostrom mit RTP ohne Unterscheidung der Zonen\relax }}{108}
+\contentsline {figure}{\numberline {A.3}{\ignorespaces Der Up- und Downstream mit der Silcence-Supression-Technik\relax }}{109}
+\contentsline {figure}{\numberline {A.4}{\ignorespaces Der Up- und Downstream mit der Silcence-Supression-Technik\relax }}{109}
+\contentsline {figure}{\numberline {A.5}{\ignorespaces Der Up- und Downstream mit der SIP-Hold-Technik\relax }}{110}
+\contentsline {figure}{\numberline {A.6}{\ignorespaces Gegen\"uberstellung des SIP und RTP Traffics mit der SIP HOLD-Technik\relax }}{110}
+\contentsline {figure}{\numberline {A.7}{\ignorespaces Speex mit 16kHz in der privaten Zone und Speex 8khZ in der sozialen Zone\relax }}{111}
+\contentsline {figure}{\numberline {A.8}{\ignorespaces Rufauf und -abbau, sowie Signalisierung eines anderen Codecs mit SIP, Reduktion des Audiostroms mit RTP\relax }}{111}
