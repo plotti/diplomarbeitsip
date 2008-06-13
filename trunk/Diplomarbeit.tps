@@ -5,7 +5,7 @@ Version=2
 [SessionInfo]
 ActiveTab=0
 FrameCount=21
-ActiveFrame=9
+ActiveFrame=14
 
 [Frame0]
 Columns=1
@@ -271,8 +271,8 @@ TopSubLine=6
 [Frame9]
 Columns=1
 Rows=1
-Flags=2
-ShowCmd=3
+Flags=0
+ShowCmd=1
 MinPos.x=-1
 MinPos.y=-1
 MaxPos.x=-4
@@ -285,17 +285,17 @@ Class=CLatexEdit
 Document=kapitel\kapitel_konstruktion.tex
 
 [Frame9_Row0]
-cyCur=383
+cyCur=346
 cyMin=10
 
 [Frame9_Col0]
-cxCur=933
+cxCur=801
 cxMin=10
 
 [Frame9_View0,0]
-Cursor.row=158
-Cursor.column=24
-TopSubLine=324
+Cursor.row=380
+Cursor.column=575
+TopSubLine=945
 
 [Frame10]
 Columns=1
@@ -416,8 +416,8 @@ TopSubLine=48
 [Frame14]
 Columns=1
 Rows=1
-Flags=0
-ShowCmd=1
+Flags=2
+ShowCmd=3
 MinPos.x=-1
 MinPos.y=-1
 MaxPos.x=-4
@@ -430,17 +430,17 @@ Class=CLatexEdit
 Document=kapitel\kapitel_network.tex
 
 [Frame14_Row0]
-cyCur=162
+cyCur=383
 cyMin=10
 
 [Frame14_Col0]
-cxCur=1000
+cxCur=933
 cxMin=10
 
 [Frame14_View0,0]
-Cursor.row=201
-Cursor.column=0
-TopSubLine=464
+Cursor.row=4
+Cursor.column=513
+TopSubLine=36
 
 [Frame15]
 Columns=1
@@ -614,5 +614,5 @@ cxMin=10
 [Frame20_View0,0]
 Cursor.row=33
 Cursor.column=21
-TopSubLine=27
+TopSubLine=28
 

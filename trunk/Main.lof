@@ -28,7 +28,7 @@
 \contentsline {figure}{\numberline {6.4}{\ignorespaces Verteilte Server S1...S4. Die Verbindungen der Spielewelt S2 werden in schwarz dargestellt. \relax }}{47}
 \contentsline {figure}{\numberline {6.5}{\ignorespaces Komplett zentralisierter Ansatz mit SIP\relax }}{52}
 \contentsline {figure}{\numberline {6.6}{\ignorespaces Dezentralisierte SIP Architektur\relax }}{54}
-\contentsline {figure}{\numberline {6.7}{\ignorespaces Architekturen mit dedizierten Audiomixern\relax }}{55}
+\contentsline {figure}{\numberline {6.7}{\ignorespaces Architekturen mit dedizierten Audiomixern\relax }}{56}
 \contentsline {figure}{\numberline {6.8}{\ignorespaces Hybride SIP Architektur mit einem oder mehreren Konferenzservern\relax }}{57}
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {7.1}{\ignorespaces \"Ubersicht der Komponenten des PjSIP-Protokollstapels\relax }}{67}

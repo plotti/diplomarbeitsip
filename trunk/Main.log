@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592-1.40.4 (MiKTeX 2.7) (preloaded format=latex 2008.3.17)  13 JUN 2008 11:06
+This is pdfTeX, Version 3.141592-1.40.4 (MiKTeX 2.7) (preloaded format=latex 2008.3.17)  13 JUN 2008 13:00
 entering extended mode
 **Main.tex
 (Main.tex
@@ -1109,9 +1109,6 @@ or  <return>  to continue without it.
 
 LaTeX Warning: There were undefined references.
 
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
  )
 (\end occurred inside a group at level 2)
 
@@ -1127,4 +1124,4 @@ Here is how much of TeX's memory you used:
  14 hyphenation exceptions out of 8191
  38i,17n,47p,1820b,1281s stack positions out of 5000i,500n,10000p,200000b,5000s
 
-Output written on Main.dvi (130 pages, 476336 bytes).
+Output written on Main.dvi (130 pages, 477016 bytes).
