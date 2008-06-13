@@ -26,8 +26,8 @@
 \contentsline {figure}{\numberline {6.2}{\ignorespaces Client-Server-Architektur mit zentralem Mischserver in Nordamerika\relax }}{45}
 \contentsline {figure}{\numberline {6.3}{\ignorespaces Beispiel f\"ur eine Proxy-Architektur. In schwarz ist die Verbindung von Spieler 3 mit Spieler 7 dargestellt.\relax }}{46}
 \contentsline {figure}{\numberline {6.4}{\ignorespaces Verteilte Server S1...S4. Die Verbindungen der Spielewelt S2 werden in schwarz dargestellt. \relax }}{47}
-\contentsline {figure}{\numberline {6.5}{\ignorespaces Dezentralisierte SIP Architektur\relax }}{52}
-\contentsline {figure}{\numberline {6.6}{\ignorespaces Komplett zentralisierter Ansatz mit SIP\relax }}{54}
+\contentsline {figure}{\numberline {6.5}{\ignorespaces Komplett zentralisierter Ansatz mit SIP\relax }}{52}
+\contentsline {figure}{\numberline {6.6}{\ignorespaces Dezentralisierte SIP Architektur\relax }}{54}
 \contentsline {figure}{\numberline {6.7}{\ignorespaces Architekturen mit dedizierten Audiomixern\relax }}{55}
 \contentsline {figure}{\numberline {6.8}{\ignorespaces Hybride SIP Architektur mit einem oder mehreren Konferenzservern\relax }}{57}
 \addvspace {10\p@ }
