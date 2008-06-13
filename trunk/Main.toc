@@ -143,31 +143,23 @@
 \contentsline {subsubsection}{Nachrichtendienst}{85}
 \contentsline {subsubsection}{Pr\"asenzdienst}{86}
 \contentsline {subsection}{\numberline {8.3.2}Skalierbarkeit}{87}
-\contentsline {section}{\numberline {8.4}Hybride Systeme}{87}
-\contentsline {section}{\numberline {8.5}Peer-to-Peer in Netzwerkspielen}{88}
-\contentsline {section}{\numberline {8.6}SIP in Unstrukturierten Peer-to-Peer-Systemen}{88}
-\contentsline {section}{\numberline {8.7}SIP in Strukturierten Peer-to-Peer-Systemen}{89}
-\contentsline {subsection}{\numberline {8.7.1}Peer-to-Peer-SIP}{90}
-\contentsline {subsection}{\numberline {8.7.2}Funktionsweise}{91}
-\contentsline {subsubsection}{Registrierung}{91}
-\contentsline {subsubsection}{Aufbau einer Verbindung}{92}
-\contentsline {subsection}{\numberline {8.7.3}Architekturvariationen}{93}
-\contentsline {chapter}{\numberline {9}Evaluation}{94}
-\contentsline {section}{\numberline {9.1}Versuchsaufbau}{94}
-\contentsline {subsubsection}{Header-Overhead}{94}
-\contentsline {subsubsection}{Aktive Silence Supression}{95}
-\contentsline {section}{\numberline {9.2}Full-Mesh- vs. Partial-Mesh-Szenario}{95}
-\contentsline {subsection}{\numberline {9.2.1}Full-Mesh}{96}
-\contentsline {subsection}{\numberline {9.2.2}Partial-Mesh}{96}
-\contentsline {section}{\numberline {9.3}Zonenkonzepte}{98}
-\contentsline {subsection}{\numberline {9.3.1}Ohne Einsatz von Zonen}{98}
-\contentsline {subsection}{\numberline {9.3.2}Zonen mit RTP Silence Supression}{99}
-\contentsline {subsection}{\numberline {9.3.3}Zonen mit SIP-Hold}{99}
-\contentsline {subsection}{\numberline {9.3.4}Zonen mit unterschiedlichen Audiocodecs}{99}
-\contentsline {section}{\numberline {9.4}SIP als Netzwerkschnittstelle}{100}
-\contentsline {section}{\numberline {9.5}Conference-Bridge}{101}
-\contentsline {chapter}{\numberline {10}Fazit und Ausblick}{102}
-\contentsline {section}{\numberline {10.1}Fazit}{102}
-\contentsline {section}{\numberline {10.2}Ausblick}{103}
-\contentsline {chapter}{Anhang}{107}
-\contentsline {chapter}{Literaturverzeichnis}{111}
+\contentsline {section}{\numberline {8.4}SIP f\"ur Peer-to-Peer Spiele}{87}
+\contentsline {chapter}{\numberline {9}Evaluation}{89}
+\contentsline {section}{\numberline {9.1}Versuchsaufbau}{89}
+\contentsline {subsubsection}{Header-Overhead}{89}
+\contentsline {subsubsection}{Aktive Silence Supression}{90}
+\contentsline {section}{\numberline {9.2}Full-Mesh- vs. Partial-Mesh-Szenario}{90}
+\contentsline {subsection}{\numberline {9.2.1}Full-Mesh}{91}
+\contentsline {subsection}{\numberline {9.2.2}Partial-Mesh}{91}
+\contentsline {section}{\numberline {9.3}Zonenkonzepte}{93}
+\contentsline {subsection}{\numberline {9.3.1}Ohne Einsatz von Zonen}{93}
+\contentsline {subsection}{\numberline {9.3.2}Zonen mit RTP Silence Supression}{94}
+\contentsline {subsection}{\numberline {9.3.3}Zonen mit SIP-Hold}{94}
+\contentsline {subsection}{\numberline {9.3.4}Zonen mit unterschiedlichen Audiocodecs}{94}
+\contentsline {section}{\numberline {9.4}SIP als Netzwerkschnittstelle}{95}
+\contentsline {section}{\numberline {9.5}Conference-Bridge}{96}
+\contentsline {chapter}{\numberline {10}Fazit und Ausblick}{97}
+\contentsline {section}{\numberline {10.1}Fazit}{97}
+\contentsline {section}{\numberline {10.2}Ausblick}{98}
+\contentsline {chapter}{Anhang}{102}
+\contentsline {chapter}{Literaturverzeichnis}{106}
