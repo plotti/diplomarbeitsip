@@ -85,10 +85,10 @@
 \contentsline {subsubsection}{Peer-to-Peer Unicast}{54}
 \contentsline {subsubsection}{Full-Mesh}{55}
 \contentsline {subsection}{\numberline {6.2.4}Verteiltes dediziertes Audiomixing}{55}
-\contentsline {subsection}{\numberline {6.2.5}Hybrides Peer-to-Peer Audiomixing}{57}
+\contentsline {subsection}{\numberline {6.2.5}Hybrides dezentrales Audiomixing}{57}
 \contentsline {section}{\numberline {6.3}M\"oglichkeiten zur Einsparung von Bandbreite}{58}
 \contentsline {subsection}{\numberline {6.3.1}H\"orn\"ahe vs. Area of Interest}{58}
-\contentsline {subsection}{\numberline {6.3.2}Private Zone und Soziale Zone}{59}
+\contentsline {subsection}{\numberline {6.3.2}Private Zone und Soziale Zone}{60}
 \contentsline {chapter}{\numberline {7}Implementierung des Spiel-Prototypen}{61}
 \contentsline {section}{\numberline {7.1}Vorausetzungen}{61}
 \contentsline {section}{\numberline {7.2}Auswahl eines 3D-Frameworks}{61}
