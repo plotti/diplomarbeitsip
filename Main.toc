@@ -79,13 +79,13 @@
 \contentsline {subsection}{\numberline {6.1.4}Hybrid}{47}
 \contentsline {section}{\numberline {6.2}Architekturen mit SIP-Komponenten}{48}
 \contentsline {subsection}{\numberline {6.2.1}Komponenten}{48}
-\contentsline {subsection}{\numberline {6.2.2}Komplett dezentralisierte Ans\"atze}{52}
-\contentsline {subsubsection}{Multicast}{52}
-\contentsline {subsubsection}{Peer-to-Peer Unicast}{53}
-\contentsline {subsubsection}{Full-Mesh}{53}
-\contentsline {subsection}{\numberline {6.2.3}Komplett zentralisierte Ans\"atze}{53}
+\contentsline {subsection}{\numberline {6.2.2}Komplett zentralisierte Ans\"atze}{52}
+\contentsline {subsection}{\numberline {6.2.3}Komplett dezentralisierte Ans\"atze}{53}
+\contentsline {subsubsection}{Multicast}{54}
+\contentsline {subsubsection}{Peer-to-Peer Unicast}{54}
+\contentsline {subsubsection}{Full-Mesh}{55}
 \contentsline {subsection}{\numberline {6.2.4}Verteiltes dediziertes Audiomixing}{55}
-\contentsline {subsection}{\numberline {6.2.5}Hybrides Peer-to-Peer Audiomixing}{56}
+\contentsline {subsection}{\numberline {6.2.5}Hybrides Peer-to-Peer Audiomixing}{57}
 \contentsline {section}{\numberline {6.3}M\"oglichkeiten zur Einsparung von Bandbreite}{58}
 \contentsline {subsection}{\numberline {6.3.1}H\"orn\"ahe vs. Area of Interest}{58}
 \contentsline {subsection}{\numberline {6.3.2}Private Zone und Soziale Zone}{59}

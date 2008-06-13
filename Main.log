@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592-1.40.4 (MiKTeX 2.7) (preloaded format=latex 2008.3.17)  12 JUN 2008 17:34
+This is pdfTeX, Version 3.141592-1.40.4 (MiKTeX 2.7) (preloaded format=latex 2008.3.17)  13 JUN 2008 11:06
 entering extended mode
 **Main.tex
 (Main.tex
@@ -718,113 +718,120 @@ Kapitel 6.
 
 ] [43]
 File: grafiken/entwurf-p2p.eps Graphic file (type eps)
- <grafiken/entwurf-p2p.eps> [44]
+ <grafiken/entwurf-p2p.eps>
 File: grafiken/entwurf-server.eps Graphic file (type eps)
- <grafiken/entwurf-server.eps>
+ <grafiken/entwurf-server.eps> [44]
 [45]
 File: grafiken/entwurf-proxy.eps Graphic file (type eps)
  <grafiken/entwurf-proxy.eps> [46]
 File: grafiken/entwurf-verteilteserver.eps Graphic file (type eps)
  <grafiken/entwurf-verteilteserver.eps>
 [47] [48]
-
-LaTeX Warning: Reference `audiodatenmatrix' on page 49 undefined on input line 
-146.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 153--153
+Underfull \hbox (badness 10000) in paragraph at lines 152--152
 []\OT1/cmr/m/n/10.95 ($\OML/cmm/m/it/10.95 A[]$\OT1/cmr/m/n/10.95 ) Client-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 153--153
+Underfull \hbox (badness 10000) in paragraph at lines 152--152
 \OT1/cmr/m/n/10.95 Server
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 153--153
+Underfull \hbox (badness 10000) in paragraph at lines 152--152
 []\OT1/cmr/m/n/10.95 ($\OML/cmm/m/it/10.95 A[]$\OT1/cmr/m/n/10.95 ) Ein
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 153--153
+Underfull \hbox (badness 10000) in paragraph at lines 152--152
 \OT1/cmr/m/n/10.95 Au-dio-ser-ver
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 153--153
+Underfull \hbox (badness 10000) in paragraph at lines 152--152
 \OT1/cmr/m/n/10.95 und meh-re-re
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 155--155
+Underfull \hbox (badness 10000) in paragraph at lines 154--154
 []\OT1/cmr/m/n/10.95 ($\OML/cmm/m/it/10.95 A[]$\OT1/cmr/m/n/10.95 ) Zen-tra-ler
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 155--155
+Underfull \hbox (badness 10000) in paragraph at lines 154--154
 \OT1/cmr/m/n/10.95 Ser-ver mit
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 155--155
+Underfull \hbox (badness 10000) in paragraph at lines 154--154
 \OT1/cmr/m/n/10.95 meh-re-ren
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 155--155
+Underfull \hbox (badness 10000) in paragraph at lines 154--154
 \OT1/cmr/m/n/10.95 de-di-zier-ten
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 155--155
-[]\OT1/cmr/m/n/10.95 ($\OML/cmm/m/it/10.95 A[]$\OT1/cmr/m/n/10.95 ) Su-per-no-
+Underfull \hbox (badness 2111) in paragraph at lines 154--154
+[]\OT1/cmr/m/n/10.95 ($\OML/cmm/m/it/10.95 A[]$\OT1/cmr/m/n/10.95 ) de-di-zier-
+te
  []
 
 
-Underfull \hbox (badness 8038) in paragraph at lines 157--157
+Underfull \hbox (badness 10000) in paragraph at lines 154--154
+\OT1/cmr/m/n/10.95 Daten- und
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 154--154
+\OT1/cmr/m/n/10.95 Au-dio-ser-ver
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 154--154
+\OT1/cmr/m/n/10.95 oder
+ []
+
+
+Underfull \hbox (badness 8038) in paragraph at lines 156--156
 \OT1/cmr/m/n/10.95 zen-tra-lem Ser-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 157--157
+Underfull \hbox (badness 10000) in paragraph at lines 156--156
 []\OT1/cmr/m/n/10.95 ($\OML/cmm/m/it/10.95 A[]$\OT1/cmr/m/n/10.95 ) VoIP
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 157--157
+Underfull \hbox (badness 10000) in paragraph at lines 156--156
 \OT1/cmr/m/n/10.95 mit ver-teil-ten
  []
 
 
-Underfull \hbox (badness 3514) in paragraph at lines 157--158
+Underfull \hbox (badness 3514) in paragraph at lines 156--157
 []\OT1/cmr/m/n/10.95 ($\OML/cmm/m/it/10.95 A[]$\OT1/cmr/m/n/10.95 ) Kom-plett
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 157--158
+Underfull \hbox (badness 10000) in paragraph at lines 156--157
 \OT1/cmr/m/n/10.95 de-zen-tra-le
  []
 
-
-Package caption Warning: \label before \caption ignored on input line 160.
-See the caption package documentation for explanation.
-
 [49] [50]
-File: grafiken/archp2p.eps Graphic file (type eps)
- <grafiken/archp2p.eps> [51] [52]
 File: grafiken/archzentral.eps Graphic file (type eps)
- <grafiken/archzentral.eps> [53]
-Underfull \hbox (badness 10000) in paragraph at lines 265--265
+ <grafiken/archzentral.eps> [51]
+Underfull \hbox (badness 10000) in paragraph at lines 225--225
 [][]\OT1/cmr/m/n/9 Patentfreies Audio-Kompressions-Format (Xiph OSC) , Ver-si-o
 n 22.03.2008,
  []
 
-[54]
+[52]
+File: grafiken/archp2p.eps Graphic file (type eps)
+ <grafiken/archp2p.eps> [53] [54]
 File: grafiken/archverteilt.eps Graphic file (type eps)
  <grafiken/archverteilt.eps> [55]
-Overfull \hbox (3.15785pt too wide) in paragraph at lines 295--296
+Overfull \hbox (3.15785pt too wide) in paragraph at lines 293--294
 [][]\OT1/cmr/m/n/10.95 Dieses Mo-dell hat je-doch ei-ni-ge Nach-tei-le: Vor al-
 lem beim Ein-satz von Superpeer-
  []
@@ -1102,6 +1109,9 @@ or  <return>  to continue without it.
 
 LaTeX Warning: There were undefined references.
 
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
  )
 (\end occurred inside a group at level 2)
 
@@ -1111,10 +1121,10 @@ LaTeX Warning: There were undefined references.
 Here is how much of TeX's memory you used:
  7719 strings out of 95341
  114265 string characters out of 1184182
- 236629 words of memory out of 1500000
+ 236640 words of memory out of 1500000
  10664 multiletter control sequences out of 110000
  12775 words of font info for 45 fonts, out of 1200000 for 2000
  14 hyphenation exceptions out of 8191
  38i,17n,47p,1820b,1281s stack positions out of 5000i,500n,10000p,200000b,5000s
 
-Output written on Main.dvi (130 pages, 475932 bytes).
+Output written on Main.dvi (130 pages, 476336 bytes).
