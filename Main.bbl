@@ -1,4 +1,4 @@
-\begin{thebibliography}{81}
+\begin{thebibliography}{70}
 % this bibliography was produced with the style dinat.bst v2.5
 \makeatletter
 \newcommand{\dinatlabel}[1]%
@@ -53,15 +53,6 @@
 \newblock San Diego, CA, USA~: Academic Press Professional, Inc., 1994. --
 \newblock ISBN 0-12-084735-3
 
-\bibitem[Bharambe u.\,a.(2006)Bharambe, Herley und Padmanabhan]{torrent06}
-\dinatlabel{Bharambe u.\,a. 2006} \textsc{Bharambe}, A.~R.~; \textsc{Herley},
-  C.~; \textsc{Padmanabhan}, V.~N.:
-\newblock Analyzing and Improving a BitTorrent Networks Performance Mechanisms.
-\newblock In: \emph{INFOCOM 2006. 25th IEEE International Conference on
-  Computer Communications. Proceedings}
-\newblock (2006), April, S.~1--12. --
-\newblock ISSN 0743-166X
-
 \bibitem[Bharambe u.\,a.(2002)Bharambe, Rao und Seshan]{mercury02}
 \dinatlabel{Bharambe u.\,a. 2002} \textsc{Bharambe}, Ashwin~R.~; \textsc{Rao},
   Sanjay~; \textsc{Seshan}, Srinivasan:
@@ -85,15 +76,6 @@
 \newblock Networking and Scalability in EVE Online.
 \newblock In: \emph{Netgames}
 \newblock (2005)
-
-\bibitem[Bryan u.\,a.(15--15 June 2005)Bryan, Lowekamp und Jennings]{bryan05s}
-\dinatlabel{Bryan u.\,a. 15--15 June 2005} \textsc{Bryan}, D.A.~;
-  \textsc{Lowekamp}, B.B.~; \textsc{Jennings}, C.:
-\newblock SOSIMPLE: A Serverless, Standards-based, P2P SIP Communication
-  System.
-\newblock In: \emph{Advanced Architectures and Algorithms for Internet Delivery
-  and Applications, 2005. AAA-IDEA 2005. First International Workshop on}
-\newblock (15-15 June 2005), S.~42--49
 
 \bibitem[Bryan und Lowekamp(2007)]{bryan07}
 \dinatlabel{Bryan und Lowekamp 2007} \textsc{Bryan}, David~A.~;
@@ -124,15 +106,6 @@
   on the internet.
 \newblock In: \emph{IEEE Networks magazine}
 \newblock 13 (1999), S.~6--15
-
-\bibitem[Douglas u.\,a.(2005)Douglas, Tanin, Harwood und
-  Karunasekera]{douglas05}
-\dinatlabel{Douglas u.\,a. 2005} \textsc{Douglas}, Scott~; \textsc{Tanin},
-  Egmen~; \textsc{Harwood}, Aaron~; \textsc{Karunasekera}, Shanika:
-\newblock Enabling Massively Multi-Player Online Gaming Applications on a P2P
-  Architecture.
-\newblock In: \emph{Information and Automation}
-\newblock (2005)
 
 \bibitem[Ernst\&Young(2007)]{ErnstYoung:07}
 \dinatlabel{Ernst\&Young 2007} \textsc{Ernst\&Young}:
@@ -234,18 +207,6 @@
 \newblock In: \emph{http://www.ietf.org/rfc/rfc2327.txt}
 \newblock (1998)
 
-\bibitem[Harjula u.\,a.(2006)Harjula, Ala-Kurikka, Howie und
-  Ylianttila]{harjula06}
-\dinatlabel{Harjula u.\,a. 2006} \textsc{Harjula}, Erkki~;
-  \textsc{Ala-Kurikka}, Jussi~; \textsc{Howie}, Douglas~; \textsc{Ylianttila},
-  Mika:
-\newblock ISE02-6: Analysis of Peer-to-Peer SIP in a Distributed Mobile
-  Middleware System.
-\newblock In: \emph{Global Telecommunications Conference, 2006. GLOBECOM '06.
-  IEEE}
-\newblock (2006), Nov., S.~1--6. --
-\newblock ISSN 1930-529X
-
 \bibitem[Hu und Liao(2004)]{hu04}
 \dinatlabel{Hu und Liao 2004} \textsc{Hu}, Shun-Yun~; \textsc{Liao}, Guan-Ming:
 \newblock Scalable peer-to-peer networked virtual environment.
@@ -336,12 +297,6 @@
 \newblock In: \emph{Communications Surveys \& Tutorials, IEEE}
 \newblock (2005), S.~72--93
 
-\bibitem[Maymounkov und Mazieres(2002)]{kademilla02}
-\dinatlabel{Maymounkov und Mazieres 2002} \textsc{Maymounkov}, P.~;
-  \textsc{Mazieres}, D.:
-\newblock Kademlia: A peer-to-peer information system based on the XOR metric.
-\newblock In: \emph{IPTPS02, Cambridge}, 2002
-
 \bibitem[Miladinovic und Stadler(2002)]{miladinovic-multiparty}
 \dinatlabel{Miladinovic und Stadler 2002} \textsc{Miladinovic}, I.~;
   \textsc{Stadler}, J.:
@@ -392,12 +347,6 @@
 \newblock In: \emph{http://www.pwc.de/portal/pub/!ut/p/kcxml}
 \newblock Version 22.03.2008 (2007)
 
-\bibitem[Pundkar(2007)]{pundkar07}
-\dinatlabel{Pundkar 2007} \textsc{Pundkar}, Swapnil~D.:
-\newblock Peer to Peer Communication over the Internet An Open Approach.
-\newblock In: \emph{Thesis}
-\newblock (2007), S.~1--25
-
 \bibitem[Radenkovic u.\,a.(2002)Radenkovic, Greenhalgh und
   Benford]{radenkovic02}
 \dinatlabel{Radenkovic u.\,a. 2002} \textsc{Radenkovic}, Milena~;
@@ -407,18 +356,6 @@
   reality software and technology}.
 \newblock New York, NY, USA~: ACM, 2002, S.~179--185. --
 \newblock ISBN 1-58113-530-0
-
-\bibitem[Ratnasamy u.\,a.(2001)Ratnasamy, Francis, Handley, Karp und
-  Schenker]{Ratnasamy01}
-\dinatlabel{Ratnasamy u.\,a. 2001} \textsc{Ratnasamy}, Sylvia~;
-  \textsc{Francis}, Paul~; \textsc{Handley}, Mark~; \textsc{Karp}, Richard~;
-  \textsc{Schenker}, Scott:
-\newblock A scalable content-addressable network.
-\newblock In: \emph{SIGCOMM '01: Proceedings of the 2001 conference on
-  Applications, technologies, architectures, and protocols for computer
-  communications}.
-\newblock New York, NY, USA~: ACM, 2001, S.~161--172. --
-\newblock ISBN 1-58113-411-8
 
 \bibitem[Reichswald u.\,a.(1998)Reichswald, Möslein, Sachenbacherand und
   H.Engelberger]{reichswald98}
@@ -465,14 +402,6 @@
   Network Address Translators (NATs).
 \newblock In: \emph{http://www.ietf.org/rfc/rfc3489.txt}
 \newblock (2003)
-
-\bibitem[Rowstron und Druschel(2001)]{Rowstron01}
-\dinatlabel{Rowstron und Druschel 2001} \textsc{Rowstron}, Antony~;
-  \textsc{Druschel}, Peter:
-\newblock Pastry: Scalable, Decentralized Object Location, and Routing for
-  Large-Scale Peer-to-Peer Systems.
-\newblock In: \emph{Lecture Notes in Computer Science}
-\newblock 2218 (2001), S.~329--??
 
 \bibitem[Safaei u.\,a.(2004)Safaei, Nguyen und Platt]{safei04b}
 \dinatlabel{Safaei u.\,a. 2004} \textsc{Safaei}, F.~; \textsc{Nguyen},
@@ -555,15 +484,6 @@
 \newblock New York, NY, USA~: ACM, 2003, S.~72--81. --
 \newblock ISBN 1-58113-694-3
 
-\bibitem[Schulzrinne und Singh(2005)]{schulzrinne05}
-\dinatlabel{Schulzrinne und Singh 2005} \textsc{Schulzrinne}, Henning~;
-  \textsc{Singh}, Kundan:
-\newblock Peer-to-peer internet telephony using SIP.
-\newblock In: \emph{NOSSDAV '05: Proceedings of the international workshop on
-  Network and operating systems support for digital audio and video}.
-\newblock New York, NY, USA~: ACM, 2005, S.~63--68. --
-\newblock ISBN 1-58113-987-X
-
 \bibitem[Schulzrinne u.\,a.(2002)Schulzrinne, Wu und
   Koskelainen]{schulzrinne02}
 \dinatlabel{Schulzrinne u.\,a. 2002} \textsc{Schulzrinne}, Henning~;
@@ -616,16 +536,6 @@
 \newblock ACM Press Addison-Wesley Publishing Co., 1999. --
 \newblock ISBN 0-201-32557-8
 
-\bibitem[Stoica u.\,a.(2001)Stoica, Morris, Karger, Kaashoek und
-  Balakrishnan]{Stoica01}
-\dinatlabel{Stoica u.\,a. 2001} \textsc{Stoica}, Ion~; \textsc{Morris},
-  Robert~; \textsc{Karger}, David~; \textsc{Kaashoek}, Frans~;
-  \textsc{Balakrishnan}, Hari:
-\newblock Chord: {A} Scalable {Peer-To-Peer} Lookup Service for Internet
-  Applications.
-\newblock In: \emph{Proceedings of the 2001 ACM SIGCOMM Conference}, 2001,
-  S.~149--160
-
 \bibitem[Thon(2006)]{thon06}
 \dinatlabel{Thon 2006} \textsc{Thon}, Jan~N.:
 \newblock Communication and Interaction in Multiplayer First Person Shooter
@@ -655,13 +565,5 @@
   Network and operating systems support for digital audio and video}.
 \newblock New York, NY, USA~: ACM, 2005, S.~99--104. --
 \newblock ISBN 1-58113-987-X
-
-\bibitem[Zhao u.\,a.(2001)Zhao, Kubiatowicz und Joseph]{zaho01}
-\dinatlabel{Zhao u.\,a. 2001} \textsc{Zhao}, B.~Y.~; \textsc{Kubiatowicz},
-  J.~D.~; \textsc{Joseph}, A.~D.:
-\newblock Tapestry: An Infrastructure for Fault-tolerant Wide-area Location and
-  Routing.
-\newblock
-\newblock (2001), April, Nr.~UCB/CSD-01-1141
 
 \end{thebibliography}
