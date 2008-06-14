@@ -11,18 +11,18 @@
 \contentsline {section}{\numberline {2.1}Kommunikationsmodell}{5}
 \contentsline {section}{\numberline {2.2}Auspr\"agungen: Interpersonelle vs. Massenkommunikation}{6}
 \contentsline {section}{\numberline {2.3}Reichtum: Media-Richness-Theorie}{6}
-\contentsline {section}{\numberline {2.4}Arten: Sprach-, Text- und Nonverbale Kommunikation}{7}
+\contentsline {section}{\numberline {2.4}Arten: Sprach-, Text- und nonverbale Kommunikation}{7}
 \contentsline {subsection}{\numberline {2.4.1}Proxemik}{8}
-\contentsline {chapter}{\numberline {3}Anaylse der Sprachkommunikation und resultierende Herausforderungen}{9}
+\contentsline {chapter}{\numberline {3}Analyse der Sprachkommunikation und resultierende Herausforderungen}{9}
 \contentsline {section}{\numberline {3.1}Probleme bisheriger L\"osungen}{9}
 \contentsline {subsubsection}{Reale Sprachsituation}{10}
 \contentsline {subsubsection}{Probleme eines einzigen \"Ubertragungskanals}{10}
-\contentsline {subsubsection}{Schwierige Addressierung}{11}
+\contentsline {subsubsection}{Schwierige Adressierung}{11}
 \contentsline {subsubsection}{Keine Zuordnung zwischen Sprache und Avataren}{12}
 \contentsline {section}{\numberline {3.2}Herausforderungen an eine bessere L\"osung}{12}
 \contentsline {subsection}{\numberline {3.2.1}Mehrkanal-Modell}{12}
-\contentsline {subsubsection}{Einkanalmodell}{12}
-\contentsline {subsubsection}{Mehrkanalmodell}{14}
+\contentsline {subsubsection}{Einkanal-Modell}{12}
+\contentsline {subsubsection}{Mehrkanal-Modell}{14}
 \contentsline {subsection}{\numberline {3.2.2}Einsatz von Metaphern zur Sprach\"ubertragung}{15}
 \contentsline {subsection}{\numberline {3.2.3}Proxemik zur Steuerung von Konferenzen}{16}
 \contentsline {chapter}{\numberline {4}VoIP-Grundlagen}{18}
@@ -49,7 +49,7 @@
 \contentsline {section}{\numberline {4.3}Session-Description-Protokoll (SDP)}{30}
 \contentsline {subsubsection}{Aufbau von SDP-Nachrichten}{30}
 \contentsline {subsubsection}{Aushandeln der Sitzungsparameter}{31}
-\contentsline {section}{\numberline {4.4}Real-time-Transport-Protokoll (RTP)}{32}
+\contentsline {section}{\numberline {4.4}Real-Time-Transport-Protokoll (RTP)}{32}
 \contentsline {subsubsection}{Aufbau von RTP-Paketen}{32}
 \contentsline {subsection}{\numberline {4.4.1}RTP Control Protokoll}{33}
 \contentsline {subsubsection}{Typen und Struktur der RTCP-Pakete}{33}
@@ -88,9 +88,9 @@
 \contentsline {subsection}{\numberline {6.2.5}Hybrides dezentrales Audiomixing}{57}
 \contentsline {section}{\numberline {6.3}M\"oglichkeiten zur Einsparung von Bandbreite}{58}
 \contentsline {subsection}{\numberline {6.3.1}H\"orn\"ahe vs. Area of Interest}{58}
-\contentsline {subsection}{\numberline {6.3.2}Private Zone und Soziale Zone}{60}
+\contentsline {subsection}{\numberline {6.3.2}Private Zone und soziale Zone}{60}
 \contentsline {chapter}{\numberline {7}Implementierung des Spiel-Prototypen}{61}
-\contentsline {section}{\numberline {7.1}Vorausetzungen}{61}
+\contentsline {section}{\numberline {7.1}Voraussetzungen}{61}
 \contentsline {section}{\numberline {7.2}Auswahl eines 3D-Frameworks}{61}
 \contentsline {subsection}{\numberline {7.2.1}First-Person-Shooter-Frameworks}{62}
 \contentsline {subsection}{\numberline {7.2.2}3D-Engines}{62}
@@ -139,11 +139,11 @@
 \contentsline {section}{\numberline {8.1}Anforderungen an Netzwerkarchitekturen}{82}
 \contentsline {section}{\numberline {8.2}Client-Server-Architektur in Netzwerkspielen}{83}
 \contentsline {section}{\numberline {8.3}Implementierung einer Client-Server Architektur mit SIP}{84}
-\contentsline {subsection}{\numberline {8.3.1}SIP SIMPLE Protokoll}{85}
+\contentsline {subsection}{\numberline {8.3.1}SIP-SIMPLE-Protokoll}{85}
 \contentsline {subsubsection}{Nachrichtendienst}{85}
 \contentsline {subsubsection}{Pr\"asenzdienst}{86}
 \contentsline {subsection}{\numberline {8.3.2}Skalierbarkeit}{87}
-\contentsline {section}{\numberline {8.4}SIP f\"ur Peer-to-Peer Spiele}{87}
+\contentsline {section}{\numberline {8.4}SIP f\"ur Peer-to-Peer-Spiele}{87}
 \contentsline {chapter}{\numberline {9}Evaluation}{89}
 \contentsline {section}{\numberline {9.1}Versuchsaufbau}{89}
 \contentsline {subsubsection}{Header-Overhead}{89}

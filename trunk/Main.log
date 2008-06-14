@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592-1.40.4 (MiKTeX 2.7) (preloaded format=latex 2008.3.17)  13 JUN 2008 16:46
+This is pdfTeX, Version 3.141592-1.40.4 (MiKTeX 2.7) (preloaded format=latex 2008.3.17)  14 JUN 2008 12:24
 entering extended mode
 **Main.tex
 (Main.tex
@@ -536,7 +536,7 @@ See the caption package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.46 ...a)}{\ignorespaces {Full-Mesh-Ansatz}}}{79}
+l.46 ...a)}{\ignorespaces {Full-Mesh-Ansatz}}}{91}
                                                   
 If you do not understand this error, please take a closer look
 at the documentation of the `caption' package, especially the
@@ -551,13 +551,19 @@ See the caption package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.47 ...{\ignorespaces {Partial-Mesh-Ansatz}}}{79}
+l.47 ...{\ignorespaces {Partial-Mesh-Ansatz}}}{91}
                                                   
 If you do not understand this error, please take a closer look
 at the documentation of the `caption' package, especially the
 section about errors.
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
+
+
+Overfull \hbox (0.67418pt too wide) in paragraph at lines 58--58
+ [][][] []\OT1/cmr/m/n/10.95 Gegen[]uberstellung des SIP- und RTP-Traffics mit 
+der SIP HOLD- 
+ []
 
 )
 \tf@lof=\write4
@@ -582,23 +588,23 @@ ics, Ver-si-on 15.03.2008,
 
 
 
-]
-Overfull \hbox (8.21198pt too wide) in paragraph at lines 26--27
-[]\OT1/cmr/m/n/10.95 ubertragungs-standards auf die Um-setz-bar-keit ei-ner sol
--chen L[]osung ber[]ucksichtigt. 
+] [2] [3] [4]) (kapitel/kapitel_kommunikation.tex
+Kapitel 2.
+
+Overfull \hbox (11.68742pt too wide) in paragraph at lines 2--3
+[]\OT1/cmr/m/n/10.95 Dieses Ka-pi-tel lie-fert Grund-la-gen, die f[]ur ei-ne An
+a-ly-se von Sprachkommunikations-
  []
 
-[2] [3] [4]) (kapitel/kapitel_kommunikation.tex
-Kapitel 2.
 File: grafiken/kommunikationsmodell-schramm-weaver.eps Graphic file (type eps)
 <grafiken/kommunikationsmodell-schramm-weaver.eps>
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 21.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 20.
 
 ("C:\Program Files\MiKTeX 2.7\tex\latex\base\omscmr.fd"
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 21.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 20.
  [5
 
 
@@ -626,13 +632,13 @@ File: grafiken/singlekanal-kommunikationsmodell.eps Graphic file (type eps)
 File: grafiken/multi-kommunikationsmodell.eps Graphic file (type eps)
 
 <grafiken/multi-kommunikationsmodell.eps> [14]
-Overfull \hbox (8.05212pt too wide) in paragraph at lines 108--109
+Overfull \hbox (8.05212pt too wide) in paragraph at lines 101--102
 []\OT1/cmr/bx/n/10.95 Quadratisch an-stei-gen-der Band-brei-ten-ver-brauch\OT1/
 cmr/m/n/10.95 : Da der Au-diostrom
  []
 
 
-Overfull \hbox (1.42113pt too wide) in paragraph at lines 120--121
+Overfull \hbox (1.42113pt too wide) in paragraph at lines 113--114
 [][]\OT1/cmr/bx/n/10.95 Festnetztelefon\OT1/cmr/m/n/10.95 : Die Sprach[]ubertra
 gung kann nur an be-stimm-ten Pl[]atzen
  []
@@ -664,7 +670,7 @@ Package caption Warning: \label before \caption ignored on input line 159.
 See the caption package documentation for explanation.
 
 [23]
-Overfull \hbox (6.72978pt too wide) in paragraph at lines 175--176
+Overfull \hbox (8.32164pt too wide) in paragraph at lines 175--176
 \OT1/cmr/m/n/10.95 Request-Typs z. B. IN-VI-TE, ei-ner \OT1/cmr/m/it/10.95 Requ
 est-URI[] \OT1/cmr/m/n/10.95 (z. B. sip:8302002@192.168.2.25)
  []
@@ -964,15 +970,15 @@ eil-neh-mer 1 in Abh[]angigkeit
  []
 
 File: grafiken/partialmeshchart.eps Graphic file (type eps)
-<grafiken/partialmeshchart.eps> [92] [93] [94]
-File: grafiken/rtt-chart.eps Graphic file (type eps)
- <grafiken/rtt-chart.eps>
-Overfull \hbox (23.44711pt too wide) in paragraph at lines 148--149
-[][]\OT1/cmr/m/n/10.95 Um fest-zu-stel-len, in-wie-fern die SIP-Abstraktionsebe
-ne die Netzwerk-Kommunikation
+<grafiken/partialmeshchart.eps>
+Underfull \hbox (badness 1400) in paragraph at lines 86--86
+[][]|\OT1/cmr/m/n/10 Re-sul-tie-ren-de Band-brei-ten-ein-spa-run-gen durch den 
+Partial-Mesh-
  []
 
-[95]
+[92] [93] [94]
+File: grafiken/rtt-chart.eps Graphic file (type eps)
+ <grafiken/rtt-chart.eps> [95]
 
 LaTeX Warning: Reference `cpu-chart' on page 96 undefined on input line 153.
 
@@ -1098,9 +1104,6 @@ or  <return>  to continue without it.
 
 LaTeX Warning: There were undefined references.
 
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
  )
 (\end occurred inside a group at level 2)
 
@@ -1110,10 +1113,10 @@ LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 Here is how much of TeX's memory you used:
  7692 strings out of 95341
  113744 string characters out of 1184182
- 235837 words of memory out of 1500000
+ 235848 words of memory out of 1500000
  10642 multiletter control sequences out of 110000
  12775 words of font info for 45 fonts, out of 1200000 for 2000
  14 hyphenation exceptions out of 8191
- 38i,17n,47p,1820b,1281s stack positions out of 5000i,500n,10000p,200000b,5000s
+ 38i,17n,47p,1788b,1281s stack positions out of 5000i,500n,10000p,200000b,5000s
 
-Output written on Main.dvi (124 pages, 450604 bytes).
+Output written on Main.dvi (124 pages, 450356 bytes).

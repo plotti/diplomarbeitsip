@@ -44,7 +44,7 @@ Stattdessen werden nur Änderungen der Positionen der Spieler periodisch (alle 10
 
 Bei der Implementierung einer SIP Netzwerkschicht wurden Proxy und Registrar als zentrale Einheit eingesetzt, die als Serverinstanz fungiert. Die Registrierung der Benutzer wird vom Registrar vorgenommen und der Proxy wird genutzt, um alle Nachrichten zu empfangen und an die entsprechenden Teilnehmer weiterzuleiten. Hat sich ein Spieler erfolgreich auf dem Registrar angemeldet, so wird bei eingehenden Nachrichten die Zieladdresse dieses Benutzer auf dem Proxy aufgelöst und an den entsprechenden Client weitergeleitet. Um Nachrichten zwischen Teilnehmern zu verschicken wird das wird SIP SIMPLE-Protokoll eingesetzt. Der Datenaustausch zwischen den Teilnehmern findet mit Hilfe des SIP \textit{MESSAGE}-Nachrichtentyps statt. Der SIMPLE-Präsenzdienst wird genutzt, um festzustellen welche Spieler aktiv am Spiel Teilnehmen und Nachrichten empfangen sollen. 
 
-\subsection{SIP SIMPLE Protokoll}
+\subsection{SIP-SIMPLE-Protokoll}
 
 \subsubsection{Nachrichtendienst}
 Beim SIP SIMPLE-Protokoll handelt sich um ein offenes, weit verbreitetes Protokoll der SIP-Protokollfamilie, für das viele Open-Source Implementierungen existieren und das auch in kommerziellen Lösungen, wie dem \textit{MSN-Messenger}\footnote{Microsoft, Version 20.03.2008, http://messenger.live.com}, eingesetzt wird. 
@@ -120,7 +120,7 @@ Die oben vorgestellten Client-Server-Skalierungskonzepte sind unter SIP in einer
 
 %In regionsbasierten P2P-Spielen wird die Welt in geometrische Formen wie Quadrate oder Sechsecke unterteilt und für jede Region wird ein Koordinator oder \textit{Superpeer} bestimmt. Dieser Knoten verwaltet Spieler, die diese Region betreten und verlassen und nutzt DHT um weitere Knoten zu finden. Alle Ereignisse in einer Region generierten Ereignisse werden auch an Knoten der gleichen Region propagiert. Dafür muss ein Koordinator nicht unbedingt Teilnehmer des aktiven Spiels sein. Einige Ansätze für regionsbasierte P2P-Spiele sind das \textit{SimMud}-System von Knutnsson et Al. \cite{knutsson04}, der \textit{Zoned-Federation-of-Game-Servers}-Ansatz von Limura at Al. \cite{Iimura04} oder auch ein skype-basierter Ansatz von Triebel et Al. \cite{triebel07g}.
 
-\section{SIP für Peer-to-Peer Spiele}
+\section{SIP für Peer-to-Peer-Spiele}
 Neben der klassischen Client-Server-Architektur könnte auch die Umsetzung von existienden Peer-to-Peer-Architekturen für Mehrspieler-Computerspiele \cite{kawahara02}, \cite{Keller03}, \cite{hu04} \cite{knutsson04}, \cite{Iimura04}, \cite{triebel07g} von einer Nutzung der hohen Abstraktionsebene eines (P2P)-SIP-Overlays profitieren.  Da bisher in Peer-to-Peer-Systemen noch keine Standards \cite{bryan07} existieren, bietet sich die Verwendung von SIP auch aus diesem Grund an. An dieser Stelle jedoch nur auf den Einsatz verwiesen, da eine detailierte Behandlung dieser Thematik weit über das Thema der Arbeit hinausgehen würde.  
 
 %\label{p2psip}
