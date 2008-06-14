@@ -75,7 +75,7 @@
 \dinatlabel{Brandt 2005} \textsc{Brandt}, D.:
 \newblock Networking and Scalability in EVE Online.
 \newblock In: \emph{Netgames}
-\newblock (2005)
+\newblock (2005), S.~25--37
 
 \bibitem[Bryan und Lowekamp(2007)]{bryan07}
 \dinatlabel{Bryan und Lowekamp 2007} \textsc{Bryan}, David~A.~;
@@ -88,7 +88,7 @@
 \bibitem[Carlsson und Hagsand(18--22 Sep 1993)]{carlsson93}
 \dinatlabel{Carlsson und Hagsand 18--22 Sep 1993} \textsc{Carlsson}, C.~;
   \textsc{Hagsand}, O.:
-\newblock DIVE A multi-user virtual reality system.
+\newblock DIVE: A multi-user virtual reality system.
 \newblock In: \emph{Virtual Reality Annual International Symposium, 1993., 1993
   IEEE}
 \newblock (18-22 Sep 1993), S.~394--400
@@ -109,11 +109,12 @@
 
 \bibitem[Ernst\&Young(2007)]{ErnstYoung:07}
 \dinatlabel{Ernst\&Young 2007} \textsc{Ernst\&Young}:
-\newblock Digitale Spiele in Deutschland.
-\newblock In:
-  \emph{http://www.ey.com/global/content.nsf/Germany/Publikationen\_-\_Studien%
-\_\-\_2007}
-\newblock Version 22.03.2008 (2007)
+\newblock \emph{Digitale Spiele in Deutschland – Trends und Perspektiven 2007}.
+\newblock
+  \url{http://www.ey.com/global/Content.nsf/Germany/Publikationen_-_Studien_-_%
+2007}.
+\newblock 2007. --
+\newblock Seite besucht 22.03.2008
 
 \bibitem[chang Feng und chi Feng(2003)]{feng03}
 \dinatlabel{chang Feng und chi Feng 2003} \textsc{Feng}, Wu chang~;
@@ -125,9 +126,12 @@
 \newblock ISBN 1-58113-734-6
 
 \bibitem[Gerhard(1998)]{maletzke98}
-\dinatlabel{Gerhard 1998} \textsc{Gerhard}, Maletzke:
+\dinatlabel{Gerhard 1998} \textsc{Gerhard}, Maletzke~;
+  \textsc{Hans-Bredow-Institut}, Verlag (Hrsg.):
 \newblock \emph{Kommunikationswissenschaft im Überblick}.
-\newblock VS VERLAG, 1998
+\newblock VS Verlag für Sozialwissenschaften, 1998
+\newblock (1). --
+\newblock 222~S
 
 \bibitem[Gibbs u.\,a.(2003)Gibbs, Wadley, Hew und Graham]{gibbs03}
 \dinatlabel{Gibbs u.\,a. 2003} \textsc{Gibbs}, M.~; \textsc{Wadley}, Greg~;
@@ -141,8 +145,8 @@
 \dinatlabel{Gibbs u.\,a. 2004{\natexlab{a}}} \textsc{Gibbs}, Martin~;
   \textsc{Hew}, Kevin~; \textsc{Wadley}, Greg:
 \newblock Usability and Sociability of the Xbox Live Voice Channel.
-\newblock In: \emph{Australian Workshop on Interactive Entertainment}, Creative
-  and Cognitive Studios Press, 2004
+\newblock In: \emph{Australian Workshop on Interactive Entertainment (IE2004)},
+  Creative and Cognitive Studios Press, 2004, S.~51--58
 
 \bibitem[Gibbs u.\,a.(2005)Gibbs, ands und Benda]{gibbs05}
 \dinatlabel{Gibbs u.\,a. 2005} \textsc{Gibbs}, Martin~R.~; \textsc{ands},
@@ -203,9 +207,11 @@
 \bibitem[Handley und Jacobson(1998)]{sdp98}
 \dinatlabel{Handley und Jacobson 1998} \textsc{Handley}, M.~;
   \textsc{Jacobson}, V.:
-\newblock SDP: Session Description Protocol.
-\newblock In: \emph{http://www.ietf.org/rfc/rfc2327.txt}
-\newblock (1998)
+\newblock SDP: Session Description Protocol
+\newblock / The Internet Engineering Task Force.
+\newblock URL \url{http://www.ietf.org/rfc/rfc2327.txt}, 1998.
+\newblock  -- Network Working Group.
+\newblock Seite besucht 22.04.2008
 
 \bibitem[Hu und Liao(2004)]{hu04}
 \dinatlabel{Hu und Liao 2004} \textsc{Hu}, Shun-Yun~; \textsc{Liao}, Guan-Ming:
@@ -218,14 +224,16 @@
 \bibitem[Huitema(2003)]{rtcp03}
 \dinatlabel{Huitema 2003} \textsc{Huitema}, C.:
 \newblock Real Time Control Protocol (RTCP) attribute in Session Description
-  Protocol (SDP).
-\newblock In: \emph{http://tools.ietf.org/html/rfc3605}
-\newblock (2003)
+  Protocol (SDP)
+\newblock / The Internet Engineering Task Force.
+\newblock URL \url{http://tools.ietf.org/html/rfc3605}, 2003.
+\newblock  -- Network Working Group.
+\newblock Seite besucht 21.04.2008
 
 \bibitem[Iimura u.\,a.(2004)Iimura, Hazeyama und Kadobayashi]{Iimura04}
 \dinatlabel{Iimura u.\,a. 2004} \textsc{Iimura}, Takuji~; \textsc{Hazeyama},
   Hiroaki~; \textsc{Kadobayashi}, Youki:
-\newblock Zoned federation of game servers: a peer-to-peer approach to scalable
+\newblock Zoned federation of game servers: A peer-to-peer approach to scalable
   multi-player online games.
 \newblock In: \emph{NetGames '04: Proceedings of 3rd ACM SIGCOMM workshop on
   Network and system support for games}.
@@ -236,7 +244,7 @@
 \dinatlabel{ITU 1996} \textsc{ITU}:
 \newblock Methods for subjective determination of transmission quality.
 \newblock In: \emph{International Telecomunications Union (ITU)}
-\newblock (1996), S.~P.800
+\newblock (1996), S.~800
 
 \bibitem[Jensen(1998)]{jensen98}
 \dinatlabel{Jensen 1998} \textsc{Jensen}, Jens~F.:
@@ -305,11 +313,12 @@
 \newblock In: \emph{International Network Conference}
 \newblock (2002), S.~191--198
 
-\bibitem[Morris(2006)]{morris06}
-\dinatlabel{Morris 2006} \textsc{Morris}, Sue:
-\newblock WADs, Bots and Mods: Multiplayer FPS Games as Co-Creative Media.
-\newblock In: \emph{Level Up Conference Proceedings}
-\newblock 3 (2006)
+\bibitem[Morris(2003)]{morris06}
+\dinatlabel{Morris 2003} \textsc{Morris}, Sue:
+\newblock WADs, Bots and Mods: Multiplayer FPS Games as Co-creative Media.
+\newblock In: \textsc{Marinka}, Copier (Hrsg.)~; \textsc{Joost}, Raessens
+  (Hrsg.): \emph{Level Up Conference Proceedings}.
+\newblock Utrecht~: University of Utrecht, November 2003, S.~CD Rom
 
 \bibitem[Morse u.\,a.(2000)Morse, Bic und Dillencourt]{morse96}
 \dinatlabel{Morse u.\,a. 2000} \textsc{Morse}, Katherine~L.~; \textsc{Bic},
@@ -329,9 +338,11 @@
 
 \bibitem[Postel(1980)]{udp80}
 \dinatlabel{Postel 1980} \textsc{Postel}, J.:
-\newblock User Datagram Protocol.
-\newblock In: \emph{http://www.ietf.org/rfc/rfc768.txt}
-\newblock (1980)
+\newblock User Datagram Protocol
+\newblock / The Internet Engineering Task Force.
+\newblock URL \url{http://www.ietf.org/rfc/rfc768.txt}, 1980.
+\newblock  -- Network Working Group.
+\newblock Seite besucht 21.02.2008
 
 \bibitem[Preece und Maloney-Krichmar(2003)]{pearce03}
 \dinatlabel{Preece und Maloney-Krichmar 2003} \textsc{Preece}, Jenny~;
@@ -343,9 +354,10 @@
 
 \bibitem[PricewaterHouseCoopers(2007)]{pwc:07}
 \dinatlabel{PricewaterHouseCoopers 2007} \textsc{PricewaterHouseCoopers}:
-\newblock German Entertainment and Media Outlook: 2007-2011.
-\newblock In: \emph{http://www.pwc.de/portal/pub/!ut/p/kcxml}
-\newblock Version 22.03.2008 (2007)
+\newblock \emph{German Entertainment and Media Outlook: 2007-2011}.
+\newblock \url{http://www.pwc.de/portal/pub/!ut/p/kcxml}.
+\newblock 2007. --
+\newblock Seite besucht 22.03.2008
 
 \bibitem[Radenkovic u.\,a.(2002)Radenkovic, Greenhalgh und
   Benford]{radenkovic02}
@@ -362,7 +374,9 @@
 \dinatlabel{Reichswald u.\,a. 1998} \textsc{Reichswald}, R.~; \textsc{Möslein},
   K.~; \textsc{Sachenbacherand}, K.~; \textsc{H.Engelberger}:
 \newblock \emph{Telekooperation - Verteilte- Arbeits und Organisationsformen.}
-\newblock Springer, 1998
+\newblock Springer, Berlin, 1998
+\newblock (2). --
+\newblock 351~S
 
 \bibitem[Rice(1992)]{rice92}
 \dinatlabel{Rice 1992} \textsc{Rice}, R.:
@@ -373,17 +387,22 @@
 \bibitem[Rosenberg(2008)]{ice08}
 \dinatlabel{Rosenberg 2008} \textsc{Rosenberg}, J.:
 \newblock Interactive Connectivity Establishment (ICE): A Protocol for Network
-  Address Translator (NAT) Traversal for Offer/Answer Protocols.
-\newblock In: \emph{http://tools.ietf.org/html/draft-ietf-mmusic-ice-19}
-\newblock (2008)
+  Address Translator (NAT) Traversal for Offer/Answer Protocols
+\newblock / The Internet Engineering Task Force.
+\newblock URL
+  \url{http://www.ietf.org/internet-drafts/draft-ietf-mmusic-ice-19.txt}, 2008.
+\newblock  -- Internet-Draft.
+\newblock Seite besucht 22.01.2008
 
 \bibitem[Rosenberg u.\,a.(2008)Rosenberg, Mahy und Huitema]{turn08}
 \dinatlabel{Rosenberg u.\,a. 2008} \textsc{Rosenberg}, J.~; \textsc{Mahy}, R.~;
   \textsc{Huitema}, C.:
-\newblock Traversal Using Relay NAT (TURN).
-\newblock In:
-  \emph{http://www.jdrosen.net/papers/draft-rosenberg-midcom-turn-08.txt}
-\newblock (2008)
+\newblock Traversal Using Relay NAT (TURN)
+\newblock / The Internet Engineering Task Force.
+\newblock URL
+  \url{http://www.jdrosen.net/papers/draft-rosenberg-midcom-turn-08.txt}, 2008.
+\newblock  -- Internet-Draft.
+\newblock Seite besucht 15.03.2008
 
 \bibitem[Rosenberg u.\,a.(2002)Rosenberg, Schulzrinne, Camarillo, Johnston,
   Peterson, Sparks, Handley und Schooler]{sip02}
@@ -391,17 +410,21 @@
   \textsc{Schulzrinne}, H.~; \textsc{Camarillo}, G.~; \textsc{Johnston}, A.~;
   \textsc{Peterson}, J.~; \textsc{Sparks}, R.~; \textsc{Handley}, M.~;
   \textsc{Schooler}, E.:
-\newblock SIP: Session Initiation Protocol.
-\newblock In: \emph{http://www.ietf.org/rfc/rfc3261.txt}
-\newblock (2002)
+\newblock SIP: Session Initiation Protocol
+\newblock / The Internet Engineering Task Force.
+\newblock URL \url{http://www.ietf.org/rfc/rfc3489.txt}, 2002.
+\newblock  -- Network Working Group.
+\newblock Seite besucht 18.03.2008
 
 \bibitem[Rosenberg u.\,a.(2003)Rosenberg, Weinberger, Huitema und Mahy]{stun03}
 \dinatlabel{Rosenberg u.\,a. 2003} \textsc{Rosenberg}, J.~;
   \textsc{Weinberger}, J.~; \textsc{Huitema}, C.~; \textsc{Mahy}, R.:
 \newblock STUN - Simple Traversal of User Datagram Protocol (UDP) Through
-  Network Address Translators (NATs).
-\newblock In: \emph{http://www.ietf.org/rfc/rfc3489.txt}
-\newblock (2003)
+  Network Address Translators (NATs)
+\newblock / The Internet Engineering Task Force.
+\newblock URL \url{http://www.ietf.org/rfc/rfc3489.txt}, 2003.
+\newblock  -- Network Working Group.
+\newblock Seite besucht 18.03.2008
 
 \bibitem[Safaei u.\,a.(2004)Safaei, Nguyen und Platt]{safei04b}
 \dinatlabel{Safaei u.\,a. 2004} \textsc{Safaei}, F.~; \textsc{Nguyen},
@@ -464,16 +487,21 @@
   Jacobson]{rtp96}
 \dinatlabel{Schulzrinne u.\,a. 1996} \textsc{Schulzrinne}, H.~;
   \textsc{Casner}, S.~; \textsc{Frederick}, R.~; \textsc{Jacobson}, V.:
-\newblock RTP: A Transport Protocol for Real-Time Applications.
-\newblock In: \emph{http://www.ietf.org/rfc/rfc1889.txt}
-\newblock (1996)
+\newblock RTP: A Transport Protocol for Real-Time Applications
+\newblock / The Internet Engineering Task Force.
+\newblock URL \url{http://www.ietf.org/rfc/rfc1889.txt}, 1996.
+\newblock  -- Network Working Group.
+\newblock Seite besucht 03.03.2008
 
 \bibitem[Schulzrinne und Rosenberg(1999)]{schulzrinne99}
 \dinatlabel{Schulzrinne und Rosenberg 1999} \textsc{Schulzrinne}, H.~;
   \textsc{Rosenberg}, J.:
-\newblock SIP call control services. Internet draft.
-\newblock In: \emph{Internet Engineering Task Force}
-\newblock Work in Progress (1999)
+\newblock SIP call control services.
+\newblock / Internet Engineering Task Force.
+\newblock URL \url{http://tools.ietf.org/html/draft-ietf-mmusic-sip-cc-00},
+  1999.
+\newblock  -- Internet Draft.
+\newblock Seite besucht 14.03.2008
 
 \bibitem[Schulzrinne und Lennox(2003)]{schulzrinne03}
 \dinatlabel{Schulzrinne und Lennox 2003} \textsc{Schulzrinne}, Henning~;
@@ -533,7 +561,7 @@
 \dinatlabel{Singhal und Zyda 1999} \textsc{Singhal}, Sandeep~; \textsc{Zyda},
   Michael:
 \newblock \emph{Networked virtual environments: design and implementation}.
-\newblock ACM Press Addison-Wesley Publishing Co., 1999. --
+\newblock New York, NY, USA~: ACM Press Addison-Wesley Publishing Co., 1999. --
 \newblock ISBN 0-201-32557-8
 
 \bibitem[Thon(2006)]{thon06}
@@ -541,7 +569,7 @@
 \newblock Communication and Interaction in Multiplayer First Person Shooter
   Games.
 \newblock In: \emph{From Communication to Presence}
-\newblock 9 (2006)
+\newblock 9 (2006), S.~171--180
 
 \bibitem[Triebel u.\,a.(2007)Triebel, Guthier und Effelsberg]{triebel07g}
 \dinatlabel{Triebel u.\,a. 2007} \textsc{Triebel}, Tonio~; \textsc{Guthier},
@@ -555,7 +583,7 @@
 \bibitem[Wilbur(1954)]{schramm54}
 \dinatlabel{Wilbur 1954} \textsc{Wilbur}, Schramm:
 \newblock \emph{The Process and Effects of Mass Communication}.
-\newblock University of Illinois Press, 1954
+\newblock Champaign, IL, USA~: University of Illinois Press, 1954
 
 \bibitem[Yu und Vuong(2005)]{yu05}
 \dinatlabel{Yu und Vuong 2005} \textsc{Yu}, Anthony~; \textsc{Vuong}, Son~T.:

@@ -206,7 +206,7 @@ Die verbleibenden Alternativen lassen sich in 4 Gruppen gliedern:
 
 \begin{figure}[tbh]
 	\centering
-		\includegraphics[width=0.60\textwidth]{grafiken/archzentral.eps}
+		\includegraphics[width=0.8\textwidth]{grafiken/archzentral.eps}
 	\caption{Komplett zentralisierter Ansatz mit SIP}
 	\label{fig:archzentral}
 \end{figure}
@@ -223,7 +223,7 @@ Die Grundlage für eine einfache Berechnung der maximal möglichen Anzahl an Spiel
 
 Befinden sich beispielsweise 16 Personen im Spiel, empfängt der Server Audio\-ströme von 16 Personen und sendet einen bereits abgemischten Audiostrom an jede der 16 Personen. 
 
-Sendet jeder Spieler seinen Audiostrom mit einem Speex\footnote{Patentfreies Audio-Kompressions-Format (Xiph OSC) , Version 22.03.2008, http://speex.org} Audiocodec mit einer 16 Kbit/s Bitrate an den Server, der nach dem heutigem Standard mit einer 100MBit-Anbindung für den Up- und Download ausgestattet ist, würde sich folgende theoretische maximale Anzahl an gleichzeitigen Audioverbindungen ergeben:
+Sendet jeder Spieler seinen Audiostrom mit einem Speex\footnote{Patentfreies Audio-Kompressions-Format (Xiph OSC) , Seite besucht 22.03.2008, http://speex.org} Audiocodec mit einer 16 Kbit/s Bitrate an den Server, der nach dem heutigem Standard mit einer 100MBit-Anbindung für den Up- und Download ausgestattet ist, würde sich folgende theoretische maximale Anzahl an gleichzeitigen Audioverbindungen ergeben:
 
 \[
  \frac{100000 \frac{Kbit}{s}}{16 \frac{Kbit}{s}} = 6250 \, Spieler
@@ -231,7 +231,7 @@ Sendet jeder Spieler seinen Audiostrom mit einem Speex\footnote{Patentfreies Aud
 
 Der Client selbst dagegen muss nur in der Lage sein, seinen eigenen Audiostrom zu senden und einen Audiostrom mit gleicher Bitrate zu empfangen. 
 
-Obwohl diese Rechnung zunächst vielversprechend klingt, muss auch die Rechenkapazität des Servers berücksichtigt werden, da jedes der ankommenden Signale dekodiert, abgemischt und kodiert werden muss. Eine Messung\footnote{Siehe Kapitel 10: Evaluation} der CPU-Belastung des Mixers, die Anhand der Implementierung vorgenommen wurde, zeigt dass die praktische maximal mögliche Anzahl an Spielern schon mitunter bei 32 Spielern erreicht wird, wenn ein rechenintensives Resampling des Audiosignals stattfindet. Diese Beobachtung wird auch dadurch bestätigt, dass bisherige Drittanbierer Sprachkonferenzlösungen für Mehrspieler-Computerspiele im Schnitt nur 30-50 gleichzeitige Teilnehmer unterstützen\footnote{Ventrilo Server Status Query (Christian Wellhöfer), Version 23.03.2008, http://ventrilo-monitor.com/}.
+Obwohl diese Rechnung zunächst vielversprechend klingt, muss auch die Rechenkapazität des Servers berücksichtigt werden, da jedes der ankommenden Signale dekodiert, abgemischt und kodiert werden muss. Eine Messung\footnote{Siehe Kapitel 10: Evaluation} der CPU-Belastung des Mixers, die Anhand der Implementierung vorgenommen wurde, zeigt dass die praktische maximal mögliche Anzahl an Spielern schon mitunter bei 32 Spielern erreicht wird, wenn ein rechenintensives Resampling des Audiosignals stattfindet. Diese Beobachtung wird auch dadurch bestätigt, dass bisherige Drittanbierer Sprachkonferenzlösungen für Mehrspieler-Computerspiele im Schnitt nur 30-50 gleichzeitige Teilnehmer unterstützen\footnote{Ventrilo Server Status Query (Christian Wellhöfer), Seite besucht 23.03.2008, http://ventrilo-monitor.com/}.
 
 Prinzipiel ist dieser Ansatz allen dezentralisierten Ansätzen überlegen, da ein zentraler Mischserver in der Regel über genügend Bandbreite verfügt, um viele Audioströme zu empfangen und zu versenden, während dies bei Clients oft zu Problemen führt. Zudem besteht die Möglichkeit, die Lokation und Signalisierung der Teilnehmer zentral zu verwalten. Diese Architektur wird vor allem bei Telefonkonferenzen verwendet, bei denen die Endgeräte (VoIP-Telefone) über eine geringe Rechenleistung verfügen und auf das Abmischen des Audiosignals durch einen Mischserver angewiesen sind. 
 
@@ -243,7 +243,7 @@ Dabei bietet es sich gerade im Spielebereich an, die hohe Rechenleistung von gut
 
 \begin{figure}[tbh]
 	\centering
-		\includegraphics[width=0.60\textwidth]{grafiken/archp2p.eps}
+		\includegraphics[width=0.80\textwidth]{grafiken/archp2p.eps}
 	 \caption{Dezentralisierte SIP-Architektur}
 	\label{fig:archp2p}
 \end{figure}
@@ -280,7 +280,7 @@ Das größte Problem bei diesem Ansatz stellt jedoch die fehlende strukturierte Si
 \subsection{Verteiltes dediziertes Audiomixing}
 \begin{figure}
 	\centering
-		\includegraphics[width=0.70\textwidth]{grafiken/archverteilt.eps}
+		\includegraphics[width=1\textwidth]{grafiken/archverteilt.eps}
 	\caption{Architekturen mit dedizierten Audiomixern}
 	\label{fig:archverteilt}
 \end{figure}
@@ -306,7 +306,7 @@ Unabhängig davon welches Verfahren verwendet wird, kommen beim verteilten Abmisc
 
 \begin{figure}
 	\centering
-		\includegraphics[width=0.60\textwidth]{grafiken/archhybrid.eps}
+		\includegraphics[width=0.80\textwidth]{grafiken/archhybrid.eps}
 	\caption{Hybride SIP-Architektur mit einem oder mehreren Konferenzservern}
 	\label{fig:archhybrid}
 \end{figure}

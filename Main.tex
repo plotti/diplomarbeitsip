@@ -46,9 +46,9 @@
 \usepackage{microtype}
 \usepackage{picinpar}
 \usepackage{appendix}
-\usepackage{abstract}
+\usepackage{subfloat}
 \usepackage[font=small,labelfont=bf]{caption}
-\usepackage[font=small,labelfont=empty]{subfig}
+\usepackage[font=small,labelfont=bf]{subfig}
 \usepackage{url}         % fuer urls: schreibweise ist z.B. \url{http://www.uni-mannheim.de}
 
 
@@ -85,6 +85,7 @@
 \include{kapitel/titel}        % titelseite einbinden
 \newpage\thispagestyle{empty}~ % Seite 2 (links leer) bis auf ein Leerzeichen			
 \include{kapitel/abstract}  % Abstract
+\newpage\thispagestyle{empty}~
 \tableofcontents            % inhaltsverzeichnis
 %\include{kapitel/stichwortverzeichnis}  % Stichwortverzeichnis
 \listoffigures              % abbildungsverzeichnis
@@ -95,14 +96,21 @@
 \include{kapitel/einleitung}
 \include{kapitel/kapitel_kommunikation}
 \include{kapitel/kapitel_folgerungundziele}
-%\newpage~
+\newpage~
 \include{kapitel/kapitel_sip}
+\newpage~
 \include{kapitel/kapitel_recentwork}
+\newpage~
 \include{kapitel/kapitel_konstruktion}
+\newpage~
 \include{kapitel/kapitel_implementierung}
+\newpage~
 \include{kapitel/kapitel_network}
+\newpage~
 \include{kapitel/kapitel_benchmarking}
+\newpage~
 \include{kapitel/kapitel_conclusion}
+\newpage~
 %\include{kapitel/fazit}
 
 %\selectlanguage{ngerman} % jetzt sprechen wir wieder deutsch.
