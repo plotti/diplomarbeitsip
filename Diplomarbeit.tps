@@ -5,7 +5,7 @@ Version=2
 [SessionInfo]
 ActiveTab=0
 FrameCount=21
-ActiveFrame=14
+ActiveFrame=1
 
 [Frame0]
 Columns=1
@@ -39,8 +39,8 @@ TopSubLine=82
 [Frame1]
 Columns=1
 Rows=1
-Flags=0
-ShowCmd=1
+Flags=2
+ShowCmd=3
 MinPos.x=-1
 MinPos.y=-1
 MaxPos.x=-4
@@ -53,17 +53,17 @@ Class=CLatexEdit
 Document=kapitel\kapitel_recentwork.tex
 
 [Frame1_Row0]
-cyCur=346
+cyCur=250
 cyMin=10
 
 [Frame1_Col0]
-cxCur=751
+cxCur=932
 cxMin=10
 
 [Frame1_View0,0]
-Cursor.row=51
-Cursor.column=0
-TopSubLine=177
+Cursor.row=75
+Cursor.column=120
+TopSubLine=201
 
 [Frame2]
 Columns=1
@@ -90,9 +90,9 @@ cxCur=751
 cxMin=10
 
 [Frame2_View0,0]
-Cursor.row=263
-Cursor.column=0
-TopSubLine=753
+Cursor.row=4
+Cursor.column=15
+TopSubLine=11
 
 [Frame3]
 Columns=1
@@ -119,9 +119,9 @@ cxCur=751
 cxMin=10
 
 [Frame3_View0,0]
-Cursor.row=0
-Cursor.column=0
-TopSubLine=290
+Cursor.row=165
+Cursor.column=10
+TopSubLine=490
 
 [Frame4]
 Columns=1
@@ -177,9 +177,9 @@ cxCur=751
 cxMin=10
 
 [Frame5_View0,0]
-Cursor.row=76
-Cursor.column=229
-TopSubLine=164
+Cursor.row=96
+Cursor.column=378
+TopSubLine=208
 
 [Frame6]
 Columns=1
@@ -264,9 +264,9 @@ cxCur=801
 cxMin=10
 
 [Frame8_View0,0]
-Cursor.row=0
-Cursor.column=0
-TopSubLine=6
+Cursor.row=3
+Cursor.column=1715
+TopSubLine=9
 
 [Frame9]
 Columns=1
@@ -293,9 +293,9 @@ cxCur=801
 cxMin=10
 
 [Frame9_View0,0]
-Cursor.row=380
-Cursor.column=575
-TopSubLine=945
+Cursor.row=246
+Cursor.column=32
+TopSubLine=599
 
 [Frame10]
 Columns=1
@@ -322,9 +322,9 @@ cxCur=787
 cxMin=10
 
 [Frame10_View0,0]
-Cursor.row=241
-Cursor.column=275
-TopSubLine=479
+Cursor.row=432
+Cursor.column=1202
+TopSubLine=860
 
 [Frame11]
 Columns=1
@@ -380,9 +380,9 @@ cxCur=762
 cxMin=10
 
 [Frame12_View0,0]
-Cursor.row=2
-Cursor.column=384
-TopSubLine=0
+Cursor.row=11
+Cursor.column=0
+TopSubLine=34
 
 [Frame13]
 Columns=1
@@ -416,8 +416,8 @@ TopSubLine=48
 [Frame14]
 Columns=1
 Rows=1
-Flags=2
-ShowCmd=3
+Flags=0
+ShowCmd=1
 MinPos.x=-1
 MinPos.y=-1
 MaxPos.x=-4
@@ -430,17 +430,17 @@ Class=CLatexEdit
 Document=kapitel\kapitel_network.tex
 
 [Frame14_Row0]
-cyCur=383
+cyCur=162
 cyMin=10
 
 [Frame14_Col0]
-cxCur=933
+cxCur=1000
 cxMin=10
 
 [Frame14_View0,0]
-Cursor.row=4
-Cursor.column=513
-TopSubLine=36
+Cursor.row=46
+Cursor.column=23
+TopSubLine=112
 
 [Frame15]
 Columns=1
@@ -496,9 +496,9 @@ cxCur=746
 cxMin=10
 
 [Frame16_View0,0]
-Cursor.row=0
-Cursor.column=19
-TopSubLine=0
+Cursor.row=85
+Cursor.column=134
+TopSubLine=199
 
 [Frame17]
 Columns=1
@@ -525,9 +525,9 @@ cxCur=839
 cxMin=10
 
 [Frame17_View0,0]
-Cursor.row=13
-Cursor.column=461
-TopSubLine=47
+Cursor.row=51
+Cursor.column=0
+TopSubLine=176
 
 [Frame18]
 Columns=1
@@ -554,9 +554,9 @@ cxCur=795
 cxMin=10
 
 [Frame18_View0,0]
-Cursor.row=19
-Cursor.column=155
-TopSubLine=93
+Cursor.row=18
+Cursor.column=0
+TopSubLine=85
 
 [Frame19]
 Columns=1
@@ -612,7 +612,7 @@ cxCur=784
 cxMin=10
 
 [Frame20_View0,0]
-Cursor.row=33
-Cursor.column=21
-TopSubLine=28
+Cursor.row=61
+Cursor.column=23
+TopSubLine=51
 
