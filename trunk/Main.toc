@@ -53,7 +53,7 @@
 \contentsline {subsubsection}{Aufbau von RTP-Paketen}{33}
 \contentsline {subsection}{\numberline {4.4.1}RTP-Control-Protokoll}{34}
 \contentsline {subsubsection}{Typen und Struktur der RTCP-Pakete}{34}
-\contentsline {subsubsection}{Silence Supression}{35}
+\contentsline {subsubsection}{Silence-Suppression}{35}
 \contentsline {section}{\numberline {4.5}NAT Traversal}{36}
 \contentsline {chapter}{\numberline {5}Verwandte Arbeiten}{39}
 \contentsline {section}{\numberline {5.1}Historische Ans\"atze}{39}
@@ -128,7 +128,7 @@
 \contentsline {subsection}{\numberline {7.6.2}Erweiterte Conference-Bridge}{79}
 \contentsline {section}{\numberline {7.7}Umsetzung des Proxemik-Konzepts}{80}
 \contentsline {subsection}{\numberline {7.7.1}\"Offentliche Zone}{80}
-\contentsline {subsubsection}{RTP-Silence-Supression}{82}
+\contentsline {subsubsection}{RTP-Silence-Suppression}{82}
 \contentsline {subsubsection}{SIP-Hold-Funktion}{82}
 \contentsline {subsection}{\numberline {7.7.2}Soziale Zone}{83}
 \contentsline {subsubsection}{Audiocodec}{84}
@@ -147,7 +147,7 @@
 \contentsline {chapter}{\numberline {9}Evaluation}{95}
 \contentsline {section}{\numberline {9.1}Versuchsaufbau}{95}
 \contentsline {subsubsection}{Header-Overhead}{95}
-\contentsline {subsubsection}{Aktive Silence Supression}{96}
+\contentsline {subsubsection}{Aktive Silence-Suppression}{96}
 \contentsline {section}{\numberline {9.2}Full-Mesh- vs. Partial-Mesh-Szenario}{96}
 \contentsline {subsection}{\numberline {9.2.1}Full-Mesh}{97}
 \contentsline {subsection}{\numberline {9.2.2}Partial-Mesh}{97}
