@@ -419,7 +419,7 @@ In einem Receiver-Report sind unter anderem folgende Informationen enthalten:
 
 Die SDES-Pakete ermöglichen es, die Quellen mit Namen zu kennzeichnen. Diese Kennzeichnung wird vom Empfänger dazu verwendet, mehrere Bitströme einer Quelle, die in getrennten RTP-Sessions übertragen werden, wieder zusammenzuführen. Das BYE-Paket dient dazu, das Ende der Teilnahme an einer Kommunikation anzuzeigen. 
 
-\subsubsection{Silence Supression}
+\subsubsection{Silence-Suppression}
 Teilnehmer einer Audio-Verbindung müssen nicht unbedingt Audiopakete über den RTP-Strom senden, falls gerade bei den Teilnehmern Stille herrscht. Diese Funktion wurde im RFC 3389 spezifiziert.
 
 Die Möglichkeit, den RTP Paketversand während Stilleperioden zu unterbrechen wird als "`Stille Unterdrückung"' (\textit{Silence Suppression}) oder "`Stimm-Aktivitäts-Erkennung"' (\textit{Voice Activity Detection}) bezeichnet. Silcence Suppression kann vom Empfänger erkannt werden, wenn der RTP-Zeitstempel nicht mit dem Intervall übereinstimmt, das vom letzten Paket abgedeckt wurde, obwohl die RTP-Sequenznummer sich nur um 1 erhöht hat. Ob Silence Suppression eingesetzt wird, hängt normalerweise von der Konfiguration der beiden Endpunkte ab.
