@@ -73,7 +73,7 @@ Obwohl die Qualität der Sprachübertragung durch Parameter, wie die Laufzeit der 
 %TODO Tabelle mit Codecs
 \begin{table}[tbh]
 	\centering
-		\begin{tabular}{p{0.2\textwidth}|p{0.6\textwidth}}
+		\begin{tabular}{p{0.2\textwidth}|p{0.7\textwidth}}
 		\toprule
 		\textbf{MOS-Wert} & \textbf{Bedeutung} \\
 		\midrule
@@ -172,7 +172,7 @@ Content-Type: application/sdp
 \caption{Beispiel eines typischen SIP-Requests}
 \end{figure}
 
-Die Start-Zeile (\textit{Status-Line}) besteht bei den Requests aus einer Angabe des Request-Typs z. B. INVITE, einer \textit{Request-URI}\footnote{Ein Uniform Resource Identifier (URI) ist ein Identifikator und besteht aus einer Zeichenfolge, die zur Identifizierung einer abstrakten oder physischen Ressource dient.} (z. B. sip:8302002@192.168.2.25) als Ziel-Adresse und der SIP-Version. Bei einem Response enthält die \textit{Status-Line} die SIP-Version und einen \textit{Status-Code}, der den Nachrichtentyp definiert. Beide Typen von Nachrichten enthalten mehrere Header-Felder, von denen folgende besonders hervorzuheben sind:
+Die Start-Zeile (\textit{Status-Line}) besteht bei den Requests aus einer Angabe des Request-Typs z. B. INVITE, einer \textit{Request-URI}\footnote{Ein Uniform Resource Identifier (URI) ist ein Identifikator und besteht aus einer Zeichenfolge, die zur Identifizierung einer abstrakten oder physischen Ressource dient.} (z. B. sip:8321@192.168.2.25) als Ziel-Adresse und der SIP-Version. Bei einem Response enthält die \textit{Status-Line} die SIP-Version und einen \textit{Status-Code}, der den Nachrichtentyp definiert. Beide Typen von Nachrichten enthalten mehrere Header-Felder, von denen folgende besonders hervorzuheben sind:
 \begin{itemize}
 	\item From: Dieses Feld enthält einen Namen und eine SIP-URI, die den Absender eindeutig identifiziert. 
 	\item To: Der To-Header identifiziert den logischen Empfänger der Anfrage und entspricht der URI in der Anfragezeile. Diese Headerzeile ist ähnlich der des From-Headers aufgebaut.

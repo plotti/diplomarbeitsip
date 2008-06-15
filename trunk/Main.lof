@@ -22,13 +22,13 @@
 \contentsline {figure}{\numberline {4.9}{\ignorespaces Ein schematischer Ablauf von STUN\relax }}{37}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {6.1}{\ignorespaces Peer-to-Peer-Architektur mit direkten Audioverbindungen der Spieler untereinander in den entsprechenden Spielezonen\relax }}{47}
+\contentsline {figure}{\numberline {6.1}{\ignorespaces Peer-to-Peer-Architektur mit direkten Audioverbindungen der \unhbox \voidb@x \hbox {Spieler} untereinander in den entsprechenden Spielezonen\relax }}{47}
 \contentsline {figure}{\numberline {6.2}{\ignorespaces Client-Server-Architektur mit zentralem Mischserver in Nordamerika\relax }}{48}
-\contentsline {figure}{\numberline {6.3}{\ignorespaces Beispiel f\"ur eine Proxy-Architektur. In schwarz ist die Verbindung von Spieler 3 mit Spieler 7 dargestellt.\relax }}{49}
-\contentsline {figure}{\numberline {6.4}{\ignorespaces Verteilte Server S1...S4. Die Verbindungen der Spielewelt S2 werden in schwarz dargestellt. \relax }}{50}
+\contentsline {figure}{\numberline {6.3}{\ignorespaces Beispiel f\"ur eine Proxy-Architektur. In Schwarz ist die Verbindung von Spieler 3 mit Spieler 7 dargestellt.\relax }}{49}
+\contentsline {figure}{\numberline {6.4}{\ignorespaces Verteilte Server S1...S4. Die Verbindungen der Spielewelt S2 werden in Schwarz dargestellt. \relax }}{50}
 \contentsline {figure}{\numberline {6.5}{\ignorespaces Komplett zentralisierter Ansatz mit SIP\relax }}{55}
-\contentsline {figure}{\numberline {6.6}{\ignorespaces Dezentralisierte SIP-Architektur\relax }}{57}
-\contentsline {figure}{\numberline {6.7}{\ignorespaces Architekturen mit dedizierten Audiomixern\relax }}{59}
+\contentsline {figure}{\numberline {6.6}{\ignorespaces Dezentralisierte SIP-Architektur\relax }}{56}
+\contentsline {figure}{\numberline {6.7}{\ignorespaces Architekturen mit mehreren dedizierten Audiomixern\relax }}{59}
 \contentsline {figure}{\numberline {6.8}{\ignorespaces Hybride SIP-Architektur mit einem oder mehreren Konferenzservern\relax }}{60}
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {7.1}{\ignorespaces \"Ubersicht der Komponenten des PjSIP-Protokollstapels\relax }}{71}
@@ -55,6 +55,6 @@
 \contentsline {figure}{\numberline {A.3}{\ignorespaces Der Up- und Downstream mit der Silcence-Supression-Technik\relax }}{111}
 \contentsline {figure}{\numberline {A.4}{\ignorespaces Der Up- und Downstream mit der Silcence-Supression-Technik\relax }}{111}
 \contentsline {figure}{\numberline {A.5}{\ignorespaces Der Up- und Downstream mit der SIP-Hold-Technik\relax }}{112}
-\contentsline {figure}{\numberline {A.6}{\ignorespaces Gegen\"uberstellung des SIP- und RTP-Traffics mit der SIP HOLD-Technik\relax }}{112}
+\contentsline {figure}{\numberline {A.6}{\ignorespaces Gegen\"uberstellung des SIP- und RTP-Traffics mit der SIP-HOLD-Technik\relax }}{112}
 \contentsline {figure}{\numberline {A.7}{\ignorespaces Speex mit 16 kHz in der privaten Zone und Speex 8 khZ in der sozialen Zone\relax }}{113}
-\contentsline {figure}{\numberline {A.8}{\ignorespaces Rufauf- und abbau, sowie Signalisierung eines anderen Codecs mit SIP, Reduktion des Audiostroms mit RTP\relax }}{113}
+\contentsline {figure}{\numberline {A.8}{\ignorespaces Rufauf- und -abbau, sowie Signalisierung eines anderen Codecs mit SIP, Reduktion des Audiostroms mit RTP\relax }}{113}
