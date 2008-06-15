@@ -1,4 +1,4 @@
-\begin{thebibliography}{70}
+\begin{thebibliography}{76}
 % this bibliography was produced with the style dinat.bst v2.5
 \makeatletter
 \newcommand{\dinatlabel}[1]%
@@ -76,6 +76,15 @@
 \newblock Networking and Scalability in EVE Online.
 \newblock In: \emph{Netgames}
 \newblock (2005), S.~25--37
+
+\bibitem[Bryan u.\,a.(15--15 June 2005)Bryan, Lowekamp und Jennings]{bryan05s}
+\dinatlabel{Bryan u.\,a. 15--15 June 2005} \textsc{Bryan}, D.A.~;
+  \textsc{Lowekamp}, B.B.~; \textsc{Jennings}, C.:
+\newblock SOSIMPLE: A Serverless, Standards-based, P2P SIP Communication
+  System.
+\newblock In: \emph{Advanced Architectures and Algorithms for Internet Delivery
+  and Applications, 2005. AAA-IDEA 2005. First International Workshop on}
+\newblock (15-15 June 2005), S.~42--49
 
 \bibitem[Bryan und Lowekamp(2007)]{bryan07}
 \dinatlabel{Bryan und Lowekamp 2007} \textsc{Bryan}, David~A.~;
@@ -359,6 +368,12 @@
 \newblock 2007. --
 \newblock Seite besucht 22.03.2008
 
+\bibitem[Pundkar(2007)]{pundkar07}
+\dinatlabel{Pundkar 2007} \textsc{Pundkar}, Swapnil~D.:
+\newblock Peer to Peer Communication over the Internet An Open Approach.
+\newblock In: \emph{PhD-Thesis}
+\newblock (2007), S.~1--25
+
 \bibitem[Radenkovic u.\,a.(2002)Radenkovic, Greenhalgh und
   Benford]{radenkovic02}
 \dinatlabel{Radenkovic u.\,a. 2002} \textsc{Radenkovic}, Milena~;
@@ -368,6 +383,18 @@
   reality software and technology}.
 \newblock New York, NY, USA~: ACM, 2002, S.~179--185. --
 \newblock ISBN 1-58113-530-0
+
+\bibitem[Ratnasamy u.\,a.(2001)Ratnasamy, Francis, Handley, Karp und
+  Schenker]{Ratnasamy01}
+\dinatlabel{Ratnasamy u.\,a. 2001} \textsc{Ratnasamy}, Sylvia~;
+  \textsc{Francis}, Paul~; \textsc{Handley}, Mark~; \textsc{Karp}, Richard~;
+  \textsc{Schenker}, Scott:
+\newblock A scalable content-addressable network.
+\newblock In: \emph{SIGCOMM '01: Proceedings of the 2001 conference on
+  Applications, technologies, architectures, and protocols for computer
+  communications}.
+\newblock New York, NY, USA~: ACM, 2001, S.~161--172. --
+\newblock ISBN 1-58113-411-8
 
 \bibitem[Reichswald u.\,a.(1998)Reichswald, Möslein, Sachenbacherand und
   H.Engelberger]{reichswald98}
@@ -425,6 +452,14 @@
 \newblock URL \url{http://www.ietf.org/rfc/rfc3489.txt}, 2003.
 \newblock  -- Network Working Group.
 \newblock Seite besucht 18.03.2008
+
+\bibitem[Rowstron und Druschel(2001)]{Rowstron01}
+\dinatlabel{Rowstron und Druschel 2001} \textsc{Rowstron}, Antony~;
+  \textsc{Druschel}, Peter:
+\newblock Pastry: Scalable, Decentralized Object Location, and Routing for
+  Large-Scale Peer-to-Peer Systems.
+\newblock In: \emph{Lecture Notes in Computer Science}
+\newblock 2218 (2001), S.~329--??
 
 \bibitem[Safaei u.\,a.(2004)Safaei, Nguyen und Platt]{safei04b}
 \dinatlabel{Safaei u.\,a. 2004} \textsc{Safaei}, F.~; \textsc{Nguyen},
@@ -564,6 +599,16 @@
 \newblock New York, NY, USA~: ACM Press Addison-Wesley Publishing Co., 1999. --
 \newblock ISBN 0-201-32557-8
 
+\bibitem[Stoica u.\,a.(2001)Stoica, Morris, Karger, Kaashoek und
+  Balakrishnan]{Stoica01}
+\dinatlabel{Stoica u.\,a. 2001} \textsc{Stoica}, Ion~; \textsc{Morris},
+  Robert~; \textsc{Karger}, David~; \textsc{Kaashoek}, Frans~;
+  \textsc{Balakrishnan}, Hari:
+\newblock Chord: {A} Scalable {Peer-To-Peer} Lookup Service for Internet
+  Applications.
+\newblock In: \emph{Proceedings of the 2001 ACM SIGCOMM Conference}, 2001,
+  S.~149--160
+
 \bibitem[Thon(2006)]{thon06}
 \dinatlabel{Thon 2006} \textsc{Thon}, Jan~N.:
 \newblock Communication and Interaction in Multiplayer First Person Shooter
@@ -593,5 +638,13 @@
   Network and operating systems support for digital audio and video}.
 \newblock New York, NY, USA~: ACM, 2005, S.~99--104. --
 \newblock ISBN 1-58113-987-X
+
+\bibitem[Zhao u.\,a.(2001)Zhao, Kubiatowicz und Joseph]{zaho01}
+\dinatlabel{Zhao u.\,a. 2001} \textsc{Zhao}, B.~Y.~; \textsc{Kubiatowicz},
+  J.~D.~; \textsc{Joseph}, A.~D.:
+\newblock Tapestry: An Infrastructure for Fault-tolerant Wide-area Location and
+  Routing.
+\newblock
+\newblock (2001), April, Nr.~UCB/CSD-01-1141
 
 \end{thebibliography}
