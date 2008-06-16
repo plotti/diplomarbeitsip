@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592-1.40.4 (MiKTeX 2.7) (preloaded format=latex 2008.3.17)  16 JUN 2008 16:14
+This is pdfTeX, Version 3.141592-1.40.4 (MiKTeX 2.7) (preloaded format=latex 2008.3.17)  16 JUN 2008 19:20
 entering extended mode
 **Main.tex
 (Main.tex
@@ -798,7 +798,13 @@ Kapitel 10.
 
 
 
-] [104] [105] [106]) (kapitel/appendix.tex [107
+]
+Overfull \hbox (11.20313pt too wide) in paragraph at lines 23--24
+\OT1/cmr/m/n/10.95 kom-mu-ni-ka-ti-on lie die ar-chi-tek-tur-be-ding-ten Gren-
+zen ei-nes Peer-to-Peer-Ansatzes
+ []
+
+[104] [105] [106]) (kapitel/appendix.tex [107
 
 
 
@@ -806,28 +812,27 @@ Kapitel 10.
 
 ]
 File: grafiken/ohnevadupdown.eps Graphic file (type eps)
-
-<grafiken/ohnevadupdown.eps>
+ <grafiken/ohnevadupdown.eps>
 File: grafiken/ohnevadsiprtp.eps Graphic file (type eps)
- <grafiken/ohnevadsiprtp.eps>
+
+<grafiken/ohnevadsiprtp.eps>
 File: grafiken/mitvadupdown.eps Graphic file (type eps)
-
-<grafiken/mitvadupdown.eps>
+ <grafiken/mitvadupdown.eps>
 File: grafiken/mitvadrtpsip.eps Graphic file (type eps)
- <grafiken/mitvadrtpsip.eps>
+
+<grafiken/mitvadrtpsip.eps>
 File: grafiken/mitholdupanddown.eps Graphic file (type eps)
-
-<grafiken/mitholdupanddown.eps>
+ <grafiken/mitholdupanddown.eps>
 File: grafiken/mitholdrtpsip.eps Graphic file (type eps)
- <grafiken/mitholdrtpsip.eps>
+
+<grafiken/mitholdrtpsip.eps>
 File: grafiken/mitvadund2codecs.eps Graphic file (type eps)
-
-<grafiken/mitvadund2codecs.eps>
+ <grafiken/mitvadund2codecs.eps>
 File: grafiken/mitvadundrtpsip.eps Graphic file (type eps)
- <grafiken/mitvadundrtpsip.eps>) [108
 
-] [109]
-[110] [111] (Main.bbl [112
+<grafiken/mitvadundrtpsip.eps>) [108
+
+] [109] [110] [111] (Main.bbl [112
 
 
 ]
@@ -869,4 +874,4 @@ Here is how much of TeX's memory you used:
  14 hyphenation exceptions out of 8191
  38i,17n,47p,1598b,1122s stack positions out of 5000i,500n,10000p,200000b,5000s
 
-Output written on Main.dvi (131 pages, 459636 bytes).
+Output written on Main.dvi (131 pages, 459664 bytes).
