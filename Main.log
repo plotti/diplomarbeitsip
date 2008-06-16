@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592-1.40.4 (MiKTeX 2.7) (preloaded format=latex 2008.3.17)  16 JUN 2008 11:38
+This is pdfTeX, Version 3.141592-1.40.4 (MiKTeX 2.7) (preloaded format=latex 2008.3.17)  16 JUN 2008 16:14
 entering extended mode
 **Main.tex
 (Main.tex
@@ -791,18 +791,16 @@ File: grafiken/rtt-chart.eps Graphic file (type eps)
  <grafiken/rtt-chart.eps> [101]
 File: grafiken/confbench.eps Graphic file (type eps)
  <grafiken/confbench.eps>
-[102]) [103
-
-
-] (kapitel/kapitel_conclusion.tex
+[102]) (kapitel/kapitel_conclusion.tex
 Kapitel 10.
-[104
+[103
 
 
-] [105] [106] [107]) [108
 
 
-] (kapitel/appendix.tex [109
+] [104] [105] [106]) (kapitel/appendix.tex [107
+
+
 
 
 
@@ -820,16 +818,16 @@ File: grafiken/mitvadrtpsip.eps Graphic file (type eps)
 File: grafiken/mitholdupanddown.eps Graphic file (type eps)
 
 <grafiken/mitholdupanddown.eps>
-File: grafiken/mithold1.eps Graphic file (type eps)
- <grafiken/mithold1.eps>
+File: grafiken/mitholdrtpsip.eps Graphic file (type eps)
+ <grafiken/mitholdrtpsip.eps>
 File: grafiken/mitvadund2codecs.eps Graphic file (type eps)
 
 <grafiken/mitvadund2codecs.eps>
 File: grafiken/mitvadundrtpsip.eps Graphic file (type eps)
- <grafiken/mitvadundrtpsip.eps>) [110
+ <grafiken/mitvadundrtpsip.eps>) [108
 
-] [111]
-[112] [113] (Main.bbl [114
+] [109]
+[110] [111] (Main.bbl [112
 
 
 ]
@@ -838,7 +836,7 @@ Underfull \hbox (badness 1817) in paragraph at lines 120--127
 http : / / www . ey . com / global / Content . nsf / Germany /
  []
 
-[115] [116] [117]
+[113] [114] [115]
 Underfull \hbox (badness 10000) in paragraph at lines 401--407
 [][]\OT1/cmr/m/sc/10.95 Reichswald\OT1/cmr/m/n/10.95 , R. ; \OT1/cmr/m/sc/10.95
  M[]oslein\OT1/cmr/m/n/10.95 , K. ; \OT1/cmr/m/sc/10.95 Sa-chen-ba-che-rand\OT1
@@ -851,7 +849,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 401--407
 e-ko-ope-ra-ti-on - Verteilte- Ar-beits und
  []
 
-[118] [119]) [120] (kapitel/erklaerung.tex) [121
+[116] [117]) [118] (kapitel/erklaerung.tex) [119
 
 
 ] (Main.aux (kapitel/titel.aux) (kapitel/abstract.aux) (kapitel/abkuerzungen.au
@@ -864,11 +862,11 @@ x) (kapitel/einleitung.aux)
 )) ) 
 Here is how much of TeX's memory you used:
  7695 strings out of 95341
- 113894 string characters out of 1184182
+ 113904 string characters out of 1184182
  237140 words of memory out of 1500000
  10644 multiletter control sequences out of 110000
  12775 words of font info for 45 fonts, out of 1200000 for 2000
  14 hyphenation exceptions out of 8191
  38i,17n,47p,1598b,1122s stack positions out of 5000i,500n,10000p,200000b,5000s
 
-Output written on Main.dvi (133 pages, 459740 bytes).
+Output written on Main.dvi (131 pages, 459636 bytes).
