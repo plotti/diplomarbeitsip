@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592-1.40.4 (MiKTeX 2.7) (preloaded format=latex 2008.3.17)  16 JUN 2008 19:20
+This is pdfTeX, Version 3.141592-1.40.4 (MiKTeX 2.7) (preloaded format=latex 2008.3.17)  16 JUN 2008 20:26
 entering extended mode
 **Main.tex
 (Main.tex
@@ -698,16 +698,20 @@ ei-te be-sucht 23.03.2008,
 
 [55]
 File: grafiken/archp2p.eps Graphic file (type eps)
- <grafiken/archp2p.eps> [56] [57]
+ <grafiken/archp2p.eps> [56]
+
+Package natbib Warning: Citation `zaho01' on page 57 undefined on input line 26
+8.
+
+[57]
 File: grafiken/archverteilt.eps Graphic file (type eps)
  <grafiken/archverteilt.eps> [58] [59]
 File: grafiken/archhybrid.eps Graphic file (type eps)
+ <grafiken/archhybrid.eps> [60]
+[61] [62] [63]) [64
 
-<grafiken/archhybrid.eps> [60] [61] [62] [63]) [64
 
-
-]
-(kapitel/kapitel_implementierung.tex
+] (kapitel/kapitel_implementierung.tex
 Kapitel 7.
 [65
 
@@ -857,21 +861,24 @@ e-ko-ope-ra-ti-on - Verteilte- Ar-beits und
 [116] [117]) [118] (kapitel/erklaerung.tex) [119
 
 
-] (Main.aux (kapitel/titel.aux) (kapitel/abstract.aux) (kapitel/abkuerzungen.au
-x) (kapitel/einleitung.aux)
-(kapitel/kapitel_kommunikation.aux) (kapitel/kapitel_folgerungundziele.aux)
-(kapitel/kapitel_sip.aux) (kapitel/kapitel_recentwork.aux)
-(kapitel/kapitel_konstruktion.aux) (kapitel/kapitel_implementierung.aux)
-(kapitel/kapitel_network.aux) (kapitel/kapitel_benchmarking.aux)
-(kapitel/kapitel_conclusion.aux) (kapitel/appendix.aux) (kapitel/erklaerung.aux
-)) ) 
+]
+
+Package natbib Warning: There were undefined citations.
+
+(Main.aux (kapitel/titel.aux) (kapitel/abstract.aux) (kapitel/abkuerzungen.aux)
+(kapitel/einleitung.aux) (kapitel/kapitel_kommunikation.aux)
+(kapitel/kapitel_folgerungundziele.aux) (kapitel/kapitel_sip.aux)
+(kapitel/kapitel_recentwork.aux) (kapitel/kapitel_konstruktion.aux)
+(kapitel/kapitel_implementierung.aux) (kapitel/kapitel_network.aux)
+(kapitel/kapitel_benchmarking.aux) (kapitel/kapitel_conclusion.aux)
+(kapitel/appendix.aux) (kapitel/erklaerung.aux)) ) 
 Here is how much of TeX's memory you used:
- 7695 strings out of 95341
- 113904 string characters out of 1184182
- 237140 words of memory out of 1500000
- 10644 multiletter control sequences out of 110000
- 12775 words of font info for 45 fonts, out of 1200000 for 2000
+ 7698 strings out of 95341
+ 113946 string characters out of 1184182
+ 237071 words of memory out of 1500000
+ 10646 multiletter control sequences out of 110000
+ 13083 words of font info for 46 fonts, out of 1200000 for 2000
  14 hyphenation exceptions out of 8191
  38i,17n,47p,1598b,1122s stack positions out of 5000i,500n,10000p,200000b,5000s
 
-Output written on Main.dvi (131 pages, 459664 bytes).
+Output written on Main.dvi (131 pages, 459080 bytes).

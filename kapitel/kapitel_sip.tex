@@ -383,7 +383,7 @@ RTP übermittelt ein Echtzeitmedium als Folge von RTP-Paketen, die mit einem vora
 
 Die PT-Nummern dienen zur Identifikation der einzelnen Audio- und Video-Formate. Da der Nummernraum nicht komplett belegt ist, können weitere Nummern vergeben werden (dynamische PT-Nummern). Bei der Verwendung von dynamischen PT-Nummern wird die Kompatibilität zwischen Empfänger und Sender mit Hilfe des SDP-Protokolls vereinbart (siehe Tabelle \ref{pt-tabelle}).
 
-\subsection{RTP-Control-Protokoll}
+\section{RTP-Control-Protokoll (RTCP)}
 RTP wird mit RTCP so ergänzt, dass Informationen über den Verlauf der Kommunikation zwischen Sender und Empfänger, insbesondere über die Qualität der Übertragung, ausgetauscht werden können. 
 
 Die wichtigsten Aufgaben von RTCP sind die Überwachung der Über\-tragungs\-qualität: Hierfür werden zwischen Sender und Empfänger laufend Informationen über die Qualität der Übertragung mittels Sender- und Receiverreports ausgetauscht. Dies ermöglicht es dem Sender, den von ihm generierten Bitstrom an die Netzbedingungen anzupassen und so Fehler einzugrenzen. 

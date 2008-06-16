@@ -16,6 +16,7 @@ A level-1 auxiliary file: kapitel/appendix.aux
 The style file: dinat.bst
 A level-1 auxiliary file: kapitel/erklaerung.aux
 Database file #1: literatur/da.bib
+Warning--I didn't find a database entry for "zaho01"
 Warning--no proper publisher, using url in sdp98
 Warning--no proper publisher, using url in rtcp03
 Warning--no proper publisher, using url in udp80
@@ -25,4 +26,4 @@ Warning--no proper publisher, using url in sip02
 Warning--no proper publisher, using url in stun03
 Warning--no proper publisher, using url in rtp96
 Warning--no proper publisher, using url in schulzrinne99
-(There were 9 warnings)
+(There were 10 warnings)
