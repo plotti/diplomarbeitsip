@@ -301,7 +301,7 @@ Die öffentliche Zone kann aus zwei "`Richtungen"' betreten werden. Wird sie von 
 \subsubsection{RTP-Silence-Suppression}
 Während der logische SIP-Anruf weiterhin erhalten bleibt, wird auf RTP-Ebene kein weiteres Audiosignal mehr übertragen. Dies geschieht, indem die Teilnehmer jeweils aus der lokalen Konferenz entfernt werden und so das jeweilige Mikrofonsignal nicht mehr übermittelt wird. 
 
-Da kein Audiosignal mehr an die gegenseitigen Spieler übertragen wird, wird nun vom VAD-Algorithmus (Voice-Activity-Detection) eine \textit{Silence-Suppression} vorgenommen. Ein solches Verhalten entspricht der im Kapitel 3 geschilderten Eigenschaften der Silence Supression des RTP-Protokolls. Der Unterschied besteht hier darin, dass die Silence-Suppression nicht von der tatsächlichen Stille im Mikrofon abhängt, sondern von der Entfernung der Teilnehmer untereinander. 
+Da kein Audiosignal mehr an die gegenseitigen Spieler übertragen wird, wird nun vom VAD-Algorithmus (Voice-Activity-Detection) eine \textit{Silence-Suppression} vorgenommen. Ein solches Verhalten entspricht der im Kapitel 4 geschilderten Eigenschaften der Silence Supression des RTP-Protokolls. Der Unterschied besteht hier darin, dass die Silence-Suppression nicht von der tatsächlichen Stille im Mikrofon abhängt, sondern von der Entfernung der Teilnehmer untereinander. 
 
 Diese Methode bietet die Möglichkeit, den Bandbreitenverbrauch in der öffen\-tlichen Zone auf unter 1 KByte/s \footnote{Messungen zum Bandbreitenverbrauch in dieser Zone finden sich in Kapitel 9.} zu reduzieren. Der große Vorteil des Verfahrens besteht darin, dass der Wechsel zwischen der öffentlichen und sozialen Zone verzögerungsfrei stattfinden kann, da kein neues Aushandeln der Parameter benötigt wird.
 

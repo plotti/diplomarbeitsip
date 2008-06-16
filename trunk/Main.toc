@@ -158,8 +158,8 @@
 \contentsline {subsection}{\numberline {9.3.4}Zonen mit unterschiedlichen Audiocodecs}{100}
 \contentsline {section}{\numberline {9.4}SIP als Netzwerkschnittstelle}{101}
 \contentsline {section}{\numberline {9.5}Conference-Bridge}{102}
-\contentsline {chapter}{\numberline {10}Fazit und Ausblick}{104}
-\contentsline {section}{\numberline {10.1}Fazit}{104}
-\contentsline {section}{\numberline {10.2}Ausblick}{105}
-\contentsline {chapter}{Anhang}{110}
-\contentsline {chapter}{Literaturverzeichnis}{114}
+\contentsline {chapter}{\numberline {10}Fazit und Ausblick}{103}
+\contentsline {section}{\numberline {10.1}Fazit}{103}
+\contentsline {section}{\numberline {10.2}Ausblick}{104}
+\contentsline {chapter}{Anhang}{108}
+\contentsline {chapter}{Literaturverzeichnis}{112}
