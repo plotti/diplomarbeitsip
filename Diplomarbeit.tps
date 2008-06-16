@@ -5,7 +5,7 @@ Version=2
 [SessionInfo]
 ActiveTab=0
 FrameCount=19
-ActiveFrame=5
+ActiveFrame=4
 
 [Frame0]
 Columns=1
@@ -126,8 +126,8 @@ TopSubLine=332
 [Frame4]
 Columns=1
 Rows=1
-Flags=0
-ShowCmd=1
+Flags=2
+ShowCmd=3
 MinPos.x=-1
 MinPos.y=-1
 MaxPos.x=-4
@@ -140,23 +140,23 @@ Class=CLatexEdit
 Document=kapitel\kapitel_conclusion.tex
 
 [Frame4_Row0]
-cyCur=279
+cyCur=589
 cyMin=10
 
 [Frame4_Col0]
-cxCur=814
+cxCur=855
 cxMin=10
 
 [Frame4_View0,0]
-Cursor.row=26
-Cursor.column=229
-TopSubLine=108
+Cursor.row=7
+Cursor.column=796
+TopSubLine=9
 
 [Frame5]
 Columns=1
 Rows=1
-Flags=2
-ShowCmd=3
+Flags=0
+ShowCmd=1
 MinPos.x=-1
 MinPos.y=-1
 MaxPos.x=-4
@@ -169,17 +169,17 @@ Class=CLatexEdit
 Document=kapitel\appendix.tex
 
 [Frame5_Row0]
-cyCur=284
+cyCur=279
 cyMin=10
 
 [Frame5_Col0]
-cxCur=793
+cxCur=814
 cxMin=10
 
 [Frame5_View0,0]
-Cursor.row=41
-Cursor.column=12
-TopSubLine=34
+Cursor.row=14
+Cursor.column=0
+TopSubLine=0
 
 [Frame6]
 Columns=1
@@ -208,7 +208,7 @@ cxMin=10
 [Frame6_View0,0]
 Cursor.row=3
 Cursor.column=262
-TopSubLine=7
+TopSubLine=6
 
 [Frame7]
 Columns=1
@@ -237,7 +237,7 @@ cxMin=10
 [Frame7_View0,0]
 Cursor.row=111
 Cursor.column=254
-TopSubLine=330
+TopSubLine=324
 
 [Frame8]
 Columns=1
@@ -293,9 +293,9 @@ cxCur=814
 cxMin=10
 
 [Frame9_View0,0]
-Cursor.row=110
-Cursor.column=36
-TopSubLine=109
+Cursor.row=0
+Cursor.column=0
+TopSubLine=0
 
 [Frame10]
 Columns=1
@@ -322,9 +322,9 @@ cxCur=858
 cxMin=10
 
 [Frame10_View0,0]
-Cursor.row=6
-Cursor.column=1343
-TopSubLine=16
+Cursor.row=2
+Cursor.column=0
+TopSubLine=0
 
 [Frame11]
 Columns=1
@@ -351,9 +351,9 @@ cxCur=858
 cxMin=10
 
 [Frame11_View0,0]
-Cursor.row=11
-Cursor.column=408
-TopSubLine=29
+Cursor.row=77
+Cursor.column=0
+TopSubLine=256
 
 [Frame12]
 Columns=1
@@ -382,7 +382,7 @@ cxMin=10
 [Frame12_View0,0]
 Cursor.row=0
 Cursor.column=0
-TopSubLine=392
+TopSubLine=0
 
 [Frame13]
 Columns=1
