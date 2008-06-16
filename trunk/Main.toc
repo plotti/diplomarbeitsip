@@ -12,7 +12,7 @@
 \contentsline {section}{\numberline {2.2}Auspr\"agungen: Interpersonelle vs. Massenkommunikation}{6}
 \contentsline {section}{\numberline {2.3}Reichtum: Media-Richness-Theorie}{6}
 \contentsline {section}{\numberline {2.4}Arten: Sprach-, Text- und nonverbale Kommunikation}{7}
-\contentsline {subsection}{\numberline {2.4.1}Proxemik}{8}
+\contentsline {subsubsection}{Proxemik}{8}
 \contentsline {chapter}{\numberline {3}Analyse der Sprachkommunikation und resultierende Herausforderungen}{9}
 \contentsline {section}{\numberline {3.1}Probleme bisheriger L\"osungen}{9}
 \contentsline {subsubsection}{Reale Sprachsituation}{10}
@@ -51,10 +51,10 @@
 \contentsline {subsubsection}{Aushandeln der Sitzungsparameter}{32}
 \contentsline {section}{\numberline {4.4}Real-Time-Transport-Protokoll (RTP)}{33}
 \contentsline {subsubsection}{Aufbau von RTP-Paketen}{33}
-\contentsline {subsection}{\numberline {4.4.1}RTP-Control-Protokoll}{34}
+\contentsline {section}{\numberline {4.5}RTP-Control-Protokoll (RTCP)}{34}
 \contentsline {subsubsection}{Typen und Struktur der RTCP-Pakete}{34}
 \contentsline {subsubsection}{Silence-Suppression}{35}
-\contentsline {section}{\numberline {4.5}NAT Traversal}{36}
+\contentsline {section}{\numberline {4.6}NAT Traversal}{36}
 \contentsline {chapter}{\numberline {5}Verwandte Arbeiten}{39}
 \contentsline {section}{\numberline {5.1}Historische Ans\"atze}{39}
 \contentsline {section}{\numberline {5.2}Serverbasierte Ans\"atze}{39}
