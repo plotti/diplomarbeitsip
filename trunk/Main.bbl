@@ -1,4 +1,4 @@
-\begin{thebibliography}{75}
+\begin{thebibliography}{76}
 % this bibliography was produced with the style dinat.bst v2.5
 \makeatletter
 \newcommand{\dinatlabel}[1]%
@@ -638,5 +638,14 @@
   Network and operating systems support for digital audio and video}.
 \newblock New York, NY, USA~: ACM, 2005, S.~99--104. --
 \newblock ISBN 1-58113-987-X
+
+\bibitem[Zhao u.\,a.(2001)Zhao, Kubiatowicz und Joseph]{zaho01}
+\dinatlabel{Zhao u.\,a. 2001} \textsc{Zhao}, B.~Y.~; \textsc{Kubiatowicz},
+  J.~D.~; \textsc{Joseph}, A.~D.:
+\newblock Tapestry: An Infrastructure for Fault-tolerant Wide-area Location and
+  Routing
+\newblock / UC Berkeley.
+\newblock 2001
+\newblock (UCB/CSD-01-1141). -- Forschungsbericht
 
 \end{thebibliography}
