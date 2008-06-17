@@ -1,5 +1,5 @@
-% This file was created with JabRef 2.3.1.
-% Encoding: Cp1252
+This file was created with JabRef 2.2.
+Encoding: Cp1252
 
 @INPROCEEDINGS{aarseth03,
   author = {Aarseth, Espen and Smedstad, Solveig M. and Sunnan{\~o}, Lise},
@@ -1410,14 +1410,13 @@
   location = {Stevenson, Washington, USA}
 }
 
-@TECHREPORT{zhao01tapestry,
+@TECHREPORT{zhao01,
   author = {B. Y. Zhao and J. D. Kubiatowicz and A. D. Joseph},
   title = {Tapestry: An Infrastructure for Fault-tolerant Wide-area Location
 	and Routing},
   institution = {UC Berkeley},
   year = {2001},
-  number = {UCB/CSD-01-1141},
-  month = apr
+  number = {UCB/CSD-01-1141}
 }
 
 @comment{jabref-meta: selector_publisher:}

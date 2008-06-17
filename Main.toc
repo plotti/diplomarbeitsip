@@ -123,7 +123,7 @@
 \contentsline {subsubsection}{Verbindungsabbau}{78}
 \contentsline {subsubsection}{Beenden des Spiels}{78}
 \contentsline {section}{\numberline {7.5}Umsetzung des Mehrkanal-Modells}{78}
-\contentsline {section}{\numberline {7.6}Umsetzung der Methapher der Luft\"ubertragung}{79}
+\contentsline {section}{\numberline {7.6}Umsetzung der Metapher der Luft\"ubertragung}{79}
 \contentsline {subsection}{\numberline {7.6.1}Erweitertes Mixing-Konzept}{79}
 \contentsline {subsection}{\numberline {7.6.2}Erweiterte Conference-Bridge}{79}
 \contentsline {section}{\numberline {7.7}Umsetzung des Proxemik-Konzepts}{80}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592-1.40.4 (MiKTeX 2.7 Beta 5) (preloaded format=latex 2008.3.16)  17 JUN 2008 00:07
+This is pdfTeX, Version 3.141592-1.40.4 (MiKTeX 2.7 Beta 5) (preloaded format=latex 2008.3.16)  17 JUN 2008 07:54
 entering extended mode
 **Main.tex
 (Main.tex
@@ -696,20 +696,16 @@ ei-te be-sucht 23.03.2008,
 
 [55]
 File: grafiken/archp2p.eps Graphic file (type eps)
- <grafiken/archp2p.eps> [56]
-
-Package natbib Warning: Citation `zaho01' on page 57 undefined on input line 26
-8.
-
-[57]
+ <grafiken/archp2p.eps> [56] [57]
 File: grafiken/archverteilt.eps Graphic file (type eps)
  <grafiken/archverteilt.eps> [58] [59]
 File: grafiken/archhybrid.eps Graphic file (type eps)
- <grafiken/archhybrid.eps> [60]
-[61] [62] [63]) [64
+
+<grafiken/archhybrid.eps> [60] [61] [62] [63]) [64
 
 
-] (kapitel/kapitel_implementierung.tex
+]
+(kapitel/kapitel_implementierung.tex
 Kapitel 7.
 [65
 
@@ -800,13 +796,7 @@ Kapitel 10.
 
 
 
-]
-Overfull \hbox (11.20313pt too wide) in paragraph at lines 23--24
-\OT1/cmr/m/n/10.95 kom-mu-ni-ka-ti-on lie die ar-chi-tek-tur-be-ding-ten Gren-
-zen ei-nes Peer-to-Peer-Ansatzes
- []
-
-[104] [105] [106]) (kapitel/appendix.tex [107
+] [104] [105] [106]) (kapitel/appendix.tex [107
 
 
 
@@ -814,27 +804,28 @@ zen ei-nes Peer-to-Peer-Ansatzes
 
 ]
 File: grafiken/ohnevadupdown.eps Graphic file (type eps)
- <grafiken/ohnevadupdown.eps>
+
+<grafiken/ohnevadupdown.eps>
 File: grafiken/ohnevadsiprtp.eps Graphic file (type eps)
-
-<grafiken/ohnevadsiprtp.eps>
+ <grafiken/ohnevadsiprtp.eps>
 File: grafiken/mitvadupdown.eps Graphic file (type eps)
- <grafiken/mitvadupdown.eps>
+
+<grafiken/mitvadupdown.eps>
 File: grafiken/mitvadrtpsip.eps Graphic file (type eps)
-
-<grafiken/mitvadrtpsip.eps>
+ <grafiken/mitvadrtpsip.eps>
 File: grafiken/mitholdupanddown.eps Graphic file (type eps)
- <grafiken/mitholdupanddown.eps>
+
+<grafiken/mitholdupanddown.eps>
 File: grafiken/mitholdrtpsip.eps Graphic file (type eps)
-
-<grafiken/mitholdrtpsip.eps>
+ <grafiken/mitholdrtpsip.eps>
 File: grafiken/mitvadund2codecs.eps Graphic file (type eps)
- <grafiken/mitvadund2codecs.eps>
+
+<grafiken/mitvadund2codecs.eps>
 File: grafiken/mitvadundrtpsip.eps Graphic file (type eps)
+ <grafiken/mitvadundrtpsip.eps>) [108
 
-<grafiken/mitvadundrtpsip.eps>) [108
-
-] [109] [110] [111] (Main.bbl [112
+] [109]
+[110] [111] (Main.bbl [112
 
 
 ]
@@ -859,24 +850,21 @@ e-ko-ope-ra-ti-on - Verteilte- Ar-beits und
 [116] [117]) [118] (kapitel/erklaerung.tex) [119
 
 
-]
-
-Package natbib Warning: There were undefined citations.
-
-(Main.aux (kapitel/titel.aux) (kapitel/abstract.aux) (kapitel/abkuerzungen.aux)
-(kapitel/einleitung.aux) (kapitel/kapitel_kommunikation.aux)
-(kapitel/kapitel_folgerungundziele.aux) (kapitel/kapitel_sip.aux)
-(kapitel/kapitel_recentwork.aux) (kapitel/kapitel_konstruktion.aux)
-(kapitel/kapitel_implementierung.aux) (kapitel/kapitel_network.aux)
-(kapitel/kapitel_benchmarking.aux) (kapitel/kapitel_conclusion.aux)
-(kapitel/appendix.aux) (kapitel/erklaerung.aux)) ) 
+] (Main.aux (kapitel/titel.aux) (kapitel/abstract.aux) (kapitel/abkuerzungen.au
+x) (kapitel/einleitung.aux)
+(kapitel/kapitel_kommunikation.aux) (kapitel/kapitel_folgerungundziele.aux)
+(kapitel/kapitel_sip.aux) (kapitel/kapitel_recentwork.aux)
+(kapitel/kapitel_konstruktion.aux) (kapitel/kapitel_implementierung.aux)
+(kapitel/kapitel_network.aux) (kapitel/kapitel_benchmarking.aux)
+(kapitel/kapitel_conclusion.aux) (kapitel/appendix.aux) (kapitel/erklaerung.aux
+)) ) 
 Here is how much of TeX's memory you used:
- 7691 strings out of 95351
- 113661 string characters out of 1184568
- 236862 words of memory out of 1500000
- 10638 multiletter control sequences out of 110000
- 13083 words of font info for 46 fonts, out of 1200000 for 2000
+ 7688 strings out of 95351
+ 113619 string characters out of 1184568
+ 236931 words of memory out of 1500000
+ 10636 multiletter control sequences out of 110000
+ 12775 words of font info for 45 fonts, out of 1200000 for 2000
  14 hyphenation exceptions out of 8191
  38i,17n,47p,1598b,1122s stack positions out of 5000i,500n,10000p,200000b,5000s
 
-Output written on Main.dvi (131 pages, 459092 bytes).
+Output written on Main.dvi (131 pages, 459324 bytes).

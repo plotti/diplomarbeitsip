@@ -3,9 +3,9 @@ Type=TeXnicCenterProjectSessionInformation
 Version=2
 
 [SessionInfo]
-ActiveTab=0
-FrameCount=13
-ActiveFrame=4
+ActiveTab=3
+FrameCount=14
+ActiveFrame=8
 
 [Frame0]
 Columns=1
@@ -32,9 +32,9 @@ cxCur=811
 cxMin=10
 
 [Frame0_View0,0]
-Cursor.row=385
-Cursor.column=573
-TopSubLine=908
+Cursor.row=25
+Cursor.column=0
+TopSubLine=50
 
 [Frame1]
 Columns=1
@@ -61,9 +61,9 @@ cxCur=815
 cxMin=10
 
 [Frame1_View0,0]
-Cursor.row=51
-Cursor.column=57
-TopSubLine=129
+Cursor.row=70
+Cursor.column=0
+TopSubLine=187
 
 [Frame2]
 Columns=1
@@ -90,9 +90,9 @@ cxCur=815
 cxMin=10
 
 [Frame2_View0,0]
-Cursor.row=338
-Cursor.column=113
-TopSubLine=891
+Cursor.row=63
+Cursor.column=0
+TopSubLine=200
 
 [Frame3]
 Columns=1
@@ -102,7 +102,7 @@ ShowCmd=1
 MinPos.x=-1
 MinPos.y=-1
 MaxPos.x=-4
-MaxPos.y=-30
+MaxPos.y=-26
 NormalPos.left=22
 NormalPos.top=29
 NormalPos.right=865
@@ -121,13 +121,13 @@ cxMin=10
 [Frame3_View0,0]
 Cursor.row=85
 Cursor.column=0
-TopSubLine=175
+TopSubLine=172
 
 [Frame4]
 Columns=1
 Rows=1
-Flags=2
-ShowCmd=3
+Flags=0
+ShowCmd=1
 MinPos.x=-1
 MinPos.y=-1
 MaxPos.x=-4
@@ -140,17 +140,17 @@ Class=CLatexEdit
 Document=kapitel\kapitel_conclusion.tex
 
 [Frame4_Row0]
-cyCur=561
+cyCur=284
 cyMin=10
 
 [Frame4_Col0]
-cxCur=916
+cxCur=815
 cxMin=10
 
 [Frame4_View0,0]
-Cursor.row=32
-Cursor.column=19
-TopSubLine=117
+Cursor.row=22
+Cursor.column=150
+TopSubLine=90
 
 [Frame5]
 Columns=1
@@ -160,7 +160,7 @@ ShowCmd=1
 MinPos.x=-1
 MinPos.y=-1
 MaxPos.x=-4
-MaxPos.y=-30
+MaxPos.y=-26
 NormalPos.left=66
 NormalPos.top=87
 NormalPos.right=909
@@ -179,7 +179,7 @@ cxMin=10
 [Frame5_View0,0]
 Cursor.row=32
 Cursor.column=0
-TopSubLine=20
+TopSubLine=21
 
 [Frame6]
 Columns=1
@@ -208,7 +208,7 @@ cxMin=10
 [Frame6_View0,0]
 Cursor.row=80
 Cursor.column=0
-TopSubLine=151
+TopSubLine=168
 
 [Frame7]
 Columns=1
@@ -242,12 +242,12 @@ TopSubLine=0
 [Frame8]
 Columns=1
 Rows=1
-Flags=0
-ShowCmd=1
+Flags=2
+ShowCmd=3
 MinPos.x=-1
 MinPos.y=-1
 MaxPos.x=-4
-MaxPos.y=-30
+MaxPos.y=-26
 NormalPos.left=66
 NormalPos.top=87
 NormalPos.right=909
@@ -256,17 +256,17 @@ Class=CLatexEdit
 Document=kapitel\kapitel_sip.tex
 
 [Frame8_Row0]
-cyCur=249
+cyCur=561
 cyMin=10
 
 [Frame8_Col0]
-cxCur=815
+cxCur=916
 cxMin=10
 
 [Frame8_View0,0]
-Cursor.row=419
-Cursor.column=271
-TopSubLine=798
+Cursor.row=174
+Cursor.column=7
+TopSubLine=305
 
 [Frame9]
 Columns=1
@@ -276,7 +276,7 @@ ShowCmd=1
 MinPos.x=-1
 MinPos.y=-1
 MaxPos.x=-4
-MaxPos.y=-30
+MaxPos.y=-26
 NormalPos.left=88
 NormalPos.top=116
 NormalPos.right=931
@@ -294,8 +294,8 @@ cxMin=10
 
 [Frame9_View0,0]
 Cursor.row=69
-Cursor.column=30
-TopSubLine=65
+Cursor.column=0
+TopSubLine=67
 
 [Frame10]
 Columns=1
@@ -322,8 +322,8 @@ cxCur=859
 cxMin=10
 
 [Frame10_View0,0]
-Cursor.row=6
-Cursor.column=147
+Cursor.row=2
+Cursor.column=0
 TopSubLine=0
 
 [Frame11]
@@ -351,9 +351,9 @@ cxCur=859
 cxMin=10
 
 [Frame11_View0,0]
-Cursor.row=46
-Cursor.column=3
-TopSubLine=162
+Cursor.row=0
+Cursor.column=0
+TopSubLine=0
 
 [Frame12]
 Columns=1
@@ -383,4 +383,33 @@ cxMin=10
 Cursor.row=400
 Cursor.column=0
 TopSubLine=392
+
+[Frame13]
+Columns=1
+Rows=1
+Flags=0
+ShowCmd=1
+MinPos.x=-1
+MinPos.y=-1
+MaxPos.x=-4
+MaxPos.y=-26
+NormalPos.left=110
+NormalPos.top=125
+NormalPos.right=892
+NormalPos.bottom=531
+Class=CLatexEdit
+Document=literatur\da.bib
+
+[Frame13_Row0]
+cyCur=356
+cyMin=10
+
+[Frame13_Col0]
+cxCur=754
+cxMin=10
+
+[Frame13_View0,0]
+Cursor.row=1294
+Cursor.column=0
+TopSubLine=1450
 
